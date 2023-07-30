@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jinja2 on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/jinja2/</link>
+    <description>Recent content in jinja2 on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Wed, 15 Jun 2022 11:22:48 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/jinja2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 15/06/2022 .01</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun15--01-ping/</link>
+      <pubDate>Wed, 15 Jun 2022 11:22:48 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun15--01-ping/</guid>
+      <description>비 내리는 화요일. ☂️
+jinja2 template include + cache? + file-time postgresql, as an api server? jinja2 template include + cache? + file-time 재밌는걸 찾았다.
+jinja2을 사용하면서, 하위 include으로 내려갈수록, file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야 template cache을 무시하는거 같아.
+그래서,
+// gulpfile.js: const buildTask = series(cleanTask, esbuildTask, injectTask, touchInjectedTask); function watchTask() { watch(&amp;quot;./js/**/*.js&amp;quot;, buildTask); } exports.watch = watchTask; exports.build = buildTask; exports.clean = cleanTask; &amp;hellip;대략 잘 동작하고, webpack보다 엄청나게 빠르다 ㅎㅎ.</description>
+    </item>
+    
+  </channel>
+</rss>

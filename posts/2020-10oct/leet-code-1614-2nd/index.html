@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34; - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="어제 작성한 LOOP매크로을 이용한 구현 을 풀어서, 만약 LOOP매크로가 없었더라면 어떻게 짰을지 작성해봤다.
+(defun max-nested-parentheses-raw (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (let ((n 0) (result 0)) (declare (type fixnum n result)) (dotimes (s--cur-idx (length s)) (let ((ch (elt s s--cur-idx))) (when (member ch &#39;(#\( #\))) (incf n (if (eql #\( ch) 1 -1)) (setf result (max n result))))) result)) 여전히 타입을 지정해서 자동으로 타입추론, 최적화 하도록 했다." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;" />
+<meta property="og:description" content="어제 작성한 LOOP매크로을 이용한 구현 을 풀어서, 만약 LOOP매크로가 없었더라면 어떻게 짰을지 작성해봤다.
+(defun max-nested-parentheses-raw (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (let ((n 0) (result 0)) (declare (type fixnum n result)) (dotimes (s--cur-idx (length s)) (let ((ch (elt s s--cur-idx))) (when (member ch &#39;(#\( #\))) (incf n (if (eql #\( ch) 1 -1)) (setf result (max n result))))) result)) 여전히 타입을 지정해서 자동으로 타입추론, 최적화 하도록 했다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ageldama.github.io/posts/2020-10oct/leet-code-1614-2nd/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-10-21T00:00:00+09:00" />
+<meta property="article:modified_time" content="2020-10-21T00:00:00+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;"/>
+<meta name="twitter:description" content="어제 작성한 LOOP매크로을 이용한 구현 을 풀어서, 만약 LOOP매크로가 없었더라면 어떻게 짰을지 작성해봤다.
+(defun max-nested-parentheses-raw (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (let ((n 0) (result 0)) (declare (type fixnum n result)) (dotimes (s--cur-idx (length s)) (let ((ch (elt s s--cur-idx))) (when (member ch &#39;(#\( #\))) (incf n (if (eql #\( ch) 1 -1)) (setf result (max n result))))) result)) 여전히 타입을 지정해서 자동으로 타입추론, 최적화 하도록 했다."/>
+<script src="https://ageldama.github.io/js/feather.min.js"></script>
+	
+	        
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://ageldama.github.io/">아겔로그</a>
+	</div>
+	<nav>
+		
+		<a href="/posts/archive/">archive</a>
+		
+		<a href="/tags/">tags</a>
+		
+		<a href="/index.xml">rss</a>
+		
+		<a href="/myself/">contact</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</h1>
+			<div class="meta">Posted on Oct 21, 2020</div>
+		</div>
+		
+
+		<section class="body">
+			<p>
+<a href="/posts/2020-10oct/leet-code-1614/">어제 작성한 LOOP매크로을 이용한 구현</a> 을 풀어서, 만약 LOOP매크로가
+없었더라면 어떻게 짰을지 작성해봤다.</p>
+<div class="src src-lisp">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>(defun max-nested-parentheses-raw (s)
+</span></span><span style="display:flex;"><span>  (<span style="font-weight:bold">declare</span> (<span style="font-weight:bold">optimize</span> (speed 3) (safety 0))
+</span></span><span style="display:flex;"><span>           (<span style="font-weight:bold">type</span> <span style="">simple-string</span> s))
+</span></span><span style="display:flex;"><span>  (<span style="font-weight:bold">let</span> ((n 0)
+</span></span><span style="display:flex;"><span>        (result 0))
+</span></span><span style="display:flex;"><span>    (<span style="font-weight:bold">declare</span> (<span style="font-weight:bold">type</span> <span style="">fixnum</span> n result))
+</span></span><span style="display:flex;"><span>    (dotimes (s--cur-idx (length s))
+</span></span><span style="display:flex;"><span>      (<span style="font-weight:bold">let</span> ((ch (elt s s--cur-idx)))
+</span></span><span style="display:flex;"><span>        (when (member ch &#39;(<span style="font-style:italic">#\(</span> <span style="font-style:italic">#\)</span>))
+</span></span><span style="display:flex;"><span>          (incf n (<span style="font-weight:bold">if</span> (eql <span style="font-style:italic">#\(</span> ch) 1 -1))
+</span></span><span style="display:flex;"><span>          (setf result (max n result)))))
+</span></span><span style="display:flex;"><span>    result))</span></span></code></pre></div>
+</div>
+<p>
+여전히 타입을 지정해서 자동으로 타입추론, 최적화 하도록 했다.</p>
+<p>
+그런데 여전히 <code>dotimes</code>, <code>when</code>, <code>incf</code>, <code>max</code> 같은 커먼리습
+HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이런 것들도
+다 풀어서 작성해도 되겠지만 별 의미는 없을 것 같아서.</p>
+<p>
+어제 작성한 내용이 얼마나 표현력이 좋았는지, 그리고 그 표현력을
+희생하지 않고, 또 반대로 표현력을 그대로 유지하면서도 얼마나 간결하고
+효율적인 코드를 생성하는 매크로인지 LOOP-macro에 대해서
+생각해볼만하다.</p>
+<p>
+참고로, SBCL 컴파일러에서 disassemble을 해서 보면, LOOP-macro 버젼이
+어셈블리 코드가 더 짧다. (90바이트 정도. Linux/x86_64 플랫폼에서)</p>
+<p>
+흥미로웠다.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/leet-code">leet-code</a></li>
+					
+					<li><a href="/tags/lisp">lisp</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  
+  <div class="footer-info">
+    2023  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

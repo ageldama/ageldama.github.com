@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>syntax on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/syntax/</link>
+    <description>Recent content in syntax on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Fri, 11 Oct 2019 00:00:01 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/syntax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</title>
+      <link>https://ageldama.github.io/posts/2019-10oct/cl-rutils/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:01 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-10oct/cl-rutils/</guid>
+      <description>커먼리습은 CLHS 이후로 언어 자체 정의는 변하지 않았다.
+구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거 같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 lisp reader을 확장하는게 CLHS에서 정의해놓은 기능 중 하나이고, 구현체들도 스펙을 잘 구현해놓았으니까.
+결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면 언제든지 매크로를 만들듯이 확장하면 되니까.
+&amp;lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&amp;rsquo;
+이런 커먼리습 확장 &amp;lsquo;라이브러리&amp;rsquo; 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

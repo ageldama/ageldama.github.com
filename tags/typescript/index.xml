@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>typescript on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/typescript/</link>
+    <description>Recent content in typescript on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Sat, 04 Feb 2023 16:46:54 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 04/02/2023 .01: 씨언어의 장자 zig, rust, golang, c&#43;&#43; ???</title>
+      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb04--01-ping/</link>
+      <pubDate>Sat, 04 Feb 2023 16:46:54 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb04--01-ping/</guid>
+      <description>최근에 재미로 zig 을 정말 재밌게 &amp;#39;읽었다&amp;#39;. 공부해보고 실제로 뭔가 코딩을 많이 해보거나 한 것은 아니고, 대체 어떻게 동작하는 프로그램을 이걸로 만들라고 하는건지 이해하고 싶었기 때문에 해봤다.
+zig으로 프로그램을 짜는게 궁금하던 부분은 haskell의 monad을 이용한 방식, 혹은 apl이나 prolog으로 실제프로그램을 어떻게 만들 수 있을지 패러다임부터 다른 언어를 공부하고 생각해보는 것과는 조금 다를수도 있겠다. 어쨌든 그냥 imperative언어이니까.
+오히려, zig을 어떻게 써먹어야 할지 궁금하던 지점은, c++의 스마트포인터와 move semantics등을 이해하는 것이나, rust의 borrowing checker, rc/arc등을 이해하는 것과 마찬가지인 것 같다.</description>
+    </item>
+    
+  </channel>
+</rss>

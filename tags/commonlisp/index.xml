@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>commonlisp on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/commonlisp/</link>
+    <description>Recent content in commonlisp on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Sat, 04 Feb 2023 16:46:54 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/commonlisp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 04/02/2023 .01: 씨언어의 장자 zig, rust, golang, c&#43;&#43; ???</title>
+      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb04--01-ping/</link>
+      <pubDate>Sat, 04 Feb 2023 16:46:54 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb04--01-ping/</guid>
+      <description>최근에 재미로 zig 을 정말 재밌게 &amp;#39;읽었다&amp;#39;. 공부해보고 실제로 뭔가 코딩을 많이 해보거나 한 것은 아니고, 대체 어떻게 동작하는 프로그램을 이걸로 만들라고 하는건지 이해하고 싶었기 때문에 해봤다.
+zig으로 프로그램을 짜는게 궁금하던 부분은 haskell의 monad을 이용한 방식, 혹은 apl이나 prolog으로 실제프로그램을 어떻게 만들 수 있을지 패러다임부터 다른 언어를 공부하고 생각해보는 것과는 조금 다를수도 있겠다. 어쨌든 그냥 imperative언어이니까.
+오히려, zig을 어떻게 써먹어야 할지 궁금하던 지점은, c++의 스마트포인터와 move semantics등을 이해하는 것이나, rust의 borrowing checker, rc/arc등을 이해하는 것과 마찬가지인 것 같다.</description>
+    </item>
+    
+    <item>
+      <title>&#34;asdf-subdir-finder&#34; released!</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/asdf-subdir-finder-1st/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-10oct/asdf-subdir-finder-1st/</guid>
+      <description>지난번 포스팅한 &amp;#34;asdf 정의를 내 코드베이스의 하위디렉토리에서 자동으로 로딩하기&amp;#34;를 프로젝트으로 만들었다.
+https://github.com/ageldama/asdf-subdir-finder
+사람마다 커먼리습으로 작업하는 스타일에 따라 많이 다를 수 있어서 안 써도 되기도 하지만, 그냥 정리해서 공개는 해봤다.</description>
+    </item>
+    
+    <item>
+      <title>&#34;커먼리습 ASDF 불러오기 편하게 하기&#34; 대모험</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/lisp-asdf-subdir-finder/</link>
+      <pubDate>Fri, 23 Oct 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-10oct/lisp-asdf-subdir-finder/</guid>
+      <description>ASDF와 system definition file 검색의 정석 이전에 ASDF을 이용하여 커먼리습 프로젝트의 의존성, 시스템을 로딩하기 에 대해서 설명한 적이 있었다.
+이전에 다룬 내용은 정석적으로 $HOME/common-lisp 디렉토리에 .asd 파일을 심볼릭링크를 걸고, (asdf:load-system ..) 을 시도하는 내용이었었다.
+Prototyping등 더 편안하게 혼자 코딩을 할 때는… 혼자 커먼리습 코딩을 하면서, 나는 더 간단하게 프로젝트를 시작하는 방법을 선호한다.
+커먼리습이 파일 이름이나 경로에 대해서 의존하는 것이 아니고, 컴파일시점, 로딩시점에 순서에 따라 로딩해서 최종적으로 컴파일하여 적재한 결과 이미지를 더 중요하게 여기기 때문에, 그리고 그런 컴파일, 빌드, 로딩과 같은 모든 단계들 자체도 커먼리습 표현식 그자체로 동작하기 때문에 그냥 하나의 소스파일을 섹션별로 나눠서 작업하면 편리하다.</description>
+    </item>
+    
+    <item>
+      <title>First release of cl-state-machine</title>
+      <link>https://ageldama.github.io/posts/2019-12dec/cl-state-machine-1st-release/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:01 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-12dec/cl-state-machine-1st-release/</guid>
+      <description>Made a small state machine library/DSL in/for CommonLisp.
+https://github.com/ageldama/cl-state-machine</description>
+    </item>
+    
+    <item>
+      <title>커먼리습 설정하기, ASDF 시스템 코드를 받기</title>
+      <link>https://ageldama.github.io/posts/2019-12dec/tips-ecl-clisp/</link>
+      <pubDate>Fri, 06 Dec 2019 00:00:01 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-12dec/tips-ecl-clisp/</guid>
+      <description>1. ASDF을 최신 버젼으로 설정한다 (이부분에서 많이 고생했는데) SBCL와 다르게 CLISP, ECL 은 최신 버젼의 ASDF을 내장한걸 패키징해놓지 않았다.
+대부분은 문제가 없이 동작하지만, 내가 작성한 커먼리습 시스템에서 실행파일을 빌드할 때 문제가 많았다.
+ASDF 의 최신 버젼을 git clone 해서 적당한 디렉토리에 받는다. https://common-lisp.net/project/asdf/ make을 내려받은 ASDF 디렉토리에서 실행한다. 실행하면 build/asdf.lisp 파일으로 한 파일으로 뭉쳐서 로딩하게 편안한 파일을 생성해준다. 내 커먼리습 구현체의 시작설정파일 맨 앞에 다음처럼 추가한다. (load &amp;quot;~/local/asdf/build/asdf&amp;quot;) 여기서 나는 $HOME/local/asdf/ 에 ASDF을 받았다고 가정.</description>
+    </item>
+    
+    <item>
+      <title>(Common Lisp의 어두운 면) Equality</title>
+      <link>https://ageldama.github.io/posts/2019-11nov/the-dark-side-of-cl-equality/</link>
+      <pubDate>Sat, 16 Nov 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-11nov/the-dark-side-of-cl-equality/</guid>
+      <description>오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로 생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을 리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.
+뭐 커먼리습의 CLHS - HyperSpec을 읽다보면 비슷한데 아주 약간씩 미묘하게 달라서 지원하는 것들이 있다:
+let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Function MAP Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON Function MAP-INTO prog Macro PROG1, PROG2 Special Operator PROGN Macro PROG, PROG* Special Operator PROGV &amp;hellip;그밖에도 좀 더 있을듯?</description>
+    </item>
+    
+    <item>
+      <title>cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</title>
+      <link>https://ageldama.github.io/posts/2019-10oct/cl-toy-stack-lang/</link>
+      <pubDate>Wed, 16 Oct 2019 00:00:01 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-10oct/cl-toy-stack-lang/</guid>
+      <description>일단 첫번째 버젼 다 만들었다.
+https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0
+그냥 장난으로 인터프리터도 아니라 그냥 eval 이용한 간단한 파서도 필요없이 lexer만으로 만들만한 Forth 비슷한 언어를 만듬.
+명령어도 실용적인 목적이 아닌만큼 그냥 문자열 장난 밖엔 없다.
+느낀점 라이브러리 좋은거 갖다 잘쓰자 uiop 같은거, feature-expression 삽질을 적게하거나 안해도됨. 더 portable하고 잘 굴러가는. Test! 3. 짜고 하나씩 진화시켜가면서 다시 돌리는 재미. Idiomatic하게 그리고 역시 Test! ..처음엔 그냥 전역변수에 상태를 갖도록 만들고, 그걸 dynamic binding으로 바꿔서 파라미터화하고, 또 그걸 다시 상태를 캡슐화하는 클래스로 감싸고, 처음엔 단순하게 리습스럽게 짜고 그걸 진화시키고, 그리고 역시 다시 테스트.</description>
+    </item>
+    
+    <item>
+      <title>CFFI으로 CommonLisp 2d array을 Foreign function으로 전달하기</title>
+      <link>https://ageldama.github.io/posts/2019-03mar/cffi-2d-array/</link>
+      <pubDate>Sun, 17 Mar 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-03mar/cffi-2d-array/</guid>
+      <description>https://github.com/ageldama/cffi-2d-array-hello
+cffi:with-foreign-array이 CFFI manual에 없어서 처음에 좀 골치아팠음.
+리습 어레이를 복사해서 매핑해줌.</description>
+    </item>
+    
+    <item>
+      <title>ASDF으로 간단한 의존성 연결과 로딩하기</title>
+      <link>https://ageldama.github.io/posts/2018-11nov/cl-asdf-custom-load-script/</link>
+      <pubDate>Sat, 03 Nov 2018 19:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2018-11nov/cl-asdf-custom-load-script/</guid>
+      <description>System? 이런게 왜 필요하지? require있잖아 대부분의 유명한 프로그래밍언어들이 커먼리습의 System 에 대응하는 기능이 명확하게 없으니까, 다른 프로그래밍 하거나 하는 방법으로 이야기를 하지는 않아야겠다.1
+https://lispcookbook.github.io/cl-cookbook/systems.html 에서 마음에 드는 설명을 찾을수 있다.
+A system is a collection of Lisp files that together constitute an application or a library, and that should therefore be managed as a whole. A system definition describes which source files make up the system, what the dependencies among them are, and the order they should be compiled and loaded in.</description>
+    </item>
+    
+    <item>
+      <title>SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기.</title>
+      <link>https://ageldama.github.io/posts/2017/2017-02-25-sbcl-osx-multithread/</link>
+      <pubDate>Sat, 25 Feb 2017 16:40:00 +0100</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2017/2017-02-25-sbcl-osx-multithread/</guid>
+      <description>SBCL은 멀티쓰레딩을 잘 지원하는 커먼리습 컴파일러이지만, 공식사이트에서 제공하는 리눅스 바이너리가 아니라 OSX 바이너리는 멀티쓰레딩이 꺼져서 컴파일되어있다.
+http://www.sbcl.org/manual/#Threading
+요건 자기 리습에서 *features* 을 평가해서, 리스트에 :threading, :sb-thread 같은 키워드를 포함하는지 확인해보면 알 수 있다.
+어쨌든 지원하지 않을 경우에, 컴파일을 다시 해야하는데, 우선 준비물은 GNU CLISP 같은 여기저기서 잘굴러가고 적당히 설치해서 부트스크래핑에 이용 가능한 커먼리습 컴파일러를 준비한다.
+다음 포스트를 참고해서 작업해봤다.:
+http://haminhvuong-blog.tumblr.com/post/22109095116/compile-sbcl-with-multi-thread-enabled-on-os-x
+create customize-target-features.lisp with content
+(lambda (features) (flet ((enable (x) (pushnew x features)) (disable (x) (setf features (remove x features)))) ;; Threading support, available only on x86/x86-64 Linux, x86Solaris ;; and x86 Mac OS X (experimental).</description>
+    </item>
+    
+  </channel>
+</rss>

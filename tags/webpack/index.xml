@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webpack on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/webpack/</link>
+    <description>Recent content in webpack on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Sat, 17 Oct 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 17/Oct/2020</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/ping-16fri/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-10oct/ping-16fri/</guid>
+      <description>웹프론트엔드 개발을 조금씩 해보고 있다. 처음에는 예전 방식으로만 하려고 하다가 조금씩 겨우 써보던 webpack을 다시 가이드를 차근차근 공부하고 동작하는 방식을 이해하도록 뜯어보고 돌려봤다.
+생각보다 단순하게, 그리고 확장성 있게 쓸만한 빌드도구였다.
+다만 문제는 설정이 복잡하고 이해하기 힘든 점보다는 빌드 시간이 너무 느린 점이었다. (내게는)
+그래서 parcel bundler을 시도 했는데, 설정도 거의 필요 없이 바로 동작하고 하는 점은 좋고, 성능도 정말 빨랐다.
+다만 Vim/Emacs으로 파일을 편집하고 저장할 때, parcel watch 대상인 파일들을 종종 아예 dev-server을 재시작해야만 제대로 동작하는 상태로 빠지는게 조금 짜증났다.</description>
+    </item>
+    
+  </channel>
+</rss>

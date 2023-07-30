@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>pytest fixtures와 의존성관리, 그리고 복잡도관리 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="# ...tests/conftest.py import pytest @pytest.fixture def name(): return &#39;Pokemon&#39; @pytest.fixture(scope=&#39;function&#39;) def monster(name): ... # ...tests/foo_test.py : def test_beast(monster): ... # &lt;--- `def monster(..)`의 결과를 주입 받음. https://docs.pytest.org/en/6.2.x/fixture.html
+&hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨. 내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.
+&lsquo;거창함&rsquo;이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면&hellip; 글쎄. ㅎㅎ&hellip;" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="pytest fixtures와 의존성관리, 그리고 복잡도관리" />
+<meta property="og:description" content="# ...tests/conftest.py import pytest @pytest.fixture def name(): return &#39;Pokemon&#39; @pytest.fixture(scope=&#39;function&#39;) def monster(name): ... # ...tests/foo_test.py : def test_beast(monster): ... # &lt;--- `def monster(..)`의 결과를 주입 받음. https://docs.pytest.org/en/6.2.x/fixture.html
+&hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨. 내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.
+&lsquo;거창함&rsquo;이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면&hellip; 글쎄. ㅎㅎ&hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ageldama.github.io/posts/2022-jekyll/2022-06-08--02-pytest-fixtures-and-complexity-mgmt/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-08T18:20:00+09:00" />
+<meta property="article:modified_time" content="2022-06-08T18:20:00+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="pytest fixtures와 의존성관리, 그리고 복잡도관리"/>
+<meta name="twitter:description" content="# ...tests/conftest.py import pytest @pytest.fixture def name(): return &#39;Pokemon&#39; @pytest.fixture(scope=&#39;function&#39;) def monster(name): ... # ...tests/foo_test.py : def test_beast(monster): ... # &lt;--- `def monster(..)`의 결과를 주입 받음. https://docs.pytest.org/en/6.2.x/fixture.html
+&hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨. 내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.
+&lsquo;거창함&rsquo;이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면&hellip; 글쎄. ㅎㅎ&hellip;"/>
+<script src="https://ageldama.github.io/js/feather.min.js"></script>
+	
+	        
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://ageldama.github.io/">아겔로그</a>
+	</div>
+	<nav>
+		
+		<a href="/posts/archive/">archive</a>
+		
+		<a href="/tags/">tags</a>
+		
+		<a href="/index.xml">rss</a>
+		
+		<a href="/myself/">contact</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">pytest fixtures와 의존성관리, 그리고 복잡도관리</h1>
+			<div class="meta">Posted on Jun 8, 2022</div>
+		</div>
+		
+
+		<section class="body">
+			<pre><code class="language-python"># ...tests/conftest.py
+
+import pytest
+
+@pytest.fixture
+def name(): return 'Pokemon'
+
+@pytest.fixture(scope='function')
+def monster(name): ...
+
+
+
+# ...tests/foo_test.py :
+
+def test_beast(monster): ...
+    # &lt;--- `def monster(..)`의 결과를 주입 받음.
+</code></pre>
+<p><a href="https://docs.pytest.org/en/6.2.x/fixture.html">https://docs.pytest.org/en/6.2.x/fixture.html</a></p>
+<p>&hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨.
+내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.</p>
+<p>&lsquo;거창함&rsquo;이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면&hellip; 글쎄. ㅎㅎ&hellip;</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  
+  <div class="footer-info">
+    2023  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

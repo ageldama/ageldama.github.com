@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>io on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/io/</link>
+    <description>Recent content in io on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Sun, 26 Feb 2017 13:50:00 +0100</lastBuildDate><atom:link href="https://ageldama.github.io/tags/io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</title>
+      <link>https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/</link>
+      <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/</guid>
+      <description>예전 내가 썼던 블로그가 갑자기 떠올랐다. http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html
+내용은,
+콜백헬 싫다. 그런데, 하스켈의 IO Monad처럼 imperative code을 작성할 수 있으면, 3. 이것들끼리의 제어권을 주고 받는걸 event loop측에서 제어하면서도, 4. 각각의 statements끼리 그냥 주욱 흐름대로 작성한것과 다르지 않게 짜기 쉽다. 굳이 이 얘기 왜 하냐하면, 사실 요즘에 RxJava2 보고, Python3에서 asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운 체이닝을 구현하고, 그걸로 콜백들을 풀어서 잘 해결하고 있는거 같은 인상이 들어서.
+결론? 내 아이디어 부심. 그리고 조금 더 잘 생각하고 실제로 어떻게 구현할지 고민해봤다면 좋았을거라는, 나 자신의 능력 한탄하기.</description>
+    </item>
+    
+    <item>
+      <title>Erlang에 더 관심을 기울여야 할 시점인거 같다</title>
+      <link>https://ageldama.github.io/posts/2017/2017-01-22-aio-rx-and-erlang/</link>
+      <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2017/2017-01-22-aio-rx-and-erlang/</guid>
+      <description>그냥 최근의 자바나 node.js, 특히 자바의 RxJava 같은걸 보다보면, 1 뭔가 언어적으로 지원하지 않는걸 뜯어내서 동작하게 만들고 너무 골치가 아프게 만들어지는건 아닌가 생각도 든다. (사실상 콜백. ㅎㅎ)
+그리고 지금 한창 JDBC이라던지 이런 입출력과 관련된 부분에서 비동기 방식을 지원하려고 많은 변화가 있을만한 시점인거 같다.
+예상은 아마 몇년간은 이런 혼란이 자바쪽에는 계속 있을거 같다는 생각이다. (async/await 같은 키워드가 추가되고 하려면 자바에 몇년이 더 걸릴지는 아무도 모를거 같다. lambda이 추가되는데 얼마나 오래걸렸었는지 추억해보자..)</description>
+    </item>
+    
+  </channel>
+</rss>

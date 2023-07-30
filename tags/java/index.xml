@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/java/</link>
+    <description>Recent content in java on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Wed, 13 Nov 2019 00:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</title>
+      <link>https://ageldama.github.io/posts/2019-11nov/why-sharpsign-in-method-path/</link>
+      <pubDate>Wed, 13 Nov 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-11nov/why-sharpsign-in-method-path/</guid>
+      <description>오늘 아침 다음은 오늘 아침 트위터의 타임라인에서 내가 스쳐본 한 스크린샷의 일부이다:
+1
+&amp;hellip;뭐에 느낌을 받았냐하면, 바로 저 String#replace(..) 이라는 부분이다. (다른 부분에서는 String.prototype.replace(..) 와 같이 썼는데 굳이 저기서만 갑자기 튀어나온 표기법)
+사실 나도 종종 내가 작업한 코드의 문서를 쓰거나2 아니면 다른 사람과 텍스트로 대화를 해야할 때 이렇게 표기를 해왔었다.3
+각각의 언어들에서 (내가 생각하는) 저렇게 표기하는 근거들은 다음과 같다:
+Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Component#getGraphics() JavaDoc안에서 다른 메서드, 필드를 참고로 넣고 싶을 때 이게 표준표기법이고 javadoc도 요렇게 써줘야 링크처리를 해준다.</description>
+    </item>
+    
+    <item>
+      <title>Erlang에 더 관심을 기울여야 할 시점인거 같다</title>
+      <link>https://ageldama.github.io/posts/2017/2017-01-22-aio-rx-and-erlang/</link>
+      <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2017/2017-01-22-aio-rx-and-erlang/</guid>
+      <description>그냥 최근의 자바나 node.js, 특히 자바의 RxJava 같은걸 보다보면, 1 뭔가 언어적으로 지원하지 않는걸 뜯어내서 동작하게 만들고 너무 골치가 아프게 만들어지는건 아닌가 생각도 든다. (사실상 콜백. ㅎㅎ)
+그리고 지금 한창 JDBC이라던지 이런 입출력과 관련된 부분에서 비동기 방식을 지원하려고 많은 변화가 있을만한 시점인거 같다.
+예상은 아마 몇년간은 이런 혼란이 자바쪽에는 계속 있을거 같다는 생각이다. (async/await 같은 키워드가 추가되고 하려면 자바에 몇년이 더 걸릴지는 아무도 모를거 같다. lambda이 추가되는데 얼마나 오래걸렸었는지 추억해보자..)</description>
+    </item>
+    
+    <item>
+      <title>Java Immutables와 친숙한 오래된 문제들</title>
+      <link>https://ageldama.github.io/posts/2017/2017-01-22-java-immutables-classic-problem/</link>
+      <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2017/2017-01-22-java-immutables-classic-problem/</guid>
+      <description>https://immutables.github.io/ 요즘 이걸 살짝 봤는데, 재미있었다.
+그런데 일단 깊이보거나 써보기 전에 드는 걱정은,
+이거 기존의 몇몇 프레임웍이나 라이브러리들이랑은 친하게 지내기 어렵지 않을까. 왜냐하면, 대부분의 POJO에 연관된 생성단계에서, default constructor 와 setter-methods을 갖고, 값을 세팅하는 경우가 대부분인데, 예를들면, 대부분의 ORM 프레임웍들이나 POJO으로 JSON등을 Deserialization해서 직접 객체를 생성할 책임을 프레임웍이나 라이브러리가 가져가는 경우에 대부분. &amp;hellip;그러면 결국 말짱황인거 같다.. 아무리 accessor 메서드들 boilerplate으로 생성하는거 막아주는게 좋다고 해도, 솔직히 그냥 한번 IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는게 더 낫겠다는 생각이든다.</description>
+    </item>
+    
+  </channel>
+</rss>

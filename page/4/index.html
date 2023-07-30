@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.111.3">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:title" content="아겔로그" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ageldama.github.io/" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="아겔로그"/>
+<meta name="twitter:description" content=""/>
+<script src="https://ageldama.github.io/js/feather.min.js"></script>
+	
+	        
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	
+	
+</head>
+
+	<body>
+		<div class="content">
+			<header>
+	<div class="main">
+		<a href="https://ageldama.github.io/">아겔로그</a>
+	</div>
+	<nav>
+		
+		<a href="/posts/archive/">archive</a>
+		
+		<a href="/tags/">tags</a>
+		
+		<a href="/index.xml">rss</a>
+		
+		<a href="/myself/">contact</a>
+		
+		
+	</nav>
+</header>
+
+			
+			<main class="list">
+				<div class="site-description"><p><code>$ fortune -a</code></p></div>
+				
+				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-22-aio-rx-and-erlang/">Erlang에 더 관심을 기울여야 할 시점인거 같다</a></h1>
+					<time>Jan 22, 2017</time>
+					<br><div class="description">
+						
+						그냥 최근의 자바나 node.js, 특히 자바의 RxJava 같은걸 보다보면, 1 뭔가 언어적으로 지원하지 않는걸 뜯어내서 동작하게 만들고 너무 골치가 아프게 만들어지는건 아닌가 생각도 든다. (사실상 콜백. ㅎㅎ)
+그리고 지금 한창 JDBC이라던지 이런 입출력과 관련된 부분에서 비동기 방식을 지원하려고 많은 변화가 있을만한 시점인거 같다.
+예상은 아마 몇년간은 이런 혼란이 자바쪽에는 계속 있을거 같다는 생각이다. (async/await 같은 키워드가 추가되고 하려면 자바에 몇년이 더 걸릴지는 아무도 모를거 같다. lambda이 추가되는데 얼마나 오래걸렸었는지 추억해보자..)&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-22-java-immutables-classic-problem/">Java Immutables와 친숙한 오래된 문제들</a></h1>
+					<time>Jan 22, 2017</time>
+					<br><div class="description">
+						
+						https://immutables.github.io/ 요즘 이걸 살짝 봤는데, 재미있었다.
+그런데 일단 깊이보거나 써보기 전에 드는 걱정은,
+이거 기존의 몇몇 프레임웍이나 라이브러리들이랑은 친하게 지내기 어렵지 않을까. 왜냐하면, 대부분의 POJO에 연관된 생성단계에서, default constructor 와 setter-methods을 갖고, 값을 세팅하는 경우가 대부분인데, 예를들면, 대부분의 ORM 프레임웍들이나 POJO으로 JSON등을 Deserialization해서 직접 객체를 생성할 책임을 프레임웍이나 라이브러리가 가져가는 경우에 대부분. &hellip;그러면 결국 말짱황인거 같다.. 아무리 accessor 메서드들 boilerplate으로 생성하는거 막아주는게 좋다고 해도, 솔직히 그냥 한번 IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는게 더 낫겠다는 생각이든다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-22-emacs-ace-window/">Emacs에서 window 전환을 편하게, ace-window</a></h1>
+					<time>Jan 22, 2017</time>
+					<br><div class="description">
+						
+						이맥스에서 코딩하거나 마크다운이나 Org으로 글을 쓰고 정리하는데, 그간 그냥 그럭저럭 나는 이맥스를 나한테 맞춰서 사용하고 있다고 생각하고 있었던거 같다. 1
+그런데, 항상 뭔가 불편한데, 그냥 바쁘다는 이유로 깊이 생각은 안하고 대충 대충 때우면서 사용해왔었던게 있었다. 바로 window 끼리 전환하는 방법.
+C-x 2 이나 C-x 3으로 창을 분할해놓고 쓰는게 보통인데, 이때 나는 그냥 아무 생각없이 C-x o만을 이용해서 다음 윈도우 으로 이동만해왔었다.
+그런데, 창이 3개 이상이 되고, 현재 창의 다음 창 이 아니라, 이전 창 으로 이동하고 싶으면?&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-02-source-hilite-testing/">Jekyll &#43; Rouge 소스코드 하일라이팅 테스트</a></h1>
+					<time>Jan 2, 2017</time>
+					<br><div class="description">
+						
+						Rouge 이거 적용해보기.
+https://github.com/ageldama/hello-adder-cl-asdf/blob/master/src/adders.lisp
+;;; Actual Implementations here. (in-package :hello-adder) (defun make-adder (n) (lambda (x) (+ n x))) (defun 1+er () (make-adder 1)) https://github.com/ageldama/ageldama-gh-jekyll/commit/334ead4b31b305b82e85ae2c6a6e0a219ecc9e66 이렇게 작업해봤음.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-02-travis-ci-jekyll-gh/">Github.io 블로그 TraviCI으로 빌드해서 배포하기</a></h1>
+					<time>Jan 2, 2017</time>
+					<br><div class="description">
+						
+						.. 여기 에 불만을 적었듯이, 여러가지로 그냥은 만족하기 어려운 부분이 있었다.
+그런데, Travis-CI을 통해서 빌드해서 배포한다는 분이 계셨다. https://twitter.com/Realignist/status/815554589889994752
+..난 생각 못해본 방법. ㅎㅎ 1
+그래서 도전.
+우선 Jekyll 소스용 저장소로 분리하고, 배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다. https://github.com/felixrieseberg/travis-jekyll-git 여기 참고해서 삽질. 결과물은 https://github.com/ageldama/ageldama-gh-jekyll ..진행하면서 처음에 좀 짜증났던거,
+Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것만으로는 안되고, .travis.yml 파일에 gem설치를 지정해야했다. https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5 Travis-CI 작업의 세팅에서 git_target 환경변수에 URL지정할때&hellip; github.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-01-github-jekyll/">Github.io의 Jekyll 버젼이랑 차이?</a></h1>
+					<time>Jan 1, 2017</time>
+					<br><div class="description">
+						
+						다 만족스럽고 좋은데, 로컬에서 Jekyll 실행해서 미리보기한 결과랑 Github에 올려서 렌더링한거랑 마크다운 결과가 조금 달라서 짜증난다.
+아마 마크다운 렌더러 버젼 차이 때문일거 같은데 ㅜ.ㅜ
+% jekyll -v jekyll 3.3.1 &hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-01-getting-started-with-emacs/">Emacs이랑 친해지기</a></h1>
+					<time>Jan 1, 2017</time>
+					<br><div class="description">
+						
+						&ldquo;이맥스를 어떻게 배우면 좋은지 모르겠다. 여러번 도전해봤지만 항상 별로였다.&rdquo;
+..어느날 한 동료가 물어봤다. (그렇다 나는 일터에서도 이맥스를 켜놓고 계속 쓴다.)
+솔직히 기본적으로 매일 Org-mode으로 계획, 일정 등등 정리하고 계속 개인적으로 정리하면서 쓰고, 파이썬, Go, Clojure 같은거 할때도 편집하고 테스트하기도 편하니까 선호하는 편인거 같다. (자바랑 스칼라은 물론 그냥 IntelliJ 쓴다.)
+여튼 그날 간단히 짝프로그래밍하듯이 같이 앉아서 몇가지 이야기를 하고, 내 설정 파일 1 이나 어떻게 접근하는게 좋은지에 대해서 잠깐 이야기를 했었다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-01-welcome-to-jekyll/">Welcome to Jekyll!</a></h1>
+					<time>Jan 1, 2017</time>
+					<br><div class="description">
+						
+						You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.
+To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+<ul class="pagination">
+	<span class="page-item page-prev">
+	
+    <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">[◇ First]</span></a>
+    <a href="/page/3/" class="page-link" aria-label="Previous"><span aria-hidden="true">[← Prev]</span></a>
+	
+	</span>
+        <span class="page-number">(4 of 4)</span>
+	<span class="page-item page-next">
+	
+    <a  class="page-link" aria-label="Next"><span aria-hidden="true">[Next →]</span></a>
+    <a  class="page-link" aria-label="Last"><span aria-hidden="true">[Last ◈]</span></a>
+	
+	</span>
+</ul>
+
+
+			</main>
+			<footer>
+  
+  <div class="footer-info">
+    2023  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  feather.replace()
+</script>
+		</div>
+		
+	</body>
+</html>

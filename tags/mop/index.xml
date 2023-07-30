@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mop on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/mop/</link>
+    <description>Recent content in mop on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Fri, 23 Oct 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/mop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&#34;커먼리습 ASDF 불러오기 편하게 하기&#34; 대모험</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/lisp-asdf-subdir-finder/</link>
+      <pubDate>Fri, 23 Oct 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-10oct/lisp-asdf-subdir-finder/</guid>
+      <description>ASDF와 system definition file 검색의 정석 이전에 ASDF을 이용하여 커먼리습 프로젝트의 의존성, 시스템을 로딩하기 에 대해서 설명한 적이 있었다.
+이전에 다룬 내용은 정석적으로 $HOME/common-lisp 디렉토리에 .asd 파일을 심볼릭링크를 걸고, (asdf:load-system ..) 을 시도하는 내용이었었다.
+Prototyping등 더 편안하게 혼자 코딩을 할 때는… 혼자 커먼리습 코딩을 하면서, 나는 더 간단하게 프로젝트를 시작하는 방법을 선호한다.
+커먼리습이 파일 이름이나 경로에 대해서 의존하는 것이 아니고, 컴파일시점, 로딩시점에 순서에 따라 로딩해서 최종적으로 컴파일하여 적재한 결과 이미지를 더 중요하게 여기기 때문에, 그리고 그런 컴파일, 빌드, 로딩과 같은 모든 단계들 자체도 커먼리습 표현식 그자체로 동작하기 때문에 그냥 하나의 소스파일을 섹션별로 나눠서 작업하면 편리하다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="커먼리습은 CLHS 이후로 언어 자체 정의는 변하지 않았다.
+구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거 같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 lisp reader을 확장하는게 CLHS에서 정의해놓은 기능 중 하나이고, 구현체들도 스펙을 잘 구현해놓았으니까.
+결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면 언제든지 매크로를 만들듯이 확장하면 되니까.
+&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;
+이런 커먼리습 확장 &lsquo;라이브러리&rsquo; 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게" />
+<meta property="og:description" content="커먼리습은 CLHS 이후로 언어 자체 정의는 변하지 않았다.
+구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거 같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 lisp reader을 확장하는게 CLHS에서 정의해놓은 기능 중 하나이고, 구현체들도 스펙을 잘 구현해놓았으니까.
+결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면 언제든지 매크로를 만들듯이 확장하면 되니까.
+&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;
+이런 커먼리습 확장 &lsquo;라이브러리&rsquo; 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ageldama.github.io/posts/2019-10oct/cl-rutils/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-10-11T00:00:01+09:00" />
+<meta property="article:modified_time" content="2019-10-11T00:00:01+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게"/>
+<meta name="twitter:description" content="커먼리습은 CLHS 이후로 언어 자체 정의는 변하지 않았다.
+구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거 같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 lisp reader을 확장하는게 CLHS에서 정의해놓은 기능 중 하나이고, 구현체들도 스펙을 잘 구현해놓았으니까.
+결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면 언제든지 매크로를 만들듯이 확장하면 되니까.
+&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;
+이런 커먼리습 확장 &lsquo;라이브러리&rsquo; 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github."/>
+<script src="https://ageldama.github.io/js/feather.min.js"></script>
+	
+	        
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://ageldama.github.io/">아겔로그</a>
+	</div>
+	<nav>
+		
+		<a href="/posts/archive/">archive</a>
+		
+		<a href="/tags/">tags</a>
+		
+		<a href="/index.xml">rss</a>
+		
+		<a href="/myself/">contact</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</h1>
+			<div class="meta">Posted on Oct 11, 2019</div>
+		</div>
+		
+
+		<section class="body">
+			<p>커먼리습은 <a href="https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec">CLHS</a>
+이후로 언어 자체 정의는 변하지 않았다.</p>
+<p>구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거
+같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 <a href="https://en.wikipedia.org/wiki/Lisp_reader">lisp
+reader</a>을 확장하는게
+CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스펙을 잘
+구현해놓았으니까.</p>
+<p>결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면
+언제든지 매크로를 만들듯이 확장하면 되니까.</p>
+<blockquote>
+<p><em>&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;</em></p>
+</blockquote>
+<p>이런 커먼리습 확장 <em>&lsquo;라이브러리&rsquo;</em> 들이 여러가지 있는데, 가장 요즘에
+쓸만할거 같다고 생각하는건 rutils이다. <a href="https://github.com/vseloved/rutils">https://github.com/vseloved/rutils</a></p>
+<p><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code> 같은거
+매번 반복해서 쳐넣는걸 그냥 <code>eval-always</code>으로 바꿔준다거나.
+<code>gensym</code>하는것도 <code>with-gensyms</code> 제공하거나 하는 이런류의
+라이브러리들에서 보통 제공하는것들부터.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>내가 제일 유용할거 같은건:</p>
+<ol>
+<li>Clojure 같은 <a href="http://clojuredocs.org/clojure.core/fn">Lambda 함수 표현</a></li>
+<li>Hashtable, Vector, Heredoc String literal 표현</li>
+<li><a href="https://clojure.org/guides/threading_macros">Clojure 같은 <code>-&gt;</code>, <code>-&gt;&gt;</code> threadings macros</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
+<li><code>rutils.bind:with</code>: destructuring 편안하게!</li>
+<li><code>rutils.generic:?</code>: nested object에 대해서 편안하게 accessing</li>
+</ol>
+<p>리터럴 표현들의 경우에는 sharpsign을 쓰는 문법이 기존 커먼리습 편집기들이랑 별 충돌 없이 잘 동작할듯.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>rutils의 기능들을 일일이 하나씩 소개하지는 않겠음. 그냥
+<a href="https://github.com/vseloved/rutils/blob/master/docs/tutorial.md">tutorial</a>
+주욱 읽고 자기가 커먼리습 코드를 작성할때 참고해서 더 편안하고 깔끔한
+코드를 짜는데 도움이 되었으면 좋겠다.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://common-lisp.net/project/alexandria/draft/alexandria.html">https://common-lisp.net/project/alexandria/draft/alexandria.html</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>.. <a href="https://en.wikipedia.org/wiki/Thread_(computing)">https://en.wikipedia.org/wiki/Thread_(computing)</a> 이거 말고.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>왜냐하면 <code>#...</code> 와 같은 형태로 sharpsign은
+<a href="http://clhs.lisp.se/Body/02_dh.htm">http://clhs.lisp.se/Body/02_dh.htm</a> 와 같이 더 보편적인
+리더매크로 표현법이니까.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/lisp">lisp</a></li>
+					
+					<li><a href="/tags/clojure">clojure</a></li>
+					
+					<li><a href="/tags/macro">macro</a></li>
+					
+					<li><a href="/tags/syntax">syntax</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  
+  <div class="footer-info">
+    2023  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

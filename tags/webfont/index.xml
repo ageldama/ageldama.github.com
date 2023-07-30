@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webfont on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/webfont/</link>
+    <description>Recent content in webfont on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Mon, 21 Oct 2019 00:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/webfont/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>블로그 폰트 적용</title>
+      <link>https://ageldama.github.io/posts/2019-10oct/blog-font/</link>
+      <pubDate>Mon, 21 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-10oct/blog-font/</guid>
+      <description>그냥 CDN에서 내려받는 공개된 Noto 폰트를 적용했다. 깔끔하다.1
+어제는 네오둥근모 적용해서 완전 귀엽고 내 취향이기는했는데, 그렇게 두면 안될것 같아서 좀 평범한 폰트로 바꿨다.
+깔끔하게 글이 눈에 잘 들어오고 CDN에서 내려받으니 빨라서 좋다.
+워드프레스에서 본명조(Noto Serif CJK KR) 폰트 사용하기 이 포스팅을 참고. 고맙습니다. 글 쓰신분 아이디가 이스크라(러시아어 &amp;lsquo;불꽃&amp;rsquo;)이라니&amp;hellip; 심장이 뜨거워진다.&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
+    </item>
+    
+  </channel>
+</rss>

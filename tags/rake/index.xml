@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rake on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/rake/</link>
+    <description>Recent content in rake on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/rake/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 14/Aug/2020</title>
+      <link>https://ageldama.github.io/posts/2020-08aug/ping-14fri/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-08aug/ping-14fri/</guid>
+      <description>빌드도구의 경험과 Meson을 사용하기 Meson-ABC 갖고 놀아본 코드
+아주 예전에 commercially 성공적이었었던 C++ 프로젝트를 홀로 기획, 설계, 개발했었었다.
+처음에는 GNU Makefile으로 간단히 시작했었었다. 타겟 플랫폼이 뻔하게 윈도였기 때문이다.
+그 이전에는 ANSI C으로 작성한 SDL 조합형 비트맵 출력 오픈소스 라이브러리 같은 것들을 작업할 때는 그냥 GNU Autotools 을 쓰거나 했었었다.
+하지만 그렇게 configure 하거나 할 부분도 없고 처음 혼자 시작하며 다른 신경 쓸 것도 무지하게 많았었던 프로젝트였고 더욱이 기간도 한정적이었었다.1</description>
+    </item>
+    
+  </channel>
+</rss>

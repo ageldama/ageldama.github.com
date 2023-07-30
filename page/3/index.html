@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.111.3">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:title" content="아겔로그" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ageldama.github.io/" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="아겔로그"/>
+<meta name="twitter:description" content=""/>
+<script src="https://ageldama.github.io/js/feather.min.js"></script>
+	
+	        
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	
+	
+</head>
+
+	<body>
+		<div class="content">
+			<header>
+	<div class="main">
+		<a href="https://ageldama.github.io/">아겔로그</a>
+	</div>
+	<nav>
+		
+		<a href="/posts/archive/">archive</a>
+		
+		<a href="/tags/">tags</a>
+		
+		<a href="/index.xml">rss</a>
+		
+		<a href="/myself/">contact</a>
+		
+		
+	</nav>
+</header>
+
+			
+			<main class="list">
+				<div class="site-description"><p><code>$ fortune -a</code></p></div>
+				
+				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/foo/">Org 파일으로 Hugo 포스팅 테스트</a></h1>
+					<time>Dec 11, 2019</time>
+					<br><div class="description">
+						
+						적당히 잘 동작하는거 같으니 앞으로는 그냥 혼란스러운 Markdown 대신에 그냥 Org 파일으로 블로깅 하며 될거 같다. 행벜.
+예전 버젼 Hugo에서는 지원을 제대로 못하던거 같은데, 어느샌가 업데이트 하니까 되는거 같아서 그냥 슬그머니 쓰기로. https://gohugo.io/content-management/formats/
+기존 마크다운들도 인라인 이미지 문법을 바꾸고, ToC 표시 설정도 바뀌어서 조금 변경.
+아쉬운건 여전히 Org 파일에서 ToC 지원은 빠져 있는거 같아서… https://github.com/snosov1/toc-org 설치해봤다. 그냥 고민할 필요가 없었구나. ㅋ
+제일 좋은건 code syntax highlight이 예뻐졌다.
+Table of Contents &lt;– :TOC: –&gt; foobar&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/cl-state-machine-1st-release/">First release of cl-state-machine</a></h1>
+					<time>Dec 9, 2019</time>
+					<br><div class="description">
+						
+						Made a small state machine library/DSL in/for CommonLisp.
+https://github.com/ageldama/cl-state-machine&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/tips-ecl-clisp/">커먼리습 설정하기, ASDF 시스템 코드를 받기</a></h1>
+					<time>Dec 6, 2019</time>
+					<br><div class="description">
+						
+						1. ASDF을 최신 버젼으로 설정한다 (이부분에서 많이 고생했는데) SBCL와 다르게 CLISP, ECL 은 최신 버젼의 ASDF을 내장한걸 패키징해놓지 않았다.
+대부분은 문제가 없이 동작하지만, 내가 작성한 커먼리습 시스템에서 실행파일을 빌드할 때 문제가 많았다.
+ASDF 의 최신 버젼을 git clone 해서 적당한 디렉토리에 받는다. https://common-lisp.net/project/asdf/ make을 내려받은 ASDF 디렉토리에서 실행한다. 실행하면 build/asdf.lisp 파일으로 한 파일으로 뭉쳐서 로딩하게 편안한 파일을 생성해준다. 내 커먼리습 구현체의 시작설정파일 맨 앞에 다음처럼 추가한다. (load &quot;~/local/asdf/build/asdf&quot;) 여기서 나는 $HOME/local/asdf/ 에 ASDF을 받았다고 가정.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-11nov/the-dark-side-of-cl-equality/">(Common Lisp의 어두운 면) Equality</a></h1>
+					<time>Nov 16, 2019</time>
+					<br><div class="description">
+						
+						오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로 생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을 리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.
+뭐 커먼리습의 CLHS - HyperSpec을 읽다보면 비슷한데 아주 약간씩 미묘하게 달라서 지원하는 것들이 있다:
+let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Function MAP Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON Function MAP-INTO prog Macro PROG1, PROG2 Special Operator PROGN Macro PROG, PROG* Special Operator PROGV &hellip;그밖에도 좀 더 있을듯?&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-11nov/why-sharpsign-in-method-path/">(소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</a></h1>
+					<time>Nov 13, 2019</time>
+					<br><div class="description">
+						
+						오늘 아침 다음은 오늘 아침 트위터의 타임라인에서 내가 스쳐본 한 스크린샷의 일부이다:
+1
+&hellip;뭐에 느낌을 받았냐하면, 바로 저 String#replace(..) 이라는 부분이다. (다른 부분에서는 String.prototype.replace(..) 와 같이 썼는데 굳이 저기서만 갑자기 튀어나온 표기법)
+사실 나도 종종 내가 작업한 코드의 문서를 쓰거나2 아니면 다른 사람과 텍스트로 대화를 해야할 때 이렇게 표기를 해왔었다.3
+각각의 언어들에서 (내가 생각하는) 저렇게 표기하는 근거들은 다음과 같다:
+Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Component#getGraphics() JavaDoc안에서 다른 메서드, 필드를 참고로 넣고 싶을 때 이게 표준표기법이고 javadoc도 요렇게 써줘야 링크처리를 해준다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-11nov/ping-01fri/">Ping 01/Nov/2019</a></h1>
+					<time>Nov 1, 2019</time>
+					<br><div class="description">
+						
+						그 이전의 시간 한국으로 돌아와 1년 반 정도 한 회사에 다니다가, 정리하고 나와서 시간을 보내고 있다.
+관점, 사고방식, 일하는 방식 등등 대화가 통하기도 어려운 상황이었고, 그런 세계관도 너무 차이가 나서 같이 있기 힘들었었다.
+그리고 어째서 한국을 떠나기로 결심했었었는지 뒤돌아봤고 거의 동일한 경험이었다. 조금은 달라진게 있으려나. 아마 그러리라 생각한다. 완전히 똑같은 경험은 아니다. 왜냐하면 거기에서 내가 얻은게 다르다.
+어떤 사람은 그럴리 없고 내가 오해를 한거라고 이야기를 해주지만, 그냥 나는 나와 같은 상황도, 처지도, 지위도 아니었으니 그런 충고가 무의미하다고 생각한다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/exg-pro-trackball-pgupdn/">ELECOM EX-G Pro Trackball 잉여 버튼을 Page Up/Down으로 쓰기</a></h1>
+					<time>Oct 25, 2019</time>
+					<br><div class="description">
+						
+						컴퓨터를 많이 쓰니까 다른 부분보다 손목이 먼저 망가져서, 손목을 조금만 큰 각도로 꺾으면 아프다. ㅠ.ㅠ.. 예전에도 그랬었는데1
+마우스 안쓰고, 트랙볼 쓰기2 키보드 넘패드 부분 없는 짧은 86키 레이아웃 쓰기 로지텍 마블 트랙맨 잘 쓰다가, 지름을 받아서 조금 다음 티어의 제품으로 업그레이드 해봤다.
+그래서 바꾼게 &ndash;&gt; 엘레컴 EX-G Pro Trackball ..그런데 다 좋은데, 저기 있는 Function assignment button 이라고 써있는게 2개가 더 달려있음.3
+이 추가기능버튼들은 윈도였다면 벤더에서 제공하는 프로그램을 통해서 할당이 가능할거 같은데, 리눅스/X윈도에서는 xev으로 확인해보니 그냥 Button 10번, 11번이었다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/blog-font/">블로그 폰트 적용</a></h1>
+					<time>Oct 21, 2019</time>
+					<br><div class="description">
+						
+						그냥 CDN에서 내려받는 공개된 Noto 폰트를 적용했다. 깔끔하다.1
+어제는 네오둥근모 적용해서 완전 귀엽고 내 취향이기는했는데, 그렇게 두면 안될것 같아서 좀 평범한 폰트로 바꿨다.
+깔끔하게 글이 눈에 잘 들어오고 CDN에서 내려받으니 빨라서 좋다.
+워드프레스에서 본명조(Noto Serif CJK KR) 폰트 사용하기 이 포스팅을 참고. 고맙습니다. 글 쓰신분 아이디가 이스크라(러시아어 &lsquo;불꽃&rsquo;)이라니&hellip; 심장이 뜨거워진다.&#160;&#x21a9;&#xfe0e;&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-20sun/">Ping 20/Oct/2019</a></h1>
+					<time>Oct 20, 2019</time>
+					<br><div class="description">
+						
+						장거리 드라이브 고속도로를 내려와서 국도에 들어서서 우회전 신호대기에서 창문을 내리자마자 깨달은게 공기가 말도 안되게 좋았다.
+가보고 싶었던 곳들을 돌아다니고 정말 많은게 변했구나 싶기도 하고 쓸쓸했다. 세상에 이런 곳도 아직 있구나, 내가 사는 세상이, 그게 절대적으로 전부라고 생각하는 복잡하고 발전된 모습이 아니라, 이런 곳이 있을 수 있구나 싶어서 신기했다.
+다시 또 가고 싶다. 아주 옛날엔 거기가 지루하다고 생각했었던거 같은데.
+게임: 번아웃 파라다이스 &lsquo;벗아웃 파라다이스&rsquo;, 리마스터 버전으로 만난다 - 이도원 기자 입력: 2018/02/22&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/cl-toy-stack-lang/">cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</a></h1>
+					<time>Oct 16, 2019</time>
+					<br><div class="description">
+						
+						일단 첫번째 버젼 다 만들었다.
+https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0
+그냥 장난으로 인터프리터도 아니라 그냥 eval 이용한 간단한 파서도 필요없이 lexer만으로 만들만한 Forth 비슷한 언어를 만듬.
+명령어도 실용적인 목적이 아닌만큼 그냥 문자열 장난 밖엔 없다.
+느낀점 라이브러리 좋은거 갖다 잘쓰자 uiop 같은거, feature-expression 삽질을 적게하거나 안해도됨. 더 portable하고 잘 굴러가는. Test! 3. 짜고 하나씩 진화시켜가면서 다시 돌리는 재미. Idiomatic하게 그리고 역시 Test! ..처음엔 그냥 전역변수에 상태를 갖도록 만들고, 그걸 dynamic binding으로 바꿔서 파라미터화하고, 또 그걸 다시 상태를 캡슐화하는 클래스로 감싸고, 처음엔 단순하게 리습스럽게 짜고 그걸 진화시키고, 그리고 역시 다시 테스트.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-15tue/">Ping 15/Oct/2019</a></h1>
+					<time>Oct 15, 2019</time>
+					<br><div class="description">
+						
+						커먼리습으로 간단한 스택기반 장난감 프로그래밍언어를 만들고있다.
+https://github.com/ageldama/cl-toy-stack-lang
+튜링컴플릿이나 그런거 관심도 없고 사실 Parser도 적절하게 만들지 않았다.
+다만 유니코드 잘되고 쓸만한 lexer generator이 커먼리습에 있는지가 궁금했다.
+적당히 내일 정도면 어느 정도 완전히 굴러가는 프로그램으로 다 만들고 마무리 할 듯.
+처음에는 QuickLisp 에서 어떤 Lexer을 써야할까 고민하다가, cl-lex 쓰다가 실망스러웠다.1
+그러다가 만난게 Alexa 인데, 가장 마음에 드는 lexer generator.
+https://www.rigetti.com/ 이 회사를 발견. 커먼리습으로 Quil Compiler2 만들고 퀀텀컴퓨팅 관련된 기업인가 보다.
+그리고 깃헙 저장소 살펴보는데 흥미롭고 써보면 어떨까 싶은게 많이 보였다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-14mon/">Ping 14/Oct/2019</a></h1>
+					<time>Oct 14, 2019</time>
+					<br><div class="description">
+						
+						어제 오늘 요즘에 들어서 생각을 겨우 하기 시작한 고민을 사람들이 트윗하더라.
+tweet 1183311320822607872
+..이번에 직장을 그만두고1 새로운 직장을 열심히 알아보고 있지는 않고 있다.
+몇군데 인터뷰를 진행도 해보고 했지만, 모두 솔직히 나도 모르겠고 거절도 많이 받고 해서 꾸준히 진행을 하고 있지는 않다. 그리고 나도 이직을 하고 recruiting 과정을 한국만이 아니라 독일에서도 다양하게 겪어보니 어떤것이 좋거나 나쁜 신호인지 캐치하게 되는거 같고, 또 그런 시그널들이 생각보다 적절하게 그 회사측의 모습이나 생각을 반영하는게 맞는거 같더라.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-13sun/">Ping 13/Oct/2019</a></h1>
+					<time>Oct 13, 2019</time>
+					<br><div class="description">
+						
+						집중하는게 내게 더 좋겠다는 생각이든다.
+단시간에 어떤 일에 집중하는 일은 만족스럽다. 그런 시간단위의 집중이 아니라 기간이라고 할만큼 며칠, 몇주에 걸쳐, 한정된 한두개의 주제에만 집중해서 생각하고 만들거나 글을 써가는게 필요하다.
+혼자 관심이 가거나 생각하는 주제가 떠오르면 Org파일 한 개나 메모지, 핸드폰에 적어놓는다. 그리고 내가 가진 정리하는 방식에 따라 조금씩 생각이 다듬어질때마다 저장매체를 바꿔가며 기록해나간다. 문득 그 Org 파일 을 열었는데, 너무 많은 내용들이, 그것도 폭넓은 다양한 주제들에 대해서 걸쳐있음을 봤다.
+다양한 주제에 관심이 있는건 어쩔 수 없겠지만 각 주제마다 내가 투사하는 시간과 노력이 너무 분산되는거 아닌가 생각해왔다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/zettelkaesten-12sat/">Zettelkästen?</a></h1>
+					<time>Oct 12, 2019</time>
+					<br><div class="description">
+						
+						어제 Ping에서 계속 블로깅을 하면서 생각 하는걸 계속 다듬어 갔으면 좋겠다는 말을 했었는데,
+마침 HN에 그런걸 하기 적절해 보이는 글이 올라와서 읽어봤다.1
+간략히 정리해보면,
+생각 적기: 짧은 길이 메모를 적어서 생각만으로 카드를 만들고,2 3 이 상태에서는 우선 각 카드는 &ldquo;순번없음 (Unsorted)&rdquo; 상태 deck으로 쌓아만 놓는다. 순서매기기(1): 카드끼리 1, 2, 3 같이 순서를 두고 정렬. &lsquo;Unsorted&rsquo; deck에서 꺼내와서 정리하는거겠지. 각 순서는 생각의 순서일수도 있겠고, 아니면 그냥 구분되는 다른 생각의 단절을 나타내는 방법으로 쓸수도 있겠지.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/cl-rutils/">rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</a></h1>
+					<time>Oct 11, 2019</time>
+					<br><div class="description">
+						
+						커먼리습은 CLHS 이후로 언어 자체 정의는 변하지 않았다.
+구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거 같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 lisp reader을 확장하는게 CLHS에서 정의해놓은 기능 중 하나이고, 구현체들도 스펙을 잘 구현해놓았으니까.
+결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면 언제든지 매크로를 만들듯이 확장하면 되니까.
+&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;
+이런 커먼리습 확장 &lsquo;라이브러리&rsquo; 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-11fri/">Ping 11/Oct/2019</a></h1>
+					<time>Oct 11, 2019</time>
+					<br><div class="description">
+						
+						매일 글쓰기. 블로깅하기 나도 해볼까.
+해보려는 이유는 메모는 계속해서 하면서 살고 있는데, 연속해서 같은 주제에 대해서 더 생각하고 하면서 발전시키는 방법으로 일기를 쓰는것과 반복적으로, 또 이전에 썼었던 글을 읽어보면서 거기에서 더 나아가서 고쳐나가고 발전시키는 방법으로 블로깅이 나쁘지 않은거 같아서.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-08tue/">Ping 08/Oct/2019</a></h1>
+					<time>Oct 8, 2019</time>
+					<br><div class="description">
+						
+						어제는 하루 종일 아는 사람들을 만나고 돌아다녔다.
+한국에서 운전을 하게 되고 재미를 붙이고 살고 있다.
+비가 오는 날이었지만 상쾌해서 북한산 국립공원 근처, 은평한옥마을, 진관사를 다녔다. 차를 타고 이동하면서 편하고 좋았다. 행동반경이 넓어지고 운전하면서 아직은 매순간이 재밌다.
+비가 내려서 구름과 안개가 북한산 자락에 깔려서 운치있었다. 카페에 앉아서 산풍경을 감상했다. 학생때는 자주 학교에서 소풍이나 백일장을 서오릉이나 북한산으로 왔었었는데. 그때도 가끔 생각했지만 비가 내려 세상이 이렇게 젖었을때 애처롭게 어둡기도 하고 깨끗한 습기를 머금은 숲이 상쾌해서 생명을 느끼게 해준다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-03mar/2019-03mar17-ping/">Ping 17/03/2019</a></h1>
+					<time>Mar 17, 2019</time>
+					<br><div class="description">
+						
+						Emacs/C++ 개발환경 스크린캐스트 이전 포스팅 에서 만들었던 설정을 스크린캐스트로 찍어서 공유해봤다.
+&ldquo;Let Over Lambda&rdquo; 읽기 Let Over Lambda을 읽기 시작했다. 커먼리습 매크로, 클로져에 대한 이야기를 더 깊이 있게 설명하고, 그런 기능들이 어떻게 리습이랑 리습이 아닌 &ldquo;Blub language&rdquo;이라고 말하고있는 대부분의 언어들과의 차이인지를 설명한다.
+리습의 매크로나 closure을 통해서, 그간 내가 프로그래밍언어 설계를 할때 포함해야하고, 컴파일러가 지원하도록 손수 만들어놓아야 한다고 믿던 것들이 얼마나 쉽게 구현되는지를 보며 충격을 받는다. 재밌고 신선하다.
+다른 리습, Prolog책들 쌓아놓고 안 읽던것들도 조금 더 읽어나가야겠다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-03mar/cffi-2d-array/">CFFI으로 CommonLisp 2d array을 Foreign function으로 전달하기</a></h1>
+					<time>Mar 17, 2019</time>
+					<br><div class="description">
+						
+						https://github.com/ageldama/cffi-2d-array-hello
+cffi:with-foreign-array이 CFFI manual에 없어서 처음에 좀 골치아팠음.
+리습 어레이를 복사해서 매핑해줌.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-02feb/2019feb27-ping/">Ping 26/02/2019</a></h1>
+					<time>Feb 26, 2019</time>
+					<br><div class="description">
+						
+						번아웃, 회의감 아무래도 번아웃이 온거 같다. 일을 해야 하는데 아무런 생각이나 의욕도 떠오르지 않는다.
+아무것도 제대로 하지 못할거 같고, 해서 의미도 없을거라는 생각이 강하다.
+일하는것에 회의가 심하다. 실제로는 아무것도 제대로 알지 못하고 그냥 싫으니까 반대에 사람들 사이를 조작해서 악의적으로 행동하고 그렇게 조장하는것에 이제는 삶에서 너무 많이 봐온거 같고, 그런 사이에서 무력하게 지내고 해야한다는게 무엇보다 지친다.
+그리고 그렇게 때문에 해야할 이유도, 굳이 마음을 써야할 이유도 모르겠다.
+그냥 개인적으로 하고 싶던 설정이나 만지작거리면서 시간을 보내봐도 딱히 그게 지나고 나면 하고 싶은것도 없어진다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-02feb/counsel-ivy&#43;cpp-ide/">Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)</a></h1>
+					<time>Feb 26, 2019</time>
+					<br><div class="description">
+						
+						최근에 이맥스 설정을 Helm기반에서 Ivy/Counsel으로 전부 바꿨다.
+더 가볍고, 적당히 잘 동작하고, Ripgrep이랑 기본적으로 설정이 가능해서 편함.
+거기에 C-c C-o (ivy-occur) + wgrep이 Helm에선 동작할때가 그때그때 기능에 따라 달라서 짜증나고, 심지어 플러그인을 설정해서 써야하거나 해서 정말 좋아하는 기능인데 우울하게 만들었는데, Ivy이 훨씬 깔끔하게 동작하고 일관성있게 잘 동작함.
+처음에는 Helm에서 하는 기능들을 그대로 옮기려고만 생각하다가, 오히려 Ivy에 맞춰서 내가 익숙해지고, 더 낫게 할 방법들이 있어서 그냥 내가 adopt해서 편안해졌다.
+CMake + compile_commands.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-02feb/2019-02feb26-ping/">Ping 26/02/2019</a></h1>
+					<time>Feb 26, 2019</time>
+					<br><div class="description">
+						
+						게임: 발더스게이트EE, &lsquo;원숭이섬의 비밀&rsquo; SE + SteamPlay, 등등 아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced Edition들 올라와있었다. 발더스게이트1, 2 모두. 시간이 될때마다 조금씩 플레이 중.
+새로 UI이나 그래픽 요소들 등등 리마스터 한건지 훨씬 좋아진거 같다.
+원숭이섬의 비밀: Special Edition 이것도 시간날때 플레이. ScummVM 으로 옛날 그래픽으로 다시 해도 좋겠지만, 오히려 애니메이션이나 그래픽 다시 그린게 나는 더 마음에 들어서 이쪽이 좋은거 같다.
+Unavowed. 이런류의 어드벤쳐 꾸준히 만드는 &ldquo;WadjetEyeGames&quot;이 내 취향에 잘 맞는걸 계속 만들고 있는거 같아서 기뻤다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</a></h1>
+					<time>Feb 26, 2019</time>
+					<br><div class="description">
+						
+						필요성, 궁금함, 현재 상황 메인 데스크탑을 무선랜으로 인터넷에 연결하고 사용함. 다른 기기들도 모두 기본적으로 무선으로 LAN접속. 다 좋은데, 메인 데스크탑 &lt;-&gt; 라즈베리파이 접속할때 ssh 접속도 느린거 같을때가 있음. 무선랜 접속이 많고, 블루투스 등등 다른 간섭도 많을거고, 어쨌든 조금 물리적으로 거리가 있는 무선공유기까지 갔다 오는거니까. 그래서 사용 안하고 있는 데스크탑의 내장 유선 랜포트로 인터넷연결을 공유하는 Private network을 만들어서 유선으로 연결해보기로 했다. 정말 체감이 빨라질지 궁금했고 직접 수동으로 설정하는게 거의 없거나, 내가 사용하고 있는 NetworkManager에서 쉽게 설정이 가능할거 같았다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-02feb/2019-02feb07thu-ping/">Ping 07/02/2019</a></h1>
+					<time>Feb 7, 2019</time>
+					<br><div class="description">
+						
+						Golang 사랑 회사일로 Golang을 다시 잡고 쓰게됐다.
+예전에도 잠깐 썼었는데1, 이번엔 그냥 더 오래 진지하게 필요에 의해서 쓰게됐다.
+지금 일터에서도 필요에 의해서 작은 프로그램을 작성하고 할 일이 있어서 쓰다가 아예 서비스 코드에 적용을 하려 일하고있다.
+많은걸 더 깊이 생각하고 익히는 좋은 계기로 꾸준하게 사용하고 있고, 만족스럽다. 대부분의 경우에. 그리고 Emacs와 연동도 좋고 언어 자체의 설계나 그런점들도 너무 좋은거 같다.
+GC이 있는 언어를 최근에는 꺼리다가 다시 사용하니까 좋은것 같아. 그냥 문법적은 모호함이 없고 단순함, 머리에 쉽게 기억할만한 규칙들, 혹은 아예 어떤 규칙도 기억할 필요가 없도록 만들거나 하는게 얼마나 설계에 좋은지 깨닫는다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-02feb/2019-02feb07thu-gosched-fun/">Golang Goroutine, Channel, I/O 그리고 Scheduler 이해해보기</a></h1>
+					<time>Feb 7, 2019</time>
+					<br><div class="description">
+						
+						Go언어를 요즘에 진지하게 생각하고 계속해서 자료를 찾아보며 익히고 있다.
+가장 흥미있는 부분은 Goroutine scheduler 구현과 I/O시스템을 어떻게 만들었을까인데, 아직은 소스코드를 뜯어 읽고 하지는 못하지만, 그냥 내가 만들었다면 아마 이렇지 않을까 하는 정도의 추측을 갖고 반대로 예제들을 만들어보며 확인해보고 있다.1
+우선 현재의 추측은 다음과 같다.
+GOMAXPROCS 같은걸 이용해서 실행시간에는 필요한만큼만 최소한으로만 OS Thread을 시작하는듯. 2 너무 많은 스레드가 있어도 어차피 Context switching 비용만 늘어나고 별 의미는 커녕 더 나쁠 수 있으니까. Goroutine들은 Go runtime의 Scheduler이 서로 실행기회를 나눠준다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-11nov/cl-asdf-custom-load-script/">ASDF으로 간단한 의존성 연결과 로딩하기</a></h1>
+					<time>Nov 3, 2018</time>
+					<br><div class="description">
+						
+						System? 이런게 왜 필요하지? require있잖아 대부분의 유명한 프로그래밍언어들이 커먼리습의 System 에 대응하는 기능이 명확하게 없으니까, 다른 프로그래밍 하거나 하는 방법으로 이야기를 하지는 않아야겠다.1
+https://lispcookbook.github.io/cl-cookbook/systems.html 에서 마음에 드는 설명을 찾을수 있다.
+A system is a collection of Lisp files that together constitute an application or a library, and that should therefore be managed as a whole. A system definition describes which source files make up the system, what the dependencies among them are, and the order they should be compiled and loaded in.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-11nov/03sat-ping/">Ping 03/11/2018</a></h1>
+					<time>Nov 3, 2018</time>
+					<br><div class="description">
+						
+						작위를 수여받았다 받아본 생일선물 중에 가장 귀여운거였다.
+tweet 1058052532839231488
+씨디리핑, 음악듣기 지난달부터 갖고 있던 씨디, 듣고 싶던 앨범들 다시 모으면서 리핑한 씨디들.
+조금 더 모으고 싶은 아티스트나 앨범들이 있는데 구하기 어려울거 같아서 걱정.
+tweet 1058666194616541184
+주말에 남는 시간에 씨디 리핑하고 음악 들으며 여유부리기.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-10oct/20sat-ping/">Ping 20/10/2018</a></h1>
+					<time>Oct 20, 2018</time>
+					<br><div class="description">
+						
+						날씨가 너무 좋은 가을.
+tweet 1053557185534251008
+만년필 만년필용 가죽 파우치를 찾았다. 들고 다니기 조금 더 편안해진거 같아.
+tweet 1053557157940015104
+회사분에게 고마운 선물로 딥펜을 받았다.
+tweet 1053557478925918208
+남이 필요한 행복에 대해 가끔 날이 좋으면 예전처럼 누군가와 함께 좋은 공기를 마시며 산책도 하고 숲에 가고 싶어진다. 특히 요즘 같은 선선한 계절에는.
+그런데, 꼭 그래야만 나는 행복함을 느끼나 생각해본다. 그냥 방안에 좋아하는 오디오로 라디오를 틀어놓고 침대에 뭍혀서 지내는것도 좋고 그냥 적당한 책을 재밌게 읽고 많은 생각을 할 수 있거나 좋아하는 펜으로 글을 써도 행복한거 같아.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-10oct/10wed-thought/">생각 10/10/2018</a></h1>
+					<time>Oct 10, 2018</time>
+					<br><div class="description">
+						
+						연구소에서 종종 휴식시간에 PS4 게임을 하면서 지낸다. 그냥 별로 게임을 위해서 너무 많은 시간을 보내는걸 원래도 좋아하진 않았지만 독일에 살며 취미로 다시 시작한 이후로 재미를 붙이고 하고 있었다.
+그리고 최근에 재밌게 하고 있던 DOOM 2016을 다른 게임들보다 내가 좋아하는걸 동료들이 눈치채고 가끔은 둠 이야기를 한다.
+최근에 그래서인지 John Carmack 이야기도 종종 나온다. 소프트웨어 엔지니어들이니까. 그러다가 한 동료가 Carmack의 에세이 하나의 링크를 보내줬었다.1
+많은 다양한 생각들을 추려낸 블로그포스트. 그리고 가끔 지나가듯이 다른 주제를 이야기하다 이 에세이에 담긴 만트라 에 대해서 다시 말하며 생각을 나눠본다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-10oct/10wed-steamplay-on-linux/">SteamPlay On Linux</a></h1>
+					<time>Oct 10, 2018</time>
+					<br><div class="description">
+						
+						집에 있는 데스크탑에서 윈도10 그냥 사서 설치하고, 거기에 스팀 설치해서 게임이나 하는데 사용했었음
+거기에 대부분의 작업은 그냥 리눅스에서 하는게 훨씬 편하고 해서 Virtualbox에 아치리눅스 게스트 만들어놓고 거기에 접속해서 작업했었었다.1
+그러다가 SteamPlay이란걸 알게됐고, 모든 게임이 다 지원되는건 아니더라도 그냥 앞으로 나올 게임들중에 리눅스를 지원하거나 Wine을 통해서 실행할 수 있으면 이걸 쓰는게 더 낫고 윈도가 싫었다.2
+여튼, 좀 설치하고 써보니:
+모든 게임을 지원하지 않는다. 1. 적당히 지원될거라고 생각하던 게임들도 그냥 됐고, SteamPlay지원 안해도 돌려볼랜다 체크해봤자 제대로 안굴러감.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-10oct/06sat-cd-ripping/">CD Ripping!</a></h1>
+					<time>Oct 6, 2018</time>
+					<br><div class="description">
+						
+						요즘에 HiFiBerry DAC+으로 라디오, 음악을 들으며 귀가 즐거워서..
+갖고 있는 씨디가 별로 없는데, 이유는.
+음악을 듣는걸 게을리했었고, 딱히 음반으로 들었던건, 테잎 시대에 좀 사다가, 1. 씨디 시대엔 음원을 구하거나 사는게 더 많아지고, 2. 씨디를 듣지 않게됨. 그러다가 그냥 음질이 조금이라도 더 낫게 들을려고 CD ripping이 답이라는 결론을 얻었다.
+어차피 음원 사는거랑 비슷한 가격이 됨. 음원을 어차피 내가 만드는거라 원하는 음질으로 떠서 보관하면됨. 그리고 뭣해서 잃어버려도 다시 떠도됨. 결국 대장정을 시작했다..&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-10oct/05fri-ping/">Ping 05/10/2018</a></h1>
+					<time>Oct 5, 2018</time>
+					<br><div class="description">
+						
+						Lamy2000 사용하면서 tweet 1048150207110688768
+tweet 1048059130429100033
+잉크는 Lamy 잉크를 사서 쓰자. 다른 잉크보다 훨씬 번짐도 적고, 필기감도 좋다. 약간 더 비싸지만 어쩔 수 없다. 손에 힘을 더 빼야한다. 데스크탑 피씨 리눅스 설치 HDD 데이터 디스크로 쓰던거 용량 큰쪽에 그냥 백업하고 날린 다음에 리눅스를 통으로 설치.
+Steam 게임이나 가끔하느라 윈도 host에 리눅스 guest으로 VM 설정해서 주로 써왔는데, 그냥 리눅스를 host으로 쓰기로 결정.
+Flatpak으로 나와서 배포판이나 데스크탑 환경에 상관없이 설치가 가능해져서 그냥 설치하고 써보기로 했다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-10oct/rpi3-hifiberry-dacplus-config/">HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정</a></h1>
+					<time>Oct 3, 2018</time>
+					<br><div class="description">
+						
+						https://www.hifiberry.com/ 요거 Raspberry Pi 3에 세팅한 모험에 대한 이야기.
+WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev #update_config=1 country=GB network={ ssid=&quot;iptime&quot; psk=&quot;xxxxxxxxxx&quot; key_mgmt=WPA-PSK } wpa_passphrase 안쓰고 그냥 plaintext으로 써도 동작. 내 공유기랑은 country=GB 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤. 그리고 ip link set wlan0 {up|down} 정도로 wlan0 인터페이스를 up/down하면됨. 사운드 드라이버 설정 내장 사운드카드 드라이버는 modprobe blacklist에 추가해서 끄자. /boot/config.txt에 HiFiBerry DAC+ 드라이버 오버레이를 지정해야함. 내장 사운드 드라이버 끄기 다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-10oct/03wed-ping/">Ping 03/10/2018</a></h1>
+					<time>Oct 3, 2018</time>
+					<br><div class="description">
+						
+						HiFiBerry + Raspberry Pi 3 tweet 1047432827866767360
+요것임.
+https://www.hifiberry.com/products/dacplus/ http://eleparts.co.kr/goods/view?no=3700883 정말 예전, 한 3년전쯤에 사서 한국집에 묵혀두고, 그때는 세팅에 실패해서 안되는건가&hellip; 이러고 포기하고 있다가 다시 시도해봤다.
+조금 삽질을 몇번하다가, 그리고 정 안되면 똑같은 부품 다시 주문해서라도 어쩐지 만들어보고 싶다는 알수 없는 의지가 발동해서 세팅에 성공. 1
+어쨌든 FreeBSD을 설치해서 써볼까하다가 드라이버 지원이 필요한게 안되서 포기.2
+결론은,
+라디오, MP3 걸어놓고 듣기에 좋다. 음질은 확실히 이어폰으로 들어보면 같은곡에 대해서 훨씬 깨끗하고 노이즈 없이 재생하는거 같다 RuneAudio, Mopidy 같은걸로 Web UI 세팅해서 쓸수도 있는거 같은데, 그냥 난 SSH으로만 들어가서 쓰기에 나쁘지 않아서 거기까니 삽질은 포기.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-09sep/cquery-vs-cmake-ide/">CQuery &#43; LSP vs CMake-IDE &#43; RTags</a></h1>
+					<time>Sep 23, 2018</time>
+					<br><div class="description">
+						
+						LSP + CQuery을 써보려고 했는데, 결국 CMake-IDE + RTags 조합으로 원래대로 쓰게될거 같아. :
+_build/ 와 같이 CMake, Ninja, Makefile등의 파일들을 별도의 디렉토리로 만들어서 필드하고 싶은데, 제대로 지원을 못한다. 1. 그냥 프로젝트 소스코드랑 같이 generate하고 gcc등의 중간 파일이 모두 같이 남아서 지저분해져서 싫어함. 아직은 별로 내 마음에 꼭 들게 만들기는 어려울거 같아서. 그래도 인상적이었던 부분들:
+flycheck에 전용으로 연동되어 있는 점. company-lsp이 생각보다 훨씬 부드럽고 자동완성 잘되는거. 미래에는 그냥 LSP기반만 남을거 같아서, 이것도 &ldquo;helm-rg의 모험&quot;처럼 아직은 완전히 전환은 못할거 같긴하다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-09sep/23sun-todos/">해보기 23/09/2018</a></h1>
+					<time>Sep 23, 2018</time>
+					<br><div class="description">
+						
+						LSP 갖고놀기 Language Server Protocol : https://langserver.org/1
+ES6: https://github.com/sourcegraph/javascript-typescript-langserver 다른건 FlyCheck + Eslint으로 만족스러운데, 코드네비게이션만 좀. C/C++: https://github.com/cquery-project/cquery https://github.com/MaskRay/ccls ES6 기능들 다시 한번 주욱 읽어보기 http://es6-features.org/
+딱히 뭣도 몰라서 한번 주욱 읽어보려고. 더 알고 싶지는 않다만&hellip;
+tweet 1039770698187563009
+&hellip;이런 언어지만.
+대안으로서 ReasonML? https://reasonml.github.io/ https://github.com/ocaml/merlin ..예전에 좋아하던 OCaml 다시 실용적으로 써도 재밌을거 같기도하고.
+https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%99%98_%EC%9B%90%EC%B9%99 이거아님.&#160;&#x21a9;&#xfe0e;&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-09sep/23sun-ping/">Ping 23/09/2018</a></h1>
+					<time>Sep 23, 2018</time>
+					<br><div class="description">
+						
+						영화: &lt;멀홀랜드 드라이브&gt; 씁쓸. 그리고 영화 다보고 해석들 읽고 다시 생각하고 장면들에서 느끼던 이상함점들이 왜 그랬었구나 맞춰보니 더 씁쓸. 1
+그리고 살면서 사랑이나 그런 환상을 갖는것들처럼 그런 완전한 꿈을 생각하듯이 달콤한 전반부의 내용들이 이해됨.
+추석 연휴에 서울에 있기 어차피 고향도, 친척들도 거의 다 서울에 살아서 평생 명절마다 서울에서 보내는게 너무 익숙하다. 그리고 이맘때가 나는 서울에서 좋은거 같아.
+그냥 적당히 조용하고 차소음도 사라지고 (심지어 우리집은 큰길에서 한참 멀리있음에도) 공기도 훨씬 좋아진다. 밤거리도 한적해지고.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-09sep/22sat-ping/">Ping 22/09/2018</a></h1>
+					<time>Sep 22, 2018</time>
+					<br><div class="description">
+						
+						새 만년필 : Pilot Kaküno! tweet 1043371766318424064
+필기감은 같은 모델, 각 제품별로 조금씩 다른듯. 가격이 저렴해서 만년필 취미를 권하고 싶은 3개를 사서 회사 다른팀이나 같은 연구소 사람들에게 선물했다.
+게임 : 둠2016, 쉐도우 오브 더 툼레이더 가끔 시간이 날때, 예전에는 길을 못찾아서 많이 진행을 못했었던, 둠 2016 을 다시 하고 있다. 지금은 꽤 많이 진행해서 &ldquo;내가 바로 둠가이다. 10점 만점에 12점인 사나이!&rdquo; 모드로 플레이 할수있게 됐다.
+둠 이터널 나오면 바로 지르게 될거 같아.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-09sep/lamy2000-monami-ink/">Lamy 2000 &#43; 모나미 병잉크</a></h1>
+					<time>Sep 16, 2018</time>
+					<br><div class="description">
+						
+						라미2000 사고, 모나미 병잉크 처음으로 사서 충전을 겨우했다. 카트리지방식만 계속 써오다가 처음에는 엄청 어떻게 피스톤 방식으로 충전하나 설명서를 봐도 잘 모르겠고, 언제나처럼 좋아하는 물건을 샀을때 처음의 느낌 그대로 내가 잘못해서 망가뜨리지는 않을까 걱정하며 손을 떨며 충전을 했다.
+tweet 1040804232339742720
+일단 필기감은 기존에 써오던 사파리, Lx이랑 너무 달랐다. 둘 다 이제는 내손에 맞춰서 닙이 부드러워진것도 같아서 정말 부드럽고 날카롭게 글을 쓰다가 닙을 종이에서 뗄때 짝 달라붙어있다가 떨어지는 쫀득한 느낌이 있다면, 2000은 그냥 주욱 주욱 글이 써져서 좋았다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-09sep/2018-09sep15sat-my-choices-linux/">어째서 아치리눅스를 쓰며 데스크탑환경을 안쓰는지</a></h1>
+					<time>Sep 15, 2018</time>
+					<br><div class="description">
+						
+						나는 데스크탑 환경을 사용 안한지 꽤 오래된것 같아.
+예전엔 이런식이었던거 같아:
+왠만하면, 그냥 세팅하는데 시간낭비하지말고 그냥 제공되는 Gnome, KDE 같이 예쁜거 쓰자.
+&hellip;였었는데, 어느날 ASUS 넷북에 낮은 CPU파워으로 리눅스를 설정하고, 이런 &ldquo;가벼운 데스크탑 환경&quot;을 직접 꾸며서 사용하면서, 오히려 맥북보다 더 편하고 계속 쓰고 싶게 만들고, 내가 더 빠져서 사랑하며 사용하는걸 본 이후로 집과 직장의 데스크탑도 모두 바꾸게됐다.
+그리고 가장 마우스 사용으로부터 오는 잡다한 스트레스나 그런것들도 없고 가장 내게 익숙하고 편안한 환경을 만들어서 행복하게 쓸수있는거 같아.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-09sep/2018-09sep15sat-ping/">Ping 15/09/2018</a></h1>
+					<time>Sep 15, 2018</time>
+					<br><div class="description">
+						
+						새 만년필 : LAMY 2000, 해피해킹, 기계식 키보드 새 만년필을 샀는데, 조금 저렴한 폴리카보네이트 버젼의 LAMY 2000을 샀다. 기존에 LAMY Lx, 사파리는 행복하게 써왔었는데, 카트리지를 사용해 충전하는 방식이 아니고 또 가격대도 조금은 높은 만년필을 질렀다.
+아직 병잉크는 받지 못해서 충전해서 사용은 못해봤다. 기대된다.
+처음 만년필질을 시작할때는,
+뭐 그냥 저렴한 저가형 브랜드 실용적인 목적으로만 사서 써야지, 그러니 사파리랑 Lx정도까진 뭐&hellip;
+..이런 마인드였었다가 점점 만년필 자체로 글을 쓰는 감각에 중독되는거 같아. 기계식키보드도 그런거 같고.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/">NeoVim, Evil-mode and Emacs의 모험</a></h1>
+					<time>Jul 28, 2018</time>
+					<br><div class="description">
+						
+						&ldquo;내적모순&rdquo; 이맥스에서 Evil을 쓰면서 몇가지 짜증나는게 있어왔다.
+Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 키바인딩을 실시간으로 확인할 수 있는 방법도 제대로 안먹히게 된거라, 이맥스에서 쩔어주는 기능인 자기 자신을 확인하며 단축키 안외우기 같은게 다 무의미해짐. 공식 사이트 들어가도 문서는 없다. 그냥 Vim 온라인 help을 보거나 하라는 친절인거 같다. Magit, Edb, 등등 대부분의 이맥스의 다른 Major mode들이랑은 정말 충돌하는 경우가 너무 많음. https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421 위의 링크만 봐도, 내가 얼마나 충돌이 나는 모드들을 경험했는지 알수있다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/">Emacs &#43; CMake-IDE Screencast</a></h1>
+					<time>May 8, 2018</time>
+					<br><div class="description">
+						
+						이건 무엇인가 Emacs Configurations: https://github.com/ageldama/configs/tree/master/emacs/cmake-ide
+이맥스에서 C++ 개발 편하게 하려고 이것저것 알아보다가 결국엔 CMake-IDE + RTags 조합이 제일 괜찮다는 결론에 도달해서 만들어본 설정이다.
+원래 사용하는 환경이 Evil은 아니었는데, Spacemacs 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.
+지금은 그냥 Spacemacs은 다운도 잘되고 너무 무겁고 설정을 레이어 방식 으로 할게 아니면 짜증나게 하는 부분도 많고, 그렇다고 레이어가 완전히 내가 그냥 커스텀으로 만들어서 바로바로 머지하는 구조도 아니고 중앙에서 관리하는 방식으로만 되는거 같아서, 옆으로 치우고, 바닐라 이맥스에 Spacemacs스럽게 직접 설정해서 가볍게 사용하고 있다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-04apr/2018-04apr-golang-windows-vscode/">Golang Windows에서 Vscode이랑 행복하게 쓰기</a></h1>
+					<time>Apr 14, 2018</time>
+					<br><div class="description">
+						
+						Golang 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아. 그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 VsCode 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만&hellip;)
+여튼 그런데 윈도에서 기본적으로 C컴파일러 설치되어 있어야 제대로 굴러가서, Mingw64 설치하고, $MINGW64/bin 디렉토리 $PATH에 걸어주니 잘됨.
+VsCode에서 디버거도 잘 붙고 만족스럽다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-10-22-blogging/">2017년 10월 22일, 블로깅 귀찮아</a></h1>
+					<time>Oct 22, 2017</time>
+					<br><div class="description">
+						
+						과연 블로깅이 이렇게나 힘들어야 하는 일인가 생각해봄.
+요즘엔 정말 각자의 개소리를 쉽게 올리는 트위터나 페북 같은게 혁명적이라는 생각이 든다. 특히 예전에 각종 웹애플리케이션으로 쓰레기 같은 위지윅 에디터 같은거니 지원하고 막상 어떤 글을 하나 올리기 진짜 끔찍한 경험을 주던것들을 돌이켜보면 더욱 더.
+어차피 사람들은 그런거 아무리 쥐어줘봤자 귀찮을뿐이고 한번 쳐다도 안보고 각자 자기 하고 싶은 거지 같은 방법을 찾아내어 잘도 이상한 글들 생산해내는걸 더 좋아한다.
+그리고 그런면에서 그냥 이미지, 동영상, 링크, 남에 글 인용 정도나 되는 트위터 같은거야말로 배설하기 진짜 좋은 도구이지 않은가 싶었다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-07-11-private-docker-registry-howto/">HOWTO: Private Docker Registry?</a></h1>
+					<time>Jul 11, 2017</time>
+					<br><div class="description">
+						
+						말보다 예제 깃헙 Project &ndash; https://github.com/ageldama/private-docker-registry-howto
+내 피씨에서 작업하던거 서버에 바로 올려보고 싶은데, 회사에 레지스트리가 없을때, 혹은 레지스트리를 개발서버에 올리지도 못하고 어쨌든 개발서버에 도커 이미지 옮기고 싶을때 ..이런 이상한 상황에서도 쓸만하도록 고민해봄. &hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-07-11-myself/">2017년 7월 11일, 요즘 나는</a></h1>
+					<time>Jul 11, 2017</time>
+					<br><div class="description">
+						
+						한국에 와서 다시 일을 다니고 있음. 백엔드 소프트웨어 엔지니어로 과거에 이미 다른 사람들이 만들어놓은걸 마음에 들지 않는 모양을 조금씩 고쳐가고 그럭저럭 출퇴근.
+장마도 오고 엄청나게 덥다. 묘하게 독일에서 똑같은 8시간 근무인데 한국에서는 출퇴근이 엄청나게 힘들다는 생각이 들었다. 그리고 실제로 집밖에서 생활하는 시간을 생각하면 하루 8시간 수면을 하기도 빠듯해서 정말 이상하구나 생각이든다. 거기에 독일에서 생활할때는 나혼자 생활해서 밥이며 청소 같은것들도 내가 혼자해야 했었던걸 생각해도 이상할 정도로 한국에서의 생활은 시간이 쪼들린다.
+여하튼 재미있는건 요즘엔 Python, Flask, SQLAlchemy으로 나름대로 재미있게 작업하고 나름대로 능률적으로 작업을 하고 TDD 잘 적용해서 문제 없게 편안하게 작업하는 방법들을 익힌거 같다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-02-26-aync-rxjava-and-monad/">예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a></h1>
+					<time>Feb 26, 2017</time>
+					<br><div class="description">
+						
+						예전 내가 썼던 블로그가 갑자기 떠올랐다. http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html
+내용은,
+콜백헬 싫다. 그런데, 하스켈의 IO Monad처럼 imperative code을 작성할 수 있으면, 3. 이것들끼리의 제어권을 주고 받는걸 event loop측에서 제어하면서도, 4. 각각의 statements끼리 그냥 주욱 흐름대로 작성한것과 다르지 않게 짜기 쉽다. 굳이 이 얘기 왜 하냐하면, 사실 요즘에 RxJava2 보고, Python3에서 asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운 체이닝을 구현하고, 그걸로 콜백들을 풀어서 잘 해결하고 있는거 같은 인상이 들어서.
+결론? 내 아이디어 부심. 그리고 조금 더 잘 생각하고 실제로 어떻게 구현할지 고민해봤다면 좋았을거라는, 나 자신의 능력 한탄하기.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-02-25-sbcl-osx-multithread/">SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기.</a></h1>
+					<time>Feb 25, 2017</time>
+					<br><div class="description">
+						
+						SBCL은 멀티쓰레딩을 잘 지원하는 커먼리습 컴파일러이지만, 공식사이트에서 제공하는 리눅스 바이너리가 아니라 OSX 바이너리는 멀티쓰레딩이 꺼져서 컴파일되어있다.
+http://www.sbcl.org/manual/#Threading
+요건 자기 리습에서 *features* 을 평가해서, 리스트에 :threading, :sb-thread 같은 키워드를 포함하는지 확인해보면 알 수 있다.
+어쨌든 지원하지 않을 경우에, 컴파일을 다시 해야하는데, 우선 준비물은 GNU CLISP 같은 여기저기서 잘굴러가고 적당히 설치해서 부트스크래핑에 이용 가능한 커먼리습 컴파일러를 준비한다.
+다음 포스트를 참고해서 작업해봤다.:
+http://haminhvuong-blog.tumblr.com/post/22109095116/compile-sbcl-with-multi-thread-enabled-on-os-x
+create customize-target-features.lisp with content
+(lambda (features) (flet ((enable (x) (pushnew x features)) (disable (x) (setf features (remove x features)))) ;; Threading support, available only on x86/x86-64 Linux, x86Solaris ;; and x86 Mac OS X (experimental).&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-29-myself-nowadays/">2017년 1월, 요즘 나는.</a></h1>
+					<time>Jan 29, 2017</time>
+					<br><div class="description">
+						
+						요즘엔 그냥 독일 생활, 도르트문트에 조금씩 더 적응해서 사는게 편안해졌다.
+식기세척기, 세탁기, 커피머신, 팀사람들, 출퇴근길, 놀러가는 동네, 구경가는 전자제품상가.
+그냥 어느정도 이제는 독일어를 하나도 못하지만, 적어도 팀 사람들과는 정도 붙이고 재밌게 잘지내가고 있는거 같다.
+커피를 캡슐커피 기계가 있어서 적당히 입맛을 붙이고 마셔보고있다. 괜찮다. 토스트랑 꿀이랑 사다가 가볍게 먹고 해결하고 살고있다.
+비자도 4년짜리 블루카드도 됐고, 마음이 편안해졌다.
+책은 열한계단 을 읽고 많은 생각을 해봤다. 체체파리의 비법, 시녀이야기, 그리고 테드 챙의 당신 인생의 이야기 을 읽어볼까 생각하고 있다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+<ul class="pagination">
+	<span class="page-item page-prev">
+	
+    <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">[◇ First]</span></a>
+    <a href="/page/2/" class="page-link" aria-label="Previous"><span aria-hidden="true">[← Prev]</span></a>
+	
+	</span>
+        <span class="page-number">(3 of 4)</span>
+	<span class="page-item page-next">
+	
+    <a href="/page/4/" class="page-link" aria-label="Next"><span aria-hidden="true">[Next →]</span></a>
+    <a href="/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">[Last ◈]</span></a>
+	
+	</span>
+</ul>
+
+
+			</main>
+			<footer>
+  
+  <div class="footer-info">
+    2023  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  feather.replace()
+</script>
+		</div>
+		
+	</body>
+</html>

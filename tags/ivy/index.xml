@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ivy on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/ivy/</link>
+    <description>Recent content in ivy on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Tue, 26 Feb 2019 01:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/ivy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)</title>
+      <link>https://ageldama.github.io/posts/2019-02feb/counsel-ivy&#43;cpp-ide/</link>
+      <pubDate>Tue, 26 Feb 2019 01:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-02feb/counsel-ivy&#43;cpp-ide/</guid>
+      <description>최근에 이맥스 설정을 Helm기반에서 Ivy/Counsel으로 전부 바꿨다.
+더 가볍고, 적당히 잘 동작하고, Ripgrep이랑 기본적으로 설정이 가능해서 편함.
+거기에 C-c C-o (ivy-occur) + wgrep이 Helm에선 동작할때가 그때그때 기능에 따라 달라서 짜증나고, 심지어 플러그인을 설정해서 써야하거나 해서 정말 좋아하는 기능인데 우울하게 만들었는데, Ivy이 훨씬 깔끔하게 동작하고 일관성있게 잘 동작함.
+처음에는 Helm에서 하는 기능들을 그대로 옮기려고만 생각하다가, 오히려 Ivy에 맞춰서 내가 익숙해지고, 더 낫게 할 방법들이 있어서 그냥 내가 adopt해서 편안해졌다.
+CMake + compile_commands.</description>
+    </item>
+    
+  </channel>
+</rss>

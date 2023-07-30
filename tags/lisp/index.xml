@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lisp on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/lisp/</link>
+    <description>Recent content in lisp on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Mon, 13 Jun 2022 14:11:14 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/lisp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&#34;모두를 위한 algebraic effects!&#34; ...정말루?</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/</link>
+      <pubDate>Mon, 13 Jun 2022 14:11:14 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/</guid>
+      <description>뭐 대충 다음과 같은 글들:
+https://www.eff-lang.org/handlers-tutorial.pdf
+https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf
+&amp;hellip;그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)
+https://hackage.haskell.org/package/fused-effects
+https://github.com/dry-rb/dry-effects
+https://github.com/digital-fabric/affect
+https://github.com/macabeus/js-proposal-algebraic-effects
+https://github.com/nythrox/effects.js
+https://www.janestreet.com/tech-talks/effective-programming/
+https://github.com/ocaml-multicore/effects-examples
+https://overreacted.io/algebraic-effects-for-the-rest-of-us/
+&amp;hellip;음&amp;hellip; 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.
+오히려 dry-rb, affect이 더 명확하기는 한거 같아.
+가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.
+분명히 장점을 볼 수 있을거 같은 개념 같다.
+왜냐하면,
+지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.</description>
+    </item>
+    
+    <item>
+      <title>&#34;asdf-subdir-finder&#34; released!</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/asdf-subdir-finder-1st/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-10oct/asdf-subdir-finder-1st/</guid>
+      <description>지난번 포스팅한 &amp;#34;asdf 정의를 내 코드베이스의 하위디렉토리에서 자동으로 로딩하기&amp;#34;를 프로젝트으로 만들었다.
+https://github.com/ageldama/asdf-subdir-finder
+사람마다 커먼리습으로 작업하는 스타일에 따라 많이 다를 수 있어서 안 써도 되기도 하지만, 그냥 정리해서 공개는 해봤다.</description>
+    </item>
+    
+    <item>
+      <title>&#34;커먼리습 ASDF 불러오기 편하게 하기&#34; 대모험</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/lisp-asdf-subdir-finder/</link>
+      <pubDate>Fri, 23 Oct 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-10oct/lisp-asdf-subdir-finder/</guid>
+      <description>ASDF와 system definition file 검색의 정석 이전에 ASDF을 이용하여 커먼리습 프로젝트의 의존성, 시스템을 로딩하기 에 대해서 설명한 적이 있었다.
+이전에 다룬 내용은 정석적으로 $HOME/common-lisp 디렉토리에 .asd 파일을 심볼릭링크를 걸고, (asdf:load-system ..) 을 시도하는 내용이었었다.
+Prototyping등 더 편안하게 혼자 코딩을 할 때는… 혼자 커먼리습 코딩을 하면서, 나는 더 간단하게 프로젝트를 시작하는 방법을 선호한다.
+커먼리습이 파일 이름이나 경로에 대해서 의존하는 것이 아니고, 컴파일시점, 로딩시점에 순서에 따라 로딩해서 최종적으로 컴파일하여 적재한 결과 이미지를 더 중요하게 여기기 때문에, 그리고 그런 컴파일, 빌드, 로딩과 같은 모든 단계들 자체도 커먼리습 표현식 그자체로 동작하기 때문에 그냥 하나의 소스파일을 섹션별로 나눠서 작업하면 편리하다.</description>
+    </item>
+    
+    <item>
+      <title>CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/leet-code-1614-2nd/</link>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-10oct/leet-code-1614-2nd/</guid>
+      <description>어제 작성한 LOOP매크로을 이용한 구현 을 풀어서, 만약 LOOP매크로가 없었더라면 어떻게 짰을지 작성해봤다.
+(defun max-nested-parentheses-raw (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (let ((n 0) (result 0)) (declare (type fixnum n result)) (dotimes (s--cur-idx (length s)) (let ((ch (elt s s--cur-idx))) (when (member ch &amp;#39;(#\( #\))) (incf n (if (eql #\( ch) 1 -1)) (setf result (max n result))))) result)) 여전히 타입을 지정해서 자동으로 타입추론, 최적화 하도록 했다.</description>
+    </item>
+    
+    <item>
+      <title>CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/leet-code-1614/</link>
+      <pubDate>Tue, 20 Oct 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-10oct/leet-code-1614/</guid>
+      <description> 문제 https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
+작성한 코드 (defun max-nested-parentheses (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (loop with n fixnum = 0 for ch across s when (member ch &amp;#39;(#\( #\))) do (incf n (if (eql #\( ch) 1 -1)) maximizing n)) 코드 의도 우아한 코드보다는 공간복잡도가 O(1) 이고 싶었다. Edit SBCL에 맞춰 코드에 타입을 지정해줘봤다.
+결과 어셈블리 코드가 조금 짧아졌다. </description>
+    </item>
+    
+    <item>
+      <title>Ping (2nd) 17/Oct/2020</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/ping-17sat-2nd/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:01 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-10oct/ping-17sat-2nd/</guid>
+      <description>올해 초 cl-state-machine 라이브러리를 만들어 공개한 이후로 커먼리습을 쓰지는 않았다.
+다른 직업상 쓰는 언어들만을 쓰고 오픈소스와 개인적으로 만들고 싶은 프로젝트를 위해서 쓰는 언어인 커먼리습은 미뤄두었었다.
+다시 커먼리습을 해야겠다고 생각이 들었다. 개인적으로 만들고 싶은 프로젝트도 있고, 그 프로젝트를 위해서 프론트엔드를 만드는데 React와 Vue을 써보고 이해하고 있어도 쓰고 싶지는 않기 때문이다.
+사실 커먼리습은 그렇게 문법이 예쁘지도, 멋진 React와 같은 멋진 프레임웍이나 최신의 유행하는 라이브러리들을 모두 갖고 있지도 않다.
+HyperSpec을 읽다 보면 아주 쉽게 정의되어 있는 키워드들이 일관성이 있지도, 지금 시대의 관점에서 보기에 익숙한 현대적인 용어들을 사용해서 이름을 지어놓지도 않았다.</description>
+    </item>
+    
+    <item>
+      <title>Ping 16/Oct/2020</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/ping-17sat/</link>
+      <pubDate>Fri, 16 Oct 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-10oct/ping-17sat/</guid>
+      <description>ADT1만큼 만들어 쓰는 것은 아니지만, 그냥 Kotlin, Python의 dataclass 정도는 쓰고 싶어서 CommonLisp 매크로를 만들어봤다.2
+equals 라이브러리를 써서 동치 비교와 CLOS의 print-object generic function을 구현해서 to-string 정도만 되도록 만들어 봤다.
+macro body (defmacro define-data-class (class-name parent-classes slot-names &amp;amp;key (no-print-slot-names nil) (no-equals-slot-names nil)) (flet ((accessor-symbol (slot-name) (alexandria:format-symbol *package* &amp;#34;~a-~a&amp;#34; class-name slot-name))) (list &amp;#39;progn ;; defclass (let ((slot-defs (loop for slot-name in slot-names collecting `(,slot-name :initarg ,(alexandria:make-keyword slot-name) :accessor ,(accessor-symbol slot-name))))) `(defclass ,class-name ,parent-classes ,slot-defs)) ;; defmethod print-object (let* ((print-slot-names (set-difference slot-names no-print-slot-names)) (fmt-ctrl (format nil &amp;#34;~{~a=~~a~^, ~}&amp;#34; print-slot-names))) `(defmethod print-object ((obj ,class-name) stream) (print-unreadable-object (obj stream :type t) (with-slots ,print-slot-names obj (format stream ,fmt-ctrl ,@print-slot-names))))) ;; defmethod equals:equals (let* ((equals-slot-names (set-difference slot-names no-equals-slot-names)) (equals-exprs (loop for equals-slot-name in equals-slot-names collecting `(equals:equals (slot-value lhs (quote ,equals-slot-name)) (slot-value rhs (quote ,equals-slot-name)))))) `(defmethod equals:equals ((lhs ,class-name) (rhs ,class-name) &amp;amp;rest args) (declare (ignore args)) (and t ,@equals-exprs))) ))) synopsis / usage (define-data-class animal () (name age)) (define-data-class bird (animal) ()) (equals:equals (make-instance &amp;#39;animal :name &amp;#34;foo&amp;#34; :age 18) (make-instance &amp;#39;animal :name &amp;#34;foo&amp;#34; :age 18)) 오랬만에 재밌었다.</description>
+    </item>
+    
+    <item>
+      <title>Python에 대한 내 관점</title>
+      <link>https://ageldama.github.io/posts/2020-09sep/perspective-on-python/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-09sep/perspective-on-python/</guid>
+      <description>Python은 조금 지루한 문법의 언어다. 거기에 매크로 같은 기능도 없어서 항상 평이한 문장을 작성하게 되는 것 같다.
+하지만 다른 비슷한 언어들과는 다르게, 파이썬 문장 자체는 깔끔하면서도 density가 높다. 리습, 하스켈 같은 언어들으로 작성한 것을 생각해봐도 밀도가 높아 표현력이 좋다.
+Java와 같은 언어는 밀도도 낮고 표현력도 가끔은 너무 아쉽다.
+파이썬이 이렇게 밀도가 높을 수 있는 이유는, 언어 자체적으로 매크로를 지원하거나 해서 문법을 확장하는 방법을 채택하는 것이 아니라 SymPy에서 그랬었던 것처럼 값을 계속 쌓아갈 수 있게 만들고 연산자를 재정의해서 문장이 다르게 해석되도록 만드는 방법이고, 이쪽이 더 Pythonic한 방법 같다.</description>
+    </item>
+    
+    <item>
+      <title>Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</title>
+      <link>https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/</guid>
+      <description>다음의 간단한 코드를 읽어보자.
+var x = &amp;#34;lexical&amp;#34;; function maker() { return function() { return x; }; } { var x = &amp;#34;dynamic&amp;#34;; assert(maker()() == &amp;#34;???&amp;#34;); } maker()() 의 결과는 &amp;#39;dynamic&amp;#39; 이다.
+심지어, 맨 마지막에 있는 {..} 블록을 넘어가서도 x 의 값은 여전이 &amp;#39;dynamic&amp;#39; 이다.
+자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다.</description>
+    </item>
+    
+    <item>
+      <title>Org모드에서 스프레드시트 기능과 Babel 섞어쓰기</title>
+      <link>https://ageldama.github.io/posts/2019-12dec/org-spreadsheet-and-babel/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-12dec/org-spreadsheet-and-babel/</guid>
+      <description>쩌는 Org-mode Spreadsheet 소개 를 읽고 감명 받아서 따라해봅니다.
+다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리 defun / defmacro 으로 정의해놓고 그걸 spreadsheet에서 불러 쓸 수 있을지가 궁금했습니다.
+그래서 다음과 같이 해보면 가능할지를 실험:
+Org-Babel으로 원하는 함수를 정의한다.
+그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다. Spreadsheet에서 불러서 쓸 수 있는지 확인해본다. 우선 C-h a 을 눌러 vsum 을 검색해보니, defun calcFunc-vsum (&amp;amp;rest vecs) 으로 미리 선언되어 있는거 같았습니다.</description>
+    </item>
+    
+    <item>
+      <title>(Common Lisp의 어두운 면) Equality</title>
+      <link>https://ageldama.github.io/posts/2019-11nov/the-dark-side-of-cl-equality/</link>
+      <pubDate>Sat, 16 Nov 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-11nov/the-dark-side-of-cl-equality/</guid>
+      <description>오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로 생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을 리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.
+뭐 커먼리습의 CLHS - HyperSpec을 읽다보면 비슷한데 아주 약간씩 미묘하게 달라서 지원하는 것들이 있다:
+let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Function MAP Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON Function MAP-INTO prog Macro PROG1, PROG2 Special Operator PROGN Macro PROG, PROG* Special Operator PROGV &amp;hellip;그밖에도 좀 더 있을듯?</description>
+    </item>
+    
+    <item>
+      <title>rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</title>
+      <link>https://ageldama.github.io/posts/2019-10oct/cl-rutils/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:01 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-10oct/cl-rutils/</guid>
+      <description>커먼리습은 CLHS 이후로 언어 자체 정의는 변하지 않았다.
+구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거 같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 lisp reader을 확장하는게 CLHS에서 정의해놓은 기능 중 하나이고, 구현체들도 스펙을 잘 구현해놓았으니까.
+결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면 언제든지 매크로를 만들듯이 확장하면 되니까.
+&amp;lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&amp;rsquo;
+이런 커먼리습 확장 &amp;lsquo;라이브러리&amp;rsquo; 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github.</description>
+    </item>
+    
+    <item>
+      <title>CFFI으로 CommonLisp 2d array을 Foreign function으로 전달하기</title>
+      <link>https://ageldama.github.io/posts/2019-03mar/cffi-2d-array/</link>
+      <pubDate>Sun, 17 Mar 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2019-03mar/cffi-2d-array/</guid>
+      <description>https://github.com/ageldama/cffi-2d-array-hello
+cffi:with-foreign-array이 CFFI manual에 없어서 처음에 좀 골치아팠음.
+리습 어레이를 복사해서 매핑해줌.</description>
+    </item>
+    
+    <item>
+      <title>ASDF으로 간단한 의존성 연결과 로딩하기</title>
+      <link>https://ageldama.github.io/posts/2018-11nov/cl-asdf-custom-load-script/</link>
+      <pubDate>Sat, 03 Nov 2018 19:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2018-11nov/cl-asdf-custom-load-script/</guid>
+      <description>System? 이런게 왜 필요하지? require있잖아 대부분의 유명한 프로그래밍언어들이 커먼리습의 System 에 대응하는 기능이 명확하게 없으니까, 다른 프로그래밍 하거나 하는 방법으로 이야기를 하지는 않아야겠다.1
+https://lispcookbook.github.io/cl-cookbook/systems.html 에서 마음에 드는 설명을 찾을수 있다.
+A system is a collection of Lisp files that together constitute an application or a library, and that should therefore be managed as a whole. A system definition describes which source files make up the system, what the dependencies among them are, and the order they should be compiled and loaded in.</description>
+    </item>
+    
+    <item>
+      <title>SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기.</title>
+      <link>https://ageldama.github.io/posts/2017/2017-02-25-sbcl-osx-multithread/</link>
+      <pubDate>Sat, 25 Feb 2017 16:40:00 +0100</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2017/2017-02-25-sbcl-osx-multithread/</guid>
+      <description>SBCL은 멀티쓰레딩을 잘 지원하는 커먼리습 컴파일러이지만, 공식사이트에서 제공하는 리눅스 바이너리가 아니라 OSX 바이너리는 멀티쓰레딩이 꺼져서 컴파일되어있다.
+http://www.sbcl.org/manual/#Threading
+요건 자기 리습에서 *features* 을 평가해서, 리스트에 :threading, :sb-thread 같은 키워드를 포함하는지 확인해보면 알 수 있다.
+어쨌든 지원하지 않을 경우에, 컴파일을 다시 해야하는데, 우선 준비물은 GNU CLISP 같은 여기저기서 잘굴러가고 적당히 설치해서 부트스크래핑에 이용 가능한 커먼리습 컴파일러를 준비한다.
+다음 포스트를 참고해서 작업해봤다.:
+http://haminhvuong-blog.tumblr.com/post/22109095116/compile-sbcl-with-multi-thread-enabled-on-os-x
+create customize-target-features.lisp with content
+(lambda (features) (flet ((enable (x) (pushnew x features)) (disable (x) (setf features (remove x features)))) ;; Threading support, available only on x86/x86-64 Linux, x86Solaris ;; and x86 Mac OS X (experimental).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="예전 내가 썼던 블로그가 갑자기 떠올랐다. http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html
+내용은,
+콜백헬 싫다. 그런데, 하스켈의 IO Monad처럼 imperative code을 작성할 수 있으면, 3. 이것들끼리의 제어권을 주고 받는걸 event loop측에서 제어하면서도, 4. 각각의 statements끼리 그냥 주욱 흐름대로 작성한것과 다르지 않게 짜기 쉽다. 굳이 이 얘기 왜 하냐하면, 사실 요즘에 RxJava2 보고, Python3에서 asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운 체이닝을 구현하고, 그걸로 콜백들을 풀어서 잘 해결하고 있는거 같은 인상이 들어서.
+결론? 내 아이디어 부심. 그리고 조금 더 잘 생각하고 실제로 어떻게 구현할지 고민해봤다면 좋았을거라는, 나 자신의 능력 한탄하기." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기" />
+<meta property="og:description" content="예전 내가 썼던 블로그가 갑자기 떠올랐다. http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html
+내용은,
+콜백헬 싫다. 그런데, 하스켈의 IO Monad처럼 imperative code을 작성할 수 있으면, 3. 이것들끼리의 제어권을 주고 받는걸 event loop측에서 제어하면서도, 4. 각각의 statements끼리 그냥 주욱 흐름대로 작성한것과 다르지 않게 짜기 쉽다. 굳이 이 얘기 왜 하냐하면, 사실 요즘에 RxJava2 보고, Python3에서 asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운 체이닝을 구현하고, 그걸로 콜백들을 풀어서 잘 해결하고 있는거 같은 인상이 들어서.
+결론? 내 아이디어 부심. 그리고 조금 더 잘 생각하고 실제로 어떻게 구현할지 고민해봤다면 좋았을거라는, 나 자신의 능력 한탄하기." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-02-26T13:50:00+01:00" />
+<meta property="article:modified_time" content="2017-02-26T13:50:00+01:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기"/>
+<meta name="twitter:description" content="예전 내가 썼던 블로그가 갑자기 떠올랐다. http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html
+내용은,
+콜백헬 싫다. 그런데, 하스켈의 IO Monad처럼 imperative code을 작성할 수 있으면, 3. 이것들끼리의 제어권을 주고 받는걸 event loop측에서 제어하면서도, 4. 각각의 statements끼리 그냥 주욱 흐름대로 작성한것과 다르지 않게 짜기 쉽다. 굳이 이 얘기 왜 하냐하면, 사실 요즘에 RxJava2 보고, Python3에서 asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운 체이닝을 구현하고, 그걸로 콜백들을 풀어서 잘 해결하고 있는거 같은 인상이 들어서.
+결론? 내 아이디어 부심. 그리고 조금 더 잘 생각하고 실제로 어떻게 구현할지 고민해봤다면 좋았을거라는, 나 자신의 능력 한탄하기."/>
+<script src="https://ageldama.github.io/js/feather.min.js"></script>
+	
+	        
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://ageldama.github.io/">아겔로그</a>
+	</div>
+	<nav>
+		
+		<a href="/posts/archive/">archive</a>
+		
+		<a href="/tags/">tags</a>
+		
+		<a href="/index.xml">rss</a>
+		
+		<a href="/myself/">contact</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</h1>
+			<div class="meta">Posted on Feb 26, 2017</div>
+		</div>
+		
+
+		<section class="body">
+			<p>예전 내가 썼던 블로그가 갑자기 떠올랐다. <a href="http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html">http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html</a></p>
+<p>내용은,</p>
+<ol>
+<li>콜백헬 싫다.</li>
+<li>그런데, 하스켈의 IO Monad처럼 imperative code을 작성할 수 있으면,
+3. 이것들끼리의 제어권을 주고 받는걸 event loop측에서 제어하면서도,
+4. 각각의 statements끼리 그냥 주욱 흐름대로 작성한것과 다르지 않게 짜기 쉽다.</li>
+</ol>
+<p>굳이 이 얘기 왜 하냐하면, 사실 요즘에 RxJava2 보고, Python3에서
+asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운 체이닝을
+구현하고, 그걸로 콜백들을 풀어서 잘 해결하고 있는거 같은 인상이
+들어서.</p>
+<p>결론? 내 아이디어 부심. 그리고 조금 더 잘 생각하고 실제로 어떻게
+구현할지 고민해봤다면 좋았을거라는, 나 자신의 능력 한탄하기.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/async">async</a></li>
+					
+					<li><a href="/tags/monad">monad</a></li>
+					
+					<li><a href="/tags/haskell">haskell</a></li>
+					
+					<li><a href="/tags/io">io</a></li>
+					
+					<li><a href="/tags/asyncio">asyncio</a></li>
+					
+					<li><a href="/tags/await">await</a></li>
+					
+					<li><a href="/tags/async">async</a></li>
+					
+					<li><a href="/tags/nodejs">nodejs</a></li>
+					
+					<li><a href="/tags/es6">es6</a></li>
+					
+					<li><a href="/tags/rxjava">rxjava</a></li>
+					
+					<li><a href="/tags/python">python</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  
+  <div class="footer-info">
+    2023  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

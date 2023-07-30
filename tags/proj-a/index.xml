@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>proj-a on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/proj-a/</link>
+    <description>Recent content in proj-a on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/proj-a/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 30/Aug/2020</title>
+      <link>https://ageldama.github.io/posts/2020-08aug/ping-30sun/</link>
+      <pubDate>Sun, 30 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-08aug/ping-30sun/</guid>
+      <description>프로젝트 마무리 문서도 초안을 다 썼고, 마무리 중.
+분산 커밋로그에 저장하고 읽는 것들을 aync. io을 이용해서 실행되도록 하고 있다. 처음엔 그냥 C라이브러리 기반으로 된 blocking 버젼으로 만족스러울 정도로 빠른 커밋로그라 그럭저럭 괜찮았는데 한개의 실제 사이클인 것처럼 줄일 수 있어서.
+또 그냥 failure을 처리하는 부분을 바꾸고, 전체 애플리케이션을 특정시점에 더 실제 실행시점처럼 흉내내서 동작하도록 만들 수 있게 했다.
+마무리도 마지막 검증이랑 마쳐가고 있고. 8월도 마무리 되어간다. 시간이 빠르다.
+EDIT 모두 완료!</description>
+    </item>
+    
+    <item>
+      <title>Ping 27/Aug/2020</title>
+      <link>https://ageldama.github.io/posts/2020-08aug/ping-27thu/</link>
+      <pubDate>Thu, 27 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-08aug/ping-27thu/</guid>
+      <description>그간 진행해오던 프로젝트는 성능에 대해서 premature optimization을 고려해서 만들기 보다는 architectural한 면에 비중을 갖고 가능성을 염두에두고 선택을 해오며 만들었다.
+그럼에도 꽤 괜찮은 성능이었었고, 이제는 첫번째 버젼의 완성과 문서 작성도 완료한 시점이어서 앞으로 성능을 높일 방안을 고민해보고 실험을 몇개 수행해서 방법 결정해봤다.
+(현재 사용하는 방법과 새로이 사용할 방안의 이름은 모두 변경했다.)
+기존 성능 측정은:
+X event-writer
+commit을 한번에 하지 않고, 매 이벤트마다 수행해서 느림. (현재는 변경되었음) 약 11,196-microseconds (11-ms) X journal-writer</description>
+    </item>
+    
+    <item>
+      <title>Ping 24/Aug/2020</title>
+      <link>https://ageldama.github.io/posts/2020-08aug/ping-24mon/</link>
+      <pubDate>Mon, 24 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-08aug/ping-24mon/</guid>
+      <description>&amp;#34;프로젝트&amp;#34; 진행해온 프로젝트의 문서를 작성 중.
+문서를 작성하면서 더 보충/보강할 내용들이 튀어나온다.
+이 또한 사실 즐겁다.
+게임하기 Doom64 리메이크를 클리어했다. 마지막 레벨에서는 도저히 깰 수 없어서 그냥 마지막 한 마리를 잡기 위해서 치트를 켜서 아쉽다. 하지만 그 마지막 보스 이전에 타이드는 그냥 제정신으로 다 죽여서 재밌었다.
+다음 게임은 퀘이크 시리즈를 다시 플레이할까 생각 중. 폴아웃4, 스카이림을 다시 로드해서 플레이를 하며 그 세계에서 시간을 보내도 좋겠지만 조금은 다른 게임을 하고 싶어서.</description>
+    </item>
+    
+    <item>
+      <title>Ping (2nd) 14/Aug/2020</title>
+      <link>https://ageldama.github.io/posts/2020-08aug/ping2-14fri/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:01 +0900</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2020-08aug/ping2-14fri/</guid>
+      <description>ㅎㅎ좋다. 이제 문서와 추가적인 작은 도구 몇 개를 더 만드는 것만 남았구나.</description>
+    </item>
+    
+  </channel>
+</rss>

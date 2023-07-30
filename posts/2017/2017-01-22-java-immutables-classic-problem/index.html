@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Java Immutables와 친숙한 오래된 문제들 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="https://immutables.github.io/ 요즘 이걸 살짝 봤는데, 재미있었다.
+그런데 일단 깊이보거나 써보기 전에 드는 걱정은,
+이거 기존의 몇몇 프레임웍이나 라이브러리들이랑은 친하게 지내기 어렵지 않을까. 왜냐하면, 대부분의 POJO에 연관된 생성단계에서, default constructor 와 setter-methods을 갖고, 값을 세팅하는 경우가 대부분인데, 예를들면, 대부분의 ORM 프레임웍들이나 POJO으로 JSON등을 Deserialization해서 직접 객체를 생성할 책임을 프레임웍이나 라이브러리가 가져가는 경우에 대부분. &hellip;그러면 결국 말짱황인거 같다.. 아무리 accessor 메서드들 boilerplate으로 생성하는거 막아주는게 좋다고 해도, 솔직히 그냥 한번 IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는게 더 낫겠다는 생각이든다." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Java Immutables와 친숙한 오래된 문제들" />
+<meta property="og:description" content="https://immutables.github.io/ 요즘 이걸 살짝 봤는데, 재미있었다.
+그런데 일단 깊이보거나 써보기 전에 드는 걱정은,
+이거 기존의 몇몇 프레임웍이나 라이브러리들이랑은 친하게 지내기 어렵지 않을까. 왜냐하면, 대부분의 POJO에 연관된 생성단계에서, default constructor 와 setter-methods을 갖고, 값을 세팅하는 경우가 대부분인데, 예를들면, 대부분의 ORM 프레임웍들이나 POJO으로 JSON등을 Deserialization해서 직접 객체를 생성할 책임을 프레임웍이나 라이브러리가 가져가는 경우에 대부분. &hellip;그러면 결국 말짱황인거 같다.. 아무리 accessor 메서드들 boilerplate으로 생성하는거 막아주는게 좋다고 해도, 솔직히 그냥 한번 IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는게 더 낫겠다는 생각이든다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ageldama.github.io/posts/2017/2017-01-22-java-immutables-classic-problem/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-01-22T16:15:00+01:00" />
+<meta property="article:modified_time" content="2017-01-22T16:15:00+01:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java Immutables와 친숙한 오래된 문제들"/>
+<meta name="twitter:description" content="https://immutables.github.io/ 요즘 이걸 살짝 봤는데, 재미있었다.
+그런데 일단 깊이보거나 써보기 전에 드는 걱정은,
+이거 기존의 몇몇 프레임웍이나 라이브러리들이랑은 친하게 지내기 어렵지 않을까. 왜냐하면, 대부분의 POJO에 연관된 생성단계에서, default constructor 와 setter-methods을 갖고, 값을 세팅하는 경우가 대부분인데, 예를들면, 대부분의 ORM 프레임웍들이나 POJO으로 JSON등을 Deserialization해서 직접 객체를 생성할 책임을 프레임웍이나 라이브러리가 가져가는 경우에 대부분. &hellip;그러면 결국 말짱황인거 같다.. 아무리 accessor 메서드들 boilerplate으로 생성하는거 막아주는게 좋다고 해도, 솔직히 그냥 한번 IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는게 더 낫겠다는 생각이든다."/>
+<script src="https://ageldama.github.io/js/feather.min.js"></script>
+	
+	        
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://ageldama.github.io/">아겔로그</a>
+	</div>
+	<nav>
+		
+		<a href="/posts/archive/">archive</a>
+		
+		<a href="/tags/">tags</a>
+		
+		<a href="/index.xml">rss</a>
+		
+		<a href="/myself/">contact</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Java Immutables와 친숙한 오래된 문제들</h1>
+			<div class="meta">Posted on Jan 22, 2017</div>
+		</div>
+		
+
+		<section class="body">
+			<p><a href="https://immutables.github.io/">https://immutables.github.io/</a> 요즘 이걸 살짝 봤는데, 재미있었다.</p>
+<p>그런데 일단 깊이보거나 써보기 전에 드는 걱정은,</p>
+<ol>
+<li>이거 기존의 몇몇 프레임웍이나 라이브러리들이랑은 친하게 지내기
+어렵지 않을까.
+<ul>
+<li>왜냐하면, 대부분의 POJO에 연관된
+생성단계에서,
+<a href="https://en.wikipedia.org/wiki/Default_constructor">default constructor</a> 와
+setter-methods을 갖고, 값을 세팅하는 경우가 대부분인데,</li>
+<li>예를들면, 대부분의 ORM 프레임웍들이나 POJO으로 JSON등을
+Deserialization해서 직접 객체를 생성할 책임을 프레임웍이나
+라이브러리가 가져가는 경우에 대부분.</li>
+</ul>
+</li>
+</ol>
+<p>&hellip;그러면 결국 말짱황인거 같다.. 아무리 accessor 메서드들
+boilerplate으로 생성하는거 막아주는게 좋다고 해도, 솔직히 그냥 한번
+IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는게 더 낫겠다는
+생각이든다.</p>
+<p>그리고 어차피 그런 <em>&ldquo;POJO스럽게 동작&rdquo;</em> 하는게 더 그런 메서드들 공짜로
+얻는거보다는 훨씬 더 이득일거 같다. 어차피 어세서들 조금 보기
+거추장스럽고, 만들기도 짜증나도 가끔은 더 멍청한게 속편한게 자바인거
+같다. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>그렇다고, 뭔가 더 낫게 만들려는 생각이나 노력, 혹은
+뭔가 멍청하게 하고 있다는 자각을 포기해야한다는 말로 받아들이면
+안됨. 반면에 답답한 방법이지만, 다 고려해봤을때 오히려 더 멍청한
+방법이 훨씬 속편한게 자바인거라는게 재밌는거일뿐.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/java">java</a></li>
+					
+					<li><a href="/tags/constructor">constructor</a></li>
+					
+					<li><a href="/tags/immutables">immutables</a></li>
+					
+					<li><a href="/tags/setter">setter</a></li>
+					
+					<li><a href="/tags/getter">getter</a></li>
+					
+					<li><a href="/tags/accessor">accessor</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  
+  <div class="footer-info">
+    2023  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

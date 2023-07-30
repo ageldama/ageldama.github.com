@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Emacs에서 window 전환을 편하게, ace-window - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="이맥스에서 코딩하거나 마크다운이나 Org으로 글을 쓰고 정리하는데, 그간 그냥 그럭저럭 나는 이맥스를 나한테 맞춰서 사용하고 있다고 생각하고 있었던거 같다. 1
+그런데, 항상 뭔가 불편한데, 그냥 바쁘다는 이유로 깊이 생각은 안하고 대충 대충 때우면서 사용해왔었던게 있었다. 바로 window 끼리 전환하는 방법.
+C-x 2 이나 C-x 3으로 창을 분할해놓고 쓰는게 보통인데, 이때 나는 그냥 아무 생각없이 C-x o만을 이용해서 다음 윈도우 으로 이동만해왔었다.
+그런데, 창이 3개 이상이 되고, 현재 창의 다음 창 이 아니라, 이전 창 으로 이동하고 싶으면?" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Emacs에서 window 전환을 편하게, ace-window" />
+<meta property="og:description" content="이맥스에서 코딩하거나 마크다운이나 Org으로 글을 쓰고 정리하는데, 그간 그냥 그럭저럭 나는 이맥스를 나한테 맞춰서 사용하고 있다고 생각하고 있었던거 같다. 1
+그런데, 항상 뭔가 불편한데, 그냥 바쁘다는 이유로 깊이 생각은 안하고 대충 대충 때우면서 사용해왔었던게 있었다. 바로 window 끼리 전환하는 방법.
+C-x 2 이나 C-x 3으로 창을 분할해놓고 쓰는게 보통인데, 이때 나는 그냥 아무 생각없이 C-x o만을 이용해서 다음 윈도우 으로 이동만해왔었다.
+그런데, 창이 3개 이상이 되고, 현재 창의 다음 창 이 아니라, 이전 창 으로 이동하고 싶으면?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ageldama.github.io/posts/2017/2017-01-22-emacs-ace-window/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-01-22T14:15:00+01:00" />
+<meta property="article:modified_time" content="2017-01-22T14:15:00+01:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs에서 window 전환을 편하게, ace-window"/>
+<meta name="twitter:description" content="이맥스에서 코딩하거나 마크다운이나 Org으로 글을 쓰고 정리하는데, 그간 그냥 그럭저럭 나는 이맥스를 나한테 맞춰서 사용하고 있다고 생각하고 있었던거 같다. 1
+그런데, 항상 뭔가 불편한데, 그냥 바쁘다는 이유로 깊이 생각은 안하고 대충 대충 때우면서 사용해왔었던게 있었다. 바로 window 끼리 전환하는 방법.
+C-x 2 이나 C-x 3으로 창을 분할해놓고 쓰는게 보통인데, 이때 나는 그냥 아무 생각없이 C-x o만을 이용해서 다음 윈도우 으로 이동만해왔었다.
+그런데, 창이 3개 이상이 되고, 현재 창의 다음 창 이 아니라, 이전 창 으로 이동하고 싶으면?"/>
+<script src="https://ageldama.github.io/js/feather.min.js"></script>
+	
+	        
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://ageldama.github.io/">아겔로그</a>
+	</div>
+	<nav>
+		
+		<a href="/posts/archive/">archive</a>
+		
+		<a href="/tags/">tags</a>
+		
+		<a href="/index.xml">rss</a>
+		
+		<a href="/myself/">contact</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Emacs에서 window 전환을 편하게, ace-window</h1>
+			<div class="meta">Posted on Jan 22, 2017</div>
+		</div>
+		
+
+		<section class="body">
+			<p>이맥스에서 코딩하거나 마크다운이나 Org으로 글을 쓰고 정리하는데, 그간
+그냥 그럭저럭 나는 이맥스를 나한테 맞춰서 사용하고 있다고 생각하고
+있었던거 같다. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>그런데, 항상 뭔가 불편한데, 그냥 바쁘다는 이유로 깊이 생각은 안하고
+대충 대충 때우면서 사용해왔었던게 있었다. 바로 window 끼리 전환하는
+방법.</p>
+<p><code>C-x 2</code> 이나 <code>C-x 3</code>으로 창을 분할해놓고 쓰는게 보통인데, 이때 나는
+그냥 아무 생각없이 <code>C-x o</code>만을 이용해서 <em>다음 윈도우</em> 으로
+이동만해왔었다.</p>
+<p><em>그런데</em>, 창이 3개 이상이 되고, 현재 창의 <em>다음 창</em> 이 아니라, <em>이전 창</em> 으로 이동하고 싶으면?</p>
+<p>&hellip;그렇다, 한바퀴 돌때까지 그 키를 계속 눌렀었다;;; 부끄럽지만 그래왔었다.</p>
+<p>그러다가 <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>을 조금
+해보고, <a href="https://github.com/abo-abo/ace-window">ace-window</a> 을 쓰는게
+제일 나은거 같았다.</p>
+<ol>
+<li>windmove이 기본적으로 emacs 내장이고 대부분은 마음에 들지만,
+<ul>
+<li>Vim의 <code>C-w &lt;방향키&gt;</code> 처럼 동작하니까.</li>
+<li>내 최애 mode인 Org에서 ㅈㄴ 짜증나게 충돌남.</li>
+<li>적당히 창 분할이나 그런것들에 대해서도 해결이 되고,</li>
+</ul>
+</li>
+<li>Icicle 같은거 써서 이걸 해결하는것도 있긴한데, 별로 난&hellip;</li>
+<li>다른 방법들도 많지만, 그냥 이게 제일 단순해보였다.</li>
+<li>끝.</li>
+</ol>
+<p>..이맥스의 세계는 역시 넓고, 선택의 폭은 끝이없다는 생각이 들었다. -,.-</p>
+<p>결과로 <a href="https://github.com/ageldama/configs/blob/master/emacs/init2.el#L270">내 emacs 환경설정에서 관련 라인</a></p>
+<p>..<code>markdown-mode</code>에서 또 <code>M-p</code>이 충돌나니까 약간 추가 설정만.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://github.com/ageldama/configs/blob/master/emacs/init2.el">https://github.com/ageldama/configs/blob/master/emacs/init2.el</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="http://emacs.stackexchange.com/questions/3458/how-to-switch-between-windows-quickly">http://emacs.stackexchange.com/questions/3458/how-to-switch-between-windows-quickly</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/emacs">emacs</a></li>
+					
+					<li><a href="/tags/window">window</a></li>
+					
+					<li><a href="/tags/ace-window">ace-window</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  
+  <div class="footer-info">
+    2023  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

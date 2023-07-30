@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/blog/</link>
+    <description>Recent content in blog on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Fri, 03 Feb 2023 18:00:00 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 03/02/2023 .01: 블로그 디자인 수정</title>
+      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/</link>
+      <pubDate>Fri, 03 Feb 2023 18:00:00 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/</guid>
+      <description>블로그를 내려놓았다가, 다시 글을 쓰고 생각들을 어느 정도는 공개를 하고 지내고 싶어져서 다시 열었다.
+사용하던 테마를 수정해서 쓰기로 하고, CSS을 여기저기서 복붙해서 적용해보고, 갈무리 웹폰트도 적용해서, 오히려 원본 테마보다 더 가볍게 적당히 만들어봤다.
+색상도, 외양과 기능 디자인 모두 어느 정도 내 취향에 맞게 꾸며 봤다.</description>
+    </item>
+    
+  </channel>
+</rss>

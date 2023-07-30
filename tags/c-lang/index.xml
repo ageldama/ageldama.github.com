@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c-lang on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/c-lang/</link>
+    <description>Recent content in c-lang on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Tue, 07 Feb 2023 07:48:17 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/c-lang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측</title>
+      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb07--01-ping/</link>
+      <pubDate>Tue, 07 Feb 2023 07:48:17 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb07--01-ping/</guid>
+      <description>문득 떠오른 생각이라서, 그냥 추측.
+C : 로마숫자(roman numeral) 으로 100.
+처음부터 의도한 숫자가 100이 아니었을거란건 나도 알거 같아. BCPL이나 그런 역사에 대해 나도 조금은 아니까. 그런데 그 이후에 따르는 언어들이 그런 패턴을 만든거 같아서 재미로 쓰는 글. C++ : 위의 로마숫자이란 생각과 C언어의 x++ 연산 으로 생각해보면,
+즉시 평가할 때에는 C == 100, 그냥 C와 같아 보임. 그런데 저장된 값은 +1, == 101. …어쨌든 그냥 볼 때엔, 씨언어와 거의 같아 보이지만, 그래도 좀 더 성장했다고.</description>
+    </item>
+    
+  </channel>
+</rss>

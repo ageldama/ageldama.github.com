@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>theme on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/theme/</link>
+    <description>Recent content in theme on 아겔로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>All rights reserved to ageldama</copyright>
+    <lastBuildDate>Sun, 26 Feb 2023 08:19:57 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 26/02/2023 .01 : 디자인 css 가볍게 수정</title>
+      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb26--01-css/</link>
+      <pubDate>Sun, 26 Feb 2023 08:19:57 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb26--01-css/</guid>
+      <description>아예 아무런 스타일도 주지 않고, 그냥 알아서 html/css만으로 잘 보이도록 고쳤다. 웹폰트니 그런것도 그냥 껐고.
+불필요한 스타일이나 폰트로딩을 줄여서 가볍고, 어차피 웹브라우져의 &amp;#39;reader mode&amp;#39; 지원 같은걸로 내가 스타일 주는 것보다 훨씬 읽기 편안하게 볼 수 있을테니까.
+lynx, w3m 같은 텍스트 웹브라우져에서 읽으나 그냥 무거운 웹브라우져으로 읽으나 사람마다 알아서 잘 읽히도록 하는데에만 집중해봤다.</description>
+    </item>
+    
+  </channel>
+</rss>
