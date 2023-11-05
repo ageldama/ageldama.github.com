@@ -51,6 +51,24 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-02-25-sbcl-osx-multithread/">SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기.</a></h1>
+					<time>Feb 25, 2017</time>
+					<br><div class="description">
+						
+						SBCL은 멀티쓰레딩을 잘 지원하는 커먼리습 컴파일러이지만, 공식사이트에서 제공하는 리눅스 바이너리가 아니라 OSX 바이너리는 멀티쓰레딩이 꺼져서 컴파일되어있다.
+http://www.sbcl.org/manual/#Threading
+요건 자기 리습에서 *features* 을 평가해서, 리스트에 :threading, :sb-thread 같은 키워드를 포함하는지 확인해보면 알 수 있다.
+어쨌든 지원하지 않을 경우에, 컴파일을 다시 해야하는데, 우선 준비물은 GNU CLISP 같은 여기저기서 잘굴러가고 적당히 설치해서 부트스크래핑에 이용 가능한 커먼리습 컴파일러를 준비한다.
+다음 포스트를 참고해서 작업해봤다.:
+http://haminhvuong-blog.tumblr.com/post/22109095116/compile-sbcl-with-multi-thread-enabled-on-os-x
+create customize-target-features.lisp with content
+(lambda (features) (flet ((enable (x) (pushnew x features)) (disable (x) (setf features (remove x features)))) ;; Threading support, available only on x86/x86-64 Linux, x86Solaris ;; and x86 Mac OS X (experimental).&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2017/2017-01-29-myself-nowadays/">2017년 1월, 요즘 나는.</a></h1>
 					<time>Jan 29, 2017</time>
 					<br><div class="description">

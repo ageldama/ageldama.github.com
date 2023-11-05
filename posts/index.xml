@@ -7,7 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Sun, 05 Nov 2023 05:28:12 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Nov 2023 05:40:00 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정</title>
+      <link>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/</link>
+      <pubDate>Sun, 05 Nov 2023 05:40:00 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/</guid>
+      <description> freebsd에서 samba 파일서버 세팅은 프비핸드북 참고 https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba
+symlink을 samba에 노출하기 /usr/local/etc/smb4.conf 파일에 다음을 추가:
+[global] ... allow insecure wide links =	yes [share] ... follow symlinks = yes wide links = yes unix extensions = no mdns으로 samba 파일서버를 네트웍에 광고하기 보통은 avahi을 써왔는데, mdnsresponder이 더 가볍다고 해서 이렇게 세팅해봄.
+pkg install mDNSResponder /etc/rc.conf 에 추가:
+mdnsresponderposix_enable=&amp;#34;YES&amp;#34; mdnsresponderposix_flags=&amp;#34;-f /usr/local/etc/mdnsresponderposix.conf&amp;#34; 호스트이름은 freebsd-samsung 으로 smb서비스를 노출.
+/usr/local/etc/mdnsresponderposix.conf 작성:
+freebsd-samsung _smb._tcp 445 service mdnsresponderposix start </description>
+    </item>
+    
     <item>
       <title>Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</title>
       <link>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/</link>
