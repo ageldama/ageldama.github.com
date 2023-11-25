@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ageldama.github.io/tags/freebsd/</loc>
+    <lastmod>2023-11-05T05:40:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/</loc>
+    <lastmod>2023-11-05T05:40:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2023-11-05T05:40:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/samba4/</loc>
+    <lastmod>2023-11-05T05:40:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/symlink/</loc>
+    <lastmod>2023-11-05T05:40:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2023-11-05T05:40:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2023-11-05T05:40:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/bookworm/</loc>
+    <lastmod>2023-11-05T05:28:12+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/chromium/</loc>
+    <lastmod>2023-11-05T05:28:12+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/debian/</loc>
+    <lastmod>2023-11-05T05:28:12+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/</loc>
+    <lastmod>2023-11-05T05:28:12+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/gtk3/</loc>
+    <lastmod>2023-11-05T05:28:12+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/gtk4/</loc>
+    <lastmod>2023-11-05T05:28:12+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/ibus/</loc>
+    <lastmod>2023-11-05T05:28:12+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/wayland/</loc>
+    <lastmod>2023-11-05T05:28:12+00:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/tags/emacs/</loc>
     <lastmod>2023-03-15T15:37:14+00:00</lastmod>
   </url><url>
@@ -9,9 +54,6 @@
     <lastmod>2023-03-15T15:37:14+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/fanless/</loc>
-    <lastmod>2023-03-15T15:37:14+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
     <lastmod>2023-03-15T15:37:14+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/power-consumption/</loc>
@@ -24,9 +66,6 @@
     <lastmod>2023-03-15T15:37:14+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/ssh/</loc>
-    <lastmod>2023-03-15T15:37:14+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
     <lastmod>2023-03-15T15:37:14+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/tip/</loc>
@@ -45,9 +84,6 @@
     <lastmod>2023-03-15T15:37:14+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2023-03mar/2023-03mar15--wired-desktop/</loc>
-    <lastmod>2023-03-15T15:37:14+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2023-03-15T15:37:14+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/cpp/</loc>
@@ -733,9 +769,6 @@
   </url><url>
     <loc>https://ageldama.github.io/tags/wrapdb/</loc>
     <lastmod>2020-08-14T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/freebsd/</loc>
-    <lastmod>2020-08-13T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2020-08aug/ping-13thu/</loc>
     <lastmod>2020-08-13T00:00:00+09:00</lastmod>

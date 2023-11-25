@@ -51,6 +51,37 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/">FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정</a></h1>
+					<time>Nov 5, 2023</time>
+					<br><div class="description">
+						
+						 freebsd에서 samba 파일서버 세팅은 프비핸드북 참고 https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba
+symlink을 samba에 노출하기 /usr/local/etc/smb4.conf 파일에 다음을 추가:
+[global] ... allow insecure wide links =	yes [share] ... follow symlinks = yes wide links = yes unix extensions = no mdns으로 samba 파일서버를 네트웍에 광고하기 보통은 avahi을 써왔는데, mdnsresponder이 더 가볍다고 해서 이렇게 세팅해봄.
+pkg install mDNSResponder /etc/rc.conf 에 추가:
+mdnsresponderposix_enable=&#34;YES&#34; mdnsresponderposix_flags=&#34;-f /usr/local/etc/mdnsresponderposix.conf&#34; 호스트이름은 freebsd-samsung 으로 smb서비스를 노출.
+/usr/local/etc/mdnsresponderposix.conf 작성:
+freebsd-samsung _smb._tcp 445 service mdnsresponderposix start &hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</a></h1>
+					<time>Nov 5, 2023</time>
+					<br><div class="description">
+						
+						나도 x11에서 wayland 기반으로 옮겨가고 있는데, 다른 것들은 대부분 괜찮거나 포기.1
+가볍고 좋은데, debian chromium에서 ibus으로 한글 입력이 안되어서 알아봤다.
+1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨. 힌트 얻음: https://bugzilla.redhat.com/show_bug.cgi?id=2058976 2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지? for pid in $(pgrep chromium); do #echo $pid grep -i gtk /proc/&#34;$pid&#34;/maps done ==&gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&gt; ibus 연동안됨.
+3) 실행커맨드/스크립트 확인 dpkg -L chromium-browser 으로 desktop launcher 확인 /usr/share/applications/chromium-browser.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2023-03mar/2023-03mar15--wired-desktop/">내 책상에서 유선랜 환경</a></h1>
 					<time>Mar 15, 2023</time>
 					<br><div class="description">
@@ -724,32 +755,6 @@ macro body (defmacro define-data-class (class-name parent-classes slot-names &am
 단지 목적한 그것만을 만드는 일과, 또는 그것을 반복적으로 생산하고 또 더 나은 방법으로 추상화하여 내는 도구를 만들어내는 일으로 구분할 수 있는 것 같다.
 직관적으로 생각했을 때에는, 목적이 명확하다면 당연히 그것 자체를 만드는 일을 이미 존재하는 도구들을 통해서 표현하고 만들면 그만인 것 같다.
 그리고 더 나아가서 결과물을 그냥 직접 만드는 것이 아니라, 그 결과물을 만들기 위한 도구까지 같이 만들거나, 그 결과물이 그를 만들기 위해 고안된 도구를 통해서 만드는 경우가 비교할 수 없이 생산적이고 그 결과물 또한 훨씬 매끄럽고 완성도가 높은 경우가 오히려 보통인 것 같다.&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/ping-10sat/">Ping 10/Oct/2020</a></h1>
-					<time>Oct 10, 2020</time>
-					<br><div class="description">
-						
-						오래 써오던 맥북에어의 WIFI이 성능이 계속 안 좋아졌었던 것 같다.
-모델명을 알아보니, 2012년 형이었다. 정말 오래 썼구나. 1
-어차피 MacOS을 여러 가지 이유로 좋아하지 않아서 그냥 아치리눅스2를 설치하고 그대로 쓰고 있다.
-최근에는 아예 WIFI을 USB-LAN으로 연결해주는 RPi을 만들어 쓰고 있었다. 물론 내장WIFI은 너무 느려서 nmcli r wifi off 을 기본으로 아예 S/W Disable시켜놓고 살았다.
-어쩌다 계기가 있어서, USB-LAN연결용 RPi을 챙기지 못한 외부에서 어쩔 수 없이 쓰려고 시도해보니, 아예 조금 내장WIFI을 쓰면 조금 동작하다가 시스템이 뻗어버린다.&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/ping-08thu/">Ping 08/Oct/2020</a></h1>
-					<time>Oct 8, 2020</time>
-					<br><div class="description">
-						
-						벌써 겨울 날씨에 매일 다가가는 것 같다. 시간이 흘러가는 것을 며칠 눈치 채지 못하다가 다시 눈치 챌 수 있게 되었다. 다행이다.&hellip;
 						
 					</div>
                                         

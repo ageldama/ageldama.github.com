@@ -51,6 +51,40 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-02-25-sbcl-osx-multithread/">SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기.</a></h1>
+					<time>Feb 25, 2017</time>
+					<br><div class="description">
+						
+						SBCL은 멀티쓰레딩을 잘 지원하는 커먼리습 컴파일러이지만, 공식사이트에서 제공하는 리눅스 바이너리가 아니라 OSX 바이너리는 멀티쓰레딩이 꺼져서 컴파일되어있다.
+http://www.sbcl.org/manual/#Threading
+요건 자기 리습에서 *features* 을 평가해서, 리스트에 :threading, :sb-thread 같은 키워드를 포함하는지 확인해보면 알 수 있다.
+어쨌든 지원하지 않을 경우에, 컴파일을 다시 해야하는데, 우선 준비물은 GNU CLISP 같은 여기저기서 잘굴러가고 적당히 설치해서 부트스크래핑에 이용 가능한 커먼리습 컴파일러를 준비한다.
+다음 포스트를 참고해서 작업해봤다.:
+http://haminhvuong-blog.tumblr.com/post/22109095116/compile-sbcl-with-multi-thread-enabled-on-os-x
+create customize-target-features.lisp with content
+(lambda (features) (flet ((enable (x) (pushnew x features)) (disable (x) (setf features (remove x features)))) ;; Threading support, available only on x86/x86-64 Linux, x86Solaris ;; and x86 Mac OS X (experimental).&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-29-myself-nowadays/">2017년 1월, 요즘 나는.</a></h1>
+					<time>Jan 29, 2017</time>
+					<br><div class="description">
+						
+						요즘엔 그냥 독일 생활, 도르트문트에 조금씩 더 적응해서 사는게 편안해졌다.
+식기세척기, 세탁기, 커피머신, 팀사람들, 출퇴근길, 놀러가는 동네, 구경가는 전자제품상가.
+그냥 어느정도 이제는 독일어를 하나도 못하지만, 적어도 팀 사람들과는 정도 붙이고 재밌게 잘지내가고 있는거 같다.
+커피를 캡슐커피 기계가 있어서 적당히 입맛을 붙이고 마셔보고있다. 괜찮다. 토스트랑 꿀이랑 사다가 가볍게 먹고 해결하고 살고있다.
+비자도 4년짜리 블루카드도 됐고, 마음이 편안해졌다.
+책은 열한계단 을 읽고 많은 생각을 해봤다. 체체파리의 비법, 시녀이야기, 그리고 테드 챙의 당신 인생의 이야기 을 읽어볼까 생각하고 있다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2017/2017-01-22-aio-rx-and-erlang/">Erlang에 더 관심을 기울여야 할 시점인거 같다</a></h1>
 					<time>Jan 22, 2017</time>
 					<br><div class="description">

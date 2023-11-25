@@ -7,7 +7,97 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Wed, 15 Mar 2023 15:37:14 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Nov 2023 05:40:00 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>freebsd</title>
+      <link>https://ageldama.github.io/tags/freebsd/</link>
+      <pubDate>Sun, 05 Nov 2023 05:40:00 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/freebsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>samba4</title>
+      <link>https://ageldama.github.io/tags/samba4/</link>
+      <pubDate>Sun, 05 Nov 2023 05:40:00 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/samba4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>symlink</title>
+      <link>https://ageldama.github.io/tags/symlink/</link>
+      <pubDate>Sun, 05 Nov 2023 05:40:00 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/symlink/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bookworm</title>
+      <link>https://ageldama.github.io/tags/bookworm/</link>
+      <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/bookworm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chromium</title>
+      <link>https://ageldama.github.io/tags/chromium/</link>
+      <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/chromium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debian</title>
+      <link>https://ageldama.github.io/tags/debian/</link>
+      <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gtk3</title>
+      <link>https://ageldama.github.io/tags/gtk3/</link>
+      <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/gtk3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gtk4</title>
+      <link>https://ageldama.github.io/tags/gtk4/</link>
+      <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/gtk4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ibus</title>
+      <link>https://ageldama.github.io/tags/ibus/</link>
+      <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/ibus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wayland</title>
+      <link>https://ageldama.github.io/tags/wayland/</link>
+      <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/wayland/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>emacs</title>
       <link>https://ageldama.github.io/tags/emacs/</link>
@@ -1553,15 +1643,6 @@
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
       
       <guid>https://ageldama.github.io/tags/wrapdb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>freebsd</title>
-      <link>https://ageldama.github.io/tags/freebsd/</link>
-      <pubDate>Thu, 13 Aug 2020 00:00:00 +0900</pubDate>
-      
-      <guid>https://ageldama.github.io/tags/freebsd/</guid>
       <description></description>
     </item>
     
