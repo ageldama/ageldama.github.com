@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>xmake, compile_commands.json, flycheck - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="cmake/warp등을 써보면서 c/c&#43;&#43; 개발할 때에 빌드도구 갖고 놀다가, 이번에 마음을 열고 xmake을 익혀봄.
+마음에 든다. 가볍고 빠르고 좋다.
+ccache등도 바로 지원하고, lua으로 스크립팅도 그럭저럭 할만해 보이고, [build.zig](https://ziglang.org/learn/build-system/)스러워서 당연하게도 좋은거 같아.
+계속 쓸거 같다.
+emacs / flycheck &#43; c/c&#43;&#43; 개발할 때에 단점이, 자동적으로 외부 3rd-party 라이브러리의 include-path을 설정해주지 않아서, [dirs-local](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html) 같은걸 세팅해주길 기대한다는 점.
+그래서 그냥 xmake project -vD -k compile_commands -m debug 같이 compile_commands.json 생성하고,
+이걸 파싱해서 표준출력으로 include-paths https://github." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="xmake, compile_commands.json, flycheck" />
+<meta property="og:description" content="cmake/warp등을 써보면서 c/c&#43;&#43; 개발할 때에 빌드도구 갖고 놀다가, 이번에 마음을 열고 xmake을 익혀봄.
+마음에 든다. 가볍고 빠르고 좋다.
+ccache등도 바로 지원하고, lua으로 스크립팅도 그럭저럭 할만해 보이고, [build.zig](https://ziglang.org/learn/build-system/)스러워서 당연하게도 좋은거 같아.
+계속 쓸거 같다.
+emacs / flycheck &#43; c/c&#43;&#43; 개발할 때에 단점이, 자동적으로 외부 3rd-party 라이브러리의 include-path을 설정해주지 않아서, [dirs-local](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html) 같은걸 세팅해주길 기대한다는 점.
+그래서 그냥 xmake project -vD -k compile_commands -m debug 같이 compile_commands.json 생성하고,
+이걸 파싱해서 표준출력으로 include-paths https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-05-06T07:51:13+00:00" />
+<meta property="article:modified_time" content="2024-05-06T07:51:13+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="xmake, compile_commands.json, flycheck"/>
+<meta name="twitter:description" content="cmake/warp등을 써보면서 c/c&#43;&#43; 개발할 때에 빌드도구 갖고 놀다가, 이번에 마음을 열고 xmake을 익혀봄.
+마음에 든다. 가볍고 빠르고 좋다.
+ccache등도 바로 지원하고, lua으로 스크립팅도 그럭저럭 할만해 보이고, [build.zig](https://ziglang.org/learn/build-system/)스러워서 당연하게도 좋은거 같아.
+계속 쓸거 같다.
+emacs / flycheck &#43; c/c&#43;&#43; 개발할 때에 단점이, 자동적으로 외부 3rd-party 라이브러리의 include-path을 설정해주지 않아서, [dirs-local](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html) 같은걸 세팅해주길 기대한다는 점.
+그래서 그냥 xmake project -vD -k compile_commands -m debug 같이 compile_commands.json 생성하고,
+이걸 파싱해서 표준출력으로 include-paths https://github."/>
+<script src="https://ageldama.github.io/js/feather.min.js"></script>
+	
+	        
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://ageldama.github.io/">아겔로그</a>
+	</div>
+	<nav>
+		
+		<a href="/posts/archive/">archive</a>
+		
+		<a href="/tags/">tags</a>
+		
+		<a href="/index.xml">rss</a>
+		
+		<a href="/myself/">contact</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">xmake, compile_commands.json, flycheck</h1>
+			<div class="meta">Posted on May 6, 2024</div>
+		</div>
+		
+
+		<section class="body">
+			
+<p>
+cmake/warp등을 써보면서 c/c++ 개발할 때에 빌드도구 갖고 놀다가,
+이번에 마음을 열고 xmake을 익혀봄.</p>
+<p>
+마음에 든다. 가볍고 빠르고 좋다.</p>
+<p>
+ccache등도 바로 지원하고, lua으로 스크립팅도 그럭저럭 할만해 보이고,
+[build.zig](<a href="https://ziglang.org/learn/build-system/)">https://ziglang.org/learn/build-system/)</a>스러워서
+당연하게도 좋은거 같아.</p>
+<p>
+계속 쓸거 같다.</p>
+<p>
+emacs / flycheck + c/c++ 개발할 때에 단점이, 자동적으로 외부 3rd-party
+라이브러리의 include-path을 설정해주지 않아서,
+[dirs-local](<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html)">https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html)</a>
+같은걸 세팅해주길 기대한다는 점.</p>
+<p>
+그래서 그냥 <code>xmake project -vD -k compile_commands -m debug</code> 같이
+<code>compile_commands.json</code> 생성하고,</p>
+<ol>
+<li>이걸 파싱해서 표준출력으로 include-paths
+<a href="https://github.com/ageldama/configs/blob/master/compile_commands_json_incdirs.py">https://github.com/ageldama/configs/blob/master/compile_commands_json_incdirs.py</a></li>
+<li>현재 소스코드 버퍼 기준으로 가장 가까운 compile_commands.json 파일
+위치 찾는 elisp 함수
+<a href="https://github.com/ageldama/configs/blob/master/emacs/elisp/compcmdsjson-tiny.el">https://github.com/ageldama/configs/blob/master/emacs/elisp/compcmdsjson-tiny.el</a></li>
+<li>위 (1)+(2)을 조합해서 flycheck을 위한 변수 <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup> 들을 설정하는 elisp 함수
+<a href="https://github.com/ageldama/configs/blob/master/emacs/elisp/flycheck-compcmdsjson.el">https://github.com/ageldama/configs/blob/master/emacs/elisp/flycheck-compcmdsjson.el</a></li>
+<li>그리고 위 (3)을 c/c++-mode에 자동적으로 적용하고, 또 단축키도
+만드는 elisp 코드
+<a href="https://github.com/ageldama/configs/blob/master/emacs/feat/flycheck-compcmdsjson.el">https://github.com/ageldama/configs/blob/master/emacs/feat/flycheck-compcmdsjson.el</a></li>
+</ol>
+<p>
+…요렇게 만들어서 세팅해서 쓰니 편안.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator">
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>예시 <a href="https://github.com/flycheck/flycheck/issues/659">https://github.com/flycheck/flycheck/issues/659</a></p>
+</div>
+</div>
+</div>
+</div>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/programming">programming</a></li>
+					
+					<li><a href="/tags/xmake">xmake</a></li>
+					
+					<li><a href="/tags/c">c</a></li>
+					
+					<li><a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li>
+					
+					<li><a href="/tags/xmake">xmake</a></li>
+					
+					<li><a href="/tags/compile_commands.json">compile_commands.json</a></li>
+					
+					<li><a href="/tags/flycheck">flycheck</a></li>
+					
+					<li><a href="/tags/emacs">emacs</a></li>
+					
+					<li><a href="/tags/clang">clang</a></li>
+					
+					<li><a href="/tags/gcc">gcc</a></li>
+					
+					<li><a href="/tags/g&#43;&#43;">g&#43;&#43;</a></li>
+					
+					<li><a href="/tags/clang&#43;&#43;">clang&#43;&#43;</a></li>
+					
+					<li><a href="/tags/cppcheck">cppcheck</a></li>
+					
+					<li><a href="/tags/emacslisp">emacslisp</a></li>
+					
+					<li><a href="/tags/elisp">elisp</a></li>
+					
+					<li><a href="/tags/emacs-lisp">emacs-lisp</a></li>
+					
+					<li><a href="/tags/python">python</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  
+  <div class="footer-info">
+    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

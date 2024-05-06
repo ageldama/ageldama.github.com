@@ -7,7 +7,151 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Sat, 23 Mar 2024 15:46:14 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 May 2024 07:51:13 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>c</title>
+      <link>https://ageldama.github.io/tags/c/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>https://ageldama.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clang</title>
+      <link>https://ageldama.github.io/tags/clang/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/clang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clang&#43;&#43;</title>
+      <link>https://ageldama.github.io/tags/clang&#43;&#43;/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/clang&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>compile_commands.json</title>
+      <link>https://ageldama.github.io/tags/compile_commands.json/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/compile_commands.json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cppcheck</title>
+      <link>https://ageldama.github.io/tags/cppcheck/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/cppcheck/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elisp</title>
+      <link>https://ageldama.github.io/tags/elisp/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/elisp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacs</title>
+      <link>https://ageldama.github.io/tags/emacs/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacs-lisp</title>
+      <link>https://ageldama.github.io/tags/emacs-lisp/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/emacs-lisp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacslisp</title>
+      <link>https://ageldama.github.io/tags/emacslisp/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/emacslisp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flycheck</title>
+      <link>https://ageldama.github.io/tags/flycheck/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/flycheck/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>g&#43;&#43;</title>
+      <link>https://ageldama.github.io/tags/g&#43;&#43;/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/g&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gcc</title>
+      <link>https://ageldama.github.io/tags/gcc/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/gcc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://ageldama.github.io/tags/programming/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://ageldama.github.io/tags/python/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xmake</title>
+      <link>https://ageldama.github.io/tags/xmake/</link>
+      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
+      
+      <guid>https://ageldama.github.io/tags/xmake/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>anime</title>
       <link>https://ageldama.github.io/tags/anime/</link>
@@ -131,15 +275,6 @@
       <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
       
       <guid>https://ageldama.github.io/tags/wayland/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>emacs</title>
-      <link>https://ageldama.github.io/tags/emacs/</link>
-      <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      
-      <guid>https://ageldama.github.io/tags/emacs/</guid>
       <description></description>
     </item>
     
@@ -536,15 +671,6 @@
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
       
       <guid>https://ageldama.github.io/tags/unix/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>c&#43;&#43;</title>
-      <link>https://ageldama.github.io/tags/c&#43;&#43;/</link>
-      <pubDate>Thu, 02 Mar 2023 16:00:00 +0000</pubDate>
-      
-      <guid>https://ageldama.github.io/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
@@ -1188,15 +1314,6 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>https://ageldama.github.io/tags/python/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0900</pubDate>
-      
-      <guid>https://ageldama.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>stream</title>
       <link>https://ageldama.github.io/tags/stream/</link>
       <pubDate>Wed, 11 Nov 2020 00:00:00 +0900</pubDate>
@@ -1301,15 +1418,6 @@
       <pubDate>Thu, 05 Nov 2020 00:00:00 +0900</pubDate>
       
       <guid>https://ageldama.github.io/tags/reading/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>elisp</title>
-      <link>https://ageldama.github.io/tags/elisp/</link>
-      <pubDate>Wed, 04 Nov 2020 00:00:00 +0900</pubDate>
-      
-      <guid>https://ageldama.github.io/tags/elisp/</guid>
       <description></description>
     </item>
     
@@ -2088,15 +2196,6 @@
     </item>
     
     <item>
-      <title>emacs-lisp</title>
-      <link>https://ageldama.github.io/tags/emacs-lisp/</link>
-      <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
-      
-      <guid>https://ageldama.github.io/tags/emacs-lisp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>guile</title>
       <link>https://ageldama.github.io/tags/guile/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
@@ -2120,15 +2219,6 @@
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
       
       <guid>https://ageldama.github.io/tags/scheme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>c</title>
-      <link>https://ageldama.github.io/tags/c/</link>
-      <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      
-      <guid>https://ageldama.github.io/tags/c/</guid>
       <description></description>
     </item>
     
