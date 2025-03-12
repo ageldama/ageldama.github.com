@@ -8,23 +8,33 @@
 처음에는 Helm에서 하는 기능들을 그대로 옮기려고만 생각하다가, 오히려 Ivy에 맞춰서 내가 익숙해지고, 더 낫게 할 방법들이 있어서 그냥 내가 adopt해서 편안해졌다.
 CMake &#43; compile_commands." />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)" />
-<meta property="og:description" content="최근에 이맥스 설정을 Helm기반에서 Ivy/Counsel으로 전부 바꿨다.
+	<meta property="og:url" content="https://ageldama.github.io/posts/2019-02feb/counsel-ivy&#43;cpp-ide/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)">
+  <meta property="og:description" content="최근에 이맥스 설정을 Helm기반에서 Ivy/Counsel으로 전부 바꿨다.
 더 가볍고, 적당히 잘 동작하고, Ripgrep이랑 기본적으로 설정이 가능해서 편함.
 거기에 C-c C-o (ivy-occur) &#43; wgrep이 Helm에선 동작할때가 그때그때 기능에 따라 달라서 짜증나고, 심지어 플러그인을 설정해서 써야하거나 해서 정말 좋아하는 기능인데 우울하게 만들었는데, Ivy이 훨씬 깔끔하게 동작하고 일관성있게 잘 동작함.
 처음에는 Helm에서 하는 기능들을 그대로 옮기려고만 생각하다가, 오히려 Ivy에 맞춰서 내가 익숙해지고, 더 낫게 할 방법들이 있어서 그냥 내가 adopt해서 편안해졌다.
-CMake &#43; compile_commands." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ageldama.github.io/posts/2019-02feb/counsel-ivy&#43;cpp-ide/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-02-26T01:00:00+09:00" />
-<meta property="article:modified_time" content="2019-02-26T01:00:00+09:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)"/>
-<meta name="twitter:description" content="최근에 이맥스 설정을 Helm기반에서 Ivy/Counsel으로 전부 바꿨다.
+CMake &#43; compile_commands.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-02-26T01:00:00+09:00">
+    <meta property="article:modified_time" content="2019-02-26T01:00:00+09:00">
+    <meta property="article:tag" content="Emacs">
+    <meta property="article:tag" content="Elisp">
+    <meta property="article:tag" content="Counsel">
+    <meta property="article:tag" content="Ivy">
+    <meta property="article:tag" content="Rmsbolt">
+    <meta property="article:tag" content="C&#43;&#43;">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)">
+  <meta name="twitter:description" content="최근에 이맥스 설정을 Helm기반에서 Ivy/Counsel으로 전부 바꿨다.
 더 가볍고, 적당히 잘 동작하고, Ripgrep이랑 기본적으로 설정이 가능해서 편함.
 거기에 C-c C-o (ivy-occur) &#43; wgrep이 Helm에선 동작할때가 그때그때 기능에 따라 달라서 짜증나고, 심지어 플러그인을 설정해서 써야하거나 해서 정말 좋아하는 기능인데 우울하게 만들었는데, Ivy이 훨씬 깔끔하게 동작하고 일관성있게 잘 동작함.
 처음에는 Helm에서 하는 기능들을 그대로 옮기려고만 생각하다가, 오히려 Ivy에 맞춰서 내가 익숙해지고, 더 낫게 할 방법들이 있어서 그냥 내가 adopt해서 편안해졌다.
-CMake &#43; compile_commands."/>
+CMake &#43; compile_commands.">
 <script src="https://ageldama.github.io/js/feather.min.js"></script>
 	
 	        
@@ -209,7 +219,7 @@ request할바엔 그냥 안쓰는게 나을거 같았다.&#160;<a href="#fnref:3
 <footer>
   
   <div class="footer-info">
-    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

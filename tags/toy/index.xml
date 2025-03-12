@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>toy on 아겔로그</title>
+    <title>Toy on 아겔로그</title>
     <link>https://ageldama.github.io/tags/toy/</link>
-    <description>Recent content in toy on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Toy on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Wed, 16 Oct 2019 00:00:01 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/toy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Oct 2019 00:00:01 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/toy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</title>
       <link>https://ageldama.github.io/posts/2019-10oct/cl-toy-stack-lang/</link>
       <pubDate>Wed, 16 Oct 2019 00:00:01 +0900</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2019-10oct/cl-toy-stack-lang/</guid>
-      <description>일단 첫번째 버젼 다 만들었다.
-https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0
-그냥 장난으로 인터프리터도 아니라 그냥 eval 이용한 간단한 파서도 필요없이 lexer만으로 만들만한 Forth 비슷한 언어를 만듬.
-명령어도 실용적인 목적이 아닌만큼 그냥 문자열 장난 밖엔 없다.
-느낀점 라이브러리 좋은거 갖다 잘쓰자 uiop 같은거, feature-expression 삽질을 적게하거나 안해도됨. 더 portable하고 잘 굴러가는. Test! 3. 짜고 하나씩 진화시켜가면서 다시 돌리는 재미. Idiomatic하게 그리고 역시 Test! ..처음엔 그냥 전역변수에 상태를 갖도록 만들고, 그걸 dynamic binding으로 바꿔서 파라미터화하고, 또 그걸 다시 상태를 캡슐화하는 클래스로 감싸고, 처음엔 단순하게 리습스럽게 짜고 그걸 진화시키고, 그리고 역시 다시 테스트.</description>
+      <description>일단 첫번째 버젼 다 만들었다.&#xA;https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0&#xA;그냥 장난으로 인터프리터도 아니라 그냥 eval 이용한 간단한 파서도 필요없이 lexer만으로 만들만한 Forth 비슷한 언어를 만듬.&#xA;명령어도 실용적인 목적이 아닌만큼 그냥 문자열 장난 밖엔 없다.&#xA;느낀점 라이브러리 좋은거 갖다 잘쓰자 uiop 같은거, feature-expression 삽질을 적게하거나 안해도됨. 더 portable하고 잘 굴러가는. Test! 3. 짜고 하나씩 진화시켜가면서 다시 돌리는 재미. Idiomatic하게 그리고 역시 Test! ..처음엔 그냥 전역변수에 상태를 갖도록 만들고, 그걸 dynamic binding으로 바꿔서 파라미터화하고, 또 그걸 다시 상태를 캡슐화하는 클래스로 감싸고, 처음엔 단순하게 리습스럽게 짜고 그걸 진화시키고, 그리고 역시 다시 테스트.</description>
     </item>
-    
   </channel>
 </rss>

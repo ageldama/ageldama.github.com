@@ -9,25 +9,32 @@
 우선 Jekyll 소스용 저장소로 분리하고, 배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다. https://github.com/felixrieseberg/travis-jekyll-git 여기 참고해서 삽질. 결과물은 https://github.com/ageldama/ageldama-gh-jekyll ..진행하면서 처음에 좀 짜증났던거,
 Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것만으로는 안되고, .travis.yml 파일에 gem설치를 지정해야했다. https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5 Travis-CI 작업의 세팅에서 git_target 환경변수에 URL지정할때&hellip; github." />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="Github.io 블로그 TraviCI으로 빌드해서 배포하기" />
-<meta property="og:description" content=".. 여기 에 불만을 적었듯이, 여러가지로 그냥은 만족하기 어려운 부분이 있었다.
+	<meta property="og:url" content="https://ageldama.github.io/posts/2017/2017-01-02-travis-ci-jekyll-gh/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="Github.io 블로그 TraviCI으로 빌드해서 배포하기">
+  <meta property="og:description" content=".. 여기 에 불만을 적었듯이, 여러가지로 그냥은 만족하기 어려운 부분이 있었다.
 그런데, Travis-CI을 통해서 빌드해서 배포한다는 분이 계셨다. https://twitter.com/Realignist/status/815554589889994752
 ..난 생각 못해본 방법. ㅎㅎ 1
 그래서 도전.
 우선 Jekyll 소스용 저장소로 분리하고, 배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다. https://github.com/felixrieseberg/travis-jekyll-git 여기 참고해서 삽질. 결과물은 https://github.com/ageldama/ageldama-gh-jekyll ..진행하면서 처음에 좀 짜증났던거,
-Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것만으로는 안되고, .travis.yml 파일에 gem설치를 지정해야했다. https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5 Travis-CI 작업의 세팅에서 git_target 환경변수에 URL지정할때&hellip; github." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ageldama.github.io/posts/2017/2017-01-02-travis-ci-jekyll-gh/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2017-01-02T04:35:00+01:00" />
-<meta property="article:modified_time" content="2017-01-02T04:35:00+01:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Github.io 블로그 TraviCI으로 빌드해서 배포하기"/>
-<meta name="twitter:description" content=".. 여기 에 불만을 적었듯이, 여러가지로 그냥은 만족하기 어려운 부분이 있었다.
+Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것만으로는 안되고, .travis.yml 파일에 gem설치를 지정해야했다. https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5 Travis-CI 작업의 세팅에서 git_target 환경변수에 URL지정할때… github.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-01-02T04:35:00+01:00">
+    <meta property="article:modified_time" content="2017-01-02T04:35:00+01:00">
+    <meta property="article:tag" content="Github">
+    <meta property="article:tag" content="Jekyll">
+    <meta property="article:tag" content="Travis-Ci">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Github.io 블로그 TraviCI으로 빌드해서 배포하기">
+  <meta name="twitter:description" content=".. 여기 에 불만을 적었듯이, 여러가지로 그냥은 만족하기 어려운 부분이 있었다.
 그런데, Travis-CI을 통해서 빌드해서 배포한다는 분이 계셨다. https://twitter.com/Realignist/status/815554589889994752
 ..난 생각 못해본 방법. ㅎㅎ 1
 그래서 도전.
 우선 Jekyll 소스용 저장소로 분리하고, 배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다. https://github.com/felixrieseberg/travis-jekyll-git 여기 참고해서 삽질. 결과물은 https://github.com/ageldama/ageldama-gh-jekyll ..진행하면서 처음에 좀 짜증났던거,
-Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것만으로는 안되고, .travis.yml 파일에 gem설치를 지정해야했다. https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5 Travis-CI 작업의 세팅에서 git_target 환경변수에 URL지정할때&hellip; github."/>
+Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것만으로는 안되고, .travis.yml 파일에 gem설치를 지정해야했다. https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5 Travis-CI 작업의 세팅에서 git_target 환경변수에 URL지정할때… github.">
 <script src="https://ageldama.github.io/js/feather.min.js"></script>
 	
 	        
@@ -126,7 +133,7 @@ Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것
 <footer>
   
   <div class="footer-info">
-    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

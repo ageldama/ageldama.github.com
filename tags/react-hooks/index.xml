@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>react-hooks on 아겔로그</title>
+    <title>React-Hooks on 아겔로그</title>
     <link>https://ageldama.github.io/tags/react-hooks/</link>
-    <description>Recent content in react-hooks on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in React-Hooks on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Wed, 08 Mar 2023 06:32:05 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/react-hooks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Mar 2023 06:32:05 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/react-hooks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes</title>
       <link>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/</guid>
-      <description>&amp;#34;리액트가 날 인질으로 잡고 있어요&amp;#34; &amp;#34;헛소리/bullshit 없이 엔지니어링 재능이 있는 사람을 고용하기&amp;#34; &amp;#34;NESFab is a new programming language for creating NES games&amp;#34; &amp;#34;zig이 rust보다 빠르고 안전할 수 있는 경우&amp;#34; &amp;#34;리액트가 날 인질으로 잡고 있어요&amp;#34; https://emnudge.dev/blog/react-hostage
-…말해 뭘할까 싶은데. 🙈
-포스팅 자체는 react, hooks 같은 것들의 complexity에 대한 이야기이지만.
-오히려 흥미롭게 생각하는 것은, 과거 한국에서 &amp;#39;퍼블리셔&amp;#39;라고 하던 사람들이 어떻게 되었는가 생각해보며, 함께 지금의 &amp;#39;프론트엔드 개발자&amp;#39;, 혹은 &amp;#39;앱 개발자&amp;#39;, &amp;#39;리액트 개발자&amp;#39;, &amp;#39;자바스크립트 개발자&amp;#39;들이 앞으로 어떻게 될지 상상해본다.</description>
+      <description>&amp;#34;리액트가 날 인질으로 잡고 있어요&amp;#34; &amp;#34;헛소리/bullshit 없이 엔지니어링 재능이 있는 사람을 고용하기&amp;#34; &amp;#34;NESFab is a new programming language for creating NES games&amp;#34; &amp;#34;zig이 rust보다 빠르고 안전할 수 있는 경우&amp;#34; &amp;#34;리액트가 날 인질으로 잡고 있어요&amp;#34; https://emnudge.dev/blog/react-hostage&#xA;…말해 뭘할까 싶은데. :see_no_evil:&#xA;포스팅 자체는 react, hooks 같은 것들의 complexity에 대한 이야기이지만.&#xA;오히려 흥미롭게 생각하는 것은, 과거 한국에서 &amp;#39;퍼블리셔&amp;#39;라고 하던 사람들이 어떻게 되었는가 생각해보며, 함께 지금의 &amp;#39;프론트엔드 개발자&amp;#39;, 혹은 &amp;#39;앱 개발자&amp;#39;, &amp;#39;리액트 개발자&amp;#39;, &amp;#39;자바스크립트 개발자&amp;#39;들이 앞으로 어떻게 될지 상상해본다.</description>
     </item>
-    
   </channel>
 </rss>

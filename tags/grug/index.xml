@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>grug on 아겔로그</title>
+    <title>Grug on 아겔로그</title>
     <link>https://ageldama.github.io/tags/grug/</link>
-    <description>Recent content in grug on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Grug on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Fri, 24 Jun 2022 04:16:26 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/grug/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jun 2022 04:16:26 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/grug/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Grug Brained Developer</title>
       <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/</link>
       <pubDate>Fri, 24 Jun 2022 04:16:26 +0000</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/</guid>
-      <description>감동적인 글이다ㅋ:
-https://grugbrain.dev/
-문법도 완전 grug스럽게 작성해서 반가운 글이었다.
-완전히 모두 내 생각과 같지는 않아도, 이야기하는 &amp;ldquo;FOLD&amp;rdquo; 때문에 일어나는 일들과 조금은 그래도 grug답게 그냥 해내려는 생각들이 유용.
-그치, grug이 공룡과 구분되는 점은 그런거겠지. ㅎㅎ&amp;hellip;
-msa, reactjs, ejb, osgi. 공감하는 생각들.
-&amp;hellip; black think juice 맛있다.</description>
+      <description>감동적인 글이다ㅋ:&#xA;https://grugbrain.dev/&#xA;문법도 완전 grug스럽게 작성해서 반가운 글이었다.&#xA;완전히 모두 내 생각과 같지는 않아도, 이야기하는 &amp;ldquo;FOLD&amp;rdquo; 때문에 일어나는 일들과 조금은 그래도 grug답게 그냥 해내려는 생각들이 유용.&#xA;그치, grug이 공룡과 구분되는 점은 그런거겠지. ㅎㅎ&amp;hellip;&#xA;msa, reactjs, ejb, osgi. 공감하는 생각들.&#xA;&amp;hellip; black think juice 맛있다.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,38 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>postgresql on 아겔로그</title>
+    <title>Postgresql on 아겔로그</title>
     <link>https://ageldama.github.io/tags/postgresql/</link>
-    <description>Recent content in postgresql on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Postgresql on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Wed, 15 Jun 2022 11:22:48 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jun 2022 11:22:48 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 15/06/2022 .01</title>
       <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun15--01-ping/</link>
       <pubDate>Wed, 15 Jun 2022 11:22:48 +0000</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun15--01-ping/</guid>
-      <description>비 내리는 화요일. ☂️
-jinja2 template include + cache? + file-time postgresql, as an api server? jinja2 template include + cache? + file-time 재밌는걸 찾았다.
-jinja2을 사용하면서, 하위 include으로 내려갈수록, file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야 template cache을 무시하는거 같아.
-그래서,
-// gulpfile.js: const buildTask = series(cleanTask, esbuildTask, injectTask, touchInjectedTask); function watchTask() { watch(&amp;quot;./js/**/*.js&amp;quot;, buildTask); } exports.watch = watchTask; exports.build = buildTask; exports.clean = cleanTask; &amp;hellip;대략 잘 동작하고, webpack보다 엄청나게 빠르다 ㅎㅎ.</description>
+      <description>비 내리는 화요일. &amp;#x2614;&#xA;jinja2 template include + cache? + file-time postgresql, as an api server? jinja2 template include + cache? + file-time 재밌는걸 찾았다.&#xA;jinja2을 사용하면서, 하위 include으로 내려갈수록, file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야 template cache을 무시하는거 같아.&#xA;그래서,&#xA;// gulpfile.js: const buildTask = series(cleanTask, esbuildTask, injectTask, touchInjectedTask); function watchTask() { watch(&amp;quot;./js/**/*.js&amp;quot;, buildTask); } exports.watch = watchTask; exports.build = buildTask; exports.clean = cleanTask; &amp;hellip;대략 잘 동작하고, webpack보다 엄청나게 빠르다 ㅎㅎ.</description>
     </item>
-    
     <item>
       <title>radio-recorder 프로젝트 설명</title>
       <link>https://ageldama.github.io/posts/2019-12dec/dissect-radio-gaga/</link>
       <pubDate>Wed, 11 Dec 2019 01:00:00 +0900</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2019-12dec/dissect-radio-gaga/</guid>
-      <description>2년전쯤에 한국 라디오를 혼자 듣고 싶었었다. 하지만 시차가 많이 나는 지역에 살았었다. (8시간 정도 느림)
-그래서 한국 인터넷 라디오를 녹음해서 개인적으로 들을 수 있다면 좋겠다는 아이디어로 작업했던 프로젝트 소스코드를 공개한다.
-https://github.com/ageldama/radio-recorder
-방송사의 인터넷 라디오를 녹음 하는 스크립트는 커밋에서 제외하고 공개한다. 이는 방송사에게 문제가 될 수 있으므로 개인적으로 알아내서 사용하고 타인과 공유하지 않기를 바란다.
-프로그램 구성 cron 서버 지정된 시간에 녹음/인코딩 스크립트를 실행하는 스케쥴을 담당한다. 오래된 임시 파일 정리 등등도. 한국의 시간대와 내가 있는 시간대가 달라서 다른 cron scheduler을 쓰지 않고 그냥 짰었던거 같다.</description>
+      <description>2년전쯤에 한국 라디오를 혼자 듣고 싶었었다. 하지만 시차가 많이 나는 지역에 살았었다. (8시간 정도 느림)&#xA;그래서 한국 인터넷 라디오를 녹음해서 개인적으로 들을 수 있다면 좋겠다는 아이디어로 작업했던 프로젝트 소스코드를 공개한다.&#xA;https://github.com/ageldama/radio-recorder&#xA;방송사의 인터넷 라디오를 녹음 하는 스크립트는 커밋에서 제외하고 공개한다. 이는 방송사에게 문제가 될 수 있으므로 개인적으로 알아내서 사용하고 타인과 공유하지 않기를 바란다.&#xA;프로그램 구성 cron 서버 지정된 시간에 녹음/인코딩 스크립트를 실행하는 스케쥴을 담당한다. 오래된 임시 파일 정리 등등도. 한국의 시간대와 내가 있는 시간대가 달라서 다른 cron scheduler을 쓰지 않고 그냥 짰었던거 같다.</description>
     </item>
-    
   </channel>
 </rss>

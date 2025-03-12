@@ -1,38 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blogging on 아겔로그</title>
+    <title>Blogging on 아겔로그</title>
     <link>https://ageldama.github.io/tags/blogging/</link>
-    <description>Recent content in blogging on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Blogging on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Wed, 11 Dec 2019 00:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Dec 2019 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Org 파일으로 Hugo 포스팅 테스트</title>
       <link>https://ageldama.github.io/posts/2019-12dec/foo/</link>
       <pubDate>Wed, 11 Dec 2019 00:00:00 +0900</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2019-12dec/foo/</guid>
-      <description>적당히 잘 동작하는거 같으니 앞으로는 그냥 혼란스러운 Markdown 대신에 그냥 Org 파일으로 블로깅 하며 될거 같다. 행벜.
-예전 버젼 Hugo에서는 지원을 제대로 못하던거 같은데, 어느샌가 업데이트 하니까 되는거 같아서 그냥 슬그머니 쓰기로. https://gohugo.io/content-management/formats/
-기존 마크다운들도 인라인 이미지 문법을 바꾸고, ToC 표시 설정도 바뀌어서 조금 변경.
-아쉬운건 여전히 Org 파일에서 ToC 지원은 빠져 있는거 같아서… https://github.com/snosov1/toc-org 설치해봤다. 그냥 고민할 필요가 없었구나. ㅋ
-제일 좋은건 code syntax highlight이 예뻐졌다.
-Table of Contents &amp;lt;– :TOC: –&amp;gt; foobar</description>
+      <description>적당히 잘 동작하는거 같으니 앞으로는 그냥 혼란스러운 Markdown 대신에 그냥 Org 파일으로 블로깅 하며 될거 같다. 행벜.&#xA;예전 버젼 Hugo에서는 지원을 제대로 못하던거 같은데, 어느샌가 업데이트 하니까 되는거 같아서 그냥 슬그머니 쓰기로. https://gohugo.io/content-management/formats/&#xA;기존 마크다운들도 인라인 이미지 문법을 바꾸고, ToC 표시 설정도 바뀌어서 조금 변경.&#xA;아쉬운건 여전히 Org 파일에서 ToC 지원은 빠져 있는거 같아서… https://github.com/snosov1/toc-org 설치해봤다. 그냥 고민할 필요가 없었구나. ㅋ&#xA;제일 좋은건 code syntax highlight이 예뻐졌다.&#xA;Table of Contents &amp;lt;– :TOC: –&amp;gt; foobar</description>
     </item>
-    
     <item>
       <title>2017년 10월 22일, 블로깅 귀찮아</title>
       <link>https://ageldama.github.io/posts/2017/2017-10-22-blogging/</link>
       <pubDate>Sun, 22 Oct 2017 21:42:00 +0100</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2017/2017-10-22-blogging/</guid>
-      <description>과연 블로깅이 이렇게나 힘들어야 하는 일인가 생각해봄.
-요즘엔 정말 각자의 개소리를 쉽게 올리는 트위터나 페북 같은게 혁명적이라는 생각이 든다. 특히 예전에 각종 웹애플리케이션으로 쓰레기 같은 위지윅 에디터 같은거니 지원하고 막상 어떤 글을 하나 올리기 진짜 끔찍한 경험을 주던것들을 돌이켜보면 더욱 더.
-어차피 사람들은 그런거 아무리 쥐어줘봤자 귀찮을뿐이고 한번 쳐다도 안보고 각자 자기 하고 싶은 거지 같은 방법을 찾아내어 잘도 이상한 글들 생산해내는걸 더 좋아한다.
-그리고 그런면에서 그냥 이미지, 동영상, 링크, 남에 글 인용 정도나 되는 트위터 같은거야말로 배설하기 진짜 좋은 도구이지 않은가 싶었다.</description>
+      <description>과연 블로깅이 이렇게나 힘들어야 하는 일인가 생각해봄.&#xA;요즘엔 정말 각자의 개소리를 쉽게 올리는 트위터나 페북 같은게 혁명적이라는 생각이 든다. 특히 예전에 각종 웹애플리케이션으로 쓰레기 같은 위지윅 에디터 같은거니 지원하고 막상 어떤 글을 하나 올리기 진짜 끔찍한 경험을 주던것들을 돌이켜보면 더욱 더.&#xA;어차피 사람들은 그런거 아무리 쥐어줘봤자 귀찮을뿐이고 한번 쳐다도 안보고 각자 자기 하고 싶은 거지 같은 방법을 찾아내어 잘도 이상한 글들 생산해내는걸 더 좋아한다.&#xA;그리고 그런면에서 그냥 이미지, 동영상, 링크, 남에 글 인용 정도나 되는 트위터 같은거야말로 배설하기 진짜 좋은 도구이지 않은가 싶었다.</description>
     </item>
-    
   </channel>
 </rss>

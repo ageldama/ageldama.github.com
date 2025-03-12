@@ -2,10 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ageldama.github.io/tags/c/</loc>
-    <lastmod>2024-05-06T07:51:13+00:00</lastmod>
+    <loc>https://ageldama.github.io/tags/architecture/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/awk/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/c&#43;&#43;/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/cache/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/clojure/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/clojure.spec/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/cpu/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/data/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2025-03mar/2025-03mar12--01-data-prog/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/datomic/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/design/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/ecs/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/gamdev/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/perl/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/programming/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/sed/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/c/</loc>
     <lastmod>2024-05-06T07:51:13+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/clang/</loc>
@@ -41,25 +95,13 @@
     <loc>https://ageldama.github.io/tags/gcc/</loc>
     <lastmod>2024-05-06T07:51:13+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2024-05-06T07:51:13+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/programming/</loc>
-    <lastmod>2024-05-06T07:51:13+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/python/</loc>
-    <lastmod>2024-05-06T07:51:13+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
     <lastmod>2024-05-06T07:51:13+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/xmake/</loc>
     <lastmod>2024-05-06T07:51:13+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</loc>
-    <lastmod>2024-05-06T07:51:13+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2024-05-06T07:51:13+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/anime/</loc>
@@ -246,9 +288,6 @@
     <lastmod>2023-03-02T17:50:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/ncal/</loc>
-    <lastmod>2023-03-02T17:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/perl/</loc>
     <lastmod>2023-03-02T17:50:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/term/</loc>
@@ -441,9 +480,6 @@
     <lastmod>2022-06-17T02:50:41+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/api/</loc>
-    <lastmod>2022-06-15T11:22:48+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/cache/</loc>
     <lastmod>2022-06-15T11:22:48+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/gql/</loc>
@@ -1021,9 +1057,6 @@
   </url><url>
     <loc>https://ageldama.github.io/tags/soft-skill/</loc>
     <lastmod>2020-01-03T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/clojure/</loc>
-    <lastmod>2019-12-30T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/common-lisp/</loc>
     <lastmod>2019-12-30T00:00:00+09:00</lastmod>
@@ -1615,6 +1648,8 @@
   </url><url>
     <loc>https://ageldama.github.io/posts/2017/2017-01-01-welcome-to-jekyll/</loc>
     <lastmod>2017-01-01T09:54:02+01:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/archives/</loc>
   </url><url>
     <loc>https://ageldama.github.io/posts/archive/</loc>
   </url><url>

@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>es6 on 아겔로그</title>
+    <title>Es6 on 아겔로그</title>
     <link>https://ageldama.github.io/tags/es6/</link>
-    <description>Recent content in es6 on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Es6 on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Sun, 26 Feb 2017 13:50:00 +0100</lastBuildDate><atom:link href="https://ageldama.github.io/tags/es6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2017 13:50:00 +0100</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/es6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</title>
       <link>https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/</link>
       <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/</guid>
-      <description>예전 내가 썼던 블로그가 갑자기 떠올랐다. http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html
-내용은,
-콜백헬 싫다. 그런데, 하스켈의 IO Monad처럼 imperative code을 작성할 수 있으면, 3. 이것들끼리의 제어권을 주고 받는걸 event loop측에서 제어하면서도, 4. 각각의 statements끼리 그냥 주욱 흐름대로 작성한것과 다르지 않게 짜기 쉽다. 굳이 이 얘기 왜 하냐하면, 사실 요즘에 RxJava2 보고, Python3에서 asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운 체이닝을 구현하고, 그걸로 콜백들을 풀어서 잘 해결하고 있는거 같은 인상이 들어서.
-결론? 내 아이디어 부심. 그리고 조금 더 잘 생각하고 실제로 어떻게 구현할지 고민해봤다면 좋았을거라는, 나 자신의 능력 한탄하기.</description>
+      <description>예전 내가 썼던 블로그가 갑자기 떠올랐다. http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html&#xA;내용은,&#xA;콜백헬 싫다. 그런데, 하스켈의 IO Monad처럼 imperative code을 작성할 수 있으면, 3. 이것들끼리의 제어권을 주고 받는걸 event loop측에서 제어하면서도, 4. 각각의 statements끼리 그냥 주욱 흐름대로 작성한것과 다르지 않게 짜기 쉽다. 굳이 이 얘기 왜 하냐하면, 사실 요즘에 RxJava2 보고, Python3에서 asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운 체이닝을 구현하고, 그걸로 콜백들을 풀어서 잘 해결하고 있는거 같은 인상이 들어서.&#xA;결론? 내 아이디어 부심. 그리고 조금 더 잘 생각하고 실제로 어떻게 구현할지 고민해봤다면 좋았을거라는, 나 자신의 능력 한탄하기.</description>
     </item>
-    
   </channel>
 </rss>

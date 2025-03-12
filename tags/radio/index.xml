@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>radio on 아겔로그</title>
+    <title>Radio on 아겔로그</title>
     <link>https://ageldama.github.io/tags/radio/</link>
-    <description>Recent content in radio on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Radio on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Wed, 11 Dec 2019 01:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/radio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Dec 2019 01:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/radio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>radio-recorder 프로젝트 설명</title>
       <link>https://ageldama.github.io/posts/2019-12dec/dissect-radio-gaga/</link>
       <pubDate>Wed, 11 Dec 2019 01:00:00 +0900</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2019-12dec/dissect-radio-gaga/</guid>
-      <description>2년전쯤에 한국 라디오를 혼자 듣고 싶었었다. 하지만 시차가 많이 나는 지역에 살았었다. (8시간 정도 느림)
-그래서 한국 인터넷 라디오를 녹음해서 개인적으로 들을 수 있다면 좋겠다는 아이디어로 작업했던 프로젝트 소스코드를 공개한다.
-https://github.com/ageldama/radio-recorder
-방송사의 인터넷 라디오를 녹음 하는 스크립트는 커밋에서 제외하고 공개한다. 이는 방송사에게 문제가 될 수 있으므로 개인적으로 알아내서 사용하고 타인과 공유하지 않기를 바란다.
-프로그램 구성 cron 서버 지정된 시간에 녹음/인코딩 스크립트를 실행하는 스케쥴을 담당한다. 오래된 임시 파일 정리 등등도. 한국의 시간대와 내가 있는 시간대가 달라서 다른 cron scheduler을 쓰지 않고 그냥 짰었던거 같다.</description>
+      <description>2년전쯤에 한국 라디오를 혼자 듣고 싶었었다. 하지만 시차가 많이 나는 지역에 살았었다. (8시간 정도 느림)&#xA;그래서 한국 인터넷 라디오를 녹음해서 개인적으로 들을 수 있다면 좋겠다는 아이디어로 작업했던 프로젝트 소스코드를 공개한다.&#xA;https://github.com/ageldama/radio-recorder&#xA;방송사의 인터넷 라디오를 녹음 하는 스크립트는 커밋에서 제외하고 공개한다. 이는 방송사에게 문제가 될 수 있으므로 개인적으로 알아내서 사용하고 타인과 공유하지 않기를 바란다.&#xA;프로그램 구성 cron 서버 지정된 시간에 녹음/인코딩 스크립트를 실행하는 스케쥴을 담당한다. 오래된 임시 파일 정리 등등도. 한국의 시간대와 내가 있는 시간대가 달라서 다른 cron scheduler을 쓰지 않고 그냥 짰었던거 같다.</description>
     </item>
-    
   </channel>
 </rss>

@@ -21,11 +21,13 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
 왜냐하면,
 지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능." />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="&#34;모두를 위한 algebraic effects!&#34; ...정말루?" />
-<meta property="og:description" content="뭐 대충 다음과 같은 글들:
+	<meta property="og:url" content="https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="&#34;모두를 위한 algebraic effects!&#34; ...정말루?">
+  <meta property="og:description" content="뭐 대충 다음과 같은 글들:
 https://www.eff-lang.org/handlers-tutorial.pdf
 https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf
-&hellip;그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)
+…그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)
 https://hackage.haskell.org/package/fused-effects
 https://github.com/dry-rb/dry-effects
 https://github.com/digital-fabric/affect
@@ -34,22 +36,27 @@ https://github.com/nythrox/effects.js
 https://www.janestreet.com/tech-talks/effective-programming/
 https://github.com/ocaml-multicore/effects-examples
 https://overreacted.io/algebraic-effects-for-the-rest-of-us/
-&hellip;음&hellip; 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.
+…음… 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.
 오히려 dry-rb, affect이 더 명확하기는 한거 같아.
 가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.
 분명히 장점을 볼 수 있을거 같은 개념 같다.
 왜냐하면,
-지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-06-13T14:11:14+09:00" />
-<meta property="article:modified_time" content="2022-06-13T14:11:14+09:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="&#34;모두를 위한 algebraic effects!&#34; ...정말루?"/>
-<meta name="twitter:description" content="뭐 대충 다음과 같은 글들:
+지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-06-13T14:11:14+09:00">
+    <meta property="article:modified_time" content="2022-06-13T14:11:14+09:00">
+    <meta property="article:tag" content="Lisp">
+    <meta property="article:tag" content="Conditions">
+    <meta property="article:tag" content="Algebraic-Effects">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="&#34;모두를 위한 algebraic effects!&#34; ...정말루?">
+  <meta name="twitter:description" content="뭐 대충 다음과 같은 글들:
 https://www.eff-lang.org/handlers-tutorial.pdf
 https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf
-&hellip;그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)
+…그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)
 https://hackage.haskell.org/package/fused-effects
 https://github.com/dry-rb/dry-effects
 https://github.com/digital-fabric/affect
@@ -58,12 +65,12 @@ https://github.com/nythrox/effects.js
 https://www.janestreet.com/tech-talks/effective-programming/
 https://github.com/ocaml-multicore/effects-examples
 https://overreacted.io/algebraic-effects-for-the-rest-of-us/
-&hellip;음&hellip; 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.
+…음… 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.
 오히려 dry-rb, affect이 더 명확하기는 한거 같아.
 가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.
 분명히 장점을 볼 수 있을거 같은 개념 같다.
 왜냐하면,
-지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능."/>
+지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.">
 <script src="https://ageldama.github.io/js/feather.min.js"></script>
 	
 	        
@@ -229,7 +236,7 @@ CL-USER&gt; (handler-bind ((progress (lambda (p)
 <footer>
   
   <div class="footer-info">
-    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

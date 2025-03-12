@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>summer on 아겔로그</title>
+    <title>Summer on 아겔로그</title>
     <link>https://ageldama.github.io/tags/summer/</link>
-    <description>Recent content in summer on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Summer on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Fri, 24 Jul 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/summer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jul 2020 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/summer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 24/Jul/2020</title>
       <link>https://ageldama.github.io/posts/2020-07jul/ping-24fri/</link>
       <pubDate>Fri, 24 Jul 2020 00:00:00 +0900</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2020-07jul/ping-24fri/</guid>
-      <description>여름방학을 보내고 왔다. 지난 한달여, 꽤 즐겁게 보낸 것 같다. 그리고 순수하고 맑은 마음으로 행복했었던 것 같다.
-하늘도 여름 같이 맑고 파랗고 공기도 좋았었다. 매일 열심히 집중해서 일할 수 있었고 좋았다.
-그리고 그렇기 때문에 조금은 아련하다. 이런 느낌.
-(기쿠지로의 여름 OST) Summer / 히사이시 조
-https://youtu.be/_t1KvFMUNws Games: Doom 64, Ion Fury. Doom 64을 플레이. 클래식 둠, 둠2이랑은 또 완전히 다른 게임이었음. 몬스터들 모델링, 음악, 레벨디자인 모두 완전히 새로 만들어서 재밌었다.</description>
+      <description>여름방학을 보내고 왔다. 지난 한달여, 꽤 즐겁게 보낸 것 같다. 그리고 순수하고 맑은 마음으로 행복했었던 것 같다.&#xA;하늘도 여름 같이 맑고 파랗고 공기도 좋았었다. 매일 열심히 집중해서 일할 수 있었고 좋았다.&#xA;그리고 그렇기 때문에 조금은 아련하다. 이런 느낌.&#xA;(기쿠지로의 여름 OST) Summer / 히사이시 조&#xA;https://youtu.be/_t1KvFMUNws Games: Doom 64, Ion Fury. Doom 64을 플레이. 클래식 둠, 둠2이랑은 또 완전히 다른 게임이었음. 몬스터들 모델링, 음악, 레벨디자인 모두 완전히 새로 만들어서 재밌었다.</description>
     </item>
-    
   </channel>
 </rss>

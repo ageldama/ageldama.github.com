@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>thought on 아겔로그</title>
+    <title>Thought on 아겔로그</title>
     <link>https://ageldama.github.io/tags/thought/</link>
-    <description>Recent content in thought on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Thought on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Wed, 10 Oct 2018 12:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/thought/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Oct 2018 12:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/thought/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>생각 10/10/2018</title>
       <link>https://ageldama.github.io/posts/2018-10oct/10wed-thought/</link>
       <pubDate>Wed, 10 Oct 2018 12:00:00 +0900</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2018-10oct/10wed-thought/</guid>
-      <description>연구소에서 종종 휴식시간에 PS4 게임을 하면서 지낸다. 그냥 별로 게임을 위해서 너무 많은 시간을 보내는걸 원래도 좋아하진 않았지만 독일에 살며 취미로 다시 시작한 이후로 재미를 붙이고 하고 있었다.
-그리고 최근에 재밌게 하고 있던 DOOM 2016을 다른 게임들보다 내가 좋아하는걸 동료들이 눈치채고 가끔은 둠 이야기를 한다.
-최근에 그래서인지 John Carmack 이야기도 종종 나온다. 소프트웨어 엔지니어들이니까. 그러다가 한 동료가 Carmack의 에세이 하나의 링크를 보내줬었다.1
-많은 다양한 생각들을 추려낸 블로그포스트. 그리고 가끔 지나가듯이 다른 주제를 이야기하다 이 에세이에 담긴 만트라 에 대해서 다시 말하며 생각을 나눠본다.</description>
+      <description>연구소에서 종종 휴식시간에 PS4 게임을 하면서 지낸다. 그냥 별로 게임을 위해서 너무 많은 시간을 보내는걸 원래도 좋아하진 않았지만 독일에 살며 취미로 다시 시작한 이후로 재미를 붙이고 하고 있었다.&#xA;그리고 최근에 재밌게 하고 있던 DOOM 2016을 다른 게임들보다 내가 좋아하는걸 동료들이 눈치채고 가끔은 둠 이야기를 한다.&#xA;최근에 그래서인지 John Carmack 이야기도 종종 나온다. 소프트웨어 엔지니어들이니까. 그러다가 한 동료가 Carmack의 에세이 하나의 링크를 보내줬었다.1&#xA;많은 다양한 생각들을 추려낸 블로그포스트. 그리고 가끔 지나가듯이 다른 주제를 이야기하다 이 에세이에 담긴 만트라 에 대해서 다시 말하며 생각을 나눠본다.</description>
     </item>
-    
   </channel>
 </rss>

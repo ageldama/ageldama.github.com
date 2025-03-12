@@ -1,42 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>c on 아겔로그</title>
+    <title>C on 아겔로그</title>
     <link>https://ageldama.github.io/tags/c/</link>
-    <description>Recent content in c on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in C on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Mon, 06 May 2024 07:51:13 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 May 2024 07:51:13 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>xmake, compile_commands.json, flycheck</title>
       <link>https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</guid>
-      <description>cmake/warp등을 써보면서 c/c++ 개발할 때에 빌드도구 갖고 놀다가, 이번에 마음을 열고 xmake을 익혀봄.
-마음에 든다. 가볍고 빠르고 좋다.
-ccache등도 바로 지원하고, lua으로 스크립팅도 그럭저럭 할만해 보이고, [build.zig](https://ziglang.org/learn/build-system/)스러워서 당연하게도 좋은거 같아.
-계속 쓸거 같다.
-emacs / flycheck + c/c++ 개발할 때에 단점이, 자동적으로 외부 3rd-party 라이브러리의 include-path을 설정해주지 않아서, [dirs-local](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html) 같은걸 세팅해주길 기대한다는 점.
-그래서 그냥 xmake project -vD -k compile_commands -m debug 같이 compile_commands.json 생성하고,
-이걸 파싱해서 표준출력으로 include-paths https://github.</description>
+      <description>cmake/warp등을 써보면서 c/c++ 개발할 때에 빌드도구 갖고 놀다가, 이번에 마음을 열고 xmake을 익혀봄.&#xA;마음에 든다. 가볍고 빠르고 좋다.&#xA;ccache등도 바로 지원하고, lua으로 스크립팅도 그럭저럭 할만해 보이고, [build.zig](https://ziglang.org/learn/build-system/)스러워서 당연하게도 좋은거 같아.&#xA;계속 쓸거 같다.&#xA;emacs / flycheck + c/c++ 개발할 때에 단점이, 자동적으로 외부 3rd-party 라이브러리의 include-path을 설정해주지 않아서, [dirs-local](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html) 같은걸 세팅해주길 기대한다는 점.&#xA;그래서 그냥 xmake project -vD -k compile_commands -m debug 같이 compile_commands.json 생성하고,&#xA;이걸 파싱해서 표준출력으로 include-paths https://github.</description>
     </item>
-    
     <item>
       <title>direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기</title>
       <link>https://ageldama.github.io/posts/2019-12dec/direnv/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2019-12dec/direnv/</guid>
-      <description>프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다.
-몇 가지 이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv
-NPM: dotenv https://www.npmjs.com/package/dotenv
-Node.js에서 Unix environment variable으로 .env 파일을 로딩해주는 역할인 듯.
-Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
-그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을 짜주고 하기 싫었고,
-.env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서 경로를 조립하고 하는데 별로라는 생각이 들었다.</description>
+      <description>프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다.&#xA;몇 가지 이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv&#xA;NPM: dotenv https://www.npmjs.com/package/dotenv&#xA;Node.js에서 Unix environment variable으로 .env 파일을 로딩해주는 역할인 듯.&#xA;Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.&#xA;그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을 짜주고 하기 싫었고,&#xA;.env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서 경로를 조립하고 하는데 별로라는 생각이 들었다.</description>
     </item>
-    
   </channel>
 </rss>

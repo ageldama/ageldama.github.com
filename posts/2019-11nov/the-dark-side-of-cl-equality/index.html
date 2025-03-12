@@ -6,19 +6,29 @@
 뭐 커먼리습의 CLHS - HyperSpec을 읽다보면 비슷한데 아주 약간씩 미묘하게 달라서 지원하는 것들이 있다:
 let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Function MAP Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON Function MAP-INTO prog Macro PROG1, PROG2 Special Operator PROGN Macro PROG, PROG* Special Operator PROGV &hellip;그밖에도 좀 더 있을듯?" />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="(Common Lisp의 어두운 면) Equality" />
-<meta property="og:description" content="오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로 생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을 리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.
+	<meta property="og:url" content="https://ageldama.github.io/posts/2019-11nov/the-dark-side-of-cl-equality/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="(Common Lisp의 어두운 면) Equality">
+  <meta property="og:description" content="오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로 생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을 리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.
 뭐 커먼리습의 CLHS - HyperSpec을 읽다보면 비슷한데 아주 약간씩 미묘하게 달라서 지원하는 것들이 있다:
-let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Function MAP Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON Function MAP-INTO prog Macro PROG1, PROG2 Special Operator PROGN Macro PROG, PROG* Special Operator PROGV &hellip;그밖에도 좀 더 있을듯?" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ageldama.github.io/posts/2019-11nov/the-dark-side-of-cl-equality/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-11-16T00:00:00+09:00" />
-<meta property="article:modified_time" content="2019-11-16T00:00:00+09:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="(Common Lisp의 어두운 면) Equality"/>
-<meta name="twitter:description" content="오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로 생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을 리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.
+let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Function MAP Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON Function MAP-INTO prog Macro PROG1, PROG2 Special Operator PROGN Macro PROG, PROG* Special Operator PROGV …그밖에도 좀 더 있을듯?">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-11-16T00:00:00+09:00">
+    <meta property="article:modified_time" content="2019-11-16T00:00:00+09:00">
+    <meta property="article:tag" content="Commonlisp">
+    <meta property="article:tag" content="Lisp">
+    <meta property="article:tag" content="Equality">
+    <meta property="article:tag" content="Same">
+    <meta property="article:tag" content="Samesame">
+    <meta property="article:tag" content="The-Dark-Side-of-Common-Lisp">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="(Common Lisp의 어두운 면) Equality">
+  <meta name="twitter:description" content="오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로 생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을 리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.
 뭐 커먼리습의 CLHS - HyperSpec을 읽다보면 비슷한데 아주 약간씩 미묘하게 달라서 지원하는 것들이 있다:
-let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Function MAP Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON Function MAP-INTO prog Macro PROG1, PROG2 Special Operator PROGN Macro PROG, PROG* Special Operator PROGV &hellip;그밖에도 좀 더 있을듯?"/>
+let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Function MAP Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON Function MAP-INTO prog Macro PROG1, PROG2 Special Operator PROGN Macro PROG, PROG* Special Operator PROGV …그밖에도 좀 더 있을듯?">
 <script src="https://ageldama.github.io/js/feather.min.js"></script>
 	
 	        
@@ -473,7 +483,7 @@ Smalltalk을 통해 IDE, GUI, 마우스 등을 발명, 도입하셨습니다&hel
 <footer>
   
   <div class="footer-info">
-    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

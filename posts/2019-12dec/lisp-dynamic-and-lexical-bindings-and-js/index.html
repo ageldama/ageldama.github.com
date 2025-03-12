@@ -7,21 +7,31 @@ var x = &#34;lexical&#34;; function maker() { return function() { return x; }; }
 심지어, 맨 마지막에 있는 {..} 블록을 넘어가서도 x 의 값은 여전이 &#39;dynamic&#39; 이다.
 자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let" />
-<meta property="og:description" content="다음의 간단한 코드를 읽어보자.
+	<meta property="og:url" content="https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let">
+  <meta property="og:description" content="다음의 간단한 코드를 읽어보자.
 var x = &#34;lexical&#34;; function maker() { return function() { return x; }; } { var x = &#34;dynamic&#34;; assert(maker()() == &#34;???&#34;); } maker()() 의 결과는 &#39;dynamic&#39; 이다.
 심지어, 맨 마지막에 있는 {..} 블록을 넘어가서도 x 의 값은 여전이 &#39;dynamic&#39; 이다.
-자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-12-30T00:00:00+09:00" />
-<meta property="article:modified_time" content="2019-12-30T00:00:00+09:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let"/>
-<meta name="twitter:description" content="다음의 간단한 코드를 읽어보자.
+자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-12-30T00:00:00+09:00">
+    <meta property="article:modified_time" content="2019-12-30T00:00:00+09:00">
+    <meta property="article:tag" content="Lisp">
+    <meta property="article:tag" content="Scheme">
+    <meta property="article:tag" content="Common-Lisp">
+    <meta property="article:tag" content="Emacs-Lisp">
+    <meta property="article:tag" content="Guile">
+    <meta property="article:tag" content="Clojure">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let">
+  <meta name="twitter:description" content="다음의 간단한 코드를 읽어보자.
 var x = &#34;lexical&#34;; function maker() { return function() { return x; }; } { var x = &#34;dynamic&#34;; assert(maker()() == &#34;???&#34;); } maker()() 의 결과는 &#39;dynamic&#39; 이다.
 심지어, 맨 마지막에 있는 {..} 블록을 넘어가서도 x 의 값은 여전이 &#39;dynamic&#39; 이다.
-자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다."/>
+자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다.">
 <script src="https://ageldama.github.io/js/feather.min.js"></script>
 	
 	        
@@ -458,7 +468,7 @@ Guide</a></p>
 <footer>
   
   <div class="footer-info">
-    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

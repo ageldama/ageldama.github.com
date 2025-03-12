@@ -5,17 +5,26 @@
 	<meta name="description" content="&ldquo;내적모순&rdquo; 이맥스에서 Evil을 쓰면서 몇가지 짜증나는게 있어왔다.
 Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 키바인딩을 실시간으로 확인할 수 있는 방법도 제대로 안먹히게 된거라, 이맥스에서 쩔어주는 기능인 자기 자신을 확인하며 단축키 안외우기 같은게 다 무의미해짐. 공식 사이트 들어가도 문서는 없다. 그냥 Vim 온라인 help을 보거나 하라는 친절인거 같다. Magit, Edb, 등등 대부분의 이맥스의 다른 Major mode들이랑은 정말 충돌하는 경우가 너무 많음. https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421 위의 링크만 봐도, 내가 얼마나 충돌이 나는 모드들을 경험했는지 알수있다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="NeoVim, Evil-mode and Emacs의 모험" />
-<meta property="og:description" content="&ldquo;내적모순&rdquo; 이맥스에서 Evil을 쓰면서 몇가지 짜증나는게 있어왔다.
-Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 키바인딩을 실시간으로 확인할 수 있는 방법도 제대로 안먹히게 된거라, 이맥스에서 쩔어주는 기능인 자기 자신을 확인하며 단축키 안외우기 같은게 다 무의미해짐. 공식 사이트 들어가도 문서는 없다. 그냥 Vim 온라인 help을 보거나 하라는 친절인거 같다. Magit, Edb, 등등 대부분의 이맥스의 다른 Major mode들이랑은 정말 충돌하는 경우가 너무 많음. https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421 위의 링크만 봐도, 내가 얼마나 충돌이 나는 모드들을 경험했는지 알수있다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ageldama.github.io/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2018-07-28T12:00:00+09:00" />
-<meta property="article:modified_time" content="2018-07-28T12:00:00+09:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="NeoVim, Evil-mode and Emacs의 모험"/>
-<meta name="twitter:description" content="&ldquo;내적모순&rdquo; 이맥스에서 Evil을 쓰면서 몇가지 짜증나는게 있어왔다.
-Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 키바인딩을 실시간으로 확인할 수 있는 방법도 제대로 안먹히게 된거라, 이맥스에서 쩔어주는 기능인 자기 자신을 확인하며 단축키 안외우기 같은게 다 무의미해짐. 공식 사이트 들어가도 문서는 없다. 그냥 Vim 온라인 help을 보거나 하라는 친절인거 같다. Magit, Edb, 등등 대부분의 이맥스의 다른 Major mode들이랑은 정말 충돌하는 경우가 너무 많음. https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421 위의 링크만 봐도, 내가 얼마나 충돌이 나는 모드들을 경험했는지 알수있다."/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="NeoVim, Evil-mode and Emacs의 모험">
+  <meta property="og:description" content="“내적모순” 이맥스에서 Evil을 쓰면서 몇가지 짜증나는게 있어왔다.
+Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 키바인딩을 실시간으로 확인할 수 있는 방법도 제대로 안먹히게 된거라, 이맥스에서 쩔어주는 기능인 자기 자신을 확인하며 단축키 안외우기 같은게 다 무의미해짐. 공식 사이트 들어가도 문서는 없다. 그냥 Vim 온라인 help을 보거나 하라는 친절인거 같다. Magit, Edb, 등등 대부분의 이맥스의 다른 Major mode들이랑은 정말 충돌하는 경우가 너무 많음. https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421 위의 링크만 봐도, 내가 얼마나 충돌이 나는 모드들을 경험했는지 알수있다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-07-28T12:00:00+09:00">
+    <meta property="article:modified_time" content="2018-07-28T12:00:00+09:00">
+    <meta property="article:tag" content="Neovim">
+    <meta property="article:tag" content="Vim">
+    <meta property="article:tag" content="Nvim">
+    <meta property="article:tag" content="Evil-Mode">
+    <meta property="article:tag" content="Emacs">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="NeoVim, Evil-mode and Emacs의 모험">
+  <meta name="twitter:description" content="“내적모순” 이맥스에서 Evil을 쓰면서 몇가지 짜증나는게 있어왔다.
+Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 키바인딩을 실시간으로 확인할 수 있는 방법도 제대로 안먹히게 된거라, 이맥스에서 쩔어주는 기능인 자기 자신을 확인하며 단축키 안외우기 같은게 다 무의미해짐. 공식 사이트 들어가도 문서는 없다. 그냥 Vim 온라인 help을 보거나 하라는 친절인거 같다. Magit, Edb, 등등 대부분의 이맥스의 다른 Major mode들이랑은 정말 충돌하는 경우가 너무 많음. https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421 위의 링크만 봐도, 내가 얼마나 충돌이 나는 모드들을 경험했는지 알수있다.">
 <script src="https://ageldama.github.io/js/feather.min.js"></script>
 	
 	        
@@ -171,7 +180,7 @@ Elisp만큼 속시원하게 내가 원하는 방향으로 세팅할수는
 <footer>
   
   <div class="footer-info">
-    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

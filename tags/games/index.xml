@@ -1,38 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>games on 아겔로그</title>
+    <title>Games on 아겔로그</title>
     <link>https://ageldama.github.io/tags/games/</link>
-    <description>Recent content in games on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Games on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Mon, 24 Aug 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/games/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Aug 2020 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/games/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 24/Aug/2020</title>
       <link>https://ageldama.github.io/posts/2020-08aug/ping-24mon/</link>
       <pubDate>Mon, 24 Aug 2020 00:00:00 +0900</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2020-08aug/ping-24mon/</guid>
-      <description>&amp;#34;프로젝트&amp;#34; 진행해온 프로젝트의 문서를 작성 중.
-문서를 작성하면서 더 보충/보강할 내용들이 튀어나온다.
-이 또한 사실 즐겁다.
-게임하기 Doom64 리메이크를 클리어했다. 마지막 레벨에서는 도저히 깰 수 없어서 그냥 마지막 한 마리를 잡기 위해서 치트를 켜서 아쉽다. 하지만 그 마지막 보스 이전에 타이드는 그냥 제정신으로 다 죽여서 재밌었다.
-다음 게임은 퀘이크 시리즈를 다시 플레이할까 생각 중. 폴아웃4, 스카이림을 다시 로드해서 플레이를 하며 그 세계에서 시간을 보내도 좋겠지만 조금은 다른 게임을 하고 싶어서.</description>
+      <description>&amp;#34;프로젝트&amp;#34; 진행해온 프로젝트의 문서를 작성 중.&#xA;문서를 작성하면서 더 보충/보강할 내용들이 튀어나온다.&#xA;이 또한 사실 즐겁다.&#xA;게임하기 Doom64 리메이크를 클리어했다. 마지막 레벨에서는 도저히 깰 수 없어서 그냥 마지막 한 마리를 잡기 위해서 치트를 켜서 아쉽다. 하지만 그 마지막 보스 이전에 타이드는 그냥 제정신으로 다 죽여서 재밌었다.&#xA;다음 게임은 퀘이크 시리즈를 다시 플레이할까 생각 중. 폴아웃4, 스카이림을 다시 로드해서 플레이를 하며 그 세계에서 시간을 보내도 좋겠지만 조금은 다른 게임을 하고 싶어서.</description>
     </item>
-    
     <item>
       <title>Ping 24/Jul/2020</title>
       <link>https://ageldama.github.io/posts/2020-07jul/ping-24fri/</link>
       <pubDate>Fri, 24 Jul 2020 00:00:00 +0900</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2020-07jul/ping-24fri/</guid>
-      <description>여름방학을 보내고 왔다. 지난 한달여, 꽤 즐겁게 보낸 것 같다. 그리고 순수하고 맑은 마음으로 행복했었던 것 같다.
-하늘도 여름 같이 맑고 파랗고 공기도 좋았었다. 매일 열심히 집중해서 일할 수 있었고 좋았다.
-그리고 그렇기 때문에 조금은 아련하다. 이런 느낌.
-(기쿠지로의 여름 OST) Summer / 히사이시 조
-https://youtu.be/_t1KvFMUNws Games: Doom 64, Ion Fury. Doom 64을 플레이. 클래식 둠, 둠2이랑은 또 완전히 다른 게임이었음. 몬스터들 모델링, 음악, 레벨디자인 모두 완전히 새로 만들어서 재밌었다.</description>
+      <description>여름방학을 보내고 왔다. 지난 한달여, 꽤 즐겁게 보낸 것 같다. 그리고 순수하고 맑은 마음으로 행복했었던 것 같다.&#xA;하늘도 여름 같이 맑고 파랗고 공기도 좋았었다. 매일 열심히 집중해서 일할 수 있었고 좋았다.&#xA;그리고 그렇기 때문에 조금은 아련하다. 이런 느낌.&#xA;(기쿠지로의 여름 OST) Summer / 히사이시 조&#xA;https://youtu.be/_t1KvFMUNws Games: Doom 64, Ion Fury. Doom 64을 플레이. 클래식 둠, 둠2이랑은 또 완전히 다른 게임이었음. 몬스터들 모델링, 음악, 레벨디자인 모두 완전히 새로 만들어서 재밌었다.</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,19 +6,24 @@
 &hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨. 내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.
 &lsquo;거창함&rsquo;이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면&hellip; 글쎄. ㅎㅎ&hellip;" />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="pytest fixtures와 의존성관리, 그리고 복잡도관리" />
-<meta property="og:description" content="# ...tests/conftest.py import pytest @pytest.fixture def name(): return &#39;Pokemon&#39; @pytest.fixture(scope=&#39;function&#39;) def monster(name): ... # ...tests/foo_test.py : def test_beast(monster): ... # &lt;--- `def monster(..)`의 결과를 주입 받음. https://docs.pytest.org/en/6.2.x/fixture.html
-&hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨. 내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.
-&lsquo;거창함&rsquo;이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면&hellip; 글쎄. ㅎㅎ&hellip;" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ageldama.github.io/posts/2022-jekyll/2022-06-08--02-pytest-fixtures-and-complexity-mgmt/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-06-08T18:20:00+09:00" />
-<meta property="article:modified_time" content="2022-06-08T18:20:00+09:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="pytest fixtures와 의존성관리, 그리고 복잡도관리"/>
-<meta name="twitter:description" content="# ...tests/conftest.py import pytest @pytest.fixture def name(): return &#39;Pokemon&#39; @pytest.fixture(scope=&#39;function&#39;) def monster(name): ... # ...tests/foo_test.py : def test_beast(monster): ... # &lt;--- `def monster(..)`의 결과를 주입 받음. https://docs.pytest.org/en/6.2.x/fixture.html
-&hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨. 내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.
-&lsquo;거창함&rsquo;이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면&hellip; 글쎄. ㅎㅎ&hellip;"/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2022-jekyll/2022-06-08--02-pytest-fixtures-and-complexity-mgmt/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="pytest fixtures와 의존성관리, 그리고 복잡도관리">
+  <meta property="og:description" content="# ...tests/conftest.py import pytest @pytest.fixture def name(): return &#39;Pokemon&#39; @pytest.fixture(scope=&#39;function&#39;) def monster(name): ... # ...tests/foo_test.py : def test_beast(monster): ... # &lt;--- `def monster(..)`의 결과를 주입 받음. https://docs.pytest.org/en/6.2.x/fixture.html
+…파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨. 내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.
+‘거창함’이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면… 글쎄. ㅎㅎ…">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-06-08T18:20:00+09:00">
+    <meta property="article:modified_time" content="2022-06-08T18:20:00+09:00">
+    <meta property="article:tag" content="Pytest Fixtures Dependency-Injection Complexity Software">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="pytest fixtures와 의존성관리, 그리고 복잡도관리">
+  <meta name="twitter:description" content="# ...tests/conftest.py import pytest @pytest.fixture def name(): return &#39;Pokemon&#39; @pytest.fixture(scope=&#39;function&#39;) def monster(name): ... # ...tests/foo_test.py : def test_beast(monster): ... # &lt;--- `def monster(..)`의 결과를 주입 받음. https://docs.pytest.org/en/6.2.x/fixture.html
+…파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨. 내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.
+‘거창함’이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면… 글쎄. ㅎㅎ…">
 <script src="https://ageldama.github.io/js/feather.min.js"></script>
 	
 	        
@@ -90,7 +95,7 @@ def test_beast(monster): ...
 <footer>
   
   <div class="footer-info">
-    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

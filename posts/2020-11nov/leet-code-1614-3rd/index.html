@@ -5,17 +5,26 @@
 	<meta name="description" content="지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.
 from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;" />
-<meta property="og:description" content="지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.
-from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ageldama.github.io/posts/2020-11nov/leet-code-1614-3rd/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-11-11T00:00:00+09:00" />
-<meta property="article:modified_time" content="2020-11-11T00:00:00+09:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;"/>
-<meta name="twitter:description" content="지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.
-from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다."/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2020-11nov/leet-code-1614-3rd/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;">
+  <meta property="og:description" content="지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.
+from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-11-11T00:00:00+09:00">
+    <meta property="article:modified_time" content="2020-11-11T00:00:00+09:00">
+    <meta property="article:tag" content="Leet-Code">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Generator">
+    <meta property="article:tag" content="Lazy">
+    <meta property="article:tag" content="Stream">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;">
+  <meta name="twitter:description" content="지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.
+from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.">
 <script src="https://ageldama.github.io/js/feather.min.js"></script>
 	
 	        
@@ -98,7 +107,7 @@ from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch 
 <footer>
   
   <div class="footer-info">
-    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

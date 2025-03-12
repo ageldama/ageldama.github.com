@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sftp on 아겔로그</title>
+    <title>Sftp on 아겔로그</title>
     <link>https://ageldama.github.io/tags/sftp/</link>
-    <description>Recent content in sftp on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Sftp on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Wed, 15 Mar 2023 15:37:14 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/sftp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Mar 2023 15:37:14 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/sftp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>내 책상에서 유선랜 환경</title>
       <link>https://ageldama.github.io/posts/2023-03mar/2023-03mar15--wired-desktop/</link>
       <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2023-03mar/2023-03mar15--wired-desktop/</guid>
-      <description>개인환경을 조금 특이하게 사용하는데, 그 이유와 방식.
-why: 유선랜? (무선랜 대신) 키보드/마우스 입력이 가장 부드럽게 전달되어서 유선으로 연결해서 사용한다.
-x2x으로 연결하거나, ssh-x11-forwarding으로 다른 컴퓨터에서 실행하는 프로그램을 디스플레이와 입력장치만 현재 자리에서 그대로 사용할 때에 네트웍 연결속도가 딜레이가 적어야 쾌적해서. 1
-why: x11? (wayland 대신) 요즘 리눅스/bsd 데스크탑 기본설치하면 wayland으로 세팅하는 경우도 많은데, 네트웍을 통해서 ssh-x11-forwarding 1 사용하거나 x2x 사용하기는 아직 부족한거 같아서, 나는 그냥 x11 사용함.
-거기에 xdotool 같은 gui-automation/scripting이나 warpd 같은 키보드를 마우스으로 편안하게 쓰도록 해주는 xtest이나, qjoypad 처럼 2 게임패드/조이스틱을 편안하게 마우스/키보드으로 매핑해서 쓰는게 나는 많은데 모두 x11만 지원하거나, 아직은 x11에서만 쓸만한 수준으로 동작해서.</description>
+      <description>개인환경을 조금 특이하게 사용하는데, 그 이유와 방식.&#xA;why: 유선랜? (무선랜 대신) 키보드/마우스 입력이 가장 부드럽게 전달되어서 유선으로 연결해서 사용한다.&#xA;x2x으로 연결하거나, ssh-x11-forwarding으로 다른 컴퓨터에서 실행하는 프로그램을 디스플레이와 입력장치만 현재 자리에서 그대로 사용할 때에 네트웍 연결속도가 딜레이가 적어야 쾌적해서. 1&#xA;why: x11? (wayland 대신) 요즘 리눅스/bsd 데스크탑 기본설치하면 wayland으로 세팅하는 경우도 많은데, 네트웍을 통해서 ssh-x11-forwarding 1 사용하거나 x2x 사용하기는 아직 부족한거 같아서, 나는 그냥 x11 사용함.&#xA;거기에 xdotool 같은 gui-automation/scripting이나 warpd 같은 키보드를 마우스으로 편안하게 쓰도록 해주는 xtest이나, qjoypad 처럼 2 게임패드/조이스틱을 편안하게 마우스/키보드으로 매핑해서 쓰는게 나는 많은데 모두 x11만 지원하거나, 아직은 x11에서만 쓸만한 수준으로 동작해서.</description>
     </item>
-    
   </channel>
 </rss>

@@ -10,27 +10,37 @@ Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
 그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을 짜주고 하기 싫었고,
 .env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서 경로를 조립하고 하는데 별로라는 생각이 들었다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기" />
-<meta property="og:description" content="프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다.
+	<meta property="og:url" content="https://ageldama.github.io/posts/2019-12dec/direnv/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기">
+  <meta property="og:description" content="프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다.
 몇 가지 이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv
 NPM: dotenv https://www.npmjs.com/package/dotenv
 Node.js에서 Unix environment variable으로 .env 파일을 로딩해주는 역할인 듯.
 Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
 그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을 짜주고 하기 싫었고,
-.env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서 경로를 조립하고 하는데 별로라는 생각이 들었다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ageldama.github.io/posts/2019-12dec/direnv/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-12-29T00:00:00+09:00" />
-<meta property="article:modified_time" content="2019-12-29T00:00:00+09:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기"/>
-<meta name="twitter:description" content="프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다.
+.env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서 경로를 조립하고 하는데 별로라는 생각이 들었다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-12-29T00:00:00+09:00">
+    <meta property="article:modified_time" content="2019-12-29T00:00:00+09:00">
+    <meta property="article:tag" content="Direnv">
+    <meta property="article:tag" content="Direnv-Mode">
+    <meta property="article:tag" content="Dot-Envrc">
+    <meta property="article:tag" content="Emacs">
+    <meta property="article:tag" content="C">
+    <meta property="article:tag" content="C&#43;&#43;">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기">
+  <meta name="twitter:description" content="프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다.
 몇 가지 이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv
 NPM: dotenv https://www.npmjs.com/package/dotenv
 Node.js에서 Unix environment variable으로 .env 파일을 로딩해주는 역할인 듯.
 Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
 그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을 짜주고 하기 싫었고,
-.env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서 경로를 조립하고 하는데 별로라는 생각이 들었다."/>
+.env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서 경로를 조립하고 하는데 별로라는 생각이 들었다.">
 <script src="https://ageldama.github.io/js/feather.min.js"></script>
 	
 	        
@@ -287,7 +297,7 @@ flycheck의 내장된 flake8, pylint등의 checker와 잘 어울리지 못해서
 <footer>
   
   <div class="footer-info">
-    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

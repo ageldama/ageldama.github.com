@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>todos on 아겔로그</title>
+    <title>Todos on 아겔로그</title>
     <link>https://ageldama.github.io/tags/todos/</link>
-    <description>Recent content in todos on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Todos on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Sun, 23 Sep 2018 12:00:00 +0900</lastBuildDate><atom:link href="https://ageldama.github.io/tags/todos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Sep 2018 12:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/todos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>해보기 23/09/2018</title>
       <link>https://ageldama.github.io/posts/2018-09sep/23sun-todos/</link>
       <pubDate>Sun, 23 Sep 2018 12:00:00 +0900</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2018-09sep/23sun-todos/</guid>
-      <description>LSP 갖고놀기 Language Server Protocol : https://langserver.org/1
-ES6: https://github.com/sourcegraph/javascript-typescript-langserver 다른건 FlyCheck + Eslint으로 만족스러운데, 코드네비게이션만 좀. C/C++: https://github.com/cquery-project/cquery https://github.com/MaskRay/ccls ES6 기능들 다시 한번 주욱 읽어보기 http://es6-features.org/
-딱히 뭣도 몰라서 한번 주욱 읽어보려고. 더 알고 싶지는 않다만&amp;hellip;
-tweet 1039770698187563009
-&amp;hellip;이런 언어지만.
-대안으로서 ReasonML? https://reasonml.github.io/ https://github.com/ocaml/merlin ..예전에 좋아하던 OCaml 다시 실용적으로 써도 재밌을거 같기도하고.
-https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%99%98_%EC%9B%90%EC%B9%99 이거아님.&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
+      <description>LSP 갖고놀기 Language Server Protocol : https://langserver.org/1&#xA;ES6: https://github.com/sourcegraph/javascript-typescript-langserver 다른건 FlyCheck + Eslint으로 만족스러운데, 코드네비게이션만 좀. C/C++: https://github.com/cquery-project/cquery https://github.com/MaskRay/ccls ES6 기능들 다시 한번 주욱 읽어보기 http://es6-features.org/&#xA;딱히 뭣도 몰라서 한번 주욱 읽어보려고. 더 알고 싶지는 않다만&amp;hellip;&#xA;tweet 1039770698187563009&#xA;&amp;hellip;이런 언어지만.&#xA;대안으로서 ReasonML? https://reasonml.github.io/ https://github.com/ocaml/merlin ..예전에 좋아하던 OCaml 다시 실용적으로 써도 재밌을거 같기도하고.&#xA;https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%99%98_%EC%9B%90%EC%B9%99 이거아님.&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
     </item>
-    
   </channel>
 </rss>

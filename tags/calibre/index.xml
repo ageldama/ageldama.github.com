@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>calibre on 아겔로그</title>
+    <title>Calibre on 아겔로그</title>
     <link>https://ageldama.github.io/tags/calibre/</link>
-    <description>Recent content in calibre on 아겔로그</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Calibre on 아겔로그</description>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>All rights reserved to ageldama</copyright>
-    <lastBuildDate>Wed, 08 Mar 2023 06:15:08 +0000</lastBuildDate><atom:link href="https://ageldama.github.io/tags/calibre/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Mar 2023 06:15:08 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/calibre/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 08/03/2023 .01 : 전자책읽기</title>
       <link>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--01-ping/</link>
       <pubDate>Wed, 08 Mar 2023 06:15:08 +0000</pubDate>
-      
       <guid>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--01-ping/</guid>
-      <description>linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁들만 나열, 별로 내용은 길게 늘여 쓰지 않으려고:
-linux, 그중에서도 가벼운 하드웨어와 단순하게 잘 동작하는 배포판.
-여러가지 불필요한 군더더기 없고, 패키지들이 조금 오래된 버젼이어도, 안정적으로만 동작하면 상관 없음. 그래서, debian stable -or- testing 쓰면 속이 편함. 하드웨어는 raspberry pi 3/4 둘 다 좋았다. 1 …특히 전력소모도 거의 없고, 딱 모니터 연결해 놓고 팬소음 거의 없이 쾌적하게 책을 읽기 좋다. calibre 책파일 관리, 읽기 모두 만족스러움</description>
+      <description>linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁들만 나열, 별로 내용은 길게 늘여 쓰지 않으려고:&#xA;linux, 그중에서도 가벼운 하드웨어와 단순하게 잘 동작하는 배포판.&#xA;여러가지 불필요한 군더더기 없고, 패키지들이 조금 오래된 버젼이어도, 안정적으로만 동작하면 상관 없음. 그래서, debian stable -or- testing 쓰면 속이 편함. 하드웨어는 raspberry pi 3/4 둘 다 좋았다. 1 …특히 전력소모도 거의 없고, 딱 모니터 연결해 놓고 팬소음 거의 없이 쾌적하게 책을 읽기 좋다. calibre 책파일 관리, 읽기 모두 만족스러움</description>
     </item>
-    
   </channel>
 </rss>

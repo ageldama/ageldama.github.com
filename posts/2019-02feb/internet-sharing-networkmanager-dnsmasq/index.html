@@ -4,15 +4,22 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>NetworkManager &#43; dnsmasq으로 인터넷공유 만들기 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="필요성, 궁금함, 현재 상황 메인 데스크탑을 무선랜으로 인터넷에 연결하고 사용함. 다른 기기들도 모두 기본적으로 무선으로 LAN접속. 다 좋은데, 메인 데스크탑 &lt;-&gt; 라즈베리파이 접속할때 ssh 접속도 느린거 같을때가 있음. 무선랜 접속이 많고, 블루투스 등등 다른 간섭도 많을거고, 어쨌든 조금 물리적으로 거리가 있는 무선공유기까지 갔다 오는거니까. 그래서 사용 안하고 있는 데스크탑의 내장 유선 랜포트로 인터넷연결을 공유하는 Private network을 만들어서 유선으로 연결해보기로 했다. 정말 체감이 빨라질지 궁금했고 직접 수동으로 설정하는게 거의 없거나, 내가 사용하고 있는 NetworkManager에서 쉽게 설정이 가능할거 같았다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="NetworkManager &#43; dnsmasq으로 인터넷공유 만들기" />
-<meta property="og:description" content="필요성, 궁금함, 현재 상황 메인 데스크탑을 무선랜으로 인터넷에 연결하고 사용함. 다른 기기들도 모두 기본적으로 무선으로 LAN접속. 다 좋은데, 메인 데스크탑 &lt;-&gt; 라즈베리파이 접속할때 ssh 접속도 느린거 같을때가 있음. 무선랜 접속이 많고, 블루투스 등등 다른 간섭도 많을거고, 어쨌든 조금 물리적으로 거리가 있는 무선공유기까지 갔다 오는거니까. 그래서 사용 안하고 있는 데스크탑의 내장 유선 랜포트로 인터넷연결을 공유하는 Private network을 만들어서 유선으로 연결해보기로 했다. 정말 체감이 빨라질지 궁금했고 직접 수동으로 설정하는게 거의 없거나, 내가 사용하고 있는 NetworkManager에서 쉽게 설정이 가능할거 같았다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-02-26T00:00:00+09:00" />
-<meta property="article:modified_time" content="2019-02-26T00:00:00+09:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="NetworkManager &#43; dnsmasq으로 인터넷공유 만들기"/>
-<meta name="twitter:description" content="필요성, 궁금함, 현재 상황 메인 데스크탑을 무선랜으로 인터넷에 연결하고 사용함. 다른 기기들도 모두 기본적으로 무선으로 LAN접속. 다 좋은데, 메인 데스크탑 &lt;-&gt; 라즈베리파이 접속할때 ssh 접속도 느린거 같을때가 있음. 무선랜 접속이 많고, 블루투스 등등 다른 간섭도 많을거고, 어쨌든 조금 물리적으로 거리가 있는 무선공유기까지 갔다 오는거니까. 그래서 사용 안하고 있는 데스크탑의 내장 유선 랜포트로 인터넷연결을 공유하는 Private network을 만들어서 유선으로 연결해보기로 했다. 정말 체감이 빨라질지 궁금했고 직접 수동으로 설정하는게 거의 없거나, 내가 사용하고 있는 NetworkManager에서 쉽게 설정이 가능할거 같았다."/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="NetworkManager &#43; dnsmasq으로 인터넷공유 만들기">
+  <meta property="og:description" content="필요성, 궁금함, 현재 상황 메인 데스크탑을 무선랜으로 인터넷에 연결하고 사용함. 다른 기기들도 모두 기본적으로 무선으로 LAN접속. 다 좋은데, 메인 데스크탑 &lt;-&gt; 라즈베리파이 접속할때 ssh 접속도 느린거 같을때가 있음. 무선랜 접속이 많고, 블루투스 등등 다른 간섭도 많을거고, 어쨌든 조금 물리적으로 거리가 있는 무선공유기까지 갔다 오는거니까. 그래서 사용 안하고 있는 데스크탑의 내장 유선 랜포트로 인터넷연결을 공유하는 Private network을 만들어서 유선으로 연결해보기로 했다. 정말 체감이 빨라질지 궁금했고 직접 수동으로 설정하는게 거의 없거나, 내가 사용하고 있는 NetworkManager에서 쉽게 설정이 가능할거 같았다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-02-26T00:00:00+09:00">
+    <meta property="article:modified_time" content="2019-02-26T00:00:00+09:00">
+    <meta property="article:tag" content="Networkmanager">
+    <meta property="article:tag" content="Dnsmasq">
+    <meta property="article:tag" content="Dhcp">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="NetworkManager &#43; dnsmasq으로 인터넷공유 만들기">
+  <meta name="twitter:description" content="필요성, 궁금함, 현재 상황 메인 데스크탑을 무선랜으로 인터넷에 연결하고 사용함. 다른 기기들도 모두 기본적으로 무선으로 LAN접속. 다 좋은데, 메인 데스크탑 &lt;-&gt; 라즈베리파이 접속할때 ssh 접속도 느린거 같을때가 있음. 무선랜 접속이 많고, 블루투스 등등 다른 간섭도 많을거고, 어쨌든 조금 물리적으로 거리가 있는 무선공유기까지 갔다 오는거니까. 그래서 사용 안하고 있는 데스크탑의 내장 유선 랜포트로 인터넷연결을 공유하는 Private network을 만들어서 유선으로 연결해보기로 했다. 정말 체감이 빨라질지 궁금했고 직접 수동으로 설정하는게 거의 없거나, 내가 사용하고 있는 NetworkManager에서 쉽게 설정이 가능할거 같았다.">
 <script src="https://ageldama.github.io/js/feather.min.js"></script>
 	
 	        
@@ -143,7 +150,7 @@ IP주소를 고정해서 접속이 편하도록 설정했다.</li>
 <footer>
   
   <div class="footer-info">
-    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

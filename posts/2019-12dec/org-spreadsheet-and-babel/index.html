@@ -8,23 +8,33 @@
 Org-Babel으로 원하는 함수를 정의한다.
 그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다. Spreadsheet에서 불러서 쓸 수 있는지 확인해본다. 우선 C-h a 을 눌러 vsum 을 검색해보니, defun calcFunc-vsum (&amp;rest vecs) 으로 미리 선언되어 있는거 같았습니다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="Org모드에서 스프레드시트 기능과 Babel 섞어쓰기" />
-<meta property="og:description" content="쩌는 Org-mode Spreadsheet 소개 를 읽고 감명 받아서 따라해봅니다.
+	<meta property="og:url" content="https://ageldama.github.io/posts/2019-12dec/org-spreadsheet-and-babel/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="Org모드에서 스프레드시트 기능과 Babel 섞어쓰기">
+  <meta property="og:description" content="쩌는 Org-mode Spreadsheet 소개 를 읽고 감명 받아서 따라해봅니다.
 다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리 defun / defmacro 으로 정의해놓고 그걸 spreadsheet에서 불러 쓸 수 있을지가 궁금했습니다.
 그래서 다음과 같이 해보면 가능할지를 실험:
 Org-Babel으로 원하는 함수를 정의한다.
-그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다. Spreadsheet에서 불러서 쓸 수 있는지 확인해본다. 우선 C-h a 을 눌러 vsum 을 검색해보니, defun calcFunc-vsum (&amp;rest vecs) 으로 미리 선언되어 있는거 같았습니다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ageldama.github.io/posts/2019-12dec/org-spreadsheet-and-babel/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-12-13T00:00:00+09:00" />
-<meta property="article:modified_time" content="2019-12-13T00:00:00+09:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Org모드에서 스프레드시트 기능과 Babel 섞어쓰기"/>
-<meta name="twitter:description" content="쩌는 Org-mode Spreadsheet 소개 를 읽고 감명 받아서 따라해봅니다.
+그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다. Spreadsheet에서 불러서 쓸 수 있는지 확인해본다. 우선 C-h a 을 눌러 vsum 을 검색해보니, defun calcFunc-vsum (&amp;rest vecs) 으로 미리 선언되어 있는거 같았습니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-12-13T00:00:00+09:00">
+    <meta property="article:modified_time" content="2019-12-13T00:00:00+09:00">
+    <meta property="article:tag" content="Emacs">
+    <meta property="article:tag" content="Elisp">
+    <meta property="article:tag" content="Lisp">
+    <meta property="article:tag" content="Spreadsheet">
+    <meta property="article:tag" content="Tips">
+    <meta property="article:tag" content="Babel">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Org모드에서 스프레드시트 기능과 Babel 섞어쓰기">
+  <meta name="twitter:description" content="쩌는 Org-mode Spreadsheet 소개 를 읽고 감명 받아서 따라해봅니다.
 다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리 defun / defmacro 으로 정의해놓고 그걸 spreadsheet에서 불러 쓸 수 있을지가 궁금했습니다.
 그래서 다음과 같이 해보면 가능할지를 실험:
 Org-Babel으로 원하는 함수를 정의한다.
-그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다. Spreadsheet에서 불러서 쓸 수 있는지 확인해본다. 우선 C-h a 을 눌러 vsum 을 검색해보니, defun calcFunc-vsum (&amp;rest vecs) 으로 미리 선언되어 있는거 같았습니다."/>
+그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다. Spreadsheet에서 불러서 쓸 수 있는지 확인해본다. 우선 C-h a 을 눌러 vsum 을 검색해보니, defun calcFunc-vsum (&amp;rest vecs) 으로 미리 선언되어 있는거 같았습니다.">
 <script src="https://ageldama.github.io/js/feather.min.js"></script>
 	
 	        
@@ -306,7 +316,7 @@ Footnotes
 <footer>
   
   <div class="footer-info">
-    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

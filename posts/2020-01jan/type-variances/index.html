@@ -8,23 +8,33 @@
 Subtype, 일반화(Generalization), 특화(Specialization) 타입을 말할 때, 나는 보통 객체지향언어에서의 클래스의 상속 관계를 떠올린다. 꼭 그렇지는 않겠지만, 이 글에서도 그렇게 설명을 해보겠다.
 이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고 가정하겠다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="Covariant, Contravariant, Invariant등 Type Variances 이해하기" />
-<meta property="og:description" content="거의 그대로 베껴온 원본 글
+	<meta property="og:url" content="https://ageldama.github.io/posts/2020-01jan/type-variances/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="Covariant, Contravariant, Invariant등 Type Variances 이해하기">
+  <meta property="og:description" content="거의 그대로 베껴온 원본 글
 계약서로서의 타입 타입을 생각할 때, &lt;계약서&gt;로 생각하는 것이 편하다.
 왜냐하면, 전달한 값이 그 타입의 범위 안에서 전달 받은 쪽에서 취급이 제한된다는 보장이 있어야 안전한 코드를 컴파일러는 생성해줄 수 있다. (혹은 그렇게 안전한지 체크를 해준다.)
 Subtype, 일반화(Generalization), 특화(Specialization) 타입을 말할 때, 나는 보통 객체지향언어에서의 클래스의 상속 관계를 떠올린다. 꼭 그렇지는 않겠지만, 이 글에서도 그렇게 설명을 해보겠다.
-이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고 가정하겠다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ageldama.github.io/posts/2020-01jan/type-variances/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-01-03T00:00:02+09:00" />
-<meta property="article:modified_time" content="2020-01-03T00:00:02+09:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Covariant, Contravariant, Invariant등 Type Variances 이해하기"/>
-<meta name="twitter:description" content="거의 그대로 베껴온 원본 글
+이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고 가정하겠다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-01-03T00:00:02+09:00">
+    <meta property="article:modified_time" content="2020-01-03T00:00:02+09:00">
+    <meta property="article:tag" content="Type">
+    <meta property="article:tag" content="Type-System">
+    <meta property="article:tag" content="Higher-Order-Type">
+    <meta property="article:tag" content="Covariant">
+    <meta property="article:tag" content="Contravariant">
+    <meta property="article:tag" content="Invariant">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Covariant, Contravariant, Invariant등 Type Variances 이해하기">
+  <meta name="twitter:description" content="거의 그대로 베껴온 원본 글
 계약서로서의 타입 타입을 생각할 때, &lt;계약서&gt;로 생각하는 것이 편하다.
 왜냐하면, 전달한 값이 그 타입의 범위 안에서 전달 받은 쪽에서 취급이 제한된다는 보장이 있어야 안전한 코드를 컴파일러는 생성해줄 수 있다. (혹은 그렇게 안전한지 체크를 해준다.)
 Subtype, 일반화(Generalization), 특화(Specialization) 타입을 말할 때, 나는 보통 객체지향언어에서의 클래스의 상속 관계를 떠올린다. 꼭 그렇지는 않겠지만, 이 글에서도 그렇게 설명을 해보겠다.
-이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고 가정하겠다."/>
+이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고 가정하겠다.">
 <script src="https://ageldama.github.io/js/feather.min.js"></script>
 	
 	        
@@ -328,7 +338,7 @@ Footnotes
 <footer>
   
   <div class="footer-info">
-    2024  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
