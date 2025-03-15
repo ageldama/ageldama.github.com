@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ageldama.github.io/tags/blog/</loc>
+    <lastmod>2025-03-15T12:25:01+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/css/</loc>
+    <lastmod>2025-03-15T12:25:01+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/</loc>
+    <lastmod>2025-03-15T12:25:01+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/design/</loc>
+    <lastmod>2025-03-15T12:25:01+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/ping/</loc>
+    <lastmod>2025-03-15T12:25:01+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-03-15T12:25:01+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2025-03-15T12:25:01+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2025-03-15T12:25:01+00:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/tags/architecture/</loc>
     <lastmod>2025-03-12T10:40:27+00:00</lastmod>
   </url><url>
@@ -32,9 +56,6 @@
     <loc>https://ageldama.github.io/tags/datomic/</loc>
     <lastmod>2025-03-12T10:40:27+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/design/</loc>
-    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/ecs/</loc>
     <lastmod>2025-03-12T10:40:27+00:00</lastmod>
   </url><url>
@@ -44,19 +65,10 @@
     <loc>https://ageldama.github.io/tags/perl/</loc>
     <lastmod>2025-03-12T10:40:27+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/programming/</loc>
     <lastmod>2025-03-12T10:40:27+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/sed/</loc>
-    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
-    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-03-12T10:40:27+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/c/</loc>
@@ -111,9 +123,6 @@
     <lastmod>2024-03-23T15:46:14+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/kino/</loc>
-    <lastmod>2024-03-23T15:46:14+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/ping/</loc>
     <lastmod>2024-03-23T15:46:14+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2024-03mar/2024-03mar23--01-ping/</loc>
@@ -320,9 +329,6 @@
     <loc>https://ageldama.github.io/tags/try-catch-finally/</loc>
     <lastmod>2023-03-02T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/css/</loc>
-    <lastmod>2023-02-26T08:19:57+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/posts/2023-02feb/2023-02feb26--01-css/</loc>
     <lastmod>2023-02-26T08:19:57+00:00</lastmod>
   </url><url>
@@ -412,9 +418,6 @@
   </url><url>
     <loc>https://ageldama.github.io/posts/2023-02feb/film-knivesout&#43;ksoapoperas/</loc>
     <lastmod>2023-02-03T19:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/blog/</loc>
-    <lastmod>2023-02-03T18:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/hugo/</loc>
     <lastmod>2023-02-03T18:00:00+00:00</lastmod>

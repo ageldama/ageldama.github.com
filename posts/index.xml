@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 12 Mar 2025 10:40:27 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Mar 2025 12:25:01 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>css, design 새단장 &#43; dark-mode</title>
+      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/</link>
+      <pubDate>Sat, 15 Mar 2025 12:25:01 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/</guid>
+      <description>css 더 단순하게 만들고, 디자인들도 그냥 내 마음에 들게 뜯어 고침. 다크모드도 작업해서 만들어 넣고.&#xA;css 애니메이션도 작업해 넣었다가, gpu 너무 쓰는거 같아서 그냥 끄고 정적효과로만 냅둠.&#xA;hugo 같은 static site generator이 좋은 점, 그리고 그냥 단순한 css와 오래된 jquery으로 그냥 뚝딱거려서 작업.</description>
+    </item>
     <item>
       <title>data-driven programming &amp; data-driven design &amp; data-oriented programming ???</title>
       <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar12--01-data-prog/</link>

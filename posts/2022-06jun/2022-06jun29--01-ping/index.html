@@ -50,37 +50,39 @@ oh-my-zsh 내장인 plugins=(z)도 좋지만2
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
-	<div class="main">
-            <a href="https://ageldama.github.io/">아겔로그</a>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+    
+    <nav>
+        <a class="dark-mode-toggle"
+           onclick="javascript:DarkMode.toggle()"
+           href="#"></a>
+        <script>
+         $(function(){
+             DarkMode.init();
+         });
+        </script>
 
-            <a class="dark-mode-toggle"
-               href="javascript:DarkMode.toggle()"></a>
-            <script>
-             $(function(){
-                 DarkMode.init();
-             });
-            </script>
-        </div>
         
-	<nav>
-            
             <a href="/posts/archive/">Archive🗃️</a>
-            
+        
             <a href="/tags/">Tags🏷️</a>
-            
+        
             <a href="/index.xml">RSS&lt;/&gt;</a>
-            
+        
             <a href="/myself/">Contact📨</a>
-            
+        
 
-		
-	</nav>
+	
+    </nav>
 </header>
 
 <main>
@@ -154,15 +156,15 @@ oh-my-zsh 내장인 plugins=(z)도 좋지만2
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li>#<a href="/tags/ping">ping</a></li>
+					<li style="display: inline">#<a href="/tags/ping">ping</a></li>
 					
-					<li>#<a href="/tags/x2x">x2x</a></li>
+					<li style="display: inline">#<a href="/tags/x2x">x2x</a></li>
 					
-					<li>#<a href="/tags/conspy">conspy</a></li>
+					<li style="display: inline">#<a href="/tags/conspy">conspy</a></li>
 					
-					<li>#<a href="/tags/chdir">chdir</a></li>
+					<li style="display: inline">#<a href="/tags/chdir">chdir</a></li>
 					
-					<li>#<a href="/tags/ssh">ssh</a></li>
+					<li style="display: inline">#<a href="/tags/ssh">ssh</a></li>
 					
 				</ul>
 			</nav>

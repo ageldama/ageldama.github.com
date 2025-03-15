@@ -22,7 +22,7 @@
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
 	
 	
 </head>
@@ -30,31 +30,33 @@
 	<body>
 		<div class="content">
 			<header>
-	<div class="main">
-            <a href="https://ageldama.github.io/">아겔로그</a>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+    
+    <nav>
+        <a class="dark-mode-toggle"
+           onclick="javascript:DarkMode.toggle()"
+           href="#"></a>
+        <script>
+         $(function(){
+             DarkMode.init();
+         });
+        </script>
 
-            <a class="dark-mode-toggle"
-               href="javascript:DarkMode.toggle()"></a>
-            <script>
-             $(function(){
-                 DarkMode.init();
-             });
-            </script>
-        </div>
         
-	<nav>
-            
             <a href="/posts/archive/">Archive🗃️</a>
-            
+        
             <a href="/tags/">Tags🏷️</a>
-            
+        
             <a href="/index.xml">RSS&lt;/&gt;</a>
-            
+        
             <a href="/myself/">Contact📨</a>
-            
+        
 
-		
-	</nav>
+	
+    </nav>
 </header>
 
 			
@@ -62,6 +64,19 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar15--01-new-css/">css, design 새단장 &#43; dark-mode</a></h1>
+					<time>Mar 15, 2025</time>
+					<br><div class="description">
+						
+						css 더 단순하게 만들고, 디자인들도 그냥 내 마음에 들게 뜯어 고침. 다크모드도 작업해서 만들어 넣고.
+css 애니메이션도 작업해 넣었다가, gpu 너무 쓰는거 같아서 그냥 끄고 정적효과로만 냅둠.
+hugo 같은 static site generator이 좋은 점, 그리고 그냥 단순한 css와 오래된 jquery으로 그냥 뚝딱거려서 작업.&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item">
 					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar12--01-data-prog/">data-driven programming &amp; data-driven design &amp; data-oriented programming ???</a></h1>
@@ -759,19 +774,6 @@ HyperSpec을 읽다 보면 아주 쉽게 정의되어 있는 키워드들이 일
 다만 문제는 설정이 복잡하고 이해하기 힘든 점보다는 빌드 시간이 너무 느린 점이었다. (내게는)
 그래서 parcel bundler을 시도 했는데, 설정도 거의 필요 없이 바로 동작하고 하는 점은 좋고, 성능도 정말 빨랐다.
 다만 Vim/Emacs으로 파일을 편집하고 저장할 때, parcel watch 대상인 파일들을 종종 아예 dev-server을 재시작해야만 제대로 동작하는 상태로 빠지는게 조금 짜증났다.&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/ping-17sat/">Ping 16/Oct/2020</a></h1>
-					<time>Oct 16, 2020</time>
-					<br><div class="description">
-						
-						ADT1만큼 만들어 쓰는 것은 아니지만, 그냥 Kotlin, Python의 dataclass 정도는 쓰고 싶어서 CommonLisp 매크로를 만들어봤다.2
-equals 라이브러리를 써서 동치 비교와 CLOS의 print-object generic function을 구현해서 to-string 정도만 되도록 만들어 봤다.
-macro body (defmacro define-data-class (class-name parent-classes slot-names &amp;key (no-print-slot-names nil) (no-equals-slot-names nil)) (flet ((accessor-symbol (slot-name) (alexandria:format-symbol *package* &#34;~a-~a&#34; class-name slot-name))) (list &#39;progn ;; defclass (let ((slot-defs (loop for slot-name in slot-names collecting `(,slot-name :initarg ,(alexandria:make-keyword slot-name) :accessor ,(accessor-symbol slot-name))))) `(defclass ,class-name ,parent-classes ,slot-defs)) ;; defmethod print-object (let* ((print-slot-names (set-difference slot-names no-print-slot-names)) (fmt-ctrl (format nil &#34;~{~a=~~a~^, ~}&#34; print-slot-names))) `(defmethod print-object ((obj ,class-name) stream) (print-unreadable-object (obj stream :type t) (with-slots ,print-slot-names obj (format stream ,fmt-ctrl ,@print-slot-names))))) ;; defmethod equals:equals (let* ((equals-slot-names (set-difference slot-names no-equals-slot-names)) (equals-exprs (loop for equals-slot-name in equals-slot-names collecting `(equals:equals (slot-value lhs (quote ,equals-slot-name)) (slot-value rhs (quote ,equals-slot-name)))))) `(defmethod equals:equals ((lhs ,class-name) (rhs ,class-name) &amp;rest args) (declare (ignore args)) (and t ,@equals-exprs))) ))) synopsis / usage (define-data-class animal () (name age)) (define-data-class bird (animal) ()) (equals:equals (make-instance &#39;animal :name &#34;foo&#34; :age 18) (make-instance &#39;animal :name &#34;foo&#34; :age 18)) 오랬만에 재밌었다.&hellip;
 						
 					</div>
                                         

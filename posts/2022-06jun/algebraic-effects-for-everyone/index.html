@@ -78,37 +78,39 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
-	<div class="main">
-            <a href="https://ageldama.github.io/">아겔로그</a>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+    
+    <nav>
+        <a class="dark-mode-toggle"
+           onclick="javascript:DarkMode.toggle()"
+           href="#"></a>
+        <script>
+         $(function(){
+             DarkMode.init();
+         });
+        </script>
 
-            <a class="dark-mode-toggle"
-               href="javascript:DarkMode.toggle()"></a>
-            <script>
-             $(function(){
-                 DarkMode.init();
-             });
-            </script>
-        </div>
         
-	<nav>
-            
             <a href="/posts/archive/">Archive🗃️</a>
-            
+        
             <a href="/tags/">Tags🏷️</a>
-            
+        
             <a href="/index.xml">RSS&lt;/&gt;</a>
-            
+        
             <a href="/myself/">Contact📨</a>
-            
+        
 
-		
-	</nav>
+	
+    </nav>
 </header>
 
 <main>
@@ -232,11 +234,11 @@ CL-USER&gt; (handler-bind ((progress (lambda (p)
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li>#<a href="/tags/lisp">lisp</a></li>
+					<li style="display: inline">#<a href="/tags/lisp">lisp</a></li>
 					
-					<li>#<a href="/tags/conditions">conditions</a></li>
+					<li style="display: inline">#<a href="/tags/conditions">conditions</a></li>
 					
-					<li>#<a href="/tags/algebraic-effects">algebraic-effects</a></li>
+					<li style="display: inline">#<a href="/tags/algebraic-effects">algebraic-effects</a></li>
 					
 				</ul>
 			</nav>

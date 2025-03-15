@@ -43,37 +43,39 @@ server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
-	<div class="main">
-            <a href="https://ageldama.github.io/">아겔로그</a>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+    
+    <nav>
+        <a class="dark-mode-toggle"
+           onclick="javascript:DarkMode.toggle()"
+           href="#"></a>
+        <script>
+         $(function(){
+             DarkMode.init();
+         });
+        </script>
 
-            <a class="dark-mode-toggle"
-               href="javascript:DarkMode.toggle()"></a>
-            <script>
-             $(function(){
-                 DarkMode.init();
-             });
-            </script>
-        </div>
         
-	<nav>
-            
             <a href="/posts/archive/">Archive🗃️</a>
-            
+        
             <a href="/tags/">Tags🏷️</a>
-            
+        
             <a href="/index.xml">RSS&lt;/&gt;</a>
-            
+        
             <a href="/myself/">Contact📨</a>
-            
+        
 
-		
-	</nav>
+	
+    </nav>
 </header>
 
 <main>
@@ -125,13 +127,13 @@ next.js ssr처럼 <code>[name].tsx</code> 같은 file system routing도 지원�
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li>#<a href="/tags/ping">ping</a></li>
+					<li style="display: inline">#<a href="/tags/ping">ping</a></li>
 					
-					<li>#<a href="/tags/html">html</a></li>
+					<li style="display: inline">#<a href="/tags/html">html</a></li>
 					
-					<li>#<a href="/tags/hotwired">hotwired</a></li>
+					<li style="display: inline">#<a href="/tags/hotwired">hotwired</a></li>
 					
-					<li>#<a href="/tags/web">web</a></li>
+					<li style="display: inline">#<a href="/tags/web">web</a></li>
 					
 				</ul>
 			</nav>

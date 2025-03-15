@@ -42,37 +42,39 @@ defer.inl : /* -*- mode: c&#43;&#43;; -*- */ #ifndef defer_INL #define defer_INL
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
-	<div class="main">
-            <a href="https://ageldama.github.io/">아겔로그</a>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+    
+    <nav>
+        <a class="dark-mode-toggle"
+           onclick="javascript:DarkMode.toggle()"
+           href="#"></a>
+        <script>
+         $(function(){
+             DarkMode.init();
+         });
+        </script>
 
-            <a class="dark-mode-toggle"
-               href="javascript:DarkMode.toggle()"></a>
-            <script>
-             $(function(){
-                 DarkMode.init();
-             });
-            </script>
-        </div>
         
-	<nav>
-            
             <a href="/posts/archive/">Archive🗃️</a>
-            
+        
             <a href="/tags/">Tags🏷️</a>
-            
+        
             <a href="/index.xml">RSS&lt;/&gt;</a>
-            
+        
             <a href="/myself/">Contact📨</a>
-            
+        
 
-		
-	</nav>
+	
+    </nav>
 </header>
 
 <main>
@@ -244,21 +246,21 @@ destructor호출해주고 하니까.</p>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li>#<a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li>
+					<li style="display: inline">#<a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li>
 					
-					<li>#<a href="/tags/golang">golang</a></li>
+					<li style="display: inline">#<a href="/tags/golang">golang</a></li>
 					
-					<li>#<a href="/tags/defer">defer</a></li>
+					<li style="display: inline">#<a href="/tags/defer">defer</a></li>
 					
-					<li>#<a href="/tags/raii">raii</a></li>
+					<li style="display: inline">#<a href="/tags/raii">raii</a></li>
 					
-					<li>#<a href="/tags/setjmp">setjmp</a></li>
+					<li style="display: inline">#<a href="/tags/setjmp">setjmp</a></li>
 					
-					<li>#<a href="/tags/longjmp">longjmp</a></li>
+					<li style="display: inline">#<a href="/tags/longjmp">longjmp</a></li>
 					
-					<li>#<a href="/tags/macro">macro</a></li>
+					<li style="display: inline">#<a href="/tags/macro">macro</a></li>
 					
-					<li>#<a href="/tags/try-catch-finally">try-catch-finally</a></li>
+					<li style="display: inline">#<a href="/tags/try-catch-finally">try-catch-finally</a></li>
 					
 				</ul>
 			</nav>
