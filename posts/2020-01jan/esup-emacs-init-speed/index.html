@@ -45,7 +45,7 @@ esup profiler Elisp 자체는 프로파일링이 가능한데2, $HOME/.">
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.8bafbfe845951bd3ccf28002287fb83dc9a8ee6c156f877747ad382c85094130.css" />
 	
 	
 </head>
@@ -138,7 +138,14 @@ GC 성능 개선하기
   하는게 아니라 특정한 크기나 힙에서의 비율만큼 사용했을 때 GC을
   한다는걸 알아서 바꿨다.</p>
 <div class="src src-emacs-lisp">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>  (setq gc-cons-threshold (* 1024 1024 500))</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">setq</span> <span class="nv">gc-cons-threshold</span> <span class="p">(</span><span class="nf">*</span> <span class="mi">1024</span> <span class="mi">1024</span> <span class="mi">500</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
   그냥 500MiB 정도 사용하면 GC하도록 했다.</p>
@@ -158,8 +165,16 @@ GC 성능 개선하기
    그래도 이런 문제를 해결하기 위해서 다음처럼 타이머를 걸어서
    주기적으로 GC을 돌릴 수도 있는거 같다<sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup>:</p>
 <div class="src src-emacs-lisp">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>  (run-with-idle-timer 2 t <span style="font-style:italic">; 2초마다, repeat</span>
-</span></span><span style="display:flex;"><span>                       (lambda () (garbage-collect)))</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">run-with-idle-timer</span> <span class="mi">2</span> <span class="no">t</span> <span class="c1">; 2초마다, repeat</span>
+</span></span><span class="line"><span class="cl">                       <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span> <span class="p">(</span><span class="nf">garbage-collect</span><span class="p">)))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
    그냥 이렇게 안하고, 심심하면 내가 손수 해줄까 고민 중이다.</p>

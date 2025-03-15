@@ -3,7 +3,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="다음의 간단한 코드를 읽어보자.
-var x = &#34;lexical&#34;; function maker() { return function() { return x; }; } { var x = &#34;dynamic&#34;; assert(maker()() == &#34;???&#34;); } maker()() 의 결과는 &#39;dynamic&#39; 이다.
+1 2 3 4 5 6 7 8 9 10 11 12 var x = &#34;lexical&#34;; function maker() { return function() { return x; }; } { var x = &#34;dynamic&#34;; assert(maker()() == &#34;???&#34;); } maker()() 의 결과는 &#39;dynamic&#39; 이다.
 심지어, 맨 마지막에 있는 {..} 블록을 넘어가서도 x 의 값은 여전이 &#39;dynamic&#39; 이다.
 자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다." />
 	<meta property="og:image" content=""/>
@@ -11,7 +11,7 @@ var x = &#34;lexical&#34;; function maker() { return function() { return x; }; }
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let">
   <meta property="og:description" content="다음의 간단한 코드를 읽어보자.
-var x = &#34;lexical&#34;; function maker() { return function() { return x; }; } { var x = &#34;dynamic&#34;; assert(maker()() == &#34;???&#34;); } maker()() 의 결과는 &#39;dynamic&#39; 이다.
+1 2 3 4 5 6 7 8 9 10 11 12 var x = &#34;lexical&#34;; function maker() { return function() { return x; }; } { var x = &#34;dynamic&#34;; assert(maker()() == &#34;???&#34;); } maker()() 의 결과는 &#39;dynamic&#39; 이다.
 심지어, 맨 마지막에 있는 {..} 블록을 넘어가서도 x 의 값은 여전이 &#39;dynamic&#39; 이다.
 자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다.">
   <meta property="og:locale" content="ko_kr">
@@ -29,7 +29,7 @@ var x = &#34;lexical&#34;; function maker() { return function() { return x; }; }
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let">
   <meta name="twitter:description" content="다음의 간단한 코드를 읽어보자.
-var x = &#34;lexical&#34;; function maker() { return function() { return x; }; } { var x = &#34;dynamic&#34;; assert(maker()() == &#34;???&#34;); } maker()() 의 결과는 &#39;dynamic&#39; 이다.
+1 2 3 4 5 6 7 8 9 10 11 12 var x = &#34;lexical&#34;; function maker() { return function() { return x; }; } { var x = &#34;dynamic&#34;; assert(maker()() == &#34;???&#34;); } maker()() 의 결과는 &#39;dynamic&#39; 이다.
 심지어, 맨 마지막에 있는 {..} 블록을 넘어가서도 x 의 값은 여전이 &#39;dynamic&#39; 이다.
 자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다.">
 
@@ -39,7 +39,7 @@ var x = &#34;lexical&#34;; function maker() { return function() { return x; }; }
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.8bafbfe845951bd3ccf28002287fb83dc9a8ee6c156f877747ad382c85094130.css" />
 	
 	
 </head>
@@ -87,18 +87,36 @@ var x = &#34;lexical&#34;; function maker() { return function() { return x; }; }
 <p>
 다음의 간단한 코드를 읽어보자.</p>
 <div class="src src-js">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold">var</span> x = <span style="font-style:italic">&#34;lexical&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> maker() {
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> <span style="font-weight:bold">function</span>() {
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> x;
-</span></span><span style="display:flex;"><span>  };
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">var</span> x = <span style="font-style:italic">&#34;dynamic&#34;</span>;
-</span></span><span style="display:flex;"><span>  assert(maker()() == <span style="font-style:italic">&#34;???&#34;</span>);
-</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;lexical&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">maker</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;dynamic&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">assert</span><span class="p">(</span><span class="nx">maker</span><span class="p">()()</span> <span class="o">==</span> <span class="s2">&#34;???&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 <code>maker()()</code> 의 결과는 <code>&#39;dynamic&#39;</code> 이다.</p>
@@ -114,23 +132,46 @@ var x = &#34;lexical&#34;; function maker() { return function() { return x; }; }
 그나마, <code>let</code> 키워드를 이용하면, lexical binding으로서나마 제대로
 동작하기 시작한다.</p>
 <div class="src src-js">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold">const</span> assert = require(<span style="font-style:italic">&#34;assert&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">let</span> x = <span style="font-style:italic">&#34;lexical&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> maker() {
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> <span style="font-weight:bold">function</span>() {
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> x;
-</span></span><span style="display:flex;"><span>  };
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">let</span> x = <span style="font-style:italic">&#34;dynamic&#34;</span>;
-</span></span><span style="display:flex;"><span>  assert(maker()() == <span style="font-style:italic">&#34;lexical&#34;</span>);
-</span></span><span style="display:flex;"><span>  assert(x == <span style="font-style:italic">&#34;dynamic&#34;</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>assert(x == <span style="font-style:italic">&#34;lexical&#34;</span>);</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">assert</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;assert&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;lexical&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">maker</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;dynamic&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">assert</span><span class="p">(</span><span class="nx">maker</span><span class="p">()()</span> <span class="o">==</span> <span class="s2">&#34;lexical&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">assert</span><span class="p">(</span><span class="nx">x</span> <span class="o">==</span> <span class="s2">&#34;dynamic&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">assert</span><span class="p">(</span><span class="nx">x</span> <span class="o">==</span> <span class="s2">&#34;lexical&#34;</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 그러면, lexical binding와 dynamic binding이 뭐길래 나는 이렇게
@@ -143,28 +184,56 @@ dynamic binding &amp; lexical binding
 <p>
   커먼리습으로 예시 코드를 짜봤다:<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
 <div class="src src-lisp">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>  <span style="font-style:italic">;; every `defvar&#39;, `defparameter&#39; is dynamic binding.</span>
-</span></span><span style="display:flex;"><span>  (defvar *x* nil)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (defun f-dynamic ()
-</span></span><span style="display:flex;"><span>    *x*)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (<span style="font-weight:bold">let</span> ((y <span style="font-style:italic">&#39;lexical</span>))
-</span></span><span style="display:flex;"><span>    (defun f-lexical ()
-</span></span><span style="display:flex;"><span>      y))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (defun run ()
-</span></span><span style="display:flex;"><span>    (<span style="font-weight:bold">let</span> ((*x* <span style="font-style:italic">&#39;dynamic</span>)
-</span></span><span style="display:flex;"><span>          (y <span style="font-style:italic">&#39;dynamic</span>))
-</span></span><span style="display:flex;"><span>      (<span style="font-weight:bold">declare</span> (<span style="font-weight:bold">ignore</span> y)) <span style="font-style:italic">; silence the: &#34;style-warning: The variable Y</span>
-</span></span><span style="display:flex;"><span>                                          <span style="font-style:italic">; is defined but never used.&#34;</span>
-</span></span><span style="display:flex;"><span>      (<span style="font-weight:bold">let</span> ((l (multiple-value-list (values (f-dynamic)
-</span></span><span style="display:flex;"><span>                                            (f-lexical)))))
-</span></span><span style="display:flex;"><span>        (pprint l)
-</span></span><span style="display:flex;"><span>        (assert (equal l &#39;(dynamic lexical))))))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (run) <span style="font-style:italic">; 실행</span></span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="c1">;; every `defvar&#39;, `defparameter&#39; is dynamic binding.</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defvar</span> <span class="vg">*x*</span> <span class="no">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">f-dynamic</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="vg">*x*</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">y</span> <span class="ss">&#39;lexical</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">defun</span> <span class="nv">f-lexical</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">y</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">run</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="vg">*x*</span> <span class="ss">&#39;dynamic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nv">y</span> <span class="ss">&#39;dynamic</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">ignore</span> <span class="nv">y</span><span class="p">))</span> <span class="c1">; silence the: &#34;style-warning: The variable Y</span>
+</span></span><span class="line"><span class="cl">                                          <span class="c1">; is defined but never used.&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">l</span> <span class="p">(</span><span class="nb">multiple-value-list</span> <span class="p">(</span><span class="nf">values</span> <span class="p">(</span><span class="nv">f-dynamic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                            <span class="p">(</span><span class="nv">f-lexical</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nf">pprint</span> <span class="nv">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nb">assert</span> <span class="p">(</span><span class="nf">equal</span> <span class="nv">l</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">dynamic</span> <span class="nv">lexical</span><span class="p">))))))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">run</span><span class="p">)</span> <span class="c1">; 실행</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <div id="outline-container-headline-2" class="outline-3">
 <h3 id="headline-2">
@@ -177,18 +246,36 @@ dynamic binding와 global variable
 <p>
   이는 마치 다음이 괜찮은 코드라는 의미:</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  x = <span style="font-style:italic">&#39;no-dynamic&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">def</span> f():
-</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">return</span> x
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">def</span> run():
-</span></span><span style="display:flex;"><span>      x = <span style="font-style:italic">&#39;dynamic!&#39;</span>
-</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">assert</span> f() == <span style="font-style:italic">&#39;dynamic!&#39;</span> <span style="font-style:italic"># 실패한다. </span>
-</span></span><span style="display:flex;"><span>      <span style="font-style:italic"># 여전히 f()안에서는, x == &#39;no-dynamic&#39;이다.</span>
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">if</span> __name__ == <span style="font-style:italic">&#39;__main__&#39;</span>:
-</span></span><span style="display:flex;"><span>      run()</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;no-dynamic&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">      <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;dynamic!&#39;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">assert</span> <span class="n">f</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;dynamic!&#39;</span> <span class="c1"># 실패한다. </span>
+</span></span><span class="line"><span class="cl">      <span class="c1"># 여전히 f()안에서는, x == &#39;no-dynamic&#39;이다.</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="n">run</span><span class="p">()</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
   그런데, 커먼리습에서는 이게 된다.</p>
@@ -196,15 +283,30 @@ dynamic binding와 global variable
   심지어, 커먼리습의 대부분의 함수, 매크로는 이렇게 쓰는게 일반적인
   idiom이다:</p>
 <div class="src src-lisp">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>  (defvar *some-stream* *standard-output*)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (defun print-sth (x)
-</span></span><span style="display:flex;"><span>    (format *some-stream* <span style="font-style:italic">&#34;~a~%&#34;</span> x))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (print-sth 42)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (<span style="font-weight:bold">let</span> ((*some-stream* *standard-error*))
-</span></span><span style="display:flex;"><span>    (print-sth <span style="font-style:italic">:error!!!!</span>))</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defvar</span> <span class="vg">*some-stream*</span> <span class="vg">*standard-output*</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">print-sth</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">format</span> <span class="vg">*some-stream*</span> <span class="s">&#34;~a~%&#34;</span> <span class="nv">x</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">print-sth</span> <span class="mi">42</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="vg">*some-stream*</span> <span class="vg">*standard-error*</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nv">print-sth</span> <span class="ss">:error!!!!</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
   다른 언어였었다면:</p>
@@ -242,21 +344,42 @@ lexical binding
    또, 어떤 변수가 lexically하게 가장 가까운 scope에서 선언된 내용을
    사용한다.</p>
 <div class="src src-lisp">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>  (<span style="font-weight:bold">let</span> ((x <span style="font-style:italic">&#39;f</span>))
-</span></span><span style="display:flex;"><span>    (defun f ()
-</span></span><span style="display:flex;"><span>      (pprint x)))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (defun run ()
-</span></span><span style="display:flex;"><span>    (<span style="font-weight:bold">let</span> ((x <span style="font-style:italic">&#39;run-1</span>))
-</span></span><span style="display:flex;"><span>      (<span style="font-weight:bold">let</span> ((x <span style="font-style:italic">&#39;run-2</span>))
-</span></span><span style="display:flex;"><span>        (pprint x)
-</span></span><span style="display:flex;"><span>        (f))))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">#|
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic">  CL-USER&gt; (run)
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic">  RUN-2
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic">  F
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic">  |#</span></span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">x</span> <span class="ss">&#39;f</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">defun</span> <span class="nv">f</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nf">pprint</span> <span class="nv">x</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">run</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">x</span> <span class="ss">&#39;run-1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">x</span> <span class="ss">&#39;run-2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nf">pprint</span> <span class="nv">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">f</span><span class="p">))))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cm">#|
+</span></span></span><span class="line"><span class="cl"><span class="cm">  CL-USER&gt; (run)
+</span></span></span><span class="line"><span class="cl"><span class="cm">  RUN-2
+</span></span></span><span class="line"><span class="cl"><span class="cm">  F
+</span></span></span><span class="line"><span class="cl"><span class="cm">  |#</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
    같은 함수, 호출스택 안에서는 단순하게 가장 가까운 <code>let</code> 의 선언으로
@@ -306,26 +429,52 @@ Scheme
    컴파일러/인터프리터를 확장하지 않고도 추가할 수 있다. (그리고
    어쩌면 이렇게 유사한 방법으로 JS에도 추가할 수 있겠지)</p>
 <div class="src src-scheme">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scheme" data-lang="scheme"><span style="display:flex;"><span>  (use-modules ((rnrs) :version (6)))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (<span style="font-weight:bold">define </span>var-dynamic (make-parameter <span style="font-style:italic">&#39;dynamic</span>))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (<span style="font-weight:bold">define </span>(lexical-maker)
-</span></span><span style="display:flex;"><span>    (<span style="font-weight:bold">let </span>((var-lexical <span style="font-style:italic">&#39;lexical-1</span>))
-</span></span><span style="display:flex;"><span>      (<span style="font-weight:bold">lambda </span>() var-lexical)))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (<span style="font-weight:bold">define </span>(dynamic-maker)
-</span></span><span style="display:flex;"><span>    (<span style="font-weight:bold">lambda </span>() (var-dynamic))) <span style="font-style:italic">; `var-dynamic&#39; needs to be evaluated as</span>
-</span></span><span style="display:flex;"><span>                               <span style="font-style:italic">; a function to get its&#39; value.</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (<span style="font-weight:bold">define </span>(run)
-</span></span><span style="display:flex;"><span>    (<span style="font-weight:bold">let </span>((var-lexical <span style="font-style:italic">&#39;lexical-no!</span>))
-</span></span><span style="display:flex;"><span>      (assert (eq? ((lexical-maker))
-</span></span><span style="display:flex;"><span>                   <span style="font-style:italic">&#39;lexical-1</span>)))
-</span></span><span style="display:flex;"><span>    (parameterize ((var-dynamic <span style="font-style:italic">&#39;dynamic-yes</span>)) <span style="font-style:italic">; not just `let&#39;, it&#39;s</span>
-</span></span><span style="display:flex;"><span>                                               <span style="font-style:italic">; `parameterize&#39;.</span>
-</span></span><span style="display:flex;"><span>      (assert (eq? ((dynamic-maker))
-</span></span><span style="display:flex;"><span>                   <span style="font-style:italic">&#39;dynamic-yes</span>))))</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">use-modules</span> <span class="p">((</span><span class="nf">rnrs</span><span class="p">)</span> <span class="nv">:version</span> <span class="p">(</span><span class="mi">6</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">define </span><span class="nv">var-dynamic</span> <span class="p">(</span><span class="nf">make-parameter</span> <span class="ss">&#39;dynamic</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">lexical-maker</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">var-lexical</span> <span class="ss">&#39;lexical-1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="k">lambda </span><span class="p">()</span> <span class="nv">var-lexical</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">dynamic-maker</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">lambda </span><span class="p">()</span> <span class="p">(</span><span class="nf">var-dynamic</span><span class="p">)))</span> <span class="c1">; `var-dynamic&#39; needs to be evaluated as</span>
+</span></span><span class="line"><span class="cl">                               <span class="c1">; a function to get its&#39; value.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">run</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">var-lexical</span> <span class="ss">&#39;lexical-no!</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nf">assert</span> <span class="p">(</span><span class="nb">eq? </span><span class="p">((</span><span class="nf">lexical-maker</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                   <span class="ss">&#39;lexical-1</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">parameterize</span> <span class="p">((</span><span class="nf">var-dynamic</span> <span class="ss">&#39;dynamic-yes</span><span class="p">))</span> <span class="c1">; not just `let&#39;, it&#39;s</span>
+</span></span><span class="line"><span class="cl">                                               <span class="c1">; `parameterize&#39;.</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nf">assert</span> <span class="p">(</span><span class="nb">eq? </span><span class="p">((</span><span class="nf">dynamic-maker</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                   <span class="ss">&#39;dynamic-yes</span><span class="p">))))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
    조금 괄호가 복잡해보인다. Scheme의 특성으로, lambda-function을
@@ -354,23 +503,46 @@ Emacs-Lisp
    그리고 지금은 lexical binding을 지원하기 위해서는 사용하려는
    소스코드의 <a href="https://www.emacswiki.org/emacs/FileLocalVariables">file local variable</a> 으로 지정해줘야 함.</p>
 <div class="src src-emacs-lisp">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>  (assert (eq <span style="font-style:italic">&#39;dynamic</span>
-</span></span><span style="display:flex;"><span>              (let ((x <span style="font-style:italic">&#39;lexical</span>))
-</span></span><span style="display:flex;"><span>                (let ((f (lambda () x)))
-</span></span><span style="display:flex;"><span>                  (let ((x <span style="font-style:italic">&#39;dynamic</span>))
-</span></span><span style="display:flex;"><span>                    (funcall f))))))</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">assert</span> <span class="p">(</span><span class="nf">eq</span> <span class="ss">&#39;dynamic</span>
+</span></span><span class="line"><span class="cl">              <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">x</span> <span class="ss">&#39;lexical</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">f</span> <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span> <span class="nv">x</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">                  <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">x</span> <span class="ss">&#39;dynamic</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">(</span><span class="nf">funcall</span> <span class="nv">f</span><span class="p">))))))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
    위 코드는 dynamic binding으로 동작한다.</p>
 <p>
    lexical binding을 쓰려면 다음과 같이 달라진다.</p>
 <div class="src src-emacs-lisp">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>  <span style="font-style:italic">;;; -*- lexical-binding: t; -*-</span>
-</span></span><span style="display:flex;"><span>  (assert (eq <span style="font-style:italic">&#39;lexical</span>
-</span></span><span style="display:flex;"><span>              (let ((x <span style="font-style:italic">&#39;lexical</span>))
-</span></span><span style="display:flex;"><span>                (let ((f (lambda () x)))
-</span></span><span style="display:flex;"><span>                  (let ((x <span style="font-style:italic">&#39;dynamic</span>))
-</span></span><span style="display:flex;"><span>                    (funcall f))))))</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="c1">;;; -*- lexical-binding: t; -*-</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">assert</span> <span class="p">(</span><span class="nf">eq</span> <span class="ss">&#39;lexical</span>
+</span></span><span class="line"><span class="cl">              <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">x</span> <span class="ss">&#39;lexical</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">f</span> <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span> <span class="nv">x</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">                  <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">x</span> <span class="ss">&#39;dynamic</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">(</span><span class="nf">funcall</span> <span class="nv">f</span><span class="p">))))))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
    맨 첫 번째 특별한 주석으로 표기한 부분을 눈여겨 보라.</p>
@@ -388,17 +560,34 @@ Clojure
 <p>
    <a href="http://clojure.github.io/clojure/clojure.core-api.html#clojure.core/binding">http://clojure.github.io/clojure/clojure.core-api.html#clojure.core/binding</a></p>
 <div class="src src-clojure">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>user=&gt; (<span style="font-weight:bold">def </span>^<span style="font-style:italic">:dynamic</span> x 1)
-</span></span><span style="display:flex;"><span>user=&gt; (<span style="font-weight:bold">def </span>^<span style="font-style:italic">:dynamic</span> y 1)
-</span></span><span style="display:flex;"><span>user=&gt; (+ x y)
-</span></span><span style="display:flex;"><span>2
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>user=&gt; (binding [x 2 y 3]
-</span></span><span style="display:flex;"><span>         (+ x y))
-</span></span><span style="display:flex;"><span>5
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>user=&gt; (+ x y)
-</span></span><span style="display:flex;"><span>2</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="line"><span class="cl"><span class="nv">user=&gt;</span> <span class="p">(</span><span class="k">def </span><span class="o">^</span><span class="ss">:dynamic</span> <span class="nv">x</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">user=&gt;</span> <span class="p">(</span><span class="k">def </span><span class="o">^</span><span class="ss">:dynamic</span> <span class="nv">y</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">user=&gt;</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">x</span> <span class="nv">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">user=&gt;</span> <span class="p">(</span><span class="nb">binding </span><span class="p">[</span><span class="nv">x</span> <span class="mi">2</span> <span class="nv">y</span> <span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">         <span class="p">(</span><span class="nb">+ </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="mi">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">user=&gt;</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">x</span> <span class="nv">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>

@@ -22,7 +22,7 @@
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.8bafbfe845951bd3ccf28002287fb83dc9a8ee6c156f877747ad382c85094130.css" />
 	
 	
 </head>
@@ -147,7 +147,7 @@ freebsd-samsung _smb._tcp 445 service mdnsresponderposix start &hellip;
 						
 						나도 x11에서 wayland 기반으로 옮겨가고 있는데, 다른 것들은 대부분 괜찮거나 포기.1
 가볍고 좋은데, debian chromium에서 ibus으로 한글 입력이 안되어서 알아봤다.
-1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨. 힌트 얻음: https://bugzilla.redhat.com/show_bug.cgi?id=2058976 2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지? for pid in $(pgrep chromium); do #echo $pid grep -i gtk /proc/&#34;$pid&#34;/maps done ==&gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&gt; ibus 연동안됨.
+1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨. 힌트 얻음: https://bugzilla.redhat.com/show_bug.cgi?id=2058976 2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지? 1 2 3 4 for pid in $(pgrep chromium); do #echo $pid grep -i gtk /proc/&#34;$pid&#34;/maps done ==&gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&gt; ibus 연동안됨.
 3) 실행커맨드/스크립트 확인 dpkg -L chromium-browser 으로 desktop launcher 확인 /usr/share/applications/chromium-browser.&hellip;
 						
 					</div>
@@ -222,7 +222,7 @@ https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e
 원하는 것과 접근법 defer.inl : 사용예 제약사항과 생각해볼꺼리 Footnotes 원하는 것과 접근법 https://go.dev/blog/defer-panic-and-recover https://docs.rs/defer/latest/defer/fn.defer.html https://ziglang.org/documentation/master/#defer golang/zig에서처럼 defer 등록한 LIFO순서대로 호출되도록.
 검색해보면, 대부분 RAII을 사용하거나 하는 것들이 보인다:
 DDG: c++ golang defer https://stackoverflow.com/questions/33050620/golang-style-defer-in-c https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/ …그냥 std::shared_ptr&lt;void&gt; 을 이용하는 방식이 마음에 들었다. 그리고 조금 더 간단하게 사용하려고 매크로로 만들어 봤다.
-defer.inl : /* -*- mode: c++; -*- */ #ifndef defer_INL #define defer_INL 1 #include &lt;memory&gt; #define _Defer_CONCAT_IMPL( x, y ) x##y #define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y ) #define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk) #endif /*defer_INL*/ __COUNTER__ 이용해서 매크로가 생성한 std::shared_ptr&lt;.&hellip;
+defer.inl : 1 2 3 4 5 6 7 8 9 10 11 12 13 /* -*- mode: c++; -*- */ #ifndef defer_INL #define defer_INL 1 #include &lt;memory&gt; #define _Defer_CONCAT_IMPL( x, y ) x##y #define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y ) #define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk) #endif /*defer_INL*/ __COUNTER__ 이용해서 매크로가 생성한 std::shared_ptr&lt;.&hellip;
 						
 					</div>
                                         
@@ -623,7 +623,7 @@ Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 �
 					<br><div class="description">
 						
 						지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.
-from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.&hellip;
+1 2 3 4 5 6 7 8 from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.&hellip;
 						
 					</div>
                                         
@@ -715,7 +715,7 @@ Prototyping등 더 편안하게 혼자 코딩을 할 때는… 혼자 커먼리�
 					<br><div class="description">
 						
 						어제 작성한 LOOP매크로을 이용한 구현 을 풀어서, 만약 LOOP매크로가 없었더라면 어떻게 짰을지 작성해봤다.
-(defun max-nested-parentheses-raw (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (let ((n 0) (result 0)) (declare (type fixnum n result)) (dotimes (s--cur-idx (length s)) (let ((ch (elt s s--cur-idx))) (when (member ch &#39;(#\( #\))) (incf n (if (eql #\( ch) 1 -1)) (setf result (max n result))))) result)) 여전히 타입을 지정해서 자동으로 타입추론, 최적화 하도록 했다.&hellip;
+1 2 3 4 5 6 7 8 9 10 11 12 (defun max-nested-parentheses-raw (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (let ((n 0) (result 0)) (declare (type fixnum n result)) (dotimes (s--cur-idx (length s)) (let ((ch (elt s s--cur-idx))) (when (member ch &#39;(#\( #\))) (incf n (if (eql #\( ch) 1 -1)) (setf result (max n result))))) result)) 여전히 타입을 지정해서 자동으로 타입추론, 최적화 하도록 했다.&hellip;
 						
 					</div>
                                         
@@ -727,7 +727,7 @@ Prototyping등 더 편안하게 혼자 코딩을 할 때는… 혼자 커먼리�
 					<br><div class="description">
 						
 						 문제 https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
-작성한 코드 (defun max-nested-parentheses (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (loop with n fixnum = 0 for ch across s when (member ch &#39;(#\( #\))) do (incf n (if (eql #\( ch) 1 -1)) maximizing n)) 코드 의도 우아한 코드보다는 공간복잡도가 O(1) 이고 싶었다. Edit SBCL에 맞춰 코드에 타입을 지정해줘봤다.
+작성한 코드 1 2 3 4 5 6 7 8 (defun max-nested-parentheses (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (loop with n fixnum = 0 for ch across s when (member ch &#39;(#\( #\))) do (incf n (if (eql #\( ch) 1 -1)) maximizing n)) 코드 의도 우아한 코드보다는 공간복잡도가 O(1) 이고 싶었다. Edit SBCL에 맞춰 코드에 타입을 지정해줘봤다.
 결과 어셈블리 코드가 조금 짧아졌다. &hellip;
 						
 					</div>

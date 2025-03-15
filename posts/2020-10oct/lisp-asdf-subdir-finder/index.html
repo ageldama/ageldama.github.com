@@ -37,7 +37,7 @@ Prototyping등 더 편안하게 혼자 코딩을 할 때는… 혼자 커먼리�
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.8bafbfe845951bd3ccf28002287fb83dc9a8ee6c156f877747ad382c85094130.css" />
 	
 	
 </head>
@@ -206,95 +206,190 @@ sly-inspector으로 이맥스 안에서 편안하게 디렉토리 오가듯이 �
 </h2>
 <div id="outline-text-headline-6" class="outline-text-2">
 <div class="src src-lisp">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>  (<span style="font-weight:bold">eval-when</span> (<span style="font-style:italic">:compile-toplevel</span> <span style="font-style:italic">:load-toplevel</span> <span style="font-style:italic">:execute</span>)
-</span></span><span style="display:flex;"><span>    <span style="font-style:italic">;; 필요한 라이브러리들 로드.</span>
-</span></span><span style="display:flex;"><span>    (ql:quickload <span style="font-style:italic">:cl-fad</span>)  <span style="font-style:italic">; 하위 디렉토리에서 파일 검색 &amp; pathname 조작.</span>
-</span></span><span style="display:flex;"><span>    (ql:quickload <span style="font-style:italic">:cl-ppcre</span>)  <span style="font-style:italic">; regex.</span>
-</span></span><span style="display:flex;"><span>    (ql:quickload <span style="font-style:italic">:closer-mop</span>)  <span style="font-style:italic">; funcall-able metaclass.</span>
-</span></span><span style="display:flex;"><span>    (ql:quickload <span style="font-style:italic">:equals</span>)  <span style="font-style:italic">; CLOS객체의 값 비교 protocol.</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="font-style:italic">;; 로딩 하는 소스파일의 디렉토리.</span>
-</span></span><span style="display:flex;"><span>    (defvar *my-dir* nil))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (unless *my-dir*
-</span></span><span style="display:flex;"><span>    <span style="font-style:italic">;; 처음 소스파일을 컴파일, 로딩 할 때 세팅됨.</span>
-</span></span><span style="display:flex;"><span>    (<span style="font-weight:bold">let*</span> ((pn *load-pathname*)
-</span></span><span style="display:flex;"><span>           (dir (cl-fad:pathname-directory-pathname pn)))
-</span></span><span style="display:flex;"><span>      (setf *my-dir* dir)))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; cl-fad:walk-directory 으로 파일 검색 시 조기 중단을 위해 condition 정의.</span>
-</span></span><span style="display:flex;"><span>  (define-condition cl-fad-matching-found (<span style="">condition</span>)
-</span></span><span style="display:flex;"><span>    ((found <span style="font-style:italic">:initarg</span> <span style="font-style:italic">:found</span>)))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  (defun find-asdf-in-subdir (dir asdf-name)
-</span></span><span style="display:flex;"><span>    <span style="font-style:italic">&#34;(find-asdf-in-subdir #p\&#34;/home/my/project\&#34; :cl-state-machine)
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic">    ;; =&gt; #P\&#34;.../cl-state-machine.asd\&#34; or NIL&#34;</span>
-</span></span><span style="display:flex;"><span>    (<span style="font-weight:bold">flet</span> ((signal-found (found)  <span style="font-style:italic">; 검색에 성공해서 매칭 결과를 전달.</span>
-</span></span><span style="display:flex;"><span>             (signal <span style="font-style:italic">&#39;cl-fad-matching-found</span> <span style="font-style:italic">:found</span> found)))
-</span></span><span style="display:flex;"><span>      (handler-bind ((cl-fad-matching-found  <span style="font-style:italic">; 검색 성공, 매칭 결과를 되돌리며 조기 종료.</span>
-</span></span><span style="display:flex;"><span>                       #&#39;(lambda (c) (with-slots (found) c
-</span></span><span style="display:flex;"><span>                                       (<span style="font-weight:bold">return-from</span> find-asdf-in-subdir found)))))
-</span></span><span style="display:flex;"><span>        <span style="font-style:italic">;; `scanner&#39; 으로 regex 매칭을 준비.</span>
-</span></span><span style="display:flex;"><span>        (<span style="font-weight:bold">let</span> ((scanner (cl-ppcre:create-scanner (format nil <span style="font-style:italic">&#34;~a\.asd(f)?&#34;</span>
-</span></span><span style="display:flex;"><span>                                                        (<span style="font-weight:bold">string</span> asdf-name))
-</span></span><span style="display:flex;"><span>                                                <span style="font-style:italic">;; keyword-&gt;string하면 기본 설정이 대문자이므로.</span>
-</span></span><span style="display:flex;"><span>                                                <span style="font-style:italic">:case-insensitive-mode</span> t)))
-</span></span><span style="display:flex;"><span>          (cl-fad:walk-directory dir
-</span></span><span style="display:flex;"><span>                                 (lambda (name)
-</span></span><span style="display:flex;"><span>                                   (<span style="font-weight:bold">let</span> ((base-name (path:basename name)))
-</span></span><span style="display:flex;"><span>                                     (when (cl-ppcre:scan scanner (namestring base-name))
-</span></span><span style="display:flex;"><span>                                       <span style="font-style:italic">;; 매칭 성공.</span>
-</span></span><span style="display:flex;"><span>                                       (signal-found name))))
-</span></span><span style="display:flex;"><span>                                 <span style="font-style:italic">;; 디렉토리 항목은 매칭 시도 안하도록.</span>
-</span></span><span style="display:flex;"><span>                                 <span style="font-style:italic">:directories</span> nil)
-</span></span><span style="display:flex;"><span>          <span style="font-style:italic">;; not-found</span>
-</span></span><span style="display:flex;"><span>          nil))))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; `funcallable-standard-class&#39;을 metaclass으로 지정하여, closure으로</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; finder함수를 감싸서 `asdf:*system-definition-search-functions*&#39;</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; 넣지 않도록 했다.</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;;</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; closure이 아니라 그냥 CLOS object이므로 `equals:equals&#39;을 구현하기</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; 쉽도록. (또 common-lisp 구현에 따라서도 portable하기도 하고)</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;;</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; http://www.metamodulaire.net/CLOS-MOP/funcallable-instances.html</span>
-</span></span><span style="display:flex;"><span>  (defclass asdf-finder ()
-</span></span><span style="display:flex;"><span>    ((base-dir <span style="font-style:italic">:initarg</span> <span style="font-style:italic">:base-dir</span>))
-</span></span><span style="display:flex;"><span>    (<span style="font-style:italic">:metaclass</span> closer-mop:funcallable-standard-class))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; 반복적으로 `pushnew&#39;해도 동일한 디렉토리에 대한, `asdf-finder&#39;을</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; 중복해서 넣지 않도록, `equals&#39;-protocol을 구현.</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;;</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; `pushnew&#39;을 반복적으로 하게 되는 이유는, 같은 live image에</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; 소스코드를 수정하며 컴파일을 반복적으로 하며 점진적으로 개발하는</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; 사이클이 커먼리습에서는 편하니까, 그런 개발 사이클에 적합할 수</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; 있도록 고려해서.</span>
-</span></span><span style="display:flex;"><span>  (defmethod equals:equals ((lhs asdf-finder) (rhs asdf-finder) <span style="font-weight:bold">&amp;rest</span> args)
-</span></span><span style="display:flex;"><span>    (<span style="font-weight:bold">declare</span> (<span style="font-weight:bold">ignore</span> args))
-</span></span><span style="display:flex;"><span>    (equals:equals (slot-value lhs <span style="font-style:italic">&#39;base-dir</span>) (slot-value rhs <span style="font-style:italic">&#39;base-dir</span>)))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; 초기화가 끝난 다음에, funcallable한 객체로 만든다.</span>
-</span></span><span style="display:flex;"><span>  (defmethod initialize-instance <span style="font-style:italic">:after</span> ((an-asdf-finder asdf-finder) <span style="font-weight:bold">&amp;key</span>)
-</span></span><span style="display:flex;"><span>    (with-slots (base-dir) an-asdf-finder
-</span></span><span style="display:flex;"><span>      <span style="font-style:italic">;;; `funcall&#39; 이 이 인스턴스에 대해 적용될 때, 어떻게 동작할지.</span>
-</span></span><span style="display:flex;"><span>      (closer-mop:set-funcallable-instance-function
-</span></span><span style="display:flex;"><span>       an-asdf-finder #&#39;(lambda (asdf-name)
-</span></span><span style="display:flex;"><span>                          (find-asdf-in-subdir base-dir asdf-name)))))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; ASDF3에 연결.</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;;</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; 현재 소스파일이 있는 디렉토리 이하에 있는 `*.asdf&#39;, `*.asdf&#39; asdf</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; system definition file을 자동으로 로딩한다.</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;;</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; 예를 들어, `(asdf:load-system :cl-state-machine)&#39; 을 시도하면,</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; `cl-state-machine.asd&#39; 이나 `cl-state-machine.asdf&#39; 을 하위</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;;; 디렉토리에서 검색해 로딩할 것이다.</span>
-</span></span><span style="display:flex;"><span>  (pushnew (make-instance <span style="font-style:italic">&#39;asdf-finder</span> <span style="font-style:italic">:base-dir</span> *my-dir*)
-</span></span><span style="display:flex;"><span>           asdf:*system-definition-search-functions*
-</span></span><span style="display:flex;"><span>           <span style="font-style:italic">:test</span> #&#39;equals:equals)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;; EX: (ql:quickload :cl-state-machine)</span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic">;; EX: (asdf:load-system :cl-state-machine)</span></span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="k">eval-when</span> <span class="p">(</span><span class="ss">:compile-toplevel</span> <span class="ss">:load-toplevel</span> <span class="ss">:execute</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">;; 필요한 라이브러리들 로드.</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nv">ql:quickload</span> <span class="ss">:cl-fad</span><span class="p">)</span>  <span class="c1">; 하위 디렉토리에서 파일 검색 &amp; pathname 조작.</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nv">ql:quickload</span> <span class="ss">:cl-ppcre</span><span class="p">)</span>  <span class="c1">; regex.</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nv">ql:quickload</span> <span class="ss">:closer-mop</span><span class="p">)</span>  <span class="c1">; funcall-able metaclass.</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nv">ql:quickload</span> <span class="ss">:equals</span><span class="p">)</span>  <span class="c1">; CLOS객체의 값 비교 protocol.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">;; 로딩 하는 소스파일의 디렉토리.</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">defvar</span> <span class="vg">*my-dir*</span> <span class="no">nil</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">unless</span> <span class="vg">*my-dir*</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">;; 처음 소스파일을 컴파일, 로딩 할 때 세팅됨.</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">let*</span> <span class="p">((</span><span class="nv">pn</span> <span class="vg">*load-pathname*</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="nv">dir</span> <span class="p">(</span><span class="nv">cl-fad:pathname-directory-pathname</span> <span class="nv">pn</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nb">setf</span> <span class="vg">*my-dir*</span> <span class="nv">dir</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; cl-fad:walk-directory 으로 파일 검색 시 조기 중단을 위해 condition 정의.</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">define-condition</span> <span class="nv">cl-fad-matching-found</span> <span class="p">(</span><span class="kt">condition</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">((</span><span class="nv">found</span> <span class="ss">:initarg</span> <span class="ss">:found</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">find-asdf-in-subdir</span> <span class="p">(</span><span class="nv">dir</span> <span class="nv">asdf-name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;(find-asdf-in-subdir #p\&#34;/home/my/project\&#34; :cl-state-machine)
+</span></span></span><span class="line"><span class="cl"><span class="s">    ;; =&gt; #P\&#34;.../cl-state-machine.asd\&#34; or NIL&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">flet</span> <span class="p">((</span><span class="nv">signal-found</span> <span class="p">(</span><span class="nv">found</span><span class="p">)</span>  <span class="c1">; 검색에 성공해서 매칭 결과를 전달.</span>
+</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="nf">signal</span> <span class="ss">&#39;cl-fad-matching-found</span> <span class="ss">:found</span> <span class="nv">found</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nb">handler-bind</span> <span class="p">((</span><span class="nv">cl-fad-matching-found</span>  <span class="c1">; 검색 성공, 매칭 결과를 되돌리며 조기 종료.</span>
+</span></span><span class="line"><span class="cl">                       <span class="nf">#&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">c</span><span class="p">)</span> <span class="p">(</span><span class="nb">with-slots</span> <span class="p">(</span><span class="nv">found</span><span class="p">)</span> <span class="nv">c</span>
+</span></span><span class="line"><span class="cl">                                       <span class="p">(</span><span class="k">return-from</span> <span class="nv">find-asdf-in-subdir</span> <span class="nv">found</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">;; `scanner&#39; 으로 regex 매칭을 준비.</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">scanner</span> <span class="p">(</span><span class="nv">cl-ppcre:create-scanner</span> <span class="p">(</span><span class="nf">format</span> <span class="no">nil</span> <span class="s">&#34;~a\.asd(f)?&#34;</span>
+</span></span><span class="line"><span class="cl">                                                        <span class="p">(</span><span class="nc">string</span> <span class="nv">asdf-name</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                                                <span class="c1">;; keyword-&gt;string하면 기본 설정이 대문자이므로.</span>
+</span></span><span class="line"><span class="cl">                                                <span class="ss">:case-insensitive-mode</span> <span class="no">t</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nv">cl-fad:walk-directory</span> <span class="nv">dir</span>
+</span></span><span class="line"><span class="cl">                                 <span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                   <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">base-name</span> <span class="p">(</span><span class="nv">path:basename</span> <span class="nv">name</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">                                     <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">cl-ppcre:scan</span> <span class="nv">scanner</span> <span class="p">(</span><span class="nf">namestring</span> <span class="nv">base-name</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                                       <span class="c1">;; 매칭 성공.</span>
+</span></span><span class="line"><span class="cl">                                       <span class="p">(</span><span class="nv">signal-found</span> <span class="nv">name</span><span class="p">))))</span>
+</span></span><span class="line"><span class="cl">                                 <span class="c1">;; 디렉토리 항목은 매칭 시도 안하도록.</span>
+</span></span><span class="line"><span class="cl">                                 <span class="ss">:directories</span> <span class="no">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="c1">;; not-found</span>
+</span></span><span class="line"><span class="cl">          <span class="no">nil</span><span class="p">))))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; `funcallable-standard-class&#39;을 metaclass으로 지정하여, closure으로</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; finder함수를 감싸서 `asdf:*system-definition-search-functions*&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 넣지 않도록 했다.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; closure이 아니라 그냥 CLOS object이므로 `equals:equals&#39;을 구현하기</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 쉽도록. (또 common-lisp 구현에 따라서도 portable하기도 하고)</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; http://www.metamodulaire.net/CLOS-MOP/funcallable-instances.html</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defclass</span> <span class="nv">asdf-finder</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">((</span><span class="nv">base-dir</span> <span class="ss">:initarg</span> <span class="ss">:base-dir</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="ss">:metaclass</span> <span class="nv">closer-mop:funcallable-standard-class</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 반복적으로 `pushnew&#39;해도 동일한 디렉토리에 대한, `asdf-finder&#39;을</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 중복해서 넣지 않도록, `equals&#39;-protocol을 구현.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; `pushnew&#39;을 반복적으로 하게 되는 이유는, 같은 live image에</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 소스코드를 수정하며 컴파일을 반복적으로 하며 점진적으로 개발하는</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 사이클이 커먼리습에서는 편하니까, 그런 개발 사이클에 적합할 수</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 있도록 고려해서.</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defmethod</span> <span class="nv">equals:equals</span> <span class="p">((</span><span class="nv">lhs</span> <span class="nv">asdf-finder</span><span class="p">)</span> <span class="p">(</span><span class="nv">rhs</span> <span class="nv">asdf-finder</span><span class="p">)</span> <span class="k">&amp;rest</span> <span class="nv">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">ignore</span> <span class="nv">args</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nv">equals:equals</span> <span class="p">(</span><span class="nf">slot-value</span> <span class="nv">lhs</span> <span class="ss">&#39;base-dir</span><span class="p">)</span> <span class="p">(</span><span class="nf">slot-value</span> <span class="nv">rhs</span> <span class="ss">&#39;base-dir</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 초기화가 끝난 다음에, funcallable한 객체로 만든다.</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defmethod</span> <span class="nf">initialize-instance</span> <span class="ss">:after</span> <span class="p">((</span><span class="nv">an-asdf-finder</span> <span class="nv">asdf-finder</span><span class="p">)</span> <span class="k">&amp;key</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">with-slots</span> <span class="p">(</span><span class="nv">base-dir</span><span class="p">)</span> <span class="nv">an-asdf-finder</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">;;; `funcall&#39; 이 이 인스턴스에 대해 적용될 때, 어떻게 동작할지.</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nv">closer-mop:set-funcallable-instance-function</span>
+</span></span><span class="line"><span class="cl">       <span class="nv">an-asdf-finder</span> <span class="nf">#&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">asdf-name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                          <span class="p">(</span><span class="nv">find-asdf-in-subdir</span> <span class="nv">base-dir</span> <span class="nv">asdf-name</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; ASDF3에 연결.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 현재 소스파일이 있는 디렉토리 이하에 있는 `*.asdf&#39;, `*.asdf&#39; asdf</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; system definition file을 자동으로 로딩한다.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 예를 들어, `(asdf:load-system :cl-state-machine)&#39; 을 시도하면,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; `cl-state-machine.asd&#39; 이나 `cl-state-machine.asdf&#39; 을 하위</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 디렉토리에서 검색해 로딩할 것이다.</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">pushnew</span> <span class="p">(</span><span class="nf">make-instance</span> <span class="ss">&#39;asdf-finder</span> <span class="ss">:base-dir</span> <span class="vg">*my-dir*</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">           <span class="nv">asdf:*system-definition-search-functions*</span>
+</span></span><span class="line"><span class="cl">           <span class="ss">:test</span> <span class="nf">#&#39;</span><span class="nv">equals:equals</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">;; EX: (ql:quickload :cl-state-machine)</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;; EX: (asdf:load-system :cl-state-machine)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>

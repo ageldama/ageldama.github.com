@@ -42,7 +42,7 @@ Subtype, 일반화(Generalization), 특화(Specialization) 타입을 말할 때,
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.8bafbfe845951bd3ccf28002287fb83dc9a8ee6c156f877747ad382c85094130.css" />
 	
 	
 </head>
@@ -112,11 +112,22 @@ Subtype, 일반화(Generalization), 특화(Specialization)
   이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고
   가정하겠다.</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="font-weight:bold">class</span> <span style="font-weight:bold">Animal</span>(object): <span style="font-weight:bold">pass</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">class</span> <span style="font-weight:bold">Bird</span>(Animal): <span style="font-weight:bold">pass</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">class</span> <span style="font-weight:bold">Human</span>(Animal): <span style="font-weight:bold">pass</span></span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">Bird</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">Human</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span> <span class="k">pass</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
   <code>Animal</code> 타입이 있고, 그를 직접 상속하는 <code>Bird</code>, <code>Human</code> 타입이
@@ -149,7 +160,14 @@ Covariant
 <p>
   예를 들면, 다음과 같은 리스트를 보자:</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  animals: typing.List[Animal] = [Human(), Bird(), Animal()]</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">animals</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="n">Animal</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">Human</span><span class="p">(),</span> <span class="n">Bird</span><span class="p">(),</span> <span class="n">Animal</span><span class="p">()]</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
   허용된다.</p>
@@ -161,11 +179,22 @@ Covariant
   또, 재밌는 점은 다음과 같이 어떤 타입 변수로 지정된 새로운 리스트
   타입끼리 Covariant이 적용되어 Subtype이다.</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  animals: typing.List[Animal] = [] <span style="font-style:italic">#..일때,</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  birds: typing.List[Bird] = [Bird()]
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  animals = birds</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">animals</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="n">Animal</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#..일때,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">birds</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="n">Bird</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">Bird</span><span class="p">()]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">animals</span> <span class="o">=</span> <span class="n">birds</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
   항상은 아니지만 Covariant은 거의 기본으로 대부분에 적용되고<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>,
@@ -197,18 +226,36 @@ Contravariant
   하지만, Covariant와 마찬가지로 계약으로서의 타입, 코드의 안정성을
   담보해주는 타입으로서 생각하면 이해하기 수월하다.</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="font-style:italic"># 다음과 같은 타입의 함수들이 있다:</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">def</span> live(anAnimal: Animal) -&gt; <span style="font-weight:bold">None</span>: <span style="font-weight:bold">pass</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">def</span> sing(aBird: Bird) -&gt; <span style="font-weight:bold">None</span>: <span style="font-weight:bold">pass</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">def</span> love(aHuman: Human) -&gt; <span style="font-weight:bold">None</span>: <span style="font-weight:bold">pass</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-style:italic"># 그럴 때:</span>
-</span></span><span style="display:flex;"><span>  f1: typing.Callable[[Bird], <span style="font-weight:bold">None</span>] = sing    <span style="font-style:italic"># OKAY</span>
-</span></span><span style="display:flex;"><span>  f2: typing.Callable[[Bird], <span style="font-weight:bold">None</span>] = live    <span style="font-style:italic"># OKAY: Contravariant</span>
-</span></span><span style="display:flex;"><span>  f3: typing.Callable[[Animal], <span style="font-weight:bold">None</span>] = love  <span style="font-style:italic"># FAIL</span></span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># 다음과 같은 타입의 함수들이 있다:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">live</span><span class="p">(</span><span class="n">anAnimal</span><span class="p">:</span> <span class="n">Animal</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">sing</span><span class="p">(</span><span class="n">aBird</span><span class="p">:</span> <span class="n">Bird</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">love</span><span class="p">(</span><span class="n">aHuman</span><span class="p">:</span> <span class="n">Human</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 그럴 때:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">f1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Bird</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">sing</span>    <span class="c1"># OKAY</span>
+</span></span><span class="line"><span class="cl">  <span class="n">f2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Bird</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">live</span>    <span class="c1"># OKAY: Contravariant</span>
+</span></span><span class="line"><span class="cl">  <span class="n">f3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Animal</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">love</span>  <span class="c1"># FAIL</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
   Covariant을 생각하고 보면, 완전히 반대다.</p>
@@ -250,13 +297,26 @@ Contravariant
 <p>
   즉, 다음과 같다.</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="font-weight:bold">def</span> makeAnimal() -&gt; Animal:
-</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">return</span> Animal()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">def</span> makeBird() -&gt; Bird:
-</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">return</span> Bird()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  anAnimal: Animal = makeBird()</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">makeAnimal</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Animal</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">Animal</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">makeBird</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Bird</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">Bird</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">anAnimal</span><span class="p">:</span> <span class="n">Animal</span> <span class="o">=</span> <span class="n">makeBird</span><span class="p">()</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
   간단하다.</p>

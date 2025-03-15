@@ -14,7 +14,7 @@
       <link>https://ageldama.github.io/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/</link>
       <pubDate>Thu, 27 Aug 2020 00:00:01 +0900</pubDate>
       <guid>https://ageldama.github.io/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/</guid>
-      <description>arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.&#xA;USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을 쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고 유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.&#xA;정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마 https://github.com/aircrack-ng/rtl8812au 이 드라이버가 살렸다.&#xA;# lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load.</description>
+      <description>arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.&#xA;USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을 쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고 유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.&#xA;정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마 https://github.com/aircrack-ng/rtl8812au 이 드라이버가 살렸다.&#xA;1 2 # lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load.</description>
     </item>
   </channel>
 </rss>

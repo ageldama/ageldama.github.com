@@ -39,7 +39,7 @@
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.8bafbfe845951bd3ccf28002287fb83dc9a8ee6c156f877747ad382c85094130.css" />
 	
 	
 </head>
@@ -178,23 +178,46 @@ Grub 설정 + 아치리눅스 설치이미지으로 부팅하기
 <div id="outline-text-headline-3" class="outline-text-2">
 <p>다음처럼 <code>/mnt/boot/grub/grub.cfg</code> 을 만들어줬다:</p>
 <div class="src src-text">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>  # path to the partition holding ISO images (using UUID)
-</span></span><span style="display:flex;"><span>  probe -u $root --set=rootuuid
-</span></span><span style="display:flex;"><span>  set imgdevpath=&#34;/dev/disk/by-uuid/$rootuuid&#34;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  # define globally (i.e outside any menuentry)
-</span></span><span style="display:flex;"><span>  insmod search_fs_uuid
-</span></span><span style="display:flex;"><span>  search --no-floppy --set=isopart --fs-uuid 123-456
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  # later use inside each menuentry instead
-</span></span><span style="display:flex;"><span>  loopback loop ($isopart)$isofile
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  menuentry &#39;[loopback]archlinux-x86_64.iso&#39; {
-</span></span><span style="display:flex;"><span>          set isofile=&#39;/iso/archlinux-x86_64.iso&#39;
-</span></span><span style="display:flex;"><span>          loopback loop $isofile
-</span></span><span style="display:flex;"><span>          linux (loop)/arch/boot/x86_64/vmlinuz img_dev=$imgdevpath img_loop=$isofile earlymodules=loop
-</span></span><span style="display:flex;"><span>          initrd (loop)/arch/boot/intel_ucode.img (loop)/arch/boot/amd_ucode.img (loop)/arch/boot/x86_64/archiso.img
-</span></span><span style="display:flex;"><span>  }</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">  # path to the partition holding ISO images (using UUID)
+</span></span><span class="line"><span class="cl">  probe -u $root --set=rootuuid
+</span></span><span class="line"><span class="cl">  set imgdevpath=&#34;/dev/disk/by-uuid/$rootuuid&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  # define globally (i.e outside any menuentry)
+</span></span><span class="line"><span class="cl">  insmod search_fs_uuid
+</span></span><span class="line"><span class="cl">  search --no-floppy --set=isopart --fs-uuid 123-456
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  # later use inside each menuentry instead
+</span></span><span class="line"><span class="cl">  loopback loop ($isopart)$isofile
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  menuentry &#39;[loopback]archlinux-x86_64.iso&#39; {
+</span></span><span class="line"><span class="cl">          set isofile=&#39;/iso/archlinux-x86_64.iso&#39;
+</span></span><span class="line"><span class="cl">          loopback loop $isofile
+</span></span><span class="line"><span class="cl">          linux (loop)/arch/boot/x86_64/vmlinuz img_dev=$imgdevpath img_loop=$isofile earlymodules=loop
+</span></span><span class="line"><span class="cl">          initrd (loop)/arch/boot/intel_ucode.img (loop)/arch/boot/amd_ucode.img (loop)/arch/boot/x86_64/archiso.img
+</span></span><span class="line"><span class="cl">  }</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
   위 내용에서 몇 군데 자기 상황에 따라 바꿔줘야한다.</p>
@@ -215,11 +238,22 @@ Grub 설정 + 아치리눅스 설치이미지으로 부팅하기
 <p>
    <code>blkid /dev/sdg1</code> 처럼해서 FS UUID을 얻자.</p>
 <div class="src src-text">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span># blkid /dev/sdg1
-</span></span><span style="display:flex;"><span>/dev/sdg1: UUID=&#34;7AFD-FE7A&#34; BLOCK_SIZE=&#34;512&#34; TYPE=&#34;vfat&#34; PARTUUID=&#34;1805ce54-01&#34;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span># 여기에서 `UUID` 부분을 사용한다.
-</span></span><span style="display:flex;"><span># `PARTUUID` 말고.</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># blkid /dev/sdg1
+</span></span><span class="line"><span class="cl">/dev/sdg1: UUID=&#34;7AFD-FE7A&#34; BLOCK_SIZE=&#34;512&#34; TYPE=&#34;vfat&#34; PARTUUID=&#34;1805ce54-01&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 여기에서 `UUID` 부분을 사용한다.
+</span></span><span class="line"><span class="cl"># `PARTUUID` 말고.</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
    그래서, 

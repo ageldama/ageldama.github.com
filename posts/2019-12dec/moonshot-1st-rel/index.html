@@ -45,7 +45,7 @@
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.8bafbfe845951bd3ccf28002287fb83dc9a8ee6c156f877747ad382c85094130.css" />
 	
 	
 </head>
@@ -252,9 +252,18 @@ configure and make: 빌드 디렉토리에서
    디렉토리를 <code>moonshot:project-build-dir</code> 으로 설정해 빌드 디렉토리로
    지정했다.</p>
 <div class="src src-emacs-lisp">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>  <span style="font-style:italic">;;; .dir-locals.el, 프로젝트 루트 디렉토리에 위치함.</span>
-</span></span><span style="display:flex;"><span>  ((nil . ((*project-build-dir* . <span style="font-style:italic">&#34;venv&#34;</span>)))) <span style="font-style:italic">; 프로젝트 루트 디렉토리 바로 밑에,</span>
-</span></span><span style="display:flex;"><span>                                             <span style="font-style:italic">; `venv/&#39; 디렉토리에 virtualenv == 빌드 디렉토리.</span></span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="c1">;;; .dir-locals.el, 프로젝트 루트 디렉토리에 위치함.</span>
+</span></span><span class="line"><span class="cl">  <span class="p">((</span><span class="no">nil</span> <span class="o">.</span> <span class="p">((</span><span class="vg">*project-build-dir*</span> <span class="o">.</span> <span class="s">&#34;venv&#34;</span><span class="p">))))</span> <span class="c1">; 프로젝트 루트 디렉토리 바로 밑에,</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1">; `venv/&#39; 디렉토리에 virtualenv == 빌드 디렉토리.</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
    이제, 내가 작성한 파이썬 스크립트를 실행하려면, 다음을 거쳐야겠지.</p>
@@ -266,7 +275,14 @@ configure and make: 빌드 디렉토리에서
 <p>이렇게 하려면, 다음처럼 <code>M-x moonshot:run-runners</code> 을 실행하고
    입력한다:</p>
 <div class="src src-shell">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>  source <span style="font-style:italic">&#34;%b/bin/activate&#34;</span>; cd <span style="font-style:italic">&#34;%p&#34;</span>; <span style="font-style:italic">&#34;%a&#34;</span></span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  <span class="nb">source</span> <span class="s2">&#34;%b/bin/activate&#34;</span><span class="p">;</span> <span class="nb">cd</span> <span class="s2">&#34;%p&#34;</span><span class="p">;</span> <span class="s2">&#34;%a&#34;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
    <code>%b</code> 은 빌드 디렉토리 == Virtualenv 디렉토리.</p>
@@ -280,7 +296,14 @@ configure and make: 빌드 디렉토리에서
 <p>
    이걸 매번 입력하려면 귀찮으니까, 설정으로 만들어 놓아도 좋다:</p>
 <div class="src src-emacs-lisp">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>  (add-to-list <span style="font-style:italic">&#39;moonshot:runners</span> <span style="font-style:italic">&#34;source \&#34;%b/bin/activate\&#34;; cd \&#34;%p\&#34;; \&#34;%a\&#34;  # Run with Virtualenv&#34;</span>)</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;moonshot:runners</span> <span class="s">&#34;source \&#34;%b/bin/activate\&#34;; cd \&#34;%p\&#34;; \&#34;%a\&#34;  # Run with Virtualenv&#34;</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 </div>
 </div>

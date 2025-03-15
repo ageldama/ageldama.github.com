@@ -5,7 +5,7 @@
 	<meta name="description" content="arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.
 USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을 쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고 유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.
 정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마 https://github.com/aircrack-ng/rtl8812au 이 드라이버가 살렸다.
-# lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load." />
+1 2 # lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load." />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/">
   <meta property="og:site_name" content="아겔로그">
@@ -13,7 +13,7 @@ USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테
   <meta property="og:description" content="arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.
 USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을 쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고 유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.
 정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마 https://github.com/aircrack-ng/rtl8812au 이 드라이버가 살렸다.
-# lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load.">
+1 2 # lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -31,7 +31,7 @@ USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테
   <meta name="twitter:description" content="arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.
 USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을 쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고 유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.
 정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마 https://github.com/aircrack-ng/rtl8812au 이 드라이버가 살렸다.
-# lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load.">
+1 2 # lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load.">
 
 	
 		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
@@ -39,7 +39,7 @@ USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.8bafbfe845951bd3ccf28002287fb83dc9a8ee6c156f877747ad382c85094130.css" />
 	
 	
 </head>
@@ -93,8 +93,16 @@ USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테
 정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마
 <a href="https://github.com/aircrack-ng/rtl8812au">https://github.com/aircrack-ng/rtl8812au</a> 이 드라이버가 살렸다.</p>
 <div class="src src-text">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span># lsusb
-</span></span><span style="display:flex;"><span>Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU]</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># lsusb
+</span></span><span class="line"><span class="cl">Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU]</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 그것도 DKMS으로 빌드하면 안되고 그냥 <code>make install</code> 해서 동작하게

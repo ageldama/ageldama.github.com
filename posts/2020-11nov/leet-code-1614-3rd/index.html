@@ -3,13 +3,13 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34; - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.
-from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다." />
+1 2 3 4 5 6 7 8 from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다." />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2020-11nov/leet-code-1614-3rd/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;">
   <meta property="og:description" content="지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.
-from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.">
+1 2 3 4 5 6 7 8 from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -24,7 +24,7 @@ from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;">
   <meta name="twitter:description" content="지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.
-from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.">
+1 2 3 4 5 6 7 8 from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.">
 
 	
 		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
@@ -32,7 +32,7 @@ from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch 
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.f4c28267bfa83bb07503b35ff90aae335553d985ff2baad847aa91651e85bc47.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.8bafbfe845951bd3ccf28002287fb83dc9a8ee6c156f877747ad382c85094130.css" />
 	
 	
 </head>
@@ -81,14 +81,28 @@ from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch 
 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고
 싶었다.</p>
 <div class="src src-python">
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="font-weight:bold">from</span> <span style="font-weight:bold">itertools</span> <span style="font-weight:bold">import</span> accumulate
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">def</span> find_paren_count(s):
-</span></span><span style="display:flex;"><span>    gen_only_parens = (ch == <span style="font-style:italic">&#39;(&#39;</span> <span style="font-weight:bold">and</span> 1 <span style="font-weight:bold">or</span> -1
-</span></span><span style="display:flex;"><span>                       <span style="font-weight:bold">for</span> ch <span style="font-weight:bold">in</span> s
-</span></span><span style="display:flex;"><span>                       <span style="font-weight:bold">if</span> ch <span style="font-weight:bold">in</span> (<span style="font-style:italic">&#39;(&#39;</span>, <span style="font-style:italic">&#39;)&#39;</span>,))
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> max(accumulate(gen_only_parens))</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">accumulate</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">find_paren_count</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gen_only_parens</span> <span class="o">=</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="s1">&#39;(&#39;</span> <span class="ow">and</span> <span class="mi">1</span> <span class="ow">or</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                       <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span>
+</span></span><span class="line"><span class="cl">                       <span class="k">if</span> <span class="n">ch</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">,))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">gen_only_parens</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 <p>
 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.</p>
