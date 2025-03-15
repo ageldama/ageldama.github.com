@@ -36,30 +36,42 @@ server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client
 server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client): 응답으로 받은 json을 받아서, html을 생성하여 렌더링. …이게 편하다고 생각해서 여기로 온거 같아. 나말고도 대부분의 사람들이 웹화면을 개발하던 시절에는 이렇게 만들고 싶었었던거 같아. 1 2
 그리고 당연히 ui개발이기 때문에 ‘컴포넌트모델’이나 값바인딩 같은 것들을 원했었고, 현재의 리액트와 같은 형태에 이르른 것 같아.
 물론, vdom이 복잡도를 많이 낮춰줬지만, 희안하게도 예상하지 못하던 문제를 몇가지 더 만들어낸 것 같아.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -68,7 +80,7 @@ server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client
 	<article>
 		<div class="title">
 			<h1 class="title">react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</h1>
-			<div class="meta">Posted on Jun 29, 2022</div>
+			<div class="meta"> 🗓️ 2022_Jun_29</div>
 		</div>
 		
 
@@ -113,13 +125,13 @@ next.js ssr처럼 <code>[name].tsx</code> 같은 file system routing도 지원�
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/ping">ping</a></li>
+					<li>#<a href="/tags/ping">ping</a></li>
 					
-					<li><a href="/tags/html">html</a></li>
+					<li>#<a href="/tags/html">html</a></li>
 					
-					<li><a href="/tags/hotwired">hotwired</a></li>
+					<li>#<a href="/tags/hotwired">hotwired</a></li>
 					
-					<li><a href="/tags/web">web</a></li>
+					<li>#<a href="/tags/web">web</a></li>
 					
 				</ul>
 			</nav>
@@ -131,7 +143,7 @@ next.js ssr처럼 <code>[name].tsx</code> 같은 file system routing도 지원�
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -146,7 +158,7 @@ next.js ssr처럼 <code>[name].tsx</code> 같은 file system routing도 지원�
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

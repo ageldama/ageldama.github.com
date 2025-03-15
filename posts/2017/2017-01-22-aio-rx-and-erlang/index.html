@@ -29,30 +29,42 @@
   <meta name="twitter:description" content="그냥 최근의 자바나 node.js, 특히 자바의 RxJava 같은걸 보다보면, 1 뭔가 언어적으로 지원하지 않는걸 뜯어내서 동작하게 만들고 너무 골치가 아프게 만들어지는건 아닌가 생각도 든다. (사실상 콜백. ㅎㅎ)
 그리고 지금 한창 JDBC이라던지 이런 입출력과 관련된 부분에서 비동기 방식을 지원하려고 많은 변화가 있을만한 시점인거 같다.
 예상은 아마 몇년간은 이런 혼란이 자바쪽에는 계속 있을거 같다는 생각이다. (async/await 같은 키워드가 추가되고 하려면 자바에 몇년이 더 걸릴지는 아무도 모를거 같다. lambda이 추가되는데 얼마나 오래걸렸었는지 추억해보자..)">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -61,7 +73,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Erlang에 더 관심을 기울여야 할 시점인거 같다</h1>
-			<div class="meta">Posted on Jan 22, 2017</div>
+			<div class="meta"> 🗓️ 2017_Jan_22</div>
 		</div>
 		
 
@@ -108,21 +120,21 @@
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/erlang">erlang</a></li>
+					<li>#<a href="/tags/erlang">erlang</a></li>
 					
-					<li><a href="/tags/jvm">jvm</a></li>
+					<li>#<a href="/tags/jvm">jvm</a></li>
 					
-					<li><a href="/tags/java">java</a></li>
+					<li>#<a href="/tags/java">java</a></li>
 					
-					<li><a href="/tags/rxjava">rxjava</a></li>
+					<li>#<a href="/tags/rxjava">rxjava</a></li>
 					
-					<li><a href="/tags/nodejs">nodejs</a></li>
+					<li>#<a href="/tags/nodejs">nodejs</a></li>
 					
-					<li><a href="/tags/concurrency">concurrency</a></li>
+					<li>#<a href="/tags/concurrency">concurrency</a></li>
 					
-					<li><a href="/tags/async">async</a></li>
+					<li>#<a href="/tags/async">async</a></li>
 					
-					<li><a href="/tags/io">io</a></li>
+					<li>#<a href="/tags/io">io</a></li>
 					
 				</ul>
 			</nav>
@@ -134,7 +146,7 @@
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -149,7 +161,7 @@
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

@@ -20,30 +20,42 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="NetworkManager &#43; dnsmasq으로 인터넷공유 만들기">
   <meta name="twitter:description" content="필요성, 궁금함, 현재 상황 메인 데스크탑을 무선랜으로 인터넷에 연결하고 사용함. 다른 기기들도 모두 기본적으로 무선으로 LAN접속. 다 좋은데, 메인 데스크탑 &lt;-&gt; 라즈베리파이 접속할때 ssh 접속도 느린거 같을때가 있음. 무선랜 접속이 많고, 블루투스 등등 다른 간섭도 많을거고, 어쨌든 조금 물리적으로 거리가 있는 무선공유기까지 갔다 오는거니까. 그래서 사용 안하고 있는 데스크탑의 내장 유선 랜포트로 인터넷연결을 공유하는 Private network을 만들어서 유선으로 연결해보기로 했다. 정말 체감이 빨라질지 궁금했고 직접 수동으로 설정하는게 거의 없거나, 내가 사용하고 있는 NetworkManager에서 쉽게 설정이 가능할거 같았다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -52,7 +64,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</h1>
-			<div class="meta">Posted on Feb 26, 2019</div>
+			<div class="meta"> 🗓️ 2019_Feb_26</div>
 		</div>
 		
 
@@ -134,11 +146,11 @@ IP주소를 고정해서 접속이 편하도록 설정했다.</li>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/networkmanager">networkmanager</a></li>
+					<li>#<a href="/tags/networkmanager">networkmanager</a></li>
 					
-					<li><a href="/tags/dnsmasq">dnsmasq</a></li>
+					<li>#<a href="/tags/dnsmasq">dnsmasq</a></li>
 					
-					<li><a href="/tags/dhcp">dhcp</a></li>
+					<li>#<a href="/tags/dhcp">dhcp</a></li>
 					
 				</ul>
 			</nav>
@@ -150,7 +162,7 @@ IP주소를 고정해서 접속이 편하도록 설정했다.</li>
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -165,7 +177,7 @@ IP주소를 고정해서 접속이 편하도록 설정했다.</li>
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

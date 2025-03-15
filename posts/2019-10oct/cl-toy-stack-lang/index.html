@@ -31,30 +31,42 @@ https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0
 그냥 장난으로 인터프리터도 아니라 그냥 eval 이용한 간단한 파서도 필요없이 lexer만으로 만들만한 Forth 비슷한 언어를 만듬.
 명령어도 실용적인 목적이 아닌만큼 그냥 문자열 장난 밖엔 없다.
 느낀점 라이브러리 좋은거 갖다 잘쓰자 uiop 같은거, feature-expression 삽질을 적게하거나 안해도됨. 더 portable하고 잘 굴러가는. Test! 3. 짜고 하나씩 진화시켜가면서 다시 돌리는 재미. Idiomatic하게 그리고 역시 Test! ..처음엔 그냥 전역변수에 상태를 갖도록 만들고, 그걸 dynamic binding으로 바꿔서 파라미터화하고, 또 그걸 다시 상태를 캡슐화하는 클래스로 감싸고, 처음엔 단순하게 리습스럽게 짜고 그걸 진화시키고, 그리고 역시 다시 테스트.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -63,7 +75,7 @@ https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0
 	<article>
 		<div class="title">
 			<h1 class="title">cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</h1>
-			<div class="meta">Posted on Oct 16, 2019</div>
+			<div class="meta"> 🗓️ 2019_Oct_16</div>
 		</div>
 		
 
@@ -125,9 +137,9 @@ portable하고 잘 굴러가는.</li>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/commonlisp">commonlisp</a></li>
+					<li>#<a href="/tags/commonlisp">commonlisp</a></li>
 					
-					<li><a href="/tags/toy">toy</a></li>
+					<li>#<a href="/tags/toy">toy</a></li>
 					
 				</ul>
 			</nav>
@@ -139,7 +151,7 @@ portable하고 잘 굴러가는.</li>
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -154,7 +166,7 @@ portable하고 잘 굴러가는.</li>
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

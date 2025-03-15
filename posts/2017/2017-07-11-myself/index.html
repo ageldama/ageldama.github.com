@@ -25,30 +25,42 @@
   <meta name="twitter:description" content="한국에 와서 다시 일을 다니고 있음. 백엔드 소프트웨어 엔지니어로 과거에 이미 다른 사람들이 만들어놓은걸 마음에 들지 않는 모양을 조금씩 고쳐가고 그럭저럭 출퇴근.
 장마도 오고 엄청나게 덥다. 묘하게 독일에서 똑같은 8시간 근무인데 한국에서는 출퇴근이 엄청나게 힘들다는 생각이 들었다. 그리고 실제로 집밖에서 생활하는 시간을 생각하면 하루 8시간 수면을 하기도 빠듯해서 정말 이상하구나 생각이든다. 거기에 독일에서 생활할때는 나혼자 생활해서 밥이며 청소 같은것들도 내가 혼자해야 했었던걸 생각해도 이상할 정도로 한국에서의 생활은 시간이 쪼들린다.
 여하튼 재미있는건 요즘엔 Python, Flask, SQLAlchemy으로 나름대로 재미있게 작업하고 나름대로 능률적으로 작업을 하고 TDD 잘 적용해서 문제 없게 편안하게 작업하는 방법들을 익힌거 같다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -57,7 +69,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">2017년 7월 11일, 요즘 나는</h1>
-			<div class="meta">Posted on Jul 11, 2017</div>
+			<div class="meta"> 🗓️ 2017_Jul_11</div>
 		</div>
 		
 
@@ -91,9 +103,9 @@
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/myself">myself</a></li>
+					<li>#<a href="/tags/myself">myself</a></li>
 					
-					<li><a href="/tags/2017">2017</a></li>
+					<li>#<a href="/tags/2017">2017</a></li>
 					
 				</ul>
 			</nav>
@@ -105,7 +117,7 @@
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -120,7 +132,7 @@
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

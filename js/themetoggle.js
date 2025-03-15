@@ -1,4 +1,5 @@
 function setTheme(mode) {
+    console.log($);
     localStorage.setItem("theme-storage", mode);
     if (mode === "dark") {
         document.getElementById("darkModeStyle").disabled=false;

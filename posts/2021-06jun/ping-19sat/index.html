@@ -30,30 +30,42 @@ Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 �
 그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,
 Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것, 또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.
 그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -62,7 +74,7 @@ Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 �
 	<article>
 		<div class="title">
 			<h1 class="title">Ping 19/Jun/2021</h1>
-			<div class="meta">Posted on Jun 19, 2021</div>
+			<div class="meta"> 🗓️ 2021_Jun_19</div>
 		</div>
 		
 
@@ -161,7 +173,7 @@ Footnotes
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/ping">ping</a></li>
+					<li>#<a href="/tags/ping">ping</a></li>
 					
 				</ul>
 			</nav>
@@ -173,7 +185,7 @@ Footnotes
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -188,7 +200,7 @@ Footnotes
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

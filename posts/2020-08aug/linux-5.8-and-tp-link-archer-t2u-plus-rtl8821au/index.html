@@ -32,30 +32,42 @@ USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테
 USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을 쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고 유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.
 정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마 https://github.com/aircrack-ng/rtl8812au 이 드라이버가 살렸다.
 # lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -64,7 +76,7 @@ USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테
 	<article>
 		<div class="title">
 			<h1 class="title">Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</h1>
-			<div class="meta">Posted on Aug 27, 2020</div>
+			<div class="meta"> 🗓️ 2020_Aug_27</div>
 		</div>
 		
 
@@ -100,17 +112,17 @@ RPi을 그냥 이참에 라우터로 만들어버릴까 싶기도 하다. 방에
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/linux">linux</a></li>
+					<li>#<a href="/tags/linux">linux</a></li>
 					
-					<li><a href="/tags/kernel">kernel</a></li>
+					<li>#<a href="/tags/kernel">kernel</a></li>
 					
-					<li><a href="/tags/5.8">5.8</a></li>
+					<li>#<a href="/tags/5.8">5.8</a></li>
 					
-					<li><a href="/tags/usb">usb</a></li>
+					<li>#<a href="/tags/usb">usb</a></li>
 					
-					<li><a href="/tags/wifi">wifi</a></li>
+					<li>#<a href="/tags/wifi">wifi</a></li>
 					
-					<li><a href="/tags/driver">driver</a></li>
+					<li>#<a href="/tags/driver">driver</a></li>
 					
 				</ul>
 			</nav>
@@ -122,7 +134,7 @@ RPi을 그냥 이참에 라우터로 만들어버릴까 싶기도 하다. 방에
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -137,7 +149,7 @@ RPi을 그냥 이참에 라우터로 만들어버릴까 싶기도 하다. 방에
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

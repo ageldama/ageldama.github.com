@@ -27,30 +27,42 @@
 마침 HN에 그런걸 하기 적절해 보이는 글이 올라와서 읽어봤다.1
 간략히 정리해보면,
 생각 적기: 짧은 길이 메모를 적어서 생각만으로 카드를 만들고,2 3 이 상태에서는 우선 각 카드는 “순번없음 (Unsorted)” 상태 deck으로 쌓아만 놓는다. 순서매기기(1): 카드끼리 1, 2, 3 같이 순서를 두고 정렬. ‘Unsorted’ deck에서 꺼내와서 정리하는거겠지. 각 순서는 생각의 순서일수도 있겠고, 아니면 그냥 구분되는 다른 생각의 단절을 나타내는 방법으로 쓸수도 있겠지.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -59,7 +71,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Zettelkästen?</h1>
-			<div class="meta">Posted on Oct 12, 2019</div>
+			<div class="meta"> 🗓️ 2019_Oct_12</div>
 		</div>
 		
 
@@ -161,7 +173,7 @@ deck으로 쌓아만 놓는다.</li>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/thinking">thinking</a></li>
+					<li>#<a href="/tags/thinking">thinking</a></li>
 					
 				</ul>
 			</nav>
@@ -173,7 +185,7 @@ deck으로 쌓아만 놓는다.</li>
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -188,7 +200,7 @@ deck으로 쌓아만 놓는다.</li>
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

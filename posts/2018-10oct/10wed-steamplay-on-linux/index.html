@@ -33,30 +33,42 @@
 그러다가 SteamPlay이란걸 알게됐고, 모든 게임이 다 지원되는건 아니더라도 그냥 앞으로 나올 게임들중에 리눅스를 지원하거나 Wine을 통해서 실행할 수 있으면 이걸 쓰는게 더 낫고 윈도가 싫었다.2
 여튼, 좀 설치하고 써보니:
 모든 게임을 지원하지 않는다. 1. 적당히 지원될거라고 생각하던 게임들도 그냥 됐고, SteamPlay지원 안해도 돌려볼랜다 체크해봤자 제대로 안굴러감.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -65,7 +77,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">SteamPlay On Linux</h1>
-			<div class="meta">Posted on Oct 10, 2018</div>
+			<div class="meta"> 🗓️ 2018_Oct_10</div>
 		</div>
 		
 
@@ -119,13 +131,13 @@ Pacman으로 Runtime/Native 설치해서 오히려 속편함.</li>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/steam">steam</a></li>
+					<li>#<a href="/tags/steam">steam</a></li>
 					
-					<li><a href="/tags/steamplay">steamplay</a></li>
+					<li>#<a href="/tags/steamplay">steamplay</a></li>
 					
-					<li><a href="/tags/gaming">gaming</a></li>
+					<li>#<a href="/tags/gaming">gaming</a></li>
 					
-					<li><a href="/tags/linux">linux</a></li>
+					<li>#<a href="/tags/linux">linux</a></li>
 					
 				</ul>
 			</nav>
@@ -137,7 +149,7 @@ Pacman으로 Runtime/Native 설치해서 오히려 속편함.</li>
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -152,7 +164,7 @@ Pacman으로 Runtime/Native 설치해서 오히려 속편함.</li>
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

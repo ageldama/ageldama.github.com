@@ -33,30 +33,42 @@
 결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면 언제든지 매크로를 만들듯이 확장하면 되니까.
 ‘커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다’
 이런 커먼리습 확장 ‘라이브러리’ 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -65,7 +77,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</h1>
-			<div class="meta">Posted on Oct 11, 2019</div>
+			<div class="meta"> 🗓️ 2019_Oct_11</div>
 		</div>
 		
 
@@ -127,13 +139,13 @@ CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/lisp">lisp</a></li>
+					<li>#<a href="/tags/lisp">lisp</a></li>
 					
-					<li><a href="/tags/clojure">clojure</a></li>
+					<li>#<a href="/tags/clojure">clojure</a></li>
 					
-					<li><a href="/tags/macro">macro</a></li>
+					<li>#<a href="/tags/macro">macro</a></li>
 					
-					<li><a href="/tags/syntax">syntax</a></li>
+					<li>#<a href="/tags/syntax">syntax</a></li>
 					
 				</ul>
 			</nav>
@@ -145,7 +157,7 @@ CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -160,7 +172,7 @@ CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

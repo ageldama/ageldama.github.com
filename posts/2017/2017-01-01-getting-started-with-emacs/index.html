@@ -27,30 +27,42 @@
 ..어느날 한 동료가 물어봤다. (그렇다 나는 일터에서도 이맥스를 켜놓고 계속 쓴다.)
 솔직히 기본적으로 매일 Org-mode으로 계획, 일정 등등 정리하고 계속 개인적으로 정리하면서 쓰고, 파이썬, Go, Clojure 같은거 할때도 편집하고 테스트하기도 편하니까 선호하는 편인거 같다. (자바랑 스칼라은 물론 그냥 IntelliJ 쓴다.)
 여튼 그날 간단히 짝프로그래밍하듯이 같이 앉아서 몇가지 이야기를 하고, 내 설정 파일 1 이나 어떻게 접근하는게 좋은지에 대해서 잠깐 이야기를 했었다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -59,7 +71,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Emacs이랑 친해지기</h1>
-			<div class="meta">Posted on Jan 1, 2017</div>
+			<div class="meta"> 🗓️ 2017_Jan_01</div>
 		</div>
 		
 
@@ -412,7 +424,7 @@ IDE으로서 동작하는 편집기가 흔치는 않은거 같다. (개인적으
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/emacs">emacs</a></li>
+					<li>#<a href="/tags/emacs">emacs</a></li>
 					
 				</ul>
 			</nav>
@@ -424,7 +436,7 @@ IDE으로서 동작하는 편집기가 흔치는 않은거 같다. (개인적으
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -439,7 +451,7 @@ IDE으로서 동작하는 편집기가 흔치는 않은거 같다. (개인적으
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

@@ -41,30 +41,42 @@ ccache등도 바로 지원하고, lua으로 스크립팅도 그럭저럭 할만�
 emacs / flycheck &#43; c/c&#43;&#43; 개발할 때에 단점이, 자동적으로 외부 3rd-party 라이브러리의 include-path을 설정해주지 않아서, [dirs-local](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html) 같은걸 세팅해주길 기대한다는 점.
 그래서 그냥 xmake project -vD -k compile_commands -m debug 같이 compile_commands.json 생성하고,
 이걸 파싱해서 표준출력으로 include-paths https://github.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -73,7 +85,7 @@ emacs / flycheck &#43; c/c&#43;&#43; 개발할 때에 단점이, 자동적으로
 	<article>
 		<div class="title">
 			<h1 class="title">xmake, compile_commands.json, flycheck</h1>
-			<div class="meta">Posted on May 6, 2024</div>
+			<div class="meta"> 🗓️ 2024_May_06</div>
 		</div>
 		
 
@@ -137,39 +149,39 @@ Footnotes
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/programming">programming</a></li>
+					<li>#<a href="/tags/programming">programming</a></li>
 					
-					<li><a href="/tags/xmake">xmake</a></li>
+					<li>#<a href="/tags/xmake">xmake</a></li>
 					
-					<li><a href="/tags/c">c</a></li>
+					<li>#<a href="/tags/c">c</a></li>
 					
-					<li><a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li>
+					<li>#<a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li>
 					
-					<li><a href="/tags/xmake">xmake</a></li>
+					<li>#<a href="/tags/xmake">xmake</a></li>
 					
-					<li><a href="/tags/compile_commands.json">compile_commands.json</a></li>
+					<li>#<a href="/tags/compile_commands.json">compile_commands.json</a></li>
 					
-					<li><a href="/tags/flycheck">flycheck</a></li>
+					<li>#<a href="/tags/flycheck">flycheck</a></li>
 					
-					<li><a href="/tags/emacs">emacs</a></li>
+					<li>#<a href="/tags/emacs">emacs</a></li>
 					
-					<li><a href="/tags/clang">clang</a></li>
+					<li>#<a href="/tags/clang">clang</a></li>
 					
-					<li><a href="/tags/gcc">gcc</a></li>
+					<li>#<a href="/tags/gcc">gcc</a></li>
 					
-					<li><a href="/tags/g&#43;&#43;">g&#43;&#43;</a></li>
+					<li>#<a href="/tags/g&#43;&#43;">g&#43;&#43;</a></li>
 					
-					<li><a href="/tags/clang&#43;&#43;">clang&#43;&#43;</a></li>
+					<li>#<a href="/tags/clang&#43;&#43;">clang&#43;&#43;</a></li>
 					
-					<li><a href="/tags/cppcheck">cppcheck</a></li>
+					<li>#<a href="/tags/cppcheck">cppcheck</a></li>
 					
-					<li><a href="/tags/emacslisp">emacslisp</a></li>
+					<li>#<a href="/tags/emacslisp">emacslisp</a></li>
 					
-					<li><a href="/tags/elisp">elisp</a></li>
+					<li>#<a href="/tags/elisp">elisp</a></li>
 					
-					<li><a href="/tags/emacs-lisp">emacs-lisp</a></li>
+					<li>#<a href="/tags/emacs-lisp">emacs-lisp</a></li>
 					
-					<li><a href="/tags/python">python</a></li>
+					<li>#<a href="/tags/python">python</a></li>
 					
 				</ul>
 			</nav>
@@ -181,7 +193,7 @@ Footnotes
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -196,7 +208,7 @@ Footnotes
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

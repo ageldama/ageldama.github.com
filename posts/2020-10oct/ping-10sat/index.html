@@ -30,30 +30,42 @@
 어차피 MacOS을 여러 가지 이유로 좋아하지 않아서 그냥 아치리눅스2를 설치하고 그대로 쓰고 있다.
 최근에는 아예 WIFI을 USB-LAN으로 연결해주는 RPi을 만들어 쓰고 있었다. 물론 내장WIFI은 너무 느려서 nmcli r wifi off 을 기본으로 아예 S/W Disable시켜놓고 살았다.
 어쩌다 계기가 있어서, USB-LAN연결용 RPi을 챙기지 못한 외부에서 어쩔 수 없이 쓰려고 시도해보니, 아예 조금 내장WIFI을 쓰면 조금 동작하다가 시스템이 뻗어버린다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -62,7 +74,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Ping 10/Oct/2020</h1>
-			<div class="meta">Posted on Oct 10, 2020</div>
+			<div class="meta"> 🗓️ 2020_Oct_10</div>
 		</div>
 		
 
@@ -128,7 +140,7 @@ Footnotes
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/ping">ping</a></li>
+					<li>#<a href="/tags/ping">ping</a></li>
 					
 				</ul>
 			</nav>
@@ -140,7 +152,7 @@ Footnotes
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -155,7 +167,7 @@ Footnotes
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

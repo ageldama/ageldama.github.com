@@ -38,30 +38,42 @@ Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Co
 사실 나도 종종 내가 작업한 코드의 문서를 쓰거나2 아니면 다른 사람과 텍스트로 대화를 해야할 때 이렇게 표기를 해왔었다.3
 각각의 언어들에서 (내가 생각하는) 저렇게 표기하는 근거들은 다음과 같다:
 Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Component#getGraphics() JavaDoc안에서 다른 메서드, 필드를 참고로 넣고 싶을 때 이게 표준표기법이고 javadoc도 요렇게 써줘야 링크처리를 해준다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -70,7 +82,7 @@ Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Co
 	<article>
 		<div class="title">
 			<h1 class="title">(소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</h1>
-			<div class="meta">Posted on Nov 13, 2019</div>
+			<div class="meta"> 🗓️ 2019_Nov_13</div>
 		</div>
 		
 
@@ -241,21 +253,21 @@ Smalltalk이 흥미롭다.</p>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/smalltalk">smalltalk</a></li>
+					<li>#<a href="/tags/smalltalk">smalltalk</a></li>
 					
-					<li><a href="/tags/java">java</a></li>
+					<li>#<a href="/tags/java">java</a></li>
 					
-					<li><a href="/tags/javascript">javascript</a></li>
+					<li>#<a href="/tags/javascript">javascript</a></li>
 					
-					<li><a href="/tags/ruby">ruby</a></li>
+					<li>#<a href="/tags/ruby">ruby</a></li>
 					
-					<li><a href="/tags/javadoc">javadoc</a></li>
+					<li>#<a href="/tags/javadoc">javadoc</a></li>
 					
-					<li><a href="/tags/symbol">symbol</a></li>
+					<li>#<a href="/tags/symbol">symbol</a></li>
 					
-					<li><a href="/tags/archaeology">archaeology</a></li>
+					<li>#<a href="/tags/archaeology">archaeology</a></li>
 					
-					<li><a href="/tags/history">history</a></li>
+					<li>#<a href="/tags/history">history</a></li>
 					
 				</ul>
 			</nav>
@@ -267,7 +279,7 @@ Smalltalk이 흥미롭다.</p>
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -282,7 +294,7 @@ Smalltalk이 흥미롭다.</p>
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

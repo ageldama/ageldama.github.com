@@ -32,30 +32,42 @@
 하지만, 몇 가지 장점이 있는 USB 메모리스틱을 만드는 방법임:
 아치리눅스 설치ISO 이미지으로 부팅 가능한 USB 스틱이면서도, ISO파일의 용량만큼만 USB메모리를 활용하는 것이 아니라,
 용량이 되는만큼 그냥 일반적인 메모리스틱처럼 파일 복사용으로도 쓸 수 있음. 사실 리눅스든 다른 OS의 설치 이미지를 USB메모리에 올리면, 딱 그 설치 이미지만큼만 사용할 수 있게 만들어 버리고, 그나마도 Read-only 상태인 ISO이 되어버리고, 더더욱 나쁘게 다른 추가 파티션을 만들어서 남는 공간을 활용할 수도 없게 만든다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -64,7 +76,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Grub2, Archlinux ISO으로 만능 USB 메모리스틱 만들기</h1>
-			<div class="meta">Posted on Feb 23, 2020</div>
+			<div class="meta"> 🗓️ 2020_Feb_23</div>
 		</div>
 		
 
@@ -238,21 +250,21 @@ Grub 설정 + 아치리눅스 설치이미지으로 부팅하기
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/usbstick">usbstick</a></li>
+					<li>#<a href="/tags/usbstick">usbstick</a></li>
 					
-					<li><a href="/tags/memstick">memstick</a></li>
+					<li>#<a href="/tags/memstick">memstick</a></li>
 					
-					<li><a href="/tags/archlinux">archlinux</a></li>
+					<li>#<a href="/tags/archlinux">archlinux</a></li>
 					
-					<li><a href="/tags/linux">linux</a></li>
+					<li>#<a href="/tags/linux">linux</a></li>
 					
-					<li><a href="/tags/grub2">grub2</a></li>
+					<li>#<a href="/tags/grub2">grub2</a></li>
 					
-					<li><a href="/tags/grub">grub</a></li>
+					<li>#<a href="/tags/grub">grub</a></li>
 					
-					<li><a href="/tags/boot">boot</a></li>
+					<li>#<a href="/tags/boot">boot</a></li>
 					
-					<li><a href="/tags/rescue">rescue</a></li>
+					<li>#<a href="/tags/rescue">rescue</a></li>
 					
 				</ul>
 			</nav>
@@ -264,7 +276,7 @@ Grub 설정 + 아치리눅스 설치이미지으로 부팅하기
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -279,7 +291,7 @@ Grub 설정 + 아치리눅스 설치이미지으로 부팅하기
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

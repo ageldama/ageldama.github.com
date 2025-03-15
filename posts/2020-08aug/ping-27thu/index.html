@@ -34,30 +34,42 @@ commit을 한번에 하지 않고, 매 이벤트마다 수행해서 느림. (현
 기존 성능 측정은:
 X event-writer
 commit을 한번에 하지 않고, 매 이벤트마다 수행해서 느림. (현재는 변경되었음) 약 11,196-microseconds (11-ms) X journal-writer">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -66,7 +78,7 @@ commit을 한번에 하지 않고, 매 이벤트마다 수행해서 느림. (현
 	<article>
 		<div class="title">
 			<h1 class="title">Ping 27/Aug/2020</h1>
-			<div class="meta">Posted on Aug 27, 2020</div>
+			<div class="meta"> 🗓️ 2020_Aug_27</div>
 		</div>
 		
 
@@ -185,9 +197,9 @@ So if Postgres is doing 1500 updates per second they are either written to some 
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/ping">ping</a></li>
+					<li>#<a href="/tags/ping">ping</a></li>
 					
-					<li><a href="/tags/proj-a">proj-a</a></li>
+					<li>#<a href="/tags/proj-a">proj-a</a></li>
 					
 				</ul>
 			</nav>
@@ -199,7 +211,7 @@ So if Postgres is doing 1500 updates per second they are either written to some 
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -214,7 +226,7 @@ So if Postgres is doing 1500 updates per second they are either written to some 
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

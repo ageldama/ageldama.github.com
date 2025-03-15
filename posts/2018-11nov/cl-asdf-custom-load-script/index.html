@@ -26,30 +26,42 @@ A system is a collection of Lisp files that together constitute an application o
   <meta name="twitter:description" content="System? 이런게 왜 필요하지? require있잖아 대부분의 유명한 프로그래밍언어들이 커먼리습의 System 에 대응하는 기능이 명확하게 없으니까, 다른 프로그래밍 하거나 하는 방법으로 이야기를 하지는 않아야겠다.1
 https://lispcookbook.github.io/cl-cookbook/systems.html 에서 마음에 드는 설명을 찾을수 있다.
 A system is a collection of Lisp files that together constitute an application or a library, and that should therefore be managed as a whole. A system definition describes which source files make up the system, what the dependencies among them are, and the order they should be compiled and loaded in.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -58,7 +70,7 @@ A system is a collection of Lisp files that together constitute an application o
 	<article>
 		<div class="title">
 			<h1 class="title">ASDF으로 간단한 의존성 연결과 로딩하기</h1>
-			<div class="meta">Posted on Nov 3, 2018</div>
+			<div class="meta"> 🗓️ 2018_Nov_03</div>
 		</div>
 		
 
@@ -368,11 +380,11 @@ Jigsaw</a>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/lisp">lisp</a></li>
+					<li>#<a href="/tags/lisp">lisp</a></li>
 					
-					<li><a href="/tags/commonlisp">commonlisp</a></li>
+					<li>#<a href="/tags/commonlisp">commonlisp</a></li>
 					
-					<li><a href="/tags/asdf">asdf</a></li>
+					<li>#<a href="/tags/asdf">asdf</a></li>
 					
 				</ul>
 			</nav>
@@ -384,7 +396,7 @@ Jigsaw</a>
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -399,7 +411,7 @@ Jigsaw</a>
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

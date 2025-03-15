@@ -31,30 +31,42 @@
 1. “제미니 계획” gemini protocol 을 기반으로 뭔가 새로운 것을 상상하면 즐겁지만,
 정말 제한적이어서, 내 마음대로의 확장을 떠올리게 된다.
 실은, gemtext와 gemini protocol은 마음에 드는 부분이 바로 그런점이지만: 오히려 제한적이고, 그냥 무시해도 되는 것들을 굳이 지원해줘야 할 것 같은 기분에 져서 우겨넣으면서 complexity만 무한대으로 보낼바엔, 이렇게 무시할 것은 잘 무시하는게 더 좋은거 같아.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -63,7 +75,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Ping 02/02/2023 .01: xemacs, gemini, gemtext</h1>
-			<div class="meta">Posted on Feb 2, 2023</div>
+			<div class="meta"> 🗓️ 2023_Feb_02</div>
 		</div>
 		
 
@@ -145,15 +157,15 @@ raspberry pi 3b+ 정도만 켜고 emacs을 켜고 툭툭 두들기기도 하면�
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/ping">ping</a></li>
+					<li>#<a href="/tags/ping">ping</a></li>
 					
-					<li><a href="/tags/gemini">gemini</a></li>
+					<li>#<a href="/tags/gemini">gemini</a></li>
 					
-					<li><a href="/tags/gemtext">gemtext</a></li>
+					<li>#<a href="/tags/gemtext">gemtext</a></li>
 					
-					<li><a href="/tags/xemacs">xemacs</a></li>
+					<li>#<a href="/tags/xemacs">xemacs</a></li>
 					
-					<li><a href="/tags/retro">retro</a></li>
+					<li>#<a href="/tags/retro">retro</a></li>
 					
 				</ul>
 			</nav>
@@ -165,7 +177,7 @@ raspberry pi 3b+ 정도만 켜고 emacs을 켜고 툭툭 두들기기도 하면�
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -180,7 +192,7 @@ raspberry pi 3b+ 정도만 켜고 emacs을 켜고 툭툭 두들기기도 하면�
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

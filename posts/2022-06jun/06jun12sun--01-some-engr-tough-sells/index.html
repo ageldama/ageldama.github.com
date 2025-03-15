@@ -25,30 +25,42 @@ dynamic serialization isn’t worth it, use statically defined serialization unt
   <meta name="twitter:description" content="https://posco.dev/blog/2022-04-23_draft_some-engineering-tough-sells/
 …공감이 가는 부분들은:
 dynamic serialization isn’t worth it, use statically defined serialization untested code is virtually always somewhat wrong doing things right pays off sooner than we usually imagine an ounce of design is worth a pound of implementation in data engineering, the data very often violates your beliefs about the shape thinking about, and minimizing edges in your code’s dependency graph is a win a good (i.e. programmable, fast, reliable, reproducible) build system solves a lot of practical software engineering problems …많은것들을 경험하되, 숙고와 자기객관화는 중요.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -57,7 +69,7 @@ dynamic serialization isn’t worth it, use statically defined serialization unt
 	<article>
 		<div class="title">
 			<h1 class="title">&#34;Some Engineering Tough Sells&#34;</h1>
-			<div class="meta">Posted on Jun 12, 2022</div>
+			<div class="meta"> 🗓️ 2022_Jun_12</div>
 		</div>
 		
 
@@ -85,9 +97,9 @@ dynamic serialization isn’t worth it, use statically defined serialization unt
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/engineering">engineering</a></li>
+					<li>#<a href="/tags/engineering">engineering</a></li>
 					
-					<li><a href="/tags/software">software</a></li>
+					<li>#<a href="/tags/software">software</a></li>
 					
 				</ul>
 			</nav>
@@ -99,7 +111,7 @@ dynamic serialization isn’t worth it, use statically defined serialization unt
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -114,7 +126,7 @@ dynamic serialization isn’t worth it, use statically defined serialization unt
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

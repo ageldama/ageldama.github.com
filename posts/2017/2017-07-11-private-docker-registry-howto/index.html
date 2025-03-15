@@ -22,30 +22,42 @@
   <meta name="twitter:title" content="HOWTO: Private Docker Registry?">
   <meta name="twitter:description" content="말보다 예제 깃헙 Project – https://github.com/ageldama/private-docker-registry-howto
 내 피씨에서 작업하던거 서버에 바로 올려보고 싶은데, 회사에 레지스트리가 없을때, 혹은 레지스트리를 개발서버에 올리지도 못하고 어쨌든 개발서버에 도커 이미지 옮기고 싶을때 ..이런 이상한 상황에서도 쓸만하도록 고민해봄. ">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -54,7 +66,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">HOWTO: Private Docker Registry?</h1>
-			<div class="meta">Posted on Jul 11, 2017</div>
+			<div class="meta"> 🗓️ 2017_Jul_11</div>
 		</div>
 		
 
@@ -75,9 +87,9 @@
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/docker">docker</a></li>
+					<li>#<a href="/tags/docker">docker</a></li>
 					
-					<li><a href="/tags/registry">registry</a></li>
+					<li>#<a href="/tags/registry">registry</a></li>
 					
 				</ul>
 			</nav>
@@ -89,7 +101,7 @@
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -104,7 +116,7 @@
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

@@ -27,30 +27,42 @@
 윈도7 설치된 것도 꽤 가볍고 빠르게 정리되어 있었다. 그냥 FreeBSD을 처음에는 설치하려고 하다가, 결국 애플리케이션이나 그냥 적당히 잘 돌아가는, 이맥스 정보만 잘 동작하는 기계면 될 것 같아서 아치리눅스를 설치.
 만족스럽다.
 데스크탑 원래 사용하던 것도 그렇게 엄청나게 좋은 것은 아니지만 만족스러운 사용인데, 문제는 책상 가운데에 모니터랑 키보드를 놓고 쓰면 책을 읽을 자리가 없어져서 항상 키보드 등을 한 켠으로 밀어놓는다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -59,7 +71,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Ping 22/Feb/2020</h1>
-			<div class="meta">Posted on Feb 22, 2020</div>
+			<div class="meta"> 🗓️ 2020_Feb_22</div>
 		</div>
 		
 
@@ -104,7 +116,7 @@
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/ping">ping</a></li>
+					<li>#<a href="/tags/ping">ping</a></li>
 					
 				</ul>
 			</nav>
@@ -116,7 +128,7 @@
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -131,7 +143,7 @@
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

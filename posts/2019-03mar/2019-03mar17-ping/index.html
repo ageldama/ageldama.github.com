@@ -27,30 +27,42 @@
 “Let Over Lambda” 읽기 Let Over Lambda을 읽기 시작했다. 커먼리습 매크로, 클로져에 대한 이야기를 더 깊이 있게 설명하고, 그런 기능들이 어떻게 리습이랑 리습이 아닌 “Blub language”이라고 말하고있는 대부분의 언어들과의 차이인지를 설명한다.
 리습의 매크로나 closure을 통해서, 그간 내가 프로그래밍언어 설계를 할때 포함해야하고, 컴파일러가 지원하도록 손수 만들어놓아야 한다고 믿던 것들이 얼마나 쉽게 구현되는지를 보며 충격을 받는다. 재밌고 신선하다.
 다른 리습, Prolog책들 쌓아놓고 안 읽던것들도 조금 더 읽어나가야겠다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -59,7 +71,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Ping 17/03/2019</h1>
-			<div class="meta">Posted on Mar 17, 2019</div>
+			<div class="meta"> 🗓️ 2019_Mar_17</div>
 		</div>
 		
 
@@ -128,7 +140,7 @@ language&rdquo;</a>이라고 말하고있는 대부분의
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/ping">ping</a></li>
+					<li>#<a href="/tags/ping">ping</a></li>
 					
 				</ul>
 			</nav>
@@ -140,7 +152,7 @@ language&rdquo;</a>이라고 말하고있는 대부분의
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -155,7 +167,7 @@ language&rdquo;</a>이라고 말하고있는 대부분의
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

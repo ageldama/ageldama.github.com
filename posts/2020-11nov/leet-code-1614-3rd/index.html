@@ -25,30 +25,42 @@ from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch 
   <meta name="twitter:title" content="Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;">
   <meta name="twitter:description" content="지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.
 from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -57,7 +69,7 @@ from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch 
 	<article>
 		<div class="title">
 			<h1 class="title">Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</h1>
-			<div class="meta">Posted on Nov 11, 2020</div>
+			<div class="meta"> 🗓️ 2020_Nov_11</div>
 		</div>
 		
 
@@ -87,15 +99,15 @@ from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch 
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/leet-code">leet-code</a></li>
+					<li>#<a href="/tags/leet-code">leet-code</a></li>
 					
-					<li><a href="/tags/python">python</a></li>
+					<li>#<a href="/tags/python">python</a></li>
 					
-					<li><a href="/tags/generator">generator</a></li>
+					<li>#<a href="/tags/generator">generator</a></li>
 					
-					<li><a href="/tags/lazy">lazy</a></li>
+					<li>#<a href="/tags/lazy">lazy</a></li>
 					
-					<li><a href="/tags/stream">stream</a></li>
+					<li>#<a href="/tags/stream">stream</a></li>
 					
 				</ul>
 			</nav>
@@ -107,7 +119,7 @@ from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch 
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -122,7 +134,7 @@ from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch 
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

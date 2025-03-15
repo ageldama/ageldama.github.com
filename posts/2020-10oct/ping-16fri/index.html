@@ -34,30 +34,42 @@
 다만 문제는 설정이 복잡하고 이해하기 힘든 점보다는 빌드 시간이 너무 느린 점이었다. (내게는)
 그래서 parcel bundler을 시도 했는데, 설정도 거의 필요 없이 바로 동작하고 하는 점은 좋고, 성능도 정말 빨랐다.
 다만 Vim/Emacs으로 파일을 편집하고 저장할 때, parcel watch 대상인 파일들을 종종 아예 dev-server을 재시작해야만 제대로 동작하는 상태로 빠지는게 조금 짜증났다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -66,7 +78,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Ping 17/Oct/2020</h1>
-			<div class="meta">Posted on Oct 17, 2020</div>
+			<div class="meta"> 🗓️ 2020_Oct_17</div>
 		</div>
 		
 
@@ -142,15 +154,15 @@ https://www.hanselman.com/blog/javascript-is-assembly-language-for-the-web-semat
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/ping">ping</a></li>
+					<li>#<a href="/tags/ping">ping</a></li>
 					
-					<li><a href="/tags/parcel">parcel</a></li>
+					<li>#<a href="/tags/parcel">parcel</a></li>
 					
-					<li><a href="/tags/webpack">webpack</a></li>
+					<li>#<a href="/tags/webpack">webpack</a></li>
 					
-					<li><a href="/tags/javascript">javascript</a></li>
+					<li>#<a href="/tags/javascript">javascript</a></li>
 					
-					<li><a href="/tags/webdev">webdev</a></li>
+					<li>#<a href="/tags/webdev">webdev</a></li>
 					
 				</ul>
 			</nav>
@@ -162,7 +174,7 @@ https://www.hanselman.com/blog/javascript-is-assembly-language-for-the-web-semat
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -177,7 +189,7 @@ https://www.hanselman.com/blog/javascript-is-assembly-language-for-the-web-semat
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

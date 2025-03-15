@@ -35,30 +35,42 @@ Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것
 그래서 도전.
 우선 Jekyll 소스용 저장소로 분리하고, 배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다. https://github.com/felixrieseberg/travis-jekyll-git 여기 참고해서 삽질. 결과물은 https://github.com/ageldama/ageldama-gh-jekyll ..진행하면서 처음에 좀 짜증났던거,
 Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것만으로는 안되고, .travis.yml 파일에 gem설치를 지정해야했다. https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5 Travis-CI 작업의 세팅에서 git_target 환경변수에 URL지정할때… github.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -67,7 +79,7 @@ Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것
 	<article>
 		<div class="title">
 			<h1 class="title">Github.io 블로그 TraviCI으로 빌드해서 배포하기</h1>
-			<div class="meta">Posted on Jan 2, 2017</div>
+			<div class="meta"> 🗓️ 2017_Jan_02</div>
 		</div>
 		
 
@@ -117,11 +129,11 @@ Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/github">github</a></li>
+					<li>#<a href="/tags/github">github</a></li>
 					
-					<li><a href="/tags/jekyll">jekyll</a></li>
+					<li>#<a href="/tags/jekyll">jekyll</a></li>
 					
-					<li><a href="/tags/travis-ci">travis-ci</a></li>
+					<li>#<a href="/tags/travis-ci">travis-ci</a></li>
 					
 				</ul>
 			</nav>
@@ -133,7 +145,7 @@ Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -148,7 +160,7 @@ Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

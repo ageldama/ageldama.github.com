@@ -35,30 +35,42 @@ https://github.com/ageldama/radio-recorder
 https://github.com/ageldama/radio-recorder
 방송사의 인터넷 라디오를 녹음 하는 스크립트는 커밋에서 제외하고 공개한다. 이는 방송사에게 문제가 될 수 있으므로 개인적으로 알아내서 사용하고 타인과 공유하지 않기를 바란다.
 프로그램 구성 cron 서버 지정된 시간에 녹음/인코딩 스크립트를 실행하는 스케쥴을 담당한다. 오래된 임시 파일 정리 등등도. 한국의 시간대와 내가 있는 시간대가 달라서 다른 cron scheduler을 쓰지 않고 그냥 짰었던거 같다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -67,7 +79,7 @@ https://github.com/ageldama/radio-recorder
 	<article>
 		<div class="title">
 			<h1 class="title">radio-recorder 프로젝트 설명</h1>
-			<div class="meta">Posted on Dec 11, 2019</div>
+			<div class="meta"> 🗓️ 2019_Dec_11</div>
 		</div>
 		
 
@@ -321,19 +333,19 @@ IO::Async와 같이 확장이 가능한걸 보면 마음이 편안하다.</li>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/radio-gaga">radio-gaga</a></li>
+					<li>#<a href="/tags/radio-gaga">radio-gaga</a></li>
 					
-					<li><a href="/tags/radio">radio</a></li>
+					<li>#<a href="/tags/radio">radio</a></li>
 					
-					<li><a href="/tags/recording">recording</a></li>
+					<li>#<a href="/tags/recording">recording</a></li>
 					
-					<li><a href="/tags/perl5">perl5</a></li>
+					<li>#<a href="/tags/perl5">perl5</a></li>
 					
-					<li><a href="/tags/sqitch">sqitch</a></li>
+					<li>#<a href="/tags/sqitch">sqitch</a></li>
 					
-					<li><a href="/tags/postgresql">postgresql</a></li>
+					<li>#<a href="/tags/postgresql">postgresql</a></li>
 					
-					<li><a href="/tags/mplayer">mplayer</a></li>
+					<li>#<a href="/tags/mplayer">mplayer</a></li>
 					
 				</ul>
 			</nav>
@@ -345,7 +357,7 @@ IO::Async와 같이 확장이 가능한걸 보면 마음이 편안하다.</li>
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -360,7 +372,7 @@ IO::Async와 같이 확장이 가능한걸 보면 마음이 편안하다.</li>
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

@@ -27,30 +27,42 @@
 극공감. 그렇다고 의존성 포함하면 몇 기가나 되는 것들이, 하는 일을 보면 안습. …그렇다고 그런 방법들만을 고르는 안목이 엄청나게 힙한것도, 스스로에게 이익이 되는것도 아니고.
 데스크탑에 작은 서브모니터 연결해놓은 rpi3b&#43;이 rpi4보다 빠르지는 않을지 몰라도, micro-sd 버벅거림이랑 발열 때문에 버벅거리는건 훨씬 적다.
 “rpi4은 빠르니까!“이라면서 나름대로 데탑/랩탑에서 쓰는 설정 그대로, openbox&#43;lxpanel 정도 올려서 쓰고 있고, rpi3b&#43;은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있을까 싶기도 하지만. …어차피 둘 다 엄청 가벼울거 같은데도.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -59,7 +71,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Ping 17/06/2022 .01</h1>
-			<div class="meta">Posted on Jun 17, 2022</div>
+			<div class="meta"> 🗓️ 2022_Jun_17</div>
 		</div>
 		
 
@@ -88,7 +100,7 @@ rpi3b+은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/ping">ping</a></li>
+					<li>#<a href="/tags/ping">ping</a></li>
 					
 				</ul>
 			</nav>
@@ -100,7 +112,7 @@ rpi3b+은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -115,7 +127,7 @@ rpi3b+은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

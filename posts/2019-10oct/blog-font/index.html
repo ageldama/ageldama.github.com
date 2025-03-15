@@ -29,30 +29,42 @@
 어제는 네오둥근모 적용해서 완전 귀엽고 내 취향이기는했는데, 그렇게 두면 안될것 같아서 좀 평범한 폰트로 바꿨다.
 깔끔하게 글이 눈에 잘 들어오고 CDN에서 내려받으니 빨라서 좋다.
 워드프레스에서 본명조(Noto Serif CJK KR) 폰트 사용하기 이 포스팅을 참고. 고맙습니다. 글 쓰신분 아이디가 이스크라(러시아어 ‘불꽃’)이라니… 심장이 뜨거워진다. ↩︎">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -61,7 +73,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">블로그 폰트 적용</h1>
-			<div class="meta">Posted on Oct 21, 2019</div>
+			<div class="meta"> 🗓️ 2019_Oct_21</div>
 		</div>
 		
 
@@ -88,11 +100,11 @@
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/font">font</a></li>
+					<li>#<a href="/tags/font">font</a></li>
 					
-					<li><a href="/tags/cdn">cdn</a></li>
+					<li>#<a href="/tags/cdn">cdn</a></li>
 					
-					<li><a href="/tags/webfont">webfont</a></li>
+					<li>#<a href="/tags/webfont">webfont</a></li>
 					
 				</ul>
 			</nav>
@@ -104,7 +116,7 @@
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -119,7 +131,7 @@
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

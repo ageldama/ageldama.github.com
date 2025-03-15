@@ -33,30 +33,42 @@
 왠만하면, 그냥 세팅하는데 시간낭비하지말고 그냥 제공되는 Gnome, KDE 같이 예쁜거 쓰자.
 …였었는데, 어느날 ASUS 넷북에 낮은 CPU파워으로 리눅스를 설정하고, 이런 “가벼운 데스크탑 환경&#34;을 직접 꾸며서 사용하면서, 오히려 맥북보다 더 편하고 계속 쓰고 싶게 만들고, 내가 더 빠져서 사랑하며 사용하는걸 본 이후로 집과 직장의 데스크탑도 모두 바꾸게됐다.
 그리고 가장 마우스 사용으로부터 오는 잡다한 스트레스나 그런것들도 없고 가장 내게 익숙하고 편안한 환경을 만들어서 행복하게 쓸수있는거 같아.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -65,7 +77,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">어째서 아치리눅스를 쓰며 데스크탑환경을 안쓰는지</h1>
-			<div class="meta">Posted on Sep 15, 2018</div>
+			<div class="meta"> 🗓️ 2018_Sep_15</div>
 		</div>
 		
 
@@ -369,13 +381,13 @@ Pacman으로 바이너리 패키지로 설치하고,
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/linux">linux</a></li>
+					<li>#<a href="/tags/linux">linux</a></li>
 					
-					<li><a href="/tags/it%EA%BC%B0%EB%8C%80">IT꼰대</a></li>
+					<li>#<a href="/tags/it%EA%BC%B0%EB%8C%80">IT꼰대</a></li>
 					
-					<li><a href="/tags/i3wm">i3wm</a></li>
+					<li>#<a href="/tags/i3wm">i3wm</a></li>
 					
-					<li><a href="/tags/archlinux">archlinux</a></li>
+					<li>#<a href="/tags/archlinux">archlinux</a></li>
 					
 				</ul>
 			</nav>
@@ -387,7 +399,7 @@ Pacman으로 바이너리 패키지로 설치하고,
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -402,7 +414,7 @@ Pacman으로 바이너리 패키지로 설치하고,
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

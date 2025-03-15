@@ -32,30 +32,42 @@ var x = &#34;lexical&#34;; function maker() { return function() { return x; }; }
 var x = &#34;lexical&#34;; function maker() { return function() { return x; }; } { var x = &#34;dynamic&#34;; assert(maker()() == &#34;???&#34;); } maker()() 의 결과는 &#39;dynamic&#39; 이다.
 심지어, 맨 마지막에 있는 {..} 블록을 넘어가서도 x 의 값은 여전이 &#39;dynamic&#39; 이다.
 자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -64,7 +76,7 @@ var x = &#34;lexical&#34;; function maker() { return function() { return x; }; }
 	<article>
 		<div class="title">
 			<h1 class="title">Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</h1>
-			<div class="meta">Posted on Dec 30, 2019</div>
+			<div class="meta"> 🗓️ 2019_Dec_30</div>
 		</div>
 		
 
@@ -440,23 +452,23 @@ Guide</a></p>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/lisp">lisp</a></li>
+					<li>#<a href="/tags/lisp">lisp</a></li>
 					
-					<li><a href="/tags/scheme">scheme</a></li>
+					<li>#<a href="/tags/scheme">scheme</a></li>
 					
-					<li><a href="/tags/common-lisp">common-lisp</a></li>
+					<li>#<a href="/tags/common-lisp">common-lisp</a></li>
 					
-					<li><a href="/tags/emacs-lisp">emacs-lisp</a></li>
+					<li>#<a href="/tags/emacs-lisp">emacs-lisp</a></li>
 					
-					<li><a href="/tags/guile">guile</a></li>
+					<li>#<a href="/tags/guile">guile</a></li>
 					
-					<li><a href="/tags/clojure">clojure</a></li>
+					<li>#<a href="/tags/clojure">clojure</a></li>
 					
-					<li><a href="/tags/javascript">javascript</a></li>
+					<li>#<a href="/tags/javascript">javascript</a></li>
 					
-					<li><a href="/tags/dynamic-binding">dynamic-binding</a></li>
+					<li>#<a href="/tags/dynamic-binding">dynamic-binding</a></li>
 					
-					<li><a href="/tags/lexical-binding">lexical-binding</a></li>
+					<li>#<a href="/tags/lexical-binding">lexical-binding</a></li>
 					
 				</ul>
 			</nav>
@@ -468,7 +480,7 @@ Guide</a></p>
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -483,7 +495,7 @@ Guide</a></p>
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

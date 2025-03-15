@@ -35,30 +35,42 @@ defer.inl : /* -*- mode: c&#43;&#43;; -*- */ #ifndef defer_INL #define defer_INL
 검색해보면, 대부분 RAII을 사용하거나 하는 것들이 보인다:
 DDG: c&#43;&#43; golang defer https://stackoverflow.com/questions/33050620/golang-style-defer-in-c https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/ …그냥 std::shared_ptr&lt;void&gt; 을 이용하는 방식이 마음에 들었다. 그리고 조금 더 간단하게 사용하려고 매크로로 만들어 봤다.
 defer.inl : /* -*- mode: c&#43;&#43;; -*- */ #ifndef defer_INL #define defer_INL 1 #include &lt;memory&gt; #define _Defer_CONCAT_IMPL( x, y ) x##y #define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y ) #define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk) #endif /*defer_INL*/ __COUNTER__ 이용해서 매크로가 생성한 std::shared_ptr&lt;.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -67,7 +79,7 @@ defer.inl : /* -*- mode: c&#43;&#43;; -*- */ #ifndef defer_INL #define defer_INL
 	<article>
 		<div class="title">
 			<h1 class="title">C&#43;&#43;: Golang-ish `defer`-macro</h1>
-			<div class="meta">Posted on Mar 2, 2023</div>
+			<div class="meta"> 🗓️ 2023_Mar_02</div>
 		</div>
 		
 
@@ -232,21 +244,21 @@ destructor호출해주고 하니까.</p>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li>
+					<li>#<a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li>
 					
-					<li><a href="/tags/golang">golang</a></li>
+					<li>#<a href="/tags/golang">golang</a></li>
 					
-					<li><a href="/tags/defer">defer</a></li>
+					<li>#<a href="/tags/defer">defer</a></li>
 					
-					<li><a href="/tags/raii">raii</a></li>
+					<li>#<a href="/tags/raii">raii</a></li>
 					
-					<li><a href="/tags/setjmp">setjmp</a></li>
+					<li>#<a href="/tags/setjmp">setjmp</a></li>
 					
-					<li><a href="/tags/longjmp">longjmp</a></li>
+					<li>#<a href="/tags/longjmp">longjmp</a></li>
 					
-					<li><a href="/tags/macro">macro</a></li>
+					<li>#<a href="/tags/macro">macro</a></li>
 					
-					<li><a href="/tags/try-catch-finally">try-catch-finally</a></li>
+					<li>#<a href="/tags/try-catch-finally">try-catch-finally</a></li>
 					
 				</ul>
 			</nav>
@@ -258,7 +270,7 @@ destructor호출해주고 하니까.</p>
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -273,7 +285,7 @@ destructor호출해주고 하니까.</p>
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

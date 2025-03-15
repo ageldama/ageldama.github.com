@@ -26,30 +26,42 @@ GW-BASIC 시절에는 정말 https://en.wikipedia.org/wiki/MS-DOS_Editor 을 열
   <meta name="twitter:description" content="코드 편집기를 어떻게 써왔었는지 잠깐 생각해봤다:
 DOS시절: MS-DOS Editor.
 GW-BASIC 시절에는 정말 https://en.wikipedia.org/wiki/MS-DOS_Editor 을 열심히 썼었던 것 같다. 그리고 그 다음엔 PowerBASIC for DOS 열심히 썼었다. QuickBASIC 같은 바이트코드으로 컴파일해서 .exe 파일에 인터프리터와 바이트코드를 embedding 하는 VB의 P-code 같은 가짜 컴파일 방식1이 아니라 정말 네이티브 코드로 컴파일해주고, 인라인 어셈블리와 메모리 조작이 가능한 베이직 컴파일러, IDE여서 좋은 환경이었던 것 같다. 터보C 2.0 편집기. PowerBASIC이랑 유사해서 익숙하게 쓸 수 있었던 것 같다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -58,7 +70,7 @@ GW-BASIC 시절에는 정말 https://en.wikipedia.org/wiki/MS-DOS_Editor 을 열
 	<article>
 		<div class="title">
 			<h1 class="title">코드 편집기에 대한 생각</h1>
-			<div class="meta">Posted on May 28, 2020</div>
+			<div class="meta"> 🗓️ 2020_May_28</div>
 		</div>
 		
 
@@ -225,11 +237,11 @@ Footnotes
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/editor">editor</a></li>
+					<li>#<a href="/tags/editor">editor</a></li>
 					
-					<li><a href="/tags/text-editor">text-editor</a></li>
+					<li>#<a href="/tags/text-editor">text-editor</a></li>
 					
-					<li><a href="/tags/tools">tools</a></li>
+					<li>#<a href="/tags/tools">tools</a></li>
 					
 				</ul>
 			</nav>
@@ -241,7 +253,7 @@ Footnotes
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -256,7 +268,7 @@ Footnotes
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

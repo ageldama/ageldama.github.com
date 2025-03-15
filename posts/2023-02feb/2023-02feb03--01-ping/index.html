@@ -27,30 +27,42 @@
   <meta name="twitter:description" content="블로그를 내려놓았다가, 다시 글을 쓰고 생각들을 어느 정도는 공개를 하고 지내고 싶어져서 다시 열었다.
 사용하던 테마를 수정해서 쓰기로 하고, CSS을 여기저기서 복붙해서 적용해보고, 갈무리 웹폰트도 적용해서, 오히려 원본 테마보다 더 가볍게 적당히 만들어봤다.
 색상도, 외양과 기능 디자인 모두 어느 정도 내 취향에 맞게 꾸며 봤다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -59,7 +71,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Ping 03/02/2023 .01: 블로그 디자인 수정</h1>
-			<div class="meta">Posted on Feb 3, 2023</div>
+			<div class="meta"> 🗓️ 2023_Feb_03</div>
 		</div>
 		
 
@@ -80,13 +92,13 @@
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/ping">ping</a></li>
+					<li>#<a href="/tags/ping">ping</a></li>
 					
-					<li><a href="/tags/hugo">hugo</a></li>
+					<li>#<a href="/tags/hugo">hugo</a></li>
 					
-					<li><a href="/tags/css">css</a></li>
+					<li>#<a href="/tags/css">css</a></li>
 					
-					<li><a href="/tags/blog">blog</a></li>
+					<li>#<a href="/tags/blog">blog</a></li>
 					
 				</ul>
 			</nav>
@@ -98,7 +110,7 @@
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -113,7 +125,7 @@
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

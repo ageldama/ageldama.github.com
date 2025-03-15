@@ -42,30 +42,42 @@ http://www.sbcl.org/manual/#Threading
 http://haminhvuong-blog.tumblr.com/post/22109095116/compile-sbcl-with-multi-thread-enabled-on-os-x
 create customize-target-features.lisp with content
 (lambda (features) (flet ((enable (x) (pushnew x features)) (disable (x) (setf features (remove x features)))) ;; Threading support, available only on x86/x86-64 Linux, x86Solaris ;; and x86 Mac OS X (experimental).">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -74,7 +86,7 @@ create customize-target-features.lisp with content
 	<article>
 		<div class="title">
 			<h1 class="title">SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기.</h1>
-			<div class="meta">Posted on Feb 25, 2017</div>
+			<div class="meta"> 🗓️ 2017_Feb_25</div>
 		</div>
 		
 
@@ -114,13 +126,13 @@ create customize-target-features.lisp with content
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/lisp">lisp</a></li>
+					<li>#<a href="/tags/lisp">lisp</a></li>
 					
-					<li><a href="/tags/commonlisp">commonlisp</a></li>
+					<li>#<a href="/tags/commonlisp">commonlisp</a></li>
 					
-					<li><a href="/tags/sbcl">sbcl</a></li>
+					<li>#<a href="/tags/sbcl">sbcl</a></li>
 					
-					<li><a href="/tags/threading">threading</a></li>
+					<li>#<a href="/tags/threading">threading</a></li>
 					
 				</ul>
 			</nav>
@@ -132,7 +144,7 @@ create customize-target-features.lisp with content
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -147,7 +159,7 @@ create customize-target-features.lisp with content
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

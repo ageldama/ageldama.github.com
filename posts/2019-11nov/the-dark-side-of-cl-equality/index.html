@@ -29,30 +29,42 @@ let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Funct
   <meta name="twitter:description" content="오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로 생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을 리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.
 뭐 커먼리습의 CLHS - HyperSpec을 읽다보면 비슷한데 아주 약간씩 미묘하게 달라서 지원하는 것들이 있다:
 let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Function MAP Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON Function MAP-INTO prog Macro PROG1, PROG2 Special Operator PROGN Macro PROG, PROG* Special Operator PROGV …그밖에도 좀 더 있을듯?">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -61,7 +73,7 @@ let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Funct
 	<article>
 		<div class="title">
 			<h1 class="title">(Common Lisp의 어두운 면) Equality</h1>
-			<div class="meta">Posted on Nov 16, 2019</div>
+			<div class="meta"> 🗓️ 2019_Nov_16</div>
 		</div>
 		
 
@@ -461,17 +473,17 @@ Smalltalk을 통해 IDE, GUI, 마우스 등을 발명, 도입하셨습니다&hel
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/commonlisp">commonlisp</a></li>
+					<li>#<a href="/tags/commonlisp">commonlisp</a></li>
 					
-					<li><a href="/tags/lisp">lisp</a></li>
+					<li>#<a href="/tags/lisp">lisp</a></li>
 					
-					<li><a href="/tags/equality">equality</a></li>
+					<li>#<a href="/tags/equality">equality</a></li>
 					
-					<li><a href="/tags/same">same</a></li>
+					<li>#<a href="/tags/same">same</a></li>
 					
-					<li><a href="/tags/samesame">samesame</a></li>
+					<li>#<a href="/tags/samesame">samesame</a></li>
 					
-					<li><a href="/tags/the-dark-side-of-common-lisp">the-dark-side-of-common-lisp</a></li>
+					<li>#<a href="/tags/the-dark-side-of-common-lisp">the-dark-side-of-common-lisp</a></li>
 					
 				</ul>
 			</nav>
@@ -483,7 +495,7 @@ Smalltalk을 통해 IDE, GUI, 마우스 등을 발명, 도입하셨습니다&hel
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -498,7 +510,7 @@ Smalltalk을 통해 IDE, GUI, 마우스 등을 발명, 도입하셨습니다&hel
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

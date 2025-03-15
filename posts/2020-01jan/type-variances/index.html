@@ -35,30 +35,42 @@ Subtype, 일반화(Generalization), 특화(Specialization) 타입을 말할 때,
 왜냐하면, 전달한 값이 그 타입의 범위 안에서 전달 받은 쪽에서 취급이 제한된다는 보장이 있어야 안전한 코드를 컴파일러는 생성해줄 수 있다. (혹은 그렇게 안전한지 체크를 해준다.)
 Subtype, 일반화(Generalization), 특화(Specialization) 타입을 말할 때, 나는 보통 객체지향언어에서의 클래스의 상속 관계를 떠올린다. 꼭 그렇지는 않겠지만, 이 글에서도 그렇게 설명을 해보겠다.
 이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고 가정하겠다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -67,7 +79,7 @@ Subtype, 일반화(Generalization), 특화(Specialization) 타입을 말할 때,
 	<article>
 		<div class="title">
 			<h1 class="title">Covariant, Contravariant, Invariant등 Type Variances 이해하기</h1>
-			<div class="meta">Posted on Jan 3, 2020</div>
+			<div class="meta"> 🗓️ 2020_Jan_03</div>
 		</div>
 		
 
@@ -314,19 +326,19 @@ Footnotes
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/type">type</a></li>
+					<li>#<a href="/tags/type">type</a></li>
 					
-					<li><a href="/tags/type-system">type-system</a></li>
+					<li>#<a href="/tags/type-system">type-system</a></li>
 					
-					<li><a href="/tags/higher-order-type">higher-order-type</a></li>
+					<li>#<a href="/tags/higher-order-type">higher-order-type</a></li>
 					
-					<li><a href="/tags/covariant">covariant</a></li>
+					<li>#<a href="/tags/covariant">covariant</a></li>
 					
-					<li><a href="/tags/contravariant">contravariant</a></li>
+					<li>#<a href="/tags/contravariant">contravariant</a></li>
 					
-					<li><a href="/tags/invariant">invariant</a></li>
+					<li>#<a href="/tags/invariant">invariant</a></li>
 					
-					<li><a href="/tags/variances">variances</a></li>
+					<li>#<a href="/tags/variances">variances</a></li>
 					
 				</ul>
 			</nav>
@@ -338,7 +350,7 @@ Footnotes
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -353,7 +365,7 @@ Footnotes
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

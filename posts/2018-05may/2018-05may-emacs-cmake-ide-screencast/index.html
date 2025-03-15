@@ -32,30 +32,42 @@
 이맥스에서 C&#43;&#43; 개발 편하게 하려고 이것저것 알아보다가 결국엔 CMake-IDE &#43; RTags 조합이 제일 괜찮다는 결론에 도달해서 만들어본 설정이다.
 원래 사용하는 환경이 Evil은 아니었는데, Spacemacs 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.
 지금은 그냥 Spacemacs은 다운도 잘되고 너무 무겁고 설정을 레이어 방식 으로 할게 아니면 짜증나게 하는 부분도 많고, 그렇다고 레이어가 완전히 내가 그냥 커스텀으로 만들어서 바로바로 머지하는 구조도 아니고 중앙에서 관리하는 방식으로만 되는거 같아서, 옆으로 치우고, 바닐라 이맥스에 Spacemacs스럽게 직접 설정해서 가볍게 사용하고 있다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -64,7 +76,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Emacs &#43; CMake-IDE Screencast</h1>
-			<div class="meta">Posted on May 8, 2018</div>
+			<div class="meta"> 🗓️ 2018_May_08</div>
 		</div>
 		
 
@@ -279,25 +291,25 @@
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/workflow">workflow</a></li>
+					<li>#<a href="/tags/workflow">workflow</a></li>
 					
-					<li><a href="/tags/editor">editor</a></li>
+					<li>#<a href="/tags/editor">editor</a></li>
 					
-					<li><a href="/tags/emacs">emacs</a></li>
+					<li>#<a href="/tags/emacs">emacs</a></li>
 					
-					<li><a href="/tags/cmake">cmake</a></li>
+					<li>#<a href="/tags/cmake">cmake</a></li>
 					
-					<li><a href="/tags/cmake-ide">cmake-ide</a></li>
+					<li>#<a href="/tags/cmake-ide">cmake-ide</a></li>
 					
-					<li><a href="/tags/ide">ide</a></li>
+					<li>#<a href="/tags/ide">ide</a></li>
 					
-					<li><a href="/tags/ninja">ninja</a></li>
+					<li>#<a href="/tags/ninja">ninja</a></li>
 					
-					<li><a href="/tags/rtags">rtags</a></li>
+					<li>#<a href="/tags/rtags">rtags</a></li>
 					
-					<li><a href="/tags/rdm">rdm</a></li>
+					<li>#<a href="/tags/rdm">rdm</a></li>
 					
-					<li><a href="/tags/screencast">screencast</a></li>
+					<li>#<a href="/tags/screencast">screencast</a></li>
 					
 				</ul>
 			</nav>
@@ -309,7 +321,7 @@
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -324,7 +336,7 @@
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

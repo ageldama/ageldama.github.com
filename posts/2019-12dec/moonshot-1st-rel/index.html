@@ -38,30 +38,42 @@
 아예 Projectile이 추론하는 디렉토리 바깥에 빌드 디렉토리는 위치하는 경우도 있으니까.
 예) GNU Autotools configure 이나 CMake으로 작업할 때, 소스트리 바깥에 빌드 디렉토리를 걸어놓아서 정리를 깔끔하게 할 수 있으니까. 그런데 이 &#39;빌드 디렉토리&#39;가 중요한게,
 말그대로 컴파일한 .o 파일이나 최종 결과 실행파일 등이 여기에 쌓이니까 디버깅, 테스트를 위해서 실행파일을 실행하거나, 심지어 make 이나 ninja 같은 빌드 커맨드를 실행하기 위해서도 빌드 디렉토리를 지정하거나 이동해서 실행해야 하니까 귀찮다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -70,7 +82,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">moonshot.el 최초 릴리즈</h1>
-			<div class="meta">Posted on Dec 29, 2019</div>
+			<div class="meta"> 🗓️ 2019_Dec_29</div>
 		</div>
 		
 
@@ -302,23 +314,23 @@ configure and make: 빌드 디렉토리에서
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/elisp">elisp</a></li>
+					<li>#<a href="/tags/elisp">elisp</a></li>
 					
-					<li><a href="/tags/emacs">emacs</a></li>
+					<li>#<a href="/tags/emacs">emacs</a></li>
 					
-					<li><a href="/tags/launcher">launcher</a></li>
+					<li>#<a href="/tags/launcher">launcher</a></li>
 					
-					<li><a href="/tags/debugger">debugger</a></li>
+					<li>#<a href="/tags/debugger">debugger</a></li>
 					
-					<li><a href="/tags/executable">executable</a></li>
+					<li>#<a href="/tags/executable">executable</a></li>
 					
-					<li><a href="/tags/shell">shell</a></li>
+					<li>#<a href="/tags/shell">shell</a></li>
 					
-					<li><a href="/tags/compile">compile</a></li>
+					<li>#<a href="/tags/compile">compile</a></li>
 					
-					<li><a href="/tags/compilation-mode">compilation-mode</a></li>
+					<li>#<a href="/tags/compilation-mode">compilation-mode</a></li>
 					
-					<li><a href="/tags/build">build</a></li>
+					<li>#<a href="/tags/build">build</a></li>
 					
 				</ul>
 			</nav>
@@ -330,7 +342,7 @@ configure and make: 빌드 디렉토리에서
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -345,7 +357,7 @@ configure and make: 빌드 디렉토리에서
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>

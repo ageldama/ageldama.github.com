@@ -15,12 +15,14 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="아겔로그">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
@@ -29,25 +31,35 @@
 		<div class="content">
 			<header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
 
 			
 			<main class="list">
-				<div class="site-description"><p><code>$ fortune -a</code></p></div>
+				<div class="site-description"></div>
 				
 				
 				
@@ -732,19 +744,27 @@ Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
 				
 				
 
+
+
+
+
+
+
+
+
 <ul class="pagination">
 	<span class="page-item page-prev">
 	
-    <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">[◇ First]</span></a>
-    <a href="/" class="page-link" aria-label="Previous"><span aria-hidden="true">[← Prev]</span></a>
-	
+            <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">First⏮️</span></a>
+            <a href="/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
+        
 	</span>
-        <span class="page-number">(2 of 4)</span>
+        <span class="page-number">(2/4)</span>
 	<span class="page-item page-next">
 	
-    <a href="/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">[Next →]</span></a>
-    <a href="/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">[Last ◈]</span></a>
-	
+            <a href="/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
+            <a href="/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+        
 	</span>
 </ul>
 
@@ -753,7 +773,7 @@ Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
 			<footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -768,7 +788,7 @@ Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script>
 		</div>
 		

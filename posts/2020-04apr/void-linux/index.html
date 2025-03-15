@@ -32,30 +32,42 @@
 재미로 Void Linux을 설치해봤다. 사실 설치해보고 한적은 꽤 됐고, 메모리 사용량이 훨씬 가볍고 빠른 성능 때문에, Arch Linux도 충분히 가볍고 좋지만, 제대로 설정해서 사양이 좋지 않은 랩탑, 데스크탑들을 위해서 쓰기로 생각하고 있었었다.
 2007년 정도에 Gentoo Linux으로 회사 데스크탑과 Oracle DBMS 서버를 재밌게 설정한 이후로, 오랬만에 정말 가벼운 리눅스 배포판을 설치하는 느낌이었다.
 아치리눅스는 Pacman, Makepkg, AUR 같은 것들도 체계가 잘 잡혀있고, 오히려 Portage 보다 잘 관리되고 괜찮지 않은가 싶기도 할 때가 많아서 굳이 Gentoo을 다시 쓸 일은 없을 것 같다.">
-<script src="https://ageldama.github.io/js/feather.min.js"></script>
+
 	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.32966317991260928cc549837794e6ebcd868c785d5895400ea697e2d0969968.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.17aeeb6129bb83cb17d36081b8a90d1f211512f3a586147255ab9e547e4585c0.css" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://ageldama.github.io/">아겔로그</a>
-	</div>
+            <a href="https://ageldama.github.io/">아겔로그</a>
+
+            <a class="dark-mode-toggle"
+               href="javascript:DarkMode.toggle()"></a>
+            <script>
+             $(function(){
+                 DarkMode.init();
+             });
+            </script>
+        </div>
+        
 	<nav>
-		
-		<a href="/posts/archive/">archive</a>
-		
-		<a href="/tags/">tags</a>
-		
-		<a href="/index.xml">rss</a>
-		
-		<a href="/myself/">contact</a>
-		
+            
+            <a href="/posts/archive/">Archive🗃️</a>
+            
+            <a href="/tags/">Tags🏷️</a>
+            
+            <a href="/index.xml">RSS&lt;/&gt;</a>
+            
+            <a href="/myself/">Contact📨</a>
+            
+
 		
 	</nav>
 </header>
@@ -64,7 +76,7 @@
 	<article>
 		<div class="title">
 			<h1 class="title">Void Linux &#43; Runit으로 데스크탑/랩탑 환경 설정하기</h1>
-			<div class="meta">Posted on May 2, 2020</div>
+			<div class="meta"> 🗓️ 2020_May_02</div>
 		</div>
 		
 
@@ -309,23 +321,23 @@ Footnotes
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li><a href="/tags/void-linux">void-linux</a></li>
+					<li>#<a href="/tags/void-linux">void-linux</a></li>
 					
-					<li><a href="/tags/linux">linux</a></li>
+					<li>#<a href="/tags/linux">linux</a></li>
 					
-					<li><a href="/tags/runit">runit</a></li>
+					<li>#<a href="/tags/runit">runit</a></li>
 					
-					<li><a href="/tags/elogind">elogind</a></li>
+					<li>#<a href="/tags/elogind">elogind</a></li>
 					
-					<li><a href="/tags/dbus">dbus</a></li>
+					<li>#<a href="/tags/dbus">dbus</a></li>
 					
-					<li><a href="/tags/ssh-askpass">ssh-askpass</a></li>
+					<li>#<a href="/tags/ssh-askpass">ssh-askpass</a></li>
 					
-					<li><a href="/tags/gnugp">gnugp</a></li>
+					<li>#<a href="/tags/gnugp">gnugp</a></li>
 					
-					<li><a href="/tags/zzz">zzz</a></li>
+					<li>#<a href="/tags/zzz">zzz</a></li>
 					
-					<li><a href="/tags/acpid">acpid</a></li>
+					<li>#<a href="/tags/acpid">acpid</a></li>
 					
 				</ul>
 			</nav>
@@ -337,7 +349,7 @@ Footnotes
 <footer>
   
   <div class="footer-info">
-    2025  All rights reserved to ageldama  | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
@@ -352,7 +364,7 @@ Footnotes
   gtag('config', 'G-YSB7MGHZ4V');
 </script>
 <script>
-  feather.replace()
+  
 </script></div>
     </body>
 </html>
