@@ -7,15 +7,8 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sat, 15 Mar 2025 12:25:01 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Mar 2025 06:25:48 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Blog</title>
-      <link>https://ageldama.github.io/tags/blog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Css</title>
       <link>https://ageldama.github.io/tags/css/</link>
@@ -24,10 +17,31 @@
       <description></description>
     </item>
     <item>
-      <title>Design</title>
-      <link>https://ageldama.github.io/tags/design/</link>
+      <title>Hugo</title>
+      <link>https://ageldama.github.io/tags/hugo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/design/</guid>
+      <guid>https://ageldama.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jquery</title>
+      <link>https://ageldama.github.io/tags/jquery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/jquery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Js</title>
+      <link>https://ageldama.github.io/tags/js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pagefind</title>
+      <link>https://ageldama.github.io/tags/pagefind/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/pagefind/</guid>
       <description></description>
     </item>
     <item>
@@ -35,6 +49,20 @@
       <link>https://ageldama.github.io/tags/ping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/ping/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>https://ageldama.github.io/tags/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design</title>
+      <link>https://ageldama.github.io/tags/design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/design/</guid>
       <description></description>
     </item>
     <item>
@@ -427,13 +455,6 @@
       <link>https://ageldama.github.io/tags/interview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/interview/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Js</title>
-      <link>https://ageldama.github.io/tags/js/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/js/</guid>
       <description></description>
     </item>
     <item>
@@ -840,13 +861,6 @@
       <link>https://ageldama.github.io/tags/soap-opera/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/soap-opera/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hugo</title>
-      <link>https://ageldama.github.io/tags/hugo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     <item>

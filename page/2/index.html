@@ -26,7 +26,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.807ff709aff074c5ead78df58ece6d28db925ec03bdab3fdbe5b8dcb828ff8fe.css" integrity="sha256-gH/3Ca/wdMXq1431js5tKNuSXsA72rP9vluNy4KP&#43;P4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.332e72b78b76325784bafd369639982695a0e39a70656c75b098913e4a0eee71.css" integrity="sha256-My5yt4t2MleEuv02ljmYJpWg45pwZWx1sJiRPkoO7nE=" crossorigin="anonymous">
                     
                 
             
@@ -54,9 +54,7 @@
         </script>
 
         
-            <a href="/posts/archive/">Archive🗃️</a>
-        
-            <a href="/tags/">Tags🏷️</a>
+            <a href="/posts/archive/">Index🗃️🏷️</a>
         
             <a href="/index.xml">RSS&lt;/&gt;</a>
         
@@ -67,11 +65,28 @@
     </nav>
 </header>
 
+
+                        <div id="search"></div>
 			
 			<main class="list">
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/ping-16fri/">Ping 17/Oct/2020</a></h1>
+					<time>Oct 17, 2020</time>
+					<br><div class="description">
+						
+						웹프론트엔드 개발을 조금씩 해보고 있다. 처음에는 예전 방식으로만 하려고 하다가 조금씩 겨우 써보던 webpack을 다시 가이드를 차근차근 공부하고 동작하는 방식을 이해하도록 뜯어보고 돌려봤다.
+생각보다 단순하게, 그리고 확장성 있게 쓸만한 빌드도구였다.
+다만 문제는 설정이 복잡하고 이해하기 힘든 점보다는 빌드 시간이 너무 느린 점이었다. (내게는)
+그래서 parcel bundler을 시도 했는데, 설정도 거의 필요 없이 바로 동작하고 하는 점은 좋고, 성능도 정말 빨랐다.
+다만 Vim/Emacs으로 파일을 편집하고 저장할 때, parcel watch 대상인 파일들을 종종 아예 dev-server을 재시작해야만 제대로 동작하는 상태로 빠지는게 조금 짜증났다.&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item">
 					<h1 class="title"><a href="/posts/2020-10oct/ping-17sat/">Ping 16/Oct/2020</a></h1>
@@ -732,23 +747,6 @@ esup profiler Elisp 자체는 프로파일링이 가능한데2, $HOME/.&hellip;
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-12dec/direnv/">direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기</a></h1>
-					<time>Dec 29, 2019</time>
-					<br><div class="description">
-						
-						프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다.
-몇 가지 이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv
-NPM: dotenv https://www.npmjs.com/package/dotenv
-Node.js에서 Unix environment variable으로 .env 파일을 로딩해주는 역할인 듯.
-Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
-그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을 짜주고 하기 싫었고,
-.env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서 경로를 조립하고 하는데 별로라는 생각이 들었다.&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -798,6 +796,56 @@ Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
   
 </script>
 		</div>
+
+                
+<script src="/js/pagefind/pagefind-ui.js" type="text/javascript"></script>
+<script>
+ window.addEventListener('DOMContentLoaded', (event) => {
+     new PagefindUI({
+         baseUrl: "/",
+         
+         element: "#search",
+         
+         showImages: true,
+         
+         resetStyles: false,
+         
+         showSubResults: false,
+
+         pageSize: 5,  
+
+         translations: {
+             "placeholder": "--- 검색어 입력 ---",
+             "clear_search": "초기화",
+             "load_more": "검색결과 더 불러오기",
+             "search_label": "이 사이트에서 검색",
+             "filters_label": "필터",
+             "zero_results": "검색결과 없음: [SEARCH_TERM]",
+             "many_results": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "one_result": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "alt_search": "검색결과 없음=[SEARCH_TERM]. 대체검색어=[DIFFERENT_TERM]-으로 표시",
+             "search_suggestion": "검색결과 없음=[SEARCH_TERM]. 다음 검색으로 대체해보시던가요:",
+             "searching": "검색중 [SEARCH_TERM]..."
+         },
+     });
+
+     
+     const pagefind_ui_results_observer = new MutationObserver(function(muts){
+         if($('.pagefind-ui__drawer').children().length > 0) {
+             $('main.list').hide();
+         } else {
+             $('main.list').show();
+         }
+     });
+
+     pagefind_ui_results_observer.observe(
+         $('.pagefind-ui__drawer')[0],{
+             childList: true,
+             subtree: true
+     });
+ });
+</script>
 		
+
 	</body>
 </html>

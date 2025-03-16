@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 아겔로그</title>
+    <link>https://ageldama.github.io/categories/linux/</link>
+    <description>Recent content in Linux on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Thu, 27 Aug 2020 00:00:01 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</title>
+      <link>https://ageldama.github.io/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/</link>
+      <pubDate>Thu, 27 Aug 2020 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/</guid>
+      <description>arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.&#xA;USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을 쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고 유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.&#xA;정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마 https://github.com/aircrack-ng/rtl8812au 이 드라이버가 살렸다.&#xA;1 2 # lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load.</description>
+    </item>
+    <item>
+      <title>Void Linux &#43; Runit으로 데스크탑/랩탑 환경 설정하기</title>
+      <link>https://ageldama.github.io/posts/2020-04apr/void-linux/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-04apr/void-linux/</guid>
+      <description>지난 한 달여간 눈코 뜰새 없이 바쁘게 지냈었다. 그렇게 지내다가 오랬만에 툭닥거려봤다.&#xA;재미로 Void Linux을 설치해봤다. 사실 설치해보고 한적은 꽤 됐고, 메모리 사용량이 훨씬 가볍고 빠른 성능 때문에, Arch Linux도 충분히 가볍고 좋지만, 제대로 설정해서 사양이 좋지 않은 랩탑, 데스크탑들을 위해서 쓰기로 생각하고 있었었다.&#xA;2007년 정도에 Gentoo Linux으로 회사 데스크탑과 Oracle DBMS 서버를 재밌게 설정한 이후로, 오랬만에 정말 가벼운 리눅스 배포판을 설치하는 느낌이었다.&#xA;아치리눅스는 Pacman, Makepkg, AUR 같은 것들도 체계가 잘 잡혀있고, 오히려 Portage 보다 잘 관리되고 괜찮지 않은가 싶기도 할 때가 많아서 굳이 Gentoo을 다시 쓸 일은 없을 것 같다.</description>
+    </item>
+    <item>
+      <title>Grub2, Archlinux ISO으로 만능 USB 메모리스틱 만들기</title>
+      <link>https://ageldama.github.io/posts/2020-02feb/make-grub2-usb/</link>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-02feb/make-grub2-usb/</guid>
+      <description>경고 &amp;#34;만능USB&amp;#34;이란 말은 사실 과대광고입니다.&#xA;하지만, 몇 가지 장점이 있는 USB 메모리스틱을 만드는 방법임:&#xA;아치리눅스 설치ISO 이미지으로 부팅 가능한 USB 스틱이면서도, ISO파일의 용량만큼만 USB메모리를 활용하는 것이 아니라,&#xA;용량이 되는만큼 그냥 일반적인 메모리스틱처럼 파일 복사용으로도 쓸 수 있음. 사실 리눅스든 다른 OS의 설치 이미지를 USB메모리에 올리면, 딱 그 설치 이미지만큼만 사용할 수 있게 만들어 버리고, 그나마도 Read-only 상태인 ISO이 되어버리고, 더더욱 나쁘게 다른 추가 파티션을 만들어서 남는 공간을 활용할 수도 없게 만든다.</description>
+    </item>
+  </channel>
+</rss>

@@ -2,28 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ageldama.github.io/categories/blog/</loc>
+    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/</loc>
+    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/css/</loc>
+    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/hugo/</loc>
+    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</loc>
+    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/jquery/</loc>
+    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/js/</loc>
+    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/pagefind/</loc>
+    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/ping/</loc>
+    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/tags/blog/</loc>
     <lastmod>2025-03-15T12:25:01+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/css/</loc>
+    <loc>https://ageldama.github.io/categories/blogging/</loc>
     <lastmod>2025-03-15T12:25:01+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/</loc>
     <lastmod>2025-03-15T12:25:01+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/design/</loc>
-    <lastmod>2025-03-15T12:25:01+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/ping/</loc>
-    <lastmod>2025-03-15T12:25:01+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2025-03-15T12:25:01+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
-    <lastmod>2025-03-15T12:25:01+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-03-15T12:25:01+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/architecture/</loc>
@@ -66,6 +90,9 @@
     <lastmod>2025-03-12T10:40:27+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/programming/</loc>
+    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/programming/</loc>
     <lastmod>2025-03-12T10:40:27+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/sed/</loc>
@@ -125,6 +152,9 @@
     <loc>https://ageldama.github.io/tags/kino/</loc>
     <lastmod>2024-03-23T15:46:14+00:00</lastmod>
   </url><url>
+    <loc>https://ageldama.github.io/categories/life/</loc>
+    <lastmod>2024-03-23T15:46:14+00:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/posts/2024-03mar/2024-03mar23--01-ping/</loc>
     <lastmod>2024-03-23T15:46:14+00:00</lastmod>
   </url><url>
@@ -132,6 +162,9 @@
     <lastmod>2023-11-05T05:40:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/</loc>
+    <lastmod>2023-11-05T05:40:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/hack/</loc>
     <lastmod>2023-11-05T05:40:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/samba4/</loc>
@@ -212,13 +245,13 @@
     <loc>https://ageldama.github.io/tags/interview/</loc>
     <lastmod>2023-03-08T06:32:05+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/js/</loc>
-    <lastmod>2023-03-08T06:32:05+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/nes/</loc>
     <lastmod>2023-03-08T06:32:05+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/news/</loc>
+    <lastmod>2023-03-08T06:32:05+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/news/</loc>
     <lastmod>2023-03-08T06:32:05+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/</loc>
@@ -291,6 +324,9 @@
     <lastmod>2023-03-02T17:50:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/calendar/</loc>
+    <lastmod>2023-03-02T17:50:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/coding/</loc>
     <lastmod>2023-03-02T17:50:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/commandline/</loc>
@@ -419,9 +455,6 @@
     <loc>https://ageldama.github.io/posts/2023-02feb/film-knivesout&#43;ksoapoperas/</loc>
     <lastmod>2023-02-03T19:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/hugo/</loc>
-    <lastmod>2023-02-03T18:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/</loc>
     <lastmod>2023-02-03T18:00:00+00:00</lastmod>
   </url><url>
@@ -527,10 +560,16 @@
     <loc>https://ageldama.github.io/tags/json/</loc>
     <lastmod>2022-06-12T13:45:00+09:00</lastmod>
   </url><url>
+    <loc>https://ageldama.github.io/categories/software/</loc>
+    <lastmod>2022-06-12T13:45:00+09:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/posts/2022-06jun/06jun12sun--01-some-engr-tough-sells/</loc>
     <lastmod>2022-06-12T04:37:12+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/engineering/</loc>
+    <lastmod>2022-06-12T04:37:12+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/scrapbook/</loc>
     <lastmod>2022-06-12T04:37:12+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/software/</loc>
@@ -791,6 +830,9 @@
     <loc>https://ageldama.github.io/tags/kernel/</loc>
     <lastmod>2020-08-27T00:00:01+09:00</lastmod>
   </url><url>
+    <loc>https://ageldama.github.io/categories/linux/</loc>
+    <lastmod>2020-08-27T00:00:01+09:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/</loc>
     <lastmod>2020-08-27T00:00:01+09:00</lastmod>
   </url><url>
@@ -1027,6 +1069,9 @@
   </url><url>
     <loc>https://ageldama.github.io/tags/variances/</loc>
     <lastmod>2020-01-03T00:00:02+09:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/emacs/</loc>
+    <lastmod>2020-01-03T00:00:01+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2020-01jan/esup-emacs-init-speed/</loc>
     <lastmod>2020-01-03T00:00:01+09:00</lastmod>
@@ -1496,6 +1541,9 @@
     <loc>https://ageldama.github.io/tags/cmake-ide/</loc>
     <lastmod>2018-05-08T00:00:00+09:00</lastmod>
   </url><url>
+    <loc>https://ageldama.github.io/categories/code/</loc>
+    <lastmod>2018-05-08T00:00:00+09:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/</loc>
     <lastmod>2018-05-08T00:00:00+09:00</lastmod>
   </url><url>
@@ -1535,7 +1583,13 @@
     <loc>https://ageldama.github.io/tags/rants/</loc>
     <lastmod>2017-10-22T21:42:00+01:00</lastmod>
   </url><url>
+    <loc>https://ageldama.github.io/categories/rants/</loc>
+    <lastmod>2017-10-22T21:42:00+01:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/tags/docker/</loc>
+    <lastmod>2017-07-11T20:20:00+09:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/docker/</loc>
     <lastmod>2017-07-11T20:20:00+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2017/2017-07-11-private-docker-registry-howto/</loc>
@@ -1551,6 +1605,9 @@
     <lastmod>2017-07-11T18:35:00+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/myself/</loc>
+    <lastmod>2017-07-11T18:35:00+09:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/myself/</loc>
     <lastmod>2017-07-11T18:35:00+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/async/</loc>
@@ -1577,6 +1634,9 @@
     <loc>https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/</loc>
     <lastmod>2017-02-26T13:50:00+01:00</lastmod>
   </url><url>
+    <loc>https://ageldama.github.io/categories/lisp/</loc>
+    <lastmod>2017-02-25T16:40:00+01:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/tags/sbcl/</loc>
     <lastmod>2017-02-25T16:40:00+01:00</lastmod>
   </url><url>
@@ -1598,6 +1658,9 @@
     <loc>https://ageldama.github.io/tags/erlang/</loc>
     <lastmod>2017-01-22T16:15:00+01:00</lastmod>
   </url><url>
+    <loc>https://ageldama.github.io/categories/erlang/</loc>
+    <lastmod>2017-01-22T16:15:00+01:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/posts/2017/2017-01-22-aio-rx-and-erlang/</loc>
     <lastmod>2017-01-22T16:15:00+01:00</lastmod>
   </url><url>
@@ -1605,6 +1668,9 @@
     <lastmod>2017-01-22T16:15:00+01:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/immutables/</loc>
+    <lastmod>2017-01-22T16:15:00+01:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/java/</loc>
     <lastmod>2017-01-22T16:15:00+01:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2017/2017-01-22-java-immutables-classic-problem/</loc>
@@ -1648,6 +1714,9 @@
   </url><url>
     <loc>https://ageldama.github.io/posts/2017/2017-01-01-getting-started-with-emacs/</loc>
     <lastmod>2017-01-01T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/jekyll-update/</loc>
+    <lastmod>2017-01-01T09:54:02+01:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2017/2017-01-01-welcome-to-jekyll/</loc>
     <lastmod>2017-01-01T09:54:02+01:00</lastmod>

@@ -26,7 +26,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.807ff709aff074c5ead78df58ece6d28db925ec03bdab3fdbe5b8dcb828ff8fe.css" integrity="sha256-gH/3Ca/wdMXq1431js5tKNuSXsA72rP9vluNy4KP&#43;P4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.332e72b78b76325784bafd369639982695a0e39a70656c75b098913e4a0eee71.css" integrity="sha256-My5yt4t2MleEuv02ljmYJpWg45pwZWx1sJiRPkoO7nE=" crossorigin="anonymous">
                     
                 
             
@@ -54,9 +54,7 @@
         </script>
 
         
-            <a href="/posts/archive/">Archive🗃️</a>
-        
-            <a href="/tags/">Tags🏷️</a>
+            <a href="/posts/archive/">Index🗃️🏷️</a>
         
             <a href="/index.xml">RSS&lt;/&gt;</a>
         
@@ -67,11 +65,26 @@
     </nav>
 </header>
 
+
+                        <div id="search"></div>
 			
 			<main class="list">
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-04apr/2018-04apr-golang-windows-vscode/">Golang Windows에서 Vscode이랑 행복하게 쓰기</a></h1>
+					<time>Apr 14, 2018</time>
+					<br><div class="description">
+						
+						Golang 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아. 그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 VsCode 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만&hellip;)
+여튼 그런데 윈도에서 기본적으로 C컴파일러 설치되어 있어야 제대로 굴러가서, Mingw64 설치하고, $MINGW64/bin 디렉토리 $PATH에 걸어주니 잘됨.
+VsCode에서 디버거도 잘 붙고 만족스럽다.&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item">
 					<h1 class="title"><a href="/posts/2017/2017-10-22-blogging/">2017년 10월 22일, 블로깅 귀찮아</a></h1>
@@ -317,6 +330,56 @@ To add new posts, simply add a file in the _posts directory that follows the con
   
 </script>
 		</div>
+
+                
+<script src="/js/pagefind/pagefind-ui.js" type="text/javascript"></script>
+<script>
+ window.addEventListener('DOMContentLoaded', (event) => {
+     new PagefindUI({
+         baseUrl: "/",
+         
+         element: "#search",
+         
+         showImages: true,
+         
+         resetStyles: false,
+         
+         showSubResults: false,
+
+         pageSize: 5,  
+
+         translations: {
+             "placeholder": "--- 검색어 입력 ---",
+             "clear_search": "초기화",
+             "load_more": "검색결과 더 불러오기",
+             "search_label": "이 사이트에서 검색",
+             "filters_label": "필터",
+             "zero_results": "검색결과 없음: [SEARCH_TERM]",
+             "many_results": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "one_result": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "alt_search": "검색결과 없음=[SEARCH_TERM]. 대체검색어=[DIFFERENT_TERM]-으로 표시",
+             "search_suggestion": "검색결과 없음=[SEARCH_TERM]. 다음 검색으로 대체해보시던가요:",
+             "searching": "검색중 [SEARCH_TERM]..."
+         },
+     });
+
+     
+     const pagefind_ui_results_observer = new MutationObserver(function(muts){
+         if($('.pagefind-ui__drawer').children().length > 0) {
+             $('main.list').hide();
+         } else {
+             $('main.list').show();
+         }
+     });
+
+     pagefind_ui_results_observer.observe(
+         $('.pagefind-ui__drawer')[0],{
+             childList: true,
+             subtree: true
+     });
+ });
+</script>
 		
+
 	</body>
 </html>

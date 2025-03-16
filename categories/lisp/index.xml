@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lisp on 아겔로그</title>
+    <link>https://ageldama.github.io/categories/lisp/</link>
+    <description>Recent content in Lisp on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sat, 25 Feb 2017 16:40:00 +0100</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/categories/lisp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기.</title>
+      <link>https://ageldama.github.io/posts/2017/2017-02-25-sbcl-osx-multithread/</link>
+      <pubDate>Sat, 25 Feb 2017 16:40:00 +0100</pubDate>
+      <guid>https://ageldama.github.io/posts/2017/2017-02-25-sbcl-osx-multithread/</guid>
+      <description>SBCL은 멀티쓰레딩을 잘 지원하는 커먼리습 컴파일러이지만, 공식사이트에서 제공하는 리눅스 바이너리가 아니라 OSX 바이너리는 멀티쓰레딩이 꺼져서 컴파일되어있다.&#xA;http://www.sbcl.org/manual/#Threading&#xA;요건 자기 리습에서 *features* 을 평가해서, 리스트에 :threading, :sb-thread 같은 키워드를 포함하는지 확인해보면 알 수 있다.&#xA;어쨌든 지원하지 않을 경우에, 컴파일을 다시 해야하는데, 우선 준비물은 GNU CLISP 같은 여기저기서 잘굴러가고 적당히 설치해서 부트스크래핑에 이용 가능한 커먼리습 컴파일러를 준비한다.&#xA;다음 포스트를 참고해서 작업해봤다.:&#xA;http://haminhvuong-blog.tumblr.com/post/22109095116/compile-sbcl-with-multi-thread-enabled-on-os-x&#xA;create customize-target-features.lisp with content&#xA;(lambda (features) (flet ((enable (x) (pushnew x features)) (disable (x) (setf features (remove x features)))) ;; Threading support, available only on x86/x86-64 Linux, x86Solaris ;; and x86 Mac OS X (experimental).</description>
+    </item>
+  </channel>
+</rss>

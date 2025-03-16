@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pagefind on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/pagefind/</link>
+    <description>Recent content in Pagefind on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 16 Mar 2025 06:25:48 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/pagefind/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo &#43; pagefind 붙여서 검색기능 추가했다</title>
+      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</link>
+      <pubDate>Sun, 16 Mar 2025 06:25:48 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</guid>
+      <description>https://pagefind.app/&#xA;페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는 pagefind을 붙여봤다.&#xA;처음엔 좀 어색했는데, 커스터마이징을 별로 제공하지 않기는 했지만, 그래도 이것저것 뜯어서 CSS도 마음에 들게 좀 수정하고, JS/DOM 이벤트도 적당히 잡아서 마음에 들게 동작하게 고쳤다.</description>
+    </item>
+  </channel>
+</rss>

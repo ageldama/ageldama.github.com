@@ -303,4 +303,40 @@ a:visited {
   text-shadow: 3px 3px 1px #af5400;
 }
 
+.pagefind-ui form {
+  text-align: right;
+}
+
+.pagefind-ui div {
+  text-align: left;
+}
+
+body:not(.dark) .pagefind-ui form input[type=text] {
+  font-weight: bold;
+  border: solid 3px #00f0f0;
+}
+
+body:not(.dark) .pagefind-ui form input[type=text]::placeholder {
+  font-weight: bold;
+  font-style: italic;
+}
+
+body.dark .pagefind-ui form input[type=text] {
+  background-color: #808080;
+  color: white;
+  font-weight: bold;
+}
+
+body.dark .pagefind-ui form input[type=text]::placeholder {
+  color: #00f0f0;
+  font-weight: bold;
+  font-style: italic;
+}
+
+body.dark .pagefind-ui form button {
+  background-color: #808080;
+  color: white;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=gopherish.css.map */

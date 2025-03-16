@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hack on 아겔로그</title>
+    <link>https://ageldama.github.io/categories/hack/</link>
+    <description>Recent content in Hack on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 05 Nov 2023 05:40:00 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/categories/hack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정</title>
+      <link>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/</link>
+      <pubDate>Sun, 05 Nov 2023 05:40:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/</guid>
+      <description> freebsd에서 samba 파일서버 세팅은 프비핸드북 참고 https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba&#xA;symlink을 samba에 노출하기 /usr/local/etc/smb4.conf 파일에 다음을 추가:&#xA;[global] ... allow insecure wide links =&#x9;yes [share] ... follow symlinks = yes wide links = yes unix extensions = no mdns으로 samba 파일서버를 네트웍에 광고하기 보통은 avahi을 써왔는데, mdnsresponder이 더 가볍다고 해서 이렇게 세팅해봄.&#xA;pkg install mDNSResponder /etc/rc.conf 에 추가:&#xA;mdnsresponderposix_enable=&amp;#34;YES&amp;#34; mdnsresponderposix_flags=&amp;#34;-f /usr/local/etc/mdnsresponderposix.conf&amp;#34; 호스트이름은 freebsd-samsung 으로 smb서비스를 노출.&#xA;/usr/local/etc/mdnsresponderposix.conf 작성:&#xA;freebsd-samsung _smb._tcp 445 service mdnsresponderposix start </description>
+    </item>
+    <item>
+      <title>Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</title>
+      <link>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/</link>
+      <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/</guid>
+      <description>나도 x11에서 wayland 기반으로 옮겨가고 있는데, 다른 것들은 대부분 괜찮거나 포기.1&#xA;가볍고 좋은데, debian chromium에서 ibus으로 한글 입력이 안되어서 알아봤다.&#xA;1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨. 힌트 얻음: https://bugzilla.redhat.com/show_bug.cgi?id=2058976 2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지? 1 2 3 4 for pid in $(pgrep chromium); do #echo $pid grep -i gtk /proc/&amp;#34;$pid&amp;#34;/maps done ==&amp;gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&amp;gt; ibus 연동안됨.&#xA;3) 실행커맨드/스크립트 확인 dpkg -L chromium-browser 으로 desktop launcher 확인 /usr/share/applications/chromium-browser.</description>
+    </item>
+    <item>
+      <title>ELECOM EX-G Pro Trackball 잉여 버튼을 Page Up/Down으로 쓰기</title>
+      <link>https://ageldama.github.io/posts/2019-10oct/exg-pro-trackball-pgupdn/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-10oct/exg-pro-trackball-pgupdn/</guid>
+      <description>컴퓨터를 많이 쓰니까 다른 부분보다 손목이 먼저 망가져서, 손목을 조금만 큰 각도로 꺾으면 아프다. ㅠ.ㅠ.. 예전에도 그랬었는데1&#xA;마우스 안쓰고, 트랙볼 쓰기2 키보드 넘패드 부분 없는 짧은 86키 레이아웃 쓰기 로지텍 마블 트랙맨 잘 쓰다가, 지름을 받아서 조금 다음 티어의 제품으로 업그레이드 해봤다.&#xA;그래서 바꾼게 &amp;ndash;&amp;gt; 엘레컴 EX-G Pro Trackball ..그런데 다 좋은데, 저기 있는 Function assignment button 이라고 써있는게 2개가 더 달려있음.3&#xA;이 추가기능버튼들은 윈도였다면 벤더에서 제공하는 프로그램을 통해서 할당이 가능할거 같은데, 리눅스/X윈도에서는 xev으로 확인해보니 그냥 Button 10번, 11번이었다.</description>
+    </item>
+    <item>
+      <title>NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</title>
+      <link>https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/</guid>
+      <description>필요성, 궁금함, 현재 상황 메인 데스크탑을 무선랜으로 인터넷에 연결하고 사용함. 다른 기기들도 모두 기본적으로 무선으로 LAN접속. 다 좋은데, 메인 데스크탑 &amp;lt;-&amp;gt; 라즈베리파이 접속할때 ssh 접속도 느린거 같을때가 있음. 무선랜 접속이 많고, 블루투스 등등 다른 간섭도 많을거고, 어쨌든 조금 물리적으로 거리가 있는 무선공유기까지 갔다 오는거니까. 그래서 사용 안하고 있는 데스크탑의 내장 유선 랜포트로 인터넷연결을 공유하는 Private network을 만들어서 유선으로 연결해보기로 했다. 정말 체감이 빨라질지 궁금했고 직접 수동으로 설정하는게 거의 없거나, 내가 사용하고 있는 NetworkManager에서 쉽게 설정이 가능할거 같았다.</description>
+    </item>
+    <item>
+      <title>HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정</title>
+      <link>https://ageldama.github.io/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</link>
+      <pubDate>Wed, 03 Oct 2018 20:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</guid>
+      <description>https://www.hifiberry.com/ 요거 Raspberry Pi 3에 세팅한 모험에 대한 이야기.&#xA;WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev #update_config=1 country=GB network={ ssid=&amp;quot;iptime&amp;quot; psk=&amp;quot;xxxxxxxxxx&amp;quot; key_mgmt=WPA-PSK } wpa_passphrase 안쓰고 그냥 plaintext으로 써도 동작. 내 공유기랑은 country=GB 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤. 그리고 ip link set wlan0 {up|down} 정도로 wlan0 인터페이스를 up/down하면됨. 사운드 드라이버 설정 내장 사운드카드 드라이버는 modprobe blacklist에 추가해서 끄자. /boot/config.txt에 HiFiBerry DAC+ 드라이버 오버레이를 지정해야함. 내장 사운드 드라이버 끄기 다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음.</description>
+    </item>
+  </channel>
+</rss>
