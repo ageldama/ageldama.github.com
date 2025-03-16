@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vim on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/vim/</link>
+    <link>http://localhost:1313/tags/vim/</link>
     <description>Recent content in Vim on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 01/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping-01sat/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping-01sat/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping-01sat/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping-01sat/</guid>
       <description>오랬만에 내 환경을 더 다듬었다.&#xA;Emacs, Evil, General.el. 매일 이맥스에서 코딩을 하면서 조금은 Vim보다 키바인딩이 편집에 불리한 것 같았었다. 그렇다고 Vim을 쓰고 싶지는 않았다. 검색이나 다중편집 같은 이맥스만의 기능을 Vim에서 흉내내는 것은 별로 마음에 차지 않는 정도이고 또 화면 flickering도 이맥스 GUI을 쓸 때보다 터미널 Vim은 심해서 난 피곤해.&#xA;그래서 Evil-mode을 종종 썼는데 문제는 내가 만들어놓은 general.el 키바인딩들이 Evil을 고려하지 않고 만들어서 evil모드를 toggle하며 써야했었었다. 특히 내 이맥스 모드에서의 키바인딩의 prefix이 C-z인데, evil-mode에서는 emacs mode으로 전환을 위해서 사용.</description>
     </item>
     <item>
       <title>NeoVim, Evil-mode and Emacs의 모험</title>
-      <link>https://ageldama.github.io/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/</link>
+      <link>http://localhost:1313/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/</link>
       <pubDate>Sat, 28 Jul 2018 12:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/</guid>
+      <guid>http://localhost:1313/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/</guid>
       <description>&amp;ldquo;내적모순&amp;rdquo; 이맥스에서 Evil을 쓰면서 몇가지 짜증나는게 있어왔다.&#xA;Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 키바인딩을 실시간으로 확인할 수 있는 방법도 제대로 안먹히게 된거라, 이맥스에서 쩔어주는 기능인 자기 자신을 확인하며 단축키 안외우기 같은게 다 무의미해짐. 공식 사이트 들어가도 문서는 없다. 그냥 Vim 온라인 help을 보거나 하라는 친절인거 같다. Magit, Edb, 등등 대부분의 이맥스의 다른 Major mode들이랑은 정말 충돌하는 경우가 너무 많음. https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421 위의 링크만 봐도, 내가 얼마나 충돌이 나는 모드들을 경험했는지 알수있다.</description>
     </item>
   </channel>

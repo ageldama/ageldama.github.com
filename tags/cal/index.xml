@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cal on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/cal/</link>
+    <link>http://localhost:1313/tags/cal/</link>
     <description>Recent content in Cal on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Thu, 02 Mar 2023 17:50:00 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/cal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/cal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>`ncal -3` 직접 Perl으로 짜봤다</title>
-      <link>https://ageldama.github.io/posts/2023-03mar/perl-cal3/</link>
+      <link>http://localhost:1313/posts/2023-03mar/perl-cal3/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-03mar/perl-cal3/</guid>
+      <guid>http://localhost:1313/posts/2023-03mar/perl-cal3/</guid>
       <description>ncal -3 이 뭐냐하면:&#xA;https://man7.org/linux/man-pages/man1/cal.1.html&#xA;…뭐 이런건데, 개인적으로 저전력 글쓰기 전용머신에서 사용하는 스크립트에서 배포판이 달라서 패키지를 못찾겠어서 1, …그냥 직접 짜서 대체했다.&#xA;https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e488&#xA;그래서 스크린샷은:&#xA;재밌었던 부분은:&#xA;어차피 Perl으로 전부 짜서 쓰는 스크립트였는데, 아예 외부 커맨드라인 도구 의존성을 더 없애서 뿌듯하다. 매달 달력을 문자열으로 뽑았는데, 3달치를 뽑아서, 이걸 한 row에 표시하고 싶었는데, Text::Table으로 적절히 간단히 완료. Term::ANSIColor와 perlre을 써서 깔끔하게 원하는 일자에 highlighting 해서 편안했다. …더 해킹을 해서, calendar(..) 결과문자열을 적당히 파싱해서, 작은 Text::Table으로 만들어서, 그것들으로 조합하고 했었어도 될거 같아.</description>
     </item>
   </channel>

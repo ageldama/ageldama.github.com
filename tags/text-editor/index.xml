@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Text-Editor on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/text-editor/</link>
+    <link>http://localhost:1313/tags/text-editor/</link>
     <description>Recent content in Text-Editor on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Thu, 28 May 2020 00:00:01 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/text-editor/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/text-editor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>코드 편집기에 대한 생각</title>
-      <link>https://ageldama.github.io/posts/2020-05may/editors/</link>
+      <link>http://localhost:1313/posts/2020-05may/editors/</link>
       <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-05may/editors/</guid>
+      <guid>http://localhost:1313/posts/2020-05may/editors/</guid>
       <description>코드 편집기를 어떻게 써왔었는지 잠깐 생각해봤다:&#xA;DOS시절: MS-DOS Editor.&#xA;GW-BASIC 시절에는 정말 https://en.wikipedia.org/wiki/MS-DOS_Editor 을 열심히 썼었던 것 같다. 그리고 그 다음엔 PowerBASIC for DOS 열심히 썼었다. QuickBASIC 같은 바이트코드으로 컴파일해서 .exe 파일에 인터프리터와 바이트코드를 embedding 하는 VB의 P-code 같은 가짜 컴파일 방식1이 아니라 정말 네이티브 코드로 컴파일해주고, 인라인 어셈블리와 메모리 조작이 가능한 베이직 컴파일러, IDE여서 좋은 환경이었던 것 같다. 터보C 2.0 편집기. PowerBASIC이랑 유사해서 익숙하게 쓸 수 있었던 것 같다.</description>
     </item>
   </channel>

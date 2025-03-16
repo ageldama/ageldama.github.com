@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Macro on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/macro/</link>
+    <link>http://localhost:1313/tags/macro/</link>
     <description>Recent content in Macro on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Thu, 02 Mar 2023 16:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/macro/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/macro/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C&#43;&#43;: Golang-ish `defer`-macro</title>
-      <link>https://ageldama.github.io/posts/2023-03mar/cxx-defer/</link>
+      <link>http://localhost:1313/posts/2023-03mar/cxx-defer/</link>
       <pubDate>Thu, 02 Mar 2023 16:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-03mar/cxx-defer/</guid>
+      <guid>http://localhost:1313/posts/2023-03mar/cxx-defer/</guid>
       <description>별거 없는데, 문득 심심해서 툭닥거려봤다.&#xA;원하는 것과 접근법 defer.inl : 사용예 제약사항과 생각해볼꺼리 Footnotes 원하는 것과 접근법 https://go.dev/blog/defer-panic-and-recover https://docs.rs/defer/latest/defer/fn.defer.html https://ziglang.org/documentation/master/#defer golang/zig에서처럼 defer 등록한 LIFO순서대로 호출되도록.&#xA;검색해보면, 대부분 RAII을 사용하거나 하는 것들이 보인다:&#xA;DDG: c++ golang defer https://stackoverflow.com/questions/33050620/golang-style-defer-in-c https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/ …그냥 std::shared_ptr&amp;lt;void&amp;gt; 을 이용하는 방식이 마음에 들었다. 그리고 조금 더 간단하게 사용하려고 매크로로 만들어 봤다.&#xA;defer.inl : 1 2 3 4 5 6 7 8 9 10 11 12 13 /* -*- mode: c++; -*- */ #ifndef defer_INL #define defer_INL 1 #include &amp;lt;memory&amp;gt; #define _Defer_CONCAT_IMPL( x, y ) x##y #define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y ) #define Defer(blk) std::shared_ptr&amp;lt;void&amp;gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk) #endif /*defer_INL*/ __COUNTER__ 이용해서 매크로가 생성한 std::shared_ptr&amp;lt;.</description>
     </item>
     <item>
       <title>rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</title>
-      <link>https://ageldama.github.io/posts/2019-10oct/cl-rutils/</link>
+      <link>http://localhost:1313/posts/2019-10oct/cl-rutils/</link>
       <pubDate>Fri, 11 Oct 2019 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-10oct/cl-rutils/</guid>
+      <guid>http://localhost:1313/posts/2019-10oct/cl-rutils/</guid>
       <description>커먼리습은 CLHS 이후로 언어 자체 정의는 변하지 않았다.&#xA;구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거 같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 lisp reader을 확장하는게 CLHS에서 정의해놓은 기능 중 하나이고, 구현체들도 스펙을 잘 구현해놓았으니까.&#xA;결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면 언제든지 매크로를 만들듯이 확장하면 되니까.&#xA;&amp;lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&amp;rsquo;&#xA;이런 커먼리습 확장 &amp;lsquo;라이브러리&amp;rsquo; 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github.</description>
     </item>
   </channel>

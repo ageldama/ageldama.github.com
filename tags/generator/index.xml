@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Generator on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/generator/</link>
+    <link>http://localhost:1313/tags/generator/</link>
     <description>Recent content in Generator on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/generator/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/generator/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</title>
-      <link>https://ageldama.github.io/posts/2020-11nov/leet-code-1614-3rd/</link>
+      <link>http://localhost:1313/posts/2020-11nov/leet-code-1614-3rd/</link>
       <pubDate>Wed, 11 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-11nov/leet-code-1614-3rd/</guid>
+      <guid>http://localhost:1313/posts/2020-11nov/leet-code-1614-3rd/</guid>
       <description>지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.&#xA;1 2 3 4 5 6 7 8 from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &amp;#39;(&amp;#39; and 1 or -1 for ch in s if ch in (&amp;#39;(&amp;#39;, &amp;#39;)&amp;#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.</description>
     </item>
   </channel>

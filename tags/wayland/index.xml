@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wayland on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/wayland/</link>
+    <link>http://localhost:1313/tags/wayland/</link>
     <description>Recent content in Wayland on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 05 Nov 2023 05:28:12 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/wayland/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/wayland/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</title>
-      <link>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/</link>
+      <link>http://localhost:1313/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/</link>
       <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/</guid>
+      <guid>http://localhost:1313/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/</guid>
       <description>나도 x11에서 wayland 기반으로 옮겨가고 있는데, 다른 것들은 대부분 괜찮거나 포기.1&#xA;가볍고 좋은데, debian chromium에서 ibus으로 한글 입력이 안되어서 알아봤다.&#xA;1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨. 힌트 얻음: https://bugzilla.redhat.com/show_bug.cgi?id=2058976 2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지? 1 2 3 4 for pid in $(pgrep chromium); do #echo $pid grep -i gtk /proc/&amp;#34;$pid&amp;#34;/maps done ==&amp;gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&amp;gt; ibus 연동안됨.&#xA;3) 실행커맨드/스크립트 확인 dpkg -L chromium-browser 으로 desktop launcher 확인 /usr/share/applications/chromium-browser.</description>
     </item>
   </channel>

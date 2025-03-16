@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Debugger on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/debugger/</link>
+    <link>http://localhost:1313/tags/debugger/</link>
     <description>Recent content in Debugger on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 29 Dec 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/debugger/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/debugger/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>moonshot.el 최초 릴리즈</title>
-      <link>https://ageldama.github.io/posts/2019-12dec/moonshot-1st-rel/</link>
+      <link>http://localhost:1313/posts/2019-12dec/moonshot-1st-rel/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-12dec/moonshot-1st-rel/</guid>
+      <guid>http://localhost:1313/posts/2019-12dec/moonshot-1st-rel/</guid>
       <description>moonshot.el 을 만들어서 공개했다.&#xA;이맥스를 써오면서 불편하다고 생각한걸 간단히 하고 싶었었다:&#xA;불편함들 빌드 디렉토리 Projectile을 사용하니까 프로젝트 디렉토리는 관리가 쉬운데, 빌드 디렉토리는 관리가 어려웠다.&#xA;아예 Projectile이 추론하는 디렉토리 바깥에 빌드 디렉토리는 위치하는 경우도 있으니까.&#xA;예) GNU Autotools configure 이나 CMake으로 작업할 때, 소스트리 바깥에 빌드 디렉토리를 걸어놓아서 정리를 깔끔하게 할 수 있으니까. 그런데 이 &amp;#39;빌드 디렉토리&amp;#39;가 중요한게,&#xA;말그대로 컴파일한 .o 파일이나 최종 결과 실행파일 등이 여기에 쌓이니까 디버깅, 테스트를 위해서 실행파일을 실행하거나, 심지어 make 이나 ninja 같은 빌드 커맨드를 실행하기 위해서도 빌드 디렉토리를 지정하거나 이동해서 실행해야 하니까 귀찮다.</description>
     </item>
   </channel>

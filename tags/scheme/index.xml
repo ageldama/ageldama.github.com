@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scheme on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/scheme/</link>
+    <link>http://localhost:1313/tags/scheme/</link>
     <description>Recent content in Scheme on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/scheme/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/scheme/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</title>
-      <link>https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/</link>
+      <link>http://localhost:1313/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/</guid>
+      <guid>http://localhost:1313/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/</guid>
       <description>다음의 간단한 코드를 읽어보자.&#xA;1 2 3 4 5 6 7 8 9 10 11 12 var x = &amp;#34;lexical&amp;#34;; function maker() { return function() { return x; }; } { var x = &amp;#34;dynamic&amp;#34;; assert(maker()() == &amp;#34;???&amp;#34;); } maker()() 의 결과는 &amp;#39;dynamic&amp;#39; 이다.&#xA;심지어, 맨 마지막에 있는 {..} 블록을 넘어가서도 x 의 값은 여전이 &amp;#39;dynamic&amp;#39; 이다.&#xA;자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다.</description>
     </item>
   </channel>

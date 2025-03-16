@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU) - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.
@@ -7,7 +7,7 @@ USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테
 정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마 https://github.com/aircrack-ng/rtl8812au 이 드라이버가 살렸다.
 1 2 # lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/">
+	<meta property="og:url" content="http://localhost:1313/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)">
   <meta property="og:description" content="arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.
@@ -34,12 +34,18 @@ USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테
 1 2 # lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load.">
 
 	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
-		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
+		<script src="http://localhost:1313/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="http://localhost:1313/js/DarkMode.js"></script>
 	        
 
-	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.8bafbfe845951bd3ccf28002287fb83dc9a8ee6c156f877747ad382c85094130.css" />
+        
+            
+            
+                
+                    <link rel="stylesheet" href="/css/gopherish.css">
+                
+            
+        
 	
 	
 </head>
@@ -47,7 +53,7 @@ USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테
         <div class="content"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
     
     <nav>
@@ -147,17 +153,6 @@ RPi을 그냥 이참에 라우터로 만들어버릴까 싶기도 하다. 방에
     2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
 <script>
   
 </script></div>

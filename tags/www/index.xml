@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Www on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/www/</link>
+    <link>http://localhost:1313/tags/www/</link>
     <description>Recent content in Www on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 11 Dec 2019 02:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/www/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/www/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>원하는 웹브라우져, 웹환경, 그리고 익숙하지만 싫은 어떤 신앙체계</title>
-      <link>https://ageldama.github.io/posts/2019-12dec/the-web-and-the-free-world/</link>
+      <link>http://localhost:1313/posts/2019-12dec/the-web-and-the-free-world/</link>
       <pubDate>Wed, 11 Dec 2019 02:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-12dec/the-web-and-the-free-world/</guid>
+      <guid>http://localhost:1313/posts/2019-12dec/the-web-and-the-free-world/</guid>
       <description>지금의 웹환경은 너무 과도한 치장, 보이는 이미지 중심이어서 딱 한가지 측면을 제외하고 모든 면에서 정말 끔찍하다는 생각이 들었다. 하긴 그러니 많은 사람들이 열심히 쓰는걸지도 몰라.&#xA;그래서 정말 많은 사람들이 오히려 그런 치장, 자바스크립트로 덩어리진 화면을 로딩 하느라 보이지 않는 시간을 조금씩 모아서 낭비하고 있다는 생각도 든다. …그리고 또 그걸 만든다고 시간은 버려지고. 그렇게 모두가 하는 방식대로 하는 수 밖엔 다른 방법을 모르겠고, 그렇게 만들어가는 자바스크립트, 프론트엔드 개발자들의 시간도 마찬가지고.</description>
     </item>
   </channel>

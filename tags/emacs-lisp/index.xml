@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emacs-Lisp on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/emacs-lisp/</link>
+    <link>http://localhost:1313/tags/emacs-lisp/</link>
     <description>Recent content in Emacs-Lisp on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 06 May 2024 07:51:13 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/emacs-lisp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/emacs-lisp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>xmake, compile_commands.json, flycheck</title>
-      <link>https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</link>
+      <link>http://localhost:1313/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</guid>
+      <guid>http://localhost:1313/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</guid>
       <description>cmake/warp등을 써보면서 c/c++ 개발할 때에 빌드도구 갖고 놀다가, 이번에 마음을 열고 xmake을 익혀봄.&#xA;마음에 든다. 가볍고 빠르고 좋다.&#xA;ccache등도 바로 지원하고, lua으로 스크립팅도 그럭저럭 할만해 보이고, [build.zig](https://ziglang.org/learn/build-system/)스러워서 당연하게도 좋은거 같아.&#xA;계속 쓸거 같다.&#xA;emacs / flycheck + c/c++ 개발할 때에 단점이, 자동적으로 외부 3rd-party 라이브러리의 include-path을 설정해주지 않아서, [dirs-local](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html) 같은걸 세팅해주길 기대한다는 점.&#xA;그래서 그냥 xmake project -vD -k compile_commands -m debug 같이 compile_commands.json 생성하고,&#xA;이걸 파싱해서 표준출력으로 include-paths https://github.</description>
     </item>
     <item>
       <title>Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</title>
-      <link>https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/</link>
+      <link>http://localhost:1313/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/</guid>
+      <guid>http://localhost:1313/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/</guid>
       <description>다음의 간단한 코드를 읽어보자.&#xA;1 2 3 4 5 6 7 8 9 10 11 12 var x = &amp;#34;lexical&amp;#34;; function maker() { return function() { return x; }; } { var x = &amp;#34;dynamic&amp;#34;; assert(maker()() == &amp;#34;???&amp;#34;); } maker()() 의 결과는 &amp;#39;dynamic&amp;#39; 이다.&#xA;심지어, 맨 마지막에 있는 {..} 블록을 넘어가서도 x 의 값은 여전이 &amp;#39;dynamic&amp;#39; 이다.&#xA;자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다.</description>
     </item>
   </channel>

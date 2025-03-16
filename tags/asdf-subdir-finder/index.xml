@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Asdf-Subdir-Finder on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/asdf-subdir-finder/</link>
+    <link>http://localhost:1313/tags/asdf-subdir-finder/</link>
     <description>Recent content in Asdf-Subdir-Finder on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/asdf-subdir-finder/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/asdf-subdir-finder/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#34;asdf-subdir-finder&#34; released!</title>
-      <link>https://ageldama.github.io/posts/2020-10oct/asdf-subdir-finder-1st/</link>
+      <link>http://localhost:1313/posts/2020-10oct/asdf-subdir-finder-1st/</link>
       <pubDate>Mon, 26 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-10oct/asdf-subdir-finder-1st/</guid>
+      <guid>http://localhost:1313/posts/2020-10oct/asdf-subdir-finder-1st/</guid>
       <description>지난번 포스팅한 &amp;#34;asdf 정의를 내 코드베이스의 하위디렉토리에서 자동으로 로딩하기&amp;#34;를 프로젝트으로 만들었다.&#xA;https://github.com/ageldama/asdf-subdir-finder&#xA;사람마다 커먼리습으로 작업하는 스타일에 따라 많이 다를 수 있어서 안 써도 되기도 하지만, 그냥 정리해서 공개는 해봤다.</description>
     </item>
   </channel>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>State-Machine on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/state-machine/</link>
+    <link>http://localhost:1313/tags/state-machine/</link>
     <description>Recent content in State-Machine on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 09 Dec 2019 00:00:01 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/state-machine/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/state-machine/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First release of cl-state-machine</title>
-      <link>https://ageldama.github.io/posts/2019-12dec/cl-state-machine-1st-release/</link>
+      <link>http://localhost:1313/posts/2019-12dec/cl-state-machine-1st-release/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-12dec/cl-state-machine-1st-release/</guid>
+      <guid>http://localhost:1313/posts/2019-12dec/cl-state-machine-1st-release/</guid>
       <description>Made a small state machine library/DSL in/for CommonLisp.&#xA;https://github.com/ageldama/cl-state-machine</description>
     </item>
   </channel>

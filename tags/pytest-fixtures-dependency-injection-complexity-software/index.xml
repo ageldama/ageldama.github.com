@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pytest Fixtures Dependency-Injection Complexity Software on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/pytest-fixtures-dependency-injection-complexity-software/</link>
+    <link>http://localhost:1313/tags/pytest-fixtures-dependency-injection-complexity-software/</link>
     <description>Recent content in Pytest Fixtures Dependency-Injection Complexity Software on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 08 Jun 2022 18:20:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/pytest-fixtures-dependency-injection-complexity-software/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/pytest-fixtures-dependency-injection-complexity-software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>pytest fixtures와 의존성관리, 그리고 복잡도관리</title>
-      <link>https://ageldama.github.io/posts/2022-jekyll/2022-06-08--02-pytest-fixtures-and-complexity-mgmt/</link>
+      <link>http://localhost:1313/posts/2022-jekyll/2022-06-08--02-pytest-fixtures-and-complexity-mgmt/</link>
       <pubDate>Wed, 08 Jun 2022 18:20:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2022-jekyll/2022-06-08--02-pytest-fixtures-and-complexity-mgmt/</guid>
+      <guid>http://localhost:1313/posts/2022-jekyll/2022-06-08--02-pytest-fixtures-and-complexity-mgmt/</guid>
       <description># ...tests/conftest.py import pytest @pytest.fixture def name(): return &#39;Pokemon&#39; @pytest.fixture(scope=&#39;function&#39;) def monster(name): ... # ...tests/foo_test.py : def test_beast(monster): ... # &amp;lt;--- `def monster(..)`의 결과를 주입 받음. https://docs.pytest.org/en/6.2.x/fixture.html&#xA;&amp;hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨. 내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.&#xA;&amp;lsquo;거창함&amp;rsquo;이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면&amp;hellip; 글쎄. ㅎㅎ&amp;hellip;</description>
     </item>
   </channel>

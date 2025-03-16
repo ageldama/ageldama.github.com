@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Github.io 블로그 TraviCI으로 빌드해서 배포하기 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content=".. 여기 에 불만을 적었듯이, 여러가지로 그냥은 만족하기 어려운 부분이 있었다.
@@ -9,7 +9,7 @@
 우선 Jekyll 소스용 저장소로 분리하고, 배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다. https://github.com/felixrieseberg/travis-jekyll-git 여기 참고해서 삽질. 결과물은 https://github.com/ageldama/ageldama-gh-jekyll ..진행하면서 처음에 좀 짜증났던거,
 Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것만으로는 안되고, .travis.yml 파일에 gem설치를 지정해야했다. https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5 Travis-CI 작업의 세팅에서 git_target 환경변수에 URL지정할때&hellip; github." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2017/2017-01-02-travis-ci-jekyll-gh/">
+	<meta property="og:url" content="http://localhost:1313/posts/2017/2017-01-02-travis-ci-jekyll-gh/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="Github.io 블로그 TraviCI으로 빌드해서 배포하기">
   <meta property="og:description" content=".. 여기 에 불만을 적었듯이, 여러가지로 그냥은 만족하기 어려운 부분이 있었다.
@@ -37,12 +37,18 @@ Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것
 Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것만으로는 안되고, .travis.yml 파일에 gem설치를 지정해야했다. https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5 Travis-CI 작업의 세팅에서 git_target 환경변수에 URL지정할때… github.">
 
 	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
-		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
+		<script src="http://localhost:1313/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="http://localhost:1313/js/DarkMode.js"></script>
 	        
 
-	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://ageldama.github.io/css/gopherish.8bafbfe845951bd3ccf28002287fb83dc9a8ee6c156f877747ad382c85094130.css" />
+        
+            
+            
+                
+                    <link rel="stylesheet" href="/css/gopherish.css">
+                
+            
+        
 	
 	
 </head>
@@ -50,7 +56,7 @@ Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것
         <div class="content"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
     
     <nav>
@@ -150,17 +156,6 @@ Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것
     2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
 <script>
   
 </script></div>

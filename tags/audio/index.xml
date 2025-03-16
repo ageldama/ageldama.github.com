@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Audio on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/audio/</link>
+    <link>http://localhost:1313/tags/audio/</link>
     <description>Recent content in Audio on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 03 Oct 2018 20:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/audio/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/audio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정</title>
-      <link>https://ageldama.github.io/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</link>
+      <link>http://localhost:1313/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</link>
       <pubDate>Wed, 03 Oct 2018 20:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</guid>
+      <guid>http://localhost:1313/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</guid>
       <description>https://www.hifiberry.com/ 요거 Raspberry Pi 3에 세팅한 모험에 대한 이야기.&#xA;WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev #update_config=1 country=GB network={ ssid=&amp;quot;iptime&amp;quot; psk=&amp;quot;xxxxxxxxxx&amp;quot; key_mgmt=WPA-PSK } wpa_passphrase 안쓰고 그냥 plaintext으로 써도 동작. 내 공유기랑은 country=GB 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤. 그리고 ip link set wlan0 {up|down} 정도로 wlan0 인터페이스를 up/down하면됨. 사운드 드라이버 설정 내장 사운드카드 드라이버는 modprobe blacklist에 추가해서 끄자. /boot/config.txt에 HiFiBerry DAC+ 드라이버 오버레이를 지정해야함. 내장 사운드 드라이버 끄기 다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음.</description>
     </item>
   </channel>

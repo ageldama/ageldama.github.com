@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Compile_commands.json on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/compile_commands.json/</link>
+    <link>http://localhost:1313/tags/compile_commands.json/</link>
     <description>Recent content in Compile_commands.json on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 06 May 2024 07:51:13 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/compile_commands.json/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/compile_commands.json/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>xmake, compile_commands.json, flycheck</title>
-      <link>https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</link>
+      <link>http://localhost:1313/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</guid>
+      <guid>http://localhost:1313/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</guid>
       <description>cmake/warp등을 써보면서 c/c++ 개발할 때에 빌드도구 갖고 놀다가, 이번에 마음을 열고 xmake을 익혀봄.&#xA;마음에 든다. 가볍고 빠르고 좋다.&#xA;ccache등도 바로 지원하고, lua으로 스크립팅도 그럭저럭 할만해 보이고, [build.zig](https://ziglang.org/learn/build-system/)스러워서 당연하게도 좋은거 같아.&#xA;계속 쓸거 같다.&#xA;emacs / flycheck + c/c++ 개발할 때에 단점이, 자동적으로 외부 3rd-party 라이브러리의 include-path을 설정해주지 않아서, [dirs-local](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html) 같은걸 세팅해주길 기대한다는 점.&#xA;그래서 그냥 xmake project -vD -k compile_commands -m debug 같이 compile_commands.json 생성하고,&#xA;이걸 파싱해서 표준출력으로 include-paths https://github.</description>
     </item>
   </channel>

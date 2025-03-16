@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Evil-Mode on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/evil-mode/</link>
+    <link>http://localhost:1313/tags/evil-mode/</link>
     <description>Recent content in Evil-Mode on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sat, 28 Jul 2018 12:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/evil-mode/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/evil-mode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NeoVim, Evil-mode and Emacs의 모험</title>
-      <link>https://ageldama.github.io/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/</link>
+      <link>http://localhost:1313/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/</link>
       <pubDate>Sat, 28 Jul 2018 12:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/</guid>
+      <guid>http://localhost:1313/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/</guid>
       <description>&amp;ldquo;내적모순&amp;rdquo; 이맥스에서 Evil을 쓰면서 몇가지 짜증나는게 있어왔다.&#xA;Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 키바인딩을 실시간으로 확인할 수 있는 방법도 제대로 안먹히게 된거라, 이맥스에서 쩔어주는 기능인 자기 자신을 확인하며 단축키 안외우기 같은게 다 무의미해짐. 공식 사이트 들어가도 문서는 없다. 그냥 Vim 온라인 help을 보거나 하라는 친절인거 같다. Magit, Edb, 등등 대부분의 이맥스의 다른 Major mode들이랑은 정말 충돌하는 경우가 너무 많음. https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421 위의 링크만 봐도, 내가 얼마나 충돌이 나는 모드들을 경험했는지 알수있다.</description>
     </item>
   </channel>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Setter on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/setter/</link>
+    <link>http://localhost:1313/tags/setter/</link>
     <description>Recent content in Setter on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 22 Jan 2017 16:15:00 +0100</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/setter/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/setter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java Immutables와 친숙한 오래된 문제들</title>
-      <link>https://ageldama.github.io/posts/2017/2017-01-22-java-immutables-classic-problem/</link>
+      <link>http://localhost:1313/posts/2017/2017-01-22-java-immutables-classic-problem/</link>
       <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/posts/2017/2017-01-22-java-immutables-classic-problem/</guid>
+      <guid>http://localhost:1313/posts/2017/2017-01-22-java-immutables-classic-problem/</guid>
       <description>https://immutables.github.io/ 요즘 이걸 살짝 봤는데, 재미있었다.&#xA;그런데 일단 깊이보거나 써보기 전에 드는 걱정은,&#xA;이거 기존의 몇몇 프레임웍이나 라이브러리들이랑은 친하게 지내기 어렵지 않을까. 왜냐하면, 대부분의 POJO에 연관된 생성단계에서, default constructor 와 setter-methods을 갖고, 값을 세팅하는 경우가 대부분인데, 예를들면, 대부분의 ORM 프레임웍들이나 POJO으로 JSON등을 Deserialization해서 직접 객체를 생성할 책임을 프레임웍이나 라이브러리가 가져가는 경우에 대부분. &amp;hellip;그러면 결국 말짱황인거 같다.. 아무리 accessor 메서드들 boilerplate으로 생성하는거 막아주는게 좋다고 해도, 솔직히 그냥 한번 IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는게 더 낫겠다는 생각이든다.</description>
     </item>
   </channel>

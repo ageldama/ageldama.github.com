@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thinking on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/thinking/</link>
+    <link>http://localhost:1313/tags/thinking/</link>
     <description>Recent content in Thinking on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sat, 12 Oct 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/thinking/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/thinking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Zettelkästen?</title>
-      <link>https://ageldama.github.io/posts/2019-10oct/zettelkaesten-12sat/</link>
+      <link>http://localhost:1313/posts/2019-10oct/zettelkaesten-12sat/</link>
       <pubDate>Sat, 12 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-10oct/zettelkaesten-12sat/</guid>
+      <guid>http://localhost:1313/posts/2019-10oct/zettelkaesten-12sat/</guid>
       <description>어제 Ping에서 계속 블로깅을 하면서 생각 하는걸 계속 다듬어 갔으면 좋겠다는 말을 했었는데,&#xA;마침 HN에 그런걸 하기 적절해 보이는 글이 올라와서 읽어봤다.1&#xA;간략히 정리해보면,&#xA;생각 적기: 짧은 길이 메모를 적어서 생각만으로 카드를 만들고,2 3 이 상태에서는 우선 각 카드는 &amp;ldquo;순번없음 (Unsorted)&amp;rdquo; 상태 deck으로 쌓아만 놓는다. 순서매기기(1): 카드끼리 1, 2, 3 같이 순서를 두고 정렬. &amp;lsquo;Unsorted&amp;rsquo; deck에서 꺼내와서 정리하는거겠지. 각 순서는 생각의 순서일수도 있겠고, 아니면 그냥 구분되는 다른 생각의 단절을 나타내는 방법으로 쓸수도 있겠지.</description>
     </item>
   </channel>

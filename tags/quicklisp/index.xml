@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quicklisp on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/quicklisp/</link>
+    <link>http://localhost:1313/tags/quicklisp/</link>
     <description>Recent content in Quicklisp on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Fri, 06 Dec 2019 00:00:01 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/quicklisp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/quicklisp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>커먼리습 설정하기, ASDF 시스템 코드를 받기</title>
-      <link>https://ageldama.github.io/posts/2019-12dec/tips-ecl-clisp/</link>
+      <link>http://localhost:1313/posts/2019-12dec/tips-ecl-clisp/</link>
       <pubDate>Fri, 06 Dec 2019 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-12dec/tips-ecl-clisp/</guid>
+      <guid>http://localhost:1313/posts/2019-12dec/tips-ecl-clisp/</guid>
       <description>1. ASDF을 최신 버젼으로 설정한다 (이부분에서 많이 고생했는데) SBCL와 다르게 CLISP, ECL 은 최신 버젼의 ASDF을 내장한걸 패키징해놓지 않았다.&#xA;대부분은 문제가 없이 동작하지만, 내가 작성한 커먼리습 시스템에서 실행파일을 빌드할 때 문제가 많았다.&#xA;ASDF 의 최신 버젼을 git clone 해서 적당한 디렉토리에 받는다. https://common-lisp.net/project/asdf/ make을 내려받은 ASDF 디렉토리에서 실행한다. 실행하면 build/asdf.lisp 파일으로 한 파일으로 뭉쳐서 로딩하게 편안한 파일을 생성해준다. 내 커먼리습 구현체의 시작설정파일 맨 앞에 다음처럼 추가한다. (load &amp;quot;~/local/asdf/build/asdf&amp;quot;) 여기서 나는 $HOME/local/asdf/ 에 ASDF을 받았다고 가정.</description>
     </item>
   </channel>

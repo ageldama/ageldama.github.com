@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The-Dark-Side-of-Common-Lisp on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/the-dark-side-of-common-lisp/</link>
+    <link>http://localhost:1313/tags/the-dark-side-of-common-lisp/</link>
     <description>Recent content in The-Dark-Side-of-Common-Lisp on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sat, 16 Nov 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/the-dark-side-of-common-lisp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/the-dark-side-of-common-lisp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(Common Lisp의 어두운 면) Equality</title>
-      <link>https://ageldama.github.io/posts/2019-11nov/the-dark-side-of-cl-equality/</link>
+      <link>http://localhost:1313/posts/2019-11nov/the-dark-side-of-cl-equality/</link>
       <pubDate>Sat, 16 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-11nov/the-dark-side-of-cl-equality/</guid>
+      <guid>http://localhost:1313/posts/2019-11nov/the-dark-side-of-cl-equality/</guid>
       <description>오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로 생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을 리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.&#xA;뭐 커먼리습의 CLHS - HyperSpec을 읽다보면 비슷한데 아주 약간씩 미묘하게 달라서 지원하는 것들이 있다:&#xA;let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Function MAP Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON Function MAP-INTO prog Macro PROG1, PROG2 Special Operator PROGN Macro PROG, PROG* Special Operator PROGV &amp;hellip;그밖에도 좀 더 있을듯?</description>
     </item>
   </channel>

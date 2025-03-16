@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Responsibility on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/responsibility/</link>
+    <link>http://localhost:1313/tags/responsibility/</link>
     <description>Recent content in Responsibility on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 19 Feb 2023 06:55:00 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/responsibility/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/responsibility/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 19/02/2023 .01 : 어른이 되기</title>
-      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb19--01-ping/</link>
+      <link>http://localhost:1313/posts/2023-02feb/2023-02feb19--01-ping/</link>
       <pubDate>Sun, 19 Feb 2023 06:55:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb19--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb19--01-ping/</guid>
       <description>(최근 며칠 우울하고 내가 어른이기는 한가 싶은 자괴감에 빠졌었다. 그래서인지 자기합리화를 위해 이런 글을 쓰고 있는거 같기도 하다.)&#xA;나의 옛날 이야기 어른의 사정 그런데 어떤 어린이는 어른을 이해한다. 때로는 The Overfitting 아직은 어린 마음인, 그래야만 한다는 강박 짝사랑, 혹은 도착증과 그 반대로써인 쩌리의 자존심 신화적인 닌텐도와 그 빠 &amp;#34;괜찮아&amp;#34; Footnotes 나의 옛날 이야기 80년대의 기억에는, 참 자주도 불량식품 단속에 대한 이야기가 나오던 것 같아. 그리고 실제로도 만화, 애니메이션, 게임, 장난감 등등의 라이센스나 품질관리에 대한 관념이 희박했던거 같아.</description>
     </item>
   </channel>

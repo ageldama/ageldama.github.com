@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Window on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/window/</link>
+    <link>http://localhost:1313/tags/window/</link>
     <description>Recent content in Window on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 22 Jan 2017 14:15:00 +0100</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/window/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/window/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs에서 window 전환을 편하게, ace-window</title>
-      <link>https://ageldama.github.io/posts/2017/2017-01-22-emacs-ace-window/</link>
+      <link>http://localhost:1313/posts/2017/2017-01-22-emacs-ace-window/</link>
       <pubDate>Sun, 22 Jan 2017 14:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/posts/2017/2017-01-22-emacs-ace-window/</guid>
+      <guid>http://localhost:1313/posts/2017/2017-01-22-emacs-ace-window/</guid>
       <description>이맥스에서 코딩하거나 마크다운이나 Org으로 글을 쓰고 정리하는데, 그간 그냥 그럭저럭 나는 이맥스를 나한테 맞춰서 사용하고 있다고 생각하고 있었던거 같다. 1&#xA;그런데, 항상 뭔가 불편한데, 그냥 바쁘다는 이유로 깊이 생각은 안하고 대충 대충 때우면서 사용해왔었던게 있었다. 바로 window 끼리 전환하는 방법.&#xA;C-x 2 이나 C-x 3으로 창을 분할해놓고 쓰는게 보통인데, 이때 나는 그냥 아무 생각없이 C-x o만을 이용해서 다음 윈도우 으로 이동만해왔었다.&#xA;그런데, 창이 3개 이상이 되고, 현재 창의 다음 창 이 아니라, 이전 창 으로 이동하고 싶으면?</description>
     </item>
   </channel>

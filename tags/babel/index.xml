@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Babel on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/babel/</link>
+    <link>http://localhost:1313/tags/babel/</link>
     <description>Recent content in Babel on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/babel/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/babel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Org모드에서 스프레드시트 기능과 Babel 섞어쓰기</title>
-      <link>https://ageldama.github.io/posts/2019-12dec/org-spreadsheet-and-babel/</link>
+      <link>http://localhost:1313/posts/2019-12dec/org-spreadsheet-and-babel/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-12dec/org-spreadsheet-and-babel/</guid>
+      <guid>http://localhost:1313/posts/2019-12dec/org-spreadsheet-and-babel/</guid>
       <description>쩌는 Org-mode Spreadsheet 소개 를 읽고 감명 받아서 따라해봅니다.&#xA;다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리 defun / defmacro 으로 정의해놓고 그걸 spreadsheet에서 불러 쓸 수 있을지가 궁금했습니다.&#xA;그래서 다음과 같이 해보면 가능할지를 실험:&#xA;Org-Babel으로 원하는 함수를 정의한다.&#xA;그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다. Spreadsheet에서 불러서 쓸 수 있는지 확인해본다. 우선 C-h a 을 눌러 vsum 을 검색해보니, defun calcFunc-vsum (&amp;amp;rest vecs) 으로 미리 선언되어 있는거 같았습니다.</description>
     </item>
   </channel>

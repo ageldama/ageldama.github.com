@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ide on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/ide/</link>
+    <link>http://localhost:1313/tags/ide/</link>
     <description>Recent content in Ide on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Tue, 08 May 2018 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/ide/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs &#43; CMake-IDE Screencast</title>
-      <link>https://ageldama.github.io/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/</link>
+      <link>http://localhost:1313/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/</guid>
+      <guid>http://localhost:1313/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/</guid>
       <description>이건 무엇인가 Emacs Configurations: https://github.com/ageldama/configs/tree/master/emacs/cmake-ide&#xA;이맥스에서 C++ 개발 편하게 하려고 이것저것 알아보다가 결국엔 CMake-IDE + RTags 조합이 제일 괜찮다는 결론에 도달해서 만들어본 설정이다.&#xA;원래 사용하는 환경이 Evil은 아니었는데, Spacemacs 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.&#xA;지금은 그냥 Spacemacs은 다운도 잘되고 너무 무겁고 설정을 레이어 방식 으로 할게 아니면 짜증나게 하는 부분도 많고, 그렇다고 레이어가 완전히 내가 그냥 커스텀으로 만들어서 바로바로 머지하는 구조도 아니고 중앙에서 관리하는 방식으로만 되는거 같아서, 옆으로 치우고, 바닐라 이맥스에 Spacemacs스럽게 직접 설정해서 가볍게 사용하고 있다.</description>
     </item>
   </channel>

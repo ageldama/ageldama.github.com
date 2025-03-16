@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Symbol on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/symbol/</link>
+    <link>http://localhost:1313/tags/symbol/</link>
     <description>Recent content in Symbol on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 13 Nov 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/symbol/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/symbol/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</title>
-      <link>https://ageldama.github.io/posts/2019-11nov/why-sharpsign-in-method-path/</link>
+      <link>http://localhost:1313/posts/2019-11nov/why-sharpsign-in-method-path/</link>
       <pubDate>Wed, 13 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-11nov/why-sharpsign-in-method-path/</guid>
+      <guid>http://localhost:1313/posts/2019-11nov/why-sharpsign-in-method-path/</guid>
       <description>오늘 아침 다음은 오늘 아침 트위터의 타임라인에서 내가 스쳐본 한 스크린샷의 일부이다:&#xA;1&#xA;&amp;hellip;뭐에 느낌을 받았냐하면, 바로 저 String#replace(..) 이라는 부분이다. (다른 부분에서는 String.prototype.replace(..) 와 같이 썼는데 굳이 저기서만 갑자기 튀어나온 표기법)&#xA;사실 나도 종종 내가 작업한 코드의 문서를 쓰거나2 아니면 다른 사람과 텍스트로 대화를 해야할 때 이렇게 표기를 해왔었다.3&#xA;각각의 언어들에서 (내가 생각하는) 저렇게 표기하는 근거들은 다음과 같다:&#xA;Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Component#getGraphics() JavaDoc안에서 다른 메서드, 필드를 참고로 넣고 싶을 때 이게 표준표기법이고 javadoc도 요렇게 써줘야 링크처리를 해준다.</description>
     </item>
   </channel>

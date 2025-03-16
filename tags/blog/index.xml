@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/blog/</link>
+    <link>http://localhost:1313/tags/blog/</link>
     <description>Recent content in Blog on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sat, 15 Mar 2025 12:25:01 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>css, design 새단장 &#43; dark-mode</title>
-      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/</link>
+      <link>http://localhost:1313/posts/2025-03mar/2025-03mar15--01-new-css/</link>
       <pubDate>Sat, 15 Mar 2025 12:25:01 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/</guid>
+      <guid>http://localhost:1313/posts/2025-03mar/2025-03mar15--01-new-css/</guid>
       <description>css 더 단순하게 만들고, 디자인들도 그냥 내 마음에 들게 뜯어 고침. 다크모드도 작업해서 만들어 넣고.&#xA;css 애니메이션도 작업해 넣었다가, gpu 너무 쓰는거 같아서 그냥 끄고 정적효과로만 냅둠.&#xA;hugo 같은 static site generator이 좋은 점, 그리고 그냥 단순한 css와 오래된 jquery으로 그냥 뚝딱거려서 작업.</description>
     </item>
     <item>
       <title>Ping 03/02/2023 .01: 블로그 디자인 수정</title>
-      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/</link>
+      <link>http://localhost:1313/posts/2023-02feb/2023-02feb03--01-ping/</link>
       <pubDate>Fri, 03 Feb 2023 18:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb03--01-ping/</guid>
       <description>블로그를 내려놓았다가, 다시 글을 쓰고 생각들을 어느 정도는 공개를 하고 지내고 싶어져서 다시 열었다.&#xA;사용하던 테마를 수정해서 쓰기로 하고, CSS을 여기저기서 복붙해서 적용해보고, 갈무리 웹폰트도 적용해서, 오히려 원본 테마보다 더 가볍게 적당히 만들어봤다.&#xA;색상도, 외양과 기능 디자인 모두 어느 정도 내 취향에 맞게 꾸며 봤다.</description>
     </item>
   </channel>

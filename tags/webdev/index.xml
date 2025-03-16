@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Webdev on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/webdev/</link>
+    <link>http://localhost:1313/tags/webdev/</link>
     <description>Recent content in Webdev on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 02/Nov/2020</title>
-      <link>https://ageldama.github.io/posts/2020-11nov/ping-02mon/</link>
+      <link>http://localhost:1313/posts/2020-11nov/ping-02mon/</link>
       <pubDate>Mon, 02 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-11nov/ping-02mon/</guid>
+      <guid>http://localhost:1313/posts/2020-11nov/ping-02mon/</guid>
       <description>(functional) reactive 관련들을 다시 찾아 보고 있다.&#xA;예전에 webdev은 아니고 백엔드를 위해서 rxjs 을 쓸 일이 있었었고 꽤 재밌었다. node.js에서 async/await 이전에 동시성 처리를 하기에 유용하게 쓸 수 있었었고, 실은 그냥 monad이어서 조금만 이해를 하고 사용하면 여러모로 편리했었다.&#xA;https://github.com/stoeffel/awesome-frp-js 여기에 보면 rxjs이외에도 다른 js을 위한 FRP라이브러리들이 많이 생겼었다.&#xA;그 중에 흥미가 있어서 bacon.js 을 읽고 rxjs에서 만들어 본 작은 예제 프로젝트를 다시 작성해봤다. 깔끔했다.&#xA;rxjs으로 작성했었던 작은 예제는 다음과 같다.</description>
     </item>
     <item>
       <title>Ping 17/Oct/2020</title>
-      <link>https://ageldama.github.io/posts/2020-10oct/ping-16fri/</link>
+      <link>http://localhost:1313/posts/2020-10oct/ping-16fri/</link>
       <pubDate>Sat, 17 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-10oct/ping-16fri/</guid>
+      <guid>http://localhost:1313/posts/2020-10oct/ping-16fri/</guid>
       <description>웹프론트엔드 개발을 조금씩 해보고 있다. 처음에는 예전 방식으로만 하려고 하다가 조금씩 겨우 써보던 webpack을 다시 가이드를 차근차근 공부하고 동작하는 방식을 이해하도록 뜯어보고 돌려봤다.&#xA;생각보다 단순하게, 그리고 확장성 있게 쓸만한 빌드도구였다.&#xA;다만 문제는 설정이 복잡하고 이해하기 힘든 점보다는 빌드 시간이 너무 느린 점이었다. (내게는)&#xA;그래서 parcel bundler을 시도 했는데, 설정도 거의 필요 없이 바로 동작하고 하는 점은 좋고, 성능도 정말 빨랐다.&#xA;다만 Vim/Emacs으로 파일을 편집하고 저장할 때, parcel watch 대상인 파일들을 종종 아예 dev-server을 재시작해야만 제대로 동작하는 상태로 빠지는게 조금 짜증났다.</description>
     </item>
   </channel>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Exe on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/exe/</link>
+    <link>http://localhost:1313/tags/exe/</link>
     <description>Recent content in Exe on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/exe/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/exe/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hololog Perl/CLI 버젼</title>
-      <link>https://ageldama.github.io/posts/2019-12dec/hololog-perl-cli-1st-rel/</link>
+      <link>http://localhost:1313/posts/2019-12dec/hololog-perl-cli-1st-rel/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-12dec/hololog-perl-cli-1st-rel/</guid>
+      <guid>http://localhost:1313/posts/2019-12dec/hololog-perl-cli-1st-rel/</guid>
       <description>https://github.com/ageldama/hololog-perl-cli&#xA;한줄씩 메모를 하는걸 좋아하고, 그냥 데스크탑에서 PDF을 읽거나 웹페이지를 읽으면서 어딘가에 생각난거나 이해한걸 필기하면서 진행하고 싶어서 만들었다.&#xA;다음 트윗 타래에서 이야기한것처럼, 그냥 트위터 비밀계를 써도 괜찮지만, 그것도 너무 웹브라우져 열고 하다보면 산만해져서.&#xA;tweet 1206138361968070656 처음 시작은 Unix/GNU cat 을 간단하게 터미널에서 쓰면 된다는 생각이 들었다.&#xA;1 cat &amp;gt;&amp;gt; foo.txt ..그런데 유닉스가 아닌 사람들, 윈도를 쓰는 사람들은 어떻게 하지?&#xA;1 copy con foo.txt ..사실 위와 같이 cmd.exe 에서 실행해도 되겠지만, 뭔가 그래도 윈도 사용자들이나 터미널 화면을 무서워하는 사람들이 저런거 좋아할까.</description>
     </item>
   </channel>

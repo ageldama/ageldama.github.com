@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Perl on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/perl/</link>
+    <link>http://localhost:1313/tags/perl/</link>
     <description>Recent content in Perl on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 12 Mar 2025 10:40:27 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/perl/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/perl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>data-driven programming &amp; data-driven design &amp; data-oriented programming ???</title>
-      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar12--01-data-prog/</link>
+      <link>http://localhost:1313/posts/2025-03mar/2025-03mar12--01-data-prog/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar12--01-data-prog/</guid>
+      <guid>http://localhost:1313/posts/2025-03mar/2025-03mar12--01-data-prog/</guid>
       <description>비슷한 용어들. 내가 이해한 정리들은 1:&#xA;data-driven programming 데이터처리를 중심으로 하는 프로그래밍언어나 도구, 스타일.&#xA;예를 들어, awk, perl은 입력의 패턴에 따라 코드를 나누고 출력을 만들기 수월한 방식을 제공.&#xA;https://en.wikipedia.org/wiki/Data-driven_programming a &amp;#34;replacement&amp;#34; for awk and sed (by Larry Wall) data-oriented design 현대 cpu의 아키텍처에 적절하도록, cpu cache, simd등을 잘 적용될 수 있도록 애플리케이션 데이터구조를 설계하는 방식.2&#xA;그리고 단순히 게임개발에서 ecs만이 아니라 lmax disruptor등도 포함될 것 같다.&#xA;https://en.wikipedia.org/wiki/Data-oriented_design dod의 예시: Entity component system lmax disruptor (by Martin Fowler) data-oriented programming 그리고 또 갑자기 위 2개의 정의처럼 완전 갑자기, dop은 다음과 같은 원칙들을 이용한 애플리케이션 개발방식:</description>
     </item>
     <item>
       <title>`ncal -3` 직접 Perl으로 짜봤다</title>
-      <link>https://ageldama.github.io/posts/2023-03mar/perl-cal3/</link>
+      <link>http://localhost:1313/posts/2023-03mar/perl-cal3/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-03mar/perl-cal3/</guid>
+      <guid>http://localhost:1313/posts/2023-03mar/perl-cal3/</guid>
       <description>ncal -3 이 뭐냐하면:&#xA;https://man7.org/linux/man-pages/man1/cal.1.html&#xA;…뭐 이런건데, 개인적으로 저전력 글쓰기 전용머신에서 사용하는 스크립트에서 배포판이 달라서 패키지를 못찾겠어서 1, …그냥 직접 짜서 대체했다.&#xA;https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e488&#xA;그래서 스크린샷은:&#xA;재밌었던 부분은:&#xA;어차피 Perl으로 전부 짜서 쓰는 스크립트였는데, 아예 외부 커맨드라인 도구 의존성을 더 없애서 뿌듯하다. 매달 달력을 문자열으로 뽑았는데, 3달치를 뽑아서, 이걸 한 row에 표시하고 싶었는데, Text::Table으로 적절히 간단히 완료. Term::ANSIColor와 perlre을 써서 깔끔하게 원하는 일자에 highlighting 해서 편안했다. …더 해킹을 해서, calendar(..) 결과문자열을 적당히 파싱해서, 작은 Text::Table으로 만들어서, 그것들으로 조합하고 했었어도 될거 같아.</description>
     </item>
     <item>
       <title>Hololog Perl/CLI 버젼</title>
-      <link>https://ageldama.github.io/posts/2019-12dec/hololog-perl-cli-1st-rel/</link>
+      <link>http://localhost:1313/posts/2019-12dec/hololog-perl-cli-1st-rel/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-12dec/hololog-perl-cli-1st-rel/</guid>
+      <guid>http://localhost:1313/posts/2019-12dec/hololog-perl-cli-1st-rel/</guid>
       <description>https://github.com/ageldama/hololog-perl-cli&#xA;한줄씩 메모를 하는걸 좋아하고, 그냥 데스크탑에서 PDF을 읽거나 웹페이지를 읽으면서 어딘가에 생각난거나 이해한걸 필기하면서 진행하고 싶어서 만들었다.&#xA;다음 트윗 타래에서 이야기한것처럼, 그냥 트위터 비밀계를 써도 괜찮지만, 그것도 너무 웹브라우져 열고 하다보면 산만해져서.&#xA;tweet 1206138361968070656 처음 시작은 Unix/GNU cat 을 간단하게 터미널에서 쓰면 된다는 생각이 들었다.&#xA;1 cat &amp;gt;&amp;gt; foo.txt ..그런데 유닉스가 아닌 사람들, 윈도를 쓰는 사람들은 어떻게 하지?&#xA;1 copy con foo.txt ..사실 위와 같이 cmd.exe 에서 실행해도 되겠지만, 뭔가 그래도 윈도 사용자들이나 터미널 화면을 무서워하는 사람들이 저런거 좋아할까.</description>
     </item>
   </channel>
