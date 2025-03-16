@@ -56,9 +56,8 @@ ul.tags li {
 }
 
 .title > .meta {
-  font-size: 0.6rem;
   font-family: monospace;
-  margin-left: 0.2rem;
+  margin-left: 0.3rem;
 }
 
 blockquote {
@@ -337,6 +336,11 @@ body.dark .pagefind-ui form button {
   background-color: #808080;
   color: white;
   font-weight: bold;
+}
+
+section.list-item time {
+  font-family: monospace;
+  margin-left: 0.3rem;
 }
 
 /*# sourceMappingURL=gopherish.css.map */
