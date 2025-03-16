@@ -14,7 +14,7 @@
       <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</link>
       <pubDate>Sun, 16 Mar 2025 06:25:48 +0000</pubDate>
       <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</guid>
-      <description>https://pagefind.app/&#xA;페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는 pagefind을 붙여봤다.&#xA;처음엔 좀 어색했는데, 커스터마이징을 별로 제공하지 않기는 했지만, 그래도 이것저것 뜯어서 CSS도 마음에 들게 좀 수정하고, JS/DOM 이벤트도 적당히 잡아서 마음에 들게 동작하게 고쳤다.</description>
+      <description>https://pagefind.app/&#xA;페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는 pagefind을 붙여봤다.&#xA;처음엔 좀 어색했는데, 커스터마이징을 별로 제공하지 않기는 했지만, 그래도 이것저것 뜯어서 CSS도 마음에 들게 좀 수정하고, JS/DOM 이벤트도 적당히 잡아서 마음에 들게 동작하게 고쳤다.&#xA;별로라고 생각하던 부분들도 다 뜯어 고치고 하면서 더 블로그가 마음에 들어진다. 🤠</description>
     </item>
     <item>
       <title>News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes</title>
