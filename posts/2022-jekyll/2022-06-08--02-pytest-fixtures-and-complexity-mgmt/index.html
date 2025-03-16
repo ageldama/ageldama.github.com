@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>pytest fixtures와 의존성관리, 그리고 복잡도관리 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="# ...tests/conftest.py import pytest @pytest.fixture def name(): return &#39;Pokemon&#39; @pytest.fixture(scope=&#39;function&#39;) def monster(name): ... # ...tests/foo_test.py : def test_beast(monster): ... # &lt;--- `def monster(..)`의 결과를 주입 받음. https://docs.pytest.org/en/6.2.x/fixture.html
 &hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨. 내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.
 &lsquo;거창함&rsquo;이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면&hellip; 글쎄. ㅎㅎ&hellip;" />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="http://localhost:1313/posts/2022-jekyll/2022-06-08--02-pytest-fixtures-and-complexity-mgmt/">
+	<meta property="og:url" content="https://ageldama.github.io/posts/2022-jekyll/2022-06-08--02-pytest-fixtures-and-complexity-mgmt/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="pytest fixtures와 의존성관리, 그리고 복잡도관리">
   <meta property="og:description" content="# ...tests/conftest.py import pytest @pytest.fixture def name(): return &#39;Pokemon&#39; @pytest.fixture(scope=&#39;function&#39;) def monster(name): ... # ...tests/foo_test.py : def test_beast(monster): ... # &lt;--- `def monster(..)`의 결과를 주입 받음. https://docs.pytest.org/en/6.2.x/fixture.html
@@ -26,15 +26,17 @@
 ‘거창함’이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면… 글쎄. ㅎㅎ…">
 
 	
-		<script src="http://localhost:1313/js/jquery-3.7.1.slim.min.js"></script>
-		<script src="http://localhost:1313/js/DarkMode.js"></script>
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
 	        
 
         
             
             
                 
-                    <link rel="stylesheet" href="/css/gopherish.css">
+                    
+                        <link rel="stylesheet" href="/css/gopherish.30a8863f637ad6b905d4cfd2bb3891ac99a97381caa99f85b4e2ba9705811847.css" integrity="sha256-MKiGP2N61rkF1M/SuziRrJmpc4HKqZ&#43;FtOK6lwWBGEc=" crossorigin="anonymous">
+                    
                 
             
         
@@ -45,7 +47,7 @@
         <div class="content"><header>
     <div class="main ">
         <a class="site-title "
-           href="http://localhost:1313/">아겔로그</a>
+           href="https://ageldama.github.io/">아겔로그</a>
     </div>
     
     <nav>
@@ -118,6 +120,17 @@ def test_beast(monster): ...
     2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
 <script>
   
 </script></div>

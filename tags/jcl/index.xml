@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jcl on 아겔로그</title>
-    <link>http://localhost:1313/tags/jcl/</link>
+    <link>https://ageldama.github.io/tags/jcl/</link>
     <description>Recent content in Jcl on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 19 Feb 2023 17:05:36 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/jcl/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/jcl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 19/02/2023 .02 : 이름에 대한 추측 (2) HAL, IBM, JCL</title>
-      <link>http://localhost:1313/posts/2023-02feb/2023-02feb19--02-ping/</link>
+      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb19--02-ping/</link>
       <pubDate>Sun, 19 Feb 2023 17:05:36 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb19--02-ping/</guid>
+      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb19--02-ping/</guid>
       <description>(…지난번 C/C++/D/Zig 이름에 대한 추측 에 이어서, 그냥 떠올라서)&#xA;HAL 9000 –&amp;gt; IBM&#xA;ASCII방식, 혹은 그냥 알파벳에서 한글자씩 앞으로 땡기면, &amp;#34;IBM&amp;#34;이 된다. JCL&#xA;IBM의 &amp;#34;Job Control Language&amp;#34;, 메인프레임 등에서 스크립팅을 위해 쓴다고 한다. &amp;#34;IBM&amp;#34;에서 다시 또 한글자씩 앞으로 땡기면, &amp;#34;JCL&amp;#34;. ㅎㅎ뭐 그냥 그렇다고.</description>
     </item>
   </channel>

@@ -2,74 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on 아겔로그</title>
-    <link>http://localhost:1313/tags/linux/</link>
+    <link>https://ageldama.github.io/tags/linux/</link>
     <description>Recent content in Linux on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 08 Mar 2023 06:15:08 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 08/03/2023 .01 : 전자책읽기</title>
-      <link>http://localhost:1313/posts/2023-03mar/2023-03mar08--01-ping/</link>
+      <link>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--01-ping/</link>
       <pubDate>Wed, 08 Mar 2023 06:15:08 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023-03mar/2023-03mar08--01-ping/</guid>
+      <guid>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--01-ping/</guid>
       <description>linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁들만 나열, 별로 내용은 길게 늘여 쓰지 않으려고:&#xA;linux, 그중에서도 가벼운 하드웨어와 단순하게 잘 동작하는 배포판.&#xA;여러가지 불필요한 군더더기 없고, 패키지들이 조금 오래된 버젼이어도, 안정적으로만 동작하면 상관 없음. 그래서, debian stable -or- testing 쓰면 속이 편함. 하드웨어는 raspberry pi 3/4 둘 다 좋았다. 1 …특히 전력소모도 거의 없고, 딱 모니터 연결해 놓고 팬소음 거의 없이 쾌적하게 책을 읽기 좋다. calibre 책파일 관리, 읽기 모두 만족스러움</description>
     </item>
     <item>
       <title>Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</title>
-      <link>http://localhost:1313/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/</link>
+      <link>https://ageldama.github.io/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/</link>
       <pubDate>Thu, 27 Aug 2020 00:00:01 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/</guid>
+      <guid>https://ageldama.github.io/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/</guid>
       <description>arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.&#xA;USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을 쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고 유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.&#xA;정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마 https://github.com/aircrack-ng/rtl8812au 이 드라이버가 살렸다.&#xA;1 2 # lsusb Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU] 그것도 DKMS으로 빌드하면 안되고 그냥 make install 해서 동작하게 되었다. 다행이었다. 그리고 나서 나중에도 로딩하도록 /etc/module-load /etc/modules-load.</description>
     </item>
     <item>
       <title>Void Linux &#43; Runit으로 데스크탑/랩탑 환경 설정하기</title>
-      <link>http://localhost:1313/posts/2020-04apr/void-linux/</link>
+      <link>https://ageldama.github.io/posts/2020-04apr/void-linux/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2020-04apr/void-linux/</guid>
+      <guid>https://ageldama.github.io/posts/2020-04apr/void-linux/</guid>
       <description>지난 한 달여간 눈코 뜰새 없이 바쁘게 지냈었다. 그렇게 지내다가 오랬만에 툭닥거려봤다.&#xA;재미로 Void Linux을 설치해봤다. 사실 설치해보고 한적은 꽤 됐고, 메모리 사용량이 훨씬 가볍고 빠른 성능 때문에, Arch Linux도 충분히 가볍고 좋지만, 제대로 설정해서 사양이 좋지 않은 랩탑, 데스크탑들을 위해서 쓰기로 생각하고 있었었다.&#xA;2007년 정도에 Gentoo Linux으로 회사 데스크탑과 Oracle DBMS 서버를 재밌게 설정한 이후로, 오랬만에 정말 가벼운 리눅스 배포판을 설치하는 느낌이었다.&#xA;아치리눅스는 Pacman, Makepkg, AUR 같은 것들도 체계가 잘 잡혀있고, 오히려 Portage 보다 잘 관리되고 괜찮지 않은가 싶기도 할 때가 많아서 굳이 Gentoo을 다시 쓸 일은 없을 것 같다.</description>
     </item>
     <item>
       <title>Grub2, Archlinux ISO으로 만능 USB 메모리스틱 만들기</title>
-      <link>http://localhost:1313/posts/2020-02feb/make-grub2-usb/</link>
+      <link>https://ageldama.github.io/posts/2020-02feb/make-grub2-usb/</link>
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2020-02feb/make-grub2-usb/</guid>
+      <guid>https://ageldama.github.io/posts/2020-02feb/make-grub2-usb/</guid>
       <description>경고 &amp;#34;만능USB&amp;#34;이란 말은 사실 과대광고입니다.&#xA;하지만, 몇 가지 장점이 있는 USB 메모리스틱을 만드는 방법임:&#xA;아치리눅스 설치ISO 이미지으로 부팅 가능한 USB 스틱이면서도, ISO파일의 용량만큼만 USB메모리를 활용하는 것이 아니라,&#xA;용량이 되는만큼 그냥 일반적인 메모리스틱처럼 파일 복사용으로도 쓸 수 있음. 사실 리눅스든 다른 OS의 설치 이미지를 USB메모리에 올리면, 딱 그 설치 이미지만큼만 사용할 수 있게 만들어 버리고, 그나마도 Read-only 상태인 ISO이 되어버리고, 더더욱 나쁘게 다른 추가 파티션을 만들어서 남는 공간을 활용할 수도 없게 만든다.</description>
     </item>
     <item>
       <title>ELECOM EX-G Pro Trackball 잉여 버튼을 Page Up/Down으로 쓰기</title>
-      <link>http://localhost:1313/posts/2019-10oct/exg-pro-trackball-pgupdn/</link>
+      <link>https://ageldama.github.io/posts/2019-10oct/exg-pro-trackball-pgupdn/</link>
       <pubDate>Fri, 25 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2019-10oct/exg-pro-trackball-pgupdn/</guid>
+      <guid>https://ageldama.github.io/posts/2019-10oct/exg-pro-trackball-pgupdn/</guid>
       <description>컴퓨터를 많이 쓰니까 다른 부분보다 손목이 먼저 망가져서, 손목을 조금만 큰 각도로 꺾으면 아프다. ㅠ.ㅠ.. 예전에도 그랬었는데1&#xA;마우스 안쓰고, 트랙볼 쓰기2 키보드 넘패드 부분 없는 짧은 86키 레이아웃 쓰기 로지텍 마블 트랙맨 잘 쓰다가, 지름을 받아서 조금 다음 티어의 제품으로 업그레이드 해봤다.&#xA;그래서 바꾼게 &amp;ndash;&amp;gt; 엘레컴 EX-G Pro Trackball ..그런데 다 좋은데, 저기 있는 Function assignment button 이라고 써있는게 2개가 더 달려있음.3&#xA;이 추가기능버튼들은 윈도였다면 벤더에서 제공하는 프로그램을 통해서 할당이 가능할거 같은데, 리눅스/X윈도에서는 xev으로 확인해보니 그냥 Button 10번, 11번이었다.</description>
     </item>
     <item>
       <title>SteamPlay On Linux</title>
-      <link>http://localhost:1313/posts/2018-10oct/10wed-steamplay-on-linux/</link>
+      <link>https://ageldama.github.io/posts/2018-10oct/10wed-steamplay-on-linux/</link>
       <pubDate>Wed, 10 Oct 2018 10:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2018-10oct/10wed-steamplay-on-linux/</guid>
+      <guid>https://ageldama.github.io/posts/2018-10oct/10wed-steamplay-on-linux/</guid>
       <description>집에 있는 데스크탑에서 윈도10 그냥 사서 설치하고, 거기에 스팀 설치해서 게임이나 하는데 사용했었음&#xA;거기에 대부분의 작업은 그냥 리눅스에서 하는게 훨씬 편하고 해서 Virtualbox에 아치리눅스 게스트 만들어놓고 거기에 접속해서 작업했었었다.1&#xA;그러다가 SteamPlay이란걸 알게됐고, 모든 게임이 다 지원되는건 아니더라도 그냥 앞으로 나올 게임들중에 리눅스를 지원하거나 Wine을 통해서 실행할 수 있으면 이걸 쓰는게 더 낫고 윈도가 싫었다.2&#xA;여튼, 좀 설치하고 써보니:&#xA;모든 게임을 지원하지 않는다. 1. 적당히 지원될거라고 생각하던 게임들도 그냥 됐고, SteamPlay지원 안해도 돌려볼랜다 체크해봤자 제대로 안굴러감.</description>
     </item>
     <item>
       <title>CD Ripping!</title>
-      <link>http://localhost:1313/posts/2018-10oct/06sat-cd-ripping/</link>
+      <link>https://ageldama.github.io/posts/2018-10oct/06sat-cd-ripping/</link>
       <pubDate>Sat, 06 Oct 2018 15:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2018-10oct/06sat-cd-ripping/</guid>
+      <guid>https://ageldama.github.io/posts/2018-10oct/06sat-cd-ripping/</guid>
       <description>요즘에 HiFiBerry DAC+으로 라디오, 음악을 들으며 귀가 즐거워서..&#xA;갖고 있는 씨디가 별로 없는데, 이유는.&#xA;음악을 듣는걸 게을리했었고, 딱히 음반으로 들었던건, 테잎 시대에 좀 사다가, 1. 씨디 시대엔 음원을 구하거나 사는게 더 많아지고, 2. 씨디를 듣지 않게됨. 그러다가 그냥 음질이 조금이라도 더 낫게 들을려고 CD ripping이 답이라는 결론을 얻었다.&#xA;어차피 음원 사는거랑 비슷한 가격이 됨. 음원을 어차피 내가 만드는거라 원하는 음질으로 떠서 보관하면됨. 그리고 뭣해서 잃어버려도 다시 떠도됨. 결국 대장정을 시작했다..</description>
     </item>
     <item>
       <title>HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정</title>
-      <link>http://localhost:1313/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</link>
+      <link>https://ageldama.github.io/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</link>
       <pubDate>Wed, 03 Oct 2018 20:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</guid>
+      <guid>https://ageldama.github.io/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</guid>
       <description>https://www.hifiberry.com/ 요거 Raspberry Pi 3에 세팅한 모험에 대한 이야기.&#xA;WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev #update_config=1 country=GB network={ ssid=&amp;quot;iptime&amp;quot; psk=&amp;quot;xxxxxxxxxx&amp;quot; key_mgmt=WPA-PSK } wpa_passphrase 안쓰고 그냥 plaintext으로 써도 동작. 내 공유기랑은 country=GB 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤. 그리고 ip link set wlan0 {up|down} 정도로 wlan0 인터페이스를 up/down하면됨. 사운드 드라이버 설정 내장 사운드카드 드라이버는 modprobe blacklist에 추가해서 끄자. /boot/config.txt에 HiFiBerry DAC+ 드라이버 오버레이를 지정해야함. 내장 사운드 드라이버 끄기 다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음.</description>
     </item>
     <item>
       <title>어째서 아치리눅스를 쓰며 데스크탑환경을 안쓰는지</title>
-      <link>http://localhost:1313/posts/2018-09sep/2018-09sep15sat-my-choices-linux/</link>
+      <link>https://ageldama.github.io/posts/2018-09sep/2018-09sep15sat-my-choices-linux/</link>
       <pubDate>Sat, 15 Sep 2018 16:20:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2018-09sep/2018-09sep15sat-my-choices-linux/</guid>
+      <guid>https://ageldama.github.io/posts/2018-09sep/2018-09sep15sat-my-choices-linux/</guid>
       <description>나는 데스크탑 환경을 사용 안한지 꽤 오래된것 같아.&#xA;예전엔 이런식이었던거 같아:&#xA;왠만하면, 그냥 세팅하는데 시간낭비하지말고 그냥 제공되는 Gnome, KDE 같이 예쁜거 쓰자.&#xA;&amp;hellip;였었는데, 어느날 ASUS 넷북에 낮은 CPU파워으로 리눅스를 설정하고, 이런 &amp;ldquo;가벼운 데스크탑 환경&amp;quot;을 직접 꾸며서 사용하면서, 오히려 맥북보다 더 편하고 계속 쓰고 싶게 만들고, 내가 더 빠져서 사랑하며 사용하는걸 본 이후로 집과 직장의 데스크탑도 모두 바꾸게됐다.&#xA;그리고 가장 마우스 사용으로부터 오는 잡다한 스트레스나 그런것들도 없고 가장 내게 익숙하고 편안한 환경을 만들어서 행복하게 쓸수있는거 같아.</description>
     </item>
   </channel>

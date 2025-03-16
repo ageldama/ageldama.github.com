@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>100days on 아겔로그</title>
-    <link>http://localhost:1313/tags/100days/</link>
+    <link>https://ageldama.github.io/tags/100days/</link>
     <description>Recent content in 100days on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sat, 04 Jan 2020 00:00:01 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/100days/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/100days/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>100일의 기록</title>
-      <link>http://localhost:1313/posts/2020-01jan/100days-of/</link>
+      <link>https://ageldama.github.io/posts/2020-01jan/100days-of/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:01 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2020-01jan/100days-of/</guid>
+      <guid>https://ageldama.github.io/posts/2020-01jan/100days-of/</guid>
       <description>어느 날이었을지, 기록과 기억이 생생하다. 왜인지는 모르겠지만, 그날 새벽부터 앞으로 100일간 시도해보고 싶은게 생겼다.&#xA;그래서 그 당장 시작했다. 그리고 별로 해낸 것도 없는 주제에 당당하게 만족스러운 기분으로 &amp;#34;1일&amp;#34;과 그날 날짜를 필기 노트에 적었다. 그리고 그 다음 날, 또 다음 날.&#xA;그렇게 100일을 채웠다. 매일 나는 행복했다. 고요함, 주변에서 일어나는 일들을 내려놓고 평화로웠다. 그리고 수 많은 것들을 다시 생각하고 무엇보다 생각을 비울 수 있었다. 덕분에 이제는 관점과 행동이 더 많이 변한 것 같다.</description>
     </item>
   </channel>

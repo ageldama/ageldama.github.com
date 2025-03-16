@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2019 on 아겔로그</title>
-    <link>http://localhost:1313/tags/2019/</link>
+    <link>https://ageldama.github.io/tags/2019/</link>
     <description>Recent content in 2019 on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sat, 21 Dec 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/2019/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/2019/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2018, 2019년을 돌아보며</title>
-      <link>http://localhost:1313/posts/2019-12dec/look-back-2018-2019/</link>
+      <link>https://ageldama.github.io/posts/2019-12dec/look-back-2018-2019/</link>
       <pubDate>Sat, 21 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2019-12dec/look-back-2018-2019/</guid>
+      <guid>https://ageldama.github.io/posts/2019-12dec/look-back-2018-2019/</guid>
       <description>&amp;#34;일의 기쁨과 슬픔&amp;#34; 2018년은 정말 바쁘게 회사에 시간을 쏟으며 보낸거 같다. 그렇다고 개인적인 발전이나 성과를 얻을만한 일은 아니었다. 오히려 알던 것들을 소비하고 엔지니어링 이외의 분야에 많은 흥미로운 경험과 성장을 했던거 같다. 그리고 한국을 떠날때 싫었던 점들을 역시 그대로 느낄 수 밖에 없었던거 같다.&#xA;그리고 2019년에는 한국에서 다시 시작했었던, 내겐 그다지 만족스럽지 못했던 회사생활을 정리했다. 정리하는데 반년 정도가 걸렸다. 나도 우유부단하게 괜한, 그리고 헛된 기대를 했었기 때문에 시간을 오래 끌었었는데, 문제를 경험하고 처음 받았던 인상과 결정이 맞았다.</description>
     </item>
   </channel>

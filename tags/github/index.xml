@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on 아겔로그</title>
-    <link>http://localhost:1313/tags/github/</link>
+    <link>https://ageldama.github.io/tags/github/</link>
     <description>Recent content in Github on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 02 Jan 2017 04:35:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Github.io 블로그 TraviCI으로 빌드해서 배포하기</title>
-      <link>http://localhost:1313/posts/2017/2017-01-02-travis-ci-jekyll-gh/</link>
+      <link>https://ageldama.github.io/posts/2017/2017-01-02-travis-ci-jekyll-gh/</link>
       <pubDate>Mon, 02 Jan 2017 04:35:00 +0100</pubDate>
-      <guid>http://localhost:1313/posts/2017/2017-01-02-travis-ci-jekyll-gh/</guid>
+      <guid>https://ageldama.github.io/posts/2017/2017-01-02-travis-ci-jekyll-gh/</guid>
       <description>.. 여기 에 불만을 적었듯이, 여러가지로 그냥은 만족하기 어려운 부분이 있었다.&#xA;그런데, Travis-CI을 통해서 빌드해서 배포한다는 분이 계셨다. https://twitter.com/Realignist/status/815554589889994752&#xA;..난 생각 못해본 방법. ㅎㅎ 1&#xA;그래서 도전.&#xA;우선 Jekyll 소스용 저장소로 분리하고, 배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다. https://github.com/felixrieseberg/travis-jekyll-git 여기 참고해서 삽질. 결과물은 https://github.com/ageldama/ageldama-gh-jekyll ..진행하면서 처음에 좀 짜증났던거,&#xA;Gemfile 에 설치할 의존성들 지정하고, bundle update. 그리고 그것만으로는 안되고, .travis.yml 파일에 gem설치를 지정해야했다. https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5 Travis-CI 작업의 세팅에서 git_target 환경변수에 URL지정할때&amp;hellip; github.</description>
     </item>
     <item>
       <title>Github.io의 Jekyll 버젼이랑 차이?</title>
-      <link>http://localhost:1313/posts/2017/2017-01-01-github-jekyll/</link>
+      <link>https://ageldama.github.io/posts/2017/2017-01-01-github-jekyll/</link>
       <pubDate>Sun, 01 Jan 2017 14:35:00 +0100</pubDate>
-      <guid>http://localhost:1313/posts/2017/2017-01-01-github-jekyll/</guid>
+      <guid>https://ageldama.github.io/posts/2017/2017-01-01-github-jekyll/</guid>
       <description>다 만족스럽고 좋은데, 로컬에서 Jekyll 실행해서 미리보기한 결과랑 Github에 올려서 렌더링한거랑 마크다운 결과가 조금 달라서 짜증난다.&#xA;아마 마크다운 렌더러 버젼 차이 때문일거 같은데 ㅜ.ㅜ&#xA;% jekyll -v jekyll 3.3.1 </description>
     </item>
   </channel>

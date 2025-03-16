@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mouse on 아겔로그</title>
-    <link>http://localhost:1313/tags/mouse/</link>
+    <link>https://ageldama.github.io/tags/mouse/</link>
     <description>Recent content in Mouse on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Fri, 25 Oct 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/mouse/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/mouse/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ELECOM EX-G Pro Trackball 잉여 버튼을 Page Up/Down으로 쓰기</title>
-      <link>http://localhost:1313/posts/2019-10oct/exg-pro-trackball-pgupdn/</link>
+      <link>https://ageldama.github.io/posts/2019-10oct/exg-pro-trackball-pgupdn/</link>
       <pubDate>Fri, 25 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2019-10oct/exg-pro-trackball-pgupdn/</guid>
+      <guid>https://ageldama.github.io/posts/2019-10oct/exg-pro-trackball-pgupdn/</guid>
       <description>컴퓨터를 많이 쓰니까 다른 부분보다 손목이 먼저 망가져서, 손목을 조금만 큰 각도로 꺾으면 아프다. ㅠ.ㅠ.. 예전에도 그랬었는데1&#xA;마우스 안쓰고, 트랙볼 쓰기2 키보드 넘패드 부분 없는 짧은 86키 레이아웃 쓰기 로지텍 마블 트랙맨 잘 쓰다가, 지름을 받아서 조금 다음 티어의 제품으로 업그레이드 해봤다.&#xA;그래서 바꾼게 &amp;ndash;&amp;gt; 엘레컴 EX-G Pro Trackball ..그런데 다 좋은데, 저기 있는 Function assignment button 이라고 써있는게 2개가 더 달려있음.3&#xA;이 추가기능버튼들은 윈도였다면 벤더에서 제공하는 프로그램을 통해서 할당이 가능할거 같은데, 리눅스/X윈도에서는 xev으로 확인해보니 그냥 Button 10번, 11번이었다.</description>
     </item>
   </channel>

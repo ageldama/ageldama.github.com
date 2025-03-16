@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Steamplay on 아겔로그</title>
-    <link>http://localhost:1313/tags/steamplay/</link>
+    <link>https://ageldama.github.io/tags/steamplay/</link>
     <description>Recent content in Steamplay on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 10 Oct 2018 10:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/steamplay/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/steamplay/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SteamPlay On Linux</title>
-      <link>http://localhost:1313/posts/2018-10oct/10wed-steamplay-on-linux/</link>
+      <link>https://ageldama.github.io/posts/2018-10oct/10wed-steamplay-on-linux/</link>
       <pubDate>Wed, 10 Oct 2018 10:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2018-10oct/10wed-steamplay-on-linux/</guid>
+      <guid>https://ageldama.github.io/posts/2018-10oct/10wed-steamplay-on-linux/</guid>
       <description>집에 있는 데스크탑에서 윈도10 그냥 사서 설치하고, 거기에 스팀 설치해서 게임이나 하는데 사용했었음&#xA;거기에 대부분의 작업은 그냥 리눅스에서 하는게 훨씬 편하고 해서 Virtualbox에 아치리눅스 게스트 만들어놓고 거기에 접속해서 작업했었었다.1&#xA;그러다가 SteamPlay이란걸 알게됐고, 모든 게임이 다 지원되는건 아니더라도 그냥 앞으로 나올 게임들중에 리눅스를 지원하거나 Wine을 통해서 실행할 수 있으면 이걸 쓰는게 더 낫고 윈도가 싫었다.2&#xA;여튼, 좀 설치하고 써보니:&#xA;모든 게임을 지원하지 않는다. 1. 적당히 지원될거라고 생각하던 게임들도 그냥 됐고, SteamPlay지원 안해도 돌려볼랜다 체크해봤자 제대로 안굴러감.</description>
     </item>
   </channel>

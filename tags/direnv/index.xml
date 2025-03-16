@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Direnv on 아겔로그</title>
-    <link>http://localhost:1313/tags/direnv/</link>
+    <link>https://ageldama.github.io/tags/direnv/</link>
     <description>Recent content in Direnv on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 29 Dec 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/direnv/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/direnv/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기</title>
-      <link>http://localhost:1313/posts/2019-12dec/direnv/</link>
+      <link>https://ageldama.github.io/posts/2019-12dec/direnv/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2019-12dec/direnv/</guid>
+      <guid>https://ageldama.github.io/posts/2019-12dec/direnv/</guid>
       <description>프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다.&#xA;몇 가지 이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv&#xA;NPM: dotenv https://www.npmjs.com/package/dotenv&#xA;Node.js에서 Unix environment variable으로 .env 파일을 로딩해주는 역할인 듯.&#xA;Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.&#xA;그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을 짜주고 하기 싫었고,&#xA;.env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서 경로를 조립하고 하는데 별로라는 생각이 들었다.</description>
     </item>
   </channel>

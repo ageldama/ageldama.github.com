@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rxjs on 아겔로그</title>
-    <link>http://localhost:1313/tags/rxjs/</link>
+    <link>https://ageldama.github.io/tags/rxjs/</link>
     <description>Recent content in Rxjs on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/rxjs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/rxjs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 02/Nov/2020</title>
-      <link>http://localhost:1313/posts/2020-11nov/ping-02mon/</link>
+      <link>https://ageldama.github.io/posts/2020-11nov/ping-02mon/</link>
       <pubDate>Mon, 02 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2020-11nov/ping-02mon/</guid>
+      <guid>https://ageldama.github.io/posts/2020-11nov/ping-02mon/</guid>
       <description>(functional) reactive 관련들을 다시 찾아 보고 있다.&#xA;예전에 webdev은 아니고 백엔드를 위해서 rxjs 을 쓸 일이 있었었고 꽤 재밌었다. node.js에서 async/await 이전에 동시성 처리를 하기에 유용하게 쓸 수 있었었고, 실은 그냥 monad이어서 조금만 이해를 하고 사용하면 여러모로 편리했었다.&#xA;https://github.com/stoeffel/awesome-frp-js 여기에 보면 rxjs이외에도 다른 js을 위한 FRP라이브러리들이 많이 생겼었다.&#xA;그 중에 흥미가 있어서 bacon.js 을 읽고 rxjs에서 만들어 본 작은 예제 프로젝트를 다시 작성해봤다. 깔끔했다.&#xA;rxjs으로 작성했었던 작은 예제는 다음과 같다.</description>
     </item>
   </channel>

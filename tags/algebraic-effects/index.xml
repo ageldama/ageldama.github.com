@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Algebraic-Effects on 아겔로그</title>
-    <link>http://localhost:1313/tags/algebraic-effects/</link>
+    <link>https://ageldama.github.io/tags/algebraic-effects/</link>
     <description>Recent content in Algebraic-Effects on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 13 Jun 2022 14:11:14 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/algebraic-effects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/algebraic-effects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#34;모두를 위한 algebraic effects!&#34; ...정말루?</title>
-      <link>http://localhost:1313/posts/2022-06jun/algebraic-effects-for-everyone/</link>
+      <link>https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/</link>
       <pubDate>Mon, 13 Jun 2022 14:11:14 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2022-06jun/algebraic-effects-for-everyone/</guid>
+      <guid>https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/</guid>
       <description>뭐 대충 다음과 같은 글들:&#xA;https://www.eff-lang.org/handlers-tutorial.pdf&#xA;https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf&#xA;&amp;hellip;그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)&#xA;https://hackage.haskell.org/package/fused-effects&#xA;https://github.com/dry-rb/dry-effects&#xA;https://github.com/digital-fabric/affect&#xA;https://github.com/macabeus/js-proposal-algebraic-effects&#xA;https://github.com/nythrox/effects.js&#xA;https://www.janestreet.com/tech-talks/effective-programming/&#xA;https://github.com/ocaml-multicore/effects-examples&#xA;https://overreacted.io/algebraic-effects-for-the-rest-of-us/&#xA;&amp;hellip;음&amp;hellip; 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.&#xA;오히려 dry-rb, affect이 더 명확하기는 한거 같아.&#xA;가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.&#xA;분명히 장점을 볼 수 있을거 같은 개념 같다.&#xA;왜냐하면,&#xA;지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.</description>
     </item>
   </channel>

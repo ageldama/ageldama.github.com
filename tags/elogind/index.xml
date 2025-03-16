@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elogind on 아겔로그</title>
-    <link>http://localhost:1313/tags/elogind/</link>
+    <link>https://ageldama.github.io/tags/elogind/</link>
     <description>Recent content in Elogind on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sat, 02 May 2020 00:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/elogind/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/elogind/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Void Linux &#43; Runit으로 데스크탑/랩탑 환경 설정하기</title>
-      <link>http://localhost:1313/posts/2020-04apr/void-linux/</link>
+      <link>https://ageldama.github.io/posts/2020-04apr/void-linux/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2020-04apr/void-linux/</guid>
+      <guid>https://ageldama.github.io/posts/2020-04apr/void-linux/</guid>
       <description>지난 한 달여간 눈코 뜰새 없이 바쁘게 지냈었다. 그렇게 지내다가 오랬만에 툭닥거려봤다.&#xA;재미로 Void Linux을 설치해봤다. 사실 설치해보고 한적은 꽤 됐고, 메모리 사용량이 훨씬 가볍고 빠른 성능 때문에, Arch Linux도 충분히 가볍고 좋지만, 제대로 설정해서 사양이 좋지 않은 랩탑, 데스크탑들을 위해서 쓰기로 생각하고 있었었다.&#xA;2007년 정도에 Gentoo Linux으로 회사 데스크탑과 Oracle DBMS 서버를 재밌게 설정한 이후로, 오랬만에 정말 가벼운 리눅스 배포판을 설치하는 느낌이었다.&#xA;아치리눅스는 Pacman, Makepkg, AUR 같은 것들도 체계가 잘 잡혀있고, 오히려 Portage 보다 잘 관리되고 괜찮지 않은가 싶기도 할 때가 많아서 굳이 Gentoo을 다시 쓸 일은 없을 것 같다.</description>
     </item>
   </channel>

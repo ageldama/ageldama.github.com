@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cdrip on 아겔로그</title>
-    <link>http://localhost:1313/tags/cdrip/</link>
+    <link>https://ageldama.github.io/tags/cdrip/</link>
     <description>Recent content in Cdrip on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sat, 06 Oct 2018 15:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/cdrip/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/cdrip/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CD Ripping!</title>
-      <link>http://localhost:1313/posts/2018-10oct/06sat-cd-ripping/</link>
+      <link>https://ageldama.github.io/posts/2018-10oct/06sat-cd-ripping/</link>
       <pubDate>Sat, 06 Oct 2018 15:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2018-10oct/06sat-cd-ripping/</guid>
+      <guid>https://ageldama.github.io/posts/2018-10oct/06sat-cd-ripping/</guid>
       <description>요즘에 HiFiBerry DAC+으로 라디오, 음악을 들으며 귀가 즐거워서..&#xA;갖고 있는 씨디가 별로 없는데, 이유는.&#xA;음악을 듣는걸 게을리했었고, 딱히 음반으로 들었던건, 테잎 시대에 좀 사다가, 1. 씨디 시대엔 음원을 구하거나 사는게 더 많아지고, 2. 씨디를 듣지 않게됨. 그러다가 그냥 음질이 조금이라도 더 낫게 들을려고 CD ripping이 답이라는 결론을 얻었다.&#xA;어차피 음원 사는거랑 비슷한 가격이 됨. 음원을 어차피 내가 만드는거라 원하는 음질으로 떠서 보관하면됨. 그리고 뭣해서 잃어버려도 다시 떠도됨. 결국 대장정을 시작했다..</description>
     </item>
   </channel>
