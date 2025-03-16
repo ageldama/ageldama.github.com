@@ -343,4 +343,9 @@ section.list-item time {
   margin-left: 0.3rem;
 }
 
+li.post .meta {
+  font-family: monospace;
+  margin-left: 0.3rem;
+}
+
 /*# sourceMappingURL=gopherish.css.map */
