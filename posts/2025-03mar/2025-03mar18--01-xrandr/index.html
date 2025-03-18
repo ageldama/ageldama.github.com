@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>xrandr 🖥️모니터 연결 자동전환 스크립트🐫 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다. 다 편한데, 🪟윈도나 icewm처럼 Windows&#43;P 누르면, 다음 모니터연결 조합으로 전환되는게 부러웠다.
+매번 터미널 열고 xrandr 치거나, arandr 열어서 세팅하기 귀찮으니까. (물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)
+그래서 그냥 윈도의 Win&#43;P 키처럼 동작하도록 스크립트를 짜봤다.
+🐫 https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl
+Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
+그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데, 예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별 생각없이 되는쪽에 더 비중을 두게 되는거 같다." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="xrandr 🖥️모니터 연결 자동전환 스크립트🐫">
+  <meta property="og:description" content="요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다. 다 편한데, 🪟윈도나 icewm처럼 Windows&#43;P 누르면, 다음 모니터연결 조합으로 전환되는게 부러웠다.
+매번 터미널 열고 xrandr 치거나, arandr 열어서 세팅하기 귀찮으니까. (물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)
+그래서 그냥 윈도의 Win&#43;P 키처럼 동작하도록 스크립트를 짜봤다.
+🐫 https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl
+Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
+그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데, 예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별 생각없이 되는쪽에 더 비중을 두게 되는거 같다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-18T13:30:16+00:00">
+    <meta property="article:modified_time" content="2025-03-18T13:30:16+00:00">
+    <meta property="article:tag" content="Xrandr">
+    <meta property="article:tag" content="I3wm">
+    <meta property="article:tag" content="Config">
+    <meta property="article:tag" content="Perl">
+    <meta property="article:tag" content="Xorg">
+    <meta property="article:tag" content="Display">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="xrandr 🖥️모니터 연결 자동전환 스크립트🐫">
+  <meta name="twitter:description" content="요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다. 다 편한데, 🪟윈도나 icewm처럼 Windows&#43;P 누르면, 다음 모니터연결 조합으로 전환되는게 부러웠다.
+매번 터미널 열고 xrandr 치거나, arandr 열어서 세팅하기 귀찮으니까. (물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)
+그래서 그냥 윈도의 Win&#43;P 키처럼 동작하도록 스크립트를 짜봤다.
+🐫 https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl
+Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
+그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데, 예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별 생각없이 되는쪽에 더 비중을 두게 되는거 같다.">
+
+	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
+	        
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/gopherish.5433a182f33b71aaaf35b99b31dcf5af4db670f1769d646fca1e2da011b142b0.css" integrity="sha256-VDOhgvM7caqvNbmbMdz1r022cPF2nWRvyh4toBGxQrA=" crossorigin="anonymous">
+                    
+                
+            
+        
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+    
+    <nav>
+        <a class="dark-mode-toggle"
+           onclick="javascript:DarkMode.toggle()"
+           href="#"></a>
+        <script>
+         $(function(){
+             DarkMode.init();
+         });
+        </script>
+
+        
+            <a href="/posts/archive/">Index🗃️🏷️</a>
+        
+            <a href="/myself/">Contact📨</a>
+        
+
+	
+    </nav>
+</header>
+
+<main>
+	<article data-pagefind-body>
+		<div class="title">
+			<h1 class="title" data-pagefind-meta="title">xrandr 🖥️모니터 연결 자동전환 스크립트🐫</h1>
+                        <time style="display: none;"
+                            data-pagefind-meta="date[datetime]"
+                            datetime="2025-03-18" pubdate>
+                            18 Mar 2025
+                        </time>
+			<div class="meta"> 🗓️ 18 Mar, 2025</div>
+		</div>
+		
+
+		<section class="body">
+			<p>
+요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.
+다 편한데, 🪟윈도나 icewm처럼 <code>Windows+P</code> 누르면, 다음 모니터연결
+조합으로 전환되는게 부러웠다.</p>
+<p>
+매번 터미널 열고 <code>xrandr</code> 치거나, <a href="https://christian.amsuess.com/tools/arandr/">arandr</a> 열어서 세팅하기 귀찮으니까.
+(물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)</p>
+<p>
+그래서 그냥 윈도의 <code>Win+P</code> 키처럼 동작하도록 스크립트를 짜봤다.</p>
+<p>
+🐫 <a href="https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl">https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl</a></p>
+<p>
+Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.</p>
+<p>
+그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,
+예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별
+생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li style="display: inline">#<a href="/tags/xrandr">xrandr</a></li>
+					
+					<li style="display: inline">#<a href="/tags/i3wm">i3wm</a></li>
+					
+					<li style="display: inline">#<a href="/tags/config">config</a></li>
+					
+					<li style="display: inline">#<a href="/tags/perl">perl</a></li>
+					
+					<li style="display: inline">#<a href="/tags/xorg">xorg</a></li>
+					
+					<li style="display: inline">#<a href="/tags/display">display</a></li>
+					
+					<li style="display: inline">#<a href="/tags/monitor">monitor</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  
+  <div class="footer-info">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  
+</script></div>
+    </body>
+</html>

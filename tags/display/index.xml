@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>I3wm on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/i3wm/</link>
-    <description>Recent content in I3wm on 아겔로그</description>
+    <title>Display on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/display/</link>
+    <description>Recent content in Display on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Tue, 18 Mar 2025 13:30:16 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/i3wm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/display/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>xrandr 🖥️모니터 연결 자동전환 스크립트🐫</title>
       <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/</link>
       <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
       <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/</guid>
       <description>요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다. 다 편한데, 🪟윈도나 icewm처럼 Windows+P 누르면, 다음 모니터연결 조합으로 전환되는게 부러웠다.&#xA;매번 터미널 열고 xrandr 치거나, arandr 열어서 세팅하기 귀찮으니까. (물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)&#xA;그래서 그냥 윈도의 Win+P 키처럼 동작하도록 스크립트를 짜봤다.&#xA;🐫 https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl&#xA;Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.&#xA;그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데, 예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별 생각없이 되는쪽에 더 비중을 두게 되는거 같다.</description>
-    </item>
-    <item>
-      <title>어째서 아치리눅스를 쓰며 데스크탑환경을 안쓰는지</title>
-      <link>https://ageldama.github.io/posts/2018-09sep/2018-09sep15sat-my-choices-linux/</link>
-      <pubDate>Sat, 15 Sep 2018 16:20:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-09sep/2018-09sep15sat-my-choices-linux/</guid>
-      <description>나는 데스크탑 환경을 사용 안한지 꽤 오래된것 같아.&#xA;예전엔 이런식이었던거 같아:&#xA;왠만하면, 그냥 세팅하는데 시간낭비하지말고 그냥 제공되는 Gnome, KDE 같이 예쁜거 쓰자.&#xA;&amp;hellip;였었는데, 어느날 ASUS 넷북에 낮은 CPU파워으로 리눅스를 설정하고, 이런 &amp;ldquo;가벼운 데스크탑 환경&amp;quot;을 직접 꾸며서 사용하면서, 오히려 맥북보다 더 편하고 계속 쓰고 싶게 만들고, 내가 더 빠져서 사랑하며 사용하는걸 본 이후로 집과 직장의 데스크탑도 모두 바꾸게됐다.&#xA;그리고 가장 마우스 사용으로부터 오는 잡다한 스트레스나 그런것들도 없고 가장 내게 익숙하고 편안한 환경을 만들어서 행복하게 쓸수있는거 같아.</description>
     </item>
   </channel>
 </rss>

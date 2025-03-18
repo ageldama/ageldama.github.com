@@ -72,6 +72,20 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a></h1>
+					<time>🗓️ 30 Dec, 2019</time>
+					<br><div class="description">
+						
+						다음의 간단한 코드를 읽어보자.
+1 2 3 4 5 6 7 8 9 10 11 12 var x = &#34;lexical&#34;; function maker() { return function() { return x; }; } { var x = &#34;dynamic&#34;; assert(maker()() == &#34;???&#34;); } maker()() 의 결과는 &#39;dynamic&#39; 이다.
+심지어, 맨 마지막에 있는 {..} 블록을 넘어가서도 x 의 값은 여전이 &#39;dynamic&#39; 이다.
+자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난 느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도 속하지 않는 느낌이고, 이번에 새로 추가된 let 도 이해하기가 어려운게 아니라 그냥 제대로 망가져 있는거 같다.&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-12dec/direnv/">direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기</a></h1>
 					<time>🗓️ 29 Dec, 2019</time>
 					<br><div class="description">
@@ -770,20 +784,6 @@ tweet 1040804232339742720
 						
 						&ldquo;내적모순&rdquo; 이맥스에서 Evil을 쓰면서 몇가지 짜증나는게 있어왔다.
 Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 키바인딩을 실시간으로 확인할 수 있는 방법도 제대로 안먹히게 된거라, 이맥스에서 쩔어주는 기능인 자기 자신을 확인하며 단축키 안외우기 같은게 다 무의미해짐. 공식 사이트 들어가도 문서는 없다. 그냥 Vim 온라인 help을 보거나 하라는 친절인거 같다. Magit, Edb, 등등 대부분의 이맥스의 다른 Major mode들이랑은 정말 충돌하는 경우가 너무 많음. https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421 위의 링크만 봐도, 내가 얼마나 충돌이 나는 모드들을 경험했는지 알수있다.&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/">Emacs &#43; CMake-IDE Screencast</a></h1>
-					<time>🗓️ 08 May, 2018</time>
-					<br><div class="description">
-						
-						이건 무엇인가 Emacs Configurations: https://github.com/ageldama/configs/tree/master/emacs/cmake-ide
-이맥스에서 C++ 개발 편하게 하려고 이것저것 알아보다가 결국엔 CMake-IDE + RTags 조합이 제일 괜찮다는 결론에 도달해서 만들어본 설정이다.
-원래 사용하는 환경이 Evil은 아니었는데, Spacemacs 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.
-지금은 그냥 Spacemacs은 다운도 잘되고 너무 무겁고 설정을 레이어 방식 으로 할게 아니면 짜증나게 하는 부분도 많고, 그렇다고 레이어가 완전히 내가 그냥 커스텀으로 만들어서 바로바로 머지하는 구조도 아니고 중앙에서 관리하는 방식으로만 되는거 같아서, 옆으로 치우고, 바닐라 이맥스에 Spacemacs스럽게 직접 설정해서 가볍게 사용하고 있다.&hellip;
 						
 					</div>
                                         
