@@ -16,7 +16,7 @@
 
 	
 		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
-		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
+
 	        
 
         
@@ -24,7 +24,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.5433a182f33b71aaaf35b99b31dcf5af4db670f1769d646fca1e2da011b142b0.css" integrity="sha256-VDOhgvM7caqvNbmbMdz1r022cPF2nWRvyh4toBGxQrA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.56b1a3603de0001266fd93972ea01036b17460038761f722ac296b8aedfa6de9.css" integrity="sha256-VrGjYD3gABJm/ZOXLqAQNrF0YAOHYfcirClriu36bek=" crossorigin="anonymous">
                     
                 
             
@@ -38,17 +38,8 @@
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
-    
-    <nav>
-        <a class="dark-mode-toggle"
-           onclick="javascript:DarkMode.toggle()"
-           href="#"></a>
-        <script>
-         $(function(){
-             DarkMode.init();
-         });
-        </script>
 
+    <nav>
         
             <a href="/posts/archive/">Index🗃️🏷️</a>
         
@@ -58,6 +49,30 @@
 	
     </nav>
 </header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#fff',  
+      buttonColorDark: '#100f2c',  
+      buttonColorLight: '#fff', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+    var darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    window.darkmode = darkmode;
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
 
 
 <h1>Entries tagged - "<em>gnugp</em>"</h1>

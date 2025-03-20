@@ -18,7 +18,7 @@
 
 	
 		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
-		<script src="https://ageldama.github.io/js/DarkMode.js"></script>
+
 	        
 
         
@@ -26,7 +26,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.5433a182f33b71aaaf35b99b31dcf5af4db670f1769d646fca1e2da011b142b0.css" integrity="sha256-VDOhgvM7caqvNbmbMdz1r022cPF2nWRvyh4toBGxQrA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.56b1a3603de0001266fd93972ea01036b17460038761f722ac296b8aedfa6de9.css" integrity="sha256-VrGjYD3gABJm/ZOXLqAQNrF0YAOHYfcirClriu36bek=" crossorigin="anonymous">
                     
                 
             
@@ -42,17 +42,8 @@
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
-    
-    <nav>
-        <a class="dark-mode-toggle"
-           onclick="javascript:DarkMode.toggle()"
-           href="#"></a>
-        <script>
-         $(function(){
-             DarkMode.init();
-         });
-        </script>
 
+    <nav>
         
             <a href="/posts/archive/">Index🗃️🏷️</a>
         
@@ -63,6 +54,30 @@
     </nav>
 </header>
 
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#fff',  
+      buttonColorDark: '#100f2c',  
+      buttonColorLight: '#fff', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+    var darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    window.darkmode = darkmode;
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
 
                         <div id="search"></div>
 			
@@ -70,6 +85,19 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-01jan/real-communication-skills/">&lt;소프트스킬&gt;, &lt;커뮤니케이션 스킬&gt;은 어떻게 한국 사회에서 괴물을 만드는지</a></h1>
+					<time>🗓️ 03 Jan, 2020</time>
+					<br><div class="description">
+						
+						우선 이야기를 시작하기 전에 일러두고 싶다. 내게 &lt;소프트스킬&gt;1은 매우 재밌게, 유용하게 읽은 책이었다. (2016년에)
+이 이야기는 사실 커뮤니케이션스킬, 소프트스킬을 권장하고, 어떻게 해야 할까 하는 고민에서 나오는, 또한 그런 정말 중요한 것이 어떻게 (적어도 내가 느끼기엔) 이상한 괴물을 옹호하기 위해 변질되어 쓰이는지에 대한 것이다.
+&lt;사회생활&gt;, &lt;원만함&gt;에 대해 나는 자라오며 계속해서 잔소리를 들어왔다. 말해주는 사람들은 내 아버지와 몇몇 친척 형, 주변 친구들이었다. 그리고 하나도 그런 말들을 새겨 듣지 않았고, 잘했다고 생각한다.&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a></h1>
@@ -772,18 +800,6 @@ tweet 1040804232339742720
 처음 만년필질을 시작할때는,
 뭐 그냥 저렴한 저가형 브랜드 실용적인 목적으로만 사서 써야지, 그러니 사파리랑 Lx정도까진 뭐&hellip;
 ..이런 마인드였었다가 점점 만년필 자체로 글을 쓰는 감각에 중독되는거 같아. 기계식키보드도 그런거 같고.&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/">NeoVim, Evil-mode and Emacs의 모험</a></h1>
-					<time>🗓️ 28 Jul, 2018</time>
-					<br><div class="description">
-						
-						&ldquo;내적모순&rdquo; 이맥스에서 Evil을 쓰면서 몇가지 짜증나는게 있어왔다.
-Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 키바인딩을 실시간으로 확인할 수 있는 방법도 제대로 안먹히게 된거라, 이맥스에서 쩔어주는 기능인 자기 자신을 확인하며 단축키 안외우기 같은게 다 무의미해짐. 공식 사이트 들어가도 문서는 없다. 그냥 Vim 온라인 help을 보거나 하라는 친절인거 같다. Magit, Edb, 등등 대부분의 이맥스의 다른 Major mode들이랑은 정말 충돌하는 경우가 너무 많음. https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421 위의 링크만 봐도, 내가 얼마나 충돌이 나는 모드들을 경험했는지 알수있다.&hellip;
 						
 					</div>
                                         

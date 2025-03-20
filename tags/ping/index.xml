@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sun, 16 Mar 2025 06:25:48 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Mar 2025 11:51:36 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/ping/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>darkmode.js으로 변경</title>
+      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar20--01--darkmode-js/</link>
+      <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar20--01--darkmode-js/</guid>
+      <description> 직접 짠 css/js에서 darkmode.js으로 변경했다. css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.&#xA;변경도 예쁘게 애니메이션 나오고, system preference 지정도 자동으로 되고.&#xA;(미래의 나를 위해) css/html에서 class 1 2 3 .darkmode--activated .logo { mix-blend-mode: difference; } 1 &amp;lt;span class=&amp;#34;darkmode-ignore&amp;#34;&amp;gt;😬&amp;lt;span&amp;gt; </description>
+    </item>
     <item>
       <title>Hugo &#43; pagefind 붙여서 검색기능 추가했다</title>
       <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</link>
