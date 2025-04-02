@@ -89,6 +89,29 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/">&#34;Software disenchantment&#34;</a></h1>
+					<time>🗓️ 19 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p><a href="https://tonsky.me/blog/disenchantment/">https://tonsky.me/blog/disenchantment/</a></p>
+<p>재밌게 읽었다. 계속 생각해오던, 이전 포스팅에서도 이야기한 생각들.</p>
+<blockquote>
+<p>&ldquo;&hellip;의 진보도 항상 그때그때의 1보만이 진보이며 2보도 3보도 n+1보도 결코&hellip;&rdquo;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p></blockquote>
+<p>:winking_face:</p>
+<p>&hellip;그치 ejb/xml을 쓰든, 뭔가 또 새로운 언어나 프레임웍으로 대단한것처럼, 진보한것처럼 쓰려고 해도,
+현실적으로는 빌드도 오히려 <a href="https://ant.apache.org/">apache ant</a> 쓸때보다 더 엉망일지도. 성능이든 iteration의 가벼움이든.</p>
+<p>정말 진보는 커녕 오히려 더 ㅎㅎ&hellip; 오히려, apache ant으로라면 명확하게 확실하게 동작하도록 만들기나 잘 하겠지만.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Walter Benjamin의 &ldquo;Arcades Project&quot;의 인용, &ldquo;매달린 절벽에서 손을 뗄 수 있는가?&rdquo; 강신주 저. &hellip;책에서는 그런 문맥이 아니었었지만, 내 생각엔 이런 문맥에도 맞지 않나 싶어서.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun17--01-ping/">Ping 17/06/2022 .01</a></h1>
 					<time>🗓️ 17 Jun, 2022</time>
 					<br><div class="description">
@@ -157,50 +180,6 @@ template cache을 무시하는거 같아.</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>&hellip;대략 잘 동작하고, <a href="https://esbuild.github.io/">webpack보다 엄청나게 빠르다</a> ㅎㅎ.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/algebraic-effects-for-everyone/">&#34;모두를 위한 algebraic effects!&#34; ...정말루?</a></h1>
-					<time>🗓️ 13 Jun, 2022</time>
-					<br><div class="description">
-						
-						<p>뭐 대충 다음과 같은 글들:</p>
-<p><a href="https://www.eff-lang.org/handlers-tutorial.pdf">https://www.eff-lang.org/handlers-tutorial.pdf</a></p>
-<p><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf</a></p>
-<p>&hellip;그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)</p>
-<p><a href="https://hackage.haskell.org/package/fused-effects">https://hackage.haskell.org/package/fused-effects</a></p>
-<p><a href="https://github.com/dry-rb/dry-effects">https://github.com/dry-rb/dry-effects</a></p>
-<p><a href="https://github.com/digital-fabric/affect">https://github.com/digital-fabric/affect</a></p>
-<p><a href="https://github.com/macabeus/js-proposal-algebraic-effects">https://github.com/macabeus/js-proposal-algebraic-effects</a></p>
-<p><a href="https://github.com/nythrox/effects.js">https://github.com/nythrox/effects.js</a></p>
-<p><a href="https://www.janestreet.com/tech-talks/effective-programming/">https://www.janestreet.com/tech-talks/effective-programming/</a></p>
-<p><a href="https://github.com/ocaml-multicore/effects-examples">https://github.com/ocaml-multicore/effects-examples</a></p>
-<p><a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/">https://overreacted.io/algebraic-effects-for-the-rest-of-us/</a></p>
-<p>&hellip;음&hellip; 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.</p>
-<p>오히려 dry-rb, affect이 더 명확하기는 한거 같아.</p>
-<p>가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.</p>
-<p>분명히 장점을 볼 수 있을거 같은 개념 같다.</p>
-<p>왜냐하면,</p>
-<ol>
-<li>지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면,</li>
-<li>하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.
-<ol>
-<li>그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용.</li>
-<li>(&hellip;그때 그때 Haskell do-notation등에 따라 분리해서 표현)</li>
-<li>좋은점이라면 좋은점일수도 있겠지만.</li>
-</ol>
-</li>
-<li>그런데, aeffects을 이용한다면,
-<ol>
-<li>굳이 그렇게 복잡하게 나누지 않아도 괜찮고,</li>
-<li>monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여.</li>
-</ol>
-</li>
-</ol>
-<p>당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (&hellip;일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, &hellip;처럼)</p>&hellip;
 						
 					</div>
                                         

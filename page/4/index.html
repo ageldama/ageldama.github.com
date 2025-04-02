@@ -89,6 +89,57 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</a></h1>
+					<time>🗓️ 05 Nov, 2023</time>
+					<br><div class="description">
+						
+						<p>
+나도 x11에서 wayland 기반으로 옮겨가고 있는데, 다른 것들은 대부분
+괜찮거나 포기.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+가볍고 좋은데, debian chromium에서 ibus으로 한글 입력이 안되어서
+알아봤다.</p>
+<hr>
+<div id="outline-container-headline-1" class="outline-3">
+<h3 id="headline-1">
+1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨.
+</h3>
+<div id="outline-text-headline-1" class="outline-text-3">
+<ul>
+<li>힌트 얻음: <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2058976">https://bugzilla.redhat.com/show_bug.cgi?id=2058976</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지?
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<div class="src src-shell">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  <span class="k">for</span> pid in  <span class="k">$(</span>pgrep chromium<span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">#echo $pid</span>
+</span></span><span class="line"><span class="cl">      grep -i gtk /proc/<span class="s2">&#34;</span><span class="nv">$pid</span><span class="s2">&#34;</span>/maps
+</span></span><span class="line"><span class="cl">  <span class="k">done</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+==&gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&gt; ibus
+연동안됨.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2023-03mar/2023-03mar15--wired-desktop/">내 책상에서 유선랜 환경</a></h1>
 					<time>🗓️ 15 Mar, 2023</time>
 					<br><div class="description">
@@ -165,33 +216,6 @@ why: x11? (wayland 대신)
   사람들이 어떻게 되었는가 생각해보며, 함께 지금의 &#39;프론트엔드
   개발자&#39;, 혹은 &#39;앱 개발자&#39;, &#39;리액트 개발자&#39;, &#39;자바스크립트
   개발자&#39;들이 앞으로 어떻게 될지 상상해본다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-03mar/2023-03mar08--01-ping/">Ping 08/03/2023 .01 : 전자책읽기</a></h1>
-					<time>🗓️ 08 Mar, 2023</time>
-					<br><div class="description">
-						
-						<p>
-linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁들만 나열,
-별로 내용은 길게 늘여 쓰지 않으려고:</p>
-<ol>
-<li>
-<p>linux, 그중에서도 가벼운 하드웨어와 단순하게 잘 동작하는 배포판.</p>
-<ul>
-<li>여러가지 불필요한 군더더기 없고, 패키지들이 조금 오래된
-버젼이어도, 안정적으로만 동작하면 상관 없음.</li>
-<li>그래서, debian stable -or- testing 쓰면 속이 편함.</li>
-<li>하드웨어는 raspberry pi 3/4 둘 다 좋았다. <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>
-…특히 전력소모도 거의 없고, 딱 모니터 연결해 놓고 팬소음 거의
-없이 쾌적하게 책을 읽기 좋다.</li>
-</ul>
-</li>
-<li>
-<p>calibre 책파일 관리, 읽기 모두 만족스러움</p>&hellip;
 						
 					</div>
                                         

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>가볍고 빠른 antiX Linux &#43; runit, koreader 그리고 bloatware - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+
+antiX linux
+
+
+오래된 랩탑으로 fedora 그냥 아무 생각없이 대충 쓰는데 좀 버벅. 어차피
+메인드라이버도 아니고 그냥 그러려니 하고 살다가, 좀 답답해서
+lightweight linux distro을 골라봤다.
+
+https://antixlinux.com/
+
+거기에 이전에 시도했던 void linux에서 마음에 들었었던 runit을 init으로
+쓰는 spin으로 선택해서 설치했다.
+
+결과는… 놀라울 정도로 가벼웠다.
+
+luks disk encryption &#43; btrfs을 기존에는 적용했다가(btrfs이
+기본옵션이어서 귀찮아서), 이번에는 그냥 ext4만으로 설치해서 더
+가벼운걸까 싶기도 하고.
+
+systemd은 익숙해질수로 편안해지기는 했었는데, 그럼에도 확실히 전통적인
+linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었다." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2025-04apr/2025-04apr02--01-antix-linux/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="가볍고 빠른 antiX Linux &#43; runit, koreader 그리고 bloatware">
+  <meta property="og:description" content="antiX linux 오래된 랩탑으로 fedora 그냥 아무 생각없이 대충 쓰는데 좀 버벅. 어차피 메인드라이버도 아니고 그냥 그러려니 하고 살다가, 좀 답답해서 lightweight linux distro을 골라봤다.
+https://antixlinux.com/
+거기에 이전에 시도했던 void linux에서 마음에 들었었던 runit을 init으로 쓰는 spin으로 선택해서 설치했다.
+결과는… 놀라울 정도로 가벼웠다.
+luks disk encryption &#43; btrfs을 기존에는 적용했다가(btrfs이 기본옵션이어서 귀찮아서), 이번에는 그냥 ext4만으로 설치해서 더 가벼운걸까 싶기도 하고.
+systemd은 익숙해질수로 편안해지기는 했었는데, 그럼에도 확실히 전통적인 linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-02T05:51:49+00:00">
+    <meta property="article:modified_time" content="2025-04-02T05:51:49+00:00">
+    <meta property="article:tag" content="Ping">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Laptop">
+    <meta property="article:tag" content="Retro">
+    <meta property="article:tag" content="Vintage">
+    <meta property="article:tag" content="Hardware">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="가볍고 빠른 antiX Linux &#43; runit, koreader 그리고 bloatware">
+  <meta name="twitter:description" content="antiX linux 오래된 랩탑으로 fedora 그냥 아무 생각없이 대충 쓰는데 좀 버벅. 어차피 메인드라이버도 아니고 그냥 그러려니 하고 살다가, 좀 답답해서 lightweight linux distro을 골라봤다.
+https://antixlinux.com/
+거기에 이전에 시도했던 void linux에서 마음에 들었었던 runit을 init으로 쓰는 spin으로 선택해서 설치했다.
+결과는… 놀라울 정도로 가벼웠다.
+luks disk encryption &#43; btrfs을 기존에는 적용했다가(btrfs이 기본옵션이어서 귀찮아서), 이번에는 그냥 ext4만으로 설치해서 더 가벼운걸까 싶기도 하고.
+systemd은 익숙해질수로 편안해지기는 했었는데, 그럼에도 확실히 전통적인 linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었다.">
+
+	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+
+	        
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/gopherish.56b1a3603de0001266fd93972ea01036b17460038761f722ac296b8aedfa6de9.css" integrity="sha256-VrGjYD3gABJm/ZOXLqAQNrF0YAOHYfcirClriu36bek=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+    <nav>
+        
+            <a href="/posts/archive/">Index🗃️🏷️</a>
+        
+            <a href="/myself/">Contact📨</a>
+        
+
+	
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#fff',  
+      buttonColorDark: '#100f2c',  
+      buttonColorLight: '#fff', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+    var darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    window.darkmode = darkmode;
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+<main>
+	<article data-pagefind-body>
+		<div class="title">
+			<h1 class="title" data-pagefind-meta="title">가볍고 빠른 antiX Linux &#43; runit, koreader 그리고 bloatware</h1>
+                        <time style="display: none;"
+                            data-pagefind-meta="date[datetime]"
+                            datetime="2025-04-02" pubdate>
+                            02 Apr 2025
+                        </time>
+			<div class="meta"> 🗓️ 02 Apr, 2025</div>
+		</div>
+		
+
+		<section class="body">
+			
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+antiX linux
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>오래된 랩탑으로 fedora 그냥 아무 생각없이 대충 쓰는데 좀 버벅. 어차피
+메인드라이버도 아니고 그냥 그러려니 하고 살다가, 좀 답답해서
+lightweight linux distro을 골라봤다.</p>
+<p>
+<a href="https://antixlinux.com/">https://antixlinux.com/</a></p>
+<p>
+거기에 이전에 시도했던 void linux에서 마음에 들었었던 runit을 init으로
+쓰는 spin으로 선택해서 설치했다.</p>
+<p>
+결과는… 놀라울 정도로 가벼웠다.</p>
+<p>
+luks disk encryption + btrfs을 기존에는 적용했다가(btrfs이
+기본옵션이어서 귀찮아서), 이번에는 그냥 ext4만으로 설치해서 더
+가벼운걸까 싶기도 하고.</p>
+<p>
+systemd은 익숙해질수로 편안해지기는 했었는데, 그럼에도 확실히 전통적인
+linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었다.</p>
+<p>
+기본적으로 im-config, ibus-hangul 정도만 설치하고 쓰면
+한글입력기도 세팅되고, 이것저것 gui control-center을 제공해서,
+거기에서 시스템의 각종부분들을 쉽게 세팅할수도 있게 잘 만들어져
+있었다.</p>
+<p>
+antix 자체가 icewm/jwm/fluxbox으로 기본 &#34;데스크탑환경&#34;-을
+제공하지만<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, 내겐 복잡해 보이고 해서 다 지우고, 그냥 내가 쓰는
+<a href="https://github.com/ageldama/configs/tree/master/dotfiles">dotfiles + i3wm</a> 써서 사용한다. 이게 더 가벼울지는 잘 모르겠다만.</p>
+<p>
+만족스럽다. 가볍고 정말 빠르다. 어차피 debian stable 기반이라서
+패키지도 다양하다. 조금 오래된 랩탑을 쓸만하 쓰기 좋다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+koreader
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p><a href="https://koreader.rocks/">https://koreader.rocks/</a></p>
+<p>
+  전자책 리더, 이것도 산뜻하고 가벼웠다. 그렇다고 지원하는
+  플랫폼이 적다거나, 기능적으로 별로인 것도 아니었다.</p>
+<p>
+  오히려 자기들이 뭘 만드는지 알고, 필요한 것들을 적절히 선택해서 잘
+  만든 경우인거 같다.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+bloatware, feature creep
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>…요즘엔 <a href="https://en.wikipedia.org/wiki/Software_bloat">software bloat</a>도 심하고, 실제로 사용도 못할 정도로 무겁게
+  만드는데, 그렇다고 그 목적을 잘 달성하는 소프트웨어도 흔치 않은거
+  같다.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator">
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>파일관리자 rox, zzzfm 같은것도 붙어 있고, 정말 될건 깔끔하게 다 잘된다. </p>
+</div>
+</div>
+</div>
+</div>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li style="display: inline">#<a href="/tags/ping">ping</a></li>
+					
+					<li style="display: inline">#<a href="/tags/linux">linux</a></li>
+					
+					<li style="display: inline">#<a href="/tags/laptop">laptop</a></li>
+					
+					<li style="display: inline">#<a href="/tags/retro">retro</a></li>
+					
+					<li style="display: inline">#<a href="/tags/vintage">vintage</a></li>
+					
+					<li style="display: inline">#<a href="/tags/hardware">hardware</a></li>
+					
+					<li style="display: inline">#<a href="/tags/debian">debian</a></li>
+					
+					<li style="display: inline">#<a href="/tags/runit">runit</a></li>
+					
+					<li style="display: inline">#<a href="/tags/init">init</a></li>
+					
+					<li style="display: inline">#<a href="/tags/sysvinit">sysvinit</a></li>
+					
+					<li style="display: inline">#<a href="/tags/systemd">systemd</a></li>
+					
+					<li style="display: inline">#<a href="/tags/distro">distro</a></li>
+					
+					<li style="display: inline">#<a href="/tags/distrohopping">distrohopping</a></li>
+					
+					<li style="display: inline">#<a href="/tags/software_bloat">software_bloat</a></li>
+					
+					<li style="display: inline">#<a href="/tags/bloatware">bloatware</a></li>
+					
+					<li style="display: inline">#<a href="/tags/electron">electron</a></li>
+					
+					<li style="display: inline">#<a href="/tags/feature_creep">feature_creep</a></li>
+					
+					<li style="display: inline">#<a href="/tags/ebook">ebook</a></li>
+					
+					<li style="display: inline">#<a href="/tags/koreader">koreader</a></li>
+					
+					<li style="display: inline">#<a href="/tags/epub">epub</a></li>
+					
+					<li style="display: inline">#<a href="/tags/pdf">pdf</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  
+  <div class="footer-info">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      <br>
+      BTC기부: <b><code>bc1qyx5f8trraemf9r520qy889g42rpq398cw9yysw</code></b>
+      <br>
+      ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  
+</script></div>
+    </body>
+</html>

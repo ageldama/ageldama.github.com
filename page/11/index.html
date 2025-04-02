@@ -89,6 +89,50 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/algebraic-effects-for-everyone/">&#34;모두를 위한 algebraic effects!&#34; ...정말루?</a></h1>
+					<time>🗓️ 13 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p>뭐 대충 다음과 같은 글들:</p>
+<p><a href="https://www.eff-lang.org/handlers-tutorial.pdf">https://www.eff-lang.org/handlers-tutorial.pdf</a></p>
+<p><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf</a></p>
+<p>&hellip;그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)</p>
+<p><a href="https://hackage.haskell.org/package/fused-effects">https://hackage.haskell.org/package/fused-effects</a></p>
+<p><a href="https://github.com/dry-rb/dry-effects">https://github.com/dry-rb/dry-effects</a></p>
+<p><a href="https://github.com/digital-fabric/affect">https://github.com/digital-fabric/affect</a></p>
+<p><a href="https://github.com/macabeus/js-proposal-algebraic-effects">https://github.com/macabeus/js-proposal-algebraic-effects</a></p>
+<p><a href="https://github.com/nythrox/effects.js">https://github.com/nythrox/effects.js</a></p>
+<p><a href="https://www.janestreet.com/tech-talks/effective-programming/">https://www.janestreet.com/tech-talks/effective-programming/</a></p>
+<p><a href="https://github.com/ocaml-multicore/effects-examples">https://github.com/ocaml-multicore/effects-examples</a></p>
+<p><a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/">https://overreacted.io/algebraic-effects-for-the-rest-of-us/</a></p>
+<p>&hellip;음&hellip; 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.</p>
+<p>오히려 dry-rb, affect이 더 명확하기는 한거 같아.</p>
+<p>가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.</p>
+<p>분명히 장점을 볼 수 있을거 같은 개념 같다.</p>
+<p>왜냐하면,</p>
+<ol>
+<li>지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면,</li>
+<li>하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.
+<ol>
+<li>그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용.</li>
+<li>(&hellip;그때 그때 Haskell do-notation등에 따라 분리해서 표현)</li>
+<li>좋은점이라면 좋은점일수도 있겠지만.</li>
+</ol>
+</li>
+<li>그런데, aeffects을 이용한다면,
+<ol>
+<li>굳이 그렇게 복잡하게 나누지 않아도 괜찮고,</li>
+<li>monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여.</li>
+</ol>
+</li>
+</ol>
+<p>당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (&hellip;일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, &hellip;처럼)</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun13--01-ping/">Ping 13/06/2022 .01</a></h1>
 					<time>🗓️ 13 Jun, 2022</time>
 					<br><div class="description">
@@ -112,29 +156,6 @@
 내 삶을 더 도움을 받을 수 있었을텐데, 그렇지 못했었던 도구들이 많은것 같아.</p>
 <p>gnu coreutils, m4, awk, perl 만 해도 그랬었고, 조금이라도 알아가고 응용을 할수록 매일매일이
 더 재밌고 강력해졌었던거 같아.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/06jun12sun--01-some-engr-tough-sells/">&#34;Some Engineering Tough Sells&#34;</a></h1>
-					<time>🗓️ 12 Jun, 2022</time>
-					<br><div class="description">
-						
-						<p><a href="https://posco.dev/blog/2022-04-23_draft_some-engineering-tough-sells/">https://posco.dev/blog/2022-04-23_draft_some-engineering-tough-sells/</a></p>
-<p>&hellip;공감이 가는 부분들은:</p>
-<blockquote>
-<ol>
-<li>dynamic serialization isn’t worth it, use statically defined serialization</li>
-<li>untested code is virtually always somewhat wrong</li>
-<li>doing things right pays off sooner than we usually imagine</li>
-<li>an ounce of design is worth a pound of implementation</li>
-<li>in data engineering, the data very often violates your beliefs about the shape</li>
-<li>thinking about, and minimizing edges in your code’s dependency graph is a win</li>
-<li>a good (i.e. programmable, fast, reliable, reproducible) build system solves a lot of practical software engineering problems</li>
-</ol></blockquote>
-<p>&hellip;많은것들을 경험하되, 숙고와 자기객관화는 중요. 아니라면, 경험과 시간은 그저 흘러가게 되니.</p>&hellip;
 						
 					</div>
                                         
