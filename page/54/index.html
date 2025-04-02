@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.145.0">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:url" content="https://ageldama.github.io/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="아겔로그">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="아겔로그">
+
+	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+
+	        
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/gopherish.56b1a3603de0001266fd93972ea01036b17460038761f722ac296b8aedfa6de9.css" integrity="sha256-VrGjYD3gABJm/ZOXLqAQNrF0YAOHYfcirClriu36bek=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+	
+	
+</head>
+
+	<body>
+		<div class="content">
+			<header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+    <nav>
+        
+            <a href="/posts/archive/">Index🗃️🏷️</a>
+        
+            <a href="/myself/">Contact📨</a>
+        
+
+	
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#fff',  
+      buttonColorDark: '#100f2c',  
+      buttonColorLight: '#fff', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+    var darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    window.darkmode = darkmode;
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+                        <div id="search"></div>
+			
+			<main class="list">
+				<div class="site-description"></div>
+				
+				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-22-aio-rx-and-erlang/">Erlang에 더 관심을 기울여야 할 시점인거 같다</a></h1>
+					<time>🗓️ 22 Jan, 2017</time>
+					<br><div class="description">
+						
+						<p>그냥 최근의 자바나 node.js, 특히
+자바의 <a href="https://github.com/ReactiveX/RxJava">RxJava</a> 같은걸
+보다보면, <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 뭔가 언어적으로
+지원하지 않는걸 뜯어내서 동작하게 만들고 너무 골치가 아프게
+만들어지는건 아닌가 생각도 든다. (사실상 콜백. ㅎㅎ)</p>
+<p>그리고 지금 한창 JDBC이라던지 이런 입출력과 관련된 부분에서 비동기
+방식을 지원하려고 많은 변화가 있을만한 시점인거 같다.</p>
+<p>예상은 아마 몇년간은 이런 혼란이 자바쪽에는 계속 있을거 같다는
+생각이다. (async/await 같은 키워드가 추가되고 하려면 자바에 몇년이 더
+걸릴지는 아무도 모를거 같다. lambda이 추가되는데 얼마나 오래걸렸었는지
+추억해보자..)</p>
+<p>그런데, &ldquo;<em>아몰랑 닥치고 얼랭씁십다</em>&rdquo; 이런 얘기를 하고 싶은건 아닌데,
+그래도 사실 자바로 이런걸 하고 있다보면, 얼랭에서 이미 잘 해결한
+문제를 왜 이렇게 고민하고 있어야하고, 왜 이렇게 저수준의 작업을 매번
+프로젝트를 만들때마다 해야할까 싶다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-22-java-immutables-classic-problem/">Java Immutables와 친숙한 오래된 문제들</a></h1>
+					<time>🗓️ 22 Jan, 2017</time>
+					<br><div class="description">
+						
+						<p><a href="https://immutables.github.io/">https://immutables.github.io/</a> 요즘 이걸 살짝 봤는데, 재미있었다.</p>
+<p>그런데 일단 깊이보거나 써보기 전에 드는 걱정은,</p>
+<ol>
+<li>이거 기존의 몇몇 프레임웍이나 라이브러리들이랑은 친하게 지내기
+어렵지 않을까.
+<ul>
+<li>왜냐하면, 대부분의 POJO에 연관된
+생성단계에서,
+<a href="https://en.wikipedia.org/wiki/Default_constructor">default constructor</a> 와
+setter-methods을 갖고, 값을 세팅하는 경우가 대부분인데,</li>
+<li>예를들면, 대부분의 ORM 프레임웍들이나 POJO으로 JSON등을
+Deserialization해서 직접 객체를 생성할 책임을 프레임웍이나
+라이브러리가 가져가는 경우에 대부분.</li>
+</ul>
+</li>
+</ol>
+<p>&hellip;그러면 결국 말짱황인거 같다.. 아무리 accessor 메서드들
+boilerplate으로 생성하는거 막아주는게 좋다고 해도, 솔직히 그냥 한번
+IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는게 더 낫겠다는
+생각이든다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-22-emacs-ace-window/">Emacs에서 window 전환을 편하게, ace-window</a></h1>
+					<time>🗓️ 22 Jan, 2017</time>
+					<br><div class="description">
+						
+						<p>이맥스에서 코딩하거나 마크다운이나 Org으로 글을 쓰고 정리하는데, 그간
+그냥 그럭저럭 나는 이맥스를 나한테 맞춰서 사용하고 있다고 생각하고
+있었던거 같다. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>그런데, 항상 뭔가 불편한데, 그냥 바쁘다는 이유로 깊이 생각은 안하고
+대충 대충 때우면서 사용해왔었던게 있었다. 바로 window 끼리 전환하는
+방법.</p>
+<p><code>C-x 2</code> 이나 <code>C-x 3</code>으로 창을 분할해놓고 쓰는게 보통인데, 이때 나는
+그냥 아무 생각없이 <code>C-x o</code>만을 이용해서 <em>다음 윈도우</em> 으로
+이동만해왔었다.</p>
+<p><em>그런데</em>, 창이 3개 이상이 되고, 현재 창의 <em>다음 창</em> 이 아니라, <em>이전 창</em> 으로 이동하고 싶으면?</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+
+
+
+
+
+
+
+
+<ul class="pagination">
+	<span class="page-item page-prev">
+	
+            <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">First⏮️</span></a>
+            <a href="/page/53/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
+        
+	</span>
+        <span class="page-number">(54/56)</span>
+	<span class="page-item page-next">
+	
+            <a href="/page/55/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
+            <a href="/page/56/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+        
+	</span>
+</ul>
+
+
+			</main>
+			<footer>
+  
+  <div class="footer-info">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      <br>
+      BTC기부: <b><code>bc1qyx5f8trraemf9r520qy889g42rpq398cw9yysw</code></b>
+      <br>
+      ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  
+</script>
+		</div>
+
+                
+<script src="/js/pagefind/pagefind-ui.js" type="text/javascript"></script>
+<script>
+ window.addEventListener('DOMContentLoaded', (event) => {
+     new PagefindUI({
+         baseUrl: "/",
+         
+         element: "#search",
+         
+         showImages: true,
+         
+         resetStyles: false,
+         
+         showSubResults: false,
+
+         pageSize: 5,  
+
+         translations: {
+             "placeholder": "--- 검색어 입력 ---",
+             "clear_search": "초기화",
+             "load_more": "검색결과 더 불러오기",
+             "search_label": "이 사이트에서 검색",
+             "filters_label": "필터",
+             "zero_results": "검색결과 없음: [SEARCH_TERM]",
+             "many_results": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "one_result": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "alt_search": "검색결과 없음=[SEARCH_TERM]. 대체검색어=[DIFFERENT_TERM]-으로 표시",
+             "search_suggestion": "검색결과 없음=[SEARCH_TERM]. 다음 검색으로 대체해보시던가요:",
+             "searching": "검색중 [SEARCH_TERM]..."
+         },
+     });
+
+     
+     const pagefind_ui_results_observer = new MutationObserver(function(muts){
+         if($('.pagefind-ui__drawer').children().length > 0) {
+             $('main.list').hide();
+         } else {
+             $('main.list').show();
+         }
+     });
+
+     pagefind_ui_results_observer.observe(
+         $('.pagefind-ui__drawer')[0],{
+             childList: true,
+             subtree: true
+     });
+ });
+</script>
+		
+
+	</body>
+</html>

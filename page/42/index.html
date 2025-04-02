@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.145.0">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:url" content="https://ageldama.github.io/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="아겔로그">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="아겔로그">
+
+	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+
+	        
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/gopherish.56b1a3603de0001266fd93972ea01036b17460038761f722ac296b8aedfa6de9.css" integrity="sha256-VrGjYD3gABJm/ZOXLqAQNrF0YAOHYfcirClriu36bek=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+	
+	
+</head>
+
+	<body>
+		<div class="content">
+			<header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+    <nav>
+        
+            <a href="/posts/archive/">Index🗃️🏷️</a>
+        
+            <a href="/myself/">Contact📨</a>
+        
+
+	
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#fff',  
+      buttonColorDark: '#100f2c',  
+      buttonColorLight: '#fff', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+    var darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    window.darkmode = darkmode;
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+                        <div id="search"></div>
+			
+			<main class="list">
+				<div class="site-description"></div>
+				
+				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/cl-rutils/">rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</a></h1>
+					<time>🗓️ 11 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>커먼리습은 <a href="https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec">CLHS</a>
+이후로 언어 자체 정의는 변하지 않았다.</p>
+<p>구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거
+같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 <a href="https://en.wikipedia.org/wiki/Lisp_reader">lisp
+reader</a>을 확장하는게
+CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스펙을 잘
+구현해놓았으니까.</p>
+<p>결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면
+언제든지 매크로를 만들듯이 확장하면 되니까.</p>
+<blockquote>
+<p><em>&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;</em></p></blockquote>
+<p>이런 커먼리습 확장 <em>&lsquo;라이브러리&rsquo;</em> 들이 여러가지 있는데, 가장 요즘에
+쓸만할거 같다고 생각하는건 rutils이다. <a href="https://github.com/vseloved/rutils">https://github.com/vseloved/rutils</a></p>
+<p><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code> 같은거
+매번 반복해서 쳐넣는걸 그냥 <code>eval-always</code>으로 바꿔준다거나.
+<code>gensym</code>하는것도 <code>with-gensyms</code> 제공하거나 하는 이런류의
+라이브러리들에서 보통 제공하는것들부터.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-11fri/">Ping 11/Oct/2019</a></h1>
+					<time>🗓️ 11 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>매일 글쓰기. 블로깅하기 나도 해볼까.</p>
+<p>해보려는 이유는 메모는 계속해서 하면서 살고 있는데, 연속해서 같은
+주제에 대해서 더 생각하고 하면서 발전시키는 방법으로 일기를 쓰는것과
+반복적으로, 또 이전에 썼었던 글을 읽어보면서 거기에서 더 나아가서
+고쳐나가고 발전시키는 방법으로 블로깅이 나쁘지 않은거 같아서.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-08tue/">Ping 08/Oct/2019</a></h1>
+					<time>🗓️ 08 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>어제는 하루 종일 아는 사람들을 만나고 돌아다녔다.</p>
+<p>한국에서 운전을 하게 되고 재미를 붙이고 살고 있다.</p>
+<p>비가 오는 날이었지만 상쾌해서 북한산 국립공원 근처, 은평한옥마을,
+진관사를 다녔다. 차를 타고 이동하면서 편하고 좋았다. 행동반경이
+넓어지고 운전하면서 아직은 매순간이 재밌다.</p>
+<p>비가 내려서 구름과 안개가 북한산 자락에 깔려서 운치있었다. 카페에
+앉아서 산풍경을 감상했다. 학생때는 자주 학교에서 소풍이나 백일장을
+서오릉이나 북한산으로 왔었었는데. 그때도 가끔 생각했지만 비가 내려
+세상이 이렇게 젖었을때 애처롭게 어둡기도 하고 깨끗한 습기를 머금은
+숲이 상쾌해서 생명을 느끼게 해준다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+
+
+
+
+
+
+
+
+<ul class="pagination">
+	<span class="page-item page-prev">
+	
+            <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">First⏮️</span></a>
+            <a href="/page/41/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
+        
+	</span>
+        <span class="page-number">(42/56)</span>
+	<span class="page-item page-next">
+	
+            <a href="/page/43/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
+            <a href="/page/56/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+        
+	</span>
+</ul>
+
+
+			</main>
+			<footer>
+  
+  <div class="footer-info">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      <br>
+      BTC기부: <b><code>bc1qyx5f8trraemf9r520qy889g42rpq398cw9yysw</code></b>
+      <br>
+      ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  
+</script>
+		</div>
+
+                
+<script src="/js/pagefind/pagefind-ui.js" type="text/javascript"></script>
+<script>
+ window.addEventListener('DOMContentLoaded', (event) => {
+     new PagefindUI({
+         baseUrl: "/",
+         
+         element: "#search",
+         
+         showImages: true,
+         
+         resetStyles: false,
+         
+         showSubResults: false,
+
+         pageSize: 5,  
+
+         translations: {
+             "placeholder": "--- 검색어 입력 ---",
+             "clear_search": "초기화",
+             "load_more": "검색결과 더 불러오기",
+             "search_label": "이 사이트에서 검색",
+             "filters_label": "필터",
+             "zero_results": "검색결과 없음: [SEARCH_TERM]",
+             "many_results": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "one_result": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "alt_search": "검색결과 없음=[SEARCH_TERM]. 대체검색어=[DIFFERENT_TERM]-으로 표시",
+             "search_suggestion": "검색결과 없음=[SEARCH_TERM]. 다음 검색으로 대체해보시던가요:",
+             "searching": "검색중 [SEARCH_TERM]..."
+         },
+     });
+
+     
+     const pagefind_ui_results_observer = new MutationObserver(function(muts){
+         if($('.pagefind-ui__drawer').children().length > 0) {
+             $('main.list').hide();
+         } else {
+             $('main.list').show();
+         }
+     });
+
+     pagefind_ui_results_observer.observe(
+         $('.pagefind-ui__drawer')[0],{
+             childList: true,
+             subtree: true
+     });
+ });
+</script>
+		
+
+	</body>
+</html>

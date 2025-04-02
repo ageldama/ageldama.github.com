@@ -2,10 +2,17 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Emacs이랑 친해지기 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="&ldquo;이맥스를 어떻게 배우면 좋은지 모르겠다. 여러번 도전해봤지만 항상 별로였다.&rdquo;
-..어느날 한 동료가 물어봤다. (그렇다 나는 일터에서도 이맥스를 켜놓고 계속 쓴다.)
-솔직히 기본적으로 매일 Org-mode으로 계획, 일정 등등 정리하고 계속 개인적으로 정리하면서 쓰고, 파이썬, Go, Clojure 같은거 할때도 편집하고 테스트하기도 편하니까 선호하는 편인거 같다. (자바랑 스칼라은 물론 그냥 IntelliJ 쓴다.)
-여튼 그날 간단히 짝프로그래밍하듯이 같이 앉아서 몇가지 이야기를 하고, 내 설정 파일 1 이나 어떻게 접근하는게 좋은지에 대해서 잠깐 이야기를 했었다." />
+	<meta name="description" content="
+&ldquo;이맥스를 어떻게 배우면 좋은지 모르겠다. 여러번 도전해봤지만 항상 별로였다.&rdquo;
+..어느날 한 동료가 물어봤다. (그렇다 나는 일터에서도 이맥스를 켜놓고
+계속 쓴다.)
+솔직히 기본적으로 매일 Org-mode으로 계획, 일정
+등등 정리하고 계속 개인적으로 정리하면서 쓰고, 파이썬, Go, Clojure
+같은거 할때도 편집하고 테스트하기도 편하니까 선호하는 편인거
+같다. (자바랑 스칼라은 물론 그냥 IntelliJ 쓴다.)
+여튼 그날 간단히 짝프로그래밍하듯이 같이 앉아서 몇가지 이야기를 하고,
+내 설정 파일 1 이나 어떻게 접근하는게 좋은지에 대해서
+잠깐 이야기를 했었다. 그걸 블로깅으로 써보고 싶다." />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2017/2017-01-01-getting-started-with-emacs/">
   <meta property="og:site_name" content="아겔로그">
@@ -13,7 +20,7 @@
   <meta property="og:description" content="“이맥스를 어떻게 배우면 좋은지 모르겠다. 여러번 도전해봤지만 항상 별로였다.”
 ..어느날 한 동료가 물어봤다. (그렇다 나는 일터에서도 이맥스를 켜놓고 계속 쓴다.)
 솔직히 기본적으로 매일 Org-mode으로 계획, 일정 등등 정리하고 계속 개인적으로 정리하면서 쓰고, 파이썬, Go, Clojure 같은거 할때도 편집하고 테스트하기도 편하니까 선호하는 편인거 같다. (자바랑 스칼라은 물론 그냥 IntelliJ 쓴다.)
-여튼 그날 간단히 짝프로그래밍하듯이 같이 앉아서 몇가지 이야기를 하고, 내 설정 파일 1 이나 어떻게 접근하는게 좋은지에 대해서 잠깐 이야기를 했었다.">
+여튼 그날 간단히 짝프로그래밍하듯이 같이 앉아서 몇가지 이야기를 하고, 내 설정 파일 1 이나 어떻게 접근하는게 좋은지에 대해서 잠깐 이야기를 했었다. 그걸 블로깅으로 써보고 싶다.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -26,7 +33,7 @@
   <meta name="twitter:description" content="“이맥스를 어떻게 배우면 좋은지 모르겠다. 여러번 도전해봤지만 항상 별로였다.”
 ..어느날 한 동료가 물어봤다. (그렇다 나는 일터에서도 이맥스를 켜놓고 계속 쓴다.)
 솔직히 기본적으로 매일 Org-mode으로 계획, 일정 등등 정리하고 계속 개인적으로 정리하면서 쓰고, 파이썬, Go, Clojure 같은거 할때도 편집하고 테스트하기도 편하니까 선호하는 편인거 같다. (자바랑 스칼라은 물론 그냥 IntelliJ 쓴다.)
-여튼 그날 간단히 짝프로그래밍하듯이 같이 앉아서 몇가지 이야기를 하고, 내 설정 파일 1 이나 어떻게 접근하는게 좋은지에 대해서 잠깐 이야기를 했었다.">
+여튼 그날 간단히 짝프로그래밍하듯이 같이 앉아서 몇가지 이야기를 하고, 내 설정 파일 1 이나 어떻게 접근하는게 좋은지에 대해서 잠깐 이야기를 했었다. 그걸 블로깅으로 써보고 싶다.">
 
 	
 		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
@@ -43,6 +50,8 @@
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>
@@ -103,8 +112,7 @@
 
 		<section class="body">
 			<blockquote>
-<p>&ldquo;이맥스를 어떻게 배우면 좋은지 모르겠다. 여러번 도전해봤지만 항상 별로였다.&rdquo;</p>
-</blockquote>
+<p>&ldquo;이맥스를 어떻게 배우면 좋은지 모르겠다. 여러번 도전해봤지만 항상 별로였다.&rdquo;</p></blockquote>
 <p>..어느날 한 동료가 물어봤다. (<em>그렇다 나는 일터에서도 이맥스를 켜놓고
 계속 쓴다.</em>)</p>
 <p>솔직히 기본적으로 매일 <a href="http://orgmode.org/">Org-mode</a>으로 계획, 일정

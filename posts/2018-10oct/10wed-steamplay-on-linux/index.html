@@ -2,11 +2,30 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SteamPlay On Linux - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="집에 있는 데스크탑에서 윈도10 그냥 사서 설치하고, 거기에 스팀 설치해서 게임이나 하는데 사용했었음
-거기에 대부분의 작업은 그냥 리눅스에서 하는게 훨씬 편하고 해서 Virtualbox에 아치리눅스 게스트 만들어놓고 거기에 접속해서 작업했었었다.1
-그러다가 SteamPlay이란걸 알게됐고, 모든 게임이 다 지원되는건 아니더라도 그냥 앞으로 나올 게임들중에 리눅스를 지원하거나 Wine을 통해서 실행할 수 있으면 이걸 쓰는게 더 낫고 윈도가 싫었다.2
+	<meta name="description" content="집에 있는 데스크탑에서 윈도10 그냥 사서 설치하고, 거기에
+스팀 설치해서 게임이나 하는데
+사용했었음
+거기에 대부분의 작업은 그냥 리눅스에서 하는게 훨씬 편하고 해서
+Virtualbox에 아치리눅스 게스트 만들어놓고 거기에 접속해서
+작업했었었다.1
+그러다가
+SteamPlay이란걸
+알게됐고, 모든 게임이 다 지원되는건 아니더라도 그냥 앞으로 나올
+게임들중에 리눅스를 지원하거나 Wine을
+통해서 실행할 수 있으면 이걸 쓰는게 더 낫고 윈도가 싫었다.2
 여튼, 좀 설치하고 써보니:
-모든 게임을 지원하지 않는다. 1. 적당히 지원될거라고 생각하던 게임들도 그냥 됐고, SteamPlay지원 안해도 돌려볼랜다 체크해봤자 제대로 안굴러감." />
+
+모든 게임을 지원하지 않는다.
+1. 적당히 지원될거라고 생각하던 게임들도 그냥 됐고, SteamPlay지원
+안해도 돌려볼랜다 체크해봤자 제대로 안굴러감.
+게임패드나 그런것 지원은 윈도보다 편안함. 그냥 USB 꽂으면 바로 동작.
+처음엔 Flatpak같은걸로 설치해서 깔끔하게 해보려다가 그냥
+Pacman으로 Runtime/Native 설치해서 오히려 속편함.
+NVidia Proprietary Driver 설치했으면, 조금 더 구글링해서
+고쳐줘야할게 생김.
+
+하프라이프2이나 그런것만 돌려봤는데 전혀 리눅스라서 따로 신경쓸건
+없었다. 폴아웃3이나 그런게 동작 안하는건 너무 슬펐다." />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2018-10oct/10wed-steamplay-on-linux/">
   <meta property="og:site_name" content="아겔로그">
@@ -15,7 +34,7 @@
 거기에 대부분의 작업은 그냥 리눅스에서 하는게 훨씬 편하고 해서 Virtualbox에 아치리눅스 게스트 만들어놓고 거기에 접속해서 작업했었었다.1
 그러다가 SteamPlay이란걸 알게됐고, 모든 게임이 다 지원되는건 아니더라도 그냥 앞으로 나올 게임들중에 리눅스를 지원하거나 Wine을 통해서 실행할 수 있으면 이걸 쓰는게 더 낫고 윈도가 싫었다.2
 여튼, 좀 설치하고 써보니:
-모든 게임을 지원하지 않는다. 1. 적당히 지원될거라고 생각하던 게임들도 그냥 됐고, SteamPlay지원 안해도 돌려볼랜다 체크해봤자 제대로 안굴러감.">
+모든 게임을 지원하지 않는다. 1. 적당히 지원될거라고 생각하던 게임들도 그냥 됐고, SteamPlay지원 안해도 돌려볼랜다 체크해봤자 제대로 안굴러감. 게임패드나 그런것 지원은 윈도보다 편안함. 그냥 USB 꽂으면 바로 동작. 처음엔 Flatpak같은걸로 설치해서 깔끔하게 해보려다가 그냥 Pacman으로 Runtime/Native 설치해서 오히려 속편함. NVidia Proprietary Driver 설치했으면, 조금 더 구글링해서 고쳐줘야할게 생김. 하프라이프2이나 그런것만 돌려봤는데 전혀 리눅스라서 따로 신경쓸건 없었다. 폴아웃3이나 그런게 동작 안하는건 너무 슬펐다.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -32,7 +51,7 @@
 거기에 대부분의 작업은 그냥 리눅스에서 하는게 훨씬 편하고 해서 Virtualbox에 아치리눅스 게스트 만들어놓고 거기에 접속해서 작업했었었다.1
 그러다가 SteamPlay이란걸 알게됐고, 모든 게임이 다 지원되는건 아니더라도 그냥 앞으로 나올 게임들중에 리눅스를 지원하거나 Wine을 통해서 실행할 수 있으면 이걸 쓰는게 더 낫고 윈도가 싫었다.2
 여튼, 좀 설치하고 써보니:
-모든 게임을 지원하지 않는다. 1. 적당히 지원될거라고 생각하던 게임들도 그냥 됐고, SteamPlay지원 안해도 돌려볼랜다 체크해봤자 제대로 안굴러감.">
+모든 게임을 지원하지 않는다. 1. 적당히 지원될거라고 생각하던 게임들도 그냥 됐고, SteamPlay지원 안해도 돌려볼랜다 체크해봤자 제대로 안굴러감. 게임패드나 그런것 지원은 윈도보다 편안함. 그냥 USB 꽂으면 바로 동작. 처음엔 Flatpak같은걸로 설치해서 깔끔하게 해보려다가 그냥 Pacman으로 Runtime/Native 설치해서 오히려 속편함. NVidia Proprietary Driver 설치했으면, 조금 더 구글링해서 고쳐줘야할게 생김. 하프라이프2이나 그런것만 돌려봤는데 전혀 리눅스라서 따로 신경쓸건 없었다. 폴아웃3이나 그런게 동작 안하는건 너무 슬펐다.">
 
 	
 		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
@@ -49,6 +68,8 @@
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.145.0">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:url" content="https://ageldama.github.io/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="아겔로그">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="아겔로그">
+
+	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+
+	        
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/gopherish.56b1a3603de0001266fd93972ea01036b17460038761f722ac296b8aedfa6de9.css" integrity="sha256-VrGjYD3gABJm/ZOXLqAQNrF0YAOHYfcirClriu36bek=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+	
+	
+</head>
+
+	<body>
+		<div class="content">
+			<header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+    <nav>
+        
+            <a href="/posts/archive/">Index🗃️🏷️</a>
+        
+            <a href="/myself/">Contact📨</a>
+        
+
+	
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#fff',  
+      buttonColorDark: '#100f2c',  
+      buttonColorLight: '#fff', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+    var darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    window.darkmode = darkmode;
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+                        <div id="search"></div>
+			
+			<main class="list">
+				<div class="site-description"></div>
+				
+				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun29--01-ping/">linux/unix 팁 29/06/2022 .01</a></h1>
+					<time>🗓️ 29 Jun, 2022</time>
+					<br><div class="description">
+						
+						<div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</a></li>
+    <li><a href="#ssh으로-키보드마우스-안-붙이고">ssh으로 키보드/마우스 안 붙이고</a>
+      <ul>
+        <li><a href="#vconsole-conspy">vconsole: <code>conspy</code></a></li>
+        <li><a href="#x11-x2x으로-여러-머신스크린에-걸쳐서-마우스키보드-공유">x11: <code>x2x</code>으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+<hr>
+<p>리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.</p>
+<p>그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.</p>
+<h1 id="zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</h1>
+<p>최근/디렉토리 이동한 히스토리에 따라서 (&ldquo;frecent&rdquo;) 이동하기:</p>
+<p>fzf+zsh의 <code>Control-R</code>도 좋고<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,</p>
+<p>oh-my-zsh 내장인 <code>plugins=(z)</code>도 좋지만<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>&hellip;나는 가능하면 <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a>이 가장 가볍고 좋은거 같다.</p>
+<p>설치하고 나서,
+<code>eval &quot;$(zoxide init zsh)&quot;</code></p>
+<p>그리고, <code>z SOME-DIR</code>, <code>zi</code> 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun24--01-grug/">The Grug Brained Developer</a></h1>
+					<time>🗓️ 24 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p>감동적인 글이다ㅋ:</p>
+<p><a href="https://grugbrain.dev/">https://grugbrain.dev/</a></p>
+<p>문법도 완전 grug스럽게 작성해서 반가운 글이었다.</p>
+<p>완전히 모두 내 생각과 같지는 않아도, 이야기하는 <em>&ldquo;FOLD&rdquo; 때문에</em> 일어나는 일들과
+조금은 그래도 <em>grug답게</em> 그냥 해내려는 생각들이 유용.</p>
+<p>그치, grug이 공룡과 구분되는 점은 그런거겠지. ㅎㅎ&hellip;</p>
+<p>msa, reactjs, ejb, osgi. 공감하는 생각들.</p>
+<p>&hellip; black think juice 맛있다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/">&#34;Software disenchantment&#34;</a></h1>
+					<time>🗓️ 19 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p><a href="https://tonsky.me/blog/disenchantment/">https://tonsky.me/blog/disenchantment/</a></p>
+<p>재밌게 읽었다. 계속 생각해오던, 이전 포스팅에서도 이야기한 생각들.</p>
+<blockquote>
+<p>&ldquo;&hellip;의 진보도 항상 그때그때의 1보만이 진보이며 2보도 3보도 n+1보도 결코&hellip;&rdquo;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p></blockquote>
+<p>:winking_face:</p>
+<p>&hellip;그치 ejb/xml을 쓰든, 뭔가 또 새로운 언어나 프레임웍으로 대단한것처럼, 진보한것처럼 쓰려고 해도,
+현실적으로는 빌드도 오히려 <a href="https://ant.apache.org/">apache ant</a> 쓸때보다 더 엉망일지도. 성능이든 iteration의 가벼움이든.</p>
+<p>정말 진보는 커녕 오히려 더 ㅎㅎ&hellip; 오히려, apache ant으로라면 명확하게 확실하게 동작하도록 만들기나 잘 하겠지만.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Walter Benjamin의 &ldquo;Arcades Project&quot;의 인용, &ldquo;매달린 절벽에서 손을 뗄 수 있는가?&rdquo; 강신주 저. &hellip;책에서는 그런 문맥이 아니었었지만, 내 생각엔 이런 문맥에도 맞지 않나 싶어서.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+
+
+
+
+
+
+
+
+<ul class="pagination">
+	<span class="page-item page-prev">
+	
+            <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">First⏮️</span></a>
+            <a href="/page/8/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
+        
+	</span>
+        <span class="page-number">(9/56)</span>
+	<span class="page-item page-next">
+	
+            <a href="/page/10/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
+            <a href="/page/56/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+        
+	</span>
+</ul>
+
+
+			</main>
+			<footer>
+  
+  <div class="footer-info">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      <br>
+      BTC기부: <b><code>bc1qyx5f8trraemf9r520qy889g42rpq398cw9yysw</code></b>
+      <br>
+      ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  
+</script>
+		</div>
+
+                
+<script src="/js/pagefind/pagefind-ui.js" type="text/javascript"></script>
+<script>
+ window.addEventListener('DOMContentLoaded', (event) => {
+     new PagefindUI({
+         baseUrl: "/",
+         
+         element: "#search",
+         
+         showImages: true,
+         
+         resetStyles: false,
+         
+         showSubResults: false,
+
+         pageSize: 5,  
+
+         translations: {
+             "placeholder": "--- 검색어 입력 ---",
+             "clear_search": "초기화",
+             "load_more": "검색결과 더 불러오기",
+             "search_label": "이 사이트에서 검색",
+             "filters_label": "필터",
+             "zero_results": "검색결과 없음: [SEARCH_TERM]",
+             "many_results": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "one_result": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "alt_search": "검색결과 없음=[SEARCH_TERM]. 대체검색어=[DIFFERENT_TERM]-으로 표시",
+             "search_suggestion": "검색결과 없음=[SEARCH_TERM]. 다음 검색으로 대체해보시던가요:",
+             "searching": "검색중 [SEARCH_TERM]..."
+         },
+     });
+
+     
+     const pagefind_ui_results_observer = new MutationObserver(function(muts){
+         if($('.pagefind-ui__drawer').children().length > 0) {
+             $('main.list').hide();
+         } else {
+             $('main.list').show();
+         }
+     });
+
+     pagefind_ui_results_observer.observe(
+         $('.pagefind-ui__drawer')[0],{
+             childList: true,
+             subtree: true
+     });
+ });
+</script>
+		
+
+	</body>
+</html>

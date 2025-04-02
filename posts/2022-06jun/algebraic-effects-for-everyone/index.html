@@ -19,7 +19,23 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
 가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.
 분명히 장점을 볼 수 있을거 같은 개념 같다.
 왜냐하면,
-지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능." />
+
+지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면,
+하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.
+
+그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용.
+(&hellip;그때 그때 Haskell do-notation등에 따라 분리해서 표현)
+좋은점이라면 좋은점일수도 있겠지만.
+
+
+그런데, aeffects을 이용한다면,
+
+굳이 그렇게 복잡하게 나누지 않아도 괜찮고,
+monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여.
+
+
+
+당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (&hellip;일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, &hellip;처럼)" />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/">
   <meta property="og:site_name" content="아겔로그">
@@ -41,7 +57,7 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
 가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.
 분명히 장점을 볼 수 있을거 같은 개념 같다.
 왜냐하면,
-지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.">
+지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능. 그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용. (…그때 그때 Haskell do-notation등에 따라 분리해서 표현) 좋은점이라면 좋은점일수도 있겠지만. 그런데, aeffects을 이용한다면, 굳이 그렇게 복잡하게 나누지 않아도 괜찮고, monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여. 당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (…일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, …처럼)">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -70,7 +86,7 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
 가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.
 분명히 장점을 볼 수 있을거 같은 개념 같다.
 왜냐하면,
-지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.">
+지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능. 그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용. (…그때 그때 Haskell do-notation등에 따라 분리해서 표현) 좋은점이라면 좋은점일수도 있겠지만. 그런데, aeffects을 이용한다면, 굳이 그렇게 복잡하게 나누지 않아도 괜찮고, monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여. 당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (…일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, …처럼)">
 
 	
 		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
@@ -87,6 +103,8 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>
@@ -203,47 +221,91 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
 </ol>
 <p>&hellip;ㅎㅎ그런데 어디까지나 이거 정적타입을 위해서, formal하게 정리한것이고,
 현실적으로는:</p>
-<pre><code class="language-lisp">  (define-condition progress ()
-    ((amount :initarg :amount :reader amount)))
-  
-  (defun process-partial-data (data)
-    &quot;NOOP placeholder&quot;
-    (declare (ignore data)))
-  
-  (defun process-data (data)
-    (restart-case
-        (loop
-           initially
-             (signal 'progress :amount 0)
-           with total = (length data)
-           for datum in data
-           for i below total
-           do
-             (process-partial-data datum)
-             (signal 'progress :amount (/ i total))
-           ;; Report progress
-           finally
-             (signal 'progress :amount 1)
-             (return :done))
-      (abort-work ()
-        (format *trace-output* &quot;Aborting work!&quot;)
-        :failed)))
-        
-CL-USER&gt; (handler-bind ((progress (lambda (p)
-    (format *trace-output* &quot;~&amp;Progress: ~F~%&quot; (amount p)))))
-             (process-data '(1 2 3 4 5 6)))
-
-  Progress: 0.0
-  Progress: 0.0
-  Progress: 0.16666667
-  Progress: 0.33333334
-  Progress: 0.5
-  Progress: 0.6666667
-  Progress: 0.8333333
-  Progress: 1.0
-  -&gt; :DONE        
-</code></pre>
-<p>&hellip;생각해보면, 정말 그냥 <a href="https://gigamonkeys.com/book/beyond-exception-handling-conditions-and-restarts.html">커먼리습의 conditions/restarts</a>이지 않은가 싶다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12">12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13">13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14">14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15">15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16">16</a>
+</span><span class="lnt" id="hl-0-17"><a class="lnlinks" href="#hl-0-17">17</a>
+</span><span class="lnt" id="hl-0-18"><a class="lnlinks" href="#hl-0-18">18</a>
+</span><span class="lnt" id="hl-0-19"><a class="lnlinks" href="#hl-0-19">19</a>
+</span><span class="lnt" id="hl-0-20"><a class="lnlinks" href="#hl-0-20">20</a>
+</span><span class="lnt" id="hl-0-21"><a class="lnlinks" href="#hl-0-21">21</a>
+</span><span class="lnt" id="hl-0-22"><a class="lnlinks" href="#hl-0-22">22</a>
+</span><span class="lnt" id="hl-0-23"><a class="lnlinks" href="#hl-0-23">23</a>
+</span><span class="lnt" id="hl-0-24"><a class="lnlinks" href="#hl-0-24">24</a>
+</span><span class="lnt" id="hl-0-25"><a class="lnlinks" href="#hl-0-25">25</a>
+</span><span class="lnt" id="hl-0-26"><a class="lnlinks" href="#hl-0-26">26</a>
+</span><span class="lnt" id="hl-0-27"><a class="lnlinks" href="#hl-0-27">27</a>
+</span><span class="lnt" id="hl-0-28"><a class="lnlinks" href="#hl-0-28">28</a>
+</span><span class="lnt" id="hl-0-29"><a class="lnlinks" href="#hl-0-29">29</a>
+</span><span class="lnt" id="hl-0-30"><a class="lnlinks" href="#hl-0-30">30</a>
+</span><span class="lnt" id="hl-0-31"><a class="lnlinks" href="#hl-0-31">31</a>
+</span><span class="lnt" id="hl-0-32"><a class="lnlinks" href="#hl-0-32">32</a>
+</span><span class="lnt" id="hl-0-33"><a class="lnlinks" href="#hl-0-33">33</a>
+</span><span class="lnt" id="hl-0-34"><a class="lnlinks" href="#hl-0-34">34</a>
+</span><span class="lnt" id="hl-0-35"><a class="lnlinks" href="#hl-0-35">35</a>
+</span><span class="lnt" id="hl-0-36"><a class="lnlinks" href="#hl-0-36">36</a>
+</span><span class="lnt" id="hl-0-37"><a class="lnlinks" href="#hl-0-37">37</a>
+</span><span class="lnt" id="hl-0-38"><a class="lnlinks" href="#hl-0-38">38</a>
+</span><span class="lnt" id="hl-0-39"><a class="lnlinks" href="#hl-0-39">39</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">define-condition</span> <span class="nv">progress</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">((</span><span class="nv">amount</span> <span class="ss">:initarg</span> <span class="ss">:amount</span> <span class="ss">:reader</span> <span class="nv">amount</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">process-partial-data</span> <span class="p">(</span><span class="nv">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;NOOP placeholder&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">ignore</span> <span class="nv">data</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">process-data</span> <span class="p">(</span><span class="nv">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">restart-case</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nb">loop</span>
+</span></span><span class="line"><span class="cl">           <span class="nv">initially</span>
+</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="nf">signal</span> <span class="ss">&#39;progress</span> <span class="ss">:amount</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">           <span class="nv">with</span> <span class="nv">total</span> <span class="nf">=</span> <span class="p">(</span><span class="nf">length</span> <span class="nv">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">           <span class="nv">for</span> <span class="nv">datum</span> <span class="nv">in</span> <span class="nv">data</span>
+</span></span><span class="line"><span class="cl">           <span class="nv">for</span> <span class="nv">i</span> <span class="nv">below</span> <span class="nv">total</span>
+</span></span><span class="line"><span class="cl">           <span class="nb">do</span>
+</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="nv">process-partial-data</span> <span class="nv">datum</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="nf">signal</span> <span class="ss">&#39;progress</span> <span class="ss">:amount</span> <span class="p">(</span><span class="nf">/</span> <span class="nv">i</span> <span class="nv">total</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">           <span class="c1">;; Report progress</span>
+</span></span><span class="line"><span class="cl">           <span class="nv">finally</span>
+</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="nf">signal</span> <span class="ss">&#39;progress</span> <span class="ss">:amount</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="nb">return</span> <span class="ss">:done</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nv">abort-work</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nf">format</span> <span class="vg">*trace-output*</span> <span class="s">&#34;Aborting work!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="ss">:failed</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl"><span class="nv">CL-USER&gt;</span> <span class="p">(</span><span class="nb">handler-bind</span> <span class="p">((</span><span class="nv">progress</span> <span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">p</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">format</span> <span class="vg">*trace-output*</span> <span class="s">&#34;~&amp;Progress: ~F~%&#34;</span> <span class="p">(</span><span class="nv">amount</span> <span class="nv">p</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="nv">process-data</span> <span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nv">Progress:</span> <span class="mf">0.0</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">Progress:</span> <span class="mf">0.0</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">Progress:</span> <span class="mf">0.16666667</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">Progress:</span> <span class="mf">0.33333334</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">Progress:</span> <span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">Progress:</span> <span class="mf">0.6666667</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">Progress:</span> <span class="mf">0.8333333</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">Progress:</span> <span class="mf">1.0</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">-&gt;</span> <span class="ss">:DONE</span>        
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>&hellip;생각해보면, 정말 그냥 <a href="https://gigamonkeys.com/book/beyond-exception-handling-conditions-and-restarts.html">커먼리습의 conditions/restarts</a>이지 않은가 싶다.</p>
 <p><a href="https://news.ycombinator.com/item?id=20496043">https://news.ycombinator.com/item?id=20496043</a> , 리습덕후들 말고도 다른 언어에서도 이렇게 된다고 성토하는 분위기.
 (&hellip;vb은 뭐야 대체, 왜 튀어나온거야&hellip;)</p>
 <p>&hellip;음, 뭐든지 정도가 있어서, 적당히 해야 하는데, 내게 acceptable한 정도는 실은 그냥 커먼리습의 컨디션/리스타트 정도면 acceptable하다.</p>

@@ -2,10 +2,25 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Void Linux &#43; Runit으로 데스크탑/랩탑 환경 설정하기 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="지난 한 달여간 눈코 뜰새 없이 바쁘게 지냈었다. 그렇게 지내다가 오랬만에 툭닥거려봤다.
-재미로 Void Linux을 설치해봤다. 사실 설치해보고 한적은 꽤 됐고, 메모리 사용량이 훨씬 가볍고 빠른 성능 때문에, Arch Linux도 충분히 가볍고 좋지만, 제대로 설정해서 사양이 좋지 않은 랩탑, 데스크탑들을 위해서 쓰기로 생각하고 있었었다.
-2007년 정도에 Gentoo Linux으로 회사 데스크탑과 Oracle DBMS 서버를 재밌게 설정한 이후로, 오랬만에 정말 가벼운 리눅스 배포판을 설치하는 느낌이었다.
-아치리눅스는 Pacman, Makepkg, AUR 같은 것들도 체계가 잘 잡혀있고, 오히려 Portage 보다 잘 관리되고 괜찮지 않은가 싶기도 할 때가 많아서 굳이 Gentoo을 다시 쓸 일은 없을 것 같다." />
+	<meta name="description" content="
+지난 한 달여간 눈코 뜰새 없이 바쁘게 지냈었다. 그렇게 지내다가
+오랬만에 툭닥거려봤다.
+
+재미로 Void Linux을 설치해봤다. 사실 설치해보고 한적은 꽤 됐고, 메모리
+사용량이 훨씬 가볍고 빠른 성능 때문에, Arch Linux도 충분히 가볍고
+좋지만, 제대로 설정해서 사양이 좋지 않은 랩탑, 데스크탑들을 위해서
+쓰기로 생각하고 있었었다.
+
+2007년 정도에 Gentoo Linux으로 회사 데스크탑과 Oracle DBMS 서버를
+재밌게 설정한 이후로, 오랬만에 정말 가벼운 리눅스 배포판을 설치하는
+느낌이었다.
+
+아치리눅스는 Pacman, Makepkg, AUR 같은 것들도 체계가 잘 잡혀있고,
+오히려 Portage 보다 잘 관리되고 괜찮지 않은가 싶기도 할 때가 많아서
+굳이 Gentoo을 다시 쓸 일은 없을 것 같다. 그리고 FreeBSD의 Ports도
+좋지만, AUR에 비해서 포함하는 패키지, 업데이트 빈도가 다른
+느낌이다. 사실 AUR이 정말 빈도가 높은 편이라 그렇겠지. FreeBSD Ports도
+정말 열심히 업데이트 되지만." />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2020-04apr/void-linux/">
   <meta property="og:site_name" content="아겔로그">
@@ -13,7 +28,7 @@
   <meta property="og:description" content="지난 한 달여간 눈코 뜰새 없이 바쁘게 지냈었다. 그렇게 지내다가 오랬만에 툭닥거려봤다.
 재미로 Void Linux을 설치해봤다. 사실 설치해보고 한적은 꽤 됐고, 메모리 사용량이 훨씬 가볍고 빠른 성능 때문에, Arch Linux도 충분히 가볍고 좋지만, 제대로 설정해서 사양이 좋지 않은 랩탑, 데스크탑들을 위해서 쓰기로 생각하고 있었었다.
 2007년 정도에 Gentoo Linux으로 회사 데스크탑과 Oracle DBMS 서버를 재밌게 설정한 이후로, 오랬만에 정말 가벼운 리눅스 배포판을 설치하는 느낌이었다.
-아치리눅스는 Pacman, Makepkg, AUR 같은 것들도 체계가 잘 잡혀있고, 오히려 Portage 보다 잘 관리되고 괜찮지 않은가 싶기도 할 때가 많아서 굳이 Gentoo을 다시 쓸 일은 없을 것 같다.">
+아치리눅스는 Pacman, Makepkg, AUR 같은 것들도 체계가 잘 잡혀있고, 오히려 Portage 보다 잘 관리되고 괜찮지 않은가 싶기도 할 때가 많아서 굳이 Gentoo을 다시 쓸 일은 없을 것 같다. 그리고 FreeBSD의 Ports도 좋지만, AUR에 비해서 포함하는 패키지, 업데이트 빈도가 다른 느낌이다. 사실 AUR이 정말 빈도가 높은 편이라 그렇겠지. FreeBSD Ports도 정말 열심히 업데이트 되지만.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -31,7 +46,7 @@
   <meta name="twitter:description" content="지난 한 달여간 눈코 뜰새 없이 바쁘게 지냈었다. 그렇게 지내다가 오랬만에 툭닥거려봤다.
 재미로 Void Linux을 설치해봤다. 사실 설치해보고 한적은 꽤 됐고, 메모리 사용량이 훨씬 가볍고 빠른 성능 때문에, Arch Linux도 충분히 가볍고 좋지만, 제대로 설정해서 사양이 좋지 않은 랩탑, 데스크탑들을 위해서 쓰기로 생각하고 있었었다.
 2007년 정도에 Gentoo Linux으로 회사 데스크탑과 Oracle DBMS 서버를 재밌게 설정한 이후로, 오랬만에 정말 가벼운 리눅스 배포판을 설치하는 느낌이었다.
-아치리눅스는 Pacman, Makepkg, AUR 같은 것들도 체계가 잘 잡혀있고, 오히려 Portage 보다 잘 관리되고 괜찮지 않은가 싶기도 할 때가 많아서 굳이 Gentoo을 다시 쓸 일은 없을 것 같다.">
+아치리눅스는 Pacman, Makepkg, AUR 같은 것들도 체계가 잘 잡혀있고, 오히려 Portage 보다 잘 관리되고 괜찮지 않은가 싶기도 할 때가 많아서 굳이 Gentoo을 다시 쓸 일은 없을 것 같다. 그리고 FreeBSD의 Ports도 좋지만, AUR에 비해서 포함하는 패키지, 업데이트 빈도가 다른 느낌이다. 사실 AUR이 정말 빈도가 높은 편이라 그렇겠지. FreeBSD Ports도 정말 열심히 업데이트 되지만.">
 
 	
 		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
@@ -48,6 +63,8 @@
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>

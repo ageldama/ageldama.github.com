@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.145.0">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:url" content="https://ageldama.github.io/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="아겔로그">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="아겔로그">
+
+	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+
+	        
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/gopherish.56b1a3603de0001266fd93972ea01036b17460038761f722ac296b8aedfa6de9.css" integrity="sha256-VrGjYD3gABJm/ZOXLqAQNrF0YAOHYfcirClriu36bek=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+	
+	
+</head>
+
+	<body>
+		<div class="content">
+			<header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+    <nav>
+        
+            <a href="/posts/archive/">Index🗃️🏷️</a>
+        
+            <a href="/myself/">Contact📨</a>
+        
+
+	
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#fff',  
+      buttonColorDark: '#100f2c',  
+      buttonColorLight: '#fff', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+    var darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    window.darkmode = darkmode;
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+                        <div id="search"></div>
+			
+			<main class="list">
+				<div class="site-description"></div>
+				
+				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/ping-17sat-2nd/">Ping (2nd) 17/Oct/2020</a></h1>
+					<time>🗓️ 17 Oct, 2020</time>
+					<br><div class="description">
+						
+						<p>
+  올해 초 <a href="https://github.com/ageldama/cl-state-machine">cl-state-machine 라이브러리</a>를 만들어 공개한 이후로
+  커먼리습을 쓰지는 않았다.</p>
+<p>
+  다른 직업상 쓰는 언어들만을 쓰고 오픈소스와 개인적으로 만들고 싶은
+  프로젝트를 위해서 쓰는 언어인 커먼리습은 미뤄두었었다.</p>
+<p>
+  다시 커먼리습을 해야겠다고 생각이 들었다. 개인적으로 만들고 싶은
+  프로젝트도 있고, 그 프로젝트를 위해서 프론트엔드를 만드는데 React와
+  Vue을 써보고 이해하고 있어도 쓰고 싶지는 않기 때문이다.</p>
+<p>
+  사실 커먼리습은 그렇게 문법이 예쁘지도, 멋진 React와 같은 멋진
+  프레임웍이나 최신의 유행하는 라이브러리들을 모두 갖고 있지도 않다.</p>
+<p>
+  <a href="https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec">HyperSpec</a>을 읽다 보면 아주 쉽게 정의되어 있는 키워드들이 일관성이
+  있지도, 지금 시대의 관점에서 보기에 익숙한 현대적인 용어들을
+  사용해서 이름을 지어놓지도 않았다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/ping-16fri/">Ping 17/Oct/2020</a></h1>
+					<time>🗓️ 17 Oct, 2020</time>
+					<br><div class="description">
+						
+						<p>
+웹프론트엔드 개발을 조금씩 해보고 있다. 처음에는 예전 방식으로만
+하려고 하다가 조금씩 겨우 써보던 webpack을 다시 가이드를 차근차근
+공부하고 동작하는 방식을 이해하도록 뜯어보고 돌려봤다.</p>
+<p>
+생각보다 단순하게, 그리고 확장성 있게 쓸만한 빌드도구였다.</p>
+<p>
+다만 문제는 설정이 복잡하고 이해하기 힘든 점보다는 빌드 시간이 너무
+느린 점이었다. (내게는)</p>
+<p>
+그래서 parcel bundler을 시도 했는데, 설정도 거의 필요 없이 바로
+동작하고 하는 점은 좋고, 성능도 정말 빨랐다.</p>
+<p>
+다만 Vim/Emacs으로 파일을 편집하고 저장할 때, <code>parcel watch</code> 대상인
+파일들을 종종 아예 dev-server을 재시작해야만 제대로 동작하는 상태로
+빠지는게 조금 짜증났다. 기본으로 webpack보다는 이런 자잘한 부분이 좀
+덜 다듬어진걸까 싶다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/ping-17sat/">Ping 16/Oct/2020</a></h1>
+					<time>🗓️ 16 Oct, 2020</time>
+					<br><div class="description">
+						
+						<p>
+ADT<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>만큼 만들어 쓰는 것은 아니지만, 그냥 Kotlin, Python의
+dataclass 정도는 쓰고 싶어서 CommonLisp 매크로를 만들어봤다.<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
+<p>
+<a href="https://common-lisp.net/project/cdr/document/8/cleqcmp.html">equals</a> 라이브러리를 써서 동치 비교와 CLOS의 <code>print-object</code> generic
+function을 구현해서 to-string 정도만 되도록 만들어 봤다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+macro body
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
+</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
+</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
+</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
+</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
+</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
+</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
+</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
+</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
+</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
+</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
+</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
+</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
+</span><span class="lnt" id="29"><a class="lnlinks" href="#29">29</a>
+</span><span class="lnt" id="30"><a class="lnlinks" href="#30">30</a>
+</span><span class="lnt" id="31"><a class="lnlinks" href="#31">31</a>
+</span><span class="lnt" id="32"><a class="lnlinks" href="#32">32</a>
+</span><span class="lnt" id="33"><a class="lnlinks" href="#33">33</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defmacro</span> <span class="nv">define-data-class</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">class-name</span> <span class="nv">parent-classes</span> <span class="nv">slot-names</span>
+</span></span><span class="line"><span class="cl">     <span class="k">&amp;key</span> <span class="p">(</span><span class="nv">no-print-slot-names</span> <span class="no">nil</span><span class="p">)</span> <span class="p">(</span><span class="nv">no-equals-slot-names</span> <span class="no">nil</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">flet</span> <span class="p">((</span><span class="nv">accessor-symbol</span> <span class="p">(</span><span class="nv">slot-name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="nv">alexandria:format-symbol</span> <span class="vg">*package*</span>
+</span></span><span class="line"><span class="cl">                                     <span class="s">&#34;~a-~a&#34;</span> <span class="nf">class-name</span> <span class="nv">slot-name</span><span class="p">)))</span>  
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nc">list</span> <span class="ss">&#39;progn</span>          
+</span></span><span class="line"><span class="cl">          <span class="c1">;; defclass</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">slot-defs</span> <span class="p">(</span><span class="nb">loop</span> <span class="nv">for</span> <span class="nv">slot-name</span> <span class="nv">in</span> <span class="nv">slot-names</span>
+</span></span><span class="line"><span class="cl">                                 <span class="nv">collecting</span> <span class="o">`</span><span class="p">(</span><span class="o">,</span><span class="nv">slot-name</span>
+</span></span><span class="line"><span class="cl">                                              <span class="ss">:initarg</span> <span class="o">,</span><span class="p">(</span><span class="nv">alexandria:make-keyword</span> <span class="nv">slot-name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                              <span class="ss">:accessor</span> <span class="o">,</span><span class="p">(</span><span class="nv">accessor-symbol</span> <span class="nv">slot-name</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">            <span class="o">`</span><span class="p">(</span><span class="nb">defclass</span> <span class="o">,</span><span class="nf">class-name</span> <span class="o">,</span><span class="nv">parent-classes</span> <span class="o">,</span><span class="nv">slot-defs</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          <span class="c1">;; defmethod print-object</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="k">let*</span> <span class="p">((</span><span class="nv">print-slot-names</span> <span class="p">(</span><span class="nf">set-difference</span> <span class="nv">slot-names</span>
+</span></span><span class="line"><span class="cl">                                                   <span class="nv">no-print-slot-names</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nv">fmt-ctrl</span> <span class="p">(</span><span class="nf">format</span> <span class="no">nil</span> <span class="s">&#34;~{~a=~~a~^, ~}&#34;</span> <span class="nv">print-slot-names</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">            <span class="o">`</span><span class="p">(</span><span class="nb">defmethod</span> <span class="nf">print-object</span> <span class="p">((</span><span class="nv">obj</span> <span class="o">,</span><span class="nf">class-name</span><span class="p">)</span> <span class="nc">stream</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nb">print-unreadable-object</span> <span class="p">(</span><span class="nv">obj</span> <span class="nc">stream</span> <span class="ss">:type</span> <span class="no">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nb">with-slots</span> <span class="o">,</span><span class="nv">print-slot-names</span> <span class="nv">obj</span>
+</span></span><span class="line"><span class="cl">                   <span class="p">(</span><span class="nf">format</span> <span class="nc">stream</span> <span class="o">,</span><span class="nv">fmt-ctrl</span> <span class="o">,@</span><span class="nv">print-slot-names</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          <span class="c1">;; defmethod equals:equals</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="k">let*</span> <span class="p">((</span><span class="nv">equals-slot-names</span> <span class="p">(</span><span class="nf">set-difference</span> <span class="nv">slot-names</span>
+</span></span><span class="line"><span class="cl">                                                    <span class="nv">no-equals-slot-names</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nv">equals-exprs</span> <span class="p">(</span><span class="nb">loop</span> <span class="nv">for</span> <span class="nv">equals-slot-name</span> <span class="nv">in</span> <span class="nv">equals-slot-names</span>
+</span></span><span class="line"><span class="cl">                                     <span class="nv">collecting</span> <span class="o">`</span><span class="p">(</span><span class="nv">equals:equals</span> <span class="p">(</span><span class="nf">slot-value</span> <span class="nv">lhs</span> <span class="p">(</span><span class="k">quote</span> <span class="o">,</span><span class="nv">equals-slot-name</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                                                                <span class="p">(</span><span class="nf">slot-value</span> <span class="nv">rhs</span> <span class="p">(</span><span class="k">quote</span> <span class="o">,</span><span class="nv">equals-slot-name</span><span class="p">))))))</span>
+</span></span><span class="line"><span class="cl">            <span class="o">`</span><span class="p">(</span><span class="nb">defmethod</span> <span class="nv">equals:equals</span> <span class="p">((</span><span class="nv">lhs</span> <span class="o">,</span><span class="nf">class-name</span><span class="p">)</span> <span class="p">(</span><span class="nv">rhs</span> <span class="o">,</span><span class="nf">class-name</span><span class="p">)</span> <span class="k">&amp;rest</span> <span class="nv">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">ignore</span> <span class="nv">args</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nb">and</span> <span class="no">t</span> <span class="o">,@</span><span class="nv">equals-exprs</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">          <span class="p">)))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+synopsis / usage
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">define-data-class</span> <span class="nv">animal</span> <span class="p">()</span> <span class="p">(</span><span class="nv">name</span> <span class="nv">age</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">define-data-class</span> <span class="nv">bird</span> <span class="p">(</span><span class="nv">animal</span><span class="p">)</span> <span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">equals:equals</span> <span class="p">(</span><span class="nf">make-instance</span> <span class="ss">&#39;animal</span> <span class="ss">:name</span> <span class="s">&#34;foo&#34;</span> <span class="ss">:age</span> <span class="mi">18</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nf">make-instance</span> <span class="ss">&#39;animal</span> <span class="ss">:name</span> <span class="s">&#34;foo&#34;</span> <span class="ss">:age</span> <span class="mi">18</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  오랬만에 재밌었다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+
+
+
+
+
+
+
+
+<ul class="pagination">
+	<span class="page-item page-prev">
+	
+            <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">First⏮️</span></a>
+            <a href="/page/17/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
+        
+	</span>
+        <span class="page-number">(18/56)</span>
+	<span class="page-item page-next">
+	
+            <a href="/page/19/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
+            <a href="/page/56/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+        
+	</span>
+</ul>
+
+
+			</main>
+			<footer>
+  
+  <div class="footer-info">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      <br>
+      BTC기부: <b><code>bc1qyx5f8trraemf9r520qy889g42rpq398cw9yysw</code></b>
+      <br>
+      ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  
+</script>
+		</div>
+
+                
+<script src="/js/pagefind/pagefind-ui.js" type="text/javascript"></script>
+<script>
+ window.addEventListener('DOMContentLoaded', (event) => {
+     new PagefindUI({
+         baseUrl: "/",
+         
+         element: "#search",
+         
+         showImages: true,
+         
+         resetStyles: false,
+         
+         showSubResults: false,
+
+         pageSize: 5,  
+
+         translations: {
+             "placeholder": "--- 검색어 입력 ---",
+             "clear_search": "초기화",
+             "load_more": "검색결과 더 불러오기",
+             "search_label": "이 사이트에서 검색",
+             "filters_label": "필터",
+             "zero_results": "검색결과 없음: [SEARCH_TERM]",
+             "many_results": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "one_result": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "alt_search": "검색결과 없음=[SEARCH_TERM]. 대체검색어=[DIFFERENT_TERM]-으로 표시",
+             "search_suggestion": "검색결과 없음=[SEARCH_TERM]. 다음 검색으로 대체해보시던가요:",
+             "searching": "검색중 [SEARCH_TERM]..."
+         },
+     });
+
+     
+     const pagefind_ui_results_observer = new MutationObserver(function(muts){
+         if($('.pagefind-ui__drawer').children().length > 0) {
+             $('main.list').hide();
+         } else {
+             $('main.list').show();
+         }
+     });
+
+     pagefind_ui_results_observer.observe(
+         $('.pagefind-ui__drawer')[0],{
+             childList: true,
+             subtree: true
+     });
+ });
+</script>
+		
+
+	</body>
+</html>

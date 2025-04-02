@@ -2,12 +2,42 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>(소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까? - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="오늘 아침 다음은 오늘 아침 트위터의 타임라인에서 내가 스쳐본 한 스크린샷의 일부이다:
+	<meta name="description" content="오늘 아침
+다음은 오늘 아침 트위터의 타임라인에서 내가 스쳐본 한 스크린샷의 일부이다:
 1
-&hellip;뭐에 느낌을 받았냐하면, 바로 저 String#replace(..) 이라는 부분이다. (다른 부분에서는 String.prototype.replace(..) 와 같이 썼는데 굳이 저기서만 갑자기 튀어나온 표기법)
-사실 나도 종종 내가 작업한 코드의 문서를 쓰거나2 아니면 다른 사람과 텍스트로 대화를 해야할 때 이렇게 표기를 해왔었다.3
+&hellip;뭐에 느낌을 받았냐하면, 바로 저 String#replace(..) 이라는
+부분이다. (다른 부분에서는 String.prototype.replace(..) 와 같이
+썼는데 굳이 저기서만 갑자기 튀어나온 표기법)
+사실 나도 종종 내가 작업한 코드의 문서를 쓰거나2 아니면 다른 사람과
+텍스트로 대화를 해야할 때 이렇게 표기를 해왔었다.3
 각각의 언어들에서 (내가 생각하는) 저렇게 표기하는 근거들은 다음과 같다:
-Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Component#getGraphics() JavaDoc안에서 다른 메서드, 필드를 참고로 넣고 싶을 때 이게 표준표기법이고 javadoc도 요렇게 써줘야 링크처리를 해준다." />
+
+Java: https://www.oracle.com/technetwork/articles/java/index-137868.html
+
+@see Component#getGraphics() JavaDoc안에서 다른 메서드,
+필드를 참고로 넣고 싶을 때 이게 표준표기법이고
+javadoc도
+요렇게 써줘야 링크처리를 해준다.
+
+
+JavaScript
+
+공식적인건 아닌거 같다. Mozilla
+MDN을 봐도 그런 표기는 사용
+안하는걸로 보인다.
+예: https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toString
+
+
+Ruby
+
+Java와 마찬가지로 RDoc에서 강제한다.
+스택오버플로우: What is the # (sharp, number, pound, hash) sign used for in Ruby?
+
+
+
+스택오버플로우: Use a hash character or a dot when referring to
+methods and fields in software documentation? [closed]에 답변이
+있으나 내가 볼 땐 내 가설이 더 확실한 이야기라고 본다.4" />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2019-11nov/why-sharpsign-in-method-path/">
   <meta property="og:site_name" content="아겔로그">
@@ -17,7 +47,7 @@ Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Co
 …뭐에 느낌을 받았냐하면, 바로 저 String#replace(..) 이라는 부분이다. (다른 부분에서는 String.prototype.replace(..) 와 같이 썼는데 굳이 저기서만 갑자기 튀어나온 표기법)
 사실 나도 종종 내가 작업한 코드의 문서를 쓰거나2 아니면 다른 사람과 텍스트로 대화를 해야할 때 이렇게 표기를 해왔었다.3
 각각의 언어들에서 (내가 생각하는) 저렇게 표기하는 근거들은 다음과 같다:
-Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Component#getGraphics() JavaDoc안에서 다른 메서드, 필드를 참고로 넣고 싶을 때 이게 표준표기법이고 javadoc도 요렇게 써줘야 링크처리를 해준다.">
+Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Component#getGraphics() JavaDoc안에서 다른 메서드, 필드를 참고로 넣고 싶을 때 이게 표준표기법이고 javadoc도 요렇게 써줘야 링크처리를 해준다. JavaScript 공식적인건 아닌거 같다. Mozilla MDN을 봐도 그런 표기는 사용 안하는걸로 보인다. 예: https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toString Ruby Java와 마찬가지로 RDoc에서 강제한다. 스택오버플로우: What is the # (sharp, number, pound, hash) sign used for in Ruby? 스택오버플로우: Use a hash character or a dot when referring to methods and fields in software documentation? [closed]에 답변이 있으나 내가 볼 땐 내 가설이 더 확실한 이야기라고 본다.4">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -37,7 +67,7 @@ Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Co
 …뭐에 느낌을 받았냐하면, 바로 저 String#replace(..) 이라는 부분이다. (다른 부분에서는 String.prototype.replace(..) 와 같이 썼는데 굳이 저기서만 갑자기 튀어나온 표기법)
 사실 나도 종종 내가 작업한 코드의 문서를 쓰거나2 아니면 다른 사람과 텍스트로 대화를 해야할 때 이렇게 표기를 해왔었다.3
 각각의 언어들에서 (내가 생각하는) 저렇게 표기하는 근거들은 다음과 같다:
-Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Component#getGraphics() JavaDoc안에서 다른 메서드, 필드를 참고로 넣고 싶을 때 이게 표준표기법이고 javadoc도 요렇게 써줘야 링크처리를 해준다.">
+Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Component#getGraphics() JavaDoc안에서 다른 메서드, 필드를 참고로 넣고 싶을 때 이게 표준표기법이고 javadoc도 요렇게 써줘야 링크처리를 해준다. JavaScript 공식적인건 아닌거 같다. Mozilla MDN을 봐도 그런 표기는 사용 안하는걸로 보인다. 예: https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toString Ruby Java와 마찬가지로 RDoc에서 강제한다. 스택오버플로우: What is the # (sharp, number, pound, hash) sign used for in Ruby? 스택오버플로우: Use a hash character or a dot when referring to methods and fields in software documentation? [closed]에 답변이 있으나 내가 볼 땐 내 가설이 더 확실한 이야기라고 본다.4">
 
 	
 		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
@@ -54,6 +84,8 @@ Java: https://www.oracle.com/technetwork/articles/java/index-137868.html @see Co
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>
@@ -198,19 +230,16 @@ Inspector</a>으로 살펴보는
 </li>
 </ol>
 <p>그러니까, 결국 다음과 같이 써도 맞는 표현식이다.</p>
-<pre><code>String &gt;&gt; #indexOf:
+<pre tabindex="0"><code>String &gt;&gt; #indexOf:
 
 (String class) &gt;&gt; #empty
-</code></pre>
-<p>조금 더 Java스러운 코드나 Lisp식으로 써보면&hellip;</p>
-<pre><code>// Java-style
-String.class.getMethodByName(&quot;indexOf&quot;); // Imaginary code
+</code></pre><p>조금 더 Java스러운 코드나 Lisp식으로 써보면&hellip;</p>
+<pre tabindex="0"><code>// Java-style
+String.class.getMethodByName(&#34;indexOf&#34;); // Imaginary code
 
 ;;; Lisp-style
-(get-method String 'indexOf)            ; I know, not an idiomatic Lisp
-
-</code></pre>
-<p>물론, <code>&gt;&gt;</code> 대신에 <code>getMethodByName()</code> Java 메서드나 <code>#'get-method</code>
+(get-method String &#39;indexOf)            ; I know, not an idiomatic Lisp
+</code></pre><p>물론, <code>&gt;&gt;</code> 대신에 <code>getMethodByName()</code> Java 메서드나 <code>#'get-method</code>
 같은 Lisp 함수가 있다고 가정한 예시다.</p>
 <p>사실 내 생각엔 스페이스 없이 다 붙여쓰는건, 표현식의 덩어리 붙여서 읽기 편하라고 그런거 같다.
 예로, Smalltalk에서 2차원 공간에서 좌표를 표기하는 <code>Number&gt;&gt;#@</code> 메서드는 다음과 같이 보통 literal을 표현한다:</p>

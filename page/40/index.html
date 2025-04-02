@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.145.0">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:url" content="https://ageldama.github.io/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="아겔로그">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="아겔로그">
+
+	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+
+	        
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/gopherish.56b1a3603de0001266fd93972ea01036b17460038761f722ac296b8aedfa6de9.css" integrity="sha256-VrGjYD3gABJm/ZOXLqAQNrF0YAOHYfcirClriu36bek=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+	
+	
+</head>
+
+	<body>
+		<div class="content">
+			<header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+    <nav>
+        
+            <a href="/posts/archive/">Index🗃️🏷️</a>
+        
+            <a href="/myself/">Contact📨</a>
+        
+
+	
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#fff',  
+      buttonColorDark: '#100f2c',  
+      buttonColorLight: '#fff', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+    var darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    window.darkmode = darkmode;
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+                        <div id="search"></div>
+			
+			<main class="list">
+				<div class="site-description"></div>
+				
+				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-20sun/">Ping 20/Oct/2019</a></h1>
+					<time>🗓️ 20 Oct, 2019</time>
+					<br><div class="description">
+						
+						<h2 id="장거리-드라이브">장거리 드라이브</h2>
+<p>고속도로를 내려와서 국도에 들어서서 우회전 신호대기에서 창문을
+내리자마자 깨달은게 공기가 말도 안되게 좋았다.</p>
+<p>가보고 싶었던 곳들을 돌아다니고 정말 많은게 변했구나 싶기도 하고
+쓸쓸했다. 세상에 이런 곳도 아직 있구나, 내가 사는 세상이, 그게
+절대적으로 전부라고 생각하는 복잡하고 발전된 모습이 아니라, 이런 곳이
+있을 수 있구나 싶어서 신기했다.</p>
+<p><img src="/images/2019-10oct/20191017_165844.jpg" alt="img1"></p>
+<p><img src="/images/2019-10oct/20191017_171148.jpg" alt="img2"></p>
+<p><img src="/images/2019-10oct/20191017_175340.jpg" alt="img3"></p>
+<p>다시 또 가고 싶다. 아주 옛날엔 거기가 지루하다고 생각했었던거 같은데.</p>
+<h2 id="게임-번아웃-파라다이스">게임: 번아웃 파라다이스</h2>
+<p><a href="https://www.zdnet.co.kr/view/?no=20180222082958">&lsquo;벗아웃 파라다이스&rsquo;, 리마스터 버전으로 만난다 - 이도원 기자 입력: 2018/02/22</a></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/cl-toy-stack-lang/">cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</a></h1>
+					<time>🗓️ 16 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>일단 첫번째 버젼 다 만들었다.</p>
+<blockquote>
+<p><a href="https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0">https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0</a></p></blockquote>
+<p>그냥 장난으로 인터프리터도 아니라 그냥
+<a href="http://clhs.lisp.se/Body/f_eval.htm">eval</a> 이용한 간단한 파서도
+필요없이 lexer만으로 만들만한
+<a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">Forth</a>
+비슷한 언어를 만듬.</p>
+<p>명령어도 실용적인 목적이 아닌만큼 그냥 문자열 장난 밖엔 없다.</p>
+<h1 id="느낀점">느낀점</h1>
+<ol>
+<li><strong>라이브러리 좋은거 갖다 잘쓰자</strong>
+<ul>
+<li><a href="http://quickdocs.org/uiop/">uiop</a> 같은거,</li>
+<li><a href="http://clhs.lisp.se/Body/24_aba.htm">feature-expression</a> 삽질을 적게하거나 안해도됨. 더
+portable하고 잘 굴러가는.</li>
+</ul>
+</li>
+<li><strong>Test!</strong>
+3. 짜고 하나씩 진화시켜가면서 다시 돌리는 재미.</li>
+<li><strong>Idiomatic하게</strong> 그리고 역시 Test!
+<ol>
+<li>..처음엔 그냥 전역변수에 상태를 갖도록 만들고,</li>
+<li>그걸 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_abaab.htm">dynamic binding</a>으로 바꿔서 파라미터화하고,</li>
+<li>또 그걸 다시 상태를 캡슐화하는 클래스로 감싸고,</li>
+<li>처음엔 단순하게 리습스럽게 짜고 그걸 진화시키고,</li>
+<li>그리고 역시 다시 테스트.</li>
+</ol>
+</li>
+<li><strong><em>아는만큼 보인다</em></strong>
+<ul>
+<li><code>setf</code> 병렬로 하기, +destructuring</li>
+<li><code>asdf:operate</code> + <code>:build-op</code> :
+<a href="http://www.sbcl.org/">SBCL</a>/<a href="https://common-lisp.net/project/ecl/">ECL</a>
+등 리습컴파일러에 관계 없이 실행이미지 빌드 편안하게
+<ul>
+<li><a href="https://github.com/xach/buildapp">https://github.com/xach/buildapp</a> 같은거 써볼까 하다가,
+처음엔 그냥 간단히 쉘스크립팅으로 시작.</li>
+</ul>
+</li>
+<li>기타 등등</li>
+</ul>
+</li>
+</ol>
+<p>&hellip;그리고 무엇보다 재밌었다. 그리고 뭐가됐든 그냥 짜보고 굴러가는
+형태로 계속해서 작은 프로그램을 많이 만들고 하면서 놀아야겠다고
+생각했다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-15tue/">Ping 15/Oct/2019</a></h1>
+					<time>🗓️ 15 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>커먼리습으로 간단한
+<a href="https://en.wikipedia.org/wiki/Stack-oriented_programming">스택기반</a>
+장난감 프로그래밍언어를 만들고있다.</p>
+<blockquote>
+<p><a href="https://github.com/ageldama/cl-toy-stack-lang">https://github.com/ageldama/cl-toy-stack-lang</a></p></blockquote>
+<p>튜링컴플릿이나 그런거 관심도 없고 사실 Parser도 적절하게 만들지 않았다.</p>
+<p>다만 유니코드 잘되고 쓸만한 lexer generator이 커먼리습에 있는지가 궁금했다.</p>
+<p>적당히 내일 정도면 어느 정도 완전히 굴러가는 프로그램으로 다 만들고 마무리 할 듯.</p>
+<p>처음에는 <a href="https://www.quicklisp.org/">QuickLisp</a> 에서 어떤 Lexer을
+써야할까 고민하다가, cl-lex 쓰다가 실망스러웠다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>그러다가 만난게 <a href="https://github.com/rigetti/alexa">Alexa</a> 인데, 가장
+마음에 드는 lexer generator.</p>
+<p><a href="https://www.rigetti.com/">https://www.rigetti.com/</a> 이 회사를 발견. 커먼리습으로 <a href="https://github.com/rigetti/quilc">Quil
+Compiler</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> 만들고 퀀텀컴퓨팅
+관련된 기업인가 보다.</p>
+<p>그리고 깃헙 저장소 살펴보는데 흥미롭고 써보면 어떨까 싶은게 많이 보였다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+
+
+
+
+
+
+
+
+<ul class="pagination">
+	<span class="page-item page-prev">
+	
+            <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">First⏮️</span></a>
+            <a href="/page/39/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
+        
+	</span>
+        <span class="page-number">(40/56)</span>
+	<span class="page-item page-next">
+	
+            <a href="/page/41/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
+            <a href="/page/56/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+        
+	</span>
+</ul>
+
+
+			</main>
+			<footer>
+  
+  <div class="footer-info">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      <br>
+      BTC기부: <b><code>bc1qyx5f8trraemf9r520qy889g42rpq398cw9yysw</code></b>
+      <br>
+      ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  
+</script>
+		</div>
+
+                
+<script src="/js/pagefind/pagefind-ui.js" type="text/javascript"></script>
+<script>
+ window.addEventListener('DOMContentLoaded', (event) => {
+     new PagefindUI({
+         baseUrl: "/",
+         
+         element: "#search",
+         
+         showImages: true,
+         
+         resetStyles: false,
+         
+         showSubResults: false,
+
+         pageSize: 5,  
+
+         translations: {
+             "placeholder": "--- 검색어 입력 ---",
+             "clear_search": "초기화",
+             "load_more": "검색결과 더 불러오기",
+             "search_label": "이 사이트에서 검색",
+             "filters_label": "필터",
+             "zero_results": "검색결과 없음: [SEARCH_TERM]",
+             "many_results": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "one_result": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "alt_search": "검색결과 없음=[SEARCH_TERM]. 대체검색어=[DIFFERENT_TERM]-으로 표시",
+             "search_suggestion": "검색결과 없음=[SEARCH_TERM]. 다음 검색으로 대체해보시던가요:",
+             "searching": "검색중 [SEARCH_TERM]..."
+         },
+     });
+
+     
+     const pagefind_ui_results_observer = new MutationObserver(function(muts){
+         if($('.pagefind-ui__drawer').children().length > 0) {
+             $('main.list').hide();
+         } else {
+             $('main.list').show();
+         }
+     });
+
+     pagefind_ui_results_observer.observe(
+         $('.pagefind-ui__drawer')[0],{
+             childList: true,
+             subtree: true
+     });
+ });
+</script>
+		
+
+	</body>
+</html>

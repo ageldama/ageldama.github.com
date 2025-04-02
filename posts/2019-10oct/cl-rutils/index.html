@@ -2,11 +2,23 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="커먼리습은 CLHS 이후로 언어 자체 정의는 변하지 않았다.
-구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거 같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 lisp reader을 확장하는게 CLHS에서 정의해놓은 기능 중 하나이고, 구현체들도 스펙을 잘 구현해놓았으니까.
-결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면 언제든지 매크로를 만들듯이 확장하면 되니까.
+	<meta name="description" content="커먼리습은 CLHS
+이후로 언어 자체 정의는 변하지 않았다.
+구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거
+같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 lisp
+reader을 확장하는게
+CLHS에서 정의해놓은 기능 중 하나이고, 구현체들도 스펙을 잘
+구현해놓았으니까.
+결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면
+언제든지 매크로를 만들듯이 확장하면 되니까.
+
 &lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;
-이런 커먼리습 확장 &lsquo;라이브러리&rsquo; 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github." />
+이런 커먼리습 확장 &lsquo;라이브러리&rsquo; 들이 여러가지 있는데, 가장 요즘에
+쓸만할거 같다고 생각하는건 rutils이다. https://github.com/vseloved/rutils
+(eval-when (:compile-toplevel :load-toplevel :execute) ...) 같은거
+매번 반복해서 쳐넣는걸 그냥 eval-always으로 바꿔준다거나.
+gensym하는것도 with-gensyms 제공하거나 하는 이런류의
+라이브러리들에서 보통 제공하는것들부터.1" />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2019-10oct/cl-rutils/">
   <meta property="og:site_name" content="아겔로그">
@@ -15,7 +27,8 @@
 구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거 같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 lisp reader을 확장하는게 CLHS에서 정의해놓은 기능 중 하나이고, 구현체들도 스펙을 잘 구현해놓았으니까.
 결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면 언제든지 매크로를 만들듯이 확장하면 되니까.
 ‘커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다’
-이런 커먼리습 확장 ‘라이브러리’ 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github.">
+이런 커먼리습 확장 ‘라이브러리’ 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github.com/vseloved/rutils
+(eval-when (:compile-toplevel :load-toplevel :execute) ...) 같은거 매번 반복해서 쳐넣는걸 그냥 eval-always으로 바꿔준다거나. gensym하는것도 with-gensyms 제공하거나 하는 이런류의 라이브러리들에서 보통 제공하는것들부터.1">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -32,7 +45,8 @@
 구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거 같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 lisp reader을 확장하는게 CLHS에서 정의해놓은 기능 중 하나이고, 구현체들도 스펙을 잘 구현해놓았으니까.
 결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면 언제든지 매크로를 만들듯이 확장하면 되니까.
 ‘커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다’
-이런 커먼리습 확장 ‘라이브러리’ 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github.">
+이런 커먼리습 확장 ‘라이브러리’ 들이 여러가지 있는데, 가장 요즘에 쓸만할거 같다고 생각하는건 rutils이다. https://github.com/vseloved/rutils
+(eval-when (:compile-toplevel :load-toplevel :execute) ...) 같은거 매번 반복해서 쳐넣는걸 그냥 eval-always으로 바꿔준다거나. gensym하는것도 with-gensyms 제공하거나 하는 이런류의 라이브러리들에서 보통 제공하는것들부터.1">
 
 	
 		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
@@ -49,6 +63,8 @@
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>
@@ -118,8 +134,7 @@ CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스
 <p>결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면
 언제든지 매크로를 만들듯이 확장하면 되니까.</p>
 <blockquote>
-<p><em>&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;</em></p>
-</blockquote>
+<p><em>&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;</em></p></blockquote>
 <p>이런 커먼리습 확장 <em>&lsquo;라이브러리&rsquo;</em> 들이 여러가지 있는데, 가장 요즘에
 쓸만할거 같다고 생각하는건 rutils이다. <a href="https://github.com/vseloved/rutils">https://github.com/vseloved/rutils</a></p>
 <p><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code> 같은거

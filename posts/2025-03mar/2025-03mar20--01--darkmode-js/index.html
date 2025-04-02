@@ -2,16 +2,49 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>darkmode.js으로 변경 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content=" 직접 짠 css/js에서 darkmode.js으로 변경했다. css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.
+	<meta name="description" content="
+직접 짠 css/js에서 darkmode.js으로 변경했다.
+css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.
+
 변경도 예쁘게 애니메이션 나오고, system preference 지정도 자동으로 되고.
-(미래의 나를 위해) css/html에서 class 1 2 3 .darkmode--activated .logo { mix-blend-mode: difference; } 1 &lt;span class=&#34;darkmode-ignore&#34;&gt;😬&lt;span&gt; " />
+
+
+(미래의 나를 위해) css/html에서 class
+
+
+
+
+
+1
+2
+3
+
+
+.darkmode--activated .logo {
+  mix-blend-mode: difference;
+}
+
+
+
+
+
+
+1
+
+
+&lt;span class=&#34;darkmode-ignore&#34;&gt;😬&lt;span&gt;
+
+
+
+
+" />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2025-03mar/2025-03mar20--01--darkmode-js/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="darkmode.js으로 변경">
-  <meta property="og:description" content=" 직접 짠 css/js에서 darkmode.js으로 변경했다. css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.
+  <meta property="og:description" content="직접 짠 css/js에서 darkmode.js으로 변경했다. css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.
 변경도 예쁘게 애니메이션 나오고, system preference 지정도 자동으로 되고.
-(미래의 나를 위해) css/html에서 class 1 2 3 .darkmode--activated .logo { mix-blend-mode: difference; } 1 &lt;span class=&#34;darkmode-ignore&#34;&gt;😬&lt;span&gt; ">
+(미래의 나를 위해) css/html에서 class 1 2 3 .darkmode--activated .logo { mix-blend-mode: difference; } 1 &lt;span class=&#34;darkmode-ignore&#34;&gt;😬&lt;span&gt;">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -26,9 +59,9 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="darkmode.js으로 변경">
-  <meta name="twitter:description" content=" 직접 짠 css/js에서 darkmode.js으로 변경했다. css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.
+  <meta name="twitter:description" content="직접 짠 css/js에서 darkmode.js으로 변경했다. css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.
 변경도 예쁘게 애니메이션 나오고, system preference 지정도 자동으로 되고.
-(미래의 나를 위해) css/html에서 class 1 2 3 .darkmode--activated .logo { mix-blend-mode: difference; } 1 &lt;span class=&#34;darkmode-ignore&#34;&gt;😬&lt;span&gt; ">
+(미래의 나를 위해) css/html에서 class 1 2 3 .darkmode--activated .logo { mix-blend-mode: difference; } 1 &lt;span class=&#34;darkmode-ignore&#34;&gt;😬&lt;span&gt;">
 
 	
 		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
@@ -45,6 +78,8 @@
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>
@@ -118,9 +153,9 @@ css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.</p>
 <div class="src src-css">
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">darkmode--activated</span> <span class="p">.</span><span class="nc">logo</span> <span class="p">{</span>
@@ -132,7 +167,7 @@ css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.</p>
 <div class="src src-html">
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;darkmode-ignore&#34;</span><span class="p">&gt;</span>😬<span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>

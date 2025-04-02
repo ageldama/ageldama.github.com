@@ -14,7 +14,7 @@
       <link>https://ageldama.github.io/posts/2019-03mar/cffi-2d-array/</link>
       <pubDate>Sun, 17 Mar 2019 00:00:00 +0900</pubDate>
       <guid>https://ageldama.github.io/posts/2019-03mar/cffi-2d-array/</guid>
-      <description>https://github.com/ageldama/cffi-2d-array-hello&#xA;cffi:with-foreign-array이 CFFI manual에 없어서 처음에 좀 골치아팠음.&#xA;리습 어레이를 복사해서 매핑해줌.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ageldama/cffi-2d-array-hello&#34;&gt;https://github.com/ageldama/cffi-2d-array-hello&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;cffi:with-foreign-array&lt;/code&gt;이 &lt;a href=&#34;https://common-lisp.net/project/cffi/manual/cffi-manual.html&#34;&gt;CFFI&#xA;manual&lt;/a&gt;에&#xA;없어서 처음에 좀 골치아팠음.&lt;/p&gt;&#xA;&lt;p&gt;리습 어레이를 복사해서 매핑해줌.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

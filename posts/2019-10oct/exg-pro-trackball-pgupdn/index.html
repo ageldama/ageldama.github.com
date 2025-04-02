@@ -2,10 +2,25 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ELECOM EX-G Pro Trackball 잉여 버튼을 Page Up/Down으로 쓰기 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="컴퓨터를 많이 쓰니까 다른 부분보다 손목이 먼저 망가져서, 손목을 조금만 큰 각도로 꺾으면 아프다. ㅠ.ㅠ.. 예전에도 그랬었는데1
-마우스 안쓰고, 트랙볼 쓰기2 키보드 넘패드 부분 없는 짧은 86키 레이아웃 쓰기 로지텍 마블 트랙맨 잘 쓰다가, 지름을 받아서 조금 다음 티어의 제품으로 업그레이드 해봤다.
-그래서 바꾼게 &ndash;&gt; 엘레컴 EX-G Pro Trackball ..그런데 다 좋은데, 저기 있는 Function assignment button 이라고 써있는게 2개가 더 달려있음.3
-이 추가기능버튼들은 윈도였다면 벤더에서 제공하는 프로그램을 통해서 할당이 가능할거 같은데, 리눅스/X윈도에서는 xev으로 확인해보니 그냥 Button 10번, 11번이었다." />
+	<meta name="description" content="컴퓨터를 많이 쓰니까 다른 부분보다 손목이 먼저 망가져서, 손목을 조금만
+큰 각도로 꺾으면 아프다. ㅠ.ㅠ.. 예전에도 그랬었는데1
+
+마우스 안쓰고, 트랙볼 쓰기2
+키보드 넘패드
+부분 없는 짧은 86키 레이아웃 쓰기
+
+로지텍 마블
+트랙맨
+잘 쓰다가, 지름을 받아서 조금 다음 티어의 제품으로 업그레이드 해봤다.
+그래서 바꾼게 &ndash;&gt; 엘레컴 EX-G Pro Trackball 
+
+
+..그런데 다 좋은데, 저기 있는 Function assignment button 이라고
+써있는게 2개가 더 달려있음.3
+이 추가기능버튼들은 윈도였다면 벤더에서 제공하는 프로그램을 통해서
+할당이 가능할거 같은데, 리눅스/X윈도에서는
+xev으로
+확인해보니 그냥 Button 10번, 11번이었다." />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2019-10oct/exg-pro-trackball-pgupdn/">
   <meta property="og:site_name" content="아겔로그">
@@ -48,6 +63,8 @@
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>
@@ -157,11 +174,19 @@
 <p>참고로, X윈도에서는 &lsquo;Page Down&rsquo; / &lsquo;Page Up&rsquo; 키들을 &lsquo;Next&rsquo; /
 &lsquo;Prior&rsquo;이라고 부름.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
 <p>그래서 <strong>xbindkeys 설정 파일</strong>은 다음처럼 만들어봤다:</p>
-<pre><code class="language-lisp">;;;; ~/.xbindkeysrc.scm
-(xbindkey '(&quot;b:10&quot;) &quot;xdotool key Next&quot;)
-(xbindkey '(&quot;b:11&quot;) &quot;xdotool key Prior&quot;)
-</code></pre>
-<p>간단하다. 그리고 적당히 <strong><a href="https://github.com/ageldama/configs/commit/1ab65b959225338aa6221930baed0bae96e6eeed#diff-d16f6071f2bd9315063a828054f1ce0c">시작스크립트에 <code>xbindkeys</code> 실행하도록 한
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="c1">;;;; ~/.xbindkeysrc.scm</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">xbindkey</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;b:10&#34;</span><span class="p">)</span> <span class="s">&#34;xdotool key Next&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">xbindkey</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;b:11&#34;</span><span class="p">)</span> <span class="s">&#34;xdotool key Prior&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>간단하다. 그리고 적당히 <strong><a href="https://github.com/ageldama/configs/commit/1ab65b959225338aa6221930baed0bae96e6eeed#diff-d16f6071f2bd9315063a828054f1ce0c">시작스크립트에 <code>xbindkeys</code> 실행하도록 한
 줄</a></strong>
 넣어줬다.</p>
 <p>그냥 언제나 X윈도로 이런거 할때마다 느끼는거지만, 유닉스쟁이들은

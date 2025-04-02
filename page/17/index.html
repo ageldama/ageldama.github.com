@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.145.0">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:url" content="https://ageldama.github.io/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="아겔로그">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="아겔로그">
+
+	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+
+	        
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/gopherish.56b1a3603de0001266fd93972ea01036b17460038761f722ac296b8aedfa6de9.css" integrity="sha256-VrGjYD3gABJm/ZOXLqAQNrF0YAOHYfcirClriu36bek=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+	
+	
+</head>
+
+	<body>
+		<div class="content">
+			<header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+    <nav>
+        
+            <a href="/posts/archive/">Index🗃️🏷️</a>
+        
+            <a href="/myself/">Contact📨</a>
+        
+
+	
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#fff',  
+      buttonColorDark: '#100f2c',  
+      buttonColorLight: '#fff', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+    var darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    window.darkmode = darkmode;
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+                        <div id="search"></div>
+			
+			<main class="list">
+				<div class="site-description"></div>
+				
+				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/leet-code-1614-2nd/">CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
+					<time>🗓️ 21 Oct, 2020</time>
+					<br><div class="description">
+						
+						<p>
+<a href="/posts/2020-10oct/leet-code-1614/">어제 작성한 LOOP매크로을 이용한 구현</a> 을 풀어서, 만약 LOOP매크로가
+없었더라면 어떻게 짰을지 작성해봤다.</p>
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">max-nested-parentheses-raw</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">optimize</span> <span class="p">(</span><span class="nv">speed</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nv">safety</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="k">type</span> <span class="kt">simple-string</span> <span class="nv">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">n</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">result</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">type</span> <span class="kt">fixnum</span> <span class="nv">n</span> <span class="nv">result</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">dotimes</span> <span class="p">(</span><span class="nv">s--cur-idx</span> <span class="p">(</span><span class="nf">length</span> <span class="nv">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">ch</span> <span class="p">(</span><span class="nf">elt</span> <span class="nv">s</span> <span class="nv">s--cur-idx</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nf">member</span> <span class="nv">ch</span> <span class="o">&#39;</span><span class="p">(</span><span class="sc">#\(</span> <span class="sc">#\)</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nb">incf</span> <span class="nv">n</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">eql</span> <span class="sc">#\(</span> <span class="nv">ch</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">-1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nb">setf</span> <span class="nv">result</span> <span class="p">(</span><span class="nf">max</span> <span class="nv">n</span> <span class="nv">result</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">result</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+여전히 타입을 지정해서 자동으로 타입추론, 최적화 하도록 했다.</p>
+<p>
+그런데 여전히 <code>dotimes</code>, <code>when</code>, <code>incf</code>, <code>max</code> 같은 커먼리습
+HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이런 것들도
+다 풀어서 작성해도 되겠지만 별 의미는 없을 것 같아서.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/leet-code-1614/">CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
+					<time>🗓️ 20 Oct, 2020</time>
+					<br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+문제
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><a href="https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/">https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/</a></p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+작성한 코드     
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">max-nested-parentheses</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">optimize</span> <span class="p">(</span><span class="nv">speed</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nv">safety</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="k">type</span> <span class="kt">simple-string</span> <span class="nv">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">loop</span> <span class="nv">with</span> <span class="nv">n</span> <span class="kt">fixnum</span> <span class="nf">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">          <span class="nv">for</span> <span class="nv">ch</span> <span class="nv">across</span> <span class="nv">s</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">when</span> <span class="p">(</span><span class="nf">member</span> <span class="nv">ch</span> <span class="o">&#39;</span><span class="p">(</span><span class="sc">#\(</span> <span class="sc">#\)</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">do</span> <span class="p">(</span><span class="nb">incf</span> <span class="nv">n</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">eql</span> <span class="sc">#\(</span> <span class="nv">ch</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">-1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">             <span class="nv">maximizing</span> <span class="nv">n</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+코드 의도
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<ol>
+<li>우아한 코드보다는 공간복잡도가 <code>O(1)</code> 이고 싶었다.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+<em>Edit</em>
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<ol>
+<li>
+<p>SBCL에 맞춰 코드에 타입을 지정해줘봤다.</p>
+<ol>
+<li>결과 어셈블리 코드가 조금 짧아졌다.</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/ping-19mon/">Ping 19/Oct/2020</a></h1>
+					<time>🗓️ 19 Oct, 2020</time>
+					<br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+가을
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>도르트문트 집은 꽤 평화로웠다. 날씨가 좋은 날도 많고 공기도
+  맑았다. 한가한 주말이 되면 창문을 열고 잔디가 깔린 정원을 보며
+  담배를 태우고 커피를 내려 마셨다.</p>
+<p>
+  그리고 지하세탁장에 빨래를 돌려놓고 핑크플로이드의 다크사이드 오브
+  더 문 앨범을 좋은 스피커로 틀어놓았다. 잘 어울렸다.</p>
+<p>
+  서울의 변두리에서 맞는 이번 가을은 그런 기분이다. 조용하고 가을
+  햇살과 공기가 맑아졌다.</p>
+<p>
+  그리고 핑크플로이드를 그렇게 여유롭게 들을 수 있었다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+오늘 읽으려는 글
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p><a href="http://www.mcs.vuw.ac.nz/comp/Publications/CS-TR-02-9.abs.html">http://www.mcs.vuw.ac.nz/comp/Publications/CS-TR-02-9.abs.html</a></p>
+</div>
+</div>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+
+
+
+
+
+
+
+
+<ul class="pagination">
+	<span class="page-item page-prev">
+	
+            <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">First⏮️</span></a>
+            <a href="/page/16/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
+        
+	</span>
+        <span class="page-number">(17/56)</span>
+	<span class="page-item page-next">
+	
+            <a href="/page/18/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
+            <a href="/page/56/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+        
+	</span>
+</ul>
+
+
+			</main>
+			<footer>
+  
+  <div class="footer-info">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      <br>
+      BTC기부: <b><code>bc1qyx5f8trraemf9r520qy889g42rpq398cw9yysw</code></b>
+      <br>
+      ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  
+</script>
+		</div>
+
+                
+<script src="/js/pagefind/pagefind-ui.js" type="text/javascript"></script>
+<script>
+ window.addEventListener('DOMContentLoaded', (event) => {
+     new PagefindUI({
+         baseUrl: "/",
+         
+         element: "#search",
+         
+         showImages: true,
+         
+         resetStyles: false,
+         
+         showSubResults: false,
+
+         pageSize: 5,  
+
+         translations: {
+             "placeholder": "--- 검색어 입력 ---",
+             "clear_search": "초기화",
+             "load_more": "검색결과 더 불러오기",
+             "search_label": "이 사이트에서 검색",
+             "filters_label": "필터",
+             "zero_results": "검색결과 없음: [SEARCH_TERM]",
+             "many_results": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "one_result": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "alt_search": "검색결과 없음=[SEARCH_TERM]. 대체검색어=[DIFFERENT_TERM]-으로 표시",
+             "search_suggestion": "검색결과 없음=[SEARCH_TERM]. 다음 검색으로 대체해보시던가요:",
+             "searching": "검색중 [SEARCH_TERM]..."
+         },
+     });
+
+     
+     const pagefind_ui_results_observer = new MutationObserver(function(muts){
+         if($('.pagefind-ui__drawer').children().length > 0) {
+             $('main.list').hide();
+         } else {
+             $('main.list').show();
+         }
+     });
+
+     pagefind_ui_results_observer.observe(
+         $('.pagefind-ui__drawer')[0],{
+             childList: true,
+             subtree: true
+     });
+ });
+</script>
+		
+
+	</body>
+</html>

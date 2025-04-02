@@ -2,9 +2,17 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ASDF으로 간단한 의존성 연결과 로딩하기 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="System? 이런게 왜 필요하지? require있잖아 대부분의 유명한 프로그래밍언어들이 커먼리습의 System 에 대응하는 기능이 명확하게 없으니까, 다른 프로그래밍 하거나 하는 방법으로 이야기를 하지는 않아야겠다.1
+	<meta name="description" content="System? 이런게 왜 필요하지? require있잖아
+대부분의 유명한 프로그래밍언어들이 커먼리습의 System 에 대응하는
+기능이 명확하게 없으니까, 다른 프로그래밍 하거나 하는 방법으로
+이야기를 하지는 않아야겠다.1
 https://lispcookbook.github.io/cl-cookbook/systems.html 에서 마음에 드는 설명을 찾을수 있다.
-A system is a collection of Lisp files that together constitute an application or a library, and that should therefore be managed as a whole. A system definition describes which source files make up the system, what the dependencies among them are, and the order they should be compiled and loaded in." />
+
+A system is a collection of Lisp files that together constitute an
+application or a library, and that should therefore be managed as a
+whole. A system definition describes which source files make up the
+system, what the dependencies among them are, and the order they
+should be compiled and loaded in." />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2018-11nov/cl-asdf-custom-load-script/">
   <meta property="og:site_name" content="아겔로그">
@@ -42,6 +50,8 @@ A system is a collection of Lisp files that together constitute an application o
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>
@@ -111,8 +121,7 @@ A system is a collection of Lisp files that together constitute an application o
 application or a library, and that should therefore be managed as a
 whole. A <strong>system definition</strong> describes which source files make up the
 system, what the dependencies among them are, and the order they
-should be compiled and loaded in.</p>
-</blockquote>
+should be compiled and loaded in.</p></blockquote>
 <p>즉,</p>
 <ol>
 <li>커먼리습의 네임스페이스, <em>Packages</em> 은 그냥 심볼들을 묶는
@@ -187,10 +196,17 @@ Construction</a> 관련 항목들은
 <h1 id="간단한-프로젝트-만들어서-준비">간단한 프로젝트 만들어서 준비</h1>
 <p>프로젝트를 처음 만드는 방법은 몇가지 있지만, 나는 선호하는 툴인
 <code>quickproject</code>을 Quicklisp을 통해 로딩해서 프로젝트를 생성한다.<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup></p>
-<pre><code class="language-lisp">CL-USER&gt; (ql:quickload :quickproject)
-CL-USER&gt; (quickproject:make-project #P&quot;~/P/cl-adder&quot;)
-</code></pre>
-<p>위와 같이 실행하면, <code>~/P/cl-adder</code> 디렉토리에 <code>cl-adder</code> 이란 이름으로
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="nv">CL-USER&gt;</span> <span class="p">(</span><span class="nv">ql:quickload</span> <span class="ss">:quickproject</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">CL-USER&gt;</span> <span class="p">(</span><span class="nv">quickproject:make-project</span> <span class="l">#P&#34;~/P/cl-adder&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>위와 같이 실행하면, <code>~/P/cl-adder</code> 디렉토리에 <code>cl-adder</code> 이란 이름으로
 새로운 빈 프로젝트를 만든다.</p>
 <p>대강의 프로젝트가 생성되면 다음과 같은 형태를 갖는다.<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup></p>
 <p><a href="https://github.com/ageldama/cl-adder">https://github.com/ageldama/cl-adder</a></p>
@@ -238,12 +254,21 @@ CL-USER&gt; (quickproject:make-project #P&quot;~/P/cl-adder&quot;)
 <p>다른 중간 과정을 모두 설명을 생략하고, 참조하는 한 라인만이 중요한거 같다.
 <a href="https://github.com/ageldama/cl-use-adder/blob/master/cl-use-adder.asd">https://github.com/ageldama/cl-use-adder/blob/master/cl-use-adder.asd</a></p>
 <p>여기에서,</p>
-<pre><code class="language-lisp">(asdf:defsystem #:cl-use-adder
-  ...
-  :depends-on (&quot;cl-adder&quot;)
-  ...
-</code></pre>
-<p><code>depends-on</code>으로 참조하는 시스템의 이름을 적어준게 전부다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span><span class="lnt" id="hl-1-2"><a class="lnlinks" href="#hl-1-2">2</a>
+</span><span class="lnt" id="hl-1-3"><a class="lnlinks" href="#hl-1-3">3</a>
+</span><span class="lnt" id="hl-1-4"><a class="lnlinks" href="#hl-1-4">4</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">asdf:defsystem</span> <span class="ss">#:cl-use-adder</span>
+</span></span><span class="line"><span class="cl">  <span class="o">...</span>
+</span></span><span class="line"><span class="cl">  <span class="ss">:depends-on</span> <span class="p">(</span><span class="s">&#34;cl-adder&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="o">...</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>depends-on</code>으로 참조하는 시스템의 이름을 적어준게 전부다.</p>
 <p>나머지는, cl-use-adder 시스템의 <code>package.lisp</code>에서 <code>(defpackage ... :use)</code>을 이용해서 패키지의 심볼들을 import할수있겠지만, 이건 그냥
 코드에서 <code>cl-adder:add</code>으로 참조하느냐 <code>add</code>으로 참조하느냐의 차이만을
 만들고, 실제 의존관계를 표현하는것은 아니다.</p>

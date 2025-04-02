@@ -14,7 +14,7 @@
       <link>https://ageldama.github.io/posts/2020-11nov/org-more-1st-rel/</link>
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0900</pubDate>
       <guid>https://ageldama.github.io/posts/2020-11nov/org-more-1st-rel/</guid>
-      <description>org-more.el: search .org files have certain tags (#+tags[]: or #+tags[]:)&#xA;개인 위키, KB처럼 org 파일 모음을 사용하고 있는데, 디렉토리 계층과 직접 링크 관계만이 아니라 같은 태그들으로 묶어서 각 파일들을 검색하고 리스팅 할 수 있도록 만들었다.</description>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://github.com/ageldama/org-more&#34;&gt;org-more.el: search .org files have certain tags (#+tags[]:&#xA;or #+tags[]:)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;개인 위키, KB처럼 org 파일 모음을 사용하고 있는데, 디렉토리 계층과&#xA;직접 링크 관계만이 아니라 같은 태그들으로 묶어서 각 파일들을 검색하고&#xA;리스팅 할 수 있도록 만들었다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

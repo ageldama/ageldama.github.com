@@ -2,8 +2,31 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="https://www.hifiberry.com/ 요거 Raspberry Pi 3에 세팅한 모험에 대한 이야기.
-WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev #update_config=1 country=GB network={ ssid=&quot;iptime&quot; psk=&quot;xxxxxxxxxx&quot; key_mgmt=WPA-PSK } wpa_passphrase 안쓰고 그냥 plaintext으로 써도 동작. 내 공유기랑은 country=GB 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤. 그리고 ip link set wlan0 {up|down} 정도로 wlan0 인터페이스를 up/down하면됨. 사운드 드라이버 설정 내장 사운드카드 드라이버는 modprobe blacklist에 추가해서 끄자. /boot/config.txt에 HiFiBerry DAC&#43; 드라이버 오버레이를 지정해야함. 내장 사운드 드라이버 끄기 다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음." />
+	<meta name="description" content="https://www.hifiberry.com/ 요거 Raspberry Pi 3에 세팅한 모험에 대한
+이야기.
+WIFI잡기
+# /etc/wpa_supplicant/wpa_supplicant.conf 
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+#update_config=1
+country=GB
+
+network={
+	ssid=&#34;iptime&#34;
+	psk=&#34;xxxxxxxxxx&#34;
+	key_mgmt=WPA-PSK
+}
+
+wpa_passphrase 안쓰고 그냥 plaintext으로 써도 동작.
+내 공유기랑은 country=GB 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤.
+그리고 ip link set wlan0 {up|down} 정도로 wlan0 인터페이스를 up/down하면됨.
+
+사운드 드라이버 설정
+
+내장 사운드카드 드라이버는 modprobe blacklist에 추가해서 끄자.
+/boot/config.txt에 HiFiBerry DAC&#43; 드라이버 오버레이를 지정해야함.
+
+내장 사운드 드라이버 끄기
+다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음." />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2018-10oct/rpi3-hifiberry-dacplus-config/">
   <meta property="og:site_name" content="아겔로그">
@@ -40,6 +63,8 @@ WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>
@@ -102,18 +127,17 @@ WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run
 			<p><a href="https://www.hifiberry.com/">https://www.hifiberry.com/</a> 요거 Raspberry Pi 3에 세팅한 모험에 대한
 이야기.</p>
 <h1 id="wifi잡기">WIFI잡기</h1>
-<pre><code># /etc/wpa_supplicant/wpa_supplicant.conf 
+<pre tabindex="0"><code># /etc/wpa_supplicant/wpa_supplicant.conf 
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 #update_config=1
 country=GB
 
 network={
-	ssid=&quot;iptime&quot;
-	psk=&quot;xxxxxxxxxx&quot;
+	ssid=&#34;iptime&#34;
+	psk=&#34;xxxxxxxxxx&#34;
 	key_mgmt=WPA-PSK
 }
-</code></pre>
-<ol>
+</code></pre><ol>
 <li><code>wpa_passphrase</code> 안쓰고 그냥 plaintext으로 써도 동작.</li>
 <li>내 공유기랑은 <code>country=GB</code> 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤.</li>
 <li>그리고 <code>ip link set wlan0 {up|down}</code> 정도로 wlan0 인터페이스를 up/down하면됨.</li>
@@ -125,15 +149,13 @@ network={
 </ol>
 <h2 id="내장-사운드-드라이버-끄기">내장 사운드 드라이버 끄기</h2>
 <p>다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음.</p>
-<pre><code>$ cat /etc/modprobe.d/snd.conf 
+<pre tabindex="0"><code>$ cat /etc/modprobe.d/snd.conf 
 blacklist snd_bcm2835
-</code></pre>
-<h2 id="hifiberry-dac-드라이버-오버레이">HiFiBerry+ DAC 드라이버 오버레이</h2>
+</code></pre><h2 id="hifiberry-dac-드라이버-오버레이">HiFiBerry+ DAC 드라이버 오버레이</h2>
 <p><code>/boot/config.txt</code> 파일에 다음과 같이 끝 부분에 추가:</p>
-<pre><code>dtparam=i2s=on
+<pre tabindex="0"><code>dtparam=i2s=on
 dtoverlay=hifiberry-dacplus
-</code></pre>
-<ol>
+</code></pre><ol>
 <li>조금 헤맸던 부분은 <code>hifiberry-dacplus</code>을 그냥 <code>hifiberry</code> 으로
 지정해서 다른 모델을 위한 오버레이를 로딩해서 동작을 안했었음.</li>
 <li>드라이버가 정상적으로 로딩되면, 부팅할때나 사운드 출력시 DAC
@@ -141,18 +163,17 @@ dtoverlay=hifiberry-dacplus
 </ol>
 <h2 id="alsa-설정">ALSA 설정</h2>
 <p><code>/etc/asound.conf</code>:</p>
-<pre><code>pcm.hifiberry {
+<pre tabindex="0"><code>pcm.hifiberry {
 	type softvol
-	slave.pcm &quot;plughw:0&quot;
-	control.name &quot;Master&quot;
+	slave.pcm &#34;plughw:0&#34;
+	control.name &#34;Master&#34;
 	control.card 0
 }
 pcm.!default {
 	type plug
-	slave.pcm &quot;hifiberry&quot;
+	slave.pcm &#34;hifiberry&#34;
 }
-</code></pre>
-<p>위와 같이 대충 세팅해줘야 사운드 볼륨 믹서를 사용가능.</p>
+</code></pre><p>위와 같이 대충 세팅해줘야 사운드 볼륨 믹서를 사용가능.</p>
 <h1 id="팁-중요한-명령들">팁: 중요한 명령들</h1>
 <ol>
 <li><code>aplay -l</code> : 현재 설정된 사운드카드 목록을 확인할 수 있음.</li>

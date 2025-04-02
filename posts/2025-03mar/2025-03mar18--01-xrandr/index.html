@@ -2,12 +2,23 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>xrandr 🖥️모니터 연결 자동전환 스크립트🐫 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다. 다 편한데, 🪟윈도나 icewm처럼 Windows&#43;P 누르면, 다음 모니터연결 조합으로 전환되는게 부러웠다.
-매번 터미널 열고 xrandr 치거나, arandr 열어서 세팅하기 귀찮으니까. (물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)
+	<meta name="description" content="
+요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.
+다 편한데, 🪟윈도나 icewm처럼 Windows&#43;P 누르면, 다음 모니터연결
+조합으로 전환되는게 부러웠다.
+
+매번 터미널 열고 xrandr 치거나, arandr 열어서 세팅하기 귀찮으니까.
+(물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)
+
 그래서 그냥 윈도의 Win&#43;P 키처럼 동작하도록 스크립트를 짜봤다.
+
 🐫 https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl
+
 Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
-그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데, 예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별 생각없이 되는쪽에 더 비중을 두게 되는거 같다." />
+
+그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,
+예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별
+생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤" />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/">
   <meta property="og:site_name" content="아겔로그">
@@ -17,7 +28,7 @@ Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
 그래서 그냥 윈도의 Win&#43;P 키처럼 동작하도록 스크립트를 짜봤다.
 🐫 https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl
 Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
-그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데, 예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별 생각없이 되는쪽에 더 비중을 두게 되는거 같다.">
+그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데, 예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별 생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -37,7 +48,7 @@ Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
 그래서 그냥 윈도의 Win&#43;P 키처럼 동작하도록 스크립트를 짜봤다.
 🐫 https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl
 Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
-그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데, 예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별 생각없이 되는쪽에 더 비중을 두게 되는거 같다.">
+그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데, 예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별 생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤">
 
 	
 		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
@@ -54,6 +65,8 @@ Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>

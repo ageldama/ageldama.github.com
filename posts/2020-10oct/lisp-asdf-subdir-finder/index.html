@@ -2,10 +2,33 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>&#34;커먼리습 ASDF 불러오기 편하게 하기&#34; 대모험 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="ASDF와 system definition file 검색의 정석 이전에 ASDF을 이용하여 커먼리습 프로젝트의 의존성, 시스템을 로딩하기 에 대해서 설명한 적이 있었다.
-이전에 다룬 내용은 정석적으로 $HOME/common-lisp 디렉토리에 .asd 파일을 심볼릭링크를 걸고, (asdf:load-system ..) 을 시도하는 내용이었었다.
-Prototyping등 더 편안하게 혼자 코딩을 할 때는… 혼자 커먼리습 코딩을 하면서, 나는 더 간단하게 프로젝트를 시작하는 방법을 선호한다.
-커먼리습이 파일 이름이나 경로에 대해서 의존하는 것이 아니고, 컴파일시점, 로딩시점에 순서에 따라 로딩해서 최종적으로 컴파일하여 적재한 결과 이미지를 더 중요하게 여기기 때문에, 그리고 그런 컴파일, 빌드, 로딩과 같은 모든 단계들 자체도 커먼리습 표현식 그자체로 동작하기 때문에 그냥 하나의 소스파일을 섹션별로 나눠서 작업하면 편리하다." />
+	<meta name="description" content="
+
+ASDF와 system definition file 검색의 정석
+
+
+이전에 ASDF을 이용하여 커먼리습 프로젝트의 의존성, 시스템을 로딩하기
+  에 대해서 설명한 적이 있었다.
+
+  이전에 다룬 내용은 정석적으로 $HOME/common-lisp 디렉토리에 .asd
+  파일을 심볼릭링크를 걸고, (asdf:load-system ..) 을 시도하는
+  내용이었었다.
+
+
+
+
+Prototyping등 더 편안하게 혼자 코딩을 할 때는…
+
+
+혼자 커먼리습 코딩을 하면서, 나는 더 간단하게 프로젝트를 시작하는
+  방법을 선호한다.
+
+  커먼리습이 파일 이름이나 경로에 대해서 의존하는 것이 아니고,
+  컴파일시점, 로딩시점에 순서에 따라 로딩해서 최종적으로 컴파일하여
+  적재한 결과 이미지를 더 중요하게 여기기 때문에, 그리고 그런 컴파일,
+  빌드, 로딩과 같은 모든 단계들 자체도 커먼리습 표현식 그자체로
+  동작하기 때문에 그냥 하나의 소스파일을 섹션별로 나눠서 작업하면
+  편리하다." />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2020-10oct/lisp-asdf-subdir-finder/">
   <meta property="og:site_name" content="아겔로그">
@@ -46,6 +69,8 @@ Prototyping등 더 편안하게 혼자 코딩을 할 때는… 혼자 커먼리�
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>
@@ -232,95 +257,95 @@ sly-inspector으로 이맥스 안에서 편안하게 디렉토리 오가듯이 �
 <div class="src src-lisp">
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
-</span><span class="lnt">56
-</span><span class="lnt">57
-</span><span class="lnt">58
-</span><span class="lnt">59
-</span><span class="lnt">60
-</span><span class="lnt">61
-</span><span class="lnt">62
-</span><span class="lnt">63
-</span><span class="lnt">64
-</span><span class="lnt">65
-</span><span class="lnt">66
-</span><span class="lnt">67
-</span><span class="lnt">68
-</span><span class="lnt">69
-</span><span class="lnt">70
-</span><span class="lnt">71
-</span><span class="lnt">72
-</span><span class="lnt">73
-</span><span class="lnt">74
-</span><span class="lnt">75
-</span><span class="lnt">76
-</span><span class="lnt">77
-</span><span class="lnt">78
-</span><span class="lnt">79
-</span><span class="lnt">80
-</span><span class="lnt">81
-</span><span class="lnt">82
-</span><span class="lnt">83
-</span><span class="lnt">84
-</span><span class="lnt">85
-</span><span class="lnt">86
-</span><span class="lnt">87
-</span><span class="lnt">88
-</span><span class="lnt">89
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
+</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
+</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
+</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
+</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
+</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
+</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
+</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
+</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
+</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
+</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
+</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
+</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
+</span><span class="lnt" id="29"><a class="lnlinks" href="#29">29</a>
+</span><span class="lnt" id="30"><a class="lnlinks" href="#30">30</a>
+</span><span class="lnt" id="31"><a class="lnlinks" href="#31">31</a>
+</span><span class="lnt" id="32"><a class="lnlinks" href="#32">32</a>
+</span><span class="lnt" id="33"><a class="lnlinks" href="#33">33</a>
+</span><span class="lnt" id="34"><a class="lnlinks" href="#34">34</a>
+</span><span class="lnt" id="35"><a class="lnlinks" href="#35">35</a>
+</span><span class="lnt" id="36"><a class="lnlinks" href="#36">36</a>
+</span><span class="lnt" id="37"><a class="lnlinks" href="#37">37</a>
+</span><span class="lnt" id="38"><a class="lnlinks" href="#38">38</a>
+</span><span class="lnt" id="39"><a class="lnlinks" href="#39">39</a>
+</span><span class="lnt" id="40"><a class="lnlinks" href="#40">40</a>
+</span><span class="lnt" id="41"><a class="lnlinks" href="#41">41</a>
+</span><span class="lnt" id="42"><a class="lnlinks" href="#42">42</a>
+</span><span class="lnt" id="43"><a class="lnlinks" href="#43">43</a>
+</span><span class="lnt" id="44"><a class="lnlinks" href="#44">44</a>
+</span><span class="lnt" id="45"><a class="lnlinks" href="#45">45</a>
+</span><span class="lnt" id="46"><a class="lnlinks" href="#46">46</a>
+</span><span class="lnt" id="47"><a class="lnlinks" href="#47">47</a>
+</span><span class="lnt" id="48"><a class="lnlinks" href="#48">48</a>
+</span><span class="lnt" id="49"><a class="lnlinks" href="#49">49</a>
+</span><span class="lnt" id="50"><a class="lnlinks" href="#50">50</a>
+</span><span class="lnt" id="51"><a class="lnlinks" href="#51">51</a>
+</span><span class="lnt" id="52"><a class="lnlinks" href="#52">52</a>
+</span><span class="lnt" id="53"><a class="lnlinks" href="#53">53</a>
+</span><span class="lnt" id="54"><a class="lnlinks" href="#54">54</a>
+</span><span class="lnt" id="55"><a class="lnlinks" href="#55">55</a>
+</span><span class="lnt" id="56"><a class="lnlinks" href="#56">56</a>
+</span><span class="lnt" id="57"><a class="lnlinks" href="#57">57</a>
+</span><span class="lnt" id="58"><a class="lnlinks" href="#58">58</a>
+</span><span class="lnt" id="59"><a class="lnlinks" href="#59">59</a>
+</span><span class="lnt" id="60"><a class="lnlinks" href="#60">60</a>
+</span><span class="lnt" id="61"><a class="lnlinks" href="#61">61</a>
+</span><span class="lnt" id="62"><a class="lnlinks" href="#62">62</a>
+</span><span class="lnt" id="63"><a class="lnlinks" href="#63">63</a>
+</span><span class="lnt" id="64"><a class="lnlinks" href="#64">64</a>
+</span><span class="lnt" id="65"><a class="lnlinks" href="#65">65</a>
+</span><span class="lnt" id="66"><a class="lnlinks" href="#66">66</a>
+</span><span class="lnt" id="67"><a class="lnlinks" href="#67">67</a>
+</span><span class="lnt" id="68"><a class="lnlinks" href="#68">68</a>
+</span><span class="lnt" id="69"><a class="lnlinks" href="#69">69</a>
+</span><span class="lnt" id="70"><a class="lnlinks" href="#70">70</a>
+</span><span class="lnt" id="71"><a class="lnlinks" href="#71">71</a>
+</span><span class="lnt" id="72"><a class="lnlinks" href="#72">72</a>
+</span><span class="lnt" id="73"><a class="lnlinks" href="#73">73</a>
+</span><span class="lnt" id="74"><a class="lnlinks" href="#74">74</a>
+</span><span class="lnt" id="75"><a class="lnlinks" href="#75">75</a>
+</span><span class="lnt" id="76"><a class="lnlinks" href="#76">76</a>
+</span><span class="lnt" id="77"><a class="lnlinks" href="#77">77</a>
+</span><span class="lnt" id="78"><a class="lnlinks" href="#78">78</a>
+</span><span class="lnt" id="79"><a class="lnlinks" href="#79">79</a>
+</span><span class="lnt" id="80"><a class="lnlinks" href="#80">80</a>
+</span><span class="lnt" id="81"><a class="lnlinks" href="#81">81</a>
+</span><span class="lnt" id="82"><a class="lnlinks" href="#82">82</a>
+</span><span class="lnt" id="83"><a class="lnlinks" href="#83">83</a>
+</span><span class="lnt" id="84"><a class="lnlinks" href="#84">84</a>
+</span><span class="lnt" id="85"><a class="lnlinks" href="#85">85</a>
+</span><span class="lnt" id="86"><a class="lnlinks" href="#86">86</a>
+</span><span class="lnt" id="87"><a class="lnlinks" href="#87">87</a>
+</span><span class="lnt" id="88"><a class="lnlinks" href="#88">88</a>
+</span><span class="lnt" id="89"><a class="lnlinks" href="#89">89</a>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="k">eval-when</span> <span class="p">(</span><span class="ss">:compile-toplevel</span> <span class="ss">:load-toplevel</span> <span class="ss">:execute</span><span class="p">)</span>

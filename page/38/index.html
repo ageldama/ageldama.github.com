@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.145.0">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:url" content="https://ageldama.github.io/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="아겔로그">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="아겔로그">
+
+	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+
+	        
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/gopherish.56b1a3603de0001266fd93972ea01036b17460038761f722ac296b8aedfa6de9.css" integrity="sha256-VrGjYD3gABJm/ZOXLqAQNrF0YAOHYfcirClriu36bek=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+	
+	
+</head>
+
+	<body>
+		<div class="content">
+			<header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+    <nav>
+        
+            <a href="/posts/archive/">Index🗃️🏷️</a>
+        
+            <a href="/myself/">Contact📨</a>
+        
+
+	
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#fff',  
+      buttonColorDark: '#100f2c',  
+      buttonColorLight: '#fff', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+    var darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    window.darkmode = darkmode;
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+                        <div id="search"></div>
+			
+			<main class="list">
+				<div class="site-description"></div>
+				
+				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/tips-ecl-clisp/">커먼리습 설정하기, ASDF 시스템 코드를 받기</a></h1>
+					<time>🗓️ 06 Dec, 2019</time>
+					<br><div class="description">
+						
+						<h1 id="1-asdf을-최신-버젼으로-설정한다">1. ASDF을 최신 버젼으로 설정한다</h1>
+<p>(이부분에서 많이 고생했는데) SBCL와 다르게
+<a href="https://clisp.sourceforge.io/">CLISP</a>,
+<a href="https://common-lisp.net/project/ecl/">ECL</a> 은 최신 버젼의 ASDF을
+내장한걸 패키징해놓지 않았다.</p>
+<p>대부분은 문제가 없이 동작하지만, 내가 작성한 커먼리습 시스템에서
+실행파일을 빌드할 때 문제가 많았다.</p>
+<ol>
+<li>ASDF 의 최신 버젼을 <code>git clone</code> 해서 적당한 디렉토리에 받는다.
+<ul>
+<li><a href="https://common-lisp.net/project/asdf/">https://common-lisp.net/project/asdf/</a></li>
+</ul>
+</li>
+<li><code>make</code>을 내려받은 ASDF 디렉토리에서 실행한다.
+<ul>
+<li>실행하면 <code>build/asdf.lisp</code> 파일으로 한 파일으로 뭉쳐서 로딩하게
+편안한 파일을 생성해준다.</li>
+</ul>
+</li>
+<li>내 커먼리습 구현체의 시작설정파일 맨 앞에 다음처럼 추가한다.
+<ul>
+<li><code>(load &quot;~/local/asdf/build/asdf&quot;)</code>
+<ul>
+<li>여기서 나는 <code>$HOME/local/asdf/</code> 에 ASDF을 받았다고 가정.</li>
+<li>그리고 <code>asdf.lisp</code> 파일이더라도, 마지막에 <code>.lisp</code> 확장자는 생략했다.</li>
+</ul>
+</li>
+<li>ECL은 <code>$HOME/.eclrc</code></li>
+<li>CLISP은 <code>$HOME/.clisprc.lisp</code></li>
+</ul>
+</li>
+<li>그리고 중요한데, 그 다음에
+<a href="https://www.quicklisp.org/">Quicklisp</a> 초기화 내용이 오도록
+한다.
+<ul>
+<li>Quicklisp을 초기화하기 전에 ASDF 최신 버젼이 로딩되어 있는게 더
+나을테니까.</li>
+<li>어차피 위의 (1~3)의 순서대로 ASDF 먼저 설정한 다음에
+Quicklisp설치한 다음에 <code>ql:add-to-init-file</code> 실행하면 이런
+순서로 추가해준다.</li>
+</ul>
+</li>
+</ol>
+<p>&hellip;별거 아닌데, 이거 때문에 빌드한 결과 실행파일이 이상해서 좀 고생했다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-11nov/the-dark-side-of-cl-equality/">(Common Lisp의 어두운 면) Equality</a></h1>
+					<time>🗓️ 16 Nov, 2019</time>
+					<br><div class="description">
+						
+						<p>오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까
+리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로
+생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을
+리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.</p>
+<p>뭐 커먼리습의 <a href="http://clhs.lisp.se/Front/index.htm">CLHS - HyperSpec</a>을 읽다보면 비슷한데 아주 약간씩
+미묘하게 달라서 지원하는 것들이 있다:</p>
+<ul>
+<li><code>let</code>
+<ul>
+<li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">Special Operator LET, LET*</a></li>
+<li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">Special Operator FLET, LABELS, MACROLET</a></li>
+</ul>
+</li>
+<li><code>map</code>
+<ul>
+<li><a href="http://clhs.lisp.se/Body/f_map.htm">Function MAP</a></li>
+<li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm">Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON</a></li>
+<li><a href="http://clhs.lisp.se/Body/f_map_in.htm#map-into">Function MAP-INTO</a></li>
+</ul>
+</li>
+<li><code>prog</code>
+<ul>
+<li><a href="http://clhs.lisp.se/Body/m_prog1c.htm">Macro PROG1, PROG2</a></li>
+<li><a href="http://clhs.lisp.se/Body/s_progn.htm#progn">Special Operator PROGN</a></li>
+<li><a href="http://clhs.lisp.se/Body/m_prog_.htm#progST">Macro PROG, PROG*</a></li>
+<li><a href="http://clhs.lisp.se/Body/s_progv.htm#progv">Special Operator PROGV</a></li>
+</ul>
+</li>
+<li>&hellip;그밖에도 좀 더 있을듯?</li>
+</ul>
+<p>이렇게 나열해 놓으면 꽤 무서워 보이지만, 막상 차이를 이해하면 별로
+복잡하지도 않아서 나중엔 더 편안해진다. (정말로)</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-11nov/why-sharpsign-in-method-path/">(소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</a></h1>
+					<time>🗓️ 13 Nov, 2019</time>
+					<br><div class="description">
+						
+						<h1 id="오늘-아침">오늘 아침</h1>
+<p>다음은 오늘 아침 트위터의 타임라인에서 내가 스쳐본 한 스크린샷의 일부이다:</p>
+<p><img src="/images/2019-11nov/string-replace-js-w-sharpsign.png" alt="img"><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>&hellip;뭐에 느낌을 받았냐하면, 바로 저 <code>String#replace(..)</code> 이라는
+부분이다. (다른 부분에서는 <code>String.prototype.replace(..)</code> 와 같이
+썼는데 굳이 저기서만 갑자기 튀어나온 표기법)</p>
+<p>사실 나도 종종 내가 작업한 코드의 문서를 쓰거나<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> 아니면 다른 사람과
+텍스트로 대화를 해야할 때 이렇게 표기를 해왔었다.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>각각의 언어들에서 (내가 생각하는) 저렇게 표기하는 근거들은 다음과 같다:</p>
+<ol>
+<li>Java: <a href="https://www.oracle.com/technetwork/articles/java/index-137868.html">https://www.oracle.com/technetwork/articles/java/index-137868.html</a>
+<ul>
+<li><code>@see Component#getGraphics()</code> JavaDoc안에서 다른 메서드,
+필드를 참고로 넣고 싶을 때 이게 표준표기법이고
+<a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html">javadoc</a>도
+요렇게 써줘야 링크처리를 해준다.</li>
+</ul>
+</li>
+<li>JavaScript
+<ul>
+<li>공식적인건 아닌거 같다. <a href="https://developer.mozilla.org/">Mozilla
+MDN</a>을 봐도 그런 표기는 사용
+안하는걸로 보인다.</li>
+<li>예: <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toString">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toString</a></li>
+</ul>
+</li>
+<li>Ruby
+<ul>
+<li>Java와 마찬가지로 RDoc에서 강제한다.</li>
+<li><a href="https://stackoverflow.com/questions/18591938/what-is-the-sharp-number-pound-hash-sign-used-for-in-ruby">스택오버플로우: What is the # (sharp, number, pound, hash) sign used for in Ruby?</a></li>
+</ul>
+</li>
+</ol>
+<p><a href="https://softwareengineering.stackexchange.com/questions/304400/use-a-hash-character-or-a-dot-when-referring-to-methods-and-fields-in-software-d">스택오버플로우: Use a hash character or a dot when referring to
+methods and fields in software documentation? [closed]</a>에 답변이
+있으나 내가 볼 땐 내 가설이 더 확실한 이야기라고 본다.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+
+
+
+
+
+
+
+
+<ul class="pagination">
+	<span class="page-item page-prev">
+	
+            <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">First⏮️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
+        
+	</span>
+        <span class="page-number">(38/56)</span>
+	<span class="page-item page-next">
+	
+            <a href="/page/39/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
+            <a href="/page/56/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+        
+	</span>
+</ul>
+
+
+			</main>
+			<footer>
+  
+  <div class="footer-info">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      <br>
+      BTC기부: <b><code>bc1qyx5f8trraemf9r520qy889g42rpq398cw9yysw</code></b>
+      <br>
+      ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  
+</script>
+		</div>
+
+                
+<script src="/js/pagefind/pagefind-ui.js" type="text/javascript"></script>
+<script>
+ window.addEventListener('DOMContentLoaded', (event) => {
+     new PagefindUI({
+         baseUrl: "/",
+         
+         element: "#search",
+         
+         showImages: true,
+         
+         resetStyles: false,
+         
+         showSubResults: false,
+
+         pageSize: 5,  
+
+         translations: {
+             "placeholder": "--- 검색어 입력 ---",
+             "clear_search": "초기화",
+             "load_more": "검색결과 더 불러오기",
+             "search_label": "이 사이트에서 검색",
+             "filters_label": "필터",
+             "zero_results": "검색결과 없음: [SEARCH_TERM]",
+             "many_results": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "one_result": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
+             "alt_search": "검색결과 없음=[SEARCH_TERM]. 대체검색어=[DIFFERENT_TERM]-으로 표시",
+             "search_suggestion": "검색결과 없음=[SEARCH_TERM]. 다음 검색으로 대체해보시던가요:",
+             "searching": "검색중 [SEARCH_TERM]..."
+         },
+     });
+
+     
+     const pagefind_ui_results_observer = new MutationObserver(function(muts){
+         if($('.pagefind-ui__drawer').children().length > 0) {
+             $('main.list').hide();
+         } else {
+             $('main.list').show();
+         }
+     });
+
+     pagefind_ui_results_observer.observe(
+         $('.pagefind-ui__drawer')[0],{
+             childList: true,
+             subtree: true
+     });
+ });
+</script>
+		
+
+	</body>
+</html>

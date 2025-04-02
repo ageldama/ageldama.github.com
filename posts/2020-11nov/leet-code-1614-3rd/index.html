@@ -2,8 +2,36 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34; - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.
-1 2 3 4 5 6 7 8 from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다." />
+	<meta name="description" content="
+지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른
+언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고
+싶었다.
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+from itertools import accumulate
+
+
+def find_paren_count(s):
+    gen_only_parens = (ch == &#39;(&#39; and 1 or -1
+                       for ch in s
+                       if ch in (&#39;(&#39;, &#39;)&#39;,))
+    return max(accumulate(gen_only_parens))
+
+
+
+
+다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다." />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2020-11nov/leet-code-1614-3rd/">
   <meta property="og:site_name" content="아겔로그">
@@ -41,6 +69,8 @@
                 
             
         
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 	
 	
 </head>
@@ -107,14 +137,14 @@
 <div class="src src-python">
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">accumulate</span>
