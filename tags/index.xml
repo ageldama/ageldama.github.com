@@ -7,8 +7,50 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 02 Apr 2025 05:51:49 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Apr 2025 08:45:25 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dmenu</title>
+      <link>https://ageldama.github.io/tags/dmenu/</link>
+      <pubDate>Wed, 09 Apr 2025 08:45:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/dmenu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>I3</title>
+      <link>https://ageldama.github.io/tags/i3/</link>
+      <pubDate>Wed, 09 Apr 2025 08:45:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/i3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>I3wm</title>
+      <link>https://ageldama.github.io/tags/i3wm/</link>
+      <pubDate>Wed, 09 Apr 2025 08:45:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/i3wm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Perl</title>
+      <link>https://ageldama.github.io/tags/perl/</link>
+      <pubDate>Wed, 09 Apr 2025 08:45:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/perl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rofi</title>
+      <link>https://ageldama.github.io/tags/rofi/</link>
+      <pubDate>Wed, 09 Apr 2025 08:45:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/rofi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Which-Key</title>
+      <link>https://ageldama.github.io/tags/which-key/</link>
+      <pubDate>Wed, 09 Apr 2025 08:45:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/which-key/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Bloatware</title>
       <link>https://ageldama.github.io/tags/bloatware/</link>
@@ -220,24 +262,10 @@
       <description></description>
     </item>
     <item>
-      <title>I3wm</title>
-      <link>https://ageldama.github.io/tags/i3wm/</link>
-      <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/i3wm/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Monitor</title>
       <link>https://ageldama.github.io/tags/monitor/</link>
       <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/monitor/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Perl</title>
-      <link>https://ageldama.github.io/tags/perl/</link>
-      <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/perl/</guid>
       <description></description>
     </item>
     <item>

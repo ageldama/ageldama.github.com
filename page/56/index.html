@@ -89,6 +89,49 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-02-travis-ci-jekyll-gh/">Github.io 블로그 TraviCI으로 빌드해서 배포하기</a></h1>
+					<time>🗓️ 02 Jan, 2017</time>
+					<br><div class="description">
+						
+						<p>.. <em><a href="/github/jekyll/2017/01/01/github-jekyll.html">여기</a></em> 에 불만을 적었듯이,
+여러가지로 그냥은 만족하기 어려운 부분이 있었다.</p>
+<p>그런데, Travis-CI을 통해서 빌드해서 배포한다는 분이
+계셨다. <a href="https://twitter.com/Realignist/status/815554589889994752">https://twitter.com/Realignist/status/815554589889994752</a></p>
+<p>..난 생각 못해본 방법. ㅎㅎ <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>그래서 도전.</p>
+<ol>
+<li>우선 Jekyll 소스용 저장소로 분리하고,</li>
+<li>배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다.</li>
+<li><a href="https://github.com/felixrieseberg/travis-jekyll-git">https://github.com/felixrieseberg/travis-jekyll-git</a> 여기 참고해서 삽질.</li>
+<li>결과물은 <a href="https://github.com/ageldama/ageldama-gh-jekyll">https://github.com/ageldama/ageldama-gh-jekyll</a></li>
+</ol>
+<p>..진행하면서 처음에 좀 짜증났던거,</p>
+<ol>
+<li><code>Gemfile</code> 에 설치할 의존성들 지정하고, <code>bundle update</code>.
+<ol>
+<li>그리고 그것만으로는 안되고, <code>.travis.yml</code> 파일에 gem설치를
+지정해야했다. <a href="https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5">https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5</a></li>
+</ol>
+</li>
+<li>Travis-CI 작업의 세팅에서 <code>git_target</code> 환경변수에 URL지정할때&hellip;
+<ol>
+<li><code>github.com/ageldama/ageldama-gh-jekyll.git</code> 처럼 <code>https://</code> 스킴 부분 빼고,</li>
+<li>또 뒤에 <code>.git</code> 깜빡하면 당연히 git-push 안됨. ㅋ</li>
+</ol>
+</li>
+</ol>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>솔직히 내가 뭘 제대로 하겠습니까.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2017/2017-01-01-github-jekyll/">Github.io의 Jekyll 버젼이랑 차이?</a></h1>
 					<time>🗓️ 01 Jan, 2017</time>
 					<br><div class="description">
@@ -125,18 +168,6 @@ jekyll 3.3.1
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2017/2017-01-01-welcome-to-jekyll/">Welcome to Jekyll!</a></h1>
-					<time>🗓️ 01 Jan, 2017</time>
-					<br><div class="description">
-						
-						<p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-<p>To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention <code>YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -154,12 +185,12 @@ jekyll 3.3.1
             <a href="/page/55/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(56/56)</span>
+        <span class="page-number">(56/57)</span>
 	<span class="page-item page-next">
 	
-            <span aria-hidden="true">Next⛔</span>
-            <span aria-hidden="true">Last⛔</span>
-	
+            <a href="/page/57/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
+            <a href="/page/57/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+        
 	</span>
 </ul>
 
