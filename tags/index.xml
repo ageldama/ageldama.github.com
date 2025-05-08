@@ -7,8 +7,120 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 09 Apr 2025 08:45:25 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 May 2025 19:17:25 +0900</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C99</title>
+      <link>https://ageldama.github.io/tags/c99/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/c99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Epoll</title>
+      <link>https://ageldama.github.io/tags/epoll/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/epoll/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fbdev</title>
+      <link>https://ageldama.github.io/tags/fbdev/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/fbdev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fbterm</title>
+      <link>https://ageldama.github.io/tags/fbterm/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/fbterm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Freebsd</title>
+      <link>https://ageldama.github.io/tags/freebsd/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/freebsd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hangeul</title>
+      <link>https://ageldama.github.io/tags/hangeul/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/hangeul/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hangul</title>
+      <link>https://ageldama.github.io/tags/hangul/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/hangul/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Im</title>
+      <link>https://ageldama.github.io/tags/im/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/im/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ime</title>
+      <link>https://ageldama.github.io/tags/ime/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/ime/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Input</title>
+      <link>https://ageldama.github.io/tags/input/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/input/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Korean</title>
+      <link>https://ageldama.github.io/tags/korean/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/korean/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kqueue</title>
+      <link>https://ageldama.github.io/tags/kqueue/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/kqueue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://ageldama.github.io/tags/linux/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Method</title>
+      <link>https://ageldama.github.io/tags/method/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/method/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Select</title>
+      <link>https://ageldama.github.io/tags/select/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/select/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terminal</title>
+      <link>https://ageldama.github.io/tags/terminal/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/tags/terminal/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Dmenu</title>
       <link>https://ageldama.github.io/tags/dmenu/</link>
@@ -133,13 +245,6 @@
       <link>https://ageldama.github.io/tags/laptop/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/laptop/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://ageldama.github.io/tags/linux/</link>
-      <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/linux/</guid>
       <description></description>
     </item>
     <item>
@@ -518,13 +623,6 @@
       <link>https://ageldama.github.io/tags/kino/</link>
       <pubDate>Sat, 23 Mar 2024 15:46:14 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/kino/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Freebsd</title>
-      <link>https://ageldama.github.io/tags/freebsd/</link>
-      <pubDate>Sun, 05 Nov 2023 05:40:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/freebsd/</guid>
       <description></description>
     </item>
     <item>

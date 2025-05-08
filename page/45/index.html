@@ -89,94 +89,63 @@
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/2019-02feb26-ping/">Ping 26/02/2019</a></h1>
-					<time>🗓️ 26 Feb, 2019</time>
+					<h1 class="title"><a href="/posts/2019-03mar/2019-03mar17-ping/">Ping 17/03/2019</a></h1>
+					<time>🗓️ 17 Mar, 2019</time>
 					<br><div class="description">
 						
-						<h1 id="게임-발더스게이트ee-원숭이섬의-비밀-se--steamplay-등등">게임: 발더스게이트EE, &lsquo;원숭이섬의 비밀&rsquo; SE + SteamPlay, 등등</h1>
-<p>아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced Edition들
-올라와있었다.  발더스게이트1, 2 모두. 시간이 될때마다 조금씩 플레이
-중.</p>
-<p>새로 UI이나 그래픽 요소들 등등 리마스터 한건지 훨씬 좋아진거 같다.</p>
-<p><a href="https://store.steampowered.com/app/32360/The_Secret_of_Monkey_Island_Special_Edition/">원숭이섬의 비밀: Special
-Edition</a>
-이것도 시간날때
-플레이. <a href="https://www.scummvm.org/">ScummVM</a> 으로 옛날 그래픽으로 다시
-해도 좋겠지만, 오히려 애니메이션이나 그래픽 다시 그린게 나는 더 마음에
-들어서 이쪽이 좋은거 같다.</p>
-<p><a href="https://store.steampowered.com/app/336140/Unavowed/">Unavowed</a>. 이런류의
-어드벤쳐 꾸준히 만드는 &ldquo;WadjetEyeGames&quot;이 내 취향에 잘 맞는걸 계속
-만들고 있는거 같아서 기뻤다.</p>&hellip;
+						<h1 id="emacsc-개발환경-스크린캐스트">Emacs/C++ 개발환경 스크린캐스트</h1>
+<p><a href="/posts/2019-02feb/counsel-ivy+cpp-ide/">이전 포스팅</a> 에서 만들었던
+설정을 스크린캐스트로 찍어서 공유해봤다.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/YOaAqpdz9ts?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<h1 id="let-over-lambda-읽기">&ldquo;Let Over Lambda&rdquo; 읽기</h1>
+<p><a href="https://letoverlambda.com/">Let Over Lambda</a>을 읽기
+시작했다. 커먼리습 매크로, 클로져에 대한 이야기를 더 깊이 있게
+설명하고, 그런 기능들이 어떻게 리습이랑 리습이 아닌 <a href="http://paulgraham.com/avg.html">&ldquo;Blub
+language&rdquo;</a>이라고 말하고있는 대부분의
+언어들과의 차이인지를 설명한다.</p>
+<p>리습의 매크로나 closure을 통해서, 그간 내가 프로그래밍언어 설계를 할때
+포함해야하고, 컴파일러가 지원하도록 손수 만들어놓아야 한다고 믿던
+것들이 얼마나 쉽게 구현되는지를 보며 충격을 받는다. 재밌고 신선하다.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</a></h1>
-					<time>🗓️ 26 Feb, 2019</time>
+					<h1 class="title"><a href="/posts/2019-03mar/cffi-2d-array/">CFFI으로 CommonLisp 2d array을 Foreign function으로 전달하기</a></h1>
+					<time>🗓️ 17 Mar, 2019</time>
 					<br><div class="description">
 						
-						<h1 id="필요성-궁금함-현재-상황">필요성, 궁금함, 현재 상황</h1>
-<ol>
-<li>메인 데스크탑을 무선랜으로 인터넷에 연결하고 사용함.</li>
-<li>다른 기기들도 모두 기본적으로 무선으로 LAN접속.</li>
-<li>다 좋은데, 메인 데스크탑 &lt;-&gt; 라즈베리파이 접속할때 ssh 접속도
-느린거 같을때가 있음.</li>
-<li>무선랜 접속이 많고, 블루투스 등등 다른 간섭도 많을거고,</li>
-<li>어쨌든 조금 물리적으로 거리가 있는 무선공유기까지 갔다
-오는거니까.</li>
-<li>그래서 사용 안하고 있는 데스크탑의 내장 유선 랜포트로 인터넷연결을
-공유하는 Private network을 만들어서 유선으로 연결해보기로 했다.</li>
-<li>정말 체감이 빨라질지 궁금했고</li>
-<li>직접 수동으로 설정하는게 거의 없거나,</li>
-<li>내가 사용하고 있는 NetworkManager에서 쉽게 설정이 가능할거
-같았다.
-- <a href="https://wiki.archlinux.org/index.php/NetworkManager#Sharing_internet_connection_over_Ethernet">https://wiki.archlinux.org/index.php/NetworkManager#Sharing_internet_connection_over_Ethernet</a></li>
-</ol>
-<h1 id="진행과-추가적인-설정">진행과 추가적인 설정</h1>
-<ol>
-<li>그냥
-<a href="https://wiki.archlinux.org/index.php/NetworkManager#nm-applet">nm-applet</a>
-사용해서 wired connection에 인터넷 공유를 체크한게 설정 전부.</li>
-<li><a href="http://www.thekelleys.org.uk/dnsmasq/doc.html">dnsmasq</a> 패키지만
-설치하고, 별도로 systemctl으로 enable/start한건
-없음. (NetworkManager에서 자동으로 관리)</li>
-<li>잘 동작함. ㅎㅎ</li>
-<li>추가적으로, Private Network에 접속하는 호스트의 MAC 어드레스에
-IP주소를 고정해서 접속이 편하도록 설정했다.</li>
-</ol>
-<h2 id="mac주소에-고정ip-할당하기">MAC주소에 고정IP 할당하기</h2>
-<ol>
-<li>dnsmasq의 DHCP 설정을 추가한다.</li>
-<li><code>/etc/NetworkManager/dnsmasq-shared.d/static-ips.conf</code> 파일을 작성했다.</li>
-<li>별도의 재시작 없이, 파일 저장하고, 그냥 유선연결을 끊었다가 다시 연결하면 끝.</li>
-<li>나머지는 NetworkManager이 다 자동으로 처리.</li>
-</ol>
-<p>설정파일의 내용은 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>:</p>&hellip;
+						<p><a href="https://github.com/ageldama/cffi-2d-array-hello">https://github.com/ageldama/cffi-2d-array-hello</a></p>
+<p><code>cffi:with-foreign-array</code>이 <a href="https://common-lisp.net/project/cffi/manual/cffi-manual.html">CFFI
+manual</a>에
+없어서 처음에 좀 골치아팠음.</p>
+<p>리습 어레이를 복사해서 매핑해줌.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/2019-02feb07thu-ping/">Ping 07/02/2019</a></h1>
-					<time>🗓️ 07 Feb, 2019</time>
+					<h1 class="title"><a href="/posts/2019-02feb/2019feb27-ping/">Ping 26/02/2019</a></h1>
+					<time>🗓️ 26 Feb, 2019</time>
 					<br><div class="description">
 						
-						<h1 id="golang-사랑">Golang 사랑</h1>
-<p>회사일로 Golang을 다시 잡고 쓰게됐다.</p>
-<p>예전에도 잠깐 썼었는데<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, 이번엔 그냥 더 오래 진지하게 필요에
-의해서 쓰게됐다.</p>
-<p>지금 일터에서도 필요에 의해서 작은 프로그램을 작성하고 할 일이
-있어서 쓰다가 아예 서비스 코드에 적용을 하려 일하고있다.</p>
-<p>많은걸 더 깊이 생각하고 익히는 좋은 계기로 꾸준하게 사용하고 있고,
-만족스럽다. 대부분의 경우에. 그리고 Emacs와 연동도 좋고 언어 자체의
-설계나 그런점들도 너무 좋은거 같다.</p>
-<p>GC이 있는 언어를 최근에는 꺼리다가 다시 사용하니까 좋은것 같아. 그냥
-문법적은 모호함이 없고 단순함, 머리에 쉽게 기억할만한 규칙들, 혹은
-아예 어떤 규칙도 기억할 필요가 없도록 만들거나 하는게 얼마나 설계에
-좋은지 깨닫는다.</p>&hellip;
+						<h1 id="번아웃-회의감">번아웃, 회의감</h1>
+<p>아무래도 번아웃이 온거 같다. 일을 해야 하는데 아무런 생각이나 의욕도
+떠오르지 않는다.</p>
+<p>아무것도 제대로 하지 못할거 같고, 해서 의미도 없을거라는 생각이 강하다.</p>
+<p>일하는것에 회의가 심하다. 실제로는 아무것도 제대로 알지 못하고 그냥
+싫으니까 반대에 사람들 사이를 조작해서 악의적으로 행동하고 그렇게
+조장하는것에 이제는 삶에서 너무 많이 봐온거 같고, 그런 사이에서
+무력하게 지내고 해야한다는게 무엇보다 지친다.</p>
+<p>그리고 그렇게 때문에 해야할 이유도, 굳이 마음을 써야할 이유도
+모르겠다.</p>
+<p>그냥 개인적으로 하고 싶던 설정이나 만지작거리면서 시간을 보내봐도 딱히
+그게 지나고 나면 하고 싶은것도 없어진다.</p>&hellip;
 						
 					</div>
                                         
@@ -199,11 +168,11 @@ IP주소를 고정해서 접속이 편하도록 설정했다.</li>
             <a href="/page/44/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(45/57)</span>
+        <span class="page-number">(45/58)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/46/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/57/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

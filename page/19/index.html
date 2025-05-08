@@ -89,48 +89,13 @@
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/ping-16fri/">Ping 17/Oct/2020</a></h1>
-					<time>🗓️ 17 Oct, 2020</time>
+					<h1 class="title"><a href="/posts/2020-10oct/leet-code-1614-2nd/">CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
+					<time>🗓️ 21 Oct, 2020</time>
 					<br><div class="description">
 						
 						<p>
-웹프론트엔드 개발을 조금씩 해보고 있다. 처음에는 예전 방식으로만
-하려고 하다가 조금씩 겨우 써보던 webpack을 다시 가이드를 차근차근
-공부하고 동작하는 방식을 이해하도록 뜯어보고 돌려봤다.</p>
-<p>
-생각보다 단순하게, 그리고 확장성 있게 쓸만한 빌드도구였다.</p>
-<p>
-다만 문제는 설정이 복잡하고 이해하기 힘든 점보다는 빌드 시간이 너무
-느린 점이었다. (내게는)</p>
-<p>
-그래서 parcel bundler을 시도 했는데, 설정도 거의 필요 없이 바로
-동작하고 하는 점은 좋고, 성능도 정말 빨랐다.</p>
-<p>
-다만 Vim/Emacs으로 파일을 편집하고 저장할 때, <code>parcel watch</code> 대상인
-파일들을 종종 아예 dev-server을 재시작해야만 제대로 동작하는 상태로
-빠지는게 조금 짜증났다. 기본으로 webpack보다는 이런 자잘한 부분이 좀
-덜 다듬어진걸까 싶다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/ping-17sat/">Ping 16/Oct/2020</a></h1>
-					<time>🗓️ 16 Oct, 2020</time>
-					<br><div class="description">
-						
-						<p>
-ADT<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>만큼 만들어 쓰는 것은 아니지만, 그냥 Kotlin, Python의
-dataclass 정도는 쓰고 싶어서 CommonLisp 매크로를 만들어봤다.<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
-<p>
-<a href="https://common-lisp.net/project/cdr/document/8/cleqcmp.html">equals</a> 라이브러리를 써서 동치 비교와 CLOS의 <code>print-object</code> generic
-function을 구현해서 to-string 정도만 되도록 만들어 봤다.</p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-macro body
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
+<a href="/posts/2020-10oct/leet-code-1614/">어제 작성한 LOOP매크로을 이용한 구현</a> 을 풀어서, 만약 LOOP매크로가
+없었더라면 어떻게 짰을지 작성해봤다.</p>
 <div class="src src-lisp">
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -146,70 +111,50 @@ macro body
 </span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
 </span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
 </span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
-</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
-</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
-</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
-</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
-</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
-</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
-</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
-</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
-</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
-</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
-</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
-</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
-</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
-</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
-</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
-</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
-</span><span class="lnt" id="29"><a class="lnlinks" href="#29">29</a>
-</span><span class="lnt" id="30"><a class="lnlinks" href="#30">30</a>
-</span><span class="lnt" id="31"><a class="lnlinks" href="#31">31</a>
-</span><span class="lnt" id="32"><a class="lnlinks" href="#32">32</a>
-</span><span class="lnt" id="33"><a class="lnlinks" href="#33">33</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defmacro</span> <span class="nv">define-data-class</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">class-name</span> <span class="nv">parent-classes</span> <span class="nv">slot-names</span>
-</span></span><span class="line"><span class="cl">     <span class="k">&amp;key</span> <span class="p">(</span><span class="nv">no-print-slot-names</span> <span class="no">nil</span><span class="p">)</span> <span class="p">(</span><span class="nv">no-equals-slot-names</span> <span class="no">nil</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">flet</span> <span class="p">((</span><span class="nv">accessor-symbol</span> <span class="p">(</span><span class="nv">slot-name</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="nv">alexandria:format-symbol</span> <span class="vg">*package*</span>
-</span></span><span class="line"><span class="cl">                                     <span class="s">&#34;~a-~a&#34;</span> <span class="nf">class-name</span> <span class="nv">slot-name</span><span class="p">)))</span>  
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nc">list</span> <span class="ss">&#39;progn</span>          
-</span></span><span class="line"><span class="cl">          <span class="c1">;; defclass</span>
-</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">slot-defs</span> <span class="p">(</span><span class="nb">loop</span> <span class="nv">for</span> <span class="nv">slot-name</span> <span class="nv">in</span> <span class="nv">slot-names</span>
-</span></span><span class="line"><span class="cl">                                 <span class="nv">collecting</span> <span class="o">`</span><span class="p">(</span><span class="o">,</span><span class="nv">slot-name</span>
-</span></span><span class="line"><span class="cl">                                              <span class="ss">:initarg</span> <span class="o">,</span><span class="p">(</span><span class="nv">alexandria:make-keyword</span> <span class="nv">slot-name</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                                              <span class="ss">:accessor</span> <span class="o">,</span><span class="p">(</span><span class="nv">accessor-symbol</span> <span class="nv">slot-name</span><span class="p">)))))</span>
-</span></span><span class="line"><span class="cl">            <span class="o">`</span><span class="p">(</span><span class="nb">defclass</span> <span class="o">,</span><span class="nf">class-name</span> <span class="o">,</span><span class="nv">parent-classes</span> <span class="o">,</span><span class="nv">slot-defs</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">          <span class="c1">;; defmethod print-object</span>
-</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="k">let*</span> <span class="p">((</span><span class="nv">print-slot-names</span> <span class="p">(</span><span class="nf">set-difference</span> <span class="nv">slot-names</span>
-</span></span><span class="line"><span class="cl">                                                   <span class="nv">no-print-slot-names</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nv">fmt-ctrl</span> <span class="p">(</span><span class="nf">format</span> <span class="no">nil</span> <span class="s">&#34;~{~a=~~a~^, ~}&#34;</span> <span class="nv">print-slot-names</span><span class="p">)))</span>
-</span></span><span class="line"><span class="cl">            <span class="o">`</span><span class="p">(</span><span class="nb">defmethod</span> <span class="nf">print-object</span> <span class="p">((</span><span class="nv">obj</span> <span class="o">,</span><span class="nf">class-name</span><span class="p">)</span> <span class="nc">stream</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nb">print-unreadable-object</span> <span class="p">(</span><span class="nv">obj</span> <span class="nc">stream</span> <span class="ss">:type</span> <span class="no">t</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nb">with-slots</span> <span class="o">,</span><span class="nv">print-slot-names</span> <span class="nv">obj</span>
-</span></span><span class="line"><span class="cl">                   <span class="p">(</span><span class="nf">format</span> <span class="nc">stream</span> <span class="o">,</span><span class="nv">fmt-ctrl</span> <span class="o">,@</span><span class="nv">print-slot-names</span><span class="p">)))))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">          <span class="c1">;; defmethod equals:equals</span>
-</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="k">let*</span> <span class="p">((</span><span class="nv">equals-slot-names</span> <span class="p">(</span><span class="nf">set-difference</span> <span class="nv">slot-names</span>
-</span></span><span class="line"><span class="cl">                                                    <span class="nv">no-equals-slot-names</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nv">equals-exprs</span> <span class="p">(</span><span class="nb">loop</span> <span class="nv">for</span> <span class="nv">equals-slot-name</span> <span class="nv">in</span> <span class="nv">equals-slot-names</span>
-</span></span><span class="line"><span class="cl">                                     <span class="nv">collecting</span> <span class="o">`</span><span class="p">(</span><span class="nv">equals:equals</span> <span class="p">(</span><span class="nf">slot-value</span> <span class="nv">lhs</span> <span class="p">(</span><span class="k">quote</span> <span class="o">,</span><span class="nv">equals-slot-name</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">                                                                <span class="p">(</span><span class="nf">slot-value</span> <span class="nv">rhs</span> <span class="p">(</span><span class="k">quote</span> <span class="o">,</span><span class="nv">equals-slot-name</span><span class="p">))))))</span>
-</span></span><span class="line"><span class="cl">            <span class="o">`</span><span class="p">(</span><span class="nb">defmethod</span> <span class="nv">equals:equals</span> <span class="p">((</span><span class="nv">lhs</span> <span class="o">,</span><span class="nf">class-name</span><span class="p">)</span> <span class="p">(</span><span class="nv">rhs</span> <span class="o">,</span><span class="nf">class-name</span><span class="p">)</span> <span class="k">&amp;rest</span> <span class="nv">args</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">ignore</span> <span class="nv">args</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nb">and</span> <span class="no">t</span> <span class="o">,@</span><span class="nv">equals-exprs</span><span class="p">)))</span>
-</span></span><span class="line"><span class="cl">          <span class="p">)))</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">max-nested-parentheses-raw</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">optimize</span> <span class="p">(</span><span class="nv">speed</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nv">safety</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="k">type</span> <span class="kt">simple-string</span> <span class="nv">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">n</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">result</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">type</span> <span class="kt">fixnum</span> <span class="nv">n</span> <span class="nv">result</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">dotimes</span> <span class="p">(</span><span class="nv">s--cur-idx</span> <span class="p">(</span><span class="nf">length</span> <span class="nv">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">ch</span> <span class="p">(</span><span class="nf">elt</span> <span class="nv">s</span> <span class="nv">s--cur-idx</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nf">member</span> <span class="nv">ch</span> <span class="o">&#39;</span><span class="p">(</span><span class="sc">#\(</span> <span class="sc">#\)</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nb">incf</span> <span class="nv">n</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">eql</span> <span class="sc">#\(</span> <span class="nv">ch</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">-1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nb">setf</span> <span class="nv">result</span> <span class="p">(</span><span class="nf">max</span> <span class="nv">n</span> <span class="nv">result</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">result</span><span class="p">))</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 </div>
+<p>
+여전히 타입을 지정해서 자동으로 타입추론, 최적화 하도록 했다.</p>
+<p>
+그런데 여전히 <code>dotimes</code>, <code>when</code>, <code>incf</code>, <code>max</code> 같은 커먼리습
+HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이런 것들도
+다 풀어서 작성해도 되겠지만 별 의미는 없을 것 같아서.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/leet-code-1614/">CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
+					<time>🗓️ 20 Oct, 2020</time>
+					<br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+문제
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><a href="https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/">https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/</a></p>
 </div>
 </div>
 <div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
-synopsis / usage
+작성한 코드     
 </h2>
 <div id="outline-text-headline-2" class="outline-text-2">
 <div class="src src-lisp">
@@ -221,44 +166,84 @@ synopsis / usage
 </span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
 </span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
 </span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">define-data-class</span> <span class="nv">animal</span> <span class="p">()</span> <span class="p">(</span><span class="nv">name</span> <span class="nv">age</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">define-data-class</span> <span class="nv">bird</span> <span class="p">(</span><span class="nv">animal</span><span class="p">)</span> <span class="p">())</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">equals:equals</span> <span class="p">(</span><span class="nf">make-instance</span> <span class="ss">&#39;animal</span> <span class="ss">:name</span> <span class="s">&#34;foo&#34;</span> <span class="ss">:age</span> <span class="mi">18</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nf">make-instance</span> <span class="ss">&#39;animal</span> <span class="ss">:name</span> <span class="s">&#34;foo&#34;</span> <span class="ss">:age</span> <span class="mi">18</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">max-nested-parentheses</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">optimize</span> <span class="p">(</span><span class="nv">speed</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nv">safety</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="k">type</span> <span class="kt">simple-string</span> <span class="nv">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">loop</span> <span class="nv">with</span> <span class="nv">n</span> <span class="kt">fixnum</span> <span class="nf">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">          <span class="nv">for</span> <span class="nv">ch</span> <span class="nv">across</span> <span class="nv">s</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">when</span> <span class="p">(</span><span class="nf">member</span> <span class="nv">ch</span> <span class="o">&#39;</span><span class="p">(</span><span class="sc">#\(</span> <span class="sc">#\)</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">do</span> <span class="p">(</span><span class="nb">incf</span> <span class="nv">n</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">eql</span> <span class="sc">#\(</span> <span class="nv">ch</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">-1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">             <span class="nv">maximizing</span> <span class="nv">n</span><span class="p">))</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 </div>
-<p>
-  오랬만에 재밌었다.</p>&hellip;
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+코드 의도
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<ol>
+<li>우아한 코드보다는 공간복잡도가 <code>O(1)</code> 이고 싶었다.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+<em>Edit</em>
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<ol>
+<li>
+<p>SBCL에 맞춰 코드에 타입을 지정해줘봤다.</p>
+<ol>
+<li>결과 어셈블리 코드가 조금 짧아졌다.</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/ping-15thu-2nd/">Ping (2nd) 15/Oct/2020</a></h1>
-					<time>🗓️ 15 Oct, 2020</time>
+					<h1 class="title"><a href="/posts/2020-10oct/ping-19mon/">Ping 19/Oct/2020</a></h1>
+					<time>🗓️ 19 Oct, 2020</time>
 					<br><div class="description">
 						
-						<p>
-… &#39;田大&#39;이라고 적혀 있었다.</p>
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+가을
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>도르트문트 집은 꽤 평화로웠다. 날씨가 좋은 날도 많고 공기도
+  맑았다. 한가한 주말이 되면 창문을 열고 잔디가 깔린 정원을 보며
+  담배를 태우고 커피를 내려 마셨다.</p>
 <p>
-다른 한문으로 쓰여 있어 읽지 못하는 각각의 수 많은 바램들과 이름들
-사이로 삐뚤빼뚤한 어색한 글씨로 그렇게 적혀 있었었다.</p>
+  그리고 지하세탁장에 빨래를 돌려놓고 핑크플로이드의 다크사이드 오브
+  더 문 앨범을 좋은 스피커로 틀어놓았다. 잘 어울렸다.</p>
 <p>
-너무 단순한 이름, 그리고 설명이 붙어 있었듯이, 다른 사람들처럼 많은
-이야기를 적고 싶었지만, 아이여서 그랬는지, 아니면 글을 몰라 그랬는지,
-이름만이라도 적어놓은 그 못그린 그림 같은 두 글자를 읽었다.</p>
+  서울의 변두리에서 맞는 이번 가을은 그런 기분이다. 조용하고 가을
+  햇살과 공기가 맑아졌다.</p>
 <p>
-누군가 아주 오래 전에 그 사람도 아마도 나와 별로 다를 것도 없는
-고민들을 하며 매일을 살았었던 것을 느꼈다.</p>
-<p>
-아주 오랜 세월이 흐른 후에야 그렇게 만났었던 모르는 어떤 사람이
-떠올랐다.</p>&hellip;
+  그리고 핑크플로이드를 그렇게 여유롭게 들을 수 있었다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+오늘 읽으려는 글
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p><a href="http://www.mcs.vuw.ac.nz/comp/Publications/CS-TR-02-9.abs.html">http://www.mcs.vuw.ac.nz/comp/Publications/CS-TR-02-9.abs.html</a></p>
+</div>
+</div>&hellip;
 						
 					</div>
                                         
@@ -281,11 +266,11 @@ synopsis / usage
             <a href="/page/18/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(19/57)</span>
+        <span class="page-number">(19/58)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/20/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/57/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

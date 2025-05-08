@@ -89,68 +89,246 @@
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar18--01-xrandr/">xrandr 🖥️모니터 연결 자동전환 스크립트🐫</a></h1>
-					<time>🗓️ 18 Mar, 2025</time>
+					<h1 class="title"><a href="/posts/2025-05may/term-ddakong-initial-release/">ddakong 한글입력기 릴리즈</a></h1>
+					<time>🗓️ 02 May, 2025</time>
 					<br><div class="description">
 						
-						<p>
-요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.
-다 편한데, 🪟윈도나 icewm처럼 <code>Windows+P</code> 누르면, 다음 모니터연결
-조합으로 전환되는게 부러웠다.</p>
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+<a href="https://github.com/ageldama/term-ddakong">https://github.com/ageldama/term-ddakong</a>
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
 <p>
-매번 터미널 열고 <code>xrandr</code> 치거나, <a href="https://christian.amsuess.com/tools/arandr/">arandr</a> 열어서 세팅하기 귀찮으니까.
-(물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)</p>
+일단 내가 fbterm에서 가볍게 한글쓰고 싶어서 만듦.</p>
 <p>
-그래서 그냥 윈도의 <code>Win+P</code> 키처럼 동작하도록 스크립트를 짜봤다.</p>
+ansi c99만으로 가볍게 작성했다. 다른 라이브러리 의존않고.
+만족스럽다. 빌드하니까 25 KB 정도 나오네. 만족.</p>
 <p>
-🐫 <a href="https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl">https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl</a></p>
-<p>
-Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.</p>
-<p>
-그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,
-예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별
-생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤</p>&hellip;
+더 했으면 하는 일들은:</p>
+<ol>
+<li>lua -or- dlopen 등으로 다른 입력기 지원하기 (예: 3벌식)</li>
+<li>utf-8 이외의 인코딩 지원하기</li>
+<li>raspberry pi 32/64 바이너리 릴리즈 (armhf, arm64)</li>
+<li>소스코드 조금 포매팅, 주석작성, 문서화</li>
+<li>빌드개선 : 사용하는 함수 등 체크하기 강화 (예: <code>epoll</code> …어차피
+거의 다 있지만.)</li>
+<li>스크린샷? ㅎㅎ</li>
+</ol>
+</div>
+</div>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/">Hugo &#43; pagefind 붙여서 검색기능 추가했다</a></h1>
-					<time>🗓️ 16 Mar, 2025</time>
+					<h1 class="title"><a href="/posts/2025-04apr/2025-04apr09--01-i3-bindsyms-rofi-dmenu/">i3 키바인딩을 rofi으로 확인하고 실행하기</a></h1>
+					<time>🗓️ 09 Apr, 2025</time>
 					<br><div class="description">
 						
 						<p>
-<a href="https://pagefind.app/">https://pagefind.app/</a></p>
+<a href="https://i3wm.org/">i3wm</a> 써서 매일 리눅스 사용.</p>
 <p>
-페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는
-pagefind을 붙여봤다.</p>
+키보드만 써서 사용하는건 좋은데, 키바인딩이 늘어나서 맨날 i3 키바인딩
+까먹음.</p>
 <p>
-처음엔 좀 어색했는데, 커스터마이징을 별로 제공하지 않기는 했지만,
-그래도 이것저것 뜯어서 CSS도 마음에 들게 좀 수정하고, JS/DOM 이벤트도
-적당히 잡아서 마음에 들게 동작하게 고쳤다.</p>
+그래서 만들어봤다:</p>
+<ol>
+<li>현재 i3 config에 등록된 키바인딩 자동으로 표시 🖥️</li>
+<li><a href="https://github.com/davatorium/rofi">rofi</a>에서 선택하면, 그걸 또 실행까지 해줌 🚀</li>
+</ol>
 <p>
-별로라고 생각하던 부분들도 다 뜯어 고치고 하면서 더 블로그가 마음에
-들어진다. 🤠</p>&hellip;
+<img src="/2025-04apr/i3-bindsyms-rofi-dmenu.png" alt="/2025-04apr/i3-bindsyms-rofi-dmenu.png" title="/2025-04apr/i3-bindsyms-rofi-dmenu.png" /></p>
+<p>
+gist: <a href="https://gist.github.com/ageldama/377d00159cfe0cb387f20297ca6a5e6b">https://gist.github.com/ageldama/377d00159cfe0cb387f20297ca6a5e6b</a></p>
+<div class="src src-perl">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
+</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
+</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
+</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
+</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
+</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
+</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
+</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
+</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
+</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
+</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
+</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
+</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
+</span><span class="lnt" id="29"><a class="lnlinks" href="#29">29</a>
+</span><span class="lnt" id="30"><a class="lnlinks" href="#30">30</a>
+</span><span class="lnt" id="31"><a class="lnlinks" href="#31">31</a>
+</span><span class="lnt" id="32"><a class="lnlinks" href="#32">32</a>
+</span><span class="lnt" id="33"><a class="lnlinks" href="#33">33</a>
+</span><span class="lnt" id="34"><a class="lnlinks" href="#34">34</a>
+</span><span class="lnt" id="35"><a class="lnlinks" href="#35">35</a>
+</span><span class="lnt" id="36"><a class="lnlinks" href="#36">36</a>
+</span><span class="lnt" id="37"><a class="lnlinks" href="#37">37</a>
+</span><span class="lnt" id="38"><a class="lnlinks" href="#38">38</a>
+</span><span class="lnt" id="39"><a class="lnlinks" href="#39">39</a>
+</span><span class="lnt" id="40"><a class="lnlinks" href="#40">40</a>
+</span><span class="lnt" id="41"><a class="lnlinks" href="#41">41</a>
+</span><span class="lnt" id="42"><a class="lnlinks" href="#42">42</a>
+</span><span class="lnt" id="43"><a class="lnlinks" href="#43">43</a>
+</span><span class="lnt" id="44"><a class="lnlinks" href="#44">44</a>
+</span><span class="lnt" id="45"><a class="lnlinks" href="#45">45</a>
+</span><span class="lnt" id="46"><a class="lnlinks" href="#46">46</a>
+</span><span class="lnt" id="47"><a class="lnlinks" href="#47">47</a>
+</span><span class="lnt" id="48"><a class="lnlinks" href="#48">48</a>
+</span><span class="lnt" id="49"><a class="lnlinks" href="#49">49</a>
+</span><span class="lnt" id="50"><a class="lnlinks" href="#50">50</a>
+</span><span class="lnt" id="51"><a class="lnlinks" href="#51">51</a>
+</span><span class="lnt" id="52"><a class="lnlinks" href="#52">52</a>
+</span><span class="lnt" id="53"><a class="lnlinks" href="#53">53</a>
+</span><span class="lnt" id="54"><a class="lnlinks" href="#54">54</a>
+</span><span class="lnt" id="55"><a class="lnlinks" href="#55">55</a>
+</span><span class="lnt" id="56"><a class="lnlinks" href="#56">56</a>
+</span><span class="lnt" id="57"><a class="lnlinks" href="#57">57</a>
+</span><span class="lnt" id="58"><a class="lnlinks" href="#58">58</a>
+</span><span class="lnt" id="59"><a class="lnlinks" href="#59">59</a>
+</span><span class="lnt" id="60"><a class="lnlinks" href="#60">60</a>
+</span><span class="lnt" id="61"><a class="lnlinks" href="#61">61</a>
+</span><span class="lnt" id="62"><a class="lnlinks" href="#62">62</a>
+</span><span class="lnt" id="63"><a class="lnlinks" href="#63">63</a>
+</span><span class="lnt" id="64"><a class="lnlinks" href="#64">64</a>
+</span><span class="lnt" id="65"><a class="lnlinks" href="#65">65</a>
+</span><span class="lnt" id="66"><a class="lnlinks" href="#66">66</a>
+</span><span class="lnt" id="67"><a class="lnlinks" href="#67">67</a>
+</span><span class="lnt" id="68"><a class="lnlinks" href="#68">68</a>
+</span><span class="lnt" id="69"><a class="lnlinks" href="#69">69</a>
+</span><span class="lnt" id="70"><a class="lnlinks" href="#70">70</a>
+</span><span class="lnt" id="71"><a class="lnlinks" href="#71">71</a>
+</span><span class="lnt" id="72"><a class="lnlinks" href="#72">72</a>
+</span><span class="lnt" id="73"><a class="lnlinks" href="#73">73</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl">  <span class="c1">#!/usr/bin/env perl</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">use</span> <span class="nn">strict</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">use</span> <span class="nn">warnings</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">use</span> <span class="nn">Carp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">use</span> <span class="nn">IPC::Open2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">sub</span> <span class="nf">escape_html</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$_</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="sr">s/&amp;/&amp;amp;/g</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="sr">s/&lt;/&amp;lt;/g</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="sr">s/&gt;/&amp;gt;/g</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="sr">s/&#39;&#34;&#39;/&amp;quot;/g</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">my</span> <span class="nv">@bindsyms</span> <span class="o">=</span> 
+</span></span><span class="line"><span class="cl">    <span class="nb">grep</span><span class="p">(</span><span class="sr">/^bindsym/</span><span class="p">,</span> <span class="c1"># only `bindsym`-s.</span>
+</span></span><span class="line"><span class="cl">         <span class="nb">grep</span><span class="p">(</span><span class="o">!</span><span class="sr">/(^#)|(^\s*$)/</span><span class="p">,</span> <span class="c1"># omit comment or empty lines.</span>
+</span></span><span class="line"><span class="cl">              <span class="sx">qx&lt;i3-msg -t get_config&gt;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nb">chomp</span> <span class="nv">@bindsyms</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nb">map</span> <span class="p">{</span> <span class="sr">s/^bindsym //g</span> <span class="p">}</span> <span class="nv">@bindsyms</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">my</span> <span class="nv">@key_to_cmd</span> <span class="o">=</span> <span class="nb">map</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="nv">@m</span> <span class="o">=</span> <span class="nv">$_</span> <span class="o">=~</span><span class="sr"> /^(?&lt;key&gt;\S+)\s+(?&lt;cmd&gt;.+)$/</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">\</span><span class="nv">@m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="nv">@bindsyms</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">my</span> <span class="nv">@dmenu_items</span> <span class="o">=</span> <span class="nb">map</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nv">$cmd</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$key</span> <span class="o">=</span> <span class="n">escape_html</span><span class="p">(</span><span class="nv">$key</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$key</span> <span class="o">=</span> <span class="s">&#34;&lt;span size=&#39;large&#39; weight=&#39;heavy&#39;&gt;$key&lt;/span&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$cmd</span> <span class="o">=</span> <span class="n">escape_html</span><span class="p">(</span><span class="nv">$cmd</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$cmd</span> <span class="o">=</span> <span class="s">&#34;\t\t$cmd&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="nv">$result</span> <span class="o">=</span> <span class="nb">join</span> <span class="s">&#34;\n&#34;</span><span class="p">,</span> <span class="nv">$key</span><span class="p">,</span> <span class="nv">$cmd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$result</span> <span class="o">.=</span> <span class="s">&#34;\0&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="nv">@key_to_cmd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># p @dmenu_items;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">my</span> <span class="nv">$pid</span> <span class="o">=</span> <span class="n">open2</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="nv">$stdout</span><span class="p">,</span> <span class="k">my</span> <span class="nv">$stdin</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;rofi -dmenu -p &#39;i3 keybindings&#39; -sep &#39;\\0&#39; -eh 2 -markup-rows -format i&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">)</span> <span class="ow">or</span> <span class="n">confess</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">foreach</span> <span class="p">(</span><span class="nv">@dmenu_items</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="nv">$stdin</span> <span class="nv">$_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># print $_;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">close</span><span class="p">(</span><span class="nv">$stdin</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">my</span> <span class="nv">$stdout_</span> <span class="o">=</span> <span class="k">do</span> <span class="p">{</span> <span class="nb">local</span><span class="p">(</span><span class="vg">$/</span><span class="p">);</span> <span class="sr">&lt;$stdout&gt;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">close</span><span class="p">(</span><span class="nv">$stdout</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nb">waitpid</span><span class="p">(</span><span class="nv">$pid</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">my</span> <span class="nv">$exit_code</span> <span class="o">=</span> <span class="vg">$?</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># print STDERR &#34;exit_code: $exit_code\n&#34;;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nv">$exit_code</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">chomp</span> <span class="nv">$stdout_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$key_to_cmd</span><span class="p">[</span><span class="nv">$stdout_</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&#34;STDOUT: [$stdout_] =&gt; [$cmd]\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="sb">`i3-msg &#39;$cmd&#39;`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&#34;EXIT: $exit_code\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+요걸 저장하고, <code>$HOME/.config/i3/config</code> 에 다음을 추가하여 ⌨️ <code class="verbatim">Super+F1</code> 으로 등록:</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar15--01-new-css/">css, design 새단장 &#43; dark-mode</a></h1>
-					<time>🗓️ 15 Mar, 2025</time>
+					<h1 class="title"><a href="/posts/2025-04apr/2025-04apr02--01-antix-linux/">가볍고 빠른 antiX Linux &#43; runit, koreader 그리고 bloatware</a></h1>
+					<time>🗓️ 02 Apr, 2025</time>
 					<br><div class="description">
 						
-						<p>
-css 더 단순하게 만들고, 디자인들도 그냥 내 마음에 들게 뜯어 고침.
-다크모드도 작업해서 만들어 넣고.</p>
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+antiX linux
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>오래된 랩탑으로 fedora 그냥 아무 생각없이 대충 쓰는데 좀 버벅. 어차피
+메인드라이버도 아니고 그냥 그러려니 하고 살다가, 좀 답답해서
+lightweight linux distro을 골라봤다.</p>
 <p>
-css 애니메이션도 작업해 넣었다가, gpu 너무 쓰는거 같아서 그냥 끄고
-정적효과로만 냅둠.</p>
+<a href="https://antixlinux.com/">https://antixlinux.com/</a></p>
 <p>
-hugo 같은 static site generator이 좋은 점, 그리고 그냥 단순한 css와
-오래된 jquery으로 그냥 뚝딱거려서 작업.</p>&hellip;
+거기에 이전에 시도했던 void linux에서 마음에 들었었던 runit을 init으로
+쓰는 spin으로 선택해서 설치했다.</p>
+<p>
+결과는… 놀라울 정도로 가벼웠다.</p>
+<p>
+luks disk encryption + btrfs을 기존에는 적용했다가(btrfs이
+기본옵션이어서 귀찮아서), 이번에는 그냥 ext4만으로 설치해서 더
+가벼운걸까 싶기도 하고.</p>
+<p>
+systemd은 익숙해질수로 편안해지기는 했었는데, 그럼에도 확실히 전통적인
+linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었다.</p>&hellip;
 						
 					</div>
                                         
@@ -173,11 +351,11 @@ hugo 같은 static site generator이 좋은 점, 그리고 그냥 단순한 css�
             <a href="/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(2/57)</span>
+        <span class="page-number">(2/58)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/57/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sun, 05 Nov 2023 05:40:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 May 2025 19:17:25 +0900</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/freebsd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ddakong v1.1 릴리즈: FreeBSD / kqueue</title>
+      <link>https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.1-release/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.1-release/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;릴리즈 v1.1&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  freebsd 지원: 빌드가능하도록 수정 + kqueue 이벤트처리 추가&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  (원래는 epoll/linux만 지원)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&amp;lt;&lt;a href=&#34;https://github.com/ageldama/term-ddakong/releases/tag/v1.1&#34;&gt;https://github.com/ageldama/term-ddakong/releases/tag/v1.1&lt;/a&gt;&amp;gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;darwin/osx, openbsd 등은 빌드+실행될거 같은데 확신은 못하겠믐.&lt;/li&gt;&#xA;&lt;li&gt;매 릴리즈마다 크로스컴파일해서 바이너리릴리즈해왔는데, 리눅스는&#xA;aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라&#xA;이번엔 스킵.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;…오랬만에 freebsd 켜서 쓰는데, 반응속도감 역시 엄청좋다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정</title>
       <link>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/</link>

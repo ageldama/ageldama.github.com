@@ -89,65 +89,95 @@
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2021-06jun/ping-19sat/">Ping 19/Jun/2021</a></h1>
-					<time>🗓️ 19 Jun, 2021</time>
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun11-ping/">Ping 11/06/2022</a></h1>
+					<time>🗓️ 11 Jun, 2022</time>
 					<br><div class="description">
 						
-						<p>
-그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,
-github repositories도 대부분은 private으로 변경해놓고 지냈었다.</p>
-<p>
-하지만 그래도 coding과 글쓰기는 계속 하고 있었었고, 글을 조금씩이라도 공개할까 싶어 다시 문을 연다.</p>
-<p>
-그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,</p>
-<p>
-Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것,
-또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.</p>
-<p>
-그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.
-이제는 너무 이맥스 + evil 설정 등에 익숙해져서 vim을 오히려 더 설정해서 쓰고 싶은 생각도 들지 않는다.
-..하지만 다른 이들에게 이맥스를 쓰라고 권하기는 머뭇거려진다. 어릴 때부터 이맥스를 사용했고 그렇게 습관으로 하나씩 하나씩 이맥스 컨벤션과 모드들에 익숙해져서 시간이 오래 걸렸었던 것 같으니까.</p>&hellip;
+						<div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#jekyll--hugo">Jekyll &ndash;&gt; Hugo</a></li>
+    <li><a href="#생각">생각</a></li>
+  </ul>
+</nav>
+</div>
+
+<hr>
+<h1 id="jekyll--hugo">Jekyll &ndash;&gt; Hugo</h1>
+<p>&hellip;Jekyll에서, 결국 다시 가볍고 그냥 잘 동작하는 Hugo으로 블로그 변경.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h1 id="생각">생각</h1>
+<p>남들이 뭐래도 별 관심 없이.
+실은 그냥 포장지와 리본장식만 변해가는거고,</p>
+<p>반면.
+그 포장지, 리본장식과 그 의미와 가치를 제대로 분간해내지 못하니까.</p>
+<p>도구를 도구로 보면 안되고, 도구가 나를 쓴다는것을 이해해야 하는데.
+그래서 도구를 이용해 자유로워질거라 착각하면, 도구에 얽메여 끌려만 가면&hellip;,
+그런데 도구에 이용당해 복종할수록 자유로워진다면 &hellip;이겠지.</p>
+<p>끌려가며, 내가 생각치 않은곳에 끌려와 진짜 성장을 얻기도 하는 이도 있고,
+끌려가며 원치 않는 방향으로 가며 그게 성장이라고 허울로 하기도 하는 이도 있고.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-11nov/ping-29sun/">Ping 29/Nov/2020</a></h1>
-					<time>🗓️ 29 Nov, 2020</time>
+					<h1 class="title"><a href="/posts/2022-jekyll/2022-06-08--02-pytest-fixtures-and-complexity-mgmt/">pytest fixtures와 의존성관리, 그리고 복잡도관리</a></h1>
+					<time>🗓️ 08 Jun, 2022</time>
 					<br><div class="description">
 						
-						<p>
-2020년이 지나간다. 금새 또 봄이 올텐데 기대된다.</p>&hellip;
+						<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12">12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13">13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14">14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15">15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16">16</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ...tests/conftest.py</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pytest</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@pytest.fixture</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">name</span><span class="p">():</span> <span class="k">return</span> <span class="s1">&#39;Pokemon&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@pytest.fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="s1">&#39;function&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">monster</span><span class="p">(</span><span class="n">name</span><span class="p">):</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ...tests/foo_test.py :</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_beast</span><span class="p">(</span><span class="n">monster</span><span class="p">):</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># &lt;--- `def monster(..)`의 결과를 주입 받음.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><a href="https://docs.pytest.org/en/6.2.x/fixture.html">https://docs.pytest.org/en/6.2.x/fixture.html</a></p>
+<p>&hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨.
+내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-11nov/ping-23tue/">Ping 23/Nov/2020</a></h1>
-					<time>🗓️ 23 Nov, 2020</time>
+					<h1 class="title"><a href="/posts/2022-jekyll/2022-06-08--01-asshole-test/">(HN) &#34;asshole test&#34;</a></h1>
+					<time>🗓️ 08 Jun, 2022</time>
 					<br><div class="description">
 						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-logitech k480 bluetooth keyboard
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p><a href="https://www.logitech.com/ko-kr/product/multi-device-keyboard-k480">https://www.logitech.com/ko-kr/product/multi-device-keyboard-k480</a></p>
-<p>
-  받아서 묵혀두던 키보드. 팬터그래프 방식을 쓰던 것과는 또 다르지만
-  그럭저럭 마음에 든다.</p>
-<p>
-  가장 마음에 드는 부분은, 키들끼리의 간격이 적당하고, 키보드
-  레이아웃에서 마우스 이동이 없도록 키패드 부분이 없는 방식인 점,
-  그리고 장난감스러운 키보드지만 그렇다고 오타가 넘치도록 너무 대충
-  만들어진 것은 아닌 것 같아서 그럭저럭 짜증을 유발하지 않으면서
-  적당히 쓸 수 있는 것 같아서.</p>
-<p>
-  책상에 공간을 너무 잡아먹지도 않아서 그럭저럭 괜찮다.</p>
-<p>
-  다만 블루투스 방식이어서, 건전지를 써서 내게는 조금은 감점.</p>&hellip;
+						<blockquote>
+<p>Some years back I applied to join IBM&rsquo;s grad scheme, there was a peculiar stage to the process I&rsquo;ve not seen elsewhere. It was during the onsite day, where a batch of 20 or so applicants were put through various tests in an IBM office. They called it the &ldquo;group test&rdquo;; around 8 of us were led to a room and asked to solve a puzzle together. Each of us was given an information pack, there was a white board, and a timer ticking down from 60 minutes. At first there was silence as we looked at our packs, then the first voice: &ldquo;Let&rsquo;s pool our information&rdquo;, someone stands up by the whiteboard, grasping a marker. Silence, it&rsquo;s not clear how this information should be parsed. One person starts reading theirs out word for word. This is not going to scale. Someone interrupts. Before long the whiteboard leader has been deposed and another is wielding the marker. Then another fights for control. The 60 minutes has run out, the puzzle is unsolved. Confused and drained we head off to the next test.</p>&hellip;
 						
 					</div>
                                         
@@ -170,11 +200,11 @@ logitech k480 bluetooth keyboard
             <a href="/page/13/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(14/57)</span>
+        <span class="page-number">(14/58)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/15/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/57/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
