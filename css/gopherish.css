@@ -111,30 +111,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2em;
 }
 
-h1::before {
+section.list-item {
+  border-bottom: dashed 1px red;
+}
+
+h1.title::before {
   content: '# ';
 }
 
-h2::before {
-  content: '## ';
-}
-
-h3::before {
-  content: '### ';
-}
-
-h4::before {
-  content: '#### ';
-}
-
-h5::before {
-  content: '##### ';
-}
-
-h6::before {
-  content: '###### ';
-}
-
+/*
+h2::before {  content: '## '; }
+h3::before {  content: '### '; }
+h4::before {  content: '#### '; }
+h5::before {  content: '##### '; }
+h6::before {  content: '###### '; }
+*/
 /* Footer */
 footer {
   align-items: center;

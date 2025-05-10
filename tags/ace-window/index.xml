@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ace-Window on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/ace-window/</link>
+    <link>http://localhost:1313/tags/ace-window/</link>
     <description>Recent content in Ace-Window on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 22 Jan 2017 14:15:00 +0100</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/ace-window/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ace-window/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs에서 window 전환을 편하게, ace-window</title>
-      <link>https://ageldama.github.io/posts/2017/2017-01-22-emacs-ace-window/</link>
+      <link>http://localhost:1313/posts/2017/2017-01-22-emacs-ace-window/</link>
       <pubDate>Sun, 22 Jan 2017 14:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/posts/2017/2017-01-22-emacs-ace-window/</guid>
+      <guid>http://localhost:1313/posts/2017/2017-01-22-emacs-ace-window/</guid>
       <description>&lt;p&gt;이맥스에서 코딩하거나 마크다운이나 Org으로 글을 쓰고 정리하는데, 그간&#xA;그냥 그럭저럭 나는 이맥스를 나한테 맞춰서 사용하고 있다고 생각하고&#xA;있었던거 같다. &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;그런데, 항상 뭔가 불편한데, 그냥 바쁘다는 이유로 깊이 생각은 안하고&#xA;대충 대충 때우면서 사용해왔었던게 있었다. 바로 window 끼리 전환하는&#xA;방법.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;C-x 2&lt;/code&gt; 이나 &lt;code&gt;C-x 3&lt;/code&gt;으로 창을 분할해놓고 쓰는게 보통인데, 이때 나는&#xA;그냥 아무 생각없이 &lt;code&gt;C-x o&lt;/code&gt;만을 이용해서 &lt;em&gt;다음 윈도우&lt;/em&gt; 으로&#xA;이동만해왔었다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;그런데&lt;/em&gt;, 창이 3개 이상이 되고, 현재 창의 &lt;em&gt;다음 창&lt;/em&gt; 이 아니라, &lt;em&gt;이전 창&lt;/em&gt; 으로 이동하고 싶으면?&lt;/p&gt;</description>
     </item>
   </channel>
