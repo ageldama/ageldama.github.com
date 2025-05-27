@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shell on 아겔로그</title>
-    <link>http://localhost:1313/tags/shell/</link>
+    <link>https://ageldama.github.io/tags/shell/</link>
     <description>Recent content in Shell on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 29 Dec 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>moonshot.el 최초 릴리즈</title>
-      <link>http://localhost:1313/posts/2019-12dec/moonshot-1st-rel/</link>
+      <link>https://ageldama.github.io/posts/2019-12dec/moonshot-1st-rel/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2019-12dec/moonshot-1st-rel/</guid>
+      <guid>https://ageldama.github.io/posts/2019-12dec/moonshot-1st-rel/</guid>
       <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://github.com/ageldama/moonshot&#34;&gt;moonshot.el&lt;/a&gt; 을 만들어서 공개했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이맥스를 써오면서 불편하다고 생각한걸 간단히 하고 싶었었다:&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;불편함들&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-3&#34;&gt;&#xA;&lt;h3 id=&#34;headline-2&#34;&gt;&#xA;빌드 디렉토리&#xA;&lt;/h3&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-3&#34;&gt;&#xA;&lt;p&gt;&#xA;   Projectile을 사용하니까 프로젝트 디렉토리는 관리가 쉬운데, 빌드&#xA;   디렉토리는 관리가 어려웠다.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;아예 Projectile이 추론하는 디렉토리 바깥에 빌드 디렉토리는&#xA;위치하는 경우도 있으니까.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;예) GNU Autotools &lt;code&gt;configure&lt;/code&gt; 이나 CMake으로 작업할 때,&#xA;소스트리 바깥에 빌드 디렉토리를 걸어놓아서 정리를 깔끔하게 할&#xA;수 있으니까.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;그런데 이 &amp;#39;빌드 디렉토리&amp;#39;가 중요한게,&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;말그대로 컴파일한 &lt;code&gt;.o&lt;/code&gt; 파일이나 최종 결과 실행파일 등이&#xA;여기에 쌓이니까&lt;/li&gt;&#xA;&lt;li&gt;디버깅, 테스트를 위해서 실행파일을 실행하거나,&lt;/li&gt;&#xA;&lt;li&gt;심지어 &lt;code&gt;make&lt;/code&gt; 이나 &lt;code&gt;ninja&lt;/code&gt; 같은 빌드 커맨드를 실행하기&#xA;위해서도 빌드 디렉토리를 지정하거나 이동해서 실행해야 하니까&#xA;귀찮다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-3&#34;&gt;&#xA;&lt;h3 id=&#34;headline-3&#34;&gt;&#xA;compilation-mode, realgud: 실행 파일 찾아서 실행하기, 디버깅하기&#xA;&lt;/h3&gt;&#xA;&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-3&#34;&gt;&#xA;&lt;p&gt;&#xA;   예전에 만들어 써오던 &lt;a href=&#34;https://github.com/ageldama/configs/blob/a24f4606cd95a41c9d3140dac7c0c298883ae72a/emacs/c-c%252B%252B-gtags%252Brtags.el#L193&#34;&gt;이맥스를 위한 C/C++ 설정&lt;/a&gt; 처럼,&lt;/p&gt;</description>
     </item>
   </channel>
