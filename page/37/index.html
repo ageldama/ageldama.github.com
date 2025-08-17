@@ -89,60 +89,6 @@
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a></h1>
-					<time>🗓️ 30 Dec, 2019</time>
-					<br><div class="description">
-						
-						<p>
-다음의 간단한 코드를 읽어보자.</p>
-<div class="src src-js">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
-</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
-</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
-</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
-</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;lexical&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">maker</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;dynamic&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">assert</span><span class="p">(</span><span class="nx">maker</span><span class="p">()()</span> <span class="o">==</span> <span class="s2">&#34;???&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-<code>maker()()</code> 의 결과는 <code>&#39;dynamic&#39;</code> 이다.</p>
-<p>
-심지어, 맨 마지막에 있는 <code>{..}</code> 블록을 넘어가서도 <code>x</code> 의 값은 여전이
-<code>&#39;dynamic&#39;</code> 이다.</p>
-<p>
-자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난
-느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도
-속하지 않는 느낌이고, 이번에 새로 추가된 <code>let</code> 도 이해하기가 어려운게
-아니라 그냥 제대로 망가져 있는거 같다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-12dec/direnv/">direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기</a></h1>
 					<time>🗓️ 29 Dec, 2019</time>
 					<br><div class="description">
@@ -234,6 +180,31 @@ compilation-mode, realgud: 실행 파일 찾아서 실행하기, 디버깅하기
 <div id="outline-text-headline-3" class="outline-text-3">
 <p>
    예전에 만들어 써오던 <a href="https://github.com/ageldama/configs/blob/a24f4606cd95a41c9d3140dac7c0c298883ae72a/emacs/c-c%252B%252B-gtags%252Brtags.el#L193">이맥스를 위한 C/C++ 설정</a> 처럼,</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/look-back-2018-2019/">2018, 2019년을 돌아보며</a></h1>
+					<time>🗓️ 21 Dec, 2019</time>
+					<br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+&#34;일의 기쁨과 슬픔&#34;
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>2018년은 정말 바쁘게 회사에 시간을 쏟으며 보낸거 같다. 그렇다고
+  개인적인 발전이나 성과를 얻을만한 일은 아니었다. 오히려 알던 것들을
+  소비하고 엔지니어링 이외의 분야에 많은 흥미로운 경험과 성장을 했던거
+  같다. 그리고 한국을 떠날때 싫었던 점들을 역시 그대로 느낄 수 밖에
+  없었던거 같다.</p>
+<p>
+  그리고 2019년에는 한국에서 다시 시작했었던, 내겐 그다지 만족스럽지
+  못했던 회사생활을 정리했다. 정리하는데 반년 정도가 걸렸다. 나도
+  우유부단하게 괜한, 그리고 헛된 기대를 했었기 때문에 시간을 오래
+  끌었었는데, 문제를 경험하고 처음 받았던 인상과 결정이 맞았다.</p>&hellip;
 						
 					</div>
                                         

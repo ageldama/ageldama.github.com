@@ -7,15 +7,8 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sun, 17 Aug 2025 13:21:50 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 May 2025 19:17:25 +0900</lastBuildDate>
     <atom:link href="https://ageldama.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Life</title>
-      <link>https://ageldama.github.io/categories/life/</link>
-      <pubDate>Sun, 17 Aug 2025 13:21:50 +0000</pubDate>
-      <guid>https://ageldama.github.io/categories/life/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Ddakong</title>
       <link>https://ageldama.github.io/categories/ddakong/</link>
@@ -49,6 +42,13 @@
       <link>https://ageldama.github.io/categories/programming/</link>
       <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
       <guid>https://ageldama.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Life</title>
+      <link>https://ageldama.github.io/categories/life/</link>
+      <pubDate>Sat, 23 Mar 2024 15:46:14 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/life/</guid>
       <description></description>
     </item>
     <item>
