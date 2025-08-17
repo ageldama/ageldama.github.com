@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Text-Editor on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/text-editor/</link>
+    <link>http://localhost:1313/tags/text-editor/</link>
     <description>Recent content in Text-Editor on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Thu, 28 May 2020 00:00:01 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/text-editor/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/text-editor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>코드 편집기에 대한 생각</title>
-      <link>https://ageldama.github.io/posts/2020-05may/editors/</link>
+      <link>http://localhost:1313/posts/2020-05may/editors/</link>
       <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-05may/editors/</guid>
+      <guid>http://localhost:1313/posts/2020-05may/editors/</guid>
       <description>&lt;p&gt;&#xA;코드 편집기를 어떻게 써왔었는지 잠깐 생각해봤다:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;DOS시절: MS-DOS Editor.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GW-BASIC 시절에는 정말&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/MS-DOS_Editor&#34;&gt;https://en.wikipedia.org/wiki/MS-DOS_Editor&lt;/a&gt; 을 열심히 썼었던 것&#xA;같다.&lt;/li&gt;&#xA;&lt;li&gt;그리고 그 다음엔 &lt;a href=&#34;https://en.wikipedia.org/wiki/PowerBASIC#PowerBASIC_for_DOS_(PBDos)&#34;&gt;PowerBASIC for DOS&lt;/a&gt; 열심히 썼었다. QuickBASIC&#xA;같은 바이트코드으로 컴파일해서 .exe 파일에 인터프리터와&#xA;바이트코드를 embedding 하는 VB의 P-code 같은 가짜 컴파일 방식&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;이&#xA;아니라 정말 네이티브 코드로 컴파일해주고, 인라인 어셈블리와&#xA;메모리 조작이 가능한 베이직 컴파일러, IDE여서 좋은 환경이었던&#xA;것 같다.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;터보C 2.0 편집기. PowerBASIC이랑 유사해서 익숙하게 쓸 수 있었던&#xA;것 같다. 파워베이직도 그렇지만, 의외로 도스시절의 이런 IDE들이&#xA;F1 - Help 메뉴에서 항목별로 문서 정리가 잘 되어 있어서 읽으면서&#xA;즐거웠었던 것 같다. (초등학생~중학생이어서 영어를 잘 이해하지는&#xA;못했지만)&lt;/p&gt;</description>
     </item>
   </channel>

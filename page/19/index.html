@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.2">
+	<meta name="generator" content="Hugo 0.147.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
-	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
-	<meta property="og:url" content="https://ageldama.github.io/">
+	<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="아겔로그" />
+	<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="아겔로그">
   <meta property="og:locale" content="ko_kr">
@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="아겔로그">
 
 	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="http://localhost:1313/js/jquery-3.7.1.slim.min.js"></script>
 
 	        
 
@@ -25,9 +25,7 @@
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/gopherish.1242bbf08f4cfb418d62e1019df0673ebb7bf9d8e340366d8f96a17d1474bbf2.css" integrity="sha256-EkK78I9M&#43;0GNYuEBnfBnPrt7&#43;djjQDZtj5ahfRR0u/I=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/gopherish.css">
                 
             
         
@@ -42,7 +40,7 @@
 			<header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
     <nav>
@@ -87,6 +85,43 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">&#34;커먼리습 ASDF 불러오기 편하게 하기&#34; 대모험</a></h1>
+					<time>🗓️ 23 Oct, 2020</time>
+					<br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+ASDF와 system definition file 검색의 정석
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>이전에 <a href="/posts/2018-11nov/cl-asdf-custom-load-script/">ASDF을 이용하여 커먼리습 프로젝트의 의존성, 시스템을 로딩하기</a>
+  에 대해서 설명한 적이 있었다.</p>
+<p>
+  이전에 다룬 내용은 정석적으로 <code>$HOME/common-lisp</code> 디렉토리에 <code>.asd</code>
+  파일을 심볼릭링크를 걸고, <code>(asdf:load-system ..)</code> 을 시도하는
+  내용이었었다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Prototyping등 더 편안하게 혼자 코딩을 할 때는…
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>혼자 커먼리습 코딩을 하면서, 나는 더 간단하게 프로젝트를 시작하는
+  방법을 선호한다.</p>
+<p>
+  커먼리습이 파일 이름이나 경로에 대해서 의존하는 것이 아니고,
+  컴파일시점, 로딩시점에 순서에 따라 로딩해서 최종적으로 컴파일하여
+  적재한 결과 이미지를 더 중요하게 여기기 때문에, 그리고 그런 컴파일,
+  빌드, 로딩과 같은 모든 단계들 자체도 커먼리습 표현식 그자체로
+  동작하기 때문에 그냥 하나의 소스파일을 섹션별로 나눠서 작업하면
+  편리하다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item">
 					<h1 class="title"><a href="/posts/2020-10oct/leet-code-1614-2nd/">CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
@@ -213,42 +248,6 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/ping-19mon/">Ping 19/Oct/2020</a></h1>
-					<time>🗓️ 19 Oct, 2020</time>
-					<br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-가을
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>도르트문트 집은 꽤 평화로웠다. 날씨가 좋은 날도 많고 공기도
-  맑았다. 한가한 주말이 되면 창문을 열고 잔디가 깔린 정원을 보며
-  담배를 태우고 커피를 내려 마셨다.</p>
-<p>
-  그리고 지하세탁장에 빨래를 돌려놓고 핑크플로이드의 다크사이드 오브
-  더 문 앨범을 좋은 스피커로 틀어놓았다. 잘 어울렸다.</p>
-<p>
-  서울의 변두리에서 맞는 이번 가을은 그런 기분이다. 조용하고 가을
-  햇살과 공기가 맑아졌다.</p>
-<p>
-  그리고 핑크플로이드를 그렇게 여유롭게 들을 수 있었다.</p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-오늘 읽으려는 글
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p><a href="http://www.mcs.vuw.ac.nz/comp/Publications/CS-TR-02-9.abs.html">http://www.mcs.vuw.ac.nz/comp/Publications/CS-TR-02-9.abs.html</a></p>
-</div>
-</div>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -287,17 +286,6 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
       ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
   </div>
 </footer>
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
 <script>
   
 </script>

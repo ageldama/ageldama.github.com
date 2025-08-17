@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.2">
+	<meta name="generator" content="Hugo 0.147.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
-	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
-	<meta property="og:url" content="https://ageldama.github.io/">
+	<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="아겔로그" />
+	<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="아겔로그">
   <meta property="og:locale" content="ko_kr">
@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="아겔로그">
 
 	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="http://localhost:1313/js/jquery-3.7.1.slim.min.js"></script>
 
 	        
 
@@ -25,9 +25,7 @@
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/gopherish.1242bbf08f4cfb418d62e1019df0673ebb7bf9d8e340366d8f96a17d1474bbf2.css" integrity="sha256-EkK78I9M&#43;0GNYuEBnfBnPrt7&#43;djjQDZtj5ahfRR0u/I=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/gopherish.css">
                 
             
         
@@ -42,7 +40,7 @@
 			<header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
     <nav>
@@ -87,6 +85,29 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/blog-font/">블로그 폰트 적용</a></h1>
+					<time>🗓️ 21 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>그냥 CDN에서 내려받는 공개된 Noto 폰트를 적용했다. 깔끔하다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>어제는 <a href="https://dalgona.github.io/neodgm/">네오둥근모</a> 적용해서 완전 귀엽고 내 취향이기는했는데,
+그렇게 두면 안될것 같아서 좀 평범한 폰트로 바꿨다.</p>
+<p>깔끔하게 글이 눈에 잘 들어오고 CDN에서 내려받으니 빨라서 좋다.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.chungah.kr/use-notoserif-on-wordpress/">워드프레스에서 본명조(Noto Serif CJK KR) 폰트 사용하기</a> 이 포스팅을 참고. 고맙습니다. 글 쓰신분 아이디가 <em>이스크라</em>(러시아어 &lsquo;불꽃&rsquo;)이라니&hellip; 심장이 뜨거워진다.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-10oct/ping-20sun/">Ping 20/Oct/2019</a></h1>
@@ -168,32 +189,6 @@ portable하고 잘 굴러가는.</li>
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-10oct/ping-15tue/">Ping 15/Oct/2019</a></h1>
-					<time>🗓️ 15 Oct, 2019</time>
-					<br><div class="description">
-						
-						<p>커먼리습으로 간단한
-<a href="https://en.wikipedia.org/wiki/Stack-oriented_programming">스택기반</a>
-장난감 프로그래밍언어를 만들고있다.</p>
-<blockquote>
-<p><a href="https://github.com/ageldama/cl-toy-stack-lang">https://github.com/ageldama/cl-toy-stack-lang</a></p></blockquote>
-<p>튜링컴플릿이나 그런거 관심도 없고 사실 Parser도 적절하게 만들지 않았다.</p>
-<p>다만 유니코드 잘되고 쓸만한 lexer generator이 커먼리습에 있는지가 궁금했다.</p>
-<p>적당히 내일 정도면 어느 정도 완전히 굴러가는 프로그램으로 다 만들고 마무리 할 듯.</p>
-<p>처음에는 <a href="https://www.quicklisp.org/">QuickLisp</a> 에서 어떤 Lexer을
-써야할까 고민하다가, cl-lex 쓰다가 실망스러웠다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<p>그러다가 만난게 <a href="https://github.com/rigetti/alexa">Alexa</a> 인데, 가장
-마음에 드는 lexer generator.</p>
-<p><a href="https://www.rigetti.com/">https://www.rigetti.com/</a> 이 회사를 발견. 커먼리습으로 <a href="https://github.com/rigetti/quilc">Quil
-Compiler</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> 만들고 퀀텀컴퓨팅
-관련된 기업인가 보다.</p>
-<p>그리고 깃헙 저장소 살펴보는데 흥미롭고 써보면 어떨까 싶은게 많이 보였다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -232,17 +227,6 @@ Compiler</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-not
       ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
   </div>
 </footer>
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
 <script>
   
 </script>

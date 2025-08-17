@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기 - 아겔로그</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
@@ -44,7 +44,7 @@
 ==&gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&gt; ibus
 연동안됨." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">
+	<meta property="og:url" content="http://localhost:1313/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기">
   <meta property="og:description" content="나도 x11에서 wayland 기반으로 옮겨가고 있는데, 다른 것들은 대부분 괜찮거나 포기.1
@@ -69,7 +69,7 @@
 1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨. 힌트 얻음: https://bugzilla.redhat.com/show_bug.cgi?id=2058976 2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지? 1 2 3 4 for pid in $(pgrep chromium); do #echo $pid grep -i gtk /proc/&#34;$pid&#34;/maps done ==&gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&gt; ibus 연동안됨.">
 
 	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="http://localhost:1313/js/jquery-3.7.1.slim.min.js"></script>
 
 	        
 
@@ -77,9 +77,7 @@
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/gopherish.1242bbf08f4cfb418d62e1019df0673ebb7bf9d8e340366d8f96a17d1474bbf2.css" integrity="sha256-EkK78I9M&#43;0GNYuEBnfBnPrt7&#43;djjQDZtj5ahfRR0u/I=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/gopherish.css">
                 
             
         
@@ -92,7 +90,7 @@
         <div class="content"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
     <nav>
@@ -296,17 +294,6 @@ Footnotes
       ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
   </div>
 </footer>
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
 <script>
   
 </script></div>

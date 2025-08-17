@@ -2,2951 +2,2951 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Thu, 08 May 2025 19:17:25 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 17 Aug 2025 13:21:50 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping</title>
+      <link>http://localhost:1313/tags/ping/</link>
+      <pubDate>Sun, 17 Aug 2025 13:21:50 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ping/</guid>
+      <description></description>
+    </item>
     <item>
       <title>C99</title>
-      <link>https://ageldama.github.io/tags/c99/</link>
+      <link>http://localhost:1313/tags/c99/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/c99/</guid>
+      <guid>http://localhost:1313/tags/c99/</guid>
       <description></description>
     </item>
     <item>
       <title>Epoll</title>
-      <link>https://ageldama.github.io/tags/epoll/</link>
+      <link>http://localhost:1313/tags/epoll/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/epoll/</guid>
+      <guid>http://localhost:1313/tags/epoll/</guid>
       <description></description>
     </item>
     <item>
       <title>Fbdev</title>
-      <link>https://ageldama.github.io/tags/fbdev/</link>
+      <link>http://localhost:1313/tags/fbdev/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/fbdev/</guid>
+      <guid>http://localhost:1313/tags/fbdev/</guid>
       <description></description>
     </item>
     <item>
       <title>Fbterm</title>
-      <link>https://ageldama.github.io/tags/fbterm/</link>
+      <link>http://localhost:1313/tags/fbterm/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/fbterm/</guid>
+      <guid>http://localhost:1313/tags/fbterm/</guid>
       <description></description>
     </item>
     <item>
       <title>Freebsd</title>
-      <link>https://ageldama.github.io/tags/freebsd/</link>
+      <link>http://localhost:1313/tags/freebsd/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/freebsd/</guid>
+      <guid>http://localhost:1313/tags/freebsd/</guid>
       <description></description>
     </item>
     <item>
       <title>Hangeul</title>
-      <link>https://ageldama.github.io/tags/hangeul/</link>
+      <link>http://localhost:1313/tags/hangeul/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/hangeul/</guid>
+      <guid>http://localhost:1313/tags/hangeul/</guid>
       <description></description>
     </item>
     <item>
       <title>Hangul</title>
-      <link>https://ageldama.github.io/tags/hangul/</link>
+      <link>http://localhost:1313/tags/hangul/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/hangul/</guid>
+      <guid>http://localhost:1313/tags/hangul/</guid>
       <description></description>
     </item>
     <item>
       <title>Im</title>
-      <link>https://ageldama.github.io/tags/im/</link>
+      <link>http://localhost:1313/tags/im/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/im/</guid>
+      <guid>http://localhost:1313/tags/im/</guid>
       <description></description>
     </item>
     <item>
       <title>Ime</title>
-      <link>https://ageldama.github.io/tags/ime/</link>
+      <link>http://localhost:1313/tags/ime/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/ime/</guid>
+      <guid>http://localhost:1313/tags/ime/</guid>
       <description></description>
     </item>
     <item>
       <title>Input</title>
-      <link>https://ageldama.github.io/tags/input/</link>
+      <link>http://localhost:1313/tags/input/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/input/</guid>
+      <guid>http://localhost:1313/tags/input/</guid>
       <description></description>
     </item>
     <item>
       <title>Korean</title>
-      <link>https://ageldama.github.io/tags/korean/</link>
+      <link>http://localhost:1313/tags/korean/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/korean/</guid>
+      <guid>http://localhost:1313/tags/korean/</guid>
       <description></description>
     </item>
     <item>
       <title>Kqueue</title>
-      <link>https://ageldama.github.io/tags/kqueue/</link>
+      <link>http://localhost:1313/tags/kqueue/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/kqueue/</guid>
+      <guid>http://localhost:1313/tags/kqueue/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>https://ageldama.github.io/tags/linux/</link>
+      <link>http://localhost:1313/tags/linux/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/linux/</guid>
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Method</title>
-      <link>https://ageldama.github.io/tags/method/</link>
+      <link>http://localhost:1313/tags/method/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/method/</guid>
+      <guid>http://localhost:1313/tags/method/</guid>
       <description></description>
     </item>
     <item>
       <title>Select</title>
-      <link>https://ageldama.github.io/tags/select/</link>
+      <link>http://localhost:1313/tags/select/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/select/</guid>
+      <guid>http://localhost:1313/tags/select/</guid>
       <description></description>
     </item>
     <item>
       <title>Terminal</title>
-      <link>https://ageldama.github.io/tags/terminal/</link>
+      <link>http://localhost:1313/tags/terminal/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/terminal/</guid>
+      <guid>http://localhost:1313/tags/terminal/</guid>
       <description></description>
     </item>
     <item>
       <title>Dmenu</title>
-      <link>https://ageldama.github.io/tags/dmenu/</link>
+      <link>http://localhost:1313/tags/dmenu/</link>
       <pubDate>Wed, 09 Apr 2025 08:45:25 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/dmenu/</guid>
+      <guid>http://localhost:1313/tags/dmenu/</guid>
       <description></description>
     </item>
     <item>
       <title>I3</title>
-      <link>https://ageldama.github.io/tags/i3/</link>
+      <link>http://localhost:1313/tags/i3/</link>
       <pubDate>Wed, 09 Apr 2025 08:45:25 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/i3/</guid>
+      <guid>http://localhost:1313/tags/i3/</guid>
       <description></description>
     </item>
     <item>
       <title>I3wm</title>
-      <link>https://ageldama.github.io/tags/i3wm/</link>
+      <link>http://localhost:1313/tags/i3wm/</link>
       <pubDate>Wed, 09 Apr 2025 08:45:25 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/i3wm/</guid>
+      <guid>http://localhost:1313/tags/i3wm/</guid>
       <description></description>
     </item>
     <item>
       <title>Perl</title>
-      <link>https://ageldama.github.io/tags/perl/</link>
+      <link>http://localhost:1313/tags/perl/</link>
       <pubDate>Wed, 09 Apr 2025 08:45:25 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/perl/</guid>
+      <guid>http://localhost:1313/tags/perl/</guid>
       <description></description>
     </item>
     <item>
       <title>Rofi</title>
-      <link>https://ageldama.github.io/tags/rofi/</link>
+      <link>http://localhost:1313/tags/rofi/</link>
       <pubDate>Wed, 09 Apr 2025 08:45:25 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/rofi/</guid>
+      <guid>http://localhost:1313/tags/rofi/</guid>
       <description></description>
     </item>
     <item>
       <title>Which-Key</title>
-      <link>https://ageldama.github.io/tags/which-key/</link>
+      <link>http://localhost:1313/tags/which-key/</link>
       <pubDate>Wed, 09 Apr 2025 08:45:25 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/which-key/</guid>
+      <guid>http://localhost:1313/tags/which-key/</guid>
       <description></description>
     </item>
     <item>
       <title>Bloatware</title>
-      <link>https://ageldama.github.io/tags/bloatware/</link>
+      <link>http://localhost:1313/tags/bloatware/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/bloatware/</guid>
+      <guid>http://localhost:1313/tags/bloatware/</guid>
       <description></description>
     </item>
     <item>
       <title>Debian</title>
-      <link>https://ageldama.github.io/tags/debian/</link>
+      <link>http://localhost:1313/tags/debian/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/debian/</guid>
+      <guid>http://localhost:1313/tags/debian/</guid>
       <description></description>
     </item>
     <item>
       <title>Distro</title>
-      <link>https://ageldama.github.io/tags/distro/</link>
+      <link>http://localhost:1313/tags/distro/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/distro/</guid>
+      <guid>http://localhost:1313/tags/distro/</guid>
       <description></description>
     </item>
     <item>
       <title>Distrohopping</title>
-      <link>https://ageldama.github.io/tags/distrohopping/</link>
+      <link>http://localhost:1313/tags/distrohopping/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/distrohopping/</guid>
+      <guid>http://localhost:1313/tags/distrohopping/</guid>
       <description></description>
     </item>
     <item>
       <title>Ebook</title>
-      <link>https://ageldama.github.io/tags/ebook/</link>
+      <link>http://localhost:1313/tags/ebook/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ebook/</guid>
+      <guid>http://localhost:1313/tags/ebook/</guid>
       <description></description>
     </item>
     <item>
       <title>Electron</title>
-      <link>https://ageldama.github.io/tags/electron/</link>
+      <link>http://localhost:1313/tags/electron/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/electron/</guid>
+      <guid>http://localhost:1313/tags/electron/</guid>
       <description></description>
     </item>
     <item>
       <title>Epub</title>
-      <link>https://ageldama.github.io/tags/epub/</link>
+      <link>http://localhost:1313/tags/epub/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/epub/</guid>
+      <guid>http://localhost:1313/tags/epub/</guid>
       <description></description>
     </item>
     <item>
       <title>Feature_creep</title>
-      <link>https://ageldama.github.io/tags/feature_creep/</link>
+      <link>http://localhost:1313/tags/feature_creep/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/feature_creep/</guid>
+      <guid>http://localhost:1313/tags/feature_creep/</guid>
       <description></description>
     </item>
     <item>
       <title>Hardware</title>
-      <link>https://ageldama.github.io/tags/hardware/</link>
+      <link>http://localhost:1313/tags/hardware/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/hardware/</guid>
+      <guid>http://localhost:1313/tags/hardware/</guid>
       <description></description>
     </item>
     <item>
       <title>Init</title>
-      <link>https://ageldama.github.io/tags/init/</link>
+      <link>http://localhost:1313/tags/init/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/init/</guid>
+      <guid>http://localhost:1313/tags/init/</guid>
       <description></description>
     </item>
     <item>
       <title>Koreader</title>
-      <link>https://ageldama.github.io/tags/koreader/</link>
+      <link>http://localhost:1313/tags/koreader/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/koreader/</guid>
+      <guid>http://localhost:1313/tags/koreader/</guid>
       <description></description>
     </item>
     <item>
       <title>Laptop</title>
-      <link>https://ageldama.github.io/tags/laptop/</link>
+      <link>http://localhost:1313/tags/laptop/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/laptop/</guid>
+      <guid>http://localhost:1313/tags/laptop/</guid>
       <description></description>
     </item>
     <item>
       <title>Pdf</title>
-      <link>https://ageldama.github.io/tags/pdf/</link>
+      <link>http://localhost:1313/tags/pdf/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/pdf/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ping</title>
-      <link>https://ageldama.github.io/tags/ping/</link>
-      <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ping/</guid>
+      <guid>http://localhost:1313/tags/pdf/</guid>
       <description></description>
     </item>
     <item>
       <title>Retro</title>
-      <link>https://ageldama.github.io/tags/retro/</link>
+      <link>http://localhost:1313/tags/retro/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/retro/</guid>
+      <guid>http://localhost:1313/tags/retro/</guid>
       <description></description>
     </item>
     <item>
       <title>Runit</title>
-      <link>https://ageldama.github.io/tags/runit/</link>
+      <link>http://localhost:1313/tags/runit/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/runit/</guid>
+      <guid>http://localhost:1313/tags/runit/</guid>
       <description></description>
     </item>
     <item>
       <title>Software_bloat</title>
-      <link>https://ageldama.github.io/tags/software_bloat/</link>
+      <link>http://localhost:1313/tags/software_bloat/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/software_bloat/</guid>
+      <guid>http://localhost:1313/tags/software_bloat/</guid>
       <description></description>
     </item>
     <item>
       <title>Systemd</title>
-      <link>https://ageldama.github.io/tags/systemd/</link>
+      <link>http://localhost:1313/tags/systemd/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/systemd/</guid>
+      <guid>http://localhost:1313/tags/systemd/</guid>
       <description></description>
     </item>
     <item>
       <title>Sysvinit</title>
-      <link>https://ageldama.github.io/tags/sysvinit/</link>
+      <link>http://localhost:1313/tags/sysvinit/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/sysvinit/</guid>
+      <guid>http://localhost:1313/tags/sysvinit/</guid>
       <description></description>
     </item>
     <item>
       <title>Vintage</title>
-      <link>https://ageldama.github.io/tags/vintage/</link>
+      <link>http://localhost:1313/tags/vintage/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/vintage/</guid>
+      <guid>http://localhost:1313/tags/vintage/</guid>
       <description></description>
     </item>
     <item>
       <title>Blog</title>
-      <link>https://ageldama.github.io/tags/blog/</link>
+      <link>http://localhost:1313/tags/blog/</link>
       <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/blog/</guid>
+      <guid>http://localhost:1313/tags/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Blogging</title>
-      <link>https://ageldama.github.io/tags/blogging/</link>
+      <link>http://localhost:1313/tags/blogging/</link>
       <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/blogging/</guid>
+      <guid>http://localhost:1313/tags/blogging/</guid>
       <description></description>
     </item>
     <item>
       <title>Css</title>
-      <link>https://ageldama.github.io/tags/css/</link>
+      <link>http://localhost:1313/tags/css/</link>
       <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/css/</guid>
+      <guid>http://localhost:1313/tags/css/</guid>
       <description></description>
     </item>
     <item>
       <title>Darkmode</title>
-      <link>https://ageldama.github.io/tags/darkmode/</link>
+      <link>http://localhost:1313/tags/darkmode/</link>
       <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/darkmode/</guid>
+      <guid>http://localhost:1313/tags/darkmode/</guid>
       <description></description>
     </item>
     <item>
       <title>Javascript</title>
-      <link>https://ageldama.github.io/tags/javascript/</link>
+      <link>http://localhost:1313/tags/javascript/</link>
       <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/javascript/</guid>
+      <guid>http://localhost:1313/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>Js</title>
-      <link>https://ageldama.github.io/tags/js/</link>
+      <link>http://localhost:1313/tags/js/</link>
       <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/js/</guid>
+      <guid>http://localhost:1313/tags/js/</guid>
       <description></description>
     </item>
     <item>
       <title>Npm</title>
-      <link>https://ageldama.github.io/tags/npm/</link>
+      <link>http://localhost:1313/tags/npm/</link>
       <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/npm/</guid>
+      <guid>http://localhost:1313/tags/npm/</guid>
       <description></description>
     </item>
     <item>
       <title>Config</title>
-      <link>https://ageldama.github.io/tags/config/</link>
+      <link>http://localhost:1313/tags/config/</link>
       <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/config/</guid>
+      <guid>http://localhost:1313/tags/config/</guid>
       <description></description>
     </item>
     <item>
       <title>Display</title>
-      <link>https://ageldama.github.io/tags/display/</link>
+      <link>http://localhost:1313/tags/display/</link>
       <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/display/</guid>
+      <guid>http://localhost:1313/tags/display/</guid>
       <description></description>
     </item>
     <item>
       <title>Monitor</title>
-      <link>https://ageldama.github.io/tags/monitor/</link>
+      <link>http://localhost:1313/tags/monitor/</link>
       <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/monitor/</guid>
+      <guid>http://localhost:1313/tags/monitor/</guid>
       <description></description>
     </item>
     <item>
       <title>Xorg</title>
-      <link>https://ageldama.github.io/tags/xorg/</link>
+      <link>http://localhost:1313/tags/xorg/</link>
       <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/xorg/</guid>
+      <guid>http://localhost:1313/tags/xorg/</guid>
       <description></description>
     </item>
     <item>
       <title>Xrandr</title>
-      <link>https://ageldama.github.io/tags/xrandr/</link>
+      <link>http://localhost:1313/tags/xrandr/</link>
       <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/xrandr/</guid>
+      <guid>http://localhost:1313/tags/xrandr/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>https://ageldama.github.io/tags/hugo/</link>
+      <link>http://localhost:1313/tags/hugo/</link>
       <pubDate>Sun, 16 Mar 2025 06:25:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/hugo/</guid>
+      <guid>http://localhost:1313/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Jquery</title>
-      <link>https://ageldama.github.io/tags/jquery/</link>
+      <link>http://localhost:1313/tags/jquery/</link>
       <pubDate>Sun, 16 Mar 2025 06:25:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/jquery/</guid>
+      <guid>http://localhost:1313/tags/jquery/</guid>
       <description></description>
     </item>
     <item>
       <title>Pagefind</title>
-      <link>https://ageldama.github.io/tags/pagefind/</link>
+      <link>http://localhost:1313/tags/pagefind/</link>
       <pubDate>Sun, 16 Mar 2025 06:25:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/pagefind/</guid>
+      <guid>http://localhost:1313/tags/pagefind/</guid>
       <description></description>
     </item>
     <item>
       <title>Design</title>
-      <link>https://ageldama.github.io/tags/design/</link>
+      <link>http://localhost:1313/tags/design/</link>
       <pubDate>Sat, 15 Mar 2025 12:25:01 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/design/</guid>
+      <guid>http://localhost:1313/tags/design/</guid>
       <description></description>
     </item>
     <item>
       <title>Architecture</title>
-      <link>https://ageldama.github.io/tags/architecture/</link>
+      <link>http://localhost:1313/tags/architecture/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/architecture/</guid>
+      <guid>http://localhost:1313/tags/architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Awk</title>
-      <link>https://ageldama.github.io/tags/awk/</link>
+      <link>http://localhost:1313/tags/awk/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/awk/</guid>
+      <guid>http://localhost:1313/tags/awk/</guid>
       <description></description>
     </item>
     <item>
       <title>C&#43;&#43;</title>
-      <link>https://ageldama.github.io/tags/c&#43;&#43;/</link>
+      <link>http://localhost:1313/tags/c&#43;&#43;/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/c&#43;&#43;/</guid>
+      <guid>http://localhost:1313/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     <item>
       <title>Cache</title>
-      <link>https://ageldama.github.io/tags/cache/</link>
+      <link>http://localhost:1313/tags/cache/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/cache/</guid>
+      <guid>http://localhost:1313/tags/cache/</guid>
       <description></description>
     </item>
     <item>
       <title>Clojure</title>
-      <link>https://ageldama.github.io/tags/clojure/</link>
+      <link>http://localhost:1313/tags/clojure/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/clojure/</guid>
+      <guid>http://localhost:1313/tags/clojure/</guid>
       <description></description>
     </item>
     <item>
       <title>Clojure.spec</title>
-      <link>https://ageldama.github.io/tags/clojure.spec/</link>
+      <link>http://localhost:1313/tags/clojure.spec/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/clojure.spec/</guid>
+      <guid>http://localhost:1313/tags/clojure.spec/</guid>
       <description></description>
     </item>
     <item>
       <title>Cpu</title>
-      <link>https://ageldama.github.io/tags/cpu/</link>
+      <link>http://localhost:1313/tags/cpu/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/cpu/</guid>
+      <guid>http://localhost:1313/tags/cpu/</guid>
       <description></description>
     </item>
     <item>
       <title>Data</title>
-      <link>https://ageldama.github.io/tags/data/</link>
+      <link>http://localhost:1313/tags/data/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/data/</guid>
+      <guid>http://localhost:1313/tags/data/</guid>
       <description></description>
     </item>
     <item>
       <title>Datomic</title>
-      <link>https://ageldama.github.io/tags/datomic/</link>
+      <link>http://localhost:1313/tags/datomic/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/datomic/</guid>
+      <guid>http://localhost:1313/tags/datomic/</guid>
       <description></description>
     </item>
     <item>
       <title>Ecs</title>
-      <link>https://ageldama.github.io/tags/ecs/</link>
+      <link>http://localhost:1313/tags/ecs/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ecs/</guid>
+      <guid>http://localhost:1313/tags/ecs/</guid>
       <description></description>
     </item>
     <item>
       <title>Gamdev</title>
-      <link>https://ageldama.github.io/tags/gamdev/</link>
+      <link>http://localhost:1313/tags/gamdev/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/gamdev/</guid>
+      <guid>http://localhost:1313/tags/gamdev/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>https://ageldama.github.io/tags/programming/</link>
+      <link>http://localhost:1313/tags/programming/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/programming/</guid>
+      <guid>http://localhost:1313/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Sed</title>
-      <link>https://ageldama.github.io/tags/sed/</link>
+      <link>http://localhost:1313/tags/sed/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/sed/</guid>
+      <guid>http://localhost:1313/tags/sed/</guid>
       <description></description>
     </item>
     <item>
       <title>C</title>
-      <link>https://ageldama.github.io/tags/c/</link>
+      <link>http://localhost:1313/tags/c/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/c/</guid>
+      <guid>http://localhost:1313/tags/c/</guid>
       <description></description>
     </item>
     <item>
       <title>Clang</title>
-      <link>https://ageldama.github.io/tags/clang/</link>
+      <link>http://localhost:1313/tags/clang/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/clang/</guid>
+      <guid>http://localhost:1313/tags/clang/</guid>
       <description></description>
     </item>
     <item>
       <title>Clang&#43;&#43;</title>
-      <link>https://ageldama.github.io/tags/clang&#43;&#43;/</link>
+      <link>http://localhost:1313/tags/clang&#43;&#43;/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/clang&#43;&#43;/</guid>
+      <guid>http://localhost:1313/tags/clang&#43;&#43;/</guid>
       <description></description>
     </item>
     <item>
       <title>Compile_commands.json</title>
-      <link>https://ageldama.github.io/tags/compile_commands.json/</link>
+      <link>http://localhost:1313/tags/compile_commands.json/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/compile_commands.json/</guid>
+      <guid>http://localhost:1313/tags/compile_commands.json/</guid>
       <description></description>
     </item>
     <item>
       <title>Cppcheck</title>
-      <link>https://ageldama.github.io/tags/cppcheck/</link>
+      <link>http://localhost:1313/tags/cppcheck/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/cppcheck/</guid>
+      <guid>http://localhost:1313/tags/cppcheck/</guid>
       <description></description>
     </item>
     <item>
       <title>Elisp</title>
-      <link>https://ageldama.github.io/tags/elisp/</link>
+      <link>http://localhost:1313/tags/elisp/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/elisp/</guid>
+      <guid>http://localhost:1313/tags/elisp/</guid>
       <description></description>
     </item>
     <item>
       <title>Emacs</title>
-      <link>https://ageldama.github.io/tags/emacs/</link>
+      <link>http://localhost:1313/tags/emacs/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/emacs/</guid>
+      <guid>http://localhost:1313/tags/emacs/</guid>
       <description></description>
     </item>
     <item>
       <title>Emacs-Lisp</title>
-      <link>https://ageldama.github.io/tags/emacs-lisp/</link>
+      <link>http://localhost:1313/tags/emacs-lisp/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/emacs-lisp/</guid>
+      <guid>http://localhost:1313/tags/emacs-lisp/</guid>
       <description></description>
     </item>
     <item>
       <title>Emacslisp</title>
-      <link>https://ageldama.github.io/tags/emacslisp/</link>
+      <link>http://localhost:1313/tags/emacslisp/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/emacslisp/</guid>
+      <guid>http://localhost:1313/tags/emacslisp/</guid>
       <description></description>
     </item>
     <item>
       <title>Flycheck</title>
-      <link>https://ageldama.github.io/tags/flycheck/</link>
+      <link>http://localhost:1313/tags/flycheck/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/flycheck/</guid>
+      <guid>http://localhost:1313/tags/flycheck/</guid>
       <description></description>
     </item>
     <item>
       <title>G&#43;&#43;</title>
-      <link>https://ageldama.github.io/tags/g&#43;&#43;/</link>
+      <link>http://localhost:1313/tags/g&#43;&#43;/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/g&#43;&#43;/</guid>
+      <guid>http://localhost:1313/tags/g&#43;&#43;/</guid>
       <description></description>
     </item>
     <item>
       <title>Gcc</title>
-      <link>https://ageldama.github.io/tags/gcc/</link>
+      <link>http://localhost:1313/tags/gcc/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/gcc/</guid>
+      <guid>http://localhost:1313/tags/gcc/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>https://ageldama.github.io/tags/python/</link>
+      <link>http://localhost:1313/tags/python/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/python/</guid>
+      <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Xmake</title>
-      <link>https://ageldama.github.io/tags/xmake/</link>
+      <link>http://localhost:1313/tags/xmake/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/xmake/</guid>
+      <guid>http://localhost:1313/tags/xmake/</guid>
       <description></description>
     </item>
     <item>
       <title>Anime</title>
-      <link>https://ageldama.github.io/tags/anime/</link>
+      <link>http://localhost:1313/tags/anime/</link>
       <pubDate>Sat, 23 Mar 2024 15:46:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/anime/</guid>
+      <guid>http://localhost:1313/tags/anime/</guid>
       <description></description>
     </item>
     <item>
       <title>Cyberpunk</title>
-      <link>https://ageldama.github.io/tags/cyberpunk/</link>
+      <link>http://localhost:1313/tags/cyberpunk/</link>
       <pubDate>Sat, 23 Mar 2024 15:46:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/cyberpunk/</guid>
+      <guid>http://localhost:1313/tags/cyberpunk/</guid>
       <description></description>
     </item>
     <item>
       <title>Kino</title>
-      <link>https://ageldama.github.io/tags/kino/</link>
+      <link>http://localhost:1313/tags/kino/</link>
       <pubDate>Sat, 23 Mar 2024 15:46:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/kino/</guid>
+      <guid>http://localhost:1313/tags/kino/</guid>
       <description></description>
     </item>
     <item>
       <title>Samba4</title>
-      <link>https://ageldama.github.io/tags/samba4/</link>
+      <link>http://localhost:1313/tags/samba4/</link>
       <pubDate>Sun, 05 Nov 2023 05:40:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/samba4/</guid>
+      <guid>http://localhost:1313/tags/samba4/</guid>
       <description></description>
     </item>
     <item>
       <title>Symlink</title>
-      <link>https://ageldama.github.io/tags/symlink/</link>
+      <link>http://localhost:1313/tags/symlink/</link>
       <pubDate>Sun, 05 Nov 2023 05:40:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/symlink/</guid>
+      <guid>http://localhost:1313/tags/symlink/</guid>
       <description></description>
     </item>
     <item>
       <title>Bookworm</title>
-      <link>https://ageldama.github.io/tags/bookworm/</link>
+      <link>http://localhost:1313/tags/bookworm/</link>
       <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/bookworm/</guid>
+      <guid>http://localhost:1313/tags/bookworm/</guid>
       <description></description>
     </item>
     <item>
       <title>Chromium</title>
-      <link>https://ageldama.github.io/tags/chromium/</link>
+      <link>http://localhost:1313/tags/chromium/</link>
       <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/chromium/</guid>
+      <guid>http://localhost:1313/tags/chromium/</guid>
       <description></description>
     </item>
     <item>
       <title>Gtk3</title>
-      <link>https://ageldama.github.io/tags/gtk3/</link>
+      <link>http://localhost:1313/tags/gtk3/</link>
       <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/gtk3/</guid>
+      <guid>http://localhost:1313/tags/gtk3/</guid>
       <description></description>
     </item>
     <item>
       <title>Gtk4</title>
-      <link>https://ageldama.github.io/tags/gtk4/</link>
+      <link>http://localhost:1313/tags/gtk4/</link>
       <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/gtk4/</guid>
+      <guid>http://localhost:1313/tags/gtk4/</guid>
       <description></description>
     </item>
     <item>
       <title>Ibus</title>
-      <link>https://ageldama.github.io/tags/ibus/</link>
+      <link>http://localhost:1313/tags/ibus/</link>
       <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ibus/</guid>
+      <guid>http://localhost:1313/tags/ibus/</guid>
       <description></description>
     </item>
     <item>
       <title>Wayland</title>
-      <link>https://ageldama.github.io/tags/wayland/</link>
+      <link>http://localhost:1313/tags/wayland/</link>
       <pubDate>Sun, 05 Nov 2023 05:28:12 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/wayland/</guid>
+      <guid>http://localhost:1313/tags/wayland/</guid>
       <description></description>
     </item>
     <item>
       <title>Ethernet</title>
-      <link>https://ageldama.github.io/tags/ethernet/</link>
+      <link>http://localhost:1313/tags/ethernet/</link>
       <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ethernet/</guid>
+      <guid>http://localhost:1313/tags/ethernet/</guid>
       <description></description>
     </item>
     <item>
       <title>Fanless</title>
-      <link>https://ageldama.github.io/tags/fanless/</link>
+      <link>http://localhost:1313/tags/fanless/</link>
       <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/fanless/</guid>
+      <guid>http://localhost:1313/tags/fanless/</guid>
       <description></description>
     </item>
     <item>
       <title>Power-Consumption</title>
-      <link>https://ageldama.github.io/tags/power-consumption/</link>
+      <link>http://localhost:1313/tags/power-consumption/</link>
       <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/power-consumption/</guid>
+      <guid>http://localhost:1313/tags/power-consumption/</guid>
       <description></description>
     </item>
     <item>
       <title>Raspberry-Pi</title>
-      <link>https://ageldama.github.io/tags/raspberry-pi/</link>
+      <link>http://localhost:1313/tags/raspberry-pi/</link>
       <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/raspberry-pi/</guid>
+      <guid>http://localhost:1313/tags/raspberry-pi/</guid>
       <description></description>
     </item>
     <item>
       <title>Sftp</title>
-      <link>https://ageldama.github.io/tags/sftp/</link>
+      <link>http://localhost:1313/tags/sftp/</link>
       <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/sftp/</guid>
+      <guid>http://localhost:1313/tags/sftp/</guid>
       <description></description>
     </item>
     <item>
       <title>Ssh</title>
-      <link>https://ageldama.github.io/tags/ssh/</link>
+      <link>http://localhost:1313/tags/ssh/</link>
       <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ssh/</guid>
+      <guid>http://localhost:1313/tags/ssh/</guid>
       <description></description>
     </item>
     <item>
       <title>Tip</title>
-      <link>https://ageldama.github.io/tags/tip/</link>
+      <link>http://localhost:1313/tags/tip/</link>
       <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/tip/</guid>
+      <guid>http://localhost:1313/tags/tip/</guid>
       <description></description>
     </item>
     <item>
       <title>Tramp</title>
-      <link>https://ageldama.github.io/tags/tramp/</link>
+      <link>http://localhost:1313/tags/tramp/</link>
       <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/tramp/</guid>
+      <guid>http://localhost:1313/tags/tramp/</guid>
       <description></description>
     </item>
     <item>
       <title>Wired</title>
-      <link>https://ageldama.github.io/tags/wired/</link>
+      <link>http://localhost:1313/tags/wired/</link>
       <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/wired/</guid>
+      <guid>http://localhost:1313/tags/wired/</guid>
       <description></description>
     </item>
     <item>
       <title>Wireless</title>
-      <link>https://ageldama.github.io/tags/wireless/</link>
+      <link>http://localhost:1313/tags/wireless/</link>
       <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/wireless/</guid>
+      <guid>http://localhost:1313/tags/wireless/</guid>
       <description></description>
     </item>
     <item>
       <title>X2x</title>
-      <link>https://ageldama.github.io/tags/x2x/</link>
+      <link>http://localhost:1313/tags/x2x/</link>
       <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/x2x/</guid>
+      <guid>http://localhost:1313/tags/x2x/</guid>
       <description></description>
     </item>
     <item>
       <title>Cpp</title>
-      <link>https://ageldama.github.io/tags/cpp/</link>
+      <link>http://localhost:1313/tags/cpp/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/cpp/</guid>
+      <guid>http://localhost:1313/tags/cpp/</guid>
       <description></description>
     </item>
     <item>
       <title>Frontend</title>
-      <link>https://ageldama.github.io/tags/frontend/</link>
+      <link>http://localhost:1313/tags/frontend/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/frontend/</guid>
+      <guid>http://localhost:1313/tags/frontend/</guid>
       <description></description>
     </item>
     <item>
       <title>Homebrew</title>
-      <link>https://ageldama.github.io/tags/homebrew/</link>
+      <link>http://localhost:1313/tags/homebrew/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/homebrew/</guid>
+      <guid>http://localhost:1313/tags/homebrew/</guid>
       <description></description>
     </item>
     <item>
       <title>Interview</title>
-      <link>https://ageldama.github.io/tags/interview/</link>
+      <link>http://localhost:1313/tags/interview/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/interview/</guid>
+      <guid>http://localhost:1313/tags/interview/</guid>
       <description></description>
     </item>
     <item>
       <title>Nes</title>
-      <link>https://ageldama.github.io/tags/nes/</link>
+      <link>http://localhost:1313/tags/nes/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/nes/</guid>
+      <guid>http://localhost:1313/tags/nes/</guid>
       <description></description>
     </item>
     <item>
       <title>News</title>
-      <link>https://ageldama.github.io/tags/news/</link>
+      <link>http://localhost:1313/tags/news/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/news/</guid>
+      <guid>http://localhost:1313/tags/news/</guid>
       <description></description>
     </item>
     <item>
       <title>Nintendo</title>
-      <link>https://ageldama.github.io/tags/nintendo/</link>
+      <link>http://localhost:1313/tags/nintendo/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/nintendo/</guid>
+      <guid>http://localhost:1313/tags/nintendo/</guid>
       <description></description>
     </item>
     <item>
       <title>React</title>
-      <link>https://ageldama.github.io/tags/react/</link>
+      <link>http://localhost:1313/tags/react/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/react/</guid>
+      <guid>http://localhost:1313/tags/react/</guid>
       <description></description>
     </item>
     <item>
       <title>React-Hooks</title>
-      <link>https://ageldama.github.io/tags/react-hooks/</link>
+      <link>http://localhost:1313/tags/react-hooks/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/react-hooks/</guid>
+      <guid>http://localhost:1313/tags/react-hooks/</guid>
       <description></description>
     </item>
     <item>
       <title>Rust</title>
-      <link>https://ageldama.github.io/tags/rust/</link>
+      <link>http://localhost:1313/tags/rust/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/rust/</guid>
+      <guid>http://localhost:1313/tags/rust/</guid>
       <description></description>
     </item>
     <item>
       <title>Stl</title>
-      <link>https://ageldama.github.io/tags/stl/</link>
+      <link>http://localhost:1313/tags/stl/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/stl/</guid>
+      <guid>http://localhost:1313/tags/stl/</guid>
       <description></description>
     </item>
     <item>
       <title>Zig</title>
-      <link>https://ageldama.github.io/tags/zig/</link>
+      <link>http://localhost:1313/tags/zig/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/zig/</guid>
+      <guid>http://localhost:1313/tags/zig/</guid>
       <description></description>
     </item>
     <item>
       <title>Calibre</title>
-      <link>https://ageldama.github.io/tags/calibre/</link>
+      <link>http://localhost:1313/tags/calibre/</link>
       <pubDate>Wed, 08 Mar 2023 06:15:08 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/calibre/</guid>
+      <guid>http://localhost:1313/tags/calibre/</guid>
       <description></description>
     </item>
     <item>
       <title>Desktop</title>
-      <link>https://ageldama.github.io/tags/desktop/</link>
+      <link>http://localhost:1313/tags/desktop/</link>
       <pubDate>Wed, 08 Mar 2023 06:15:08 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/desktop/</guid>
+      <guid>http://localhost:1313/tags/desktop/</guid>
       <description></description>
     </item>
     <item>
       <title>Dualshock</title>
-      <link>https://ageldama.github.io/tags/dualshock/</link>
+      <link>http://localhost:1313/tags/dualshock/</link>
       <pubDate>Wed, 08 Mar 2023 06:15:08 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/dualshock/</guid>
+      <guid>http://localhost:1313/tags/dualshock/</guid>
       <description></description>
     </item>
     <item>
       <title>Mobi</title>
-      <link>https://ageldama.github.io/tags/mobi/</link>
+      <link>http://localhost:1313/tags/mobi/</link>
       <pubDate>Wed, 08 Mar 2023 06:15:08 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/mobi/</guid>
+      <guid>http://localhost:1313/tags/mobi/</guid>
       <description></description>
     </item>
     <item>
       <title>Pc</title>
-      <link>https://ageldama.github.io/tags/pc/</link>
+      <link>http://localhost:1313/tags/pc/</link>
       <pubDate>Wed, 08 Mar 2023 06:15:08 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/pc/</guid>
+      <guid>http://localhost:1313/tags/pc/</guid>
       <description></description>
     </item>
     <item>
       <title>Ps4</title>
-      <link>https://ageldama.github.io/tags/ps4/</link>
+      <link>http://localhost:1313/tags/ps4/</link>
       <pubDate>Wed, 08 Mar 2023 06:15:08 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ps4/</guid>
+      <guid>http://localhost:1313/tags/ps4/</guid>
       <description></description>
     </item>
     <item>
       <title>Qjoypad</title>
-      <link>https://ageldama.github.io/tags/qjoypad/</link>
+      <link>http://localhost:1313/tags/qjoypad/</link>
       <pubDate>Wed, 08 Mar 2023 06:15:08 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/qjoypad/</guid>
+      <guid>http://localhost:1313/tags/qjoypad/</guid>
       <description></description>
     </item>
     <item>
       <title>Ansi</title>
-      <link>https://ageldama.github.io/tags/ansi/</link>
+      <link>http://localhost:1313/tags/ansi/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ansi/</guid>
+      <guid>http://localhost:1313/tags/ansi/</guid>
       <description></description>
     </item>
     <item>
       <title>Cal</title>
-      <link>https://ageldama.github.io/tags/cal/</link>
+      <link>http://localhost:1313/tags/cal/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/cal/</guid>
+      <guid>http://localhost:1313/tags/cal/</guid>
       <description></description>
     </item>
     <item>
       <title>Calendar</title>
-      <link>https://ageldama.github.io/tags/calendar/</link>
+      <link>http://localhost:1313/tags/calendar/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/calendar/</guid>
+      <guid>http://localhost:1313/tags/calendar/</guid>
       <description></description>
     </item>
     <item>
       <title>Commandline</title>
-      <link>https://ageldama.github.io/tags/commandline/</link>
+      <link>http://localhost:1313/tags/commandline/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/commandline/</guid>
+      <guid>http://localhost:1313/tags/commandline/</guid>
       <description></description>
     </item>
     <item>
       <title>Ncal</title>
-      <link>https://ageldama.github.io/tags/ncal/</link>
+      <link>http://localhost:1313/tags/ncal/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ncal/</guid>
+      <guid>http://localhost:1313/tags/ncal/</guid>
       <description></description>
     </item>
     <item>
       <title>Term</title>
-      <link>https://ageldama.github.io/tags/term/</link>
+      <link>http://localhost:1313/tags/term/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/term/</guid>
+      <guid>http://localhost:1313/tags/term/</guid>
       <description></description>
     </item>
     <item>
       <title>Unix</title>
-      <link>https://ageldama.github.io/tags/unix/</link>
+      <link>http://localhost:1313/tags/unix/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/unix/</guid>
+      <guid>http://localhost:1313/tags/unix/</guid>
       <description></description>
     </item>
     <item>
       <title>Defer</title>
-      <link>https://ageldama.github.io/tags/defer/</link>
+      <link>http://localhost:1313/tags/defer/</link>
       <pubDate>Thu, 02 Mar 2023 16:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/defer/</guid>
+      <guid>http://localhost:1313/tags/defer/</guid>
       <description></description>
     </item>
     <item>
       <title>Golang</title>
-      <link>https://ageldama.github.io/tags/golang/</link>
+      <link>http://localhost:1313/tags/golang/</link>
       <pubDate>Thu, 02 Mar 2023 16:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/golang/</guid>
+      <guid>http://localhost:1313/tags/golang/</guid>
       <description></description>
     </item>
     <item>
       <title>Longjmp</title>
-      <link>https://ageldama.github.io/tags/longjmp/</link>
+      <link>http://localhost:1313/tags/longjmp/</link>
       <pubDate>Thu, 02 Mar 2023 16:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/longjmp/</guid>
+      <guid>http://localhost:1313/tags/longjmp/</guid>
       <description></description>
     </item>
     <item>
       <title>Macro</title>
-      <link>https://ageldama.github.io/tags/macro/</link>
+      <link>http://localhost:1313/tags/macro/</link>
       <pubDate>Thu, 02 Mar 2023 16:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/macro/</guid>
+      <guid>http://localhost:1313/tags/macro/</guid>
       <description></description>
     </item>
     <item>
       <title>Raii</title>
-      <link>https://ageldama.github.io/tags/raii/</link>
+      <link>http://localhost:1313/tags/raii/</link>
       <pubDate>Thu, 02 Mar 2023 16:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/raii/</guid>
+      <guid>http://localhost:1313/tags/raii/</guid>
       <description></description>
     </item>
     <item>
       <title>Setjmp</title>
-      <link>https://ageldama.github.io/tags/setjmp/</link>
+      <link>http://localhost:1313/tags/setjmp/</link>
       <pubDate>Thu, 02 Mar 2023 16:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/setjmp/</guid>
+      <guid>http://localhost:1313/tags/setjmp/</guid>
       <description></description>
     </item>
     <item>
       <title>Try-Catch-Finally</title>
-      <link>https://ageldama.github.io/tags/try-catch-finally/</link>
+      <link>http://localhost:1313/tags/try-catch-finally/</link>
       <pubDate>Thu, 02 Mar 2023 16:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/try-catch-finally/</guid>
+      <guid>http://localhost:1313/tags/try-catch-finally/</guid>
       <description></description>
     </item>
     <item>
       <title>Theme</title>
-      <link>https://ageldama.github.io/tags/theme/</link>
+      <link>http://localhost:1313/tags/theme/</link>
       <pubDate>Sun, 26 Feb 2023 08:19:57 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/theme/</guid>
+      <guid>http://localhost:1313/tags/theme/</guid>
       <description></description>
     </item>
     <item>
       <title>Hal</title>
-      <link>https://ageldama.github.io/tags/hal/</link>
+      <link>http://localhost:1313/tags/hal/</link>
       <pubDate>Sun, 19 Feb 2023 17:05:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/hal/</guid>
+      <guid>http://localhost:1313/tags/hal/</guid>
       <description></description>
     </item>
     <item>
       <title>Ibm</title>
-      <link>https://ageldama.github.io/tags/ibm/</link>
+      <link>http://localhost:1313/tags/ibm/</link>
       <pubDate>Sun, 19 Feb 2023 17:05:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ibm/</guid>
+      <guid>http://localhost:1313/tags/ibm/</guid>
       <description></description>
     </item>
     <item>
       <title>Jcl</title>
-      <link>https://ageldama.github.io/tags/jcl/</link>
+      <link>http://localhost:1313/tags/jcl/</link>
       <pubDate>Sun, 19 Feb 2023 17:05:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/jcl/</guid>
+      <guid>http://localhost:1313/tags/jcl/</guid>
       <description></description>
     </item>
     <item>
       <title>Naming</title>
-      <link>https://ageldama.github.io/tags/naming/</link>
+      <link>http://localhost:1313/tags/naming/</link>
       <pubDate>Sun, 19 Feb 2023 17:05:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/naming/</guid>
+      <guid>http://localhost:1313/tags/naming/</guid>
       <description></description>
     </item>
     <item>
       <title>Adult</title>
-      <link>https://ageldama.github.io/tags/adult/</link>
+      <link>http://localhost:1313/tags/adult/</link>
       <pubDate>Sun, 19 Feb 2023 06:55:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/adult/</guid>
+      <guid>http://localhost:1313/tags/adult/</guid>
       <description></description>
     </item>
     <item>
       <title>Forever-Boy</title>
-      <link>https://ageldama.github.io/tags/forever-boy/</link>
+      <link>http://localhost:1313/tags/forever-boy/</link>
       <pubDate>Sun, 19 Feb 2023 06:55:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/forever-boy/</guid>
+      <guid>http://localhost:1313/tags/forever-boy/</guid>
       <description></description>
     </item>
     <item>
       <title>Responsibility</title>
-      <link>https://ageldama.github.io/tags/responsibility/</link>
+      <link>http://localhost:1313/tags/responsibility/</link>
       <pubDate>Sun, 19 Feb 2023 06:55:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/responsibility/</guid>
+      <guid>http://localhost:1313/tags/responsibility/</guid>
       <description></description>
     </item>
     <item>
       <title>C-Lang</title>
-      <link>https://ageldama.github.io/tags/c-lang/</link>
+      <link>http://localhost:1313/tags/c-lang/</link>
       <pubDate>Tue, 07 Feb 2023 07:48:17 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/c-lang/</guid>
+      <guid>http://localhost:1313/tags/c-lang/</guid>
       <description></description>
     </item>
     <item>
       <title>D-Lang</title>
-      <link>https://ageldama.github.io/tags/d-lang/</link>
+      <link>http://localhost:1313/tags/d-lang/</link>
       <pubDate>Tue, 07 Feb 2023 07:48:17 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/d-lang/</guid>
+      <guid>http://localhost:1313/tags/d-lang/</guid>
       <description></description>
     </item>
     <item>
       <title>German</title>
-      <link>https://ageldama.github.io/tags/german/</link>
+      <link>http://localhost:1313/tags/german/</link>
       <pubDate>Tue, 07 Feb 2023 07:48:17 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/german/</guid>
+      <guid>http://localhost:1313/tags/german/</guid>
       <description></description>
     </item>
     <item>
       <title>Numeral</title>
-      <link>https://ageldama.github.io/tags/numeral/</link>
+      <link>http://localhost:1313/tags/numeral/</link>
       <pubDate>Tue, 07 Feb 2023 07:48:17 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/numeral/</guid>
+      <guid>http://localhost:1313/tags/numeral/</guid>
       <description></description>
     </item>
     <item>
       <title>Roman</title>
-      <link>https://ageldama.github.io/tags/roman/</link>
+      <link>http://localhost:1313/tags/roman/</link>
       <pubDate>Tue, 07 Feb 2023 07:48:17 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/roman/</guid>
+      <guid>http://localhost:1313/tags/roman/</guid>
       <description></description>
     </item>
     <item>
       <title>Cee</title>
-      <link>https://ageldama.github.io/tags/cee/</link>
+      <link>http://localhost:1313/tags/cee/</link>
       <pubDate>Sat, 04 Feb 2023 16:46:54 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/cee/</guid>
+      <guid>http://localhost:1313/tags/cee/</guid>
       <description></description>
     </item>
     <item>
       <title>Commonlisp</title>
-      <link>https://ageldama.github.io/tags/commonlisp/</link>
+      <link>http://localhost:1313/tags/commonlisp/</link>
       <pubDate>Sat, 04 Feb 2023 16:46:54 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/commonlisp/</guid>
+      <guid>http://localhost:1313/tags/commonlisp/</guid>
       <description></description>
     </item>
     <item>
       <title>Comptime</title>
-      <link>https://ageldama.github.io/tags/comptime/</link>
+      <link>http://localhost:1313/tags/comptime/</link>
       <pubDate>Sat, 04 Feb 2023 16:46:54 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/comptime/</guid>
+      <guid>http://localhost:1313/tags/comptime/</guid>
       <description></description>
     </item>
     <item>
       <title>Cppfront</title>
-      <link>https://ageldama.github.io/tags/cppfront/</link>
+      <link>http://localhost:1313/tags/cppfront/</link>
       <pubDate>Sat, 04 Feb 2023 16:46:54 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/cppfront/</guid>
+      <guid>http://localhost:1313/tags/cppfront/</guid>
       <description></description>
     </item>
     <item>
       <title>Rustlang</title>
-      <link>https://ageldama.github.io/tags/rustlang/</link>
+      <link>http://localhost:1313/tags/rustlang/</link>
       <pubDate>Sat, 04 Feb 2023 16:46:54 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/rustlang/</guid>
+      <guid>http://localhost:1313/tags/rustlang/</guid>
       <description></description>
     </item>
     <item>
       <title>Typescript</title>
-      <link>https://ageldama.github.io/tags/typescript/</link>
+      <link>http://localhost:1313/tags/typescript/</link>
       <pubDate>Sat, 04 Feb 2023 16:46:54 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/typescript/</guid>
+      <guid>http://localhost:1313/tags/typescript/</guid>
       <description></description>
     </item>
     <item>
       <title>Glass-Onion</title>
-      <link>https://ageldama.github.io/tags/glass-onion/</link>
+      <link>http://localhost:1313/tags/glass-onion/</link>
       <pubDate>Fri, 03 Feb 2023 19:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/glass-onion/</guid>
+      <guid>http://localhost:1313/tags/glass-onion/</guid>
       <description></description>
     </item>
     <item>
       <title>Kdrama</title>
-      <link>https://ageldama.github.io/tags/kdrama/</link>
+      <link>http://localhost:1313/tags/kdrama/</link>
       <pubDate>Fri, 03 Feb 2023 19:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/kdrama/</guid>
+      <guid>http://localhost:1313/tags/kdrama/</guid>
       <description></description>
     </item>
     <item>
       <title>Knives-Out</title>
-      <link>https://ageldama.github.io/tags/knives-out/</link>
+      <link>http://localhost:1313/tags/knives-out/</link>
       <pubDate>Fri, 03 Feb 2023 19:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/knives-out/</guid>
+      <guid>http://localhost:1313/tags/knives-out/</guid>
       <description></description>
     </item>
     <item>
       <title>See-How-They-Run</title>
-      <link>https://ageldama.github.io/tags/see-how-they-run/</link>
+      <link>http://localhost:1313/tags/see-how-they-run/</link>
       <pubDate>Fri, 03 Feb 2023 19:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/see-how-they-run/</guid>
+      <guid>http://localhost:1313/tags/see-how-they-run/</guid>
       <description></description>
     </item>
     <item>
       <title>Soap-Opera</title>
-      <link>https://ageldama.github.io/tags/soap-opera/</link>
+      <link>http://localhost:1313/tags/soap-opera/</link>
       <pubDate>Fri, 03 Feb 2023 19:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/soap-opera/</guid>
+      <guid>http://localhost:1313/tags/soap-opera/</guid>
       <description></description>
     </item>
     <item>
       <title>Gemini</title>
-      <link>https://ageldama.github.io/tags/gemini/</link>
+      <link>http://localhost:1313/tags/gemini/</link>
       <pubDate>Thu, 02 Feb 2023 15:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/gemini/</guid>
+      <guid>http://localhost:1313/tags/gemini/</guid>
       <description></description>
     </item>
     <item>
       <title>Gemtext</title>
-      <link>https://ageldama.github.io/tags/gemtext/</link>
+      <link>http://localhost:1313/tags/gemtext/</link>
       <pubDate>Thu, 02 Feb 2023 15:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/gemtext/</guid>
+      <guid>http://localhost:1313/tags/gemtext/</guid>
       <description></description>
     </item>
     <item>
       <title>Xemacs</title>
-      <link>https://ageldama.github.io/tags/xemacs/</link>
+      <link>http://localhost:1313/tags/xemacs/</link>
       <pubDate>Thu, 02 Feb 2023 15:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/xemacs/</guid>
+      <guid>http://localhost:1313/tags/xemacs/</guid>
       <description></description>
     </item>
     <item>
       <title>Hotwired</title>
-      <link>https://ageldama.github.io/tags/hotwired/</link>
+      <link>http://localhost:1313/tags/hotwired/</link>
       <pubDate>Wed, 29 Jun 2022 17:03:58 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/hotwired/</guid>
+      <guid>http://localhost:1313/tags/hotwired/</guid>
       <description></description>
     </item>
     <item>
       <title>Html</title>
-      <link>https://ageldama.github.io/tags/html/</link>
+      <link>http://localhost:1313/tags/html/</link>
       <pubDate>Wed, 29 Jun 2022 17:03:58 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/html/</guid>
+      <guid>http://localhost:1313/tags/html/</guid>
       <description></description>
     </item>
     <item>
       <title>Web</title>
-      <link>https://ageldama.github.io/tags/web/</link>
+      <link>http://localhost:1313/tags/web/</link>
       <pubDate>Wed, 29 Jun 2022 17:03:58 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/web/</guid>
+      <guid>http://localhost:1313/tags/web/</guid>
       <description></description>
     </item>
     <item>
       <title>Chdir</title>
-      <link>https://ageldama.github.io/tags/chdir/</link>
+      <link>http://localhost:1313/tags/chdir/</link>
       <pubDate>Wed, 29 Jun 2022 15:08:22 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/chdir/</guid>
+      <guid>http://localhost:1313/tags/chdir/</guid>
       <description></description>
     </item>
     <item>
       <title>Conspy</title>
-      <link>https://ageldama.github.io/tags/conspy/</link>
+      <link>http://localhost:1313/tags/conspy/</link>
       <pubDate>Wed, 29 Jun 2022 15:08:22 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/conspy/</guid>
+      <guid>http://localhost:1313/tags/conspy/</guid>
       <description></description>
     </item>
     <item>
       <title>Fold</title>
-      <link>https://ageldama.github.io/tags/fold/</link>
+      <link>http://localhost:1313/tags/fold/</link>
       <pubDate>Fri, 24 Jun 2022 04:16:26 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/fold/</guid>
+      <guid>http://localhost:1313/tags/fold/</guid>
       <description></description>
     </item>
     <item>
       <title>Grug</title>
-      <link>https://ageldama.github.io/tags/grug/</link>
+      <link>http://localhost:1313/tags/grug/</link>
       <pubDate>Fri, 24 Jun 2022 04:16:26 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/grug/</guid>
+      <guid>http://localhost:1313/tags/grug/</guid>
       <description></description>
     </item>
     <item>
       <title>Sw-Engineering</title>
-      <link>https://ageldama.github.io/tags/sw-engineering/</link>
+      <link>http://localhost:1313/tags/sw-engineering/</link>
       <pubDate>Fri, 24 Jun 2022 04:16:26 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/sw-engineering/</guid>
+      <guid>http://localhost:1313/tags/sw-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Sw</title>
-      <link>https://ageldama.github.io/tags/sw/</link>
+      <link>http://localhost:1313/tags/sw/</link>
       <pubDate>Sun, 19 Jun 2022 15:26:29 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/sw/</guid>
+      <guid>http://localhost:1313/tags/sw/</guid>
       <description></description>
     </item>
     <item>
       <title>Api</title>
-      <link>https://ageldama.github.io/tags/api/</link>
+      <link>http://localhost:1313/tags/api/</link>
       <pubDate>Wed, 15 Jun 2022 11:22:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/api/</guid>
+      <guid>http://localhost:1313/tags/api/</guid>
       <description></description>
     </item>
     <item>
       <title>Gql</title>
-      <link>https://ageldama.github.io/tags/gql/</link>
+      <link>http://localhost:1313/tags/gql/</link>
       <pubDate>Wed, 15 Jun 2022 11:22:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/gql/</guid>
+      <guid>http://localhost:1313/tags/gql/</guid>
       <description></description>
     </item>
     <item>
       <title>Gulp</title>
-      <link>https://ageldama.github.io/tags/gulp/</link>
+      <link>http://localhost:1313/tags/gulp/</link>
       <pubDate>Wed, 15 Jun 2022 11:22:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/gulp/</guid>
+      <guid>http://localhost:1313/tags/gulp/</guid>
       <description></description>
     </item>
     <item>
       <title>Jinja2</title>
-      <link>https://ageldama.github.io/tags/jinja2/</link>
+      <link>http://localhost:1313/tags/jinja2/</link>
       <pubDate>Wed, 15 Jun 2022 11:22:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/jinja2/</guid>
+      <guid>http://localhost:1313/tags/jinja2/</guid>
       <description></description>
     </item>
     <item>
       <title>Postgresql</title>
-      <link>https://ageldama.github.io/tags/postgresql/</link>
+      <link>http://localhost:1313/tags/postgresql/</link>
       <pubDate>Wed, 15 Jun 2022 11:22:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/postgresql/</guid>
+      <guid>http://localhost:1313/tags/postgresql/</guid>
       <description></description>
     </item>
     <item>
       <title>Algebraic-Effects</title>
-      <link>https://ageldama.github.io/tags/algebraic-effects/</link>
+      <link>http://localhost:1313/tags/algebraic-effects/</link>
       <pubDate>Mon, 13 Jun 2022 14:11:14 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/algebraic-effects/</guid>
+      <guid>http://localhost:1313/tags/algebraic-effects/</guid>
       <description></description>
     </item>
     <item>
       <title>Conditions</title>
-      <link>https://ageldama.github.io/tags/conditions/</link>
+      <link>http://localhost:1313/tags/conditions/</link>
       <pubDate>Mon, 13 Jun 2022 14:11:14 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/conditions/</guid>
+      <guid>http://localhost:1313/tags/conditions/</guid>
       <description></description>
     </item>
     <item>
       <title>Lisp</title>
-      <link>https://ageldama.github.io/tags/lisp/</link>
+      <link>http://localhost:1313/tags/lisp/</link>
       <pubDate>Mon, 13 Jun 2022 14:11:14 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/lisp/</guid>
+      <guid>http://localhost:1313/tags/lisp/</guid>
       <description></description>
     </item>
     <item>
       <title>Code</title>
-      <link>https://ageldama.github.io/tags/code/</link>
+      <link>http://localhost:1313/tags/code/</link>
       <pubDate>Sun, 12 Jun 2022 13:45:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/code/</guid>
+      <guid>http://localhost:1313/tags/code/</guid>
       <description></description>
     </item>
     <item>
       <title>Jq</title>
-      <link>https://ageldama.github.io/tags/jq/</link>
+      <link>http://localhost:1313/tags/jq/</link>
       <pubDate>Sun, 12 Jun 2022 13:45:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/jq/</guid>
+      <guid>http://localhost:1313/tags/jq/</guid>
       <description></description>
     </item>
     <item>
       <title>Json</title>
-      <link>https://ageldama.github.io/tags/json/</link>
+      <link>http://localhost:1313/tags/json/</link>
       <pubDate>Sun, 12 Jun 2022 13:45:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/json/</guid>
+      <guid>http://localhost:1313/tags/json/</guid>
       <description></description>
     </item>
     <item>
       <title>Engineering</title>
-      <link>https://ageldama.github.io/tags/engineering/</link>
+      <link>http://localhost:1313/tags/engineering/</link>
       <pubDate>Sun, 12 Jun 2022 04:37:12 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/engineering/</guid>
+      <guid>http://localhost:1313/tags/engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
-      <link>https://ageldama.github.io/tags/software/</link>
+      <link>http://localhost:1313/tags/software/</link>
       <pubDate>Sun, 12 Jun 2022 04:37:12 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/software/</guid>
+      <guid>http://localhost:1313/tags/software/</guid>
       <description></description>
     </item>
     <item>
       <title>Pytest Fixtures Dependency-Injection Complexity Software</title>
-      <link>https://ageldama.github.io/tags/pytest-fixtures-dependency-injection-complexity-software/</link>
+      <link>http://localhost:1313/tags/pytest-fixtures-dependency-injection-complexity-software/</link>
       <pubDate>Wed, 08 Jun 2022 18:20:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/pytest-fixtures-dependency-injection-complexity-software/</guid>
+      <guid>http://localhost:1313/tags/pytest-fixtures-dependency-injection-complexity-software/</guid>
       <description></description>
     </item>
     <item>
       <title>Hiring People</title>
-      <link>https://ageldama.github.io/tags/hiring-people/</link>
+      <link>http://localhost:1313/tags/hiring-people/</link>
       <pubDate>Wed, 08 Jun 2022 18:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/hiring-people/</guid>
+      <guid>http://localhost:1313/tags/hiring-people/</guid>
       <description></description>
     </item>
     <item>
       <title>Update Blogging Hotwired Stimulus Turbo</title>
-      <link>https://ageldama.github.io/tags/update-blogging-hotwired-stimulus-turbo/</link>
+      <link>http://localhost:1313/tags/update-blogging-hotwired-stimulus-turbo/</link>
       <pubDate>Mon, 06 Jun 2022 19:50:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/update-blogging-hotwired-stimulus-turbo/</guid>
+      <guid>http://localhost:1313/tags/update-blogging-hotwired-stimulus-turbo/</guid>
       <description></description>
     </item>
     <item>
       <title>Bluetooth</title>
-      <link>https://ageldama.github.io/tags/bluetooth/</link>
+      <link>http://localhost:1313/tags/bluetooth/</link>
       <pubDate>Mon, 23 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/bluetooth/</guid>
+      <guid>http://localhost:1313/tags/bluetooth/</guid>
       <description></description>
     </item>
     <item>
       <title>K480</title>
-      <link>https://ageldama.github.io/tags/k480/</link>
+      <link>http://localhost:1313/tags/k480/</link>
       <pubDate>Mon, 23 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/k480/</guid>
+      <guid>http://localhost:1313/tags/k480/</guid>
       <description></description>
     </item>
     <item>
       <title>Keyboard</title>
-      <link>https://ageldama.github.io/tags/keyboard/</link>
+      <link>http://localhost:1313/tags/keyboard/</link>
       <pubDate>Mon, 23 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/keyboard/</guid>
+      <guid>http://localhost:1313/tags/keyboard/</guid>
       <description></description>
     </item>
     <item>
       <title>Logitech</title>
-      <link>https://ageldama.github.io/tags/logitech/</link>
+      <link>http://localhost:1313/tags/logitech/</link>
       <pubDate>Mon, 23 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/logitech/</guid>
+      <guid>http://localhost:1313/tags/logitech/</guid>
       <description></description>
     </item>
     <item>
       <title>Membrane</title>
-      <link>https://ageldama.github.io/tags/membrane/</link>
+      <link>http://localhost:1313/tags/membrane/</link>
       <pubDate>Mon, 23 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/membrane/</guid>
+      <guid>http://localhost:1313/tags/membrane/</guid>
       <description></description>
     </item>
     <item>
       <title>Generator</title>
-      <link>https://ageldama.github.io/tags/generator/</link>
+      <link>http://localhost:1313/tags/generator/</link>
       <pubDate>Wed, 11 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/generator/</guid>
+      <guid>http://localhost:1313/tags/generator/</guid>
       <description></description>
     </item>
     <item>
       <title>Lazy</title>
-      <link>https://ageldama.github.io/tags/lazy/</link>
+      <link>http://localhost:1313/tags/lazy/</link>
       <pubDate>Wed, 11 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/lazy/</guid>
+      <guid>http://localhost:1313/tags/lazy/</guid>
       <description></description>
     </item>
     <item>
       <title>Leet-Code</title>
-      <link>https://ageldama.github.io/tags/leet-code/</link>
+      <link>http://localhost:1313/tags/leet-code/</link>
       <pubDate>Wed, 11 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/leet-code/</guid>
+      <guid>http://localhost:1313/tags/leet-code/</guid>
       <description></description>
     </item>
     <item>
       <title>Stream</title>
-      <link>https://ageldama.github.io/tags/stream/</link>
+      <link>http://localhost:1313/tags/stream/</link>
       <pubDate>Wed, 11 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/stream/</guid>
+      <guid>http://localhost:1313/tags/stream/</guid>
       <description></description>
     </item>
     <item>
       <title>As3</title>
-      <link>https://ageldama.github.io/tags/as3/</link>
+      <link>http://localhost:1313/tags/as3/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/as3/</guid>
+      <guid>http://localhost:1313/tags/as3/</guid>
       <description></description>
     </item>
     <item>
       <title>Bindable</title>
-      <link>https://ageldama.github.io/tags/bindable/</link>
+      <link>http://localhost:1313/tags/bindable/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/bindable/</guid>
+      <guid>http://localhost:1313/tags/bindable/</guid>
       <description></description>
     </item>
     <item>
       <title>Flex3</title>
-      <link>https://ageldama.github.io/tags/flex3/</link>
+      <link>http://localhost:1313/tags/flex3/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/flex3/</guid>
+      <guid>http://localhost:1313/tags/flex3/</guid>
       <description></description>
     </item>
     <item>
       <title>Jsx</title>
-      <link>https://ageldama.github.io/tags/jsx/</link>
+      <link>http://localhost:1313/tags/jsx/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/jsx/</guid>
+      <guid>http://localhost:1313/tags/jsx/</guid>
       <description></description>
     </item>
     <item>
       <title>Mxml</title>
-      <link>https://ageldama.github.io/tags/mxml/</link>
+      <link>http://localhost:1313/tags/mxml/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/mxml/</guid>
+      <guid>http://localhost:1313/tags/mxml/</guid>
       <description></description>
     </item>
     <item>
       <title>Reactjs</title>
-      <link>https://ageldama.github.io/tags/reactjs/</link>
+      <link>http://localhost:1313/tags/reactjs/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/reactjs/</guid>
+      <guid>http://localhost:1313/tags/reactjs/</guid>
       <description></description>
     </item>
     <item>
       <title>Redux</title>
-      <link>https://ageldama.github.io/tags/redux/</link>
+      <link>http://localhost:1313/tags/redux/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/redux/</guid>
+      <guid>http://localhost:1313/tags/redux/</guid>
       <description></description>
     </item>
     <item>
       <title>Vuejs</title>
-      <link>https://ageldama.github.io/tags/vuejs/</link>
+      <link>http://localhost:1313/tags/vuejs/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/vuejs/</guid>
+      <guid>http://localhost:1313/tags/vuejs/</guid>
       <description></description>
     </item>
     <item>
       <title>Vuex</title>
-      <link>https://ageldama.github.io/tags/vuex/</link>
+      <link>http://localhost:1313/tags/vuex/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/vuex/</guid>
+      <guid>http://localhost:1313/tags/vuex/</guid>
       <description></description>
     </item>
     <item>
       <title>Books</title>
-      <link>https://ageldama.github.io/tags/books/</link>
+      <link>http://localhost:1313/tags/books/</link>
       <pubDate>Thu, 05 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/books/</guid>
+      <guid>http://localhost:1313/tags/books/</guid>
       <description></description>
     </item>
     <item>
       <title>Reading</title>
-      <link>https://ageldama.github.io/tags/reading/</link>
+      <link>http://localhost:1313/tags/reading/</link>
       <pubDate>Thu, 05 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/reading/</guid>
+      <guid>http://localhost:1313/tags/reading/</guid>
       <description></description>
     </item>
     <item>
       <title>Opensource</title>
-      <link>https://ageldama.github.io/tags/opensource/</link>
+      <link>http://localhost:1313/tags/opensource/</link>
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/opensource/</guid>
+      <guid>http://localhost:1313/tags/opensource/</guid>
       <description></description>
     </item>
     <item>
       <title>Orgmode</title>
-      <link>https://ageldama.github.io/tags/orgmode/</link>
+      <link>http://localhost:1313/tags/orgmode/</link>
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/orgmode/</guid>
+      <guid>http://localhost:1313/tags/orgmode/</guid>
       <description></description>
     </item>
     <item>
       <title>Baconjs</title>
-      <link>https://ageldama.github.io/tags/baconjs/</link>
+      <link>http://localhost:1313/tags/baconjs/</link>
       <pubDate>Mon, 02 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/baconjs/</guid>
+      <guid>http://localhost:1313/tags/baconjs/</guid>
       <description></description>
     </item>
     <item>
       <title>Frp</title>
-      <link>https://ageldama.github.io/tags/frp/</link>
+      <link>http://localhost:1313/tags/frp/</link>
       <pubDate>Mon, 02 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/frp/</guid>
+      <guid>http://localhost:1313/tags/frp/</guid>
       <description></description>
     </item>
     <item>
       <title>Monad</title>
-      <link>https://ageldama.github.io/tags/monad/</link>
+      <link>http://localhost:1313/tags/monad/</link>
       <pubDate>Mon, 02 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/monad/</guid>
+      <guid>http://localhost:1313/tags/monad/</guid>
       <description></description>
     </item>
     <item>
       <title>Reactive</title>
-      <link>https://ageldama.github.io/tags/reactive/</link>
+      <link>http://localhost:1313/tags/reactive/</link>
       <pubDate>Mon, 02 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/reactive/</guid>
+      <guid>http://localhost:1313/tags/reactive/</guid>
       <description></description>
     </item>
     <item>
       <title>Rxjs</title>
-      <link>https://ageldama.github.io/tags/rxjs/</link>
+      <link>http://localhost:1313/tags/rxjs/</link>
       <pubDate>Mon, 02 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/rxjs/</guid>
+      <guid>http://localhost:1313/tags/rxjs/</guid>
       <description></description>
     </item>
     <item>
       <title>Webdev</title>
-      <link>https://ageldama.github.io/tags/webdev/</link>
+      <link>http://localhost:1313/tags/webdev/</link>
       <pubDate>Mon, 02 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/webdev/</guid>
+      <guid>http://localhost:1313/tags/webdev/</guid>
       <description></description>
     </item>
     <item>
       <title>Asdf</title>
-      <link>https://ageldama.github.io/tags/asdf/</link>
+      <link>http://localhost:1313/tags/asdf/</link>
       <pubDate>Mon, 26 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/asdf/</guid>
+      <guid>http://localhost:1313/tags/asdf/</guid>
       <description></description>
     </item>
     <item>
       <title>Asdf-Subdir-Finder</title>
-      <link>https://ageldama.github.io/tags/asdf-subdir-finder/</link>
+      <link>http://localhost:1313/tags/asdf-subdir-finder/</link>
       <pubDate>Mon, 26 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/asdf-subdir-finder/</guid>
+      <guid>http://localhost:1313/tags/asdf-subdir-finder/</guid>
       <description></description>
     </item>
     <item>
       <title>Mop</title>
-      <link>https://ageldama.github.io/tags/mop/</link>
+      <link>http://localhost:1313/tags/mop/</link>
       <pubDate>Fri, 23 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/mop/</guid>
+      <guid>http://localhost:1313/tags/mop/</guid>
       <description></description>
     </item>
     <item>
       <title>Parcel</title>
-      <link>https://ageldama.github.io/tags/parcel/</link>
+      <link>http://localhost:1313/tags/parcel/</link>
       <pubDate>Sat, 17 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/parcel/</guid>
+      <guid>http://localhost:1313/tags/parcel/</guid>
       <description></description>
     </item>
     <item>
       <title>Webpack</title>
-      <link>https://ageldama.github.io/tags/webpack/</link>
+      <link>http://localhost:1313/tags/webpack/</link>
       <pubDate>Sat, 17 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/webpack/</guid>
+      <guid>http://localhost:1313/tags/webpack/</guid>
       <description></description>
     </item>
     <item>
       <title>Fp</title>
-      <link>https://ageldama.github.io/tags/fp/</link>
+      <link>http://localhost:1313/tags/fp/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/fp/</guid>
+      <guid>http://localhost:1313/tags/fp/</guid>
       <description></description>
     </item>
     <item>
       <title>Language-Construct</title>
-      <link>https://ageldama.github.io/tags/language-construct/</link>
+      <link>http://localhost:1313/tags/language-construct/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/language-construct/</guid>
+      <guid>http://localhost:1313/tags/language-construct/</guid>
       <description></description>
     </item>
     <item>
       <title>Oop</title>
-      <link>https://ageldama.github.io/tags/oop/</link>
+      <link>http://localhost:1313/tags/oop/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/oop/</guid>
+      <guid>http://localhost:1313/tags/oop/</guid>
       <description></description>
     </item>
     <item>
       <title>Pythonic</title>
-      <link>https://ageldama.github.io/tags/pythonic/</link>
+      <link>http://localhost:1313/tags/pythonic/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/pythonic/</guid>
+      <guid>http://localhost:1313/tags/pythonic/</guid>
       <description></description>
     </item>
     <item>
       <title>Zero-Overhead</title>
-      <link>https://ageldama.github.io/tags/zero-overhead/</link>
+      <link>http://localhost:1313/tags/zero-overhead/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/zero-overhead/</guid>
+      <guid>http://localhost:1313/tags/zero-overhead/</guid>
       <description></description>
     </item>
     <item>
       <title>Proj-A</title>
-      <link>https://ageldama.github.io/tags/proj-a/</link>
+      <link>http://localhost:1313/tags/proj-a/</link>
       <pubDate>Sun, 30 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/proj-a/</guid>
+      <guid>http://localhost:1313/tags/proj-a/</guid>
       <description></description>
     </item>
     <item>
       <title>5.8</title>
-      <link>https://ageldama.github.io/tags/5.8/</link>
+      <link>http://localhost:1313/tags/5.8/</link>
       <pubDate>Thu, 27 Aug 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/5.8/</guid>
+      <guid>http://localhost:1313/tags/5.8/</guid>
       <description></description>
     </item>
     <item>
       <title>Driver</title>
-      <link>https://ageldama.github.io/tags/driver/</link>
+      <link>http://localhost:1313/tags/driver/</link>
       <pubDate>Thu, 27 Aug 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/driver/</guid>
+      <guid>http://localhost:1313/tags/driver/</guid>
       <description></description>
     </item>
     <item>
       <title>Kernel</title>
-      <link>https://ageldama.github.io/tags/kernel/</link>
+      <link>http://localhost:1313/tags/kernel/</link>
       <pubDate>Thu, 27 Aug 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/kernel/</guid>
+      <guid>http://localhost:1313/tags/kernel/</guid>
       <description></description>
     </item>
     <item>
       <title>Usb</title>
-      <link>https://ageldama.github.io/tags/usb/</link>
+      <link>http://localhost:1313/tags/usb/</link>
       <pubDate>Thu, 27 Aug 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/usb/</guid>
+      <guid>http://localhost:1313/tags/usb/</guid>
       <description></description>
     </item>
     <item>
       <title>Wifi</title>
-      <link>https://ageldama.github.io/tags/wifi/</link>
+      <link>http://localhost:1313/tags/wifi/</link>
       <pubDate>Thu, 27 Aug 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/wifi/</guid>
+      <guid>http://localhost:1313/tags/wifi/</guid>
       <description></description>
     </item>
     <item>
       <title>Games</title>
-      <link>https://ageldama.github.io/tags/games/</link>
+      <link>http://localhost:1313/tags/games/</link>
       <pubDate>Mon, 24 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/games/</guid>
+      <guid>http://localhost:1313/tags/games/</guid>
       <description></description>
     </item>
     <item>
       <title>Autotools</title>
-      <link>https://ageldama.github.io/tags/autotools/</link>
+      <link>http://localhost:1313/tags/autotools/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/autotools/</guid>
+      <guid>http://localhost:1313/tags/autotools/</guid>
       <description></description>
     </item>
     <item>
       <title>Build</title>
-      <link>https://ageldama.github.io/tags/build/</link>
+      <link>http://localhost:1313/tags/build/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/build/</guid>
+      <guid>http://localhost:1313/tags/build/</guid>
       <description></description>
     </item>
     <item>
       <title>Cmake</title>
-      <link>https://ageldama.github.io/tags/cmake/</link>
+      <link>http://localhost:1313/tags/cmake/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/cmake/</guid>
+      <guid>http://localhost:1313/tags/cmake/</guid>
       <description></description>
     </item>
     <item>
       <title>Configure</title>
-      <link>https://ageldama.github.io/tags/configure/</link>
+      <link>http://localhost:1313/tags/configure/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/configure/</guid>
+      <guid>http://localhost:1313/tags/configure/</guid>
       <description></description>
     </item>
     <item>
       <title>Makefile</title>
-      <link>https://ageldama.github.io/tags/makefile/</link>
+      <link>http://localhost:1313/tags/makefile/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/makefile/</guid>
+      <guid>http://localhost:1313/tags/makefile/</guid>
       <description></description>
     </item>
     <item>
       <title>Meson</title>
-      <link>https://ageldama.github.io/tags/meson/</link>
+      <link>http://localhost:1313/tags/meson/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/meson/</guid>
+      <guid>http://localhost:1313/tags/meson/</guid>
       <description></description>
     </item>
     <item>
       <title>Rake</title>
-      <link>https://ageldama.github.io/tags/rake/</link>
+      <link>http://localhost:1313/tags/rake/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/rake/</guid>
+      <guid>http://localhost:1313/tags/rake/</guid>
       <description></description>
     </item>
     <item>
       <title>Rakefile</title>
-      <link>https://ageldama.github.io/tags/rakefile/</link>
+      <link>http://localhost:1313/tags/rakefile/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/rakefile/</guid>
+      <guid>http://localhost:1313/tags/rakefile/</guid>
       <description></description>
     </item>
     <item>
       <title>Scons</title>
-      <link>https://ageldama.github.io/tags/scons/</link>
+      <link>http://localhost:1313/tags/scons/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/scons/</guid>
+      <guid>http://localhost:1313/tags/scons/</guid>
       <description></description>
     </item>
     <item>
       <title>Sdl</title>
-      <link>https://ageldama.github.io/tags/sdl/</link>
+      <link>http://localhost:1313/tags/sdl/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/sdl/</guid>
+      <guid>http://localhost:1313/tags/sdl/</guid>
       <description></description>
     </item>
     <item>
       <title>Sdlhan</title>
-      <link>https://ageldama.github.io/tags/sdlhan/</link>
+      <link>http://localhost:1313/tags/sdlhan/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/sdlhan/</guid>
+      <guid>http://localhost:1313/tags/sdlhan/</guid>
       <description></description>
     </item>
     <item>
       <title>Wrap</title>
-      <link>https://ageldama.github.io/tags/wrap/</link>
+      <link>http://localhost:1313/tags/wrap/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/wrap/</guid>
+      <guid>http://localhost:1313/tags/wrap/</guid>
       <description></description>
     </item>
     <item>
       <title>Wrapdb</title>
-      <link>https://ageldama.github.io/tags/wrapdb/</link>
+      <link>http://localhost:1313/tags/wrapdb/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/wrapdb/</guid>
+      <guid>http://localhost:1313/tags/wrapdb/</guid>
       <description></description>
     </item>
     <item>
       <title>Blockchain</title>
-      <link>https://ageldama.github.io/tags/blockchain/</link>
+      <link>http://localhost:1313/tags/blockchain/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/blockchain/</guid>
+      <guid>http://localhost:1313/tags/blockchain/</guid>
       <description></description>
     </item>
     <item>
       <title>Computation</title>
-      <link>https://ageldama.github.io/tags/computation/</link>
+      <link>http://localhost:1313/tags/computation/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/computation/</guid>
+      <guid>http://localhost:1313/tags/computation/</guid>
       <description></description>
     </item>
     <item>
       <title>Crypto</title>
-      <link>https://ageldama.github.io/tags/crypto/</link>
+      <link>http://localhost:1313/tags/crypto/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/crypto/</guid>
+      <guid>http://localhost:1313/tags/crypto/</guid>
       <description></description>
     </item>
     <item>
       <title>P2p</title>
-      <link>https://ageldama.github.io/tags/p2p/</link>
+      <link>http://localhost:1313/tags/p2p/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/p2p/</guid>
+      <guid>http://localhost:1313/tags/p2p/</guid>
       <description></description>
     </item>
     <item>
       <title>Evil</title>
-      <link>https://ageldama.github.io/tags/evil/</link>
+      <link>http://localhost:1313/tags/evil/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/evil/</guid>
+      <guid>http://localhost:1313/tags/evil/</guid>
       <description></description>
     </item>
     <item>
       <title>Vi</title>
-      <link>https://ageldama.github.io/tags/vi/</link>
+      <link>http://localhost:1313/tags/vi/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/vi/</guid>
+      <guid>http://localhost:1313/tags/vi/</guid>
       <description></description>
     </item>
     <item>
       <title>Vim</title>
-      <link>https://ageldama.github.io/tags/vim/</link>
+      <link>http://localhost:1313/tags/vim/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/vim/</guid>
+      <guid>http://localhost:1313/tags/vim/</guid>
       <description></description>
     </item>
     <item>
       <title>Summer</title>
-      <link>https://ageldama.github.io/tags/summer/</link>
+      <link>http://localhost:1313/tags/summer/</link>
       <pubDate>Fri, 24 Jul 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/summer/</guid>
+      <guid>http://localhost:1313/tags/summer/</guid>
       <description></description>
     </item>
     <item>
       <title>Editor</title>
-      <link>https://ageldama.github.io/tags/editor/</link>
+      <link>http://localhost:1313/tags/editor/</link>
       <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/editor/</guid>
+      <guid>http://localhost:1313/tags/editor/</guid>
       <description></description>
     </item>
     <item>
       <title>Text-Editor</title>
-      <link>https://ageldama.github.io/tags/text-editor/</link>
+      <link>http://localhost:1313/tags/text-editor/</link>
       <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/text-editor/</guid>
+      <guid>http://localhost:1313/tags/text-editor/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>https://ageldama.github.io/tags/tools/</link>
+      <link>http://localhost:1313/tags/tools/</link>
       <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/tools/</guid>
+      <guid>http://localhost:1313/tags/tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Acpid</title>
-      <link>https://ageldama.github.io/tags/acpid/</link>
+      <link>http://localhost:1313/tags/acpid/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/acpid/</guid>
+      <guid>http://localhost:1313/tags/acpid/</guid>
       <description></description>
     </item>
     <item>
       <title>Dbus</title>
-      <link>https://ageldama.github.io/tags/dbus/</link>
+      <link>http://localhost:1313/tags/dbus/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/dbus/</guid>
+      <guid>http://localhost:1313/tags/dbus/</guid>
       <description></description>
     </item>
     <item>
       <title>Elogind</title>
-      <link>https://ageldama.github.io/tags/elogind/</link>
+      <link>http://localhost:1313/tags/elogind/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/elogind/</guid>
+      <guid>http://localhost:1313/tags/elogind/</guid>
       <description></description>
     </item>
     <item>
       <title>Gnugp</title>
-      <link>https://ageldama.github.io/tags/gnugp/</link>
+      <link>http://localhost:1313/tags/gnugp/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/gnugp/</guid>
+      <guid>http://localhost:1313/tags/gnugp/</guid>
       <description></description>
     </item>
     <item>
       <title>Ssh-Askpass</title>
-      <link>https://ageldama.github.io/tags/ssh-askpass/</link>
+      <link>http://localhost:1313/tags/ssh-askpass/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/ssh-askpass/</guid>
+      <guid>http://localhost:1313/tags/ssh-askpass/</guid>
       <description></description>
     </item>
     <item>
       <title>Void-Linux</title>
-      <link>https://ageldama.github.io/tags/void-linux/</link>
+      <link>http://localhost:1313/tags/void-linux/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/void-linux/</guid>
+      <guid>http://localhost:1313/tags/void-linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Zzz</title>
-      <link>https://ageldama.github.io/tags/zzz/</link>
+      <link>http://localhost:1313/tags/zzz/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/zzz/</guid>
+      <guid>http://localhost:1313/tags/zzz/</guid>
       <description></description>
     </item>
     <item>
       <title>Archlinux</title>
-      <link>https://ageldama.github.io/tags/archlinux/</link>
+      <link>http://localhost:1313/tags/archlinux/</link>
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/archlinux/</guid>
+      <guid>http://localhost:1313/tags/archlinux/</guid>
       <description></description>
     </item>
     <item>
       <title>Boot</title>
-      <link>https://ageldama.github.io/tags/boot/</link>
+      <link>http://localhost:1313/tags/boot/</link>
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/boot/</guid>
+      <guid>http://localhost:1313/tags/boot/</guid>
       <description></description>
     </item>
     <item>
       <title>Grub</title>
-      <link>https://ageldama.github.io/tags/grub/</link>
+      <link>http://localhost:1313/tags/grub/</link>
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/grub/</guid>
+      <guid>http://localhost:1313/tags/grub/</guid>
       <description></description>
     </item>
     <item>
       <title>Grub2</title>
-      <link>https://ageldama.github.io/tags/grub2/</link>
+      <link>http://localhost:1313/tags/grub2/</link>
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/grub2/</guid>
+      <guid>http://localhost:1313/tags/grub2/</guid>
       <description></description>
     </item>
     <item>
       <title>Memstick</title>
-      <link>https://ageldama.github.io/tags/memstick/</link>
+      <link>http://localhost:1313/tags/memstick/</link>
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/memstick/</guid>
+      <guid>http://localhost:1313/tags/memstick/</guid>
       <description></description>
     </item>
     <item>
       <title>Rescue</title>
-      <link>https://ageldama.github.io/tags/rescue/</link>
+      <link>http://localhost:1313/tags/rescue/</link>
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/rescue/</guid>
+      <guid>http://localhost:1313/tags/rescue/</guid>
       <description></description>
     </item>
     <item>
       <title>Usbstick</title>
-      <link>https://ageldama.github.io/tags/usbstick/</link>
+      <link>http://localhost:1313/tags/usbstick/</link>
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/usbstick/</guid>
+      <guid>http://localhost:1313/tags/usbstick/</guid>
       <description></description>
     </item>
     <item>
       <title>100days</title>
-      <link>https://ageldama.github.io/tags/100days/</link>
+      <link>http://localhost:1313/tags/100days/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/100days/</guid>
+      <guid>http://localhost:1313/tags/100days/</guid>
       <description></description>
     </item>
     <item>
       <title>Changing</title>
-      <link>https://ageldama.github.io/tags/changing/</link>
+      <link>http://localhost:1313/tags/changing/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/changing/</guid>
+      <guid>http://localhost:1313/tags/changing/</guid>
       <description></description>
     </item>
     <item>
       <title>Contravariant</title>
-      <link>https://ageldama.github.io/tags/contravariant/</link>
+      <link>http://localhost:1313/tags/contravariant/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:02 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/contravariant/</guid>
+      <guid>http://localhost:1313/tags/contravariant/</guid>
       <description></description>
     </item>
     <item>
       <title>Covariant</title>
-      <link>https://ageldama.github.io/tags/covariant/</link>
+      <link>http://localhost:1313/tags/covariant/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:02 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/covariant/</guid>
+      <guid>http://localhost:1313/tags/covariant/</guid>
       <description></description>
     </item>
     <item>
       <title>Higher-Order-Type</title>
-      <link>https://ageldama.github.io/tags/higher-order-type/</link>
+      <link>http://localhost:1313/tags/higher-order-type/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:02 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/higher-order-type/</guid>
+      <guid>http://localhost:1313/tags/higher-order-type/</guid>
       <description></description>
     </item>
     <item>
       <title>Invariant</title>
-      <link>https://ageldama.github.io/tags/invariant/</link>
+      <link>http://localhost:1313/tags/invariant/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:02 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/invariant/</guid>
+      <guid>http://localhost:1313/tags/invariant/</guid>
       <description></description>
     </item>
     <item>
       <title>Type</title>
-      <link>https://ageldama.github.io/tags/type/</link>
+      <link>http://localhost:1313/tags/type/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:02 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/type/</guid>
+      <guid>http://localhost:1313/tags/type/</guid>
       <description></description>
     </item>
     <item>
       <title>Type-System</title>
-      <link>https://ageldama.github.io/tags/type-system/</link>
+      <link>http://localhost:1313/tags/type-system/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:02 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/type-system/</guid>
+      <guid>http://localhost:1313/tags/type-system/</guid>
       <description></description>
     </item>
     <item>
       <title>Variances</title>
-      <link>https://ageldama.github.io/tags/variances/</link>
+      <link>http://localhost:1313/tags/variances/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:02 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/variances/</guid>
+      <guid>http://localhost:1313/tags/variances/</guid>
       <description></description>
     </item>
     <item>
       <title>Esup</title>
-      <link>https://ageldama.github.io/tags/esup/</link>
+      <link>http://localhost:1313/tags/esup/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/esup/</guid>
+      <guid>http://localhost:1313/tags/esup/</guid>
       <description></description>
     </item>
     <item>
       <title>Gc</title>
-      <link>https://ageldama.github.io/tags/gc/</link>
+      <link>http://localhost:1313/tags/gc/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/gc/</guid>
+      <guid>http://localhost:1313/tags/gc/</guid>
       <description></description>
     </item>
     <item>
       <title>Profile</title>
-      <link>https://ageldama.github.io/tags/profile/</link>
+      <link>http://localhost:1313/tags/profile/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/profile/</guid>
+      <guid>http://localhost:1313/tags/profile/</guid>
       <description></description>
     </item>
     <item>
       <title>Profiler</title>
-      <link>https://ageldama.github.io/tags/profiler/</link>
+      <link>http://localhost:1313/tags/profiler/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/profiler/</guid>
+      <guid>http://localhost:1313/tags/profiler/</guid>
       <description></description>
     </item>
     <item>
       <title>Speedup</title>
-      <link>https://ageldama.github.io/tags/speedup/</link>
+      <link>http://localhost:1313/tags/speedup/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/speedup/</guid>
+      <guid>http://localhost:1313/tags/speedup/</guid>
       <description></description>
     </item>
     <item>
       <title>Bullshit</title>
-      <link>https://ageldama.github.io/tags/bullshit/</link>
+      <link>http://localhost:1313/tags/bullshit/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/bullshit/</guid>
+      <guid>http://localhost:1313/tags/bullshit/</guid>
       <description></description>
     </item>
     <item>
       <title>Communication</title>
-      <link>https://ageldama.github.io/tags/communication/</link>
+      <link>http://localhost:1313/tags/communication/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/communication/</guid>
+      <guid>http://localhost:1313/tags/communication/</guid>
       <description></description>
     </item>
     <item>
       <title>Soft-Skill</title>
-      <link>https://ageldama.github.io/tags/soft-skill/</link>
+      <link>http://localhost:1313/tags/soft-skill/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/soft-skill/</guid>
+      <guid>http://localhost:1313/tags/soft-skill/</guid>
       <description></description>
     </item>
     <item>
       <title>Common-Lisp</title>
-      <link>https://ageldama.github.io/tags/common-lisp/</link>
+      <link>http://localhost:1313/tags/common-lisp/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/common-lisp/</guid>
+      <guid>http://localhost:1313/tags/common-lisp/</guid>
       <description></description>
     </item>
     <item>
       <title>Dynamic-Binding</title>
-      <link>https://ageldama.github.io/tags/dynamic-binding/</link>
+      <link>http://localhost:1313/tags/dynamic-binding/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/dynamic-binding/</guid>
+      <guid>http://localhost:1313/tags/dynamic-binding/</guid>
       <description></description>
     </item>
     <item>
       <title>Guile</title>
-      <link>https://ageldama.github.io/tags/guile/</link>
+      <link>http://localhost:1313/tags/guile/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/guile/</guid>
+      <guid>http://localhost:1313/tags/guile/</guid>
       <description></description>
     </item>
     <item>
       <title>Lexical-Binding</title>
-      <link>https://ageldama.github.io/tags/lexical-binding/</link>
+      <link>http://localhost:1313/tags/lexical-binding/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/lexical-binding/</guid>
+      <guid>http://localhost:1313/tags/lexical-binding/</guid>
       <description></description>
     </item>
     <item>
       <title>Scheme</title>
-      <link>https://ageldama.github.io/tags/scheme/</link>
+      <link>http://localhost:1313/tags/scheme/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/scheme/</guid>
+      <guid>http://localhost:1313/tags/scheme/</guid>
       <description></description>
     </item>
     <item>
       <title>Compilation-Mode</title>
-      <link>https://ageldama.github.io/tags/compilation-mode/</link>
+      <link>http://localhost:1313/tags/compilation-mode/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/compilation-mode/</guid>
+      <guid>http://localhost:1313/tags/compilation-mode/</guid>
       <description></description>
     </item>
     <item>
       <title>Compile</title>
-      <link>https://ageldama.github.io/tags/compile/</link>
+      <link>http://localhost:1313/tags/compile/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/compile/</guid>
+      <guid>http://localhost:1313/tags/compile/</guid>
       <description></description>
     </item>
     <item>
       <title>Debugger</title>
-      <link>https://ageldama.github.io/tags/debugger/</link>
+      <link>http://localhost:1313/tags/debugger/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/debugger/</guid>
+      <guid>http://localhost:1313/tags/debugger/</guid>
       <description></description>
     </item>
     <item>
       <title>Direnv</title>
-      <link>https://ageldama.github.io/tags/direnv/</link>
+      <link>http://localhost:1313/tags/direnv/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/direnv/</guid>
+      <guid>http://localhost:1313/tags/direnv/</guid>
       <description></description>
     </item>
     <item>
       <title>Direnv-Mode</title>
-      <link>https://ageldama.github.io/tags/direnv-mode/</link>
+      <link>http://localhost:1313/tags/direnv-mode/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/direnv-mode/</guid>
+      <guid>http://localhost:1313/tags/direnv-mode/</guid>
       <description></description>
     </item>
     <item>
       <title>Dot-Envrc</title>
-      <link>https://ageldama.github.io/tags/dot-envrc/</link>
+      <link>http://localhost:1313/tags/dot-envrc/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/dot-envrc/</guid>
+      <guid>http://localhost:1313/tags/dot-envrc/</guid>
       <description></description>
     </item>
     <item>
       <title>Executable</title>
-      <link>https://ageldama.github.io/tags/executable/</link>
+      <link>http://localhost:1313/tags/executable/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/executable/</guid>
+      <guid>http://localhost:1313/tags/executable/</guid>
       <description></description>
     </item>
     <item>
       <title>Launcher</title>
-      <link>https://ageldama.github.io/tags/launcher/</link>
+      <link>http://localhost:1313/tags/launcher/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/launcher/</guid>
+      <guid>http://localhost:1313/tags/launcher/</guid>
       <description></description>
     </item>
     <item>
       <title>Shell</title>
-      <link>https://ageldama.github.io/tags/shell/</link>
+      <link>http://localhost:1313/tags/shell/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/shell/</guid>
+      <guid>http://localhost:1313/tags/shell/</guid>
       <description></description>
     </item>
     <item>
       <title>Virtualenv</title>
-      <link>https://ageldama.github.io/tags/virtualenv/</link>
+      <link>http://localhost:1313/tags/virtualenv/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/virtualenv/</guid>
+      <guid>http://localhost:1313/tags/virtualenv/</guid>
       <description></description>
     </item>
     <item>
       <title>2018</title>
-      <link>https://ageldama.github.io/tags/2018/</link>
+      <link>http://localhost:1313/tags/2018/</link>
       <pubDate>Sat, 21 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/2018/</guid>
+      <guid>http://localhost:1313/tags/2018/</guid>
       <description></description>
     </item>
     <item>
       <title>2019</title>
-      <link>https://ageldama.github.io/tags/2019/</link>
+      <link>http://localhost:1313/tags/2019/</link>
       <pubDate>Sat, 21 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/2019/</guid>
+      <guid>http://localhost:1313/tags/2019/</guid>
       <description></description>
     </item>
     <item>
       <title>Looking-Back</title>
-      <link>https://ageldama.github.io/tags/looking-back/</link>
+      <link>http://localhost:1313/tags/looking-back/</link>
       <pubDate>Sat, 21 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/looking-back/</guid>
+      <guid>http://localhost:1313/tags/looking-back/</guid>
       <description></description>
     </item>
     <item>
       <title>Exe</title>
-      <link>https://ageldama.github.io/tags/exe/</link>
+      <link>http://localhost:1313/tags/exe/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/exe/</guid>
+      <guid>http://localhost:1313/tags/exe/</guid>
       <description></description>
     </item>
     <item>
       <title>Hololog</title>
-      <link>https://ageldama.github.io/tags/hololog/</link>
+      <link>http://localhost:1313/tags/hololog/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/hololog/</guid>
+      <guid>http://localhost:1313/tags/hololog/</guid>
       <description></description>
     </item>
     <item>
       <title>Memo</title>
-      <link>https://ageldama.github.io/tags/memo/</link>
+      <link>http://localhost:1313/tags/memo/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/memo/</guid>
+      <guid>http://localhost:1313/tags/memo/</guid>
       <description></description>
     </item>
     <item>
       <title>Par-Packer</title>
-      <link>https://ageldama.github.io/tags/par-packer/</link>
+      <link>http://localhost:1313/tags/par-packer/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/par-packer/</guid>
+      <guid>http://localhost:1313/tags/par-packer/</guid>
       <description></description>
     </item>
     <item>
       <title>Babel</title>
-      <link>https://ageldama.github.io/tags/babel/</link>
+      <link>http://localhost:1313/tags/babel/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/babel/</guid>
+      <guid>http://localhost:1313/tags/babel/</guid>
       <description></description>
     </item>
     <item>
       <title>Org</title>
-      <link>https://ageldama.github.io/tags/org/</link>
+      <link>http://localhost:1313/tags/org/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/org/</guid>
+      <guid>http://localhost:1313/tags/org/</guid>
       <description></description>
     </item>
     <item>
       <title>Spreadsheet</title>
-      <link>https://ageldama.github.io/tags/spreadsheet/</link>
+      <link>http://localhost:1313/tags/spreadsheet/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/spreadsheet/</guid>
+      <guid>http://localhost:1313/tags/spreadsheet/</guid>
       <description></description>
     </item>
     <item>
       <title>Tips</title>
-      <link>https://ageldama.github.io/tags/tips/</link>
+      <link>http://localhost:1313/tags/tips/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/tips/</guid>
+      <guid>http://localhost:1313/tags/tips/</guid>
       <description></description>
     </item>
     <item>
       <title>Capitalism</title>
-      <link>https://ageldama.github.io/tags/capitalism/</link>
+      <link>http://localhost:1313/tags/capitalism/</link>
       <pubDate>Wed, 11 Dec 2019 02:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/capitalism/</guid>
+      <guid>http://localhost:1313/tags/capitalism/</guid>
       <description></description>
     </item>
     <item>
       <title>Internet</title>
-      <link>https://ageldama.github.io/tags/internet/</link>
+      <link>http://localhost:1313/tags/internet/</link>
       <pubDate>Wed, 11 Dec 2019 02:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/internet/</guid>
+      <guid>http://localhost:1313/tags/internet/</guid>
       <description></description>
     </item>
     <item>
       <title>Paranoid</title>
-      <link>https://ageldama.github.io/tags/paranoid/</link>
+      <link>http://localhost:1313/tags/paranoid/</link>
       <pubDate>Wed, 11 Dec 2019 02:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/paranoid/</guid>
+      <guid>http://localhost:1313/tags/paranoid/</guid>
       <description></description>
     </item>
     <item>
       <title>Www</title>
-      <link>https://ageldama.github.io/tags/www/</link>
+      <link>http://localhost:1313/tags/www/</link>
       <pubDate>Wed, 11 Dec 2019 02:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/www/</guid>
+      <guid>http://localhost:1313/tags/www/</guid>
       <description></description>
     </item>
     <item>
       <title>Mplayer</title>
-      <link>https://ageldama.github.io/tags/mplayer/</link>
+      <link>http://localhost:1313/tags/mplayer/</link>
       <pubDate>Wed, 11 Dec 2019 01:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/mplayer/</guid>
+      <guid>http://localhost:1313/tags/mplayer/</guid>
       <description></description>
     </item>
     <item>
       <title>Perl5</title>
-      <link>https://ageldama.github.io/tags/perl5/</link>
+      <link>http://localhost:1313/tags/perl5/</link>
       <pubDate>Wed, 11 Dec 2019 01:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/perl5/</guid>
+      <guid>http://localhost:1313/tags/perl5/</guid>
       <description></description>
     </item>
     <item>
       <title>Radio</title>
-      <link>https://ageldama.github.io/tags/radio/</link>
+      <link>http://localhost:1313/tags/radio/</link>
       <pubDate>Wed, 11 Dec 2019 01:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/radio/</guid>
+      <guid>http://localhost:1313/tags/radio/</guid>
       <description></description>
     </item>
     <item>
       <title>Radio-Gaga</title>
-      <link>https://ageldama.github.io/tags/radio-gaga/</link>
+      <link>http://localhost:1313/tags/radio-gaga/</link>
       <pubDate>Wed, 11 Dec 2019 01:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/radio-gaga/</guid>
+      <guid>http://localhost:1313/tags/radio-gaga/</guid>
       <description></description>
     </item>
     <item>
       <title>Recording</title>
-      <link>https://ageldama.github.io/tags/recording/</link>
+      <link>http://localhost:1313/tags/recording/</link>
       <pubDate>Wed, 11 Dec 2019 01:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/recording/</guid>
+      <guid>http://localhost:1313/tags/recording/</guid>
       <description></description>
     </item>
     <item>
       <title>Sqitch</title>
-      <link>https://ageldama.github.io/tags/sqitch/</link>
+      <link>http://localhost:1313/tags/sqitch/</link>
       <pubDate>Wed, 11 Dec 2019 01:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/sqitch/</guid>
+      <guid>http://localhost:1313/tags/sqitch/</guid>
       <description></description>
     </item>
     <item>
       <title>Cl-State-Machine</title>
-      <link>https://ageldama.github.io/tags/cl-state-machine/</link>
+      <link>http://localhost:1313/tags/cl-state-machine/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/cl-state-machine/</guid>
+      <guid>http://localhost:1313/tags/cl-state-machine/</guid>
       <description></description>
     </item>
     <item>
       <title>State-Machine</title>
-      <link>https://ageldama.github.io/tags/state-machine/</link>
+      <link>http://localhost:1313/tags/state-machine/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/state-machine/</guid>
+      <guid>http://localhost:1313/tags/state-machine/</guid>
       <description></description>
     </item>
     <item>
       <title>Clisp</title>
-      <link>https://ageldama.github.io/tags/clisp/</link>
+      <link>http://localhost:1313/tags/clisp/</link>
       <pubDate>Fri, 06 Dec 2019 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/clisp/</guid>
+      <guid>http://localhost:1313/tags/clisp/</guid>
       <description></description>
     </item>
     <item>
       <title>Ecl</title>
-      <link>https://ageldama.github.io/tags/ecl/</link>
+      <link>http://localhost:1313/tags/ecl/</link>
       <pubDate>Fri, 06 Dec 2019 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/ecl/</guid>
+      <guid>http://localhost:1313/tags/ecl/</guid>
       <description></description>
     </item>
     <item>
       <title>Quicklisp</title>
-      <link>https://ageldama.github.io/tags/quicklisp/</link>
+      <link>http://localhost:1313/tags/quicklisp/</link>
       <pubDate>Fri, 06 Dec 2019 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/quicklisp/</guid>
+      <guid>http://localhost:1313/tags/quicklisp/</guid>
       <description></description>
     </item>
     <item>
       <title>Equality</title>
-      <link>https://ageldama.github.io/tags/equality/</link>
+      <link>http://localhost:1313/tags/equality/</link>
       <pubDate>Sat, 16 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/equality/</guid>
+      <guid>http://localhost:1313/tags/equality/</guid>
       <description></description>
     </item>
     <item>
       <title>Same</title>
-      <link>https://ageldama.github.io/tags/same/</link>
+      <link>http://localhost:1313/tags/same/</link>
       <pubDate>Sat, 16 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/same/</guid>
+      <guid>http://localhost:1313/tags/same/</guid>
       <description></description>
     </item>
     <item>
       <title>Samesame</title>
-      <link>https://ageldama.github.io/tags/samesame/</link>
+      <link>http://localhost:1313/tags/samesame/</link>
       <pubDate>Sat, 16 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/samesame/</guid>
+      <guid>http://localhost:1313/tags/samesame/</guid>
       <description></description>
     </item>
     <item>
       <title>The-Dark-Side-of-Common-Lisp</title>
-      <link>https://ageldama.github.io/tags/the-dark-side-of-common-lisp/</link>
+      <link>http://localhost:1313/tags/the-dark-side-of-common-lisp/</link>
       <pubDate>Sat, 16 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/the-dark-side-of-common-lisp/</guid>
+      <guid>http://localhost:1313/tags/the-dark-side-of-common-lisp/</guid>
       <description></description>
     </item>
     <item>
       <title>Archaeology</title>
-      <link>https://ageldama.github.io/tags/archaeology/</link>
+      <link>http://localhost:1313/tags/archaeology/</link>
       <pubDate>Wed, 13 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/archaeology/</guid>
+      <guid>http://localhost:1313/tags/archaeology/</guid>
       <description></description>
     </item>
     <item>
       <title>History</title>
-      <link>https://ageldama.github.io/tags/history/</link>
+      <link>http://localhost:1313/tags/history/</link>
       <pubDate>Wed, 13 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/history/</guid>
+      <guid>http://localhost:1313/tags/history/</guid>
       <description></description>
     </item>
     <item>
       <title>Java</title>
-      <link>https://ageldama.github.io/tags/java/</link>
+      <link>http://localhost:1313/tags/java/</link>
       <pubDate>Wed, 13 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/java/</guid>
+      <guid>http://localhost:1313/tags/java/</guid>
       <description></description>
     </item>
     <item>
       <title>Javadoc</title>
-      <link>https://ageldama.github.io/tags/javadoc/</link>
+      <link>http://localhost:1313/tags/javadoc/</link>
       <pubDate>Wed, 13 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/javadoc/</guid>
+      <guid>http://localhost:1313/tags/javadoc/</guid>
       <description></description>
     </item>
     <item>
       <title>Ruby</title>
-      <link>https://ageldama.github.io/tags/ruby/</link>
+      <link>http://localhost:1313/tags/ruby/</link>
       <pubDate>Wed, 13 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/ruby/</guid>
+      <guid>http://localhost:1313/tags/ruby/</guid>
       <description></description>
     </item>
     <item>
       <title>Smalltalk</title>
-      <link>https://ageldama.github.io/tags/smalltalk/</link>
+      <link>http://localhost:1313/tags/smalltalk/</link>
       <pubDate>Wed, 13 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/smalltalk/</guid>
+      <guid>http://localhost:1313/tags/smalltalk/</guid>
       <description></description>
     </item>
     <item>
       <title>Symbol</title>
-      <link>https://ageldama.github.io/tags/symbol/</link>
+      <link>http://localhost:1313/tags/symbol/</link>
       <pubDate>Wed, 13 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/symbol/</guid>
+      <guid>http://localhost:1313/tags/symbol/</guid>
       <description></description>
     </item>
     <item>
       <title>Mouse</title>
-      <link>https://ageldama.github.io/tags/mouse/</link>
+      <link>http://localhost:1313/tags/mouse/</link>
       <pubDate>Fri, 25 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/mouse/</guid>
+      <guid>http://localhost:1313/tags/mouse/</guid>
       <description></description>
     </item>
     <item>
       <title>Trackball</title>
-      <link>https://ageldama.github.io/tags/trackball/</link>
+      <link>http://localhost:1313/tags/trackball/</link>
       <pubDate>Fri, 25 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/trackball/</guid>
+      <guid>http://localhost:1313/tags/trackball/</guid>
       <description></description>
     </item>
     <item>
       <title>Xbindkeys</title>
-      <link>https://ageldama.github.io/tags/xbindkeys/</link>
+      <link>http://localhost:1313/tags/xbindkeys/</link>
       <pubDate>Fri, 25 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/xbindkeys/</guid>
+      <guid>http://localhost:1313/tags/xbindkeys/</guid>
       <description></description>
     </item>
     <item>
       <title>Xdotool</title>
-      <link>https://ageldama.github.io/tags/xdotool/</link>
+      <link>http://localhost:1313/tags/xdotool/</link>
       <pubDate>Fri, 25 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/xdotool/</guid>
+      <guid>http://localhost:1313/tags/xdotool/</guid>
       <description></description>
     </item>
     <item>
       <title>Xev</title>
-      <link>https://ageldama.github.io/tags/xev/</link>
+      <link>http://localhost:1313/tags/xev/</link>
       <pubDate>Fri, 25 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/xev/</guid>
+      <guid>http://localhost:1313/tags/xev/</guid>
       <description></description>
     </item>
     <item>
       <title>Cdn</title>
-      <link>https://ageldama.github.io/tags/cdn/</link>
+      <link>http://localhost:1313/tags/cdn/</link>
       <pubDate>Mon, 21 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/cdn/</guid>
+      <guid>http://localhost:1313/tags/cdn/</guid>
       <description></description>
     </item>
     <item>
       <title>Font</title>
-      <link>https://ageldama.github.io/tags/font/</link>
+      <link>http://localhost:1313/tags/font/</link>
       <pubDate>Mon, 21 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/font/</guid>
+      <guid>http://localhost:1313/tags/font/</guid>
       <description></description>
     </item>
     <item>
       <title>Webfont</title>
-      <link>https://ageldama.github.io/tags/webfont/</link>
+      <link>http://localhost:1313/tags/webfont/</link>
       <pubDate>Mon, 21 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/webfont/</guid>
+      <guid>http://localhost:1313/tags/webfont/</guid>
       <description></description>
     </item>
     <item>
       <title>Toy</title>
-      <link>https://ageldama.github.io/tags/toy/</link>
+      <link>http://localhost:1313/tags/toy/</link>
       <pubDate>Wed, 16 Oct 2019 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/toy/</guid>
+      <guid>http://localhost:1313/tags/toy/</guid>
       <description></description>
     </item>
     <item>
       <title>Thinking</title>
-      <link>https://ageldama.github.io/tags/thinking/</link>
+      <link>http://localhost:1313/tags/thinking/</link>
       <pubDate>Sat, 12 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/thinking/</guid>
+      <guid>http://localhost:1313/tags/thinking/</guid>
       <description></description>
     </item>
     <item>
       <title>Syntax</title>
-      <link>https://ageldama.github.io/tags/syntax/</link>
+      <link>http://localhost:1313/tags/syntax/</link>
       <pubDate>Fri, 11 Oct 2019 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/syntax/</guid>
+      <guid>http://localhost:1313/tags/syntax/</guid>
       <description></description>
     </item>
     <item>
       <title>Array</title>
-      <link>https://ageldama.github.io/tags/array/</link>
+      <link>http://localhost:1313/tags/array/</link>
       <pubDate>Sun, 17 Mar 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/array/</guid>
+      <guid>http://localhost:1313/tags/array/</guid>
       <description></description>
     </item>
     <item>
       <title>Cffi</title>
-      <link>https://ageldama.github.io/tags/cffi/</link>
+      <link>http://localhost:1313/tags/cffi/</link>
       <pubDate>Sun, 17 Mar 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/cffi/</guid>
+      <guid>http://localhost:1313/tags/cffi/</guid>
       <description></description>
     </item>
     <item>
       <title>Ffi</title>
-      <link>https://ageldama.github.io/tags/ffi/</link>
+      <link>http://localhost:1313/tags/ffi/</link>
       <pubDate>Sun, 17 Mar 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/ffi/</guid>
+      <guid>http://localhost:1313/tags/ffi/</guid>
       <description></description>
     </item>
     <item>
       <title>Counsel</title>
-      <link>https://ageldama.github.io/tags/counsel/</link>
+      <link>http://localhost:1313/tags/counsel/</link>
       <pubDate>Tue, 26 Feb 2019 01:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/counsel/</guid>
+      <guid>http://localhost:1313/tags/counsel/</guid>
       <description></description>
     </item>
     <item>
       <title>Gnu-Global</title>
-      <link>https://ageldama.github.io/tags/gnu-global/</link>
+      <link>http://localhost:1313/tags/gnu-global/</link>
       <pubDate>Tue, 26 Feb 2019 01:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/gnu-global/</guid>
+      <guid>http://localhost:1313/tags/gnu-global/</guid>
       <description></description>
     </item>
     <item>
       <title>Ivy</title>
-      <link>https://ageldama.github.io/tags/ivy/</link>
+      <link>http://localhost:1313/tags/ivy/</link>
       <pubDate>Tue, 26 Feb 2019 01:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/ivy/</guid>
+      <guid>http://localhost:1313/tags/ivy/</guid>
       <description></description>
     </item>
     <item>
       <title>Rmsbolt</title>
-      <link>https://ageldama.github.io/tags/rmsbolt/</link>
+      <link>http://localhost:1313/tags/rmsbolt/</link>
       <pubDate>Tue, 26 Feb 2019 01:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/rmsbolt/</guid>
+      <guid>http://localhost:1313/tags/rmsbolt/</guid>
       <description></description>
     </item>
     <item>
       <title>Dhcp</title>
-      <link>https://ageldama.github.io/tags/dhcp/</link>
+      <link>http://localhost:1313/tags/dhcp/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/dhcp/</guid>
+      <guid>http://localhost:1313/tags/dhcp/</guid>
       <description></description>
     </item>
     <item>
       <title>Dnsmasq</title>
-      <link>https://ageldama.github.io/tags/dnsmasq/</link>
+      <link>http://localhost:1313/tags/dnsmasq/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/dnsmasq/</guid>
+      <guid>http://localhost:1313/tags/dnsmasq/</guid>
       <description></description>
     </item>
     <item>
       <title>Networkmanager</title>
-      <link>https://ageldama.github.io/tags/networkmanager/</link>
+      <link>http://localhost:1313/tags/networkmanager/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/networkmanager/</guid>
+      <guid>http://localhost:1313/tags/networkmanager/</guid>
       <description></description>
     </item>
     <item>
       <title>Asyncio</title>
-      <link>https://ageldama.github.io/tags/asyncio/</link>
+      <link>http://localhost:1313/tags/asyncio/</link>
       <pubDate>Thu, 07 Feb 2019 15:30:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/asyncio/</guid>
+      <guid>http://localhost:1313/tags/asyncio/</guid>
       <description></description>
     </item>
     <item>
       <title>Concurrency</title>
-      <link>https://ageldama.github.io/tags/concurrency/</link>
+      <link>http://localhost:1313/tags/concurrency/</link>
       <pubDate>Thu, 07 Feb 2019 15:30:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/concurrency/</guid>
+      <guid>http://localhost:1313/tags/concurrency/</guid>
       <description></description>
     </item>
     <item>
       <title>Thought</title>
-      <link>https://ageldama.github.io/tags/thought/</link>
+      <link>http://localhost:1313/tags/thought/</link>
       <pubDate>Wed, 10 Oct 2018 12:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/thought/</guid>
+      <guid>http://localhost:1313/tags/thought/</guid>
       <description></description>
     </item>
     <item>
       <title>Gaming</title>
-      <link>https://ageldama.github.io/tags/gaming/</link>
+      <link>http://localhost:1313/tags/gaming/</link>
       <pubDate>Wed, 10 Oct 2018 10:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/gaming/</guid>
+      <guid>http://localhost:1313/tags/gaming/</guid>
       <description></description>
     </item>
     <item>
       <title>Steam</title>
-      <link>https://ageldama.github.io/tags/steam/</link>
+      <link>http://localhost:1313/tags/steam/</link>
       <pubDate>Wed, 10 Oct 2018 10:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/steam/</guid>
+      <guid>http://localhost:1313/tags/steam/</guid>
       <description></description>
     </item>
     <item>
       <title>Steamplay</title>
-      <link>https://ageldama.github.io/tags/steamplay/</link>
+      <link>http://localhost:1313/tags/steamplay/</link>
       <pubDate>Wed, 10 Oct 2018 10:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/steamplay/</guid>
+      <guid>http://localhost:1313/tags/steamplay/</guid>
       <description></description>
     </item>
     <item>
       <title>Cdrip</title>
-      <link>https://ageldama.github.io/tags/cdrip/</link>
+      <link>http://localhost:1313/tags/cdrip/</link>
       <pubDate>Sat, 06 Oct 2018 15:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/cdrip/</guid>
+      <guid>http://localhost:1313/tags/cdrip/</guid>
       <description></description>
     </item>
     <item>
       <title>Audio</title>
-      <link>https://ageldama.github.io/tags/audio/</link>
+      <link>http://localhost:1313/tags/audio/</link>
       <pubDate>Wed, 03 Oct 2018 20:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/audio/</guid>
+      <guid>http://localhost:1313/tags/audio/</guid>
       <description></description>
     </item>
     <item>
       <title>Hifiberry</title>
-      <link>https://ageldama.github.io/tags/hifiberry/</link>
+      <link>http://localhost:1313/tags/hifiberry/</link>
       <pubDate>Wed, 03 Oct 2018 20:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/hifiberry/</guid>
+      <guid>http://localhost:1313/tags/hifiberry/</guid>
       <description></description>
     </item>
     <item>
       <title>Raspberrypi</title>
-      <link>https://ageldama.github.io/tags/raspberrypi/</link>
+      <link>http://localhost:1313/tags/raspberrypi/</link>
       <pubDate>Wed, 03 Oct 2018 20:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/raspberrypi/</guid>
+      <guid>http://localhost:1313/tags/raspberrypi/</guid>
       <description></description>
     </item>
     <item>
       <title>Lsp</title>
-      <link>https://ageldama.github.io/tags/lsp/</link>
+      <link>http://localhost:1313/tags/lsp/</link>
       <pubDate>Sun, 23 Sep 2018 12:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/lsp/</guid>
+      <guid>http://localhost:1313/tags/lsp/</guid>
       <description></description>
     </item>
     <item>
       <title>Todos</title>
-      <link>https://ageldama.github.io/tags/todos/</link>
+      <link>http://localhost:1313/tags/todos/</link>
       <pubDate>Sun, 23 Sep 2018 12:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/todos/</guid>
+      <guid>http://localhost:1313/tags/todos/</guid>
       <description></description>
     </item>
     <item>
       <title>Fountainpen</title>
-      <link>https://ageldama.github.io/tags/fountainpen/</link>
+      <link>http://localhost:1313/tags/fountainpen/</link>
       <pubDate>Sun, 16 Sep 2018 12:30:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/fountainpen/</guid>
+      <guid>http://localhost:1313/tags/fountainpen/</guid>
       <description></description>
     </item>
     <item>
       <title>Ink</title>
-      <link>https://ageldama.github.io/tags/ink/</link>
+      <link>http://localhost:1313/tags/ink/</link>
       <pubDate>Sun, 16 Sep 2018 12:30:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/ink/</guid>
+      <guid>http://localhost:1313/tags/ink/</guid>
       <description></description>
     </item>
     <item>
       <title>IT꼰대</title>
-      <link>https://ageldama.github.io/tags/it%EA%BC%B0%EB%8C%80/</link>
+      <link>http://localhost:1313/tags/it%EA%BC%B0%EB%8C%80/</link>
       <pubDate>Sat, 15 Sep 2018 16:20:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/it%EA%BC%B0%EB%8C%80/</guid>
+      <guid>http://localhost:1313/tags/it%EA%BC%B0%EB%8C%80/</guid>
       <description></description>
     </item>
     <item>
       <title>Evil-Mode</title>
-      <link>https://ageldama.github.io/tags/evil-mode/</link>
+      <link>http://localhost:1313/tags/evil-mode/</link>
       <pubDate>Sat, 28 Jul 2018 12:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/evil-mode/</guid>
+      <guid>http://localhost:1313/tags/evil-mode/</guid>
       <description></description>
     </item>
     <item>
       <title>Neovim</title>
-      <link>https://ageldama.github.io/tags/neovim/</link>
+      <link>http://localhost:1313/tags/neovim/</link>
       <pubDate>Sat, 28 Jul 2018 12:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/neovim/</guid>
+      <guid>http://localhost:1313/tags/neovim/</guid>
       <description></description>
     </item>
     <item>
       <title>Nvim</title>
-      <link>https://ageldama.github.io/tags/nvim/</link>
+      <link>http://localhost:1313/tags/nvim/</link>
       <pubDate>Sat, 28 Jul 2018 12:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/nvim/</guid>
+      <guid>http://localhost:1313/tags/nvim/</guid>
       <description></description>
     </item>
     <item>
       <title>Cmake-Ide</title>
-      <link>https://ageldama.github.io/tags/cmake-ide/</link>
+      <link>http://localhost:1313/tags/cmake-ide/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/cmake-ide/</guid>
+      <guid>http://localhost:1313/tags/cmake-ide/</guid>
       <description></description>
     </item>
     <item>
       <title>Ide</title>
-      <link>https://ageldama.github.io/tags/ide/</link>
+      <link>http://localhost:1313/tags/ide/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/ide/</guid>
+      <guid>http://localhost:1313/tags/ide/</guid>
       <description></description>
     </item>
     <item>
       <title>Ninja</title>
-      <link>https://ageldama.github.io/tags/ninja/</link>
+      <link>http://localhost:1313/tags/ninja/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/ninja/</guid>
+      <guid>http://localhost:1313/tags/ninja/</guid>
       <description></description>
     </item>
     <item>
       <title>Rdm</title>
-      <link>https://ageldama.github.io/tags/rdm/</link>
+      <link>http://localhost:1313/tags/rdm/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/rdm/</guid>
+      <guid>http://localhost:1313/tags/rdm/</guid>
       <description></description>
     </item>
     <item>
       <title>Rtags</title>
-      <link>https://ageldama.github.io/tags/rtags/</link>
+      <link>http://localhost:1313/tags/rtags/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/rtags/</guid>
+      <guid>http://localhost:1313/tags/rtags/</guid>
       <description></description>
     </item>
     <item>
       <title>Screencast</title>
-      <link>https://ageldama.github.io/tags/screencast/</link>
+      <link>http://localhost:1313/tags/screencast/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/screencast/</guid>
+      <guid>http://localhost:1313/tags/screencast/</guid>
       <description></description>
     </item>
     <item>
       <title>Workflow</title>
-      <link>https://ageldama.github.io/tags/workflow/</link>
+      <link>http://localhost:1313/tags/workflow/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/workflow/</guid>
+      <guid>http://localhost:1313/tags/workflow/</guid>
       <description></description>
     </item>
     <item>
       <title>Mingw</title>
-      <link>https://ageldama.github.io/tags/mingw/</link>
+      <link>http://localhost:1313/tags/mingw/</link>
       <pubDate>Sat, 14 Apr 2018 14:59:31 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/mingw/</guid>
+      <guid>http://localhost:1313/tags/mingw/</guid>
       <description></description>
     </item>
     <item>
       <title>Vscode</title>
-      <link>https://ageldama.github.io/tags/vscode/</link>
+      <link>http://localhost:1313/tags/vscode/</link>
       <pubDate>Sat, 14 Apr 2018 14:59:31 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/vscode/</guid>
+      <guid>http://localhost:1313/tags/vscode/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows</title>
-      <link>https://ageldama.github.io/tags/windows/</link>
+      <link>http://localhost:1313/tags/windows/</link>
       <pubDate>Sat, 14 Apr 2018 14:59:31 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/windows/</guid>
+      <guid>http://localhost:1313/tags/windows/</guid>
       <description></description>
     </item>
     <item>
       <title>Rants</title>
-      <link>https://ageldama.github.io/tags/rants/</link>
+      <link>http://localhost:1313/tags/rants/</link>
       <pubDate>Sun, 22 Oct 2017 21:42:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/rants/</guid>
+      <guid>http://localhost:1313/tags/rants/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>https://ageldama.github.io/tags/docker/</link>
+      <link>http://localhost:1313/tags/docker/</link>
       <pubDate>Tue, 11 Jul 2017 20:20:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/docker/</guid>
+      <guid>http://localhost:1313/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Registry</title>
-      <link>https://ageldama.github.io/tags/registry/</link>
+      <link>http://localhost:1313/tags/registry/</link>
       <pubDate>Tue, 11 Jul 2017 20:20:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/registry/</guid>
+      <guid>http://localhost:1313/tags/registry/</guid>
       <description></description>
     </item>
     <item>
       <title>2017</title>
-      <link>https://ageldama.github.io/tags/2017/</link>
+      <link>http://localhost:1313/tags/2017/</link>
       <pubDate>Tue, 11 Jul 2017 18:35:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/2017/</guid>
+      <guid>http://localhost:1313/tags/2017/</guid>
       <description></description>
     </item>
     <item>
       <title>Myself</title>
-      <link>https://ageldama.github.io/tags/myself/</link>
+      <link>http://localhost:1313/tags/myself/</link>
       <pubDate>Tue, 11 Jul 2017 18:35:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/myself/</guid>
+      <guid>http://localhost:1313/tags/myself/</guid>
       <description></description>
     </item>
     <item>
       <title>Async</title>
-      <link>https://ageldama.github.io/tags/async/</link>
+      <link>http://localhost:1313/tags/async/</link>
       <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/async/</guid>
+      <guid>http://localhost:1313/tags/async/</guid>
       <description></description>
     </item>
     <item>
       <title>Await</title>
-      <link>https://ageldama.github.io/tags/await/</link>
+      <link>http://localhost:1313/tags/await/</link>
       <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/await/</guid>
+      <guid>http://localhost:1313/tags/await/</guid>
       <description></description>
     </item>
     <item>
       <title>Es6</title>
-      <link>https://ageldama.github.io/tags/es6/</link>
+      <link>http://localhost:1313/tags/es6/</link>
       <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/es6/</guid>
+      <guid>http://localhost:1313/tags/es6/</guid>
       <description></description>
     </item>
     <item>
       <title>Haskell</title>
-      <link>https://ageldama.github.io/tags/haskell/</link>
+      <link>http://localhost:1313/tags/haskell/</link>
       <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/haskell/</guid>
+      <guid>http://localhost:1313/tags/haskell/</guid>
       <description></description>
     </item>
     <item>
       <title>Io</title>
-      <link>https://ageldama.github.io/tags/io/</link>
+      <link>http://localhost:1313/tags/io/</link>
       <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/io/</guid>
+      <guid>http://localhost:1313/tags/io/</guid>
       <description></description>
     </item>
     <item>
       <title>Nodejs</title>
-      <link>https://ageldama.github.io/tags/nodejs/</link>
+      <link>http://localhost:1313/tags/nodejs/</link>
       <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/nodejs/</guid>
+      <guid>http://localhost:1313/tags/nodejs/</guid>
       <description></description>
     </item>
     <item>
       <title>Rxjava</title>
-      <link>https://ageldama.github.io/tags/rxjava/</link>
+      <link>http://localhost:1313/tags/rxjava/</link>
       <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/rxjava/</guid>
+      <guid>http://localhost:1313/tags/rxjava/</guid>
       <description></description>
     </item>
     <item>
       <title>Sbcl</title>
-      <link>https://ageldama.github.io/tags/sbcl/</link>
+      <link>http://localhost:1313/tags/sbcl/</link>
       <pubDate>Sat, 25 Feb 2017 16:40:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/sbcl/</guid>
+      <guid>http://localhost:1313/tags/sbcl/</guid>
       <description></description>
     </item>
     <item>
       <title>Threading</title>
-      <link>https://ageldama.github.io/tags/threading/</link>
+      <link>http://localhost:1313/tags/threading/</link>
       <pubDate>Sat, 25 Feb 2017 16:40:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/threading/</guid>
+      <guid>http://localhost:1313/tags/threading/</guid>
       <description></description>
     </item>
     <item>
       <title>Accessor</title>
-      <link>https://ageldama.github.io/tags/accessor/</link>
+      <link>http://localhost:1313/tags/accessor/</link>
       <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/accessor/</guid>
+      <guid>http://localhost:1313/tags/accessor/</guid>
       <description></description>
     </item>
     <item>
       <title>Constructor</title>
-      <link>https://ageldama.github.io/tags/constructor/</link>
+      <link>http://localhost:1313/tags/constructor/</link>
       <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/constructor/</guid>
+      <guid>http://localhost:1313/tags/constructor/</guid>
       <description></description>
     </item>
     <item>
       <title>Erlang</title>
-      <link>https://ageldama.github.io/tags/erlang/</link>
+      <link>http://localhost:1313/tags/erlang/</link>
       <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/erlang/</guid>
+      <guid>http://localhost:1313/tags/erlang/</guid>
       <description></description>
     </item>
     <item>
       <title>Getter</title>
-      <link>https://ageldama.github.io/tags/getter/</link>
+      <link>http://localhost:1313/tags/getter/</link>
       <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/getter/</guid>
+      <guid>http://localhost:1313/tags/getter/</guid>
       <description></description>
     </item>
     <item>
       <title>Immutables</title>
-      <link>https://ageldama.github.io/tags/immutables/</link>
+      <link>http://localhost:1313/tags/immutables/</link>
       <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/immutables/</guid>
+      <guid>http://localhost:1313/tags/immutables/</guid>
       <description></description>
     </item>
     <item>
       <title>Jvm</title>
-      <link>https://ageldama.github.io/tags/jvm/</link>
+      <link>http://localhost:1313/tags/jvm/</link>
       <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/jvm/</guid>
+      <guid>http://localhost:1313/tags/jvm/</guid>
       <description></description>
     </item>
     <item>
       <title>Setter</title>
-      <link>https://ageldama.github.io/tags/setter/</link>
+      <link>http://localhost:1313/tags/setter/</link>
       <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/setter/</guid>
+      <guid>http://localhost:1313/tags/setter/</guid>
       <description></description>
     </item>
     <item>
       <title>Ace-Window</title>
-      <link>https://ageldama.github.io/tags/ace-window/</link>
+      <link>http://localhost:1313/tags/ace-window/</link>
       <pubDate>Sun, 22 Jan 2017 14:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/ace-window/</guid>
+      <guid>http://localhost:1313/tags/ace-window/</guid>
       <description></description>
     </item>
     <item>
       <title>Window</title>
-      <link>https://ageldama.github.io/tags/window/</link>
+      <link>http://localhost:1313/tags/window/</link>
       <pubDate>Sun, 22 Jan 2017 14:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/window/</guid>
+      <guid>http://localhost:1313/tags/window/</guid>
       <description></description>
     </item>
     <item>
       <title>Jekyll</title>
-      <link>https://ageldama.github.io/tags/jekyll/</link>
+      <link>http://localhost:1313/tags/jekyll/</link>
       <pubDate>Mon, 02 Jan 2017 05:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/jekyll/</guid>
+      <guid>http://localhost:1313/tags/jekyll/</guid>
       <description></description>
     </item>
     <item>
       <title>Rouge</title>
-      <link>https://ageldama.github.io/tags/rouge/</link>
+      <link>http://localhost:1313/tags/rouge/</link>
       <pubDate>Mon, 02 Jan 2017 05:15:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/rouge/</guid>
+      <guid>http://localhost:1313/tags/rouge/</guid>
       <description></description>
     </item>
     <item>
       <title>Github</title>
-      <link>https://ageldama.github.io/tags/github/</link>
+      <link>http://localhost:1313/tags/github/</link>
       <pubDate>Mon, 02 Jan 2017 04:35:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/github/</guid>
+      <guid>http://localhost:1313/tags/github/</guid>
       <description></description>
     </item>
     <item>
       <title>Travis-Ci</title>
-      <link>https://ageldama.github.io/tags/travis-ci/</link>
+      <link>http://localhost:1313/tags/travis-ci/</link>
       <pubDate>Mon, 02 Jan 2017 04:35:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/travis-ci/</guid>
+      <guid>http://localhost:1313/tags/travis-ci/</guid>
       <description></description>
     </item>
   </channel>

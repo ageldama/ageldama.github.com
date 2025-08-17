@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sqitch on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/sqitch/</link>
+    <link>http://localhost:1313/tags/sqitch/</link>
     <description>Recent content in Sqitch on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 11 Dec 2019 01:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/sqitch/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/sqitch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>radio-recorder 프로젝트 설명</title>
-      <link>https://ageldama.github.io/posts/2019-12dec/dissect-radio-gaga/</link>
+      <link>http://localhost:1313/posts/2019-12dec/dissect-radio-gaga/</link>
       <pubDate>Wed, 11 Dec 2019 01:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-12dec/dissect-radio-gaga/</guid>
+      <guid>http://localhost:1313/posts/2019-12dec/dissect-radio-gaga/</guid>
       <description>&lt;p&gt;&#xA;2년전쯤에 한국 라디오를 혼자 듣고 싶었었다. 하지만 시차가 많이 나는&#xA;지역에 살았었다. (8시간 정도 느림)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 한국 인터넷 라디오를 녹음해서 개인적으로 들을 수 있다면 좋겠다는&#xA;아이디어로 작업했던 프로젝트 소스코드를 공개한다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://github.com/ageldama/radio-recorder&#34;&gt;https://github.com/ageldama/radio-recorder&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;방송사의 인터넷 라디오를 녹음 하는 스크립트는 커밋에서 제외하고&#xA;공개한다. 이는 방송사에게 문제가 될 수 있으므로 개인적으로 알아내서&#xA;사용하고 타인과 공유하지 않기를 바란다.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;프로그램 구성&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-3&#34;&gt;&#xA;&lt;h3 id=&#34;headline-2&#34;&gt;&#xA;cron 서버&#xA;&lt;/h3&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-3&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;지정된 시간에 녹음/인코딩 스크립트를 실행하는 스케쥴을 담당한다.&lt;/li&gt;&#xA;&lt;li&gt;오래된 임시 파일 정리 등등도.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;한국의 시간대와 내가 있는 시간대가 달라서 다른 cron scheduler을&#xA;쓰지 않고 그냥 짰었던거 같다.&lt;/p&gt;</description>
     </item>
   </channel>

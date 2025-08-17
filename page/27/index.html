@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.2">
+	<meta name="generator" content="Hugo 0.147.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
-	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
-	<meta property="og:url" content="https://ageldama.github.io/">
+	<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="아겔로그" />
+	<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="아겔로그">
   <meta property="og:locale" content="ko_kr">
@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="아겔로그">
 
 	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="http://localhost:1313/js/jquery-3.7.1.slim.min.js"></script>
 
 	        
 
@@ -25,9 +25,7 @@
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/gopherish.1242bbf08f4cfb418d62e1019df0673ebb7bf9d8e340366d8f96a17d1474bbf2.css" integrity="sha256-EkK78I9M&#43;0GNYuEBnfBnPrt7&#43;djjQDZtj5ahfRR0u/I=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/gopherish.css">
                 
             
         
@@ -42,7 +40,7 @@
 			<header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
     <nav>
@@ -87,6 +85,43 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/">Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</a></h1>
+					<time>🗓️ 27 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.</p>
+<p>
+USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을
+쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고
+유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.</p>
+<p>
+정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마
+<a href="https://github.com/aircrack-ng/rtl8812au">https://github.com/aircrack-ng/rtl8812au</a> 이 드라이버가 살렸다.</p>
+<div class="src src-text">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># lsusb
+</span></span><span class="line"><span class="cl">Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU]</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+그것도 DKMS으로 빌드하면 안되고 그냥 <code>make install</code> 해서 동작하게
+되었다. 다행이었다. </p>
+<p>
+그리고 나서 나중에도 로딩하도록 /etc/module-load
+<code>/etc/modules-load.d/rtlusb.conf</code> 에 <code>88XXau</code> 라인을 넣고 저장.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item">
 					<h1 class="title"><a href="/posts/2020-08aug/ping-27thu/">Ping 27/Aug/2020</a></h1>
@@ -134,40 +169,6 @@ the end of the belle époque?</p>&hellip;
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-08aug/ping-24mon/">Ping 24/Aug/2020</a></h1>
-					<time>🗓️ 24 Aug, 2020</time>
-					<br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-&#34;프로젝트&#34;
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>진행해온 프로젝트의 문서를 작성 중.</p>
-<p>
-  문서를 작성하면서 더 보충/보강할 내용들이 튀어나온다.</p>
-<p>
-  이 또한 사실 즐겁다.</p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-게임하기
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p>Doom64 리메이크를 클리어했다. 마지막 레벨에서는 도저히 깰 수 없어서
-  그냥 마지막 한 마리를 잡기 위해서 치트를 켜서 아쉽다. 하지만 그
-  마지막 보스 이전에 타이드는 그냥 제정신으로 다 죽여서 재밌었다.</p>
-<p>
-  다음 게임은 퀘이크 시리즈를 다시 플레이할까 생각 중. 폴아웃4,
-  스카이림을 다시 로드해서 플레이를 하며 그 세계에서 시간을 보내도
-  좋겠지만 조금은 다른 게임을 하고 싶어서.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -206,17 +207,6 @@ the end of the belle époque?</p>&hellip;
       ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
   </div>
 </footer>
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
 <script>
   
 </script>
