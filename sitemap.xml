@@ -2,12 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2025-08-17T13:21:50+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
-    <lastmod>2025-08-17T13:21:50+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/c99/</loc>
     <lastmod>2025-05-08T19:17:25+09:00</lastmod>
   </url><url>
@@ -59,6 +53,9 @@
     <loc>https://ageldama.github.io/tags/method/</loc>
     <lastmod>2025-05-08T19:17:25+09:00</lastmod>
   </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-05-08T19:17:25+09:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/tags/select/</loc>
     <lastmod>2025-05-08T19:17:25+09:00</lastmod>
   </url><url>
@@ -66,6 +63,9 @@
     <lastmod>2025-05-08T19:17:25+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/terminal/</loc>
+    <lastmod>2025-05-08T19:17:25+09:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-05-08T19:17:25+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.0-release/</loc>
