@@ -3,12 +3,14 @@
 
 function resetSearchResults() {
     $('.search-results').empty();
+    $('.search-loading-indicator').hide();
     $('main.list').fadeIn();
 }
 
 var showSearchResults_template = null;
 function showSearchResults(searchTerm, searchResults) {
     $('.search-results').empty();
+    $('.search-loading-indicator').hide();
     $('main.list').fadeOut();
 
     const $resultsContainer = $('.search-results');
@@ -52,6 +54,8 @@ function searchTermMatch(searchTerm, str) {
 }
 
 function executeSearch(searchTerm) {
+    $('.search-loading-indicator').hide();
+
     const ts = document.querySelector('meta[name="hugo-gen-timestamp"]').content;
 
     fetch("/index.json?" + String(ts))
