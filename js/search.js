@@ -47,16 +47,21 @@ function showSearchResults(searchTerm, searchResults) {
 }
 
 
+function searchTermMatch(searchTerm, str) {
+    return _.toLower(_.toString(str)).indexOf(_.toLower(searchTerm)) > -1;
+}
+
 function executeSearch(searchTerm) {
-    fetch("/index.json")
+    const ts = document.querySelector('meta[name="hugo-gen-timestamp"]').content;
+
+    fetch("/index.json?" + String(ts))
         .then(function (response) {
             return response.json()
         })
         .then(function (data) {
             const filtered = _.filter(data, function(row) {
-                return row && (
-                    _.toString(row['title']).indexOf(searchTerm) > -1
-                        || _.toString(row['contents']).indexOf(searchTerm) > -1);
+                return row && (searchTermMatch(searchTerm, row['title'])
+                               || searchTermMatch(searchTerm, row['contents']));
             });
             // console.log(filtered);
             showSearchResults(searchTerm, filtered);
