@@ -7,8 +7,57 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Thu, 08 May 2025 19:17:25 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 13 Sep 2025 10:10:04 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ajax</title>
+      <link>https://ageldama.github.io/tags/ajax/</link>
+      <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ajax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>https://ageldama.github.io/tags/blog/</link>
+      <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blogging</title>
+      <link>https://ageldama.github.io/tags/blogging/</link>
+      <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/blogging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://ageldama.github.io/tags/hugo/</link>
+      <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Index.json</title>
+      <link>https://ageldama.github.io/tags/index.json/</link>
+      <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/index.json/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jquery</title>
+      <link>https://ageldama.github.io/tags/jquery/</link>
+      <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/jquery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pagefind</title>
+      <link>https://ageldama.github.io/tags/pagefind/</link>
+      <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/pagefind/</guid>
+      <description></description>
+    </item>
     <item>
       <title>C99</title>
       <link>https://ageldama.github.io/tags/c99/</link>
@@ -304,20 +353,6 @@
       <description></description>
     </item>
     <item>
-      <title>Blog</title>
-      <link>https://ageldama.github.io/tags/blog/</link>
-      <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Blogging</title>
-      <link>https://ageldama.github.io/tags/blogging/</link>
-      <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/blogging/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Css</title>
       <link>https://ageldama.github.io/tags/css/</link>
       <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
@@ -385,27 +420,6 @@
       <link>https://ageldama.github.io/tags/xrandr/</link>
       <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/xrandr/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hugo</title>
-      <link>https://ageldama.github.io/tags/hugo/</link>
-      <pubDate>Sun, 16 Mar 2025 06:25:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Jquery</title>
-      <link>https://ageldama.github.io/tags/jquery/</link>
-      <pubDate>Sun, 16 Mar 2025 06:25:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/jquery/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pagefind</title>
-      <link>https://ageldama.github.io/tags/pagefind/</link>
-      <pubDate>Sun, 16 Mar 2025 06:25:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/pagefind/</guid>
       <description></description>
     </item>
     <item>

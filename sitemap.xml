@@ -2,10 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ageldama.github.io/tags/c99/</loc>
-    <lastmod>2025-05-08T19:17:25+09:00</lastmod>
+    <loc>https://ageldama.github.io/tags/ajax/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/blog/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/blog/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/blogging/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/categories/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/hugo/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/index.json/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/jquery/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/pagefind/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2025-09-13T10:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/c99/</loc>
     <lastmod>2025-05-08T19:17:25+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/categories/ddakong/</loc>
@@ -53,19 +89,10 @@
     <loc>https://ageldama.github.io/tags/method/</loc>
     <lastmod>2025-05-08T19:17:25+09:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2025-05-08T19:17:25+09:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/select/</loc>
     <lastmod>2025-05-08T19:17:25+09:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
-    <lastmod>2025-05-08T19:17:25+09:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/terminal/</loc>
-    <lastmod>2025-05-08T19:17:25+09:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-05-08T19:17:25+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.0-release/</loc>
@@ -164,16 +191,7 @@
     <loc>https://ageldama.github.io/posts/2025-04apr/2025-04apr02--01-antix-linux/</loc>
     <lastmod>2025-04-02T05:51:49+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/categories/blog/</loc>
-    <lastmod>2025-03-20T11:51:36+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/blog/</loc>
-    <lastmod>2025-03-20T11:51:36+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/categories/blogging/</loc>
-    <lastmod>2025-03-20T11:51:36+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/blogging/</loc>
     <lastmod>2025-03-20T11:51:36+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/css/</loc>
@@ -215,16 +233,7 @@
     <loc>https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/</loc>
     <lastmod>2025-03-18T13:30:16+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/hugo/</loc>
-    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</loc>
-    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/jquery/</loc>
-    <lastmod>2025-03-16T06:25:48+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/pagefind/</loc>
     <lastmod>2025-03-16T06:25:48+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/</loc>

@@ -1,14 +1,6 @@
 
 [
  {
-     "permalink": "https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.1-release/",
-     "title": "ddakong v1.1 릴리즈: FreeBSD / kqueue",
-     
-     "tags": ["freebsd", "kqueue", "epoll", "select", "linux", "terminal", "fbdev", "fbterm", "korean", "hangul", "hangeul", "input", "method", "im", "ime", "c99"],
-     
- "description": "",
- "contents": " 릴리즈 v1.1 freebsd 지원: 빌드가능하도록 수정 + kqueue 이벤트처리 추가\n(원래는 epoll/linux만 지원)\n\u0026lt;https://github.com/ageldama/term-ddakong/releases/tag/v1.1\u0026gt;\ndarwin/osx, openbsd 등은 빌드+실행될거 같은데 확신은 못하겠믐. 매 릴리즈마다 크로스컴파일해서 바이너리릴리즈해왔는데, 리눅스는 aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라 이번엔 스킵. …오랬만에 freebsd 켜서 쓰는데, 반응속도감 역시 엄청좋다.\n"},
- {
      "permalink": "https://ageldama.github.io/posts/",
      "title": "Posts",
      
@@ -17,6 +9,14 @@
  "description": "",
  "contents": ""},
  {
+     "permalink": "https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/",
+     "title": "블로그 검색을 다시 짰다 (PageFind 제거)",
+     
+     "tags": ["blogging", "blog", "pagefind", "index.json", "jquery", "ajax", "hugo"],
+     
+ "description": "",
+ "contents": " pagefind이 freebsd 환경에서 동작하지 않아서, 그냥 다시 짰다.\nfuse.js을 사용하는 예제 등이 있었지만1, 그럴거면 그냥 ajax으로 얻은 index.json-을 직접 검색해도 될거 같아서 그냥 javascript 작성 오랬만에.\n그리고 ui등도 내 취향에 맞게 간단하게 만들어서 만족스럽다.\nFootnotes 1 https://findstar.pe.kr/2021/07/10/fuse-search-on-hugo/\n"},
+ {
      "permalink": "https://ageldama.github.io/",
      "title": "아겔로그",
      
@@ -24,6 +24,14 @@
      
  "description": "",
  "contents": ""},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.1-release/",
+     "title": "ddakong v1.1 릴리즈: FreeBSD / kqueue",
+     
+     "tags": ["freebsd", "kqueue", "epoll", "select", "linux", "terminal", "fbdev", "fbterm", "korean", "hangul", "hangeul", "input", "method", "im", "ime", "c99"],
+     
+ "description": "",
+ "contents": " 릴리즈 v1.1 freebsd 지원: 빌드가능하도록 수정 + kqueue 이벤트처리 추가\n(원래는 epoll/linux만 지원)\n\u0026lt;https://github.com/ageldama/term-ddakong/releases/tag/v1.1\u0026gt;\ndarwin/osx, openbsd 등은 빌드+실행될거 같은데 확신은 못하겠믐. 매 릴리즈마다 크로스컴파일해서 바이너리릴리즈해왔는데, 리눅스는 aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라 이번엔 스킵. …오랬만에 freebsd 켜서 쓰는데, 반응속도감 역시 엄청좋다.\n"},
  {
      "permalink": "https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.0-release/",
      "title": "ddakong v1.0 릴리즈: lua scripting 시스템",

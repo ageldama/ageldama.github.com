@@ -150,6 +150,19 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping-31mon/">Ping 31/Aug/2020</a></h1>
+					<time>🗓️ 31 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+여름이 끝나가는 느낌이다. 또 무더워지는 날이 며칠 있겠지만 지금은
+가을이 온 것만 같은 밤공기와 풀냄새가 향긋하다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2020-08aug/ping-30sun/">Ping 30/Aug/2020</a></h1>
 					<time>🗓️ 30 Aug, 2020</time>
 					<br><div class="description">
@@ -203,43 +216,6 @@
 많은 아이디어와 예견들이 맞아들어가는 시절이다. 한편으로는 그런 것을
 이해하고 세상의 변화에 대해서 조금은 알맞게 나 자신이 알아채고 살아온
 것이 뿌듯하면서도 꼭 달갑지는 않기도 하다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/">Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</a></h1>
-					<time>🗓️ 27 Aug, 2020</time>
-					<br><div class="description">
-						
-						<p>
-arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.</p>
-<p>
-USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을
-쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고
-유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.</p>
-<p>
-정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마
-<a href="https://github.com/aircrack-ng/rtl8812au">https://github.com/aircrack-ng/rtl8812au</a> 이 드라이버가 살렸다.</p>
-<div class="src src-text">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># lsusb
-</span></span><span class="line"><span class="cl">Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU]</span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-그것도 DKMS으로 빌드하면 안되고 그냥 <code>make install</code> 해서 동작하게
-되었다. 다행이었다. </p>
-<p>
-그리고 나서 나중에도 로딩하도록 /etc/module-load
-<code>/etc/modules-load.d/rtlusb.conf</code> 에 <code>88XXau</code> 라인을 넣고 저장.</p>&hellip;
 						
 					</div>
                                         
