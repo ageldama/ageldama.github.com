@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tips on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/tips/</link>
+    <link>http://localhost:1313/tags/tips/</link>
     <description>Recent content in Tips on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/tips/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Org모드에서 스프레드시트 기능과 Babel 섞어쓰기</title>
-      <link>https://ageldama.github.io/posts/2019-12dec/org-spreadsheet-and-babel/</link>
+      <link>http://localhost:1313/posts/2019-12dec/org-spreadsheet-and-babel/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-12dec/org-spreadsheet-and-babel/</guid>
+      <guid>http://localhost:1313/posts/2019-12dec/org-spreadsheet-and-babel/</guid>
       <description>&lt;p&gt;&#xA;쩌는 &lt;a href=&#34;https://seorenn.github.io/org-spreadsheet.html&#34;&gt;Org-mode Spreadsheet 소개&lt;/a&gt; 를 읽고 감명 받아서 따라해봅니다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리&#xA;&lt;code&gt;defun&lt;/code&gt; / &lt;code&gt;defmacro&lt;/code&gt; 으로 정의해놓고 그걸 spreadsheet에서 불러 쓸 수&#xA;있을지가 궁금했습니다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 다음과 같이 해보면 가능할지를 실험:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Org-Babel으로 원하는 함수를 정의한다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Spreadsheet에서 불러서 쓸 수 있는지 확인해본다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;우선 &lt;code&gt;C-h a&lt;/code&gt; 을 눌러 &lt;code&gt;vsum&lt;/code&gt; 을 검색해보니, &lt;code&gt;defun calcFunc-vsum (&amp;amp;rest&#xA;vecs)&lt;/code&gt; 으로 미리 선언되어 있는거 같았습니다. 이런 형태로 내가 정의하는&#xA;함수도 구현해보면 될까 싶습니다.&lt;/p&gt;</description>
     </item>
   </channel>

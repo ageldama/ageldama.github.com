@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cppcheck on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/cppcheck/</link>
+    <link>http://localhost:1313/tags/cppcheck/</link>
     <description>Recent content in Cppcheck on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 06 May 2024 07:51:13 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/cppcheck/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/cppcheck/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>xmake, compile_commands.json, flycheck</title>
-      <link>https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</link>
+      <link>http://localhost:1313/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</guid>
+      <guid>http://localhost:1313/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/</guid>
       <description>&lt;p&gt;&#xA;cmake/warp등을 써보면서 c/c++ 개발할 때에 빌드도구 갖고 놀다가,&#xA;이번에 마음을 열고 xmake을 익혀봄.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;마음에 든다. 가볍고 빠르고 좋다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;ccache등도 바로 지원하고, lua으로 스크립팅도 그럭저럭 할만해 보이고,&#xA;[build.zig](&lt;a href=&#34;https://ziglang.org/learn/build-system/)&#34;&gt;https://ziglang.org/learn/build-system/)&lt;/a&gt;스러워서&#xA;당연하게도 좋은거 같아.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;계속 쓸거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;emacs / flycheck + c/c++ 개발할 때에 단점이, 자동적으로 외부 3rd-party&#xA;라이브러리의 include-path을 설정해주지 않아서,&#xA;[dirs-local](&lt;a href=&#34;https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html)&#34;&gt;https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html)&lt;/a&gt;&#xA;같은걸 세팅해주길 기대한다는 점.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 그냥 &lt;code&gt;xmake project -vD -k compile_commands -m debug&lt;/code&gt; 같이&#xA;&lt;code&gt;compile_commands.json&lt;/code&gt; 생성하고,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;이걸 파싱해서 표준출력으로 include-paths&#xA;&lt;a href=&#34;https://github.com/ageldama/configs/blob/master/compile_commands_json_incdirs.py&#34;&gt;https://github.com/ageldama/configs/blob/master/compile_commands_json_incdirs.py&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;현재 소스코드 버퍼 기준으로 가장 가까운 compile_commands.json 파일&#xA;위치 찾는 elisp 함수&#xA;&lt;a href=&#34;https://github.com/ageldama/configs/blob/master/emacs/elisp/compcmdsjson-tiny.el&#34;&gt;https://github.com/ageldama/configs/blob/master/emacs/elisp/compcmdsjson-tiny.el&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;위 (1)+(2)을 조합해서 flycheck을 위한 변수 &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 들을 설정하는 elisp 함수&#xA;&lt;a href=&#34;https://github.com/ageldama/configs/blob/master/emacs/elisp/flycheck-compcmdsjson.el&#34;&gt;https://github.com/ageldama/configs/blob/master/emacs/elisp/flycheck-compcmdsjson.el&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;그리고 위 (3)을 c/c++-mode에 자동적으로 적용하고, 또 단축키도&#xA;만드는 elisp 코드&#xA;&lt;a href=&#34;https://github.com/ageldama/configs/blob/master/emacs/feat/flycheck-compcmdsjson.el&#34;&gt;https://github.com/ageldama/configs/blob/master/emacs/feat/flycheck-compcmdsjson.el&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;…요렇게 만들어서 세팅해서 쓰니 편안.&lt;/p&gt;</description>
     </item>
   </channel>

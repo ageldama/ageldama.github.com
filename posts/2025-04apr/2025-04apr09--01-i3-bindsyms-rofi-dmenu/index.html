@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>i3 키바인딩을 rofi으로 확인하고 실행하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1757776793">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>i3 키바인딩을 rofi으로 확인하고 실행하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1757776799">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 i3wm 써서 매일 리눅스 사용.
@@ -175,7 +175,7 @@ gist: https://gist.github.com/ageldama/377d00159cfe0cb387f20297ca6a5e6b
 
 요걸 저장하고, $HOME/.config/i3/config 에 다음을 추가하여 ⌨️ Super&#43;F1 으로 등록:" />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2025-04apr/2025-04apr09--01-i3-bindsyms-rofi-dmenu/">
+	<meta property="og:url" content="http://localhost:1313/posts/2025-04apr/2025-04apr09--01-i3-bindsyms-rofi-dmenu/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="i3 키바인딩을 rofi으로 확인하고 실행하기">
   <meta property="og:description" content="i3wm 써서 매일 리눅스 사용.
@@ -204,7 +204,7 @@ gist: https://gist.github.com/ageldama/377d00159cfe0cb387f20297ca6a5e6b
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 #!/usr/bin/env perl use strict; use warnings; use Carp; use IPC::Open2; sub escape_html { $_ = shift; s/&amp;/&amp;amp;/g; s/&lt;/&amp;lt;/g; s/&gt;/&amp;gt;/g; s/&#39;&#34;&#39;/&amp;quot;/g; return $_; } my @bindsyms = grep(/^bindsym/, # only `bindsym`-s. grep(!/(^#)|(^\s*$)/, # omit comment or empty lines. qx&lt;i3-msg -t get_config&gt;)); chomp @bindsyms; map { s/^bindsym //g } @bindsyms; my @key_to_cmd = map { my @m = $_ =~ /^(?&lt;key&gt;\S&#43;)\s&#43;(?&lt;cmd&gt;.&#43;)$/; \@m; } @bindsyms; my @dmenu_items = map { my ($key, $cmd) = ($_-&gt;[0], $_-&gt;[1]); $key = escape_html($key); $key = &#34;&lt;span size=&#39;large&#39; weight=&#39;heavy&#39;&gt;$key&lt;/span&gt;&#34;; $cmd = escape_html($cmd); $cmd = &#34;\t\t$cmd&#34;; my $result = join &#34;\n&#34;, $key, $cmd; $result .= &#34;\0&#34;; $result; } @key_to_cmd; # p @dmenu_items; my $pid = open2( my $stdout, my $stdin, &#34;rofi -dmenu -p &#39;i3 keybindings&#39; -sep &#39;\\0&#39; -eh 2 -markup-rows -format i&#34; ) or confess; foreach (@dmenu_items) { print $stdin $_; # print $_; } close($stdin); my $stdout_ = do { local($/); &lt;$stdout&gt; }; close($stdout); waitpid($pid, 0); my $exit_code = $? &gt;&gt; 8; # print STDERR &#34;exit_code: $exit_code\n&#34;; if ($exit_code == 0) { chomp $stdout_; my $cmd = $key_to_cmd[$stdout_]-&gt;[1]; print STDERR &#34;STDOUT: [$stdout_] =&gt; [$cmd]\n&#34;; `i3-msg &#39;$cmd&#39;`; } else { print STDERR &#34;EXIT: $exit_code\n&#34;; } 요걸 저장하고, $HOME/.config/i3/config 에 다음을 추가하여 ⌨️ Super&#43;F1 으로 등록:">
 
 	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+		<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
 	        
 
@@ -212,9 +212,7 @@ gist: https://gist.github.com/ageldama/377d00159cfe0cb387f20297ca6a5e6b
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/gopherish.cc909fc89415f23eb9045b7fd9f6e6b61afa91627d645e8450a2a5ccc30c05b1.css" integrity="sha256-zJCfyJQV8j65BFt/2fbmthr6kWJ9ZF6EUKKlzMMMBbE=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/gopherish.css">
                 
             
         
@@ -227,7 +225,7 @@ gist: https://gist.github.com/ageldama/377d00159cfe0cb387f20297ca6a5e6b
         <div class="content"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
     <nav>
@@ -491,17 +489,6 @@ gist: <a href="https://gist.github.com/ageldama/377d00159cfe0cb387f20297ca6a5e6b
       
   </div>
 </footer>
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
 <script>
   
 </script></div>
