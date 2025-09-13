@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Monitor on 아겔로그</title>
-    <link>http://localhost:1313/tags/monitor/</link>
+    <link>https://ageldama.github.io/tags/monitor/</link>
     <description>Recent content in Monitor on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Tue, 18 Mar 2025 13:30:16 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/monitor/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/monitor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>xrandr 🖥️모니터 연결 자동전환 스크립트🐫</title>
-      <link>http://localhost:1313/posts/2025-03mar/2025-03mar18--01-xrandr/</link>
+      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/</link>
       <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-03mar/2025-03mar18--01-xrandr/</guid>
+      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/</guid>
       <description>&lt;p&gt;&#xA;요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.&#xA;다 편한데, 🪟윈도나 icewm처럼 &lt;code&gt;Windows+P&lt;/code&gt; 누르면, 다음 모니터연결&#xA;조합으로 전환되는게 부러웠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;매번 터미널 열고 &lt;code&gt;xrandr&lt;/code&gt; 치거나, &lt;a href=&#34;https://christian.amsuess.com/tools/arandr/&#34;&gt;arandr&lt;/a&gt; 열어서 세팅하기 귀찮으니까.&#xA;(물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 그냥 윈도의 &lt;code&gt;Win+P&lt;/code&gt; 키처럼 동작하도록 스크립트를 짜봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;🐫 &lt;a href=&#34;https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl&#34;&gt;https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,&#xA;예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별&#xA;생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤&lt;/p&gt;</description>
     </item>
   </channel>

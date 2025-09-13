@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jq on 아겔로그</title>
-    <link>http://localhost:1313/tags/jq/</link>
+    <link>https://ageldama.github.io/tags/jq/</link>
     <description>Recent content in Jq on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 12 Jun 2022 13:45:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/jq/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/jq/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>jq manpage와 code</title>
-      <link>http://localhost:1313/posts/2022-06jun/06jun12sun--02-jq-as-vm/</link>
+      <link>https://ageldama.github.io/posts/2022-06jun/06jun12sun--02-jq-as-vm/</link>
       <pubDate>Sun, 12 Jun 2022 13:45:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2022-06jun/06jun12sun--02-jq-as-vm/</guid>
+      <guid>https://ageldama.github.io/posts/2022-06jun/06jun12sun--02-jq-as-vm/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://stedolan.github.io/jq/&#34;&gt;https://stedolan.github.io/jq/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;jq이 뭐하는 도구인지 소개는 한국어로 많은데, 그걸 갖고 조금 복잡한 패턴을 처리하는 자료는,&#xA;머리 나쁜 내가 이해하기에 적합한 자료는 찾지 못해서, 그냥 manpage을 읽고 시도.&lt;/p&gt;&#xA;&lt;p&gt;이미 알고 있는 도구, 혹은 이미 대부분의 unix-like, linux 시스템에 깔려있는 도구들이 있는데,&#xA;막상 그 도구의 manpage을 차분히 읽어 보면, 내가 너무 게을렀었고 알려고 하지 않았기에&#xA;내 삶을 더 도움을 받을 수 있었을텐데, 그렇지 못했었던 도구들이 많은것 같아.&lt;/p&gt;&#xA;&lt;p&gt;gnu coreutils, m4, awk, perl 만 해도 그랬었고, 조금이라도 알아가고 응용을 할수록 매일매일이&#xA;더 재밌고 강력해졌었던거 같아.&lt;/p&gt;</description>
     </item>
   </channel>

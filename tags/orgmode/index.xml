@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Orgmode on 아겔로그</title>
-    <link>http://localhost:1313/tags/orgmode/</link>
+    <link>https://ageldama.github.io/tags/orgmode/</link>
     <description>Recent content in Orgmode on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 04 Nov 2020 00:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/orgmode/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/orgmode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#34;org-more.el&#34; released!</title>
-      <link>http://localhost:1313/posts/2020-11nov/org-more-1st-rel/</link>
+      <link>https://ageldama.github.io/posts/2020-11nov/org-more-1st-rel/</link>
       <pubDate>Wed, 04 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2020-11nov/org-more-1st-rel/</guid>
+      <guid>https://ageldama.github.io/posts/2020-11nov/org-more-1st-rel/</guid>
       <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://github.com/ageldama/org-more&#34;&gt;org-more.el: search .org files have certain tags (#+tags[]:&#xA;or #+tags[]:)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;개인 위키, KB처럼 org 파일 모음을 사용하고 있는데, 디렉토리 계층과&#xA;직접 링크 관계만이 아니라 같은 태그들으로 묶어서 각 파일들을 검색하고&#xA;리스팅 할 수 있도록 만들었다.&lt;/p&gt;</description>
     </item>
   </channel>
