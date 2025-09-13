@@ -138,7 +138,7 @@ equals 라이브러리를 써서 동치 비교와 CLOS의 print-object generic f
 macro body 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 (defmacro define-data-class (class-name parent-classes slot-names &amp;key (no-print-slot-names nil) (no-equals-slot-names nil)) (flet ((accessor-symbol (slot-name) (alexandria:format-symbol *package* &#34;~a-~a&#34; class-name slot-name))) (list &#39;progn ;; defclass (let ((slot-defs (loop for slot-name in slot-names collecting `(,slot-name :initarg ,(alexandria:make-keyword slot-name) :accessor ,(accessor-symbol slot-name))))) `(defclass ,class-name ,parent-classes ,slot-defs)) ;; defmethod print-object (let* ((print-slot-names (set-difference slot-names no-print-slot-names)) (fmt-ctrl (format nil &#34;~{~a=~~a~^, ~}&#34; print-slot-names))) `(defmethod print-object ((obj ,class-name) stream) (print-unreadable-object (obj stream :type t) (with-slots ,print-slot-names obj (format stream ,fmt-ctrl ,@print-slot-names))))) ;; defmethod equals:equals (let* ((equals-slot-names (set-difference slot-names no-equals-slot-names)) (equals-exprs (loop for equals-slot-name in equals-slot-names collecting `(equals:equals (slot-value lhs (quote ,equals-slot-name)) (slot-value rhs (quote ,equals-slot-name)))))) `(defmethod equals:equals ((lhs ,class-name) (rhs ,class-name) &amp;rest args) (declare (ignore args)) (and t ,@equals-exprs))) ))) synopsis / usage 1 2 3 4 5 6 (define-data-class animal () (name age)) (define-data-class bird (animal) ()) (equals:equals (make-instance &#39;animal :name &#34;foo&#34; :age 18) (make-instance &#39;animal :name &#34;foo&#34; :age 18)) 오랬만에 재밌었다.">
 
 	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
 	        
 
@@ -147,7 +147,7 @@ macro body 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.1242bbf08f4cfb418d62e1019df0673ebb7bf9d8e340366d8f96a17d1474bbf2.css" integrity="sha256-EkK78I9M&#43;0GNYuEBnfBnPrt7&#43;djjQDZtj5ahfRR0u/I=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.8aa796a1f13756a1023089311ffd120d8e714a37de9e0b6609b88c01a727e15f.css" integrity="sha256-iqeWofE3VqECMIkxH/0SDY5xSjfengtmCbiMAacn4V8=" crossorigin="anonymous">
                     
                 
             
@@ -336,7 +336,7 @@ Footnotes
 </h2>
 </div>
 <div class="footnotes">
-<hr class="footnotes-separatator">
+<hr class="footnotes-separatator"/>
 <div class="footnote-definitions">
 <div class="footnote-definition">
 <sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
@@ -377,10 +377,7 @@ Footnotes
   
   <div class="footer-info">
       2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      <br>
-      BTC기부: <b><code>bc1qyx5f8trraemf9r520qy889g42rpq398cw9yysw</code></b>
-      <br>
-      ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
+      
   </div>
 </footer>
 

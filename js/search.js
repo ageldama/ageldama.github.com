@@ -1,0 +1,81 @@
+
+
+
+function resetSearchResults() {
+    $('.search-results').empty();
+    $('main.list').fadeIn();
+}
+
+var showSearchResults_template = null;
+function showSearchResults(searchTerm, searchResults) {
+    $('.search-results').empty();
+    $('main.list').fadeOut();
+
+    const $resultsContainer = $('.search-results');
+
+    const templ = `
+<h2>검색어(search term): <%= searchTerm %> /
+<% if (searchResults.length === 0) { %>
+    <span>--- 검색결과 없음 ---</span>
+<% } else { %>
+    <span>--- 검색결과: <%= searchResults.length %>건 ---</span>
+<% } %>
+</h2>
+
+<% if (searchResults.length > 0) { %>
+    <ol>
+        <% searchResults.forEach(function(row, idx){ %>
+            <li><a href="<%= row.permalink %>"><%= row.title %></a>
+                <div><%= row.contents %></div></li>
+        <% }); %>
+    </ol>
+<% } %>
+`;
+
+    if (!showSearchResults_template) {
+        showSearchResults_template = _.template(templ);
+    }
+
+    const expanded = showSearchResults_template({
+        searchTerm, searchResults,
+    });
+
+    $resultsContainer.append($(expanded));
+
+    const mark = new Mark(document.querySelectorAll('.search-results'));
+    mark.mark(searchTerm);
+}
+
+
+function executeSearch(searchTerm) {
+    fetch("/index.json")
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            const filtered = _.filter(data, function(row) {
+                return row && (
+                    _.toString(row['title']).indexOf(searchTerm) > -1
+                        || _.toString(row['contents']).indexOf(searchTerm) > -1);
+            });
+            // console.log(filtered);
+            showSearchResults(searchTerm, filtered);
+        })
+}
+
+
+
+$(function(){
+    const $input = $('#search-query');
+    $input.
+        on('keyup', _.debounce(function() {
+            const q = $input.val();
+            // console.log('query: ' + q);
+            if (_.isEmpty(q)) {
+                resetSearchResults(q);
+            } else {
+                executeSearch(q);
+            }
+        }, 500));
+});
+

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.2">
+	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="아겔로그">
 
 	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
 	        
 
@@ -26,7 +26,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.1242bbf08f4cfb418d62e1019df0673ebb7bf9d8e340366d8f96a17d1474bbf2.css" integrity="sha256-EkK78I9M&#43;0GNYuEBnfBnPrt7&#43;djjQDZtj5ahfRR0u/I=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.8aa796a1f13756a1023089311ffd120d8e714a37de9e0b6609b88c01a727e15f.css" integrity="sha256-iqeWofE3VqECMIkxH/0SDY5xSjfengtmCbiMAacn4V8=" crossorigin="anonymous">
                     
                 
             
@@ -81,8 +81,69 @@
 
 
 
-                        <div id="search"></div>
-			
+			<div class="search">
+    <div class="search-form">
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+
 			<main class="list">
 				<div class="site-description"></div>
 				
@@ -274,10 +335,7 @@ lynx, w3m 같은 <a href="https://en.wikipedia.org/wiki/Text-based_web_browser">
   
   <div class="footer-info">
       2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      <br>
-      BTC기부: <b><code>bc1qyx5f8trraemf9r520qy889g42rpq398cw9yysw</code></b>
-      <br>
-      ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
+      
   </div>
 </footer>
 
@@ -295,56 +353,5 @@ lynx, w3m 같은 <a href="https://en.wikipedia.org/wiki/Text-based_web_browser">
   
 </script>
 		</div>
-
-                
-<script src="/js/pagefind/pagefind-ui.js" type="text/javascript"></script>
-<script>
- window.addEventListener('DOMContentLoaded', (event) => {
-     new PagefindUI({
-         baseUrl: "/",
-         
-         element: "#search",
-         
-         showImages: true,
-         
-         resetStyles: false,
-         
-         showSubResults: false,
-
-         pageSize: 5,  
-
-         translations: {
-             "placeholder": "--- 검색어 입력 ---",
-             "clear_search": "초기화",
-             "load_more": "검색결과 더 불러오기",
-             "search_label": "이 사이트에서 검색",
-             "filters_label": "필터",
-             "zero_results": "검색결과 없음: [SEARCH_TERM]",
-             "many_results": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
-             "one_result": "[COUNT]-건 검색됨, 검색어=[SEARCH_TERM]",
-             "alt_search": "검색결과 없음=[SEARCH_TERM]. 대체검색어=[DIFFERENT_TERM]-으로 표시",
-             "search_suggestion": "검색결과 없음=[SEARCH_TERM]. 다음 검색으로 대체해보시던가요:",
-             "searching": "검색중 [SEARCH_TERM]..."
-         },
-     });
-
-     
-     const pagefind_ui_results_observer = new MutationObserver(function(muts){
-         if($('.pagefind-ui__drawer').children().length > 0) {
-             $('main.list').hide();
-         } else {
-             $('main.list').show();
-         }
-     });
-
-     pagefind_ui_results_observer.observe(
-         $('.pagefind-ui__drawer')[0],{
-             childList: true,
-             subtree: true
-     });
- });
-</script>
-		
-
 	</body>
 </html>

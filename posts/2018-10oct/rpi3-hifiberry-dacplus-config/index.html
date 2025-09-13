@@ -49,7 +49,7 @@ WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run
 WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev #update_config=1 country=GB network={ ssid=&#34;iptime&#34; psk=&#34;xxxxxxxxxx&#34; key_mgmt=WPA-PSK } wpa_passphrase 안쓰고 그냥 plaintext으로 써도 동작. 내 공유기랑은 country=GB 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤. 그리고 ip link set wlan0 {up|down} 정도로 wlan0 인터페이스를 up/down하면됨. 사운드 드라이버 설정 내장 사운드카드 드라이버는 modprobe blacklist에 추가해서 끄자. /boot/config.txt에 HiFiBerry DAC&#43; 드라이버 오버레이를 지정해야함. 내장 사운드 드라이버 끄기 다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음.">
 
 	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
 	        
 
@@ -58,7 +58,7 @@ WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.1242bbf08f4cfb418d62e1019df0673ebb7bf9d8e340366d8f96a17d1474bbf2.css" integrity="sha256-EkK78I9M&#43;0GNYuEBnfBnPrt7&#43;djjQDZtj5ahfRR0u/I=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.8aa796a1f13756a1023089311ffd120d8e714a37de9e0b6609b88c01a727e15f.css" integrity="sha256-iqeWofE3VqECMIkxH/0SDY5xSjfengtmCbiMAacn4V8=" crossorigin="anonymous">
                     
                 
             
@@ -228,10 +228,7 @@ pcm.!default {
   
   <div class="footer-info">
       2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      <br>
-      BTC기부: <b><code>bc1qyx5f8trraemf9r520qy889g42rpq398cw9yysw</code></b>
-      <br>
-      ETH기부: <b><code>0x68990903ED084F51d0aF53991867468aF2100281</code></b>
+      
   </div>
 </footer>
 
