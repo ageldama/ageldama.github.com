@@ -54,7 +54,7 @@ function searchTermMatch(searchTerm, str) {
 }
 
 function executeSearch(searchTerm) {
-    $('.search-loading-indicator').hide();
+    $('.search-loading-indicator').show();
 
     const ts = document.querySelector('meta[name="hugo-gen-timestamp"]').content;
 
