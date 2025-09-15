@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757777621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,47 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-03mar/2019-03mar17-ping/">Ping 17/03/2019</a></h1>
+					<time>🗓️ 17 Mar, 2019</time>
+					<br><div class="description">
+						
+						<h1 id="emacsc-개발환경-스크린캐스트">Emacs/C++ 개발환경 스크린캐스트</h1>
+<p><a href="/posts/2019-02feb/counsel-ivy+cpp-ide/">이전 포스팅</a> 에서 만들었던
+설정을 스크린캐스트로 찍어서 공유해봤다.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/YOaAqpdz9ts?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<h1 id="let-over-lambda-읽기">&ldquo;Let Over Lambda&rdquo; 읽기</h1>
+<p><a href="https://letoverlambda.com/">Let Over Lambda</a>을 읽기
+시작했다. 커먼리습 매크로, 클로져에 대한 이야기를 더 깊이 있게
+설명하고, 그런 기능들이 어떻게 리습이랑 리습이 아닌 <a href="http://paulgraham.com/avg.html">&ldquo;Blub
+language&rdquo;</a>이라고 말하고있는 대부분의
+언어들과의 차이인지를 설명한다.</p>
+<p>리습의 매크로나 closure을 통해서, 그간 내가 프로그래밍언어 설계를 할때
+포함해야하고, 컴파일러가 지원하도록 손수 만들어놓아야 한다고 믿던
+것들이 얼마나 쉽게 구현되는지를 보며 충격을 받는다. 재밌고 신선하다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-03mar/cffi-2d-array/">CFFI으로 CommonLisp 2d array을 Foreign function으로 전달하기</a></h1>
+					<time>🗓️ 17 Mar, 2019</time>
+					<br><div class="description">
+						
+						<p><a href="https://github.com/ageldama/cffi-2d-array-hello">https://github.com/ageldama/cffi-2d-array-hello</a></p>
+<p><code>cffi:with-foreign-array</code>이 <a href="https://common-lisp.net/project/cffi/manual/cffi-manual.html">CFFI
+manual</a>에
+없어서 처음에 좀 골치아팠음.</p>
+<p>리습 어레이를 복사해서 매핑해줌.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-02feb/2019feb27-ping/">Ping 26/02/2019</a></h1>
 					<time>🗓️ 26 Feb, 2019</time>
 					<br><div class="description">
@@ -170,61 +211,6 @@
 모르겠다.</p>
 <p>그냥 개인적으로 하고 싶던 설정이나 만지작거리면서 시간을 보내봐도 딱히
 그게 지나고 나면 하고 싶은것도 없어진다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/counsel-ivy&#43;cpp-ide/">Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)</a></h1>
-					<time>🗓️ 26 Feb, 2019</time>
-					<br><div class="description">
-						
-						<p>최근에 이맥스 설정을
-<a href="https://github.com/emacs-helm/helm">Helm</a>기반에서
-<a href="https://github.com/abo-abo/swiper">Ivy/Counsel</a>으로 전부 바꿨다.</p>
-<p>더 가볍고, 적당히 잘 동작하고,
-<a href="https://github.com/BurntSushi/ripgrep">Ripgrep</a>이랑 기본적으로
-설정이 가능해서 편함.</p>
-<p>거기에 <code>C-c C-o</code>
-(<a href="https://oremacs.com/2015/11/04/ivy-occur/">ivy-occur</a>) +
-<a href="https://github.com/mhayashi1120/Emacs-wgrep">wgrep</a>이 Helm에선
-동작할때가 그때그때 기능에 따라 달라서 짜증나고, 심지어 플러그인을
-설정해서 써야하거나 해서 정말 좋아하는 기능인데 우울하게 만들었는데,
-Ivy이 훨씬 깔끔하게 동작하고 일관성있게 잘 동작함.</p>
-<p>처음에는 Helm에서 하는 기능들을 그대로 옮기려고만 생각하다가, 오히려
-Ivy에 맞춰서 내가 익숙해지고, 더 낫게 할 방법들이 있어서 그냥 내가
-adopt해서 편안해졌다.</p>
-<h1 id="cmake--compile_commandsjson">CMake + <code>compile_commands.json</code></h1>
-<p>이전에는 <a href="https://github.com/Andersbakken/rtags">RTags</a>을 사용해서
-&lsquo;&lsquo;정말로&rsquo;&rsquo; C++ 프로젝트를 Clang등을 이용해서 파싱하고, 그걸
-인덱싱한걸로 정확한 navigation, code completion을 구성해 사용하려고
-했었었다. 그리고 타입 정보다 그런거 다 있으니 제대로 굴러가서 꽤
-쓸만하고.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/2019-02feb26-ping/">Ping 26/02/2019</a></h1>
-					<time>🗓️ 26 Feb, 2019</time>
-					<br><div class="description">
-						
-						<h1 id="게임-발더스게이트ee-원숭이섬의-비밀-se--steamplay-등등">게임: 발더스게이트EE, &lsquo;원숭이섬의 비밀&rsquo; SE + SteamPlay, 등등</h1>
-<p>아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced Edition들
-올라와있었다.  발더스게이트1, 2 모두. 시간이 될때마다 조금씩 플레이
-중.</p>
-<p>새로 UI이나 그래픽 요소들 등등 리마스터 한건지 훨씬 좋아진거 같다.</p>
-<p><a href="https://store.steampowered.com/app/32360/The_Secret_of_Monkey_Island_Special_Edition/">원숭이섬의 비밀: Special
-Edition</a>
-이것도 시간날때
-플레이. <a href="https://www.scummvm.org/">ScummVM</a> 으로 옛날 그래픽으로 다시
-해도 좋겠지만, 오히려 애니메이션이나 그래픽 다시 그린게 나는 더 마음에
-들어서 이쪽이 좋은거 같다.</p>
-<p><a href="https://store.steampowered.com/app/336140/Unavowed/">Unavowed</a>. 이런류의
-어드벤쳐 꾸준히 만드는 &ldquo;WadjetEyeGames&quot;이 내 취향에 잘 맞는걸 계속
-만들고 있는거 같아서 기뻤다.</p>&hellip;
 						
 					</div>
                                         
@@ -247,11 +233,11 @@ Edition</a>
             <a href="/page/45/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(46/58)</span>
+        <span class="page-number">(46/59)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/47/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

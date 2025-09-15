@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757777620">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,140 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2023-03mar/perl-cal3/">`ncal -3` 직접 Perl으로 짜봤다</a></h1>
+					<time>🗓️ 02 Mar, 2023</time>
+					<br><div class="description">
+						
+						<p>
+<code class="verbatim">ncal -3</code> 이 뭐냐하면:</p>
+<p>
+<a href="https://man7.org/linux/man-pages/man1/cal.1.html">https://man7.org/linux/man-pages/man1/cal.1.html</a></p>
+<p>
+…뭐 이런건데, 개인적으로 저전력 글쓰기 전용머신에서 사용하는
+스크립트에서 배포판이 달라서 패키지를 못찾겠어서 <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, …그냥 직접
+짜서 대체했다.</p>
+<p>
+<a href="https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e488">https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e488</a></p>
+<p>
+그래서 스크린샷은:</p>
+<p>
+<img src="/2023-03mar/journal-edit-cal3.png" alt="/2023-03mar/journal-edit-cal3.png" title="/2023-03mar/journal-edit-cal3.png" /></p>
+<p>
+재밌었던 부분은:</p>
+<ol>
+<li>어차피 Perl으로 전부 짜서 쓰는 스크립트였는데,
+아예 외부 커맨드라인 도구 의존성을 더 없애서 뿌듯하다.</li>
+<li>매달 달력을 문자열으로 뽑았는데, 3달치를 뽑아서, 이걸 한 row에
+표시하고 싶었는데, <a href="https://metacpan.org/pod/Text::Table">Text::Table</a>으로 적절히 간단히 완료.</li>
+<li><a href="https://metacpan.org/pod/Term::ANSIColor">Term::ANSIColor</a>와 <a href="https://perldoc.perl.org/perlre">perlre</a>을 써서 깔끔하게 원하는 일자에 highlighting
+해서 편안했다.</li>
+<li>
+<p>…더 해킹을 해서, <code class="verbatim">calendar(..)</code> 결과문자열을 적당히 파싱해서,
+작은 Text::Table으로 만들어서, 그것들으로 조합하고 했었어도 될거
+같아.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2023-03mar/cxx-defer/">C&#43;&#43;: Golang-ish `defer`-macro</a></h1>
+					<time>🗓️ 02 Mar, 2023</time>
+					<br><div class="description">
+						
+						<p>
+별거 없는데, 문득 심심해서 툭닥거려봤다.</p>
+<p>
+<div>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">원하는 것과 접근법</a>
+</li>
+<li><a href="#headline-2"><code class="verbatim">defer.inl</code> :</a>
+</li>
+<li><a href="#headline-3">사용예</a>
+</li>
+<li><a href="#headline-4">제약사항과 생각해볼꺼리</a>
+</li>
+<li><a href="#headline-5">Footnotes</a>
+</li>
+</ul>
+</nav>
+</div>
+</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+원하는 것과 접근법
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li><a href="https://go.dev/blog/defer-panic-and-recover">https://go.dev/blog/defer-panic-and-recover</a></li>
+<li><a href="https://docs.rs/defer/latest/defer/fn.defer.html">https://docs.rs/defer/latest/defer/fn.defer.html</a></li>
+<li><a href="https://ziglang.org/documentation/master/#defer">https://ziglang.org/documentation/master/#defer</a></li>
+</ol>
+<p>
+  golang/zig에서처럼 <code class="verbatim">defer</code> 등록한 LIFO순서대로 호출되도록.</p>
+<p>
+  검색해보면, 대부분 RAII을 사용하거나 하는 것들이 보인다:</p>
+<ul>
+<li><a href="https://duckduckgo.com/?q=c%2B%2B+golang+defer">DDG: c++ golang defer</a></li>
+<li><a href="https://stackoverflow.com/questions/33050620/golang-style-defer-in-c">https://stackoverflow.com/questions/33050620/golang-style-defer-in-c</a></li>
+<li><a href="https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop">https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop</a></li>
+<li><a href="https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/">https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/</a></li>
+</ul>
+<p>
+  …그냥 <code class="verbatim">std::shared_ptr&lt;void&gt;</code> 을 이용하는 방식이 마음에
+  들었다. 그리고 조금 더 간단하게 사용하려고 매크로로 만들어 봤다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+<code class="verbatim">defer.inl</code> :
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div class="src src-c++">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">  <span class="cm">/* -*- mode: c++; -*- */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cp">#ifndef defer_INL
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define defer_INL 1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#define _Defer_CONCAT_IMPL( x, y ) x##y
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y )
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk)
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#endif </span><span class="cm">/*defer_INL*/</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  <a href="https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html"><code class="verbatim">__COUNTER__</code></a> 이용해서 매크로가 생성한 <code class="verbatim">std::shared_ptr&lt;..&gt;</code> 변수의
+  이름이 겹치지 않도록 해봤다. (…위에 검색한 링크들에도 사용하듯이)</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2023-02feb/2023-02feb26--01-css/">Ping 26/02/2023 .01 : 디자인 css 가볍게 수정</a></h1>
 					<time>🗓️ 26 Feb, 2023</time>
 					<br><div class="description">
@@ -168,85 +302,6 @@
 <p>
 lynx, w3m 같은 <a href="https://en.wikipedia.org/wiki/Text-based_web_browser">텍스트 웹브라우져</a>에서 읽으나 그냥 무거운 웹브라우져으로
 읽으나 사람마다 알아서 잘 읽히도록 하는데에만 집중해봤다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-02feb/2023-02feb19--02-ping/">Ping 19/02/2023 .02 : 이름에 대한 추측 (2) HAL, IBM, JCL</a></h1>
-					<time>🗓️ 19 Feb, 2023</time>
-					<br><div class="description">
-						
-						<p>
-(…지난번 <a href="../2023-02feb07--01-ping/">C/C++/D/Zig 이름에 대한 추측</a>
-에 이어서, 그냥 떠올라서)</p>
-<ol>
-<li>
-<p><a href="https://en.wikipedia.org/wiki/HAL_9000">HAL 9000</a> –&gt; IBM</p>
-<ol>
-<li>ASCII방식, 혹은 그냥 알파벳에서 한글자씩 앞으로 땡기면, &#34;IBM&#34;이 된다.</li>
-</ol>
-</li>
-<li>
-<p><a href="https://en.wikipedia.org/wiki/Job_Control_Language">JCL</a></p>
-<ol>
-<li>IBM의 &#34;Job Control Language&#34;, 메인프레임 등에서 스크립팅을 위해
-쓴다고 한다.</li>
-<li>&#34;IBM&#34;에서 다시 또 한글자씩 앞으로 땡기면, &#34;JCL&#34;.</li>
-</ol>
-</li>
-</ol>
-<p>
-ㅎㅎ뭐 그냥 그렇다고.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-02feb/2023-02feb19--01-ping/">Ping 19/02/2023 .01 : 어른이 되기</a></h1>
-					<time>🗓️ 19 Feb, 2023</time>
-					<br><div class="description">
-						
-						<p>
-(최근 며칠 우울하고 내가 어른이기는 한가 싶은 자괴감에
-빠졌었다. 그래서인지 자기합리화를 위해 이런 글을 쓰고 있는거 같기도
-하다.)</p>
-<p>
-<div>
-  <nav id="TableOfContents">
-<ul>
-<li><a href="#headline-1">나의 옛날 이야기</a>
-</li>
-<li><a href="#headline-2">어른의 사정</a>
-</li>
-<li><a href="#headline-3">그런데 어떤 어린이는 어른을 이해한다. 때로는</a>
-</li>
-<li><a href="#headline-4">The Overfitting</a>
-</li>
-<li><a href="#headline-5">아직은 어린 마음인, 그래야만 한다는 강박</a>
-</li>
-<li><a href="#headline-6">짝사랑, 혹은 도착증과 그 반대로써인 쩌리의 자존심</a>
-</li>
-<li><a href="#headline-7">신화적인 닌텐도와 그 빠</a>
-</li>
-<li><a href="#headline-8">&#34;괜찮아&#34;</a>
-</li>
-<li><a href="#headline-9">Footnotes</a>
-</li>
-</ul>
-</nav>
-</div>
-</p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-나의 옛날 이야기
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>80년대의 기억에는, 참 자주도 불량식품 단속에 대한 이야기가 나오던 것
-  같아. 그리고 실제로도 만화, 애니메이션, 게임, 장난감 등등의 라이센스나
-  품질관리에 대한 관념이 희박했던거 같아.</p>&hellip;
 						
 					</div>
                                         
@@ -269,11 +324,11 @@ lynx, w3m 같은 <a href="https://en.wikipedia.org/wiki/Text-based_web_browser">
             <a href="/page/7/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(8/58)</span>
+        <span class="page-number">(8/59)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/9/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

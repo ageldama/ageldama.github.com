@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757777620">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,59 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun29--01-ping/">linux/unix 팁 29/06/2022 .01</a></h1>
+					<time>🗓️ 29 Jun, 2022</time>
+					<br><div class="description">
+						
+						<div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</a></li>
+    <li><a href="#ssh으로-키보드마우스-안-붙이고">ssh으로 키보드/마우스 안 붙이고</a>
+      <ul>
+        <li><a href="#vconsole-conspy">vconsole: <code>conspy</code></a></li>
+        <li><a href="#x11-x2x으로-여러-머신스크린에-걸쳐서-마우스키보드-공유">x11: <code>x2x</code>으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+<hr>
+<p>리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.</p>
+<p>그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.</p>
+<h1 id="zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</h1>
+<p>최근/디렉토리 이동한 히스토리에 따라서 (&ldquo;frecent&rdquo;) 이동하기:</p>
+<p>fzf+zsh의 <code>Control-R</code>도 좋고<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,</p>
+<p>oh-my-zsh 내장인 <code>plugins=(z)</code>도 좋지만<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>&hellip;나는 가능하면 <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a>이 가장 가볍고 좋은거 같다.</p>
+<p>설치하고 나서,
+<code>eval &quot;$(zoxide init zsh)&quot;</code></p>
+<p>그리고, <code>z SOME-DIR</code>, <code>zi</code> 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun24--01-grug/">The Grug Brained Developer</a></h1>
+					<time>🗓️ 24 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p>감동적인 글이다ㅋ:</p>
+<p><a href="https://grugbrain.dev/">https://grugbrain.dev/</a></p>
+<p>문법도 완전 grug스럽게 작성해서 반가운 글이었다.</p>
+<p>완전히 모두 내 생각과 같지는 않아도, 이야기하는 <em>&ldquo;FOLD&rdquo; 때문에</em> 일어나는 일들과
+조금은 그래도 <em>grug답게</em> 그냥 해내려는 생각들이 유용.</p>
+<p>그치, grug이 공룡과 구분되는 점은 그런거겠지. ㅎㅎ&hellip;</p>
+<p>msa, reactjs, ejb, osgi. 공감하는 생각들.</p>
+<p>&hellip; black think juice 맛있다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/">&#34;Software disenchantment&#34;</a></h1>
 					<time>🗓️ 19 Jun, 2022</time>
 					<br><div class="description">
@@ -176,80 +229,6 @@
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun17--01-ping/">Ping 17/06/2022 .01</a></h1>
-					<time>🗓️ 17 Jun, 2022</time>
-					<br><div class="description">
-						
-						<h1 id="code-bloat-has-become-astronomical">&ldquo;Code bloat has become astronomical&rdquo;</h1>
-<p><a href="https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/">https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/</a></p>
-<p>극공감. 그렇다고 의존성 포함하면 몇 기가나 되는 것들이, 하는 일을 보면 안습.
-&hellip;그렇다고 그런 방법들만을 고르는 안목이 엄청나게 힙한것도, 스스로에게 이익이 되는것도 아니고.</p>
-<p>데스크탑에 작은 서브모니터 연결해놓은 rpi3b+이 rpi4보다 빠르지는 않을지 몰라도, micro-sd 버벅거림이랑
-발열 때문에 버벅거리는건 훨씬 적다.</p>
-<p>&ldquo;rpi4은 빠르니까!&ldquo;이라면서 나름대로 데탑/랩탑에서 쓰는 설정 그대로, openbox+lxpanel 정도 올려서 쓰고 있고,
-rpi3b+은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있을까 싶기도 하지만. &hellip;어차피 둘 다 엄청 가벼울거 같은데도.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun15--01-ping/">Ping 15/06/2022 .01</a></h1>
-					<time>🗓️ 15 Jun, 2022</time>
-					<br><div class="description">
-						
-						<p>비 내리는 화요일. &#x2614;</p>
-<div>
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</a></li>
-    <li><a href="#postgresql-as-an-api-server">postgresql, as an api server?</a></li>
-  </ul>
-</nav>
-</div>
-
-<hr>
-<h1 id="jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</h1>
-<p>재밌는걸 찾았다.</p>
-<p><a href="https://jinja.palletsprojects.com/en/3.1.x/">jinja2</a>을 사용하면서, 하위 include으로 내려갈수록,
-file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야
-template cache을 무시하는거 같아.</p>
-<p>그래서,</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
-</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
-</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
-</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
-</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
-</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
-</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
-</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
-</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
-</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
-</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// gulpfile.js:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">buildTask</span> <span class="o">=</span> <span class="nx">series</span><span class="p">(</span><span class="nx">cleanTask</span><span class="p">,</span> <span class="nx">esbuildTask</span><span class="p">,</span> <span class="nx">injectTask</span><span class="p">,</span> <span class="nx">touchInjectedTask</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">watchTask</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">watch</span><span class="p">(</span><span class="s2">&#34;./js/**/*.js&#34;</span><span class="p">,</span> <span class="nx">buildTask</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">watch</span> <span class="o">=</span> <span class="nx">watchTask</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">build</span> <span class="o">=</span> <span class="nx">buildTask</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">clean</span> <span class="o">=</span> <span class="nx">cleanTask</span><span class="p">;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>&hellip;대략 잘 동작하고, <a href="https://esbuild.github.io/">webpack보다 엄청나게 빠르다</a> ㅎㅎ.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -267,11 +246,11 @@ template cache을 무시하는거 같아.</p>
             <a href="/page/11/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(12/58)</span>
+        <span class="page-number">(12/59)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/13/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757777621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,52 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping-27thu/">Ping 27/Aug/2020</a></h1>
+					<time>🗓️ 27 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+그간 진행해오던 프로젝트는 성능에 대해서 premature optimization을
+고려해서 만들기 보다는 architectural한 면에 비중을 갖고 가능성을
+염두에두고 선택을 해오며 만들었다.</p>
+<p>
+그럼에도 꽤 괜찮은 성능이었었고, 이제는 첫번째 버젼의 완성과 문서
+작성도 완료한 시점이어서 앞으로 성능을 높일 방안을 고민해보고 실험을
+몇개 수행해서 방법 결정해봤다.</p>
+<p>
+(현재 사용하는 방법과 새로이 사용할 방안의 이름은 모두 변경했다.)</p>
+<ol>
+<li>
+<p>기존 성능 측정은:</p>
+<ol>
+<li>
+<p>X event-writer</p>
+<ul>
+<li>commit을 한번에 하지 않고, 매 이벤트마다 수행해서
+느림. (현재는 변경되었음)</li>
+<li>약 11,196-microseconds (11-ms)</li>
+</ul>
+</li>
+<li>
+<p>X journal-writer</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping-25tue/">Ping 25/Aug/2020</a></h1>
+					<time>🗓️ 25 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+the end of the belle époque?</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2020-08aug/ping-24mon/">Ping 24/Aug/2020</a></h1>
 					<time>🗓️ 24 Aug, 2020</time>
 					<br><div class="description">
@@ -187,50 +233,6 @@
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-08aug/ping2-14fri/">Ping (2nd) 14/Aug/2020</a></h1>
-					<time>🗓️ 14 Aug, 2020</time>
-					<br><div class="description">
-						
-						<p>
-ㅎㅎ좋다. 이제 문서와 추가적인 작은 도구 몇 개를 더 만드는 것만 남았구나.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-08aug/ping-14fri/">Ping 14/Aug/2020</a></h1>
-					<time>🗓️ 14 Aug, 2020</time>
-					<br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-빌드도구의 경험과 Meson을 사용하기
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>
-  <a href="https://github.com/ageldama/meson-abc">Meson-ABC 갖고 놀아본 코드</a></p>
-<p>
-  아주 예전에 commercially 성공적이었었던 C++ 프로젝트를 홀로 기획, 설계, 개발했었었다.</p>
-<p>
-  처음에는 GNU Makefile으로 간단히 시작했었었다. 타겟 플랫폼이 뻔하게 윈도였기 때문이다.</p>
-<p>
-  그 이전에는 ANSI C으로 작성한 <a href="https://sourceforge.net/projects/sdlhan/">SDL 조합형 비트맵 출력 오픈소스</a>
-  라이브러리 같은 것들을 작업할 때는 그냥 GNU Autotools 을 쓰거나
-  했었었다.</p>
-<p>
-  하지만 그렇게 configure 하거나 할 부분도 없고 처음 혼자 시작하며
-  다른 신경 쓸 것도 무지하게 많았었던 프로젝트였고 더욱이 기간도
-  한정적이었었다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
-<p>
-  그리고 SCons 같은 것을 조금 쓰다가, 결국 더 간단히 Rake으로 빌드를
-  작성해 한동안 썼었다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -248,11 +250,11 @@
             <a href="/page/27/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(28/58)</span>
+        <span class="page-number">(28/59)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/29/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757777621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,86 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/hololog-perl-cli-1st-rel/">Hololog Perl/CLI 버젼</a></h1>
+					<time>🗓️ 17 Dec, 2019</time>
+					<br><div class="description">
+						
+						<p>
+<a href="https://github.com/ageldama/hololog-perl-cli">https://github.com/ageldama/hololog-perl-cli</a></p>
+<p>
+한줄씩 메모를 하는걸 좋아하고, 그냥 데스크탑에서 PDF을 읽거나
+웹페이지를 읽으면서 어딘가에 생각난거나 이해한걸 필기하면서 진행하고
+싶어서 만들었다.</p>
+<p>
+다음 트윗 타래에서 이야기한것처럼, 그냥 트위터 비밀계를 써도 괜찮지만,
+그것도 너무 웹브라우져 열고 하다보면 산만해져서.</p>
+<p>
+tweet 1206138361968070656 </p>
+<p>
+처음 시작은 <a href="https://www.gnu.org/software/coreutils/manual/html_node/cat-invocation.html">Unix/GNU cat</a> 을 간단하게 터미널에서 쓰면 된다는 생각이
+들었다.</p>
+<div class="src src-shell">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cat &gt;&gt; foo.txt</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+..그런데 유닉스가 아닌 사람들, 윈도를 쓰는 사람들은 어떻게 하지?</p>
+<div class="src src-shell">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">copy con foo.txt</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+..사실 위와 같이 <code>cmd.exe</code> 에서 실행해도 되겠지만, 뭔가 그래도 윈도
+사용자들이나 터미널 화면을 무서워하는 사람들이 저런거
+좋아할까.. 싶어서 조금 생각.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/org-spreadsheet-and-babel/">Org모드에서 스프레드시트 기능과 Babel 섞어쓰기</a></h1>
+					<time>🗓️ 13 Dec, 2019</time>
+					<br><div class="description">
+						
+						<p>
+쩌는 <a href="https://seorenn.github.io/org-spreadsheet.html">Org-mode Spreadsheet 소개</a> 를 읽고 감명 받아서 따라해봅니다.</p>
+<p>
+다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리
+<code>defun</code> / <code>defmacro</code> 으로 정의해놓고 그걸 spreadsheet에서 불러 쓸 수
+있을지가 궁금했습니다.</p>
+<p>
+그래서 다음과 같이 해보면 가능할지를 실험:</p>
+<ol>
+<li>
+<p>Org-Babel으로 원하는 함수를 정의한다.</p>
+<ul>
+<li>그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다.</li>
+</ul>
+</li>
+<li>Spreadsheet에서 불러서 쓸 수 있는지 확인해본다.</li>
+</ol>
+<p>우선 <code>C-h a</code> 을 눌러 <code>vsum</code> 을 검색해보니, <code>defun calcFunc-vsum (&amp;rest
+vecs)</code> 으로 미리 선언되어 있는거 같았습니다. 이런 형태로 내가 정의하는
+함수도 구현해보면 될까 싶습니다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-12dec/the-web-and-the-free-world/">원하는 웹브라우져, 웹환경, 그리고 익숙하지만 싫은 어떤 신앙체계</a></h1>
 					<time>🗓️ 11 Dec, 2019</time>
 					<br><div class="description">
@@ -182,77 +262,6 @@
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-12dec/dissect-radio-gaga/">radio-recorder 프로젝트 설명</a></h1>
-					<time>🗓️ 11 Dec, 2019</time>
-					<br><div class="description">
-						
-						<p>
-2년전쯤에 한국 라디오를 혼자 듣고 싶었었다. 하지만 시차가 많이 나는
-지역에 살았었다. (8시간 정도 느림)</p>
-<p>
-그래서 한국 인터넷 라디오를 녹음해서 개인적으로 들을 수 있다면 좋겠다는
-아이디어로 작업했던 프로젝트 소스코드를 공개한다.</p>
-<p>
-<a href="https://github.com/ageldama/radio-recorder">https://github.com/ageldama/radio-recorder</a></p>
-<p>
-방송사의 인터넷 라디오를 녹음 하는 스크립트는 커밋에서 제외하고
-공개한다. 이는 방송사에게 문제가 될 수 있으므로 개인적으로 알아내서
-사용하고 타인과 공유하지 않기를 바란다.</p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-프로그램 구성
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<div id="outline-container-headline-2" class="outline-3">
-<h3 id="headline-2">
-cron 서버
-</h3>
-<div id="outline-text-headline-2" class="outline-text-3">
-<ul>
-<li>지정된 시간에 녹음/인코딩 스크립트를 실행하는 스케쥴을 담당한다.</li>
-<li>오래된 임시 파일 정리 등등도.</li>
-<li>
-<p>한국의 시간대와 내가 있는 시간대가 달라서 다른 cron scheduler을
-쓰지 않고 그냥 짰었던거 같다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-12dec/foo/">Org 파일으로 Hugo 포스팅 테스트</a></h1>
-					<time>🗓️ 11 Dec, 2019</time>
-					<br><div class="description">
-						
-						<p>
-적당히 잘 동작하는거 같으니 앞으로는 그냥 혼란스러운 Markdown 대신에
-그냥 Org 파일으로 블로깅 하며 될거 같다. 행벜.</p>
-<p>
-예전 버젼 Hugo에서는 지원을 제대로 못하던거 같은데, 어느샌가 업데이트
-하니까 되는거 같아서 그냥 슬그머니
-쓰기로. <a href="https://gohugo.io/content-management/formats/">https://gohugo.io/content-management/formats/</a></p>
-<p>
-기존 마크다운들도 인라인 이미지 문법을 바꾸고, ToC 표시 설정도 바뀌어서 조금 변경.</p>
-<p>
-아쉬운건 여전히 Org 파일에서 ToC 지원은 빠져 있는거
-같아서… <a href="https://github.com/snosov1/toc-org">https://github.com/snosov1/toc-org</a> 설치해봤다. 그냥 고민할
-필요가 없었구나. ㅋ</p>
-<p>
-제일 좋은건 code syntax highlight이 예뻐졌다.</p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-Table of Contents                                    &lt;– :TOC: –&gt;
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<ul>
-<li>
-<p><a href="#foobar">foobar</a></p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -270,11 +279,11 @@ Table of Contents                                    &lt;– :TOC: –&gt;
             <a href="/page/38/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(39/58)</span>
+        <span class="page-number">(39/59)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/40/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757777620">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,79 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar20--01--darkmode-js/">darkmode.js으로 변경</a></h1>
+					<time>🗓️ 20 Mar, 2025</time>
+					<br><div class="description">
+						
+						<p>
+직접 짠 css/js에서 <a href="https://darkmodejs.learn.uno/">darkmode.js</a>으로 변경했다.
+css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.</p>
+<p>
+변경도 예쁘게 애니메이션 나오고, system preference 지정도 자동으로 되고.</p>
+<div id="outline-container-headline-1" class="outline-3">
+<h3 id="headline-1">
+(미래의 나를 위해) css/html에서 class
+</h3>
+<div id="outline-text-headline-1" class="outline-text-3">
+<div class="src src-css">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">darkmode--activated</span> <span class="p">.</span><span class="nc">logo</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">mix-blend-mode</span><span class="p">:</span> <span class="kc">difference</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<div class="src src-html">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;darkmode-ignore&#34;</span><span class="p">&gt;</span>😬<span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar18--01-xrandr/">xrandr 🖥️모니터 연결 자동전환 스크립트🐫</a></h1>
+					<time>🗓️ 18 Mar, 2025</time>
+					<br><div class="description">
+						
+						<p>
+요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.
+다 편한데, 🪟윈도나 icewm처럼 <code>Windows+P</code> 누르면, 다음 모니터연결
+조합으로 전환되는게 부러웠다.</p>
+<p>
+매번 터미널 열고 <code>xrandr</code> 치거나, <a href="https://christian.amsuess.com/tools/arandr/">arandr</a> 열어서 세팅하기 귀찮으니까.
+(물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)</p>
+<p>
+그래서 그냥 윈도의 <code>Win+P</code> 키처럼 동작하도록 스크립트를 짜봤다.</p>
+<p>
+🐫 <a href="https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl">https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl</a></p>
+<p>
+Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.</p>
+<p>
+그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,
+예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별
+생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/">Hugo &#43; pagefind 붙여서 검색기능 추가했다</a></h1>
 					<time>🗓️ 16 Mar, 2025</time>
 					<br><div class="description">
@@ -170,76 +243,6 @@ pagefind을 붙여봤다.</p>
 <p>
 별로라고 생각하던 부분들도 다 뜯어 고치고 하면서 더 블로그가 마음에
 들어진다. 🤠</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar15--01-new-css/">css, design 새단장 &#43; dark-mode</a></h1>
-					<time>🗓️ 15 Mar, 2025</time>
-					<br><div class="description">
-						
-						<p>
-css 더 단순하게 만들고, 디자인들도 그냥 내 마음에 들게 뜯어 고침.
-다크모드도 작업해서 만들어 넣고.</p>
-<p>
-css 애니메이션도 작업해 넣었다가, gpu 너무 쓰는거 같아서 그냥 끄고
-정적효과로만 냅둠.</p>
-<p>
-hugo 같은 static site generator이 좋은 점, 그리고 그냥 단순한 css와
-오래된 jquery으로 그냥 뚝딱거려서 작업.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar12--01-data-prog/">data-driven programming &amp; data-driven design &amp; data-oriented programming ???</a></h1>
-					<time>🗓️ 12 Mar, 2025</time>
-					<br><div class="description">
-						
-						<p>
-비슷한 용어들. 내가 이해한 정리들은 <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>:</p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-data-driven programming
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>데이터처리를 중심으로 하는 프로그래밍언어나 도구, 스타일.</p>
-<p>
-  예를 들어, awk, perl은 입력의 패턴에 따라 코드를 나누고 출력을
-  만들기 수월한 방식을 제공.</p>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Data-driven_programming">https://en.wikipedia.org/wiki/Data-driven_programming</a></li>
-<li><a href="https://github.com/Perl/perl5/commit/8d063cd8450e59ea1c611a2f4f5a21059a2804f1">a &#34;replacement&#34; for awk and sed</a> (by Larry Wall)</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-data-oriented design
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p>현대 cpu의 아키텍처에 적절하도록, cpu cache, simd등을 잘 적용될 수
-  있도록 애플리케이션 데이터구조를 설계하는 방식.<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
-<p>
-  그리고 단순히 게임개발에서 ecs만이 아니라 lmax disruptor등도 포함될
-  것 같다.</p>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Data-oriented_design">https://en.wikipedia.org/wiki/Data-oriented_design</a></li>
-<li>dod의 예시: <a href="https://en.wikipedia.org/wiki/Entity_component_system">Entity component system</a></li>
-<li><a href="https://martinfowler.com/articles/lmax.html">lmax disruptor</a> (by Martin Fowler)</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
-data-oriented programming
-</h2>
-<div id="outline-text-headline-3" class="outline-text-2">
-<p>그리고 또 갑자기 위 2개의 정의처럼 완전 갑자기, dop은 다음과 같은
-  원칙들을 이용한 애플리케이션 개발방식:</p>&hellip;
 						
 					</div>
                                         
@@ -262,11 +265,11 @@ data-oriented programming
             <a href="/page/3/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(4/58)</span>
+        <span class="page-number">(4/59)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/5/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

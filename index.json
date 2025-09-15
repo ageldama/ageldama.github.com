@@ -1,6 +1,14 @@
 
 [
  {
+     "permalink": "https://ageldama.github.io/posts/2025-09sep/freebsd-why/",
+     "title": "freebsd + 고물랩탑 쓸만하다(재밌다!)",
+     
+     "tags": ["freebsd", "linux", "laptop", "refurb", "debian", "samba", "asus", "e502ma", "firefox", "chrome", "mpv", "emacs", "dotfiles", "icewm", "evince", "poppler", "pdf", "zathura", "coolreader", "epub", "koreader"],
+     
+ "description": "",
+ "contents": " 시도하기 이전에는 좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을 서브랩탑으로 집책상에서 써왔었다.\n메모리도 4GB, 확장이 불가능하고. 배터리도 조금 부풀었고 충전도 잘 되지 않는다. 거기에 외부전원어댑터를 붙이지 않으면 어째서인지 eDP이 출력되지 않는다. ㅎㅎㅎ\n그래도 어쨌든 debian-stable 설치해놓고 samba 서버로 책상에서 쓰거나 하기엔 적당했다. 딱히 동영상을 틀어 놓거나 하는 것도 포기해야 할 정도로 빠르지도 않았다. 웹브라우징도 느렸다.\n그러다가 freebsd 설치를 했다 (14.3-RELEASE 1) 원래도 freebsd이 gui이나 latency이 중요한 체감이 훨씬 가볍고 부드럽게 느껴지는걸 알고 있었다. 그런데 이번에는 너무 극적으로 즐거웠다.\nmpv 동영상 보기도 부드럽고(1080p정도도 조금 framedrop이 있긴 하지만), firefox으로 웹브라우징도 나쁘지 않다.\n그리고 emacs 쓰는 것도 부드럽고 좋다. 계속 쓰려고 한다. ㅎㅎ\nSony PS3, PS4, PS5와 Nintendo 3DS, Switch 모두 FreeBSD 커널을 갖다 사용하는걸로 알고 있다. 그리고 단순히 BSD License 때문만이 아니라, 체감성능상 이점이 명확한 것 같다.2\n어떻게 쓰는게 좋았나 리눅스를 쓰는 것처럼 (wayland/gnome/kde 같은 것들을 어차피 원래도 바라지 않았지만) 쓰려고 하지 않고, 약간 포기할거 포기하고 더 가볍게 쓰니 편하고 좋다.\nicewm 만으로 편하고 좋다. ++ 내 dotfiles으로 편안하다.\n원래 리눅스 설정으로도 특별히 무겁다고 생각하진 않았는데 훨씬 가볍게 쓸 것들이 더 남아 있던거 같다. (예를 들어, bashmount을 써왔는데 그런 것도 그냥 안쓰고 doas mount ...-정도로 만족한다)\n사용하는 애플리케이션들도 evince =\u0026gt; zathura, koreader =\u0026gt; coolreader3 정도로 바꿨다.\nevince, koreader도 가볍지만, 더 가볍고 단순한 프로그램들, 그러면서 잘 동작하는 bloat이 적은 애플리케이션들이 더 좋아졌다\n그럼에도 그래도 리눅스데스크탑, 랩탑을 더 사용하고 있다. 물론 집책상에서 혼자 쓰는 메인드라이버는 그냥 freebsd이 되었지만.\nSteam을 돌리거나 다른 애플리케이션이 필요하거나 하면 여전히 리눅스/debian을 계속 쓰겠지만. ㅎㅎ 책을 읽거나 코딩, 글쓰기, 간단한 웹서핑을 위해서는 그냥 앞으로도 freebsd으로 만족하려고.\nFootnotes 1 freebsd은 CURRENT -\u0026gt; STABLE -\u0026gt; RELEASE 순서로 안정화/릴리즈를 해나가니 조금 ports 버전이 더 옛날 것들. (debian의 unstable -\u0026gt; testing -\u0026gt; stable)\n2 MacOS이 FreeBSD의 네트워크 스택 코드나 POSIX Userland만을 갖다 사용하고 커널은 XNU/mach 계열을 쓴 것과 달리. 또한 Linux kernel의 GPL라이센스는 게임콘솔 HW에서 사용하기엔 라이센스가 부담되었을 것 같다.\n"},
+ {
      "permalink": "https://ageldama.github.io/posts/",
      "title": "Posts",
      
@@ -9,14 +17,6 @@
  "description": "",
  "contents": ""},
  {
-     "permalink": "https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/",
-     "title": "블로그 검색을 다시 짰다 (PageFind 제거)",
-     
-     "tags": ["blogging", "blog", "pagefind", "index.json", "jquery", "ajax", "hugo"],
-     
- "description": "",
- "contents": " pagefind이 freebsd 환경에서 동작하지 않아서, 그냥 다시 짰다.\nfuse.js을 사용하는 예제 등이 있었지만1, 그럴거면 그냥 ajax으로 얻은 index.json-을 직접 검색해도 될거 같아서 그냥 javascript 작성 오랬만에.\n그리고 ui등도 내 취향에 맞게 간단하게 만들어서 만족스럽다.\npagefind처럼 검색어에 따라 필요한 만큼만 http get하는게 아니라 조금 아쉽지만, 전체 index.json-fetch해도 500kb 안쪽인거 같아서 괜찮지 않을까 싶음. (거기에 브라우저캐슁도 먹으니까)\nFootnotes 1 https://findstar.pe.kr/2021/07/10/fuse-search-on-hugo/\n"},
- {
      "permalink": "https://ageldama.github.io/",
      "title": "아겔로그",
      
@@ -24,6 +24,22 @@
      
  "description": "",
  "contents": ""},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/",
+     "title": "[작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템)",
+     
+     "tags": ["exfat", "ntfs", "fusefs", "fuse", "linux", "hdd", "usb", "exthdd", "filesystem", "freebsd"],
+     
+ "description": "",
+ "contents": " freebsd을 써오면서 좀 불만이었던게1, usb으로 외장 hdd을 연결할 때 호환성 혹은 성능이 너무 느림.\n그래서 아예 빠른 유선랜을 연결해놓고 samba으로 파일을 백업/공유했었다.\n호환성은 linux luks 지원도 아쉽지만, 대부분의 외장하드 파일시스템을 잘 지원하지 못하는거 같았어서.\n그런데, 이번에 다시 시도하면서 그냥 얌전하게 fusefs + fusefs-exfat 사용하니 그럭저럭 괜찮은 성능이 나와서 이렇게 해야겠구나 생각.\nfusefs + ntfs 같은 port도 있는데, 이것도 빠를거 같지만, exfat이 더 구현이 빠를거 같다. (파일시스템 구조부터 훨씬 단순할테니까)\nFootnotes 1 물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지원 등등 hw driver지원이 항상 부족하지만.\n"},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/",
+     "title": "블로그 검색을 다시 짰다 (PageFind 제거)",
+     
+     "tags": ["blogging", "blog", "pagefind", "index.json", "jquery", "ajax", "hugo"],
+     
+ "description": "",
+ "contents": " pagefind이 freebsd 환경에서 동작하지 않아서, 그냥 다시 짰다.\nfuse.js을 사용하는 예제 등이 있었지만1, 그럴거면 그냥 ajax으로 얻은 index.json-을 직접 검색해도 될거 같아서 그냥 javascript 작성 오랬만에.\n그리고 ui등도 내 취향에 맞게 간단하게 만들어서 만족스럽다.\npagefind처럼 검색어에 따라 필요한 만큼만 http get하는게 아니라 조금 아쉽지만, 전체 index.json-fetch해도 500kb 안쪽인거 같아서 괜찮지 않을까 싶음. (거기에 브라우저캐슁도 먹으니까)\nFootnotes 1 https://findstar.pe.kr/2021/07/10/fuse-search-on-hugo/\n"},
  {
      "permalink": "https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.1-release/",
      "title": "ddakong v1.1 릴리즈: FreeBSD / kqueue",

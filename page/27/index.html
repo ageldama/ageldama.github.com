@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757777621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,65 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping-30sun/">Ping 30/Aug/2020</a></h1>
+					<time>🗓️ 30 Aug, 2020</time>
+					<br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+프로젝트 마무리
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>문서도 초안을 다 썼고, 마무리 중.</p>
+<p>
+  분산 커밋로그에 저장하고 읽는 것들을 aync. io을 이용해서 실행되도록
+  하고 있다. 처음엔 그냥 C라이브러리 기반으로 된 blocking 버젼으로
+  만족스러울 정도로 빠른 커밋로그라 그럭저럭 괜찮았는데 한개의 실제
+  사이클인 것처럼 줄일 수 있어서.</p>
+<p>
+  또 그냥 failure을 처리하는 부분을 바꾸고, 전체 애플리케이션을
+  특정시점에 더 실제 실행시점처럼 흉내내서 동작하도록 만들 수 있게
+  했다.</p>
+<p>
+  마무리도 마지막 검증이랑 마쳐가고 있고. 8월도 마무리
+  되어간다. 시간이 빠르다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+<strong>EDIT</strong> 모두 완료!
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>클라이언트 애플리케이션, 문서, 만족스러운 검증 등등 원하는 것들을 다
+  완료했다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping-28fri/">Ping 28/Aug/2020</a></h1>
+					<time>🗓️ 28 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+날씨가 덥고 습하다. 거기에 마스크까지 해야해서 내가 좋아하는
+오래걷기를 하기에 그다지 좋은 시절은 아니다.</p>
+<p>
+문득 생각이 들었다. 아주 얼마 전까지만해도 이런 상황을 대부분의 자기
+자신이 정상이라고 믿고 싶어하는 이들은 모두가 이렇게 살아가는 세상을
+이야기를 들으면 비웃었을 것이다. 그리고 실제로 그런 일들을 많이 보아온
+것 같다. 방독면이나 산소마스크 방호복 대신에 KF94 마스크일뿐인.</p>
+<p>
+많은 아이디어와 예견들이 맞아들어가는 시절이다. 한편으로는 그런 것을
+이해하고 세상의 변화에 대해서 조금은 알맞게 나 자신이 알아채고 살아온
+것이 뿌듯하면서도 꼭 달갑지는 않기도 하다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/">Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</a></h1>
 					<time>🗓️ 27 Aug, 2020</time>
 					<br><div class="description">
@@ -190,52 +249,6 @@ USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-08aug/ping-27thu/">Ping 27/Aug/2020</a></h1>
-					<time>🗓️ 27 Aug, 2020</time>
-					<br><div class="description">
-						
-						<p>
-그간 진행해오던 프로젝트는 성능에 대해서 premature optimization을
-고려해서 만들기 보다는 architectural한 면에 비중을 갖고 가능성을
-염두에두고 선택을 해오며 만들었다.</p>
-<p>
-그럼에도 꽤 괜찮은 성능이었었고, 이제는 첫번째 버젼의 완성과 문서
-작성도 완료한 시점이어서 앞으로 성능을 높일 방안을 고민해보고 실험을
-몇개 수행해서 방법 결정해봤다.</p>
-<p>
-(현재 사용하는 방법과 새로이 사용할 방안의 이름은 모두 변경했다.)</p>
-<ol>
-<li>
-<p>기존 성능 측정은:</p>
-<ol>
-<li>
-<p>X event-writer</p>
-<ul>
-<li>commit을 한번에 하지 않고, 매 이벤트마다 수행해서
-느림. (현재는 변경되었음)</li>
-<li>약 11,196-microseconds (11-ms)</li>
-</ul>
-</li>
-<li>
-<p>X journal-writer</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-08aug/ping-25tue/">Ping 25/Aug/2020</a></h1>
-					<time>🗓️ 25 Aug, 2020</time>
-					<br><div class="description">
-						
-						<p>
-the end of the belle époque?</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -253,11 +266,11 @@ the end of the belle époque?</p>&hellip;
             <a href="/page/26/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(27/58)</span>
+        <span class="page-number">(27/59)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/28/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

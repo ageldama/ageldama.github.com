@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757777621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,115 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-11nov/ping-02mon/">Ping 02/Nov/2020</a></h1>
+					<time>🗓️ 02 Nov, 2020</time>
+					<br><div class="description">
+						
+						<p>
+(functional) reactive 관련들을 다시 찾아 보고 있다.</p>
+<p>
+예전에 webdev은 아니고 백엔드를 위해서 <a href="https://github.com/ReactiveX/rxjs">rxjs</a> 을 쓸 일이 있었었고
+꽤 재밌었다. node.js에서 async/await 이전에 동시성 처리를 하기에
+유용하게 쓸 수 있었었고, 실은 그냥 <a href="https://stackoverflow.com/questions/51542865/is-rxjs-observable-a-monad">monad이어서</a> 조금만 이해를 하고
+사용하면 여러모로 편리했었다.</p>
+<p>
+https://github.com/stoeffel/awesome-frp-js 여기에 보면 rxjs이외에도
+다른 js을 위한 FRP라이브러리들이 많이 생겼었다.</p>
+<p>
+그 중에 흥미가 있어서 <a href="https://github.com/baconjs/bacon.js">bacon.js</a> 을 읽고 rxjs에서 만들어 본 작은 예제
+프로젝트를 다시 작성해봤다. 깔끔했다.</p>
+<p>
+rxjs으로 작성했었던 작은 예제는 다음과 같다.</p>
+<div class="src src-javascript">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
+</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
+</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
+</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
+</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
+</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
+</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
+</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
+</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
+</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
+</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
+</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
+</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="kr">import</span> <span class="p">{</span> <span class="nx">fromEvent</span><span class="p">,</span> <span class="nx">Subject</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// eslint-disable-next-line object-curly-newline
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">import</span> <span class="p">{</span> <span class="nx">debounceTime</span><span class="p">,</span> <span class="nx">mapTo</span><span class="p">,</span> <span class="nx">scan</span><span class="p">,</span> <span class="nx">map</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;rxjs/operators&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">import</span> <span class="nx">jquery</span> <span class="nx">from</span> <span class="s1">&#39;jquery&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">counter$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Subject</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">counter$</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">scan</span><span class="p">((</span><span class="nx">n</span><span class="p">,</span> <span class="nx">acc</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">+</span> <span class="nx">acc</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">debounceTime</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">count</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#count&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">count</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">counter2$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Subject</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">counter2$</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">scan</span><span class="p">((</span><span class="nx">n</span><span class="p">,</span> <span class="nx">acc</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">+</span> <span class="nx">acc</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">count</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#count2&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">count</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">increase$</span> <span class="o">=</span> <span class="nx">fromEvent</span><span class="p">(</span><span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#increase&#39;</span><span class="p">),</span> <span class="s1">&#39;click&#39;</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">mapTo</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">decrease$</span> <span class="o">=</span> <span class="nx">fromEvent</span><span class="p">(</span><span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#decrease&#39;</span><span class="p">),</span> <span class="s1">&#39;click&#39;</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">mapTo</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">increase$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter$</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">increase$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">map</span><span class="p">((</span><span class="nx">n</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter2$</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">decrease$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter$</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">decrease$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">map</span><span class="p">((</span><span class="nx">n</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter2$</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+(<code>package.json</code>, <code>webpack.config.js</code>, 관련 html 파일 등은 생략했다.)</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/asdf-subdir-finder-1st/">&#34;asdf-subdir-finder&#34; released!</a></h1>
+					<time>🗓️ 26 Oct, 2020</time>
+					<br><div class="description">
+						
+						<p>
+지난번 포스팅한 &#34;<a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">asdf 정의를 내 코드베이스의 하위디렉토리에서 자동으로
+로딩하기</a>&#34;를 프로젝트으로 만들었다.</p>
+<p>
+<a href="https://github.com/ageldama/asdf-subdir-finder">https://github.com/ageldama/asdf-subdir-finder</a></p>
+<p>
+사람마다 커먼리습으로 작업하는 스타일에 따라 많이 다를 수 있어서 안
+써도 되기도 하지만, 그냥 정리해서 공개는 해봤다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">&#34;커먼리습 ASDF 불러오기 편하게 하기&#34; 대모험</a></h1>
 					<time>🗓️ 23 Oct, 2020</time>
 					<br><div class="description">
@@ -190,131 +299,6 @@ Prototyping등 더 편안하게 혼자 코딩을 할 때는…
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/leet-code-1614-2nd/">CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
-					<time>🗓️ 21 Oct, 2020</time>
-					<br><div class="description">
-						
-						<p>
-<a href="/posts/2020-10oct/leet-code-1614/">어제 작성한 LOOP매크로을 이용한 구현</a> 을 풀어서, 만약 LOOP매크로가
-없었더라면 어떻게 짰을지 작성해봤다.</p>
-<div class="src src-lisp">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
-</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
-</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
-</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
-</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">max-nested-parentheses-raw</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">optimize</span> <span class="p">(</span><span class="nv">speed</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nv">safety</span> <span class="mi">0</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="k">type</span> <span class="kt">simple-string</span> <span class="nv">s</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">n</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">result</span> <span class="mi">0</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">type</span> <span class="kt">fixnum</span> <span class="nv">n</span> <span class="nv">result</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">dotimes</span> <span class="p">(</span><span class="nv">s--cur-idx</span> <span class="p">(</span><span class="nf">length</span> <span class="nv">s</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">ch</span> <span class="p">(</span><span class="nf">elt</span> <span class="nv">s</span> <span class="nv">s--cur-idx</span><span class="p">)))</span>
-</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nf">member</span> <span class="nv">ch</span> <span class="o">&#39;</span><span class="p">(</span><span class="sc">#\(</span> <span class="sc">#\)</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nb">incf</span> <span class="nv">n</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">eql</span> <span class="sc">#\(</span> <span class="nv">ch</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">-1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nb">setf</span> <span class="nv">result</span> <span class="p">(</span><span class="nf">max</span> <span class="nv">n</span> <span class="nv">result</span><span class="p">)))))</span>
-</span></span><span class="line"><span class="cl">    <span class="nv">result</span><span class="p">))</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-여전히 타입을 지정해서 자동으로 타입추론, 최적화 하도록 했다.</p>
-<p>
-그런데 여전히 <code>dotimes</code>, <code>when</code>, <code>incf</code>, <code>max</code> 같은 커먼리습
-HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이런 것들도
-다 풀어서 작성해도 되겠지만 별 의미는 없을 것 같아서.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/leet-code-1614/">CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
-					<time>🗓️ 20 Oct, 2020</time>
-					<br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-문제
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p><a href="https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/">https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/</a></p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-작성한 코드     
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<div class="src src-lisp">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">max-nested-parentheses</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">optimize</span> <span class="p">(</span><span class="nv">speed</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nv">safety</span> <span class="mi">0</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="k">type</span> <span class="kt">simple-string</span> <span class="nv">s</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">loop</span> <span class="nv">with</span> <span class="nv">n</span> <span class="kt">fixnum</span> <span class="nf">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">          <span class="nv">for</span> <span class="nv">ch</span> <span class="nv">across</span> <span class="nv">s</span>
-</span></span><span class="line"><span class="cl">          <span class="nb">when</span> <span class="p">(</span><span class="nf">member</span> <span class="nv">ch</span> <span class="o">&#39;</span><span class="p">(</span><span class="sc">#\(</span> <span class="sc">#\)</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">          <span class="nb">do</span> <span class="p">(</span><span class="nb">incf</span> <span class="nv">n</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">eql</span> <span class="sc">#\(</span> <span class="nv">ch</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">-1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">             <span class="nv">maximizing</span> <span class="nv">n</span><span class="p">))</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
-코드 의도
-</h2>
-<div id="outline-text-headline-3" class="outline-text-2">
-<ol>
-<li>우아한 코드보다는 공간복잡도가 <code>O(1)</code> 이고 싶었다.</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-headline-4" class="outline-2">
-<h2 id="headline-4">
-<em>Edit</em>
-</h2>
-<div id="outline-text-headline-4" class="outline-text-2">
-<ol>
-<li>
-<p>SBCL에 맞춰 코드에 타입을 지정해줘봤다.</p>
-<ol>
-<li>결과 어셈블리 코드가 조금 짧아졌다.</li>
-</ol>
-</li>
-</ol>
-</div>
-</div>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -332,11 +316,11 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
             <a href="/page/18/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(19/58)</span>
+        <span class="page-number">(19/59)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/20/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

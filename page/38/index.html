@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757777621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,103 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/direnv/">direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기</a></h1>
+					<time>🗓️ 29 Dec, 2019</time>
+					<br><div class="description">
+						
+						<p>
+프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 
+경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든
+<a href="/posts/2019-12dec/moonshot-1st-rel/">moonshot.el</a> 와 유사한걸 검색해봤다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+몇 가지
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv</p>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+NPM: dotenv
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<p><a href="https://www.npmjs.com/package/dotenv">https://www.npmjs.com/package/dotenv</a></p>
+<p>
+Node.js에서 Unix environment variable으로 <code>.env</code> 파일을 로딩해주는
+역할인 듯.</p>
+<p>
+Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.</p>
+<p>
+그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을
+짜주고 하기 싫었고,</p>
+<p>
+<code>.env</code> 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서
+경로를 조립하고 하는데 별로라는 생각이 들었다. 항상 절대 경로만
+표기하거나, <code>getenv</code> 해서 문자열을 가져와서 상대 경로 등으로 지정된
+값을 매번 절대 경로로 만드는 작업을 해야할테니까.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/moonshot-1st-rel/">moonshot.el 최초 릴리즈</a></h1>
+					<time>🗓️ 29 Dec, 2019</time>
+					<br><div class="description">
+						
+						<p>
+<a href="https://github.com/ageldama/moonshot">moonshot.el</a> 을 만들어서 공개했다.</p>
+<p>
+이맥스를 써오면서 불편하다고 생각한걸 간단히 하고 싶었었다:</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+불편함들
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+빌드 디렉토리
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<p>
+   Projectile을 사용하니까 프로젝트 디렉토리는 관리가 쉬운데, 빌드
+   디렉토리는 관리가 어려웠다.</p>
+<ol>
+<li>
+<p>아예 Projectile이 추론하는 디렉토리 바깥에 빌드 디렉토리는
+위치하는 경우도 있으니까.</p>
+<ul>
+<li>예) GNU Autotools <code>configure</code> 이나 CMake으로 작업할 때,
+소스트리 바깥에 빌드 디렉토리를 걸어놓아서 정리를 깔끔하게 할
+수 있으니까.</li>
+</ul>
+</li>
+<li>
+<p>그런데 이 &#39;빌드 디렉토리&#39;가 중요한게,</p>
+<ul>
+<li>말그대로 컴파일한 <code>.o</code> 파일이나 최종 결과 실행파일 등이
+여기에 쌓이니까</li>
+<li>디버깅, 테스트를 위해서 실행파일을 실행하거나,</li>
+<li>심지어 <code>make</code> 이나 <code>ninja</code> 같은 빌드 커맨드를 실행하기
+위해서도 빌드 디렉토리를 지정하거나 이동해서 실행해야 하니까
+귀찮다.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+compilation-mode, realgud: 실행 파일 찾아서 실행하기, 디버깅하기
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<p>
+   예전에 만들어 써오던 <a href="https://github.com/ageldama/configs/blob/a24f4606cd95a41c9d3140dac7c0c298883ae72a/emacs/c-c%252B%252B-gtags%252Brtags.el#L193">이맥스를 위한 C/C++ 설정</a> 처럼,</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-12dec/look-back-2018-2019/">2018, 2019년을 돌아보며</a></h1>
 					<time>🗓️ 21 Dec, 2019</time>
 					<br><div class="description">
@@ -178,86 +275,6 @@
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-12dec/hololog-perl-cli-1st-rel/">Hololog Perl/CLI 버젼</a></h1>
-					<time>🗓️ 17 Dec, 2019</time>
-					<br><div class="description">
-						
-						<p>
-<a href="https://github.com/ageldama/hololog-perl-cli">https://github.com/ageldama/hololog-perl-cli</a></p>
-<p>
-한줄씩 메모를 하는걸 좋아하고, 그냥 데스크탑에서 PDF을 읽거나
-웹페이지를 읽으면서 어딘가에 생각난거나 이해한걸 필기하면서 진행하고
-싶어서 만들었다.</p>
-<p>
-다음 트윗 타래에서 이야기한것처럼, 그냥 트위터 비밀계를 써도 괜찮지만,
-그것도 너무 웹브라우져 열고 하다보면 산만해져서.</p>
-<p>
-tweet 1206138361968070656 </p>
-<p>
-처음 시작은 <a href="https://www.gnu.org/software/coreutils/manual/html_node/cat-invocation.html">Unix/GNU cat</a> 을 간단하게 터미널에서 쓰면 된다는 생각이
-들었다.</p>
-<div class="src src-shell">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cat &gt;&gt; foo.txt</span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-..그런데 유닉스가 아닌 사람들, 윈도를 쓰는 사람들은 어떻게 하지?</p>
-<div class="src src-shell">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">copy con foo.txt</span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-..사실 위와 같이 <code>cmd.exe</code> 에서 실행해도 되겠지만, 뭔가 그래도 윈도
-사용자들이나 터미널 화면을 무서워하는 사람들이 저런거
-좋아할까.. 싶어서 조금 생각.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-12dec/org-spreadsheet-and-babel/">Org모드에서 스프레드시트 기능과 Babel 섞어쓰기</a></h1>
-					<time>🗓️ 13 Dec, 2019</time>
-					<br><div class="description">
-						
-						<p>
-쩌는 <a href="https://seorenn.github.io/org-spreadsheet.html">Org-mode Spreadsheet 소개</a> 를 읽고 감명 받아서 따라해봅니다.</p>
-<p>
-다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리
-<code>defun</code> / <code>defmacro</code> 으로 정의해놓고 그걸 spreadsheet에서 불러 쓸 수
-있을지가 궁금했습니다.</p>
-<p>
-그래서 다음과 같이 해보면 가능할지를 실험:</p>
-<ol>
-<li>
-<p>Org-Babel으로 원하는 함수를 정의한다.</p>
-<ul>
-<li>그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다.</li>
-</ul>
-</li>
-<li>Spreadsheet에서 불러서 쓸 수 있는지 확인해본다.</li>
-</ol>
-<p>우선 <code>C-h a</code> 을 눌러 <code>vsum</code> 을 검색해보니, <code>defun calcFunc-vsum (&amp;rest
-vecs)</code> 으로 미리 선언되어 있는거 같았습니다. 이런 형태로 내가 정의하는
-함수도 구현해보면 될까 싶습니다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -275,11 +292,11 @@ vecs)</code> 으로 미리 선언되어 있는거 같았습니다. 이런 형태
             <a href="/page/37/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(38/58)</span>
+        <span class="page-number">(38/59)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/39/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

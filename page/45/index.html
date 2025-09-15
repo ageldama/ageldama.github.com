@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757777621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,48 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/cl-rutils/">rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</a></h1>
+					<time>🗓️ 11 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>커먼리습은 <a href="https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec">CLHS</a>
+이후로 언어 자체 정의는 변하지 않았다.</p>
+<p>구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거
+같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 <a href="https://en.wikipedia.org/wiki/Lisp_reader">lisp
+reader</a>을 확장하는게
+CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스펙을 잘
+구현해놓았으니까.</p>
+<p>결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면
+언제든지 매크로를 만들듯이 확장하면 되니까.</p>
+<blockquote>
+<p><em>&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;</em></p></blockquote>
+<p>이런 커먼리습 확장 <em>&lsquo;라이브러리&rsquo;</em> 들이 여러가지 있는데, 가장 요즘에
+쓸만할거 같다고 생각하는건 rutils이다. <a href="https://github.com/vseloved/rutils">https://github.com/vseloved/rutils</a></p>
+<p><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code> 같은거
+매번 반복해서 쳐넣는걸 그냥 <code>eval-always</code>으로 바꿔준다거나.
+<code>gensym</code>하는것도 <code>with-gensyms</code> 제공하거나 하는 이런류의
+라이브러리들에서 보통 제공하는것들부터.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-11fri/">Ping 11/Oct/2019</a></h1>
+					<time>🗓️ 11 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>매일 글쓰기. 블로깅하기 나도 해볼까.</p>
+<p>해보려는 이유는 메모는 계속해서 하면서 살고 있는데, 연속해서 같은
+주제에 대해서 더 생각하고 하면서 발전시키는 방법으로 일기를 쓰는것과
+반복적으로, 또 이전에 썼었던 글을 읽어보면서 거기에서 더 나아가서
+고쳐나가고 발전시키는 방법으로 블로깅이 나쁘지 않은거 같아서.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-10oct/ping-08tue/">Ping 08/Oct/2019</a></h1>
 					<time>🗓️ 08 Oct, 2019</time>
 					<br><div class="description">
@@ -168,47 +210,6 @@
 서오릉이나 북한산으로 왔었었는데. 그때도 가끔 생각했지만 비가 내려
 세상이 이렇게 젖었을때 애처롭게 어둡기도 하고 깨끗한 습기를 머금은
 숲이 상쾌해서 생명을 느끼게 해준다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-03mar/2019-03mar17-ping/">Ping 17/03/2019</a></h1>
-					<time>🗓️ 17 Mar, 2019</time>
-					<br><div class="description">
-						
-						<h1 id="emacsc-개발환경-스크린캐스트">Emacs/C++ 개발환경 스크린캐스트</h1>
-<p><a href="/posts/2019-02feb/counsel-ivy+cpp-ide/">이전 포스팅</a> 에서 만들었던
-설정을 스크린캐스트로 찍어서 공유해봤다.</p>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/YOaAqpdz9ts?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-
-<h1 id="let-over-lambda-읽기">&ldquo;Let Over Lambda&rdquo; 읽기</h1>
-<p><a href="https://letoverlambda.com/">Let Over Lambda</a>을 읽기
-시작했다. 커먼리습 매크로, 클로져에 대한 이야기를 더 깊이 있게
-설명하고, 그런 기능들이 어떻게 리습이랑 리습이 아닌 <a href="http://paulgraham.com/avg.html">&ldquo;Blub
-language&rdquo;</a>이라고 말하고있는 대부분의
-언어들과의 차이인지를 설명한다.</p>
-<p>리습의 매크로나 closure을 통해서, 그간 내가 프로그래밍언어 설계를 할때
-포함해야하고, 컴파일러가 지원하도록 손수 만들어놓아야 한다고 믿던
-것들이 얼마나 쉽게 구현되는지를 보며 충격을 받는다. 재밌고 신선하다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-03mar/cffi-2d-array/">CFFI으로 CommonLisp 2d array을 Foreign function으로 전달하기</a></h1>
-					<time>🗓️ 17 Mar, 2019</time>
-					<br><div class="description">
-						
-						<p><a href="https://github.com/ageldama/cffi-2d-array-hello">https://github.com/ageldama/cffi-2d-array-hello</a></p>
-<p><code>cffi:with-foreign-array</code>이 <a href="https://common-lisp.net/project/cffi/manual/cffi-manual.html">CFFI
-manual</a>에
-없어서 처음에 좀 골치아팠음.</p>
-<p>리습 어레이를 복사해서 매핑해줌.</p>&hellip;
 						
 					</div>
                                         
@@ -231,11 +232,11 @@ manual</a>에
             <a href="/page/44/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(45/58)</span>
+        <span class="page-number">(45/59)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/46/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

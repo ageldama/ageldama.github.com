@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Thu, 27 Aug 2020 00:00:01 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 15 Sep 2025 08:25:26 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/usb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템)</title>
+      <link>https://ageldama.github.io/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/</link>
+      <pubDate>Mon, 15 Sep 2025 08:25:26 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/</guid>
+      <description>&lt;p&gt;&#xA;freebsd을 써오면서 좀 불만이었던게&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, usb으로 외장 hdd을 연결할 때&#xA;호환성 혹은 성능이 너무 느림.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 아예 빠른 유선랜을 연결해놓고 samba으로 파일을 백업/공유했었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;호환성은 &lt;a href=&#34;https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup&#34;&gt;linux luks&lt;/a&gt; 지원도 아쉽지만, 대부분의 외장하드 파일시스템을 잘&#xA;지원하지 못하는거 같았어서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데, 이번에 다시 시도하면서 그냥 얌전하게 &lt;a href=&#34;https://wiki.freebsd.org/FUSEFS&#34;&gt;fusefs&lt;/a&gt; + &lt;a href=&#34;https://www.freshports.org/sysutils/fusefs-exfat&#34;&gt;fusefs-exfat&lt;/a&gt;&#xA;사용하니 그럭저럭 괜찮은 성능이 나와서 이렇게 해야겠구나 생각.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;fusefs + ntfs 같은 port도 있는데, 이것도 빠를거 같지만, exfat이 더&#xA;구현이 빠를거 같다. (파일시스템 구조부터 훨씬 단순할테니까)&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Footnotes&#xA;&lt;/h2&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;footnotes&#34;&gt;&#xA;&lt;hr class=&#34;footnotes-separatator&#34;/&gt;&#xA;&lt;div class=&#34;footnote-definitions&#34;&gt;&#xA;&lt;div class=&#34;footnote-definition&#34;&gt;&#xA;&lt;sup id=&#34;footnote-1&#34;&gt;&lt;a href=&#34;#footnote-reference-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;&lt;div class=&#34;footnote-body&#34;&gt;&#xA;&lt;p&gt;물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지원 등등&#xA;hw driver지원이 항상 부족하지만.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</title>
       <link>https://ageldama.github.io/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/</link>

@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757777621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,102 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/tips-ecl-clisp/">커먼리습 설정하기, ASDF 시스템 코드를 받기</a></h1>
+					<time>🗓️ 06 Dec, 2019</time>
+					<br><div class="description">
+						
+						<h1 id="1-asdf을-최신-버젼으로-설정한다">1. ASDF을 최신 버젼으로 설정한다</h1>
+<p>(이부분에서 많이 고생했는데) SBCL와 다르게
+<a href="https://clisp.sourceforge.io/">CLISP</a>,
+<a href="https://common-lisp.net/project/ecl/">ECL</a> 은 최신 버젼의 ASDF을
+내장한걸 패키징해놓지 않았다.</p>
+<p>대부분은 문제가 없이 동작하지만, 내가 작성한 커먼리습 시스템에서
+실행파일을 빌드할 때 문제가 많았다.</p>
+<ol>
+<li>ASDF 의 최신 버젼을 <code>git clone</code> 해서 적당한 디렉토리에 받는다.
+<ul>
+<li><a href="https://common-lisp.net/project/asdf/">https://common-lisp.net/project/asdf/</a></li>
+</ul>
+</li>
+<li><code>make</code>을 내려받은 ASDF 디렉토리에서 실행한다.
+<ul>
+<li>실행하면 <code>build/asdf.lisp</code> 파일으로 한 파일으로 뭉쳐서 로딩하게
+편안한 파일을 생성해준다.</li>
+</ul>
+</li>
+<li>내 커먼리습 구현체의 시작설정파일 맨 앞에 다음처럼 추가한다.
+<ul>
+<li><code>(load &quot;~/local/asdf/build/asdf&quot;)</code>
+<ul>
+<li>여기서 나는 <code>$HOME/local/asdf/</code> 에 ASDF을 받았다고 가정.</li>
+<li>그리고 <code>asdf.lisp</code> 파일이더라도, 마지막에 <code>.lisp</code> 확장자는 생략했다.</li>
+</ul>
+</li>
+<li>ECL은 <code>$HOME/.eclrc</code></li>
+<li>CLISP은 <code>$HOME/.clisprc.lisp</code></li>
+</ul>
+</li>
+<li>그리고 중요한데, 그 다음에
+<a href="https://www.quicklisp.org/">Quicklisp</a> 초기화 내용이 오도록
+한다.
+<ul>
+<li>Quicklisp을 초기화하기 전에 ASDF 최신 버젼이 로딩되어 있는게 더
+나을테니까.</li>
+<li>어차피 위의 (1~3)의 순서대로 ASDF 먼저 설정한 다음에
+Quicklisp설치한 다음에 <code>ql:add-to-init-file</code> 실행하면 이런
+순서로 추가해준다.</li>
+</ul>
+</li>
+</ol>
+<p>&hellip;별거 아닌데, 이거 때문에 빌드한 결과 실행파일이 이상해서 좀 고생했다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-11nov/the-dark-side-of-cl-equality/">(Common Lisp의 어두운 면) Equality</a></h1>
+					<time>🗓️ 16 Nov, 2019</time>
+					<br><div class="description">
+						
+						<p>오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까
+리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로
+생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을
+리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.</p>
+<p>뭐 커먼리습의 <a href="http://clhs.lisp.se/Front/index.htm">CLHS - HyperSpec</a>을 읽다보면 비슷한데 아주 약간씩
+미묘하게 달라서 지원하는 것들이 있다:</p>
+<ul>
+<li><code>let</code>
+<ul>
+<li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">Special Operator LET, LET*</a></li>
+<li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">Special Operator FLET, LABELS, MACROLET</a></li>
+</ul>
+</li>
+<li><code>map</code>
+<ul>
+<li><a href="http://clhs.lisp.se/Body/f_map.htm">Function MAP</a></li>
+<li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm">Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON</a></li>
+<li><a href="http://clhs.lisp.se/Body/f_map_in.htm#map-into">Function MAP-INTO</a></li>
+</ul>
+</li>
+<li><code>prog</code>
+<ul>
+<li><a href="http://clhs.lisp.se/Body/m_prog1c.htm">Macro PROG1, PROG2</a></li>
+<li><a href="http://clhs.lisp.se/Body/s_progn.htm#progn">Special Operator PROGN</a></li>
+<li><a href="http://clhs.lisp.se/Body/m_prog_.htm#progST">Macro PROG, PROG*</a></li>
+<li><a href="http://clhs.lisp.se/Body/s_progv.htm#progv">Special Operator PROGV</a></li>
+</ul>
+</li>
+<li>&hellip;그밖에도 좀 더 있을듯?</li>
+</ul>
+<p>이렇게 나열해 놓으면 꽤 무서워 보이지만, 막상 차이를 이해하면 별로
+복잡하지도 않아서 나중엔 더 편안해진다. (정말로)</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-11nov/why-sharpsign-in-method-path/">(소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</a></h1>
 					<time>🗓️ 13 Nov, 2019</time>
 					<br><div class="description">
@@ -199,57 +295,6 @@ methods and fields in software documentation? [closed]</a>에 답변이
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-11nov/ping-01fri/">Ping 01/Nov/2019</a></h1>
-					<time>🗓️ 01 Nov, 2019</time>
-					<br><div class="description">
-						
-						<h1 id="그-이전의-시간">그 이전의 시간</h1>
-<p>한국으로 돌아와 1년 반 정도 한 회사에 다니다가, 정리하고 나와서 시간을
-보내고 있다.</p>
-<p>관점, 사고방식, 일하는 방식 등등 대화가 통하기도 어려운 상황이었고,
-그런 세계관도 너무 차이가 나서 같이 있기 힘들었었다.</p>
-<p>그리고 어째서 한국을 떠나기로 결심했었었는지 뒤돌아봤고 거의 동일한
-경험이었다. 조금은 달라진게 있으려나. 아마 그러리라 생각한다. 완전히
-똑같은 경험은 아니다. 왜냐하면 거기에서 내가 얻은게 다르다.</p>
-<p>어떤 사람은 그럴리 없고 내가 오해를 한거라고 이야기를 해주지만, 그냥
-나는 나와 같은 상황도, 처지도, 지위도 아니었으니 그런 충고가
-무의미하다고 생각한다. 그 사람은 그 사람의 입장으로 경험을 한거고
-그러니 판이하게 달랐겠지.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-10oct/exg-pro-trackball-pgupdn/">ELECOM EX-G Pro Trackball 잉여 버튼을 Page Up/Down으로 쓰기</a></h1>
-					<time>🗓️ 25 Oct, 2019</time>
-					<br><div class="description">
-						
-						<p>컴퓨터를 많이 쓰니까 다른 부분보다 손목이 먼저 망가져서, 손목을 조금만
-큰 각도로 꺾으면 아프다. ㅠ.ㅠ.. 예전에도 그랬었는데<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<ol>
-<li>마우스 안쓰고, 트랙볼 쓰기<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
-<li>키보드 <a href="https://en.wikipedia.org/wiki/Numeric_keypad">넘패드</a>
-부분 없는 짧은 86키 레이아웃 쓰기</li>
-</ol>
-<p><a href="https://www.logitech.com/en-us/product/trackman-marble-business">로지텍 마블
-트랙맨</a>
-잘 쓰다가, 지름을 받아서 조금 다음 티어의 제품으로 업그레이드 해봤다.</p>
-<p>그래서 바꾼게 &ndash;&gt; <a href="http://elecom.co.kr/product/ex-g-pro-%EC%9C%A0%EB%AC%B4%EC%84%A0-%ED%95%98%EC%9D%B4%EC%8A%A4%ED%8E%99-%ED%8A%B8%EB%9E%99%EB%B3%BC-%EB%A7%88%EC%9A%B0%EC%8A%A4-m-xpt1mrbk/2184/"><strong>엘레컴 EX-G Pro Trackball</strong></a> <figure><img src="/images/2019-10oct/elecom_ex-g_pro_trackball_c1b01.jpg" width="&#39;300&#39;">
-</figure>
-</p>
-<p>..그런데 다 좋은데, 저기 있는 <em>Function assignment button</em> 이라고
-써있는게 2개가 더 달려있음.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
-<p>이 추가기능버튼들은 윈도였다면 벤더에서 제공하는 프로그램을 통해서
-할당이 가능할거 같은데, 리눅스/X윈도에서는
-<a href="https://www.x.org/releases/X11R7.7/doc/man/man1/xev.1.xhtml">xev</a>으로
-확인해보니 그냥 <strong>Button 10번, 11번</strong>이었다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -267,11 +312,11 @@ methods and fields in software documentation? [closed]</a>에 답변이
             <a href="/page/40/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(41/58)</span>
+        <span class="page-number">(41/59)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/42/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/58/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
