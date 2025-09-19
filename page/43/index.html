@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758293416">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758297663">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,35 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/exg-pro-trackball-pgupdn/">ELECOM EX-G Pro Trackball 잉여 버튼을 Page Up/Down으로 쓰기</a></h1>
+					<time>🗓️ 25 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>컴퓨터를 많이 쓰니까 다른 부분보다 손목이 먼저 망가져서, 손목을 조금만
+큰 각도로 꺾으면 아프다. ㅠ.ㅠ.. 예전에도 그랬었는데<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<ol>
+<li>마우스 안쓰고, 트랙볼 쓰기<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
+<li>키보드 <a href="https://en.wikipedia.org/wiki/Numeric_keypad">넘패드</a>
+부분 없는 짧은 86키 레이아웃 쓰기</li>
+</ol>
+<p><a href="https://www.logitech.com/en-us/product/trackman-marble-business">로지텍 마블
+트랙맨</a>
+잘 쓰다가, 지름을 받아서 조금 다음 티어의 제품으로 업그레이드 해봤다.</p>
+<p>그래서 바꾼게 &ndash;&gt; <a href="http://elecom.co.kr/product/ex-g-pro-%EC%9C%A0%EB%AC%B4%EC%84%A0-%ED%95%98%EC%9D%B4%EC%8A%A4%ED%8E%99-%ED%8A%B8%EB%9E%99%EB%B3%BC-%EB%A7%88%EC%9A%B0%EC%8A%A4-m-xpt1mrbk/2184/"><strong>엘레컴 EX-G Pro Trackball</strong></a> <figure><img src="/images/2019-10oct/elecom_ex-g_pro_trackball_c1b01.jpg" width="&#39;300&#39;">
+</figure>
+</p>
+<p>..그런데 다 좋은데, 저기 있는 <em>Function assignment button</em> 이라고
+써있는게 2개가 더 달려있음.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>이 추가기능버튼들은 윈도였다면 벤더에서 제공하는 프로그램을 통해서
+할당이 가능할거 같은데, 리눅스/X윈도에서는
+<a href="https://www.x.org/releases/X11R7.7/doc/man/man1/xev.1.xhtml">xev</a>으로
+확인해보니 그냥 <strong>Button 10번, 11번</strong>이었다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-10oct/blog-font/">블로그 폰트 적용</a></h1>
 					<time>🗓️ 21 Oct, 2019</time>
 					<br><div class="description">
@@ -199,63 +228,6 @@
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-10oct/cl-toy-stack-lang/">cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</a></h1>
-					<time>🗓️ 16 Oct, 2019</time>
-					<br><div class="description">
-						
-						<p>일단 첫번째 버젼 다 만들었다.</p>
-<blockquote>
-<p><a href="https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0">https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0</a></p></blockquote>
-<p>그냥 장난으로 인터프리터도 아니라 그냥
-<a href="http://clhs.lisp.se/Body/f_eval.htm">eval</a> 이용한 간단한 파서도
-필요없이 lexer만으로 만들만한
-<a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">Forth</a>
-비슷한 언어를 만듬.</p>
-<p>명령어도 실용적인 목적이 아닌만큼 그냥 문자열 장난 밖엔 없다.</p>
-<h1 id="느낀점">느낀점</h1>
-<ol>
-<li><strong>라이브러리 좋은거 갖다 잘쓰자</strong>
-<ul>
-<li><a href="http://quickdocs.org/uiop/">uiop</a> 같은거,</li>
-<li><a href="http://clhs.lisp.se/Body/24_aba.htm">feature-expression</a> 삽질을 적게하거나 안해도됨. 더
-portable하고 잘 굴러가는.</li>
-</ul>
-</li>
-<li><strong>Test!</strong>
-3. 짜고 하나씩 진화시켜가면서 다시 돌리는 재미.</li>
-<li><strong>Idiomatic하게</strong> 그리고 역시 Test!
-<ol>
-<li>..처음엔 그냥 전역변수에 상태를 갖도록 만들고,</li>
-<li>그걸 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_abaab.htm">dynamic binding</a>으로 바꿔서 파라미터화하고,</li>
-<li>또 그걸 다시 상태를 캡슐화하는 클래스로 감싸고,</li>
-<li>처음엔 단순하게 리습스럽게 짜고 그걸 진화시키고,</li>
-<li>그리고 역시 다시 테스트.</li>
-</ol>
-</li>
-<li><strong><em>아는만큼 보인다</em></strong>
-<ul>
-<li><code>setf</code> 병렬로 하기, +destructuring</li>
-<li><code>asdf:operate</code> + <code>:build-op</code> :
-<a href="http://www.sbcl.org/">SBCL</a>/<a href="https://common-lisp.net/project/ecl/">ECL</a>
-등 리습컴파일러에 관계 없이 실행이미지 빌드 편안하게
-<ul>
-<li><a href="https://github.com/xach/buildapp">https://github.com/xach/buildapp</a> 같은거 써볼까 하다가,
-처음엔 그냥 간단히 쉘스크립팅으로 시작.</li>
-</ul>
-</li>
-<li>기타 등등</li>
-</ul>
-</li>
-</ol>
-<p>&hellip;그리고 무엇보다 재밌었다. 그리고 뭐가됐든 그냥 짜보고 굴러가는
-형태로 계속해서 작은 프로그램을 많이 만들고 하면서 놀아야겠다고
-생각했다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -273,11 +245,11 @@ portable하고 잘 굴러가는.</li>
             <a href="/page/42/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(43/59)</span>
+        <span class="page-number">(43/60)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/44/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

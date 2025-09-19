@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758293416">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758297662">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,57 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar12--01-data-prog/">data-driven programming &amp; data-driven design &amp; data-oriented programming ???</a></h1>
+					<time>🗓️ 12 Mar, 2025</time>
+					<br><div class="description">
+						
+						<p>
+비슷한 용어들. 내가 이해한 정리들은 <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>:</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+data-driven programming
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>데이터처리를 중심으로 하는 프로그래밍언어나 도구, 스타일.</p>
+<p>
+  예를 들어, awk, perl은 입력의 패턴에 따라 코드를 나누고 출력을
+  만들기 수월한 방식을 제공.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Data-driven_programming">https://en.wikipedia.org/wiki/Data-driven_programming</a></li>
+<li><a href="https://github.com/Perl/perl5/commit/8d063cd8450e59ea1c611a2f4f5a21059a2804f1">a &#34;replacement&#34; for awk and sed</a> (by Larry Wall)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+data-oriented design
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>현대 cpu의 아키텍처에 적절하도록, cpu cache, simd등을 잘 적용될 수
+  있도록 애플리케이션 데이터구조를 설계하는 방식.<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
+<p>
+  그리고 단순히 게임개발에서 ecs만이 아니라 lmax disruptor등도 포함될
+  것 같다.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Data-oriented_design">https://en.wikipedia.org/wiki/Data-oriented_design</a></li>
+<li>dod의 예시: <a href="https://en.wikipedia.org/wiki/Entity_component_system">Entity component system</a></li>
+<li><a href="https://martinfowler.com/articles/lmax.html">lmax disruptor</a> (by Martin Fowler)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+data-oriented programming
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>그리고 또 갑자기 위 2개의 정의처럼 완전 갑자기, dop은 다음과 같은
+  원칙들을 이용한 애플리케이션 개발방식:</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/">xmake, compile_commands.json, flycheck</a></h1>
 					<time>🗓️ 06 May, 2024</time>
 					<br><div class="description">
@@ -210,63 +261,6 @@ emacs / flycheck + c/c++ 개발할 때에 단점이, 자동적으로 외부 3rd-
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/">FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정</a></h1>
-					<time>🗓️ 05 Nov, 2023</time>
-					<br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-freebsd에서 samba 파일서버 세팅은 프비핸드북 참고
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p><a href="https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba">https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba</a></p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-symlink을 samba에 노출하기
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p>
-<code>/usr/local/etc/smb4.conf</code> 파일에 다음을 추가:</p>
-<div class="src src-conf">
-<pre tabindex="0"><code class="language-conf" data-lang="conf">[global]
-...
-allow insecure wide links =	yes
-
-
-[share]
-...
-follow symlinks = yes
-wide links = yes
-unix extensions = no</code></pre>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
-mdns으로 samba 파일서버를 네트웍에 광고하기
-</h2>
-<div id="outline-text-headline-3" class="outline-text-2">
-<p>
-  보통은 avahi을 써왔는데, mdnsresponder이 더 가볍다고 해서 이렇게 세팅해봄.</p>
-<ol>
-<li><code>pkg install mDNSResponder</code></li>
-<li>
-<p><code>/etc/rc.conf</code> 에 추가:</p>
-<div class="src src-conf">
-<pre tabindex="0"><code class="language-conf" data-lang="conf">mdnsresponderposix_enable=&#34;YES&#34;
-mdnsresponderposix_flags=&#34;-f /usr/local/etc/mdnsresponderposix.conf&#34;</code></pre>
-</div>
-</li>
-<li>
-<p>호스트이름은 <code>freebsd-samsung</code> 으로 smb서비스를 노출.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -284,11 +278,11 @@ mdnsresponderposix_flags=&#34;-f /usr/local/etc/mdnsresponderposix.conf&#34;</co
             <a href="/page/5/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(6/59)</span>
+        <span class="page-number">(6/60)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/7/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

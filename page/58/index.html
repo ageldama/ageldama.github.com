@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758293416">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758297663">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,36 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-22-java-immutables-classic-problem/">Java Immutables와 친숙한 오래된 문제들</a></h1>
+					<time>🗓️ 22 Jan, 2017</time>
+					<br><div class="description">
+						
+						<p><a href="https://immutables.github.io/">https://immutables.github.io/</a> 요즘 이걸 살짝 봤는데, 재미있었다.</p>
+<p>그런데 일단 깊이보거나 써보기 전에 드는 걱정은,</p>
+<ol>
+<li>이거 기존의 몇몇 프레임웍이나 라이브러리들이랑은 친하게 지내기
+어렵지 않을까.
+<ul>
+<li>왜냐하면, 대부분의 POJO에 연관된
+생성단계에서,
+<a href="https://en.wikipedia.org/wiki/Default_constructor">default constructor</a> 와
+setter-methods을 갖고, 값을 세팅하는 경우가 대부분인데,</li>
+<li>예를들면, 대부분의 ORM 프레임웍들이나 POJO으로 JSON등을
+Deserialization해서 직접 객체를 생성할 책임을 프레임웍이나
+라이브러리가 가져가는 경우에 대부분.</li>
+</ul>
+</li>
+</ol>
+<p>&hellip;그러면 결국 말짱황인거 같다.. 아무리 accessor 메서드들
+boilerplate으로 생성하는거 막아주는게 좋다고 해도, 솔직히 그냥 한번
+IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는게 더 낫겠다는
+생각이든다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2017/2017-01-22-emacs-ace-window/">Emacs에서 window 전환을 편하게, ace-window</a></h1>
 					<time>🗓️ 22 Jan, 2017</time>
 					<br><div class="description">
@@ -196,49 +226,6 @@
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2017/2017-01-02-travis-ci-jekyll-gh/">Github.io 블로그 TraviCI으로 빌드해서 배포하기</a></h1>
-					<time>🗓️ 02 Jan, 2017</time>
-					<br><div class="description">
-						
-						<p>.. <em><a href="/github/jekyll/2017/01/01/github-jekyll.html">여기</a></em> 에 불만을 적었듯이,
-여러가지로 그냥은 만족하기 어려운 부분이 있었다.</p>
-<p>그런데, Travis-CI을 통해서 빌드해서 배포한다는 분이
-계셨다. <a href="https://twitter.com/Realignist/status/815554589889994752">https://twitter.com/Realignist/status/815554589889994752</a></p>
-<p>..난 생각 못해본 방법. ㅎㅎ <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<p>그래서 도전.</p>
-<ol>
-<li>우선 Jekyll 소스용 저장소로 분리하고,</li>
-<li>배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다.</li>
-<li><a href="https://github.com/felixrieseberg/travis-jekyll-git">https://github.com/felixrieseberg/travis-jekyll-git</a> 여기 참고해서 삽질.</li>
-<li>결과물은 <a href="https://github.com/ageldama/ageldama-gh-jekyll">https://github.com/ageldama/ageldama-gh-jekyll</a></li>
-</ol>
-<p>..진행하면서 처음에 좀 짜증났던거,</p>
-<ol>
-<li><code>Gemfile</code> 에 설치할 의존성들 지정하고, <code>bundle update</code>.
-<ol>
-<li>그리고 그것만으로는 안되고, <code>.travis.yml</code> 파일에 gem설치를
-지정해야했다. <a href="https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5">https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5</a></li>
-</ol>
-</li>
-<li>Travis-CI 작업의 세팅에서 <code>git_target</code> 환경변수에 URL지정할때&hellip;
-<ol>
-<li><code>github.com/ageldama/ageldama-gh-jekyll.git</code> 처럼 <code>https://</code> 스킴 부분 빼고,</li>
-<li>또 뒤에 <code>.git</code> 깜빡하면 당연히 git-push 안됨. ㅋ</li>
-</ol>
-</li>
-</ol>
-<hr>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>솔직히 내가 뭘 제대로 하겠습니까.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -256,11 +243,11 @@
             <a href="/page/57/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(58/59)</span>
+        <span class="page-number">(58/60)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/59/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

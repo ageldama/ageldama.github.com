@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758293415">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758297662">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,43 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/">[작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템)</a></h1>
+					<time>🗓️ 15 Sep, 2025</time>
+					<br><div class="description">
+						
+						<p>
+freebsd을 써오면서 좀 불만이었던게<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, usb으로 외장 hdd을 연결할 때
+호환성 혹은 성능이 너무 느림.</p>
+<p>
+그래서 아예 빠른 유선랜을 연결해놓고 samba으로 파일을 백업/공유했었다.</p>
+<p>
+호환성은 <a href="https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">linux luks</a> 지원도 아쉽지만, 대부분의 외장하드 파일시스템을 잘
+지원하지 못하는거 같았어서.</p>
+<p>
+그런데, 이번에 다시 시도하면서 그냥 얌전하게 <a href="https://wiki.freebsd.org/FUSEFS">fusefs</a> + <a href="https://www.freshports.org/sysutils/fusefs-exfat">fusefs-exfat</a>
+사용하니 그럭저럭 괜찮은 성능이 나와서 이렇게 해야겠구나 생각.</p>
+<p>
+fusefs + ntfs 같은 port도 있는데, 이것도 빠를거 같지만, exfat이 더
+구현이 빠를거 같다. (파일시스템 구조부터 훨씬 단순할테니까)</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지원 등등
+hw driver지원이 항상 부족하지만.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2025-09sep/no-pagefind-anymore/">블로그 검색을 다시 짰다 (PageFind 제거)</a></h1>
 					<time>🗓️ 13 Sep, 2025</time>
 					<br><div class="description">
@@ -222,31 +259,6 @@ aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2025-05may/term-ddakong-v1.0-release/">ddakong v1.0 릴리즈: lua scripting 시스템</a></h1>
-					<time>🗓️ 07 May, 2025</time>
-					<br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-릴리즈 v1.0
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>
-  ANSI C/DLL 플러그인만이 아니라, Lua scripting plugin 만들어서,
-  그냥 루아스크립팅만으로 플러그인 같은 확장이 가능해졌다.</p>
-<p>
-  그리고 이것저것 안정화/문서화하고, 더욱 hackable🪓🔥하고 가벼운
-  터미널입력기가 되었음.</p>
-<p>
-  <a href="https://github.com/ageldama/term-ddakong/releases/tag/v1.0">https://github.com/ageldama/term-ddakong/releases/tag/v1.0</a></p>
-</div>
-</div>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -264,11 +276,11 @@ aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라
             <a href="/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(2/59)</span>
+        <span class="page-number">(2/60)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

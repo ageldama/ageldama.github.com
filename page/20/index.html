@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758293416">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758297663">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,24 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/asdf-subdir-finder-1st/">&#34;asdf-subdir-finder&#34; released!</a></h1>
+					<time>🗓️ 26 Oct, 2020</time>
+					<br><div class="description">
+						
+						<p>
+지난번 포스팅한 &#34;<a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">asdf 정의를 내 코드베이스의 하위디렉토리에서 자동으로
+로딩하기</a>&#34;를 프로젝트으로 만들었다.</p>
+<p>
+<a href="https://github.com/ageldama/asdf-subdir-finder">https://github.com/ageldama/asdf-subdir-finder</a></p>
+<p>
+사람마다 커먼리습으로 작업하는 스타일에 따라 많이 다를 수 있어서 안
+써도 되기도 하지만, 그냥 정리해서 공개는 해봤다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">&#34;커먼리습 ASDF 불러오기 편하게 하기&#34; 대모험</a></h1>
 					<time>🗓️ 23 Oct, 2020</time>
 					<br><div class="description">
@@ -241,80 +259,6 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/leet-code-1614/">CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
-					<time>🗓️ 20 Oct, 2020</time>
-					<br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-문제
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p><a href="https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/">https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/</a></p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-작성한 코드     
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<div class="src src-lisp">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">max-nested-parentheses</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">optimize</span> <span class="p">(</span><span class="nv">speed</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nv">safety</span> <span class="mi">0</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="k">type</span> <span class="kt">simple-string</span> <span class="nv">s</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">loop</span> <span class="nv">with</span> <span class="nv">n</span> <span class="kt">fixnum</span> <span class="nf">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">          <span class="nv">for</span> <span class="nv">ch</span> <span class="nv">across</span> <span class="nv">s</span>
-</span></span><span class="line"><span class="cl">          <span class="nb">when</span> <span class="p">(</span><span class="nf">member</span> <span class="nv">ch</span> <span class="o">&#39;</span><span class="p">(</span><span class="sc">#\(</span> <span class="sc">#\)</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">          <span class="nb">do</span> <span class="p">(</span><span class="nb">incf</span> <span class="nv">n</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">eql</span> <span class="sc">#\(</span> <span class="nv">ch</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">-1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">             <span class="nv">maximizing</span> <span class="nv">n</span><span class="p">))</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
-코드 의도
-</h2>
-<div id="outline-text-headline-3" class="outline-text-2">
-<ol>
-<li>우아한 코드보다는 공간복잡도가 <code>O(1)</code> 이고 싶었다.</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-headline-4" class="outline-2">
-<h2 id="headline-4">
-<em>Edit</em>
-</h2>
-<div id="outline-text-headline-4" class="outline-text-2">
-<ol>
-<li>
-<p>SBCL에 맞춰 코드에 타입을 지정해줘봤다.</p>
-<ol>
-<li>결과 어셈블리 코드가 조금 짧아졌다.</li>
-</ol>
-</li>
-</ol>
-</div>
-</div>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -332,11 +276,11 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
             <a href="/page/19/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(20/59)</span>
+        <span class="page-number">(20/60)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/21/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>

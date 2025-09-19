@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758293416">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758297662">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,24 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun24--01-grug/">The Grug Brained Developer</a></h1>
+					<time>🗓️ 24 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p>감동적인 글이다ㅋ:</p>
+<p><a href="https://grugbrain.dev/">https://grugbrain.dev/</a></p>
+<p>문법도 완전 grug스럽게 작성해서 반가운 글이었다.</p>
+<p>완전히 모두 내 생각과 같지는 않아도, 이야기하는 <em>&ldquo;FOLD&rdquo; 때문에</em> 일어나는 일들과
+조금은 그래도 <em>grug답게</em> 그냥 해내려는 생각들이 유용.</p>
+<p>그치, grug이 공룡과 구분되는 점은 그런거겠지. ㅎㅎ&hellip;</p>
+<p>msa, reactjs, ejb, osgi. 공감하는 생각들.</p>
+<p>&hellip; black think juice 맛있다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/">&#34;Software disenchantment&#34;</a></h1>
 					<time>🗓️ 19 Jun, 2022</time>
 					<br><div class="description">
@@ -194,62 +212,6 @@ rpi3b+은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun15--01-ping/">Ping 15/06/2022 .01</a></h1>
-					<time>🗓️ 15 Jun, 2022</time>
-					<br><div class="description">
-						
-						<p>비 내리는 화요일. &#x2614;</p>
-<div>
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</a></li>
-    <li><a href="#postgresql-as-an-api-server">postgresql, as an api server?</a></li>
-  </ul>
-</nav>
-</div>
-
-<hr>
-<h1 id="jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</h1>
-<p>재밌는걸 찾았다.</p>
-<p><a href="https://jinja.palletsprojects.com/en/3.1.x/">jinja2</a>을 사용하면서, 하위 include으로 내려갈수록,
-file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야
-template cache을 무시하는거 같아.</p>
-<p>그래서,</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
-</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
-</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
-</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
-</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
-</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
-</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
-</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
-</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
-</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
-</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// gulpfile.js:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">buildTask</span> <span class="o">=</span> <span class="nx">series</span><span class="p">(</span><span class="nx">cleanTask</span><span class="p">,</span> <span class="nx">esbuildTask</span><span class="p">,</span> <span class="nx">injectTask</span><span class="p">,</span> <span class="nx">touchInjectedTask</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">watchTask</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">watch</span><span class="p">(</span><span class="s2">&#34;./js/**/*.js&#34;</span><span class="p">,</span> <span class="nx">buildTask</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">watch</span> <span class="o">=</span> <span class="nx">watchTask</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">build</span> <span class="o">=</span> <span class="nx">buildTask</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">clean</span> <span class="o">=</span> <span class="nx">cleanTask</span><span class="p">;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>&hellip;대략 잘 동작하고, <a href="https://esbuild.github.io/">webpack보다 엄청나게 빠르다</a> ㅎㅎ.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -267,11 +229,11 @@ template cache을 무시하는거 같아.</p>
             <a href="/page/12/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(13/59)</span>
+        <span class="page-number">(13/60)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/14/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
