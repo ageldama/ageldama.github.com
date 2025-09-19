@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758292817">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758293092">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,40 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-01jan/type-variances/">Covariant, Contravariant, Invariant등 Type Variances 이해하기</a></h1>
+					<time>🗓️ 03 Jan, 2020</time>
+					<br><div class="description">
+						
+						<p>
+<a href="https://blog.daftcode.pl/covariance-contravariance-and-invariance-the-ultimate-python-guide-8fabc0c24278">거의 그대로 베껴온 원본 글</a></p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+계약서로서의 타입
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>타입을 생각할 때, &lt;계약서&gt;로 생각하는 것이 편하다.</p>
+<p>
+  왜냐하면, 전달한 값이 그 타입의 범위 안에서 전달 받은 쪽에서
+  취급이 제한된다는 보장이 있어야 안전한 코드를 컴파일러는 생성해줄 수
+  있다. (혹은 그렇게 안전한지 체크를 해준다.)</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Subtype, 일반화(Generalization), 특화(Specialization)
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>타입을 말할 때, 나는 보통 객체지향언어에서의 클래스의 상속 관계를
+  떠올린다. 꼭 그렇지는 않겠지만, 이 글에서도 그렇게 설명을 해보겠다.</p>
+<p>
+  이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고
+  가정하겠다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2020-01jan/esup-emacs-init-speed/">Emacs 시작 시간 빠르게 만들기</a></h1>
 					<time>🗓️ 03 Jan, 2020</time>
 					<br><div class="description">
@@ -212,60 +246,6 @@ esup profiler
 <p>나는 자라오며 계속해서 잔소리를 들어왔다. 말해주는 사람들은 내
   아버지와 몇몇 친척 형, 주변 친구들이었다. 그리고 하나도 그런 말들을
   새겨 듣지 않았고, 잘했다고 생각한다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a></h1>
-					<time>🗓️ 30 Dec, 2019</time>
-					<br><div class="description">
-						
-						<p>
-다음의 간단한 코드를 읽어보자.</p>
-<div class="src src-js">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
-</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
-</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
-</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
-</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;lexical&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">maker</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;dynamic&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">assert</span><span class="p">(</span><span class="nx">maker</span><span class="p">()()</span> <span class="o">==</span> <span class="s2">&#34;???&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-<code>maker()()</code> 의 결과는 <code>&#39;dynamic&#39;</code> 이다.</p>
-<p>
-심지어, 맨 마지막에 있는 <code>{..}</code> 블록을 넘어가서도 <code>x</code> 의 값은 여전이
-<code>&#39;dynamic&#39;</code> 이다.</p>
-<p>
-자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난
-느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도
-속하지 않는 느낌이고, 이번에 새로 추가된 <code>let</code> 도 이해하기가 어려운게
-아니라 그냥 제대로 망가져 있는거 같다.</p>&hellip;
 						
 					</div>
                                         

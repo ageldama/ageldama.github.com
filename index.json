@@ -1,14 +1,6 @@
 
 [
  {
-     "permalink": "https://ageldama.github.io/posts/2025-09sep/freebsd-why/",
-     "title": "freebsd + 고물랩탑 쓸만하다(재밌다!)",
-     
-     "tags": ["freebsd", "linux", "laptop", "refurb", "debian", "samba", "asus", "e502ma", "firefox", "chrome", "mpv", "emacs", "dotfiles", "icewm", "evince", "poppler", "pdf", "zathura", "coolreader", "epub", "koreader"],
-     
- "description": "",
- "contents": " 시도하기 이전에는 좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을 서브랩탑으로 집책상에서 써왔었다.\n메모리도 4GB, 확장이 불가능하고. 배터리도 조금 부풀었고 충전도 잘 되지 않는다. 거기에 외부전원어댑터를 붙이지 않으면 어째서인지 eDP이 출력되지 않는다. ㅎㅎㅎ\n그래도 어쨌든 debian-stable 설치해놓고 samba 서버로 책상에서 쓰거나 하기엔 적당했다. 딱히 동영상을 틀어 놓거나 하는 것도 포기해야 할 정도로 빠르지도 않았다. 웹브라우징도 느렸다.\n그러다가 freebsd 설치를 했다 (14.3-RELEASE 1) 원래도 freebsd이 gui이나 latency이 중요한 체감이 훨씬 가볍고 부드럽게 느껴지는걸 알고 있었다. 그런데 이번에는 너무 극적으로 즐거웠다.\nmpv 동영상 보기도 부드럽고(1080p정도도 조금 framedrop이 있긴 하지만), firefox으로 웹브라우징도 나쁘지 않다.\n그리고 emacs 쓰는 것도 부드럽고 좋다. 계속 쓰려고 한다. ㅎㅎ\nSony PS3, PS4, PS5와 Nintendo 3DS, Switch 모두 FreeBSD 커널을 갖다 사용하는걸로 알고 있다. 그리고 단순히 BSD License 때문만이 아니라, 체감성능상 이점이 명확한 것 같다.2\n어떻게 쓰는게 좋았나 리눅스를 쓰는 것처럼 (wayland/gnome/kde 같은 것들을 어차피 원래도 바라지 않았지만) 쓰려고 하지 않고, 약간 포기할거 포기하고 더 가볍게 쓰니 편하고 좋다.\nicewm 만으로 편하고 좋다. ++ 내 dotfiles으로 편안하다.\n원래 리눅스 설정으로도 특별히 무겁다고 생각하진 않았는데 훨씬 가볍게 쓸 것들이 더 남아 있던거 같다. (예를 들어, bashmount을 써왔는데 그런 것도 그냥 안쓰고 doas mount ...-정도로 만족한다)\n사용하는 애플리케이션들도 evince =\u0026gt; zathura, koreader =\u0026gt; coolreader3 정도로 바꿨다.\nevince, koreader도 가볍지만, 더 가볍고 단순한 프로그램들, 그러면서 잘 동작하는 bloat이 적은 애플리케이션들이 더 좋아졌다\n그럼에도 그래도 리눅스데스크탑, 랩탑을 더 사용하고 있다. 물론 집책상에서 혼자 쓰는 메인드라이버는 그냥 freebsd이 되었지만.\nSteam을 돌리거나 다른 애플리케이션이 필요하거나 하면 여전히 리눅스/debian을 계속 쓰겠지만. ㅎㅎ 책을 읽거나 코딩, 글쓰기, 간단한 웹서핑을 위해서는 그냥 앞으로도 freebsd으로 만족하려고.\nFootnotes 1 freebsd은 CURRENT -\u0026gt; STABLE -\u0026gt; RELEASE 순서로 안정화/릴리즈를 해나가니 조금 ports 버전이 더 옛날 것들. (debian의 unstable -\u0026gt; testing -\u0026gt; stable)\n2 MacOS이 FreeBSD의 네트워크 스택 코드나 POSIX Userland만을 갖다 사용하고 커널은 XNU/mach 계열을 쓴 것과 달리. 또한 Linux kernel의 GPL라이센스는 게임콘솔 HW에서 사용하기엔 라이센스가 부담되었을 것 같다.\n"},
- {
      "permalink": "https://ageldama.github.io/posts/",
      "title": "Posts",
      
@@ -17,6 +9,14 @@
  "description": "",
  "contents": ""},
  {
+     "permalink": "https://ageldama.github.io/posts/2025-09sep/blog-css-redesign-again/",
+     "title": "블로그 css 조금 더 수정",
+     
+     "tags": ["blog", "blogging", "css", "css3", "sunview", "solaris", "90s", "gui", "sparc", "sun", "sunos", "cde", "motif"],
+     
+ "description": "",
+ "contents": " 너무 흰색 배경에 눈이 짠한거 같아서 바꿔봤다.\ndarkmode 켜면 되기야 하겠지만.\n과거 Solaris/SunOS의 SunView이나 CDE환경 색상을 좀 흉내내고 싶었다.\nhttps://en.wikipedia.org/wiki/SunView https://en.wikipedia.org/wiki/Common_Desktop_Environment 나는 마음에 좀 드는거 같다.\n"},
+ {
      "permalink": "https://ageldama.github.io/",
      "title": "아겔로그",
      
@@ -24,6 +24,14 @@
      
  "description": "",
  "contents": ""},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-09sep/freebsd-why/",
+     "title": "freebsd + 고물랩탑 쓸만하다(재밌다!)",
+     
+     "tags": ["freebsd", "linux", "laptop", "refurb", "debian", "samba", "asus", "e502ma", "firefox", "chrome", "mpv", "emacs", "dotfiles", "icewm", "evince", "poppler", "pdf", "zathura", "coolreader", "epub", "koreader"],
+     
+ "description": "",
+ "contents": " 시도하기 이전에는 좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을 서브랩탑으로 집책상에서 써왔었다.\n메모리도 4GB, 확장이 불가능하고. 배터리도 조금 부풀었고 충전도 잘 되지 않는다. 거기에 외부전원어댑터를 붙이지 않으면 어째서인지 eDP이 출력되지 않는다. ㅎㅎㅎ\n그래도 어쨌든 debian-stable 설치해놓고 samba 서버로 책상에서 쓰거나 하기엔 적당했다. 딱히 동영상을 틀어 놓거나 하는 것도 포기해야 할 정도로 빠르지도 않았다. 웹브라우징도 느렸다.\n그러다가 freebsd 설치를 했다 (14.3-RELEASE 1) 원래도 freebsd이 gui이나 latency이 중요한 체감이 훨씬 가볍고 부드럽게 느껴지는걸 알고 있었다. 그런데 이번에는 너무 극적으로 즐거웠다.\nmpv 동영상 보기도 부드럽고(1080p정도도 조금 framedrop이 있긴 하지만), firefox으로 웹브라우징도 나쁘지 않다.\n그리고 emacs 쓰는 것도 부드럽고 좋다. 계속 쓰려고 한다. ㅎㅎ\nSony PS3, PS4, PS5와 Nintendo 3DS, Switch 모두 FreeBSD 커널을 갖다 사용하는걸로 알고 있다. 그리고 단순히 BSD License 때문만이 아니라, 체감성능상 이점이 명확한 것 같다.2\n어떻게 쓰는게 좋았나 리눅스를 쓰는 것처럼 (wayland/gnome/kde 같은 것들을 어차피 원래도 바라지 않았지만) 쓰려고 하지 않고, 약간 포기할거 포기하고 더 가볍게 쓰니 편하고 좋다.\nicewm 만으로 편하고 좋다. ++ 내 dotfiles으로 편안하다.\n원래 리눅스 설정으로도 특별히 무겁다고 생각하진 않았는데 훨씬 가볍게 쓸 것들이 더 남아 있던거 같다. (예를 들어, bashmount을 써왔는데 그런 것도 그냥 안쓰고 doas mount ...-정도로 만족한다)\n사용하는 애플리케이션들도 evince =\u0026gt; zathura, koreader =\u0026gt; coolreader3 정도로 바꿨다.\nevince, koreader도 가볍지만, 더 가볍고 단순한 프로그램들, 그러면서 잘 동작하는 bloat이 적은 애플리케이션들이 더 좋아졌다\n그럼에도 그래도 리눅스데스크탑, 랩탑을 더 사용하고 있다. 물론 집책상에서 혼자 쓰는 메인드라이버는 그냥 freebsd이 되었지만.\nSteam을 돌리거나 다른 애플리케이션이 필요하거나 하면 여전히 리눅스/debian을 계속 쓰겠지만. ㅎㅎ 책을 읽거나 코딩, 글쓰기, 간단한 웹서핑을 위해서는 그냥 앞으로도 freebsd으로 만족하려고.\nFootnotes 1 freebsd은 CURRENT -\u0026gt; STABLE -\u0026gt; RELEASE 순서로 안정화/릴리즈를 해나가니 조금 ports 버전이 더 옛날 것들. (debian의 unstable -\u0026gt; testing -\u0026gt; stable)\n2 MacOS이 FreeBSD의 네트워크 스택 코드나 POSIX Userland만을 갖다 사용하고 커널은 XNU/mach 계열을 쓴 것과 달리. 또한 Linux kernel의 GPL라이센스는 게임콘솔 HW에서 사용하기엔 라이센스가 부담되었을 것 같다.\n"},
  {
      "permalink": "https://ageldama.github.io/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/",
      "title": "[작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템)",
