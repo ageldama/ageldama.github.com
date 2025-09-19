@@ -2,8 +2,7 @@
 /* Neo둥근모 */
 /* Neo둥근모 Code */
 html {
-  overflow-y: scroll;
-  font-family: serif;
+  font-family: sans;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,14 +13,20 @@ html {
    */
 }
 
-.body {
+body {
   /* margin-left: 0.3rem; */
   /* margin-right: 0.3rem; */
 }
 
 .footnote-body {
+  margin-top: -2rem;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.footnote-definition {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 code {
@@ -51,7 +56,7 @@ ul.tags li {
 .site-description {
   display: flex;
   justify-content: space-between;
-  font-family: serif;
+  font-family: sans;
   font-size: 1.0rem;
 }
 
@@ -113,15 +118,20 @@ header nav a {
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
-  margin-top: 2em;
+  margin-top: 0rem;
 }
 
 section.list-item {
-  border-bottom: dashed 1px red;
+  border: solid 1px #eddddd;
+  box-shadow: 2px 2px 0px 0px green;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: #eccccc;
 }
 
 h1.title::before {
-  content: '# ';
+  content: '$ ';
 }
 
 /*
@@ -161,6 +171,13 @@ footer {
 /* Posts */
 article .title {
   margin-bottom: 1em;
+}
+
+article {
+  padding-left: 0.5rem;
+  box-shadow: 2px 2px 0px 0px green;
+  border: solid 1px #eddddd;
+  background-color: #eccccc;
 }
 
 /* Callout */
@@ -261,11 +278,12 @@ a:visited {
 }
 
 .site-title {
+  font-family: monospace;
   text-decoration: none;
   font-weight: bold;
   padding: 1rem;
-  color: green;
-  text-shadow: 3px 3px 1px #bfecf7;
+  color: #00ffff;
+  text-shadow: 3px 3px 3px #bfecf7;
 }
 
 /* --- Search --- */
@@ -286,6 +304,10 @@ a:visited {
   padding-right: 0.1rem;
 }
 
+.search-result-row {
+  font-weight: bold;
+}
+
 /* @import './loaders'; */
 /*
 .pagefind-ui div {
@@ -303,5 +325,9 @@ li.post .meta {
 }
 
 */
+.tocjs {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
 
 /*# sourceMappingURL=gopherish.css.map */
