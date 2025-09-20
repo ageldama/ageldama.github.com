@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758382619">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758389848">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,33 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/cl-rutils/">rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</a></h1>
+					<time>🗓️ 11 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>커먼리습은 <a href="https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec">CLHS</a>
+이후로 언어 자체 정의는 변하지 않았다.</p>
+<p>구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거
+같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 <a href="https://en.wikipedia.org/wiki/Lisp_reader">lisp
+reader</a>을 확장하는게
+CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스펙을 잘
+구현해놓았으니까.</p>
+<p>결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면
+언제든지 매크로를 만들듯이 확장하면 되니까.</p>
+<blockquote>
+<p><em>&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;</em></p></blockquote>
+<p>이런 커먼리습 확장 <em>&lsquo;라이브러리&rsquo;</em> 들이 여러가지 있는데, 가장 요즘에
+쓸만할거 같다고 생각하는건 rutils이다. <a href="https://github.com/vseloved/rutils">https://github.com/vseloved/rutils</a></p>
+<p><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code> 같은거
+매번 반복해서 쳐넣는걸 그냥 <code>eval-always</code>으로 바꿔준다거나.
+<code>gensym</code>하는것도 <code>with-gensyms</code> 제공하거나 하는 이런류의
+라이브러리들에서 보통 제공하는것들부터.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-10oct/ping-11fri/">Ping 11/Oct/2019</a></h1>
 					<time>🗓️ 11 Oct, 2019</time>
 					<br><div class="description">
@@ -229,28 +256,6 @@ manual</a>에
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/2019feb27-ping/">Ping 26/02/2019</a></h1>
-					<time>🗓️ 26 Feb, 2019</time>
-					<br><div class="description">
-						
-						<h1 id="번아웃-회의감">번아웃, 회의감</h1>
-<p>아무래도 번아웃이 온거 같다. 일을 해야 하는데 아무런 생각이나 의욕도
-떠오르지 않는다.</p>
-<p>아무것도 제대로 하지 못할거 같고, 해서 의미도 없을거라는 생각이 강하다.</p>
-<p>일하는것에 회의가 심하다. 실제로는 아무것도 제대로 알지 못하고 그냥
-싫으니까 반대에 사람들 사이를 조작해서 악의적으로 행동하고 그렇게
-조장하는것에 이제는 삶에서 너무 많이 봐온거 같고, 그런 사이에서
-무력하게 지내고 해야한다는게 무엇보다 지친다.</p>
-<p>그리고 그렇게 때문에 해야할 이유도, 굳이 마음을 써야할 이유도
-모르겠다.</p>
-<p>그냥 개인적으로 하고 싶던 설정이나 만지작거리면서 시간을 보내봐도 딱히
-그게 지나고 나면 하고 싶은것도 없어진다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -282,7 +287,7 @@ manual</a>에
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758382619</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758389848</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

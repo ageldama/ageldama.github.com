@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758382619">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758389848">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,63 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/cl-toy-stack-lang/">cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</a></h1>
+					<time>🗓️ 16 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>일단 첫번째 버젼 다 만들었다.</p>
+<blockquote>
+<p><a href="https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0">https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0</a></p></blockquote>
+<p>그냥 장난으로 인터프리터도 아니라 그냥
+<a href="http://clhs.lisp.se/Body/f_eval.htm">eval</a> 이용한 간단한 파서도
+필요없이 lexer만으로 만들만한
+<a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">Forth</a>
+비슷한 언어를 만듬.</p>
+<p>명령어도 실용적인 목적이 아닌만큼 그냥 문자열 장난 밖엔 없다.</p>
+<h1 id="느낀점">느낀점</h1>
+<ol>
+<li><strong>라이브러리 좋은거 갖다 잘쓰자</strong>
+<ul>
+<li><a href="http://quickdocs.org/uiop/">uiop</a> 같은거,</li>
+<li><a href="http://clhs.lisp.se/Body/24_aba.htm">feature-expression</a> 삽질을 적게하거나 안해도됨. 더
+portable하고 잘 굴러가는.</li>
+</ul>
+</li>
+<li><strong>Test!</strong>
+3. 짜고 하나씩 진화시켜가면서 다시 돌리는 재미.</li>
+<li><strong>Idiomatic하게</strong> 그리고 역시 Test!
+<ol>
+<li>..처음엔 그냥 전역변수에 상태를 갖도록 만들고,</li>
+<li>그걸 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_abaab.htm">dynamic binding</a>으로 바꿔서 파라미터화하고,</li>
+<li>또 그걸 다시 상태를 캡슐화하는 클래스로 감싸고,</li>
+<li>처음엔 단순하게 리습스럽게 짜고 그걸 진화시키고,</li>
+<li>그리고 역시 다시 테스트.</li>
+</ol>
+</li>
+<li><strong><em>아는만큼 보인다</em></strong>
+<ul>
+<li><code>setf</code> 병렬로 하기, +destructuring</li>
+<li><code>asdf:operate</code> + <code>:build-op</code> :
+<a href="http://www.sbcl.org/">SBCL</a>/<a href="https://common-lisp.net/project/ecl/">ECL</a>
+등 리습컴파일러에 관계 없이 실행이미지 빌드 편안하게
+<ul>
+<li><a href="https://github.com/xach/buildapp">https://github.com/xach/buildapp</a> 같은거 써볼까 하다가,
+처음엔 그냥 간단히 쉘스크립팅으로 시작.</li>
+</ul>
+</li>
+<li>기타 등등</li>
+</ul>
+</li>
+</ol>
+<p>&hellip;그리고 무엇보다 재밌었다. 그리고 뭐가됐든 그냥 짜보고 굴러가는
+형태로 계속해서 작은 프로그램을 많이 만들고 하면서 놀아야겠다고
+생각했다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-10oct/ping-15tue/">Ping 15/Oct/2019</a></h1>
 					<time>🗓️ 15 Oct, 2019</time>
 					<br><div class="description">
@@ -267,33 +324,6 @@ deck으로 쌓아만 놓는다.</li>
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-10oct/cl-rutils/">rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</a></h1>
-					<time>🗓️ 11 Oct, 2019</time>
-					<br><div class="description">
-						
-						<p>커먼리습은 <a href="https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec">CLHS</a>
-이후로 언어 자체 정의는 변하지 않았다.</p>
-<p>구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거
-같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 <a href="https://en.wikipedia.org/wiki/Lisp_reader">lisp
-reader</a>을 확장하는게
-CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스펙을 잘
-구현해놓았으니까.</p>
-<p>결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면
-언제든지 매크로를 만들듯이 확장하면 되니까.</p>
-<blockquote>
-<p><em>&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;</em></p></blockquote>
-<p>이런 커먼리습 확장 <em>&lsquo;라이브러리&rsquo;</em> 들이 여러가지 있는데, 가장 요즘에
-쓸만할거 같다고 생각하는건 rutils이다. <a href="https://github.com/vseloved/rutils">https://github.com/vseloved/rutils</a></p>
-<p><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code> 같은거
-매번 반복해서 쳐넣는걸 그냥 <code>eval-always</code>으로 바꿔준다거나.
-<code>gensym</code>하는것도 <code>with-gensyms</code> 제공하거나 하는 이런류의
-라이브러리들에서 보통 제공하는것들부터.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -325,7 +355,7 @@ CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758382619</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758389848</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>
