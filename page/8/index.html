@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758347289">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758357531">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.cd54560a7dc868aa5eed67ab0f5b5ca370ae92d5414046da416819aff9faa31e.css" integrity="sha256-zVRWCn3IaKpe7WerD1tco3CuktVBQEbaQWgZr/n6ox4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.ef9bd5a7ccd54d6dcb2a7bda38edf907c7c28980bab2ebe18e86c602bc269dc4.css" integrity="sha256-75vVp8zVTW3LKnvaOO35B8fCiYC6suvhjobGArwmncQ=" crossorigin="anonymous">
                     
                 
             
@@ -149,111 +149,155 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><b><code>"심연을 오랬동안 깊이 들여다보면, 심연도 내게 바나나."</code></b></blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-03mar/2023-03mar08--02-ping--news/">News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes</a></h1>
-					<time>🗓️ 08 Mar, 2023</time>
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun29--01-ping/">linux/unix 팁 29/06/2022 .01</a></h1>
+					<time>🗓️ 29 Jun, 2022</time>
 					<br><div class="description">
 						
-						<p>
-<div>
+						<div>
   <nav id="TableOfContents">
-<ul>
-<li><a href="#headline-1">&#34;리액트가 날 인질으로 잡고 있어요&#34;</a>
-</li>
-<li><a href="#headline-2">&#34;헛소리/bullshit 없이 엔지니어링 재능이 있는 사람을 고용하기&#34;</a>
-</li>
-<li><a href="#headline-3">&#34;NESFab is a new programming language for creating NES games&#34;</a>
-</li>
-<li><a href="#headline-4">&#34;zig이 rust보다 빠르고 안전할 수 있는 경우&#34;</a>
-</li>
-</ul>
+  <ul>
+    <li><a href="#zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</a></li>
+    <li><a href="#ssh으로-키보드마우스-안-붙이고">ssh으로 키보드/마우스 안 붙이고</a>
+      <ul>
+        <li><a href="#vconsole-conspy">vconsole: <code>conspy</code></a></li>
+        <li><a href="#x11-x2x으로-여러-머신스크린에-걸쳐서-마우스키보드-공유">x11: <code>x2x</code>으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 </div>
-</p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-&#34;리액트가 날 인질으로 잡고 있어요&#34;
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p><a href="https://emnudge.dev/blog/react-hostage">https://emnudge.dev/blog/react-hostage</a></p>
-<p>
-  …말해 뭘할까 싶은데. :see_no_evil:</p>
-<p>
-  포스팅 자체는 react, hooks 같은 것들의 complexity에 대한
-  이야기이지만.</p>
-<p>
-  오히려 흥미롭게 생각하는 것은, 과거 한국에서 &#39;퍼블리셔&#39;라고 하던
-  사람들이 어떻게 되었는가 생각해보며, 함께 지금의 &#39;프론트엔드
-  개발자&#39;, 혹은 &#39;앱 개발자&#39;, &#39;리액트 개발자&#39;, &#39;자바스크립트
-  개발자&#39;들이 앞으로 어떻게 될지 상상해본다.</p>&hellip;
+
+<hr>
+<p>리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.</p>
+<p>그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.</p>
+<h1 id="zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</h1>
+<p>최근/디렉토리 이동한 히스토리에 따라서 (&ldquo;frecent&rdquo;) 이동하기:</p>
+<p>fzf+zsh의 <code>Control-R</code>도 좋고<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,</p>
+<p>oh-my-zsh 내장인 <code>plugins=(z)</code>도 좋지만<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>&hellip;나는 가능하면 <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a>이 가장 가볍고 좋은거 같다.</p>
+<p>설치하고 나서,
+<code>eval &quot;$(zoxide init zsh)&quot;</code></p>
+<p>그리고, <code>z SOME-DIR</code>, <code>zi</code> 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-03mar/2023-03mar08--01-ping/">Ping 08/03/2023 .01 : 전자책읽기</a></h1>
-					<time>🗓️ 08 Mar, 2023</time>
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun24--01-grug/">The Grug Brained Developer</a></h1>
+					<time>🗓️ 24 Jun, 2022</time>
 					<br><div class="description">
 						
-						<p>
-linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁들만 나열,
-별로 내용은 길게 늘여 쓰지 않으려고:</p>
-<ol>
-<li>
-<p>linux, 그중에서도 가벼운 하드웨어와 단순하게 잘 동작하는 배포판.</p>
-<ul>
-<li>여러가지 불필요한 군더더기 없고, 패키지들이 조금 오래된
-버젼이어도, 안정적으로만 동작하면 상관 없음.</li>
-<li>그래서, debian stable -or- testing 쓰면 속이 편함.</li>
-<li>하드웨어는 raspberry pi 3/4 둘 다 좋았다. <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>
-…특히 전력소모도 거의 없고, 딱 모니터 연결해 놓고 팬소음 거의
-없이 쾌적하게 책을 읽기 좋다.</li>
-</ul>
-</li>
-<li>
-<p>calibre 책파일 관리, 읽기 모두 만족스러움</p>&hellip;
+						<p>감동적인 글이다ㅋ:</p>
+<p><a href="https://grugbrain.dev/">https://grugbrain.dev/</a></p>
+<p>문법도 완전 grug스럽게 작성해서 반가운 글이었다.</p>
+<p>완전히 모두 내 생각과 같지는 않아도, 이야기하는 <em>&ldquo;FOLD&rdquo; 때문에</em> 일어나는 일들과
+조금은 그래도 <em>grug답게</em> 그냥 해내려는 생각들이 유용.</p>
+<p>그치, grug이 공룡과 구분되는 점은 그런거겠지. ㅎㅎ&hellip;</p>
+<p>msa, reactjs, ejb, osgi. 공감하는 생각들.</p>
+<p>&hellip; black think juice 맛있다.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-03mar/perl-cal3/">`ncal -3` 직접 Perl으로 짜봤다</a></h1>
-					<time>🗓️ 02 Mar, 2023</time>
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/">&#34;Software disenchantment&#34;</a></h1>
+					<time>🗓️ 19 Jun, 2022</time>
 					<br><div class="description">
 						
-						<p>
-<code class="verbatim">ncal -3</code> 이 뭐냐하면:</p>
-<p>
-<a href="https://man7.org/linux/man-pages/man1/cal.1.html">https://man7.org/linux/man-pages/man1/cal.1.html</a></p>
-<p>
-…뭐 이런건데, 개인적으로 저전력 글쓰기 전용머신에서 사용하는
-스크립트에서 배포판이 달라서 패키지를 못찾겠어서 <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, …그냥 직접
-짜서 대체했다.</p>
-<p>
-<a href="https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e488">https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e488</a></p>
-<p>
-그래서 스크린샷은:</p>
-<p>
-<img src="/2023-03mar/journal-edit-cal3.png" alt="/2023-03mar/journal-edit-cal3.png" title="/2023-03mar/journal-edit-cal3.png" /></p>
-<p>
-재밌었던 부분은:</p>
+						<p><a href="https://tonsky.me/blog/disenchantment/">https://tonsky.me/blog/disenchantment/</a></p>
+<p>재밌게 읽었다. 계속 생각해오던, 이전 포스팅에서도 이야기한 생각들.</p>
+<blockquote>
+<p>&ldquo;&hellip;의 진보도 항상 그때그때의 1보만이 진보이며 2보도 3보도 n+1보도 결코&hellip;&rdquo;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p></blockquote>
+<p>:winking_face:</p>
+<p>&hellip;그치 ejb/xml을 쓰든, 뭔가 또 새로운 언어나 프레임웍으로 대단한것처럼, 진보한것처럼 쓰려고 해도,
+현실적으로는 빌드도 오히려 <a href="https://ant.apache.org/">apache ant</a> 쓸때보다 더 엉망일지도. 성능이든 iteration의 가벼움이든.</p>
+<p>정말 진보는 커녕 오히려 더 ㅎㅎ&hellip; 오히려, apache ant으로라면 명확하게 확실하게 동작하도록 만들기나 잘 하겠지만.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li>어차피 Perl으로 전부 짜서 쓰는 스크립트였는데,
-아예 외부 커맨드라인 도구 의존성을 더 없애서 뿌듯하다.</li>
-<li>매달 달력을 문자열으로 뽑았는데, 3달치를 뽑아서, 이걸 한 row에
-표시하고 싶었는데, <a href="https://metacpan.org/pod/Text::Table">Text::Table</a>으로 적절히 간단히 완료.</li>
-<li><a href="https://metacpan.org/pod/Term::ANSIColor">Term::ANSIColor</a>와 <a href="https://perldoc.perl.org/perlre">perlre</a>을 써서 깔끔하게 원하는 일자에 highlighting
-해서 편안했다.</li>
-<li>
-<p>…더 해킹을 해서, <code class="verbatim">calendar(..)</code> 결과문자열을 적당히 파싱해서,
-작은 Text::Table으로 만들어서, 그것들으로 조합하고 했었어도 될거
-같아.</p>&hellip;
+<li id="fn:1">
+<p>Walter Benjamin의 &ldquo;Arcades Project&quot;의 인용, &ldquo;매달린 절벽에서 손을 뗄 수 있는가?&rdquo; 강신주 저. &hellip;책에서는 그런 문맥이 아니었었지만, 내 생각엔 이런 문맥에도 맞지 않나 싶어서.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun17--01-ping/">Ping 17/06/2022 .01</a></h1>
+					<time>🗓️ 17 Jun, 2022</time>
+					<br><div class="description">
+						
+						<h1 id="code-bloat-has-become-astronomical">&ldquo;Code bloat has become astronomical&rdquo;</h1>
+<p><a href="https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/">https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/</a></p>
+<p>극공감. 그렇다고 의존성 포함하면 몇 기가나 되는 것들이, 하는 일을 보면 안습.
+&hellip;그렇다고 그런 방법들만을 고르는 안목이 엄청나게 힙한것도, 스스로에게 이익이 되는것도 아니고.</p>
+<p>데스크탑에 작은 서브모니터 연결해놓은 rpi3b+이 rpi4보다 빠르지는 않을지 몰라도, micro-sd 버벅거림이랑
+발열 때문에 버벅거리는건 훨씬 적다.</p>
+<p>&ldquo;rpi4은 빠르니까!&ldquo;이라면서 나름대로 데탑/랩탑에서 쓰는 설정 그대로, openbox+lxpanel 정도 올려서 쓰고 있고,
+rpi3b+은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있을까 싶기도 하지만. &hellip;어차피 둘 다 엄청 가벼울거 같은데도.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun15--01-ping/">Ping 15/06/2022 .01</a></h1>
+					<time>🗓️ 15 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p>비 내리는 화요일. &#x2614;</p>
+<div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</a></li>
+    <li><a href="#postgresql-as-an-api-server">postgresql, as an api server?</a></li>
+  </ul>
+</nav>
+</div>
+
+<hr>
+<h1 id="jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</h1>
+<p>재밌는걸 찾았다.</p>
+<p><a href="https://jinja.palletsprojects.com/en/3.1.x/">jinja2</a>을 사용하면서, 하위 include으로 내려갈수록,
+file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야
+template cache을 무시하는거 같아.</p>
+<p>그래서,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// gulpfile.js:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">buildTask</span> <span class="o">=</span> <span class="nx">series</span><span class="p">(</span><span class="nx">cleanTask</span><span class="p">,</span> <span class="nx">esbuildTask</span><span class="p">,</span> <span class="nx">injectTask</span><span class="p">,</span> <span class="nx">touchInjectedTask</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">watchTask</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">watch</span><span class="p">(</span><span class="s2">&#34;./js/**/*.js&#34;</span><span class="p">,</span> <span class="nx">buildTask</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">watch</span> <span class="o">=</span> <span class="nx">watchTask</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">build</span> <span class="o">=</span> <span class="nx">buildTask</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">clean</span> <span class="o">=</span> <span class="nx">cleanTask</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>&hellip;대략 잘 동작하고, <a href="https://esbuild.github.io/">webpack보다 엄청나게 빠르다</a> ㅎㅎ.</p>&hellip;
 						
 					</div>
                                         
@@ -276,11 +320,11 @@ linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁�
             <a href="/page/7/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(8/60)</span>
+        <span class="page-number">(8/36)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/9/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -290,7 +334,7 @@ linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁�
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758347289</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758357531</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

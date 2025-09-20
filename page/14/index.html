@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758347289">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758357531">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.cd54560a7dc868aa5eed67ab0f5b5ca370ae92d5414046da416819aff9faa31e.css" integrity="sha256-zVRWCn3IaKpe7WerD1tco3CuktVBQEbaQWgZr/n6ox4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.ef9bd5a7ccd54d6dcb2a7bda38edf907c7c28980bab2ebe18e86c602bc269dc4.css" integrity="sha256-75vVp8zVTW3LKnvaOO35B8fCiYC6suvhjobGArwmncQ=" crossorigin="anonymous">
                     
                 
             
@@ -149,116 +149,117 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><b><code>"심연을 오랬동안 깊이 들여다보면, 심연도 내게 바나나."</code></b></blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun15--01-ping/">Ping 15/06/2022 .01</a></h1>
-					<time>🗓️ 15 Jun, 2022</time>
+					<h1 class="title"><a href="/posts/2020-10oct/ping-15thu-2nd/">Ping (2nd) 15/Oct/2020</a></h1>
+					<time>🗓️ 15 Oct, 2020</time>
 					<br><div class="description">
 						
-						<p>비 내리는 화요일. &#x2614;</p>
-<div>
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</a></li>
-    <li><a href="#postgresql-as-an-api-server">postgresql, as an api server?</a></li>
-  </ul>
-</nav>
-</div>
-
-<hr>
-<h1 id="jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</h1>
-<p>재밌는걸 찾았다.</p>
-<p><a href="https://jinja.palletsprojects.com/en/3.1.x/">jinja2</a>을 사용하면서, 하위 include으로 내려갈수록,
-file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야
-template cache을 무시하는거 같아.</p>
-<p>그래서,</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
-</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
-</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
-</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
-</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
-</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
-</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
-</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
-</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
-</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
-</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// gulpfile.js:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">buildTask</span> <span class="o">=</span> <span class="nx">series</span><span class="p">(</span><span class="nx">cleanTask</span><span class="p">,</span> <span class="nx">esbuildTask</span><span class="p">,</span> <span class="nx">injectTask</span><span class="p">,</span> <span class="nx">touchInjectedTask</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">watchTask</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">watch</span><span class="p">(</span><span class="s2">&#34;./js/**/*.js&#34;</span><span class="p">,</span> <span class="nx">buildTask</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">watch</span> <span class="o">=</span> <span class="nx">watchTask</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">build</span> <span class="o">=</span> <span class="nx">buildTask</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">clean</span> <span class="o">=</span> <span class="nx">cleanTask</span><span class="p">;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>&hellip;대략 잘 동작하고, <a href="https://esbuild.github.io/">webpack보다 엄청나게 빠르다</a> ㅎㅎ.</p>&hellip;
+						<p>
+… &#39;田大&#39;이라고 적혀 있었다.</p>
+<p>
+다른 한문으로 쓰여 있어 읽지 못하는 각각의 수 많은 바램들과 이름들
+사이로 삐뚤빼뚤한 어색한 글씨로 그렇게 적혀 있었었다.</p>
+<p>
+너무 단순한 이름, 그리고 설명이 붙어 있었듯이, 다른 사람들처럼 많은
+이야기를 적고 싶었지만, 아이여서 그랬는지, 아니면 글을 몰라 그랬는지,
+이름만이라도 적어놓은 그 못그린 그림 같은 두 글자를 읽었다.</p>
+<p>
+누군가 아주 오래 전에 그 사람도 아마도 나와 별로 다를 것도 없는
+고민들을 하며 매일을 살았었던 것을 느꼈다.</p>
+<p>
+아주 오랜 세월이 흐른 후에야 그렇게 만났었던 모르는 어떤 사람이
+떠올랐다.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/algebraic-effects-for-everyone/">&#34;모두를 위한 algebraic effects!&#34; ...정말루?</a></h1>
-					<time>🗓️ 13 Jun, 2022</time>
+					<h1 class="title"><a href="/posts/2020-10oct/ping-15thu/">Ping 15/Oct/2020</a></h1>
+					<time>🗓️ 15 Oct, 2020</time>
 					<br><div class="description">
 						
-						<p>뭐 대충 다음과 같은 글들:</p>
-<p><a href="https://www.eff-lang.org/handlers-tutorial.pdf">https://www.eff-lang.org/handlers-tutorial.pdf</a></p>
-<p><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf</a></p>
-<p>&hellip;그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)</p>
-<p><a href="https://hackage.haskell.org/package/fused-effects">https://hackage.haskell.org/package/fused-effects</a></p>
-<p><a href="https://github.com/dry-rb/dry-effects">https://github.com/dry-rb/dry-effects</a></p>
-<p><a href="https://github.com/digital-fabric/affect">https://github.com/digital-fabric/affect</a></p>
-<p><a href="https://github.com/macabeus/js-proposal-algebraic-effects">https://github.com/macabeus/js-proposal-algebraic-effects</a></p>
-<p><a href="https://github.com/nythrox/effects.js">https://github.com/nythrox/effects.js</a></p>
-<p><a href="https://www.janestreet.com/tech-talks/effective-programming/">https://www.janestreet.com/tech-talks/effective-programming/</a></p>
-<p><a href="https://github.com/ocaml-multicore/effects-examples">https://github.com/ocaml-multicore/effects-examples</a></p>
-<p><a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/">https://overreacted.io/algebraic-effects-for-the-rest-of-us/</a></p>
-<p>&hellip;음&hellip; 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.</p>
-<p>오히려 dry-rb, affect이 더 명확하기는 한거 같아.</p>
-<p>가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.</p>
-<p>분명히 장점을 볼 수 있을거 같은 개념 같다.</p>
-<p>왜냐하면,</p>
-<ol>
-<li>지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면,</li>
-<li>하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.
-<ol>
-<li>그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용.</li>
-<li>(&hellip;그때 그때 Haskell do-notation등에 따라 분리해서 표현)</li>
-<li>좋은점이라면 좋은점일수도 있겠지만.</li>
-</ol>
-</li>
-<li>그런데, aeffects을 이용한다면,
-<ol>
-<li>굳이 그렇게 복잡하게 나누지 않아도 괜찮고,</li>
-<li>monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여.</li>
-</ol>
-</li>
-</ol>
-<p>당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (&hellip;일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, &hellip;처럼)</p>&hellip;
+						<p>
+예전에 다니던 회사의 소식을 뉴스로 봤다. 사고 자체는 그렇게 좋은
+이야기는 아니어서 안타까웠었다.</p>
+<p>
+그리고 나오기 이전에 팀의 문화나 프로세스, 방법론 같은 이야기를 대표와
+많이 나누고 많은 글을 써서 전달한 것이, 관련 검색에 보이는 구인란에 잘
+적혀있고 문화와 시스템에 반영된 것 같아서 기분이 정말 좋았다. 비록
+그것에 대한 기여가 내 몫으로 내 이름을 빛나게 하거나 경제적 이익이
+되지는 못했지만, 그래도 그런 내용들을 이해 해주고 반영한 사람에 대해서
+다시금 애정과 존경의 마음이 들었다.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun13--01-ping/">Ping 13/06/2022 .01</a></h1>
-					<time>🗓️ 13 Jun, 2022</time>
+					<h1 class="title"><a href="/posts/2020-10oct/ping-11sun/">Ping 11/Oct/2020</a></h1>
+					<time>🗓️ 11 Oct, 2020</time>
 					<br><div class="description">
 						
-						<p>기운 없는 날&hellip; 쉬어야겠다.</p>&hellip;
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+어째서 더 잘 그럴 수 있을까
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>무엇인가를 만드는 일은 사실 두 가지 단계로 발전하는 것 같다.</p>
+<p>
+  단지 목적한 그것만을 만드는 일과, 또는 그것을 반복적으로 생산하고 또
+  더 나은 방법으로 추상화하여 내는 도구를 만들어내는 일으로 구분할 수
+  있는 것 같다.</p>
+<p>
+  직관적으로 생각했을 때에는, 목적이 명확하다면 당연히 그것 자체를
+  만드는 일을 이미 존재하는 도구들을 통해서 표현하고 만들면 그만인 것
+  같다.</p>
+<p>
+  그리고 더 나아가서 결과물을 그냥 직접 만드는 것이 아니라, 그 결과물을
+  만들기 위한 도구까지 같이 만들거나, 그 결과물이 그를 만들기 위해
+  고안된 도구를 통해서 만드는 경우가 비교할 수 없이 생산적이고 그 결과물
+  또한 훨씬 매끄럽고 완성도가 높은 경우가 오히려 보통인 것 같다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/ping-10sat/">Ping 10/Oct/2020</a></h1>
+					<time>🗓️ 10 Oct, 2020</time>
+					<br><div class="description">
+						
+						<p>
+오래 써오던 맥북에어의 WIFI이 성능이 계속 안 좋아졌었던 것 같다.</p>
+<p>
+모델명을 알아보니, 2012년 형이었다. 정말 오래 썼구나. <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+어차피 MacOS을 여러 가지 이유로 좋아하지 않아서 그냥
+아치리눅스<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>를 설치하고 그대로 쓰고 있다.</p>
+<p>
+최근에는 아예 WIFI을 USB-LAN으로 연결해주는 RPi을 만들어 쓰고
+있었다. 물론 내장WIFI은 너무 느려서 <code>nmcli r wifi off</code> 을 기본으로
+아예 S/W Disable시켜놓고 살았다.</p>
+<p>
+어쩌다 계기가 있어서, USB-LAN연결용 RPi을 챙기지 못한 외부에서 어쩔 수
+없이 쓰려고 시도해보니, 아예 조금 내장WIFI을 쓰면 조금 동작하다가
+시스템이 뻗어버린다. …아예 맛이 갔나보다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/ping-08thu/">Ping 08/Oct/2020</a></h1>
+					<time>🗓️ 08 Oct, 2020</time>
+					<br><div class="description">
+						
+						<p>
+벌써 겨울 날씨에 매일 다가가는 것 같다. 시간이 흘러가는 것을 며칠
+눈치 채지 못하다가 다시 눈치 챌 수 있게 되었다. 다행이다.</p>&hellip;
 						
 					</div>
                                         
@@ -281,11 +282,11 @@ template cache을 무시하는거 같아.</p>
             <a href="/page/13/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(14/60)</span>
+        <span class="page-number">(14/36)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/15/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -295,7 +296,7 @@ template cache을 무시하는거 같아.</p>
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758347289</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758357531</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

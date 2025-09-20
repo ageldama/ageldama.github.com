@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758347289">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758357531">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.cd54560a7dc868aa5eed67ab0f5b5ca370ae92d5414046da416819aff9faa31e.css" integrity="sha256-zVRWCn3IaKpe7WerD1tco3CuktVBQEbaQWgZr/n6ox4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.ef9bd5a7ccd54d6dcb2a7bda38edf907c7c28980bab2ebe18e86c602bc269dc4.css" integrity="sha256-75vVp8zVTW3LKnvaOO35B8fCiYC6suvhjobGArwmncQ=" crossorigin="anonymous">
                     
                 
             
@@ -149,153 +149,104 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><b><code>"심연을 오랬동안 깊이 들여다보면, 심연도 내게 바나나."</code></b></blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/">FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정</a></h1>
-					<time>🗓️ 05 Nov, 2023</time>
+					<h1 class="title"><a href="/posts/2023-02feb/film-knivesout&#43;ksoapoperas/">나이브스아웃 1, 2편, 그리고 K드라마, K영화</a></h1>
+					<time>🗓️ 03 Feb, 2023</time>
 					<br><div class="description">
 						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-freebsd에서 samba 파일서버 세팅은 프비핸드북 참고
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p><a href="https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba">https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba</a></p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-symlink을 samba에 노출하기
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p>
-<code>/usr/local/etc/smb4.conf</code> 파일에 다음을 추가:</p>
-<div class="src src-conf">
-<pre tabindex="0"><code class="language-conf" data-lang="conf">[global]
-...
-allow insecure wide links =	yes
-
-
-[share]
-...
-follow symlinks = yes
-wide links = yes
-unix extensions = no</code></pre>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
-mdns으로 samba 파일서버를 네트웍에 광고하기
-</h2>
-<div id="outline-text-headline-3" class="outline-text-2">
-<p>
-  보통은 avahi을 써왔는데, mdnsresponder이 더 가볍다고 해서 이렇게 세팅해봄.</p>
-<ol>
-<li><code>pkg install mDNSResponder</code></li>
-<li>
-<p><code>/etc/rc.conf</code> 에 추가:</p>
-<div class="src src-conf">
-<pre tabindex="0"><code class="language-conf" data-lang="conf">mdnsresponderposix_enable=&#34;YES&#34;
-mdnsresponderposix_flags=&#34;-f /usr/local/etc/mdnsresponderposix.conf&#34;</code></pre>
-</div>
-</li>
-<li>
-<p>호스트이름은 <code>freebsd-samsung</code> 으로 smb서비스를 노출.</p>&hellip;
+						<p>&ldquo;나이브스 아웃&rdquo; 1편을 몇 년 묵혀 놓고 시청하지 않았었다.</p>
+<p>최근에 넷플릭스에 2편인 &ldquo;글래스 어니언&quot;도 공개되어 연달아서 이틀 동안
+시청, 정말 즐겁고 감동적이었다.</p>
+<p>1, 2편 모두 출연배우들도 어이가 없게 화려한 영화이고, 그 배우의 그간의
+쌓아놓은 내가 인식하는 통상적인 캐릭터를 잘 비트는 배역도 마음에
+들었다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>언제부터인가 아가사 크리스티 원작이거나 한 정통추리극이 많이
+개봉하던거 같다. 최근에 다시 만드는 그런 영화들을 많이 시청하지는
+못했다.</p>
+<p>나는 추리극을 많이 본적이 없는거 같다. 아니면 내가 감상하는 방식이
+추리물을 추리물으로 본 것이 아니라, 미스테리이거나 아니면 그냥 또다른
+방식의 서사물이거나 블랙코미디처럼 봐왔기 때문인거 같다.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</a></h1>
-					<time>🗓️ 05 Nov, 2023</time>
+					<h1 class="title"><a href="/posts/2023-02feb/2023-02feb03--01-ping/">Ping 03/02/2023 .01: 블로그 디자인 수정</a></h1>
+					<time>🗓️ 03 Feb, 2023</time>
 					<br><div class="description">
 						
-						<p>
-나도 x11에서 wayland 기반으로 옮겨가고 있는데, 다른 것들은 대부분
-괜찮거나 포기.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
-<p>
-가볍고 좋은데, debian chromium에서 ibus으로 한글 입력이 안되어서
-알아봤다.</p>
+						<p>블로그를 내려놓았다가, 다시 글을 쓰고 생각들을 어느 정도는 공개를 하고
+지내고 싶어져서 다시 열었다.</p>
+<p><a href="https://github.com/athul/archie">사용하던 테마</a>를 수정해서 쓰기로
+하고, CSS을 여기저기서 복붙해서 적용해보고, <a href="https://galmuri.quiple.dev/">갈무리
+웹폰트</a>도 적용해서, 오히려 원본 테마보다
+더 가볍게 적당히 만들어봤다.</p>
+<p>색상도, 외양과 기능 디자인 모두 어느 정도 내 취향에 맞게 꾸며 봤다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2023-02feb/2023-02feb02--01-ping/">Ping 02/02/2023 .01: xemacs, gemini, gemtext</a></h1>
+					<time>🗓️ 02 Feb, 2023</time>
+					<br><div class="description">
+						
+						<div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-제미니-계획">1. &ldquo;제미니 계획&rdquo;</a></li>
+    <li><a href="#2-just-like-the-good-ol-days">2. just like the good ol&rsquo; days</a></li>
+    <li><a href="#차라리-돈을-내고-글을-읽겠다만">차라리 돈을 내고 글을 읽겠다&hellip;만</a></li>
+  </ul>
+</nav>
+</div>
+
 <hr>
-<div id="outline-container-headline-1" class="outline-3">
-<h3 id="headline-1">
-1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨.
-</h3>
-<div id="outline-text-headline-1" class="outline-text-3">
-<ul>
-<li>힌트 얻음: <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2058976">https://bugzilla.redhat.com/show_bug.cgi?id=2058976</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-3">
-<h3 id="headline-2">
-2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지?
-</h3>
-<div id="outline-text-headline-2" class="outline-text-3">
-<div class="src src-shell">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  <span class="k">for</span> pid in  <span class="k">$(</span>pgrep chromium<span class="k">)</span><span class="p">;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">#echo $pid</span>
-</span></span><span class="line"><span class="cl">      grep -i gtk /proc/<span class="s2">&#34;</span><span class="nv">$pid</span><span class="s2">&#34;</span>/maps
-</span></span><span class="line"><span class="cl">  <span class="k">done</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-==&gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&gt; ibus
-연동안됨.</p>&hellip;
+<p>추억이 그리워지는 시대여서 그런거 같기도 하다.
+그럼에도 어차피 그렇게 다시 사용하기엔 끔찍할텐데.</p>
+<h1 id="1-제미니-계획">1. &ldquo;제미니 계획&rdquo;</h1>
+<p><a href="https://en.wikipedia.org/wiki/Gemini_(protocol)">gemini protocol</a> 을 기반으로 뭔가 새로운 것을 상상하면 즐겁지만,</p>
+<p>정말 제한적이어서, 내 마음대로의 확장을 떠올리게 된다.</p>
+<p>실은, gemtext와 gemini protocol은 마음에 드는 부분이 바로 그런점이지만: 오히려 제한적이고, 그냥 무시해도 되는 것들을 굳이 지원해줘야 할 것 같은 기분에 져서 우겨넣으면서 complexity만 무한대으로 보낼바엔, 이렇게 무시할 것은 잘 무시하는게 더 좋은거 같아.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-03mar/2023-03mar15--wired-desktop/">내 책상에서 유선랜 환경</a></h1>
-					<time>🗓️ 15 Mar, 2023</time>
+					<h1 class="title"><a href="/posts/2022-11nov/2022-11nov13--01-ping/">Ping 13/11/2022 .01</a></h1>
+					<time>🗓️ 13 Nov, 2022</time>
 					<br><div class="description">
 						
-						<p>
-개인환경을 조금 특이하게 사용하는데, 그 이유와 방식.</p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-why: 유선랜? (무선랜 대신)
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>키보드/마우스 입력이 가장 부드럽게 전달되어서 유선으로 연결해서
-  사용한다.</p>
-<p>
-  x2x으로 연결하거나, ssh-x11-forwarding으로 다른 컴퓨터에서 실행하는
-  프로그램을 디스플레이와 입력장치만 현재 자리에서 그대로 사용할 때에
-  네트웍 연결속도가 딜레이가 적어야 쾌적해서. <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-why: x11? (wayland 대신)
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p>요즘 리눅스/bsd 데스크탑 기본설치하면 wayland으로 세팅하는 경우도
-  많은데, 네트웍을 통해서 ssh-x11-forwarding <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>
-  사용하거나 x2x 사용하기는 아직 부족한거 같아서, 나는 그냥 x11
-  사용함.</p>
-<p>
-  거기에 <a href="https://github.com/jordansissel/xdotool">xdotool</a> 같은 gui-automation/scripting이나 <a href="https://github.com/rvaiya/warpd">warpd</a> 같은 키보드를
-  마우스으로 편안하게 쓰도록 해주는 xtest이나, <a href="https://qjoypad.sourceforge.net/">qjoypad</a> 처럼 <sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>
-  게임패드/조이스틱을 편안하게 마우스/키보드으로 매핑해서 쓰는게 나는
-  많은데 모두 x11만 지원하거나, 아직은 x11에서만 쓸만한 수준으로
-  동작해서.</p>&hellip;
+						<p>비가 많이 내렸다. 일년간 어떻게든 자라던 잎들이 낙엽이 되어 떨어졌다.</p>
+<p>그런데 딱히 걱정스러울게 없었다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun29--02-ping/">react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</a></h1>
+					<time>🗓️ 29 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p><a href="https://jasonformat.com/islands-architecture/">https://jasonformat.com/islands-architecture/</a></p>
+<p>&hellip;이전에 몇번 언급한 <a href="https://hotwired.dev/">hotwired</a> 처럼. ㅎㅎ</p>
+<p>지금의 reactjs, vuejs등은 다음과 같은 방식이 기본:</p>
+<ol>
+<li>server: rest/gql등으로 요청을 받아서, json으로 응답.</li>
+<li>browser(client): 응답으로 받은 json을 받아서, html을 생성하여 렌더링.</li>
+</ol>
+<p>&hellip;이게 편하다고 생각해서 여기로 온거 같아. 나말고도 대부분의 사람들이
+웹화면을 개발하던 시절에는 이렇게 만들고 싶었었던거 같아. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>그리고 당연히 ui개발이기 때문에 &lsquo;컴포넌트모델&rsquo;이나 값바인딩 같은 것들을 원했었고, 현재의 리액트와 같은 형태에 이르른 것 같아.</p>
+<p>물론, vdom이 복잡도를 많이 낮춰줬지만, 희안하게도 예상하지 못하던 문제를 몇가지 더 만들어낸 것 같아. 그래서 요즘엔 ssr이니 seo을 생각해서 다른 방식의 프레임웍들을 사용하려고 하고 있고, 더 나아가서 <a href="https://www.patterns.dev/posts/progressive-hydration/">progressive hydration</a> 같은 쪽으로 더 세밀해지는 양상 같아.<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>&hellip;
 						
 					</div>
                                         
@@ -318,11 +269,11 @@ why: x11? (wayland 대신)
             <a href="/page/6/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(7/60)</span>
+        <span class="page-number">(7/36)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/8/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -332,7 +283,7 @@ why: x11? (wayland 대신)
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758347289</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758357531</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

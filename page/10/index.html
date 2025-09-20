@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758347289">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758357531">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.cd54560a7dc868aa5eed67ab0f5b5ca370ae92d5414046da416819aff9faa31e.css" integrity="sha256-zVRWCn3IaKpe7WerD1tco3CuktVBQEbaQWgZr/n6ox4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.ef9bd5a7ccd54d6dcb2a7bda38edf907c7c28980bab2ebe18e86c602bc269dc4.css" integrity="sha256-75vVp8zVTW3LKnvaOO35B8fCiYC6suvhjobGArwmncQ=" crossorigin="anonymous">
                     
                 
             
@@ -149,111 +149,120 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><b><code>"심연을 오랬동안 깊이 들여다보면, 심연도 내게 바나나."</code></b></blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-02feb/2023-02feb19--01-ping/">Ping 19/02/2023 .01 : 어른이 되기</a></h1>
-					<time>🗓️ 19 Feb, 2023</time>
+					<h1 class="title"><a href="/posts/2022-jekyll/2022-06-08--02-pytest-fixtures-and-complexity-mgmt/">pytest fixtures와 의존성관리, 그리고 복잡도관리</a></h1>
+					<time>🗓️ 08 Jun, 2022</time>
 					<br><div class="description">
 						
-						<p>
-(최근 며칠 우울하고 내가 어른이기는 한가 싶은 자괴감에
-빠졌었다. 그래서인지 자기합리화를 위해 이런 글을 쓰고 있는거 같기도
-하다.)</p>
-<p>
-<div>
-  <nav id="TableOfContents">
-<ul>
-<li><a href="#headline-1">나의 옛날 이야기</a>
-</li>
-<li><a href="#headline-2">어른의 사정</a>
-</li>
-<li><a href="#headline-3">그런데 어떤 어린이는 어른을 이해한다. 때로는</a>
-</li>
-<li><a href="#headline-4">The Overfitting</a>
-</li>
-<li><a href="#headline-5">아직은 어린 마음인, 그래야만 한다는 강박</a>
-</li>
-<li><a href="#headline-6">짝사랑, 혹은 도착증과 그 반대로써인 쩌리의 자존심</a>
-</li>
-<li><a href="#headline-7">신화적인 닌텐도와 그 빠</a>
-</li>
-<li><a href="#headline-8">&#34;괜찮아&#34;</a>
-</li>
-<li><a href="#headline-9">Footnotes</a>
-</li>
-</ul>
-</nav>
+						<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12">12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13">13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14">14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15">15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16">16</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ...tests/conftest.py</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pytest</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@pytest.fixture</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">name</span><span class="p">():</span> <span class="k">return</span> <span class="s1">&#39;Pokemon&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@pytest.fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="s1">&#39;function&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">monster</span><span class="p">(</span><span class="n">name</span><span class="p">):</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ...tests/foo_test.py :</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_beast</span><span class="p">(</span><span class="n">monster</span><span class="p">):</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># &lt;--- `def monster(..)`의 결과를 주입 받음.</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-나의 옛날 이야기
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>80년대의 기억에는, 참 자주도 불량식품 단속에 대한 이야기가 나오던 것
-  같아. 그리고 실제로도 만화, 애니메이션, 게임, 장난감 등등의 라이센스나
-  품질관리에 대한 관념이 희박했던거 같아.</p>&hellip;
+</div><p><a href="https://docs.pytest.org/en/6.2.x/fixture.html">https://docs.pytest.org/en/6.2.x/fixture.html</a></p>
+<p>&hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨.
+내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-02feb/2023-02feb07--01-ping/">Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측</a></h1>
-					<time>🗓️ 07 Feb, 2023</time>
+					<h1 class="title"><a href="/posts/2022-jekyll/2022-06-08--01-asshole-test/">(HN) &#34;asshole test&#34;</a></h1>
+					<time>🗓️ 08 Jun, 2022</time>
 					<br><div class="description">
 						
-						<p>
-문득 떠오른 생각이라서, 그냥 추측.</p>
-<ol>
-<li>
-<p><strong><strong>C</strong></strong> : <em>로마숫자(roman numeral)</em> 으로 100.</p>
-<ol>
-<li>처음부터 의도한 숫자가 100이 아니었을거란건 나도 알거 같아.
-BCPL이나 그런 역사에 대해 나도 조금은 아니까.</li>
-<li>그런데 그 이후에 따르는 언어들이 그런 패턴을 만든거 같아서 재미로
-쓰는 글.</li>
-</ol>
-</li>
-<li>
-<p><strong><strong>C++</strong></strong> : 위의 로마숫자이란 생각과 <em>C언어의 <code>x++</code> 연산</em> 으로 생각해보면,</p>
-<ol>
-<li>즉시 평가할 때에는 C == 100, 그냥 C와 같아 보임.</li>
-<li>그런데 저장된 값은 +1, == 101.</li>
-<li>…어쨌든 그냥 볼 때엔, 씨언어와 거의 같아 보이지만, 그래도 좀
-더 성장했다고. 그리고 겸손하게 오직 +1.</li>
-<li>(그냥 겸손하다고 될 문제인가 싶다… C++ 좋아하지만 ㅎㅎ)</li>
-</ol>
-</li>
-<li>
-<p><strong><strong>D</strong></strong> : C에서 다음 단계으로 발전했으니, 이번엔 다섯배, 역시 로마숫자, 500.</p>&hellip;
+						<blockquote>
+<p>Some years back I applied to join IBM&rsquo;s grad scheme, there was a peculiar stage to the process I&rsquo;ve not seen elsewhere. It was during the onsite day, where a batch of 20 or so applicants were put through various tests in an IBM office. They called it the &ldquo;group test&rdquo;; around 8 of us were led to a room and asked to solve a puzzle together. Each of us was given an information pack, there was a white board, and a timer ticking down from 60 minutes. At first there was silence as we looked at our packs, then the first voice: &ldquo;Let&rsquo;s pool our information&rdquo;, someone stands up by the whiteboard, grasping a marker. Silence, it&rsquo;s not clear how this information should be parsed. One person starts reading theirs out word for word. This is not going to scale. Someone interrupts. Before long the whiteboard leader has been deposed and another is wielding the marker. Then another fights for control. The 60 minutes has run out, the puzzle is unsolved. Confused and drained we head off to the next test.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-02feb/2023-02feb04--01-ping/">Ping 04/02/2023 .01: 씨언어의 장자 zig, rust, golang, c&#43;&#43; ???</a></h1>
-					<time>🗓️ 04 Feb, 2023</time>
+					<h1 class="title"><a href="/posts/2022-jekyll/2022-06-06--01-hotwired-fun/">Hotwired 재밌다.</a></h1>
+					<time>🗓️ 06 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p><a href="https://hotwired.dev/">Hotwired</a> 재밌다.</p>
+<p>Stimulus, Turbo + Rails 7 갖고 이것저것 패턴별로 생각해보고 만드는게 즐겁네.</p>
+<p>딱, 이렇게 문제 그자체를 이해하고 설계해놓은 것들은 익히고 사용하는게 너무 즐겁다.
+rails도 그랬었고, &hellip;처음 볼때에는 뭐 이렇게 단순해? 싶을 정도로.</p>
+<p>너무 거창하거나, 실제로는 그 문제를 깊이 생각해서 푼게 아니라, 너무 범용적이고 범우주적인 해법(예: 상태관리, 컴포넌트 모델)만으로 퉁치려는것보다는. &hellip;이제 그런것들에 혹하거나 끌리지 않게 되었다.</p>
+<p>그리고 또 한편으로는, 모든 해법은 단순하고 우아해야만 한다고 믿고 싶어서 믿는 fanboy가 되고 싶지도 않고.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2021-06jun/ping-19sat/">Ping 19/Jun/2021</a></h1>
+					<time>🗓️ 19 Jun, 2021</time>
 					<br><div class="description">
 						
 						<p>
-최근에 재미로 <a href="https://ziglang.org/">zig</a> 을 정말 재밌게 &#39;읽었다&#39;. 공부해보고 실제로 뭔가
-코딩을 많이 해보거나 한 것은 아니고, 대체 어떻게 동작하는 프로그램을
-이걸로 만들라고 하는건지 이해하고 싶었기 때문에 해봤다.</p>
+그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,
+github repositories도 대부분은 private으로 변경해놓고 지냈었다.</p>
 <p>
-zig으로 프로그램을 짜는게 궁금하던 부분은 haskell의 monad을 이용한
-방식, 혹은 apl이나 prolog으로 실제프로그램을 어떻게 만들 수 있을지
-패러다임부터 다른 언어를 공부하고 생각해보는 것과는 조금 다를수도
-있겠다. 어쨌든 그냥 imperative언어이니까.</p>
+하지만 그래도 coding과 글쓰기는 계속 하고 있었었고, 글을 조금씩이라도 공개할까 싶어 다시 문을 연다.</p>
 <p>
-오히려, zig을 어떻게 써먹어야 할지 궁금하던 지점은, c++의
-스마트포인터와 move semantics등을 이해하는 것이나, rust의 borrowing
-checker, rc/arc등을 이해하는 것과 마찬가지인 것 같다.
-둘 다 이해하고 익숙해지면 그렇게 부담스럽지 않을거 같긴 하다.</p>&hellip;
+그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,</p>
+<p>
+Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것,
+또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.</p>
+<p>
+그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.
+이제는 너무 이맥스 + evil 설정 등에 익숙해져서 vim을 오히려 더 설정해서 쓰고 싶은 생각도 들지 않는다.
+..하지만 다른 이들에게 이맥스를 쓰라고 권하기는 머뭇거려진다. 어릴 때부터 이맥스를 사용했고 그렇게 습관으로 하나씩 하나씩 이맥스 컨벤션과 모드들에 익숙해져서 시간이 오래 걸렸었던 것 같으니까.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-11nov/ping-29sun/">Ping 29/Nov/2020</a></h1>
+					<time>🗓️ 29 Nov, 2020</time>
+					<br><div class="description">
+						
+						<p>
+2020년이 지나간다. 금새 또 봄이 올텐데 기대된다.</p>&hellip;
 						
 					</div>
                                         
@@ -276,11 +285,11 @@ checker, rc/arc등을 이해하는 것과 마찬가지인 것 같다.
             <a href="/page/9/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(10/60)</span>
+        <span class="page-number">(10/36)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/11/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -290,7 +299,7 @@ checker, rc/arc등을 이해하는 것과 마찬가지인 것 같다.
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758347289</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758357531</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

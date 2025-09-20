@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758347289">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758357531">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.cd54560a7dc868aa5eed67ab0f5b5ca370ae92d5414046da416819aff9faa31e.css" integrity="sha256-zVRWCn3IaKpe7WerD1tco3CuktVBQEbaQWgZr/n6ox4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.ef9bd5a7ccd54d6dcb2a7bda38edf907c7c28980bab2ebe18e86c602bc269dc4.css" integrity="sha256-75vVp8zVTW3LKnvaOO35B8fCiYC6suvhjobGArwmncQ=" crossorigin="anonymous">
                     
                 
             
@@ -149,142 +149,133 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><b><code>"심연을 오랬동안 깊이 들여다보면, 심연도 내게 바나나."</code></b></blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/leet-code-1614/">CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
-					<time>🗓️ 20 Oct, 2020</time>
-					<br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-문제
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p><a href="https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/">https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/</a></p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-작성한 코드     
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<div class="src src-lisp">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">max-nested-parentheses</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">optimize</span> <span class="p">(</span><span class="nv">speed</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nv">safety</span> <span class="mi">0</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="k">type</span> <span class="kt">simple-string</span> <span class="nv">s</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">loop</span> <span class="nv">with</span> <span class="nv">n</span> <span class="kt">fixnum</span> <span class="nf">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">          <span class="nv">for</span> <span class="nv">ch</span> <span class="nv">across</span> <span class="nv">s</span>
-</span></span><span class="line"><span class="cl">          <span class="nb">when</span> <span class="p">(</span><span class="nf">member</span> <span class="nv">ch</span> <span class="o">&#39;</span><span class="p">(</span><span class="sc">#\(</span> <span class="sc">#\)</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">          <span class="nb">do</span> <span class="p">(</span><span class="nb">incf</span> <span class="nv">n</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">eql</span> <span class="sc">#\(</span> <span class="nv">ch</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">-1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">             <span class="nv">maximizing</span> <span class="nv">n</span><span class="p">))</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
-코드 의도
-</h2>
-<div id="outline-text-headline-3" class="outline-text-2">
-<ol>
-<li>우아한 코드보다는 공간복잡도가 <code>O(1)</code> 이고 싶었다.</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-headline-4" class="outline-2">
-<h2 id="headline-4">
-<em>Edit</em>
-</h2>
-<div id="outline-text-headline-4" class="outline-text-2">
-<ol>
-<li>
-<p>SBCL에 맞춰 코드에 타입을 지정해줘봤다.</p>
-<ol>
-<li>결과 어셈블리 코드가 조금 짧아졌다.</li>
-</ol>
-</li>
-</ol>
-</div>
-</div>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/ping-19mon/">Ping 19/Oct/2020</a></h1>
-					<time>🗓️ 19 Oct, 2020</time>
-					<br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-가을
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>도르트문트 집은 꽤 평화로웠다. 날씨가 좋은 날도 많고 공기도
-  맑았다. 한가한 주말이 되면 창문을 열고 잔디가 깔린 정원을 보며
-  담배를 태우고 커피를 내려 마셨다.</p>
-<p>
-  그리고 지하세탁장에 빨래를 돌려놓고 핑크플로이드의 다크사이드 오브
-  더 문 앨범을 좋은 스피커로 틀어놓았다. 잘 어울렸다.</p>
-<p>
-  서울의 변두리에서 맞는 이번 가을은 그런 기분이다. 조용하고 가을
-  햇살과 공기가 맑아졌다.</p>
-<p>
-  그리고 핑크플로이드를 그렇게 여유롭게 들을 수 있었다.</p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-오늘 읽으려는 글
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p><a href="http://www.mcs.vuw.ac.nz/comp/Publications/CS-TR-02-9.abs.html">http://www.mcs.vuw.ac.nz/comp/Publications/CS-TR-02-9.abs.html</a></p>
-</div>
-</div>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/ping-17sat-2nd/">Ping (2nd) 17/Oct/2020</a></h1>
-					<time>🗓️ 17 Oct, 2020</time>
+					<h1 class="title"><a href="/posts/2020-05may/ping-23sat/">Ping 23/May/2020</a></h1>
+					<time>🗓️ 23 May, 2020</time>
 					<br><div class="description">
 						
 						<p>
-  올해 초 <a href="https://github.com/ageldama/cl-state-machine">cl-state-machine 라이브러리</a>를 만들어 공개한 이후로
-  커먼리습을 쓰지는 않았다.</p>
+지난 2달여간 매일 같이 몰입해 매진한 작업의 성능 테스트를
+진행했다. 그리고 매 시점마다 테스트와 측정 결과에서 놀라던 것과
+마찬가지 포인트에서 많은 관점이 변화한다. 아직도 많은 일을 더
+해나가야겠지만 그래도 지금은 이 정도에서 우선은 만족스럽다.</p>
 <p>
-  다른 직업상 쓰는 언어들만을 쓰고 오픈소스와 개인적으로 만들고 싶은
-  프로젝트를 위해서 쓰는 언어인 커먼리습은 미뤄두었었다.</p>
+작년과 재작년, 그 이전에는 매 일터마다 배울 점들이 있었던 것
+같다. 그리고 지난 포스팅에도 말했듯이 내 많은 관점들을 발전시켜준 좋은
+사람들과 멋진 경험들을 했었던 것 같다.</p>
 <p>
-  다시 커먼리습을 해야겠다고 생각이 들었다. 개인적으로 만들고 싶은
-  프로젝트도 있고, 그 프로젝트를 위해서 프론트엔드를 만드는데 React와
-  Vue을 써보고 이해하고 있어도 쓰고 싶지는 않기 때문이다.</p>
+다만 올해 잠시 조인했었던 곳에서는 정반대의 경험이었었다. 많은, 이미
+알고 있는 것들을 다시 확인했는데 그것들은 나 자신으로부터 배운 것들과
+타산지석의 가르침들이었었다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-05may/ping-18mon/">Ping 18/May/2020</a></h1>
+					<time>🗓️ 18 May, 2020</time>
+					<br><div class="description">
+						
+						<p>
+오랬만에 예전 직접 같이 일한 것은 아니지만, 같은 회사에서 일하던
+사람을 만나 오래 이야기를 나눴다. 많은 이야기를 해준 덕분에 재미있는
+이야기들을 많이 알게 됐다.</p>
 <p>
-  사실 커먼리습은 그렇게 문법이 예쁘지도, 멋진 React와 같은 멋진
-  프레임웍이나 최신의 유행하는 라이브러리들을 모두 갖고 있지도 않다.</p>
+누군가를 만나고 아주 조금이라도 시간을 함께 하면 언제나 놀랍다. 나
+자신을 변화시키는 경험을 하게 해주는 이였다. 아주 짧은 단편적인
+일화들만을 경험해도 그렇게 해주는 이를 만나 이야기를 나누는 것은
+감사하다.</p>
 <p>
-  <a href="https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec">HyperSpec</a>을 읽다 보면 아주 쉽게 정의되어 있는 키워드들이 일관성이
-  있지도, 지금 시대의 관점에서 보기에 익숙한 현대적인 용어들을
-  사용해서 이름을 지어놓지도 않았다.</p>&hellip;
+지나간 사람들과 시간들을 최근에 생각해보며 어떤 사람들이 어떻게 내
+생각에 영향을 주었는지를 보았다. 그리고 감사한 이들이 많이
+떠올랐다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-04apr/void-linux/">Void Linux &#43; Runit으로 데스크탑/랩탑 환경 설정하기</a></h1>
+					<time>🗓️ 02 May, 2020</time>
+					<br><div class="description">
+						
+						<p>
+지난 한 달여간 눈코 뜰새 없이 바쁘게 지냈었다. 그렇게 지내다가
+오랬만에 툭닥거려봤다.</p>
+<p>
+재미로 <a href="https://voidlinux.org/">Void Linux</a>을 설치해봤다. 사실 설치해보고 한적은 꽤 됐고, 메모리
+사용량이 훨씬 가볍고 빠른 성능 때문에, Arch Linux도 충분히 가볍고
+좋지만, 제대로 설정해서 사양이 좋지 않은 랩탑, 데스크탑들을 위해서
+쓰기로 생각하고 있었었다.</p>
+<p>
+2007년 정도에 Gentoo Linux으로 회사 데스크탑과 Oracle DBMS 서버를
+재밌게 설정한 이후로, 오랬만에 정말 가벼운 리눅스 배포판을 설치하는
+느낌이었다.</p>
+<p>
+아치리눅스는 Pacman, Makepkg, AUR 같은 것들도 체계가 잘 잡혀있고,
+오히려 Portage 보다 잘 관리되고 괜찮지 않은가 싶기도 할 때가 많아서
+굳이 Gentoo을 다시 쓸 일은 없을 것 같다. 그리고 FreeBSD의 Ports도
+좋지만, AUR에 비해서 포함하는 패키지, 업데이트 빈도가 다른
+느낌이다. 사실 AUR이 정말 빈도가 높은 편이라 그렇겠지. FreeBSD Ports도
+정말 열심히 업데이트 되지만.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-04apr/ping-25sat/">Ping 25/Apr/2020</a></h1>
+					<time>🗓️ 25 Apr, 2020</time>
+					<br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+계속해서 글을 쓰기
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ul>
+<li>내용은 없음 *</li>
+</ul>
+</div>
+</div>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-02feb/make-grub2-usb/">Grub2, Archlinux ISO으로 만능 USB 메모리스틱 만들기</a></h1>
+					<time>🗓️ 23 Feb, 2020</time>
+					<br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+경고
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>&#34;만능USB&#34;이란 말은 사실 <strong>과대광고입니다</strong>.</p>
+<p>
+  하지만, 몇 가지 장점이 있는 USB 메모리스틱을 만드는 방법임:</p>
+<ol>
+<li>아치리눅스 설치ISO 이미지으로 부팅 가능한 USB 스틱이면서도,</li>
+<li>
+<p>ISO파일의 용량만큼만 USB메모리를 활용하는 것이 아니라,</p>
+<ul>
+<li>용량이 되는만큼 그냥 일반적인 메모리스틱처럼 파일 복사용으로도
+쓸 수 있음.</li>
+</ul>
+</li>
+</ol>
+<p>사실 리눅스든 다른 OS의 설치 이미지를 USB메모리에 올리면, 딱 그 설치
+  이미지만큼만 사용할 수 있게 만들어 버리고, 그나마도 Read-only 상태인
+  ISO이 되어버리고, 더더욱 나쁘게 다른 추가 파티션을 만들어서 남는
+  공간을 활용할 수도 없게 만든다. (파티션 이미지가 아니라
+  디스크이미지인가보다.)</p>&hellip;
 						
 					</div>
                                         
@@ -307,11 +298,11 @@
             <a href="/page/20/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(21/60)</span>
+        <span class="page-number">(21/36)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/22/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -321,7 +312,7 @@
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758347289</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758357531</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

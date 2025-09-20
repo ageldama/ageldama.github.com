@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758347289">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758357531">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.cd54560a7dc868aa5eed67ab0f5b5ca370ae92d5414046da416819aff9faa31e.css" integrity="sha256-zVRWCn3IaKpe7WerD1tco3CuktVBQEbaQWgZr/n6ox4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.ef9bd5a7ccd54d6dcb2a7bda38edf907c7c28980bab2ebe18e86c602bc269dc4.css" integrity="sha256-75vVp8zVTW3LKnvaOO35B8fCiYC6suvhjobGArwmncQ=" crossorigin="anonymous">
                     
                 
             
@@ -149,73 +149,219 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><b><code>"심연을 오랬동안 깊이 들여다보면, 심연도 내게 바나나."</code></b></blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-11nov/2022-11nov13--01-ping/">Ping 13/11/2022 .01</a></h1>
-					<time>🗓️ 13 Nov, 2022</time>
+					<h1 class="title"><a href="/posts/2020-11nov/org-more-1st-rel/">&#34;org-more.el&#34; released!</a></h1>
+					<time>🗓️ 04 Nov, 2020</time>
 					<br><div class="description">
 						
-						<p>비가 많이 내렸다. 일년간 어떻게든 자라던 잎들이 낙엽이 되어 떨어졌다.</p>
-<p>그런데 딱히 걱정스러울게 없었다.</p>&hellip;
+						<p>
+<a href="https://github.com/ageldama/org-more">org-more.el: search .org files have certain tags (#+tags[]:
+or #+tags[]:)</a></p>
+<p>
+개인 위키, KB처럼 org 파일 모음을 사용하고 있는데, 디렉토리 계층과
+직접 링크 관계만이 아니라 같은 태그들으로 묶어서 각 파일들을 검색하고
+리스팅 할 수 있도록 만들었다.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun29--02-ping/">react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</a></h1>
-					<time>🗓️ 29 Jun, 2022</time>
+					<h1 class="title"><a href="/posts/2020-11nov/ping-02mon/">Ping 02/Nov/2020</a></h1>
+					<time>🗓️ 02 Nov, 2020</time>
 					<br><div class="description">
 						
-						<p><a href="https://jasonformat.com/islands-architecture/">https://jasonformat.com/islands-architecture/</a></p>
-<p>&hellip;이전에 몇번 언급한 <a href="https://hotwired.dev/">hotwired</a> 처럼. ㅎㅎ</p>
-<p>지금의 reactjs, vuejs등은 다음과 같은 방식이 기본:</p>
-<ol>
-<li>server: rest/gql등으로 요청을 받아서, json으로 응답.</li>
-<li>browser(client): 응답으로 받은 json을 받아서, html을 생성하여 렌더링.</li>
-</ol>
-<p>&hellip;이게 편하다고 생각해서 여기로 온거 같아. 나말고도 대부분의 사람들이
-웹화면을 개발하던 시절에는 이렇게 만들고 싶었었던거 같아. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
-<p>그리고 당연히 ui개발이기 때문에 &lsquo;컴포넌트모델&rsquo;이나 값바인딩 같은 것들을 원했었고, 현재의 리액트와 같은 형태에 이르른 것 같아.</p>
-<p>물론, vdom이 복잡도를 많이 낮춰줬지만, 희안하게도 예상하지 못하던 문제를 몇가지 더 만들어낸 것 같아. 그래서 요즘엔 ssr이니 seo을 생각해서 다른 방식의 프레임웍들을 사용하려고 하고 있고, 더 나아가서 <a href="https://www.patterns.dev/posts/progressive-hydration/">progressive hydration</a> 같은 쪽으로 더 세밀해지는 양상 같아.<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun29--01-ping/">linux/unix 팁 29/06/2022 .01</a></h1>
-					<time>🗓️ 29 Jun, 2022</time>
-					<br><div class="description">
-						
-						<div>
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</a></li>
-    <li><a href="#ssh으로-키보드마우스-안-붙이고">ssh으로 키보드/마우스 안 붙이고</a>
-      <ul>
-        <li><a href="#vconsole-conspy">vconsole: <code>conspy</code></a></li>
-        <li><a href="#x11-x2x으로-여러-머신스크린에-걸쳐서-마우스키보드-공유">x11: <code>x2x</code>으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+						<p>
+(functional) reactive 관련들을 다시 찾아 보고 있다.</p>
+<p>
+예전에 webdev은 아니고 백엔드를 위해서 <a href="https://github.com/ReactiveX/rxjs">rxjs</a> 을 쓸 일이 있었었고
+꽤 재밌었다. node.js에서 async/await 이전에 동시성 처리를 하기에
+유용하게 쓸 수 있었었고, 실은 그냥 <a href="https://stackoverflow.com/questions/51542865/is-rxjs-observable-a-monad">monad이어서</a> 조금만 이해를 하고
+사용하면 여러모로 편리했었다.</p>
+<p>
+https://github.com/stoeffel/awesome-frp-js 여기에 보면 rxjs이외에도
+다른 js을 위한 FRP라이브러리들이 많이 생겼었다.</p>
+<p>
+그 중에 흥미가 있어서 <a href="https://github.com/baconjs/bacon.js">bacon.js</a> 을 읽고 rxjs에서 만들어 본 작은 예제
+프로젝트를 다시 작성해봤다. 깔끔했다.</p>
+<p>
+rxjs으로 작성했었던 작은 예제는 다음과 같다.</p>
+<div class="src src-javascript">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
+</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
+</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
+</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
+</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
+</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
+</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
+</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
+</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
+</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
+</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
+</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
+</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="kr">import</span> <span class="p">{</span> <span class="nx">fromEvent</span><span class="p">,</span> <span class="nx">Subject</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// eslint-disable-next-line object-curly-newline
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">import</span> <span class="p">{</span> <span class="nx">debounceTime</span><span class="p">,</span> <span class="nx">mapTo</span><span class="p">,</span> <span class="nx">scan</span><span class="p">,</span> <span class="nx">map</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;rxjs/operators&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">import</span> <span class="nx">jquery</span> <span class="nx">from</span> <span class="s1">&#39;jquery&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">counter$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Subject</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">counter$</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">scan</span><span class="p">((</span><span class="nx">n</span><span class="p">,</span> <span class="nx">acc</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">+</span> <span class="nx">acc</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">debounceTime</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">count</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#count&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">count</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">counter2$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Subject</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">counter2$</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">scan</span><span class="p">((</span><span class="nx">n</span><span class="p">,</span> <span class="nx">acc</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">+</span> <span class="nx">acc</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">count</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#count2&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">count</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">increase$</span> <span class="o">=</span> <span class="nx">fromEvent</span><span class="p">(</span><span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#increase&#39;</span><span class="p">),</span> <span class="s1">&#39;click&#39;</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">mapTo</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">decrease$</span> <span class="o">=</span> <span class="nx">fromEvent</span><span class="p">(</span><span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#decrease&#39;</span><span class="p">),</span> <span class="s1">&#39;click&#39;</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">mapTo</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">increase$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter$</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">increase$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">map</span><span class="p">((</span><span class="nx">n</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter2$</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">decrease$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter$</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">decrease$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">map</span><span class="p">((</span><span class="nx">n</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter2$</span><span class="p">);</span></span></span></code></pre></td></tr></table>
 </div>
-
-<hr>
-<p>리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.</p>
-<p>그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.</p>
-<h1 id="zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</h1>
-<p>최근/디렉토리 이동한 히스토리에 따라서 (&ldquo;frecent&rdquo;) 이동하기:</p>
-<p>fzf+zsh의 <code>Control-R</code>도 좋고<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,</p>
-<p>oh-my-zsh 내장인 <code>plugins=(z)</code>도 좋지만<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
-<p>&hellip;나는 가능하면 <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a>이 가장 가볍고 좋은거 같다.</p>
-<p>설치하고 나서,
-<code>eval &quot;$(zoxide init zsh)&quot;</code></p>
-<p>그리고, <code>z SOME-DIR</code>, <code>zi</code> 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ</p>&hellip;
+</div>
+</div>
+<p>
+(<code>package.json</code>, <code>webpack.config.js</code>, 관련 html 파일 등은 생략했다.)</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/asdf-subdir-finder-1st/">&#34;asdf-subdir-finder&#34; released!</a></h1>
+					<time>🗓️ 26 Oct, 2020</time>
+					<br><div class="description">
+						
+						<p>
+지난번 포스팅한 &#34;<a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">asdf 정의를 내 코드베이스의 하위디렉토리에서 자동으로
+로딩하기</a>&#34;를 프로젝트으로 만들었다.</p>
+<p>
+<a href="https://github.com/ageldama/asdf-subdir-finder">https://github.com/ageldama/asdf-subdir-finder</a></p>
+<p>
+사람마다 커먼리습으로 작업하는 스타일에 따라 많이 다를 수 있어서 안
+써도 되기도 하지만, 그냥 정리해서 공개는 해봤다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">&#34;커먼리습 ASDF 불러오기 편하게 하기&#34; 대모험</a></h1>
+					<time>🗓️ 23 Oct, 2020</time>
+					<br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+ASDF와 system definition file 검색의 정석
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>이전에 <a href="/posts/2018-11nov/cl-asdf-custom-load-script/">ASDF을 이용하여 커먼리습 프로젝트의 의존성, 시스템을 로딩하기</a>
+  에 대해서 설명한 적이 있었다.</p>
+<p>
+  이전에 다룬 내용은 정석적으로 <code>$HOME/common-lisp</code> 디렉토리에 <code>.asd</code>
+  파일을 심볼릭링크를 걸고, <code>(asdf:load-system ..)</code> 을 시도하는
+  내용이었었다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Prototyping등 더 편안하게 혼자 코딩을 할 때는…
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>혼자 커먼리습 코딩을 하면서, 나는 더 간단하게 프로젝트를 시작하는
+  방법을 선호한다.</p>
+<p>
+  커먼리습이 파일 이름이나 경로에 대해서 의존하는 것이 아니고,
+  컴파일시점, 로딩시점에 순서에 따라 로딩해서 최종적으로 컴파일하여
+  적재한 결과 이미지를 더 중요하게 여기기 때문에, 그리고 그런 컴파일,
+  빌드, 로딩과 같은 모든 단계들 자체도 커먼리습 표현식 그자체로
+  동작하기 때문에 그냥 하나의 소스파일을 섹션별로 나눠서 작업하면
+  편리하다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/leet-code-1614-2nd/">CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
+					<time>🗓️ 21 Oct, 2020</time>
+					<br><div class="description">
+						
+						<p>
+<a href="/posts/2020-10oct/leet-code-1614/">어제 작성한 LOOP매크로을 이용한 구현</a> 을 풀어서, 만약 LOOP매크로가
+없었더라면 어떻게 짰을지 작성해봤다.</p>
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">max-nested-parentheses-raw</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">optimize</span> <span class="p">(</span><span class="nv">speed</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nv">safety</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="k">type</span> <span class="kt">simple-string</span> <span class="nv">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">n</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">result</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">type</span> <span class="kt">fixnum</span> <span class="nv">n</span> <span class="nv">result</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">dotimes</span> <span class="p">(</span><span class="nv">s--cur-idx</span> <span class="p">(</span><span class="nf">length</span> <span class="nv">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">ch</span> <span class="p">(</span><span class="nf">elt</span> <span class="nv">s</span> <span class="nv">s--cur-idx</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nf">member</span> <span class="nv">ch</span> <span class="o">&#39;</span><span class="p">(</span><span class="sc">#\(</span> <span class="sc">#\)</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nb">incf</span> <span class="nv">n</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">eql</span> <span class="sc">#\(</span> <span class="nv">ch</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">-1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nb">setf</span> <span class="nv">result</span> <span class="p">(</span><span class="nf">max</span> <span class="nv">n</span> <span class="nv">result</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">result</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+여전히 타입을 지정해서 자동으로 타입추론, 최적화 하도록 했다.</p>
+<p>
+그런데 여전히 <code>dotimes</code>, <code>when</code>, <code>incf</code>, <code>max</code> 같은 커먼리습
+HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이런 것들도
+다 풀어서 작성해도 되겠지만 별 의미는 없을 것 같아서.</p>&hellip;
 						
 					</div>
                                         
@@ -238,11 +384,11 @@
             <a href="/page/11/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(12/60)</span>
+        <span class="page-number">(12/36)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/13/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -252,7 +398,7 @@
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758347289</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758357531</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

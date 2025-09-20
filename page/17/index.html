@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758347289">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758357531">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.cd54560a7dc868aa5eed67ab0f5b5ca370ae92d5414046da416819aff9faa31e.css" integrity="sha256-zVRWCn3IaKpe7WerD1tco3CuktVBQEbaQWgZr/n6ox4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.ef9bd5a7ccd54d6dcb2a7bda38edf907c7c28980bab2ebe18e86c602bc269dc4.css" integrity="sha256-75vVp8zVTW3LKnvaOO35B8fCiYC6suvhjobGArwmncQ=" crossorigin="anonymous">
                     
                 
             
@@ -149,70 +149,147 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><b><code>"심연을 오랬동안 깊이 들여다보면, 심연도 내게 바나나."</code></b></blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2021-06jun/ping-19sat/">Ping 19/Jun/2021</a></h1>
-					<time>🗓️ 19 Jun, 2021</time>
-					<br><div class="description">
-						
-						<p>
-그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,
-github repositories도 대부분은 private으로 변경해놓고 지냈었다.</p>
-<p>
-하지만 그래도 coding과 글쓰기는 계속 하고 있었었고, 글을 조금씩이라도 공개할까 싶어 다시 문을 연다.</p>
-<p>
-그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,</p>
-<p>
-Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것,
-또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.</p>
-<p>
-그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.
-이제는 너무 이맥스 + evil 설정 등에 익숙해져서 vim을 오히려 더 설정해서 쓰고 싶은 생각도 들지 않는다.
-..하지만 다른 이들에게 이맥스를 쓰라고 권하기는 머뭇거려진다. 어릴 때부터 이맥스를 사용했고 그렇게 습관으로 하나씩 하나씩 이맥스 컨벤션과 모드들에 익숙해져서 시간이 오래 걸렸었던 것 같으니까.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-11nov/ping-29sun/">Ping 29/Nov/2020</a></h1>
-					<time>🗓️ 29 Nov, 2020</time>
-					<br><div class="description">
-						
-						<p>
-2020년이 지나간다. 금새 또 봄이 올텐데 기대된다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-11nov/ping-23tue/">Ping 23/Nov/2020</a></h1>
-					<time>🗓️ 23 Nov, 2020</time>
+					<h1 class="title"><a href="/posts/2020-08aug/ping-30sun/">Ping 30/Aug/2020</a></h1>
+					<time>🗓️ 30 Aug, 2020</time>
 					<br><div class="description">
 						
 						<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
-logitech k480 bluetooth keyboard
+프로젝트 마무리
 </h2>
 <div id="outline-text-headline-1" class="outline-text-2">
-<p><a href="https://www.logitech.com/ko-kr/product/multi-device-keyboard-k480">https://www.logitech.com/ko-kr/product/multi-device-keyboard-k480</a></p>
+<p>문서도 초안을 다 썼고, 마무리 중.</p>
 <p>
-  받아서 묵혀두던 키보드. 팬터그래프 방식을 쓰던 것과는 또 다르지만
-  그럭저럭 마음에 든다.</p>
+  분산 커밋로그에 저장하고 읽는 것들을 aync. io을 이용해서 실행되도록
+  하고 있다. 처음엔 그냥 C라이브러리 기반으로 된 blocking 버젼으로
+  만족스러울 정도로 빠른 커밋로그라 그럭저럭 괜찮았는데 한개의 실제
+  사이클인 것처럼 줄일 수 있어서.</p>
 <p>
-  가장 마음에 드는 부분은, 키들끼리의 간격이 적당하고, 키보드
-  레이아웃에서 마우스 이동이 없도록 키패드 부분이 없는 방식인 점,
-  그리고 장난감스러운 키보드지만 그렇다고 오타가 넘치도록 너무 대충
-  만들어진 것은 아닌 것 같아서 그럭저럭 짜증을 유발하지 않으면서
-  적당히 쓸 수 있는 것 같아서.</p>
+  또 그냥 failure을 처리하는 부분을 바꾸고, 전체 애플리케이션을
+  특정시점에 더 실제 실행시점처럼 흉내내서 동작하도록 만들 수 있게
+  했다.</p>
 <p>
-  책상에 공간을 너무 잡아먹지도 않아서 그럭저럭 괜찮다.</p>
+  마무리도 마지막 검증이랑 마쳐가고 있고. 8월도 마무리
+  되어간다. 시간이 빠르다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+<strong>EDIT</strong> 모두 완료!
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>클라이언트 애플리케이션, 문서, 만족스러운 검증 등등 원하는 것들을 다
+  완료했다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping-28fri/">Ping 28/Aug/2020</a></h1>
+					<time>🗓️ 28 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+날씨가 덥고 습하다. 거기에 마스크까지 해야해서 내가 좋아하는
+오래걷기를 하기에 그다지 좋은 시절은 아니다.</p>
 <p>
-  다만 블루투스 방식이어서, 건전지를 써서 내게는 조금은 감점.</p>&hellip;
+문득 생각이 들었다. 아주 얼마 전까지만해도 이런 상황을 대부분의 자기
+자신이 정상이라고 믿고 싶어하는 이들은 모두가 이렇게 살아가는 세상을
+이야기를 들으면 비웃었을 것이다. 그리고 실제로 그런 일들을 많이 보아온
+것 같다. 방독면이나 산소마스크 방호복 대신에 KF94 마스크일뿐인.</p>
+<p>
+많은 아이디어와 예견들이 맞아들어가는 시절이다. 한편으로는 그런 것을
+이해하고 세상의 변화에 대해서 조금은 알맞게 나 자신이 알아채고 살아온
+것이 뿌듯하면서도 꼭 달갑지는 않기도 하다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/">Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</a></h1>
+					<time>🗓️ 27 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.</p>
+<p>
+USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을
+쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고
+유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.</p>
+<p>
+정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마
+<a href="https://github.com/aircrack-ng/rtl8812au">https://github.com/aircrack-ng/rtl8812au</a> 이 드라이버가 살렸다.</p>
+<div class="src src-text">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># lsusb
+</span></span><span class="line"><span class="cl">Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU]</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+그것도 DKMS으로 빌드하면 안되고 그냥 <code>make install</code> 해서 동작하게
+되었다. 다행이었다. </p>
+<p>
+그리고 나서 나중에도 로딩하도록 /etc/module-load
+<code>/etc/modules-load.d/rtlusb.conf</code> 에 <code>88XXau</code> 라인을 넣고 저장.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping-27thu/">Ping 27/Aug/2020</a></h1>
+					<time>🗓️ 27 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+그간 진행해오던 프로젝트는 성능에 대해서 premature optimization을
+고려해서 만들기 보다는 architectural한 면에 비중을 갖고 가능성을
+염두에두고 선택을 해오며 만들었다.</p>
+<p>
+그럼에도 꽤 괜찮은 성능이었었고, 이제는 첫번째 버젼의 완성과 문서
+작성도 완료한 시점이어서 앞으로 성능을 높일 방안을 고민해보고 실험을
+몇개 수행해서 방법 결정해봤다.</p>
+<p>
+(현재 사용하는 방법과 새로이 사용할 방안의 이름은 모두 변경했다.)</p>
+<ol>
+<li>
+<p>기존 성능 측정은:</p>
+<ol>
+<li>
+<p>X event-writer</p>
+<ul>
+<li>commit을 한번에 하지 않고, 매 이벤트마다 수행해서
+느림. (현재는 변경되었음)</li>
+<li>약 11,196-microseconds (11-ms)</li>
+</ul>
+</li>
+<li>
+<p>X journal-writer</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping-25tue/">Ping 25/Aug/2020</a></h1>
+					<time>🗓️ 25 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+the end of the belle époque?</p>&hellip;
 						
 					</div>
                                         
@@ -235,11 +312,11 @@ logitech k480 bluetooth keyboard
             <a href="/page/16/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(17/60)</span>
+        <span class="page-number">(17/36)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/18/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -249,7 +326,7 @@ logitech k480 bluetooth keyboard
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758347289</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758357531</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

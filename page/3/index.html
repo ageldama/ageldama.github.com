@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.147.9">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758347288">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758357531">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.cd54560a7dc868aa5eed67ab0f5b5ca370ae92d5414046da416819aff9faa31e.css" integrity="sha256-zVRWCn3IaKpe7WerD1tco3CuktVBQEbaQWgZr/n6ox4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.ef9bd5a7ccd54d6dcb2a7bda38edf907c7c28980bab2ebe18e86c602bc269dc4.css" integrity="sha256-75vVp8zVTW3LKnvaOO35B8fCiYC6suvhjobGArwmncQ=" crossorigin="anonymous">
                     
                 
             
@@ -149,28 +149,81 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><b><code>"심연을 오랬동안 깊이 들여다보면, 심연도 내게 바나나."</code></b></blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2025-05may/term-ddakong-v1.0-release/">ddakong v1.0 릴리즈: lua scripting 시스템</a></h1>
-					<time>🗓️ 07 May, 2025</time>
+					<h1 class="title"><a href="/posts/2025-04apr/2025-04apr02--01-antix-linux/">가볍고 빠른 antiX Linux &#43; runit, koreader 그리고 bloatware</a></h1>
+					<time>🗓️ 02 Apr, 2025</time>
 					<br><div class="description">
 						
 						<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
-릴리즈 v1.0
+antiX linux
 </h2>
 <div id="outline-text-headline-1" class="outline-text-2">
+<p>오래된 랩탑으로 fedora 그냥 아무 생각없이 대충 쓰는데 좀 버벅. 어차피
+메인드라이버도 아니고 그냥 그러려니 하고 살다가, 좀 답답해서
+lightweight linux distro을 골라봤다.</p>
 <p>
-  ANSI C/DLL 플러그인만이 아니라, Lua scripting plugin 만들어서,
-  그냥 루아스크립팅만으로 플러그인 같은 확장이 가능해졌다.</p>
+<a href="https://antixlinux.com/">https://antixlinux.com/</a></p>
 <p>
-  그리고 이것저것 안정화/문서화하고, 더욱 hackable🪓🔥하고 가벼운
-  터미널입력기가 되었음.</p>
+거기에 이전에 시도했던 void linux에서 마음에 들었었던 runit을 init으로
+쓰는 spin으로 선택해서 설치했다.</p>
 <p>
-  <a href="https://github.com/ageldama/term-ddakong/releases/tag/v1.0">https://github.com/ageldama/term-ddakong/releases/tag/v1.0</a></p>
+결과는… 놀라울 정도로 가벼웠다.</p>
+<p>
+luks disk encryption + btrfs을 기존에는 적용했다가(btrfs이
+기본옵션이어서 귀찮아서), 이번에는 그냥 ext4만으로 설치해서 더
+가벼운걸까 싶기도 하고.</p>
+<p>
+systemd은 익숙해질수로 편안해지기는 했었는데, 그럼에도 확실히 전통적인
+linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar20--01--darkmode-js/">darkmode.js으로 변경</a></h1>
+					<time>🗓️ 20 Mar, 2025</time>
+					<br><div class="description">
+						
+						<p>
+직접 짠 css/js에서 <a href="https://darkmodejs.learn.uno/">darkmode.js</a>으로 변경했다.
+css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.</p>
+<p>
+변경도 예쁘게 애니메이션 나오고, system preference 지정도 자동으로 되고.</p>
+<div id="outline-container-headline-1" class="outline-3">
+<h3 id="headline-1">
+(미래의 나를 위해) css/html에서 class
+</h3>
+<div id="outline-text-headline-1" class="outline-text-3">
+<div class="src src-css">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">darkmode--activated</span> <span class="p">.</span><span class="nc">logo</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">mix-blend-mode</span><span class="p">:</span> <span class="kc">difference</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<div class="src src-html">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;darkmode-ignore&#34;</span><span class="p">&gt;</span>😬<span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
 </div>
 </div>&hellip;
 						
@@ -179,87 +232,68 @@
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2025-05may/term-ddakong-v0.0.8-release/">ddakong v0.0.8 릴리즈: 안정화 및 플러그인 시스템</a></h1>
-					<time>🗓️ 03 May, 2025</time>
+					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar18--01-xrandr/">xrandr 🖥️모니터 연결 자동전환 스크립트🐫</a></h1>
+					<time>🗓️ 18 Mar, 2025</time>
 					<br><div class="description">
 						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-스크린샷:
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p><img src="/2025-05may/KIMCHI-cropped.png" alt="/2025-05may/KIMCHI-cropped.png" title="/2025-05may/KIMCHI-cropped.png" /></p>
+						<p>
+요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.
+다 편한데, 🪟윈도나 icewm처럼 <code>Windows+P</code> 누르면, 다음 모니터연결
+조합으로 전환되는게 부러웠다.</p>
 <p>
-&lt; <a href="https://github.com/ageldama/term-ddakong">https://github.com/ageldama/term-ddakong</a> &gt;</p>
+매번 터미널 열고 <code>xrandr</code> 치거나, <a href="https://christian.amsuess.com/tools/arandr/">arandr</a> 열어서 세팅하기 귀찮으니까.
+(물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)</p>
 <p>
-&lt; <a href="https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8">https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8</a> &gt;</p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-릴리즈 v0.0.8
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p>안정화/문서화하고, 이제 플러그인 시스템을 도입해서 원하는대로
-hackable🪓🔥한 터미널용 입력기가 되었다.</p>
+그래서 그냥 윈도의 <code>Win+P</code> 키처럼 동작하도록 스크립트를 짜봤다.</p>
 <p>
-플러그인 작성해서:</p>
-<ol>
-<li>한글만이 아니라 다른 언어 입력기로 사용할 수도 있음.</li>
-<li>UTF-8 이외에 다른 인코딩으로 출력가능함. (예: EUC-KR, EUC-JP …)</li>
-<li>토글키(<code>Control-H</code>) 마음에 안들면 바꾸면 됨.</li>
-<li>등등등</li>
-</ol>
+🐫 <a href="https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl">https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl</a></p>
 <p>
-오늘 한 작업들은:</p>
-<ol>
-<li>안정화 많이 진행했다.</li>
-<li>코드 문서화 주석작성 다 했다.</li>
-<li>
-<p>cross-platform build 자동화해서 릴리즈 때 편해졌다.</p>
-<ul>
-<li>armhf (raspberry pi 32bit), aarch64 (raspberry pi 64bit),
-i386 (32bit), x86_64 모두 릴리즈하고 있다.</li>
-<li>..혹시나 어디선가 i386 기계 터미널에서 한글을 입력하고 싶은
-사람이 있을거 같아서.</li>
-</ul>
-</li>
-</ol>
-</div>
-</div>&hellip;
+Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.</p>
+<p>
+그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,
+예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별
+생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2025-05may/term-ddakong-initial-release/">ddakong 한글입력기 릴리즈</a></h1>
-					<time>🗓️ 02 May, 2025</time>
+					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/">Hugo &#43; pagefind 붙여서 검색기능 추가했다</a></h1>
+					<time>🗓️ 16 Mar, 2025</time>
 					<br><div class="description">
 						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-<a href="https://github.com/ageldama/term-ddakong">https://github.com/ageldama/term-ddakong</a>
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
+						<p>
+<a href="https://pagefind.app/">https://pagefind.app/</a></p>
 <p>
-일단 내가 fbterm에서 가볍게 한글쓰고 싶어서 만듦.</p>
+페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는
+pagefind을 붙여봤다.</p>
 <p>
-ansi c99만으로 가볍게 작성했다. 다른 라이브러리 의존않고.
-만족스럽다. 빌드하니까 25 KB 정도 나오네. 만족.</p>
+처음엔 좀 어색했는데, 커스터마이징을 별로 제공하지 않기는 했지만,
+그래도 이것저것 뜯어서 CSS도 마음에 들게 좀 수정하고, JS/DOM 이벤트도
+적당히 잡아서 마음에 들게 동작하게 고쳤다.</p>
 <p>
-더 했으면 하는 일들은:</p>
-<ol>
-<li>lua -or- dlopen 등으로 다른 입력기 지원하기 (예: 3벌식)</li>
-<li>utf-8 이외의 인코딩 지원하기</li>
-<li>raspberry pi 32/64 바이너리 릴리즈 (armhf, arm64)</li>
-<li>소스코드 조금 포매팅, 주석작성, 문서화</li>
-<li>빌드개선 : 사용하는 함수 등 체크하기 강화 (예: <code>epoll</code> …어차피
-거의 다 있지만.)</li>
-<li>스크린샷? ㅎㅎ</li>
-</ol>
-</div>
-</div>&hellip;
+별로라고 생각하던 부분들도 다 뜯어 고치고 하면서 더 블로그가 마음에
+들어진다. 🤠</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar15--01-new-css/">css, design 새단장 &#43; dark-mode</a></h1>
+					<time>🗓️ 15 Mar, 2025</time>
+					<br><div class="description">
+						
+						<p>
+css 더 단순하게 만들고, 디자인들도 그냥 내 마음에 들게 뜯어 고침.
+다크모드도 작업해서 만들어 넣고.</p>
+<p>
+css 애니메이션도 작업해 넣었다가, gpu 너무 쓰는거 같아서 그냥 끄고
+정적효과로만 냅둠.</p>
+<p>
+hugo 같은 static site generator이 좋은 점, 그리고 그냥 단순한 css와
+오래된 jquery으로 그냥 뚝딱거려서 작업.</p>&hellip;
 						
 					</div>
                                         
@@ -282,11 +316,11 @@ ansi c99만으로 가볍게 작성했다. 다른 라이브러리 의존않고.
             <a href="/page/2/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(3/60)</span>
+        <span class="page-number">(3/36)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/4/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/60/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -296,7 +330,7 @@ ansi c99만으로 가볍게 작성했다. 다른 라이브러리 의존않고.
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758347288</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758357531</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>
