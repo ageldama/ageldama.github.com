@@ -2,13 +2,121 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/apply/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/async-await/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/asyncio/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/callback-hell/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/closure/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/command/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/eias/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/fam/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/filesystem/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/fswatch/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/function-coloring/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/gil/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/inotify/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/inotify-tools/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/lambda/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/lisp/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/metaprogramming/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/oneliner/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/perl/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/process/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/programming/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/restarting/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/server/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/shell/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/tcl/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/tcllib/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/threading/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/throttle/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/throttled-restart.tcl/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/throttling/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/webdev/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/xargs/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/posts/2025-09sep/the-x-files-90s-vibe/</loc>
     <lastmod>2025-09-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/90s/</loc>
-    <lastmod>2025-09-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/categories/</loc>
     <lastmod>2025-09-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/dana/</loc>
@@ -32,16 +140,10 @@
     <loc>https://ageldama.github.io/tags/nostalgic/</loc>
     <lastmod>2025-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2025-09-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/scully/</loc>
     <lastmod>2025-09-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/show/</loc>
-    <lastmod>2025-09-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
     <lastmod>2025-09-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/the_x_files/</loc>
@@ -54,9 +156,6 @@
     <lastmod>2025-09-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/tv/</loc>
-    <lastmod>2025-09-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-09-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2025-09sep/netscape-30yrs-jwz/</loc>
@@ -113,9 +212,6 @@
     <loc>https://ageldama.github.io/tags/khtml/</loc>
     <lastmod>2025-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/lisp/</loc>
-    <lastmod>2025-09-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/llm/</loc>
     <lastmod>2025-09-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -156,9 +252,6 @@
     <lastmod>2025-09-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/webbrowser/</loc>
-    <lastmod>2025-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/webdev/</loc>
     <lastmod>2025-09-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/webkit/</loc>
@@ -284,9 +377,6 @@
     <loc>https://ageldama.github.io/tags/exthdd/</loc>
     <lastmod>2025-09-15T08:25:26+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/filesystem/</loc>
-    <lastmod>2025-09-15T08:25:26+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/fuse/</loc>
     <lastmod>2025-09-15T08:25:26+00:00</lastmod>
   </url><url>
@@ -392,9 +482,6 @@
     <loc>https://ageldama.github.io/tags/i3wm/</loc>
     <lastmod>2025-04-09T08:45:25+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/perl/</loc>
-    <lastmod>2025-04-09T08:45:25+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/rofi/</loc>
     <lastmod>2025-04-09T08:45:25+00:00</lastmod>
   </url><url>
@@ -465,9 +552,6 @@
     <lastmod>2025-03-18T13:30:16+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/monitor/</loc>
-    <lastmod>2025-03-18T13:30:16+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/categories/programming/</loc>
     <lastmod>2025-03-18T13:30:16+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/xorg/</loc>
@@ -1535,9 +1619,6 @@
     <loc>https://ageldama.github.io/posts/2019-12dec/moonshot-1st-rel/</loc>
     <lastmod>2019-12-29T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/shell/</loc>
-    <lastmod>2019-12-29T00:00:00+09:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/virtualenv/</loc>
     <lastmod>2019-12-29T00:00:00+09:00</lastmod>
   </url><url>
@@ -1802,9 +1883,6 @@
     <loc>https://ageldama.github.io/posts/2019-02feb/2019-02feb07thu-ping/</loc>
     <lastmod>2019-02-07T17:30:00+09:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/asyncio/</loc>
-    <lastmod>2019-02-07T15:30:00+09:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/concurrency/</loc>
     <lastmod>2019-02-07T15:30:00+09:00</lastmod>
   </url><url>
@@ -2010,9 +2088,6 @@
     <lastmod>2017-02-25T16:40:00+01:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2017/2017-02-25-sbcl-osx-multithread/</loc>
-    <lastmod>2017-02-25T16:40:00+01:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/threading/</loc>
     <lastmod>2017-02-25T16:40:00+01:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/</loc>
