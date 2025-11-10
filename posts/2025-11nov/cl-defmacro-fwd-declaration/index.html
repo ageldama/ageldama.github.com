@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[TIL] common-lisp defmacro와 forward-declaration - 아겔로그</title><meta name="hugo-gen-timestamp" content="1762761036">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[TIL] common-lisp defmacro와 forward-declaration - 아겔로그</title><meta name="hugo-gen-timestamp" content="1762762935">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 의외로 단순한건데, 컴파일한 sbcl image에서 runtime에 unbound variable
@@ -641,10 +641,26 @@ disassembly +bug
 </ol>
 </div>
 </div>
+<div id="outline-container-headline-6" class="outline-3">
+<h3 id="headline-6">
+[EDIT] [2025-11-10 Mon]
+</h3>
+<div id="outline-text-headline-6" class="outline-text-3">
+<ol>
+<li>위 disassemble 같이 만든 상황을 다시 재현하기 어려움.</li>
+<li>흠좀무. 다행이라면 다행.</li>
+<li>그리고 사실 <code>(declaim (ftype ...))</code>-으로 함수라면
+전방선언(forward declaration)이 가능하겠지만, 매크로는
+컴파일러가 동작하는 시점에 필요하므로 불가하다고.</li>
+<li>…결국 asdf system definition에 serial으로 의존성순서에 맞게
+넣어줘야함. ㅎㅎ</li>
+</ol>
 </div>
 </div>
-<div id="outline-container-headline-6" class="outline-2">
-<h2 id="headline-6">
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
 Footnotes
 </h2>
 </div>
@@ -697,7 +713,7 @@ Footnotes
 <footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762761036</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762762935</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>
