@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.147.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1762760861">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.037f6cece4a3d809e20779e53a5fee5893d65bb165bf1698e599df0da6489664.css" integrity="sha256-A39s7OSj2AniB3nlOl/uWJPWW7FlvxaY5ZnfDaZIlmQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
                     
                 
             
@@ -66,9 +66,9 @@
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#fff',  
-      buttonColorDark: '#100f2c',  
-      buttonColorLight: '#fff', 
+      backgroundColor: '#cccccc',  
+      buttonColorDark: '#566666',  
+      buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -149,159 +149,118 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><h6><i>"One of the nice things about getting older is that you come to understand that you can integrate multiple aspects of your life together. When you're young, you think everything has to be binary, as that's exactly how you feel at that age".</i></h6> - Min Jin Lee</blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-03mar/perl-cal3/">`ncal -3` 직접 Perl으로 짜봤다</a></h1>
-					<time>🗓️ 02 Mar, 2023</time>
+					<h1 class="title"><a href="/posts/2023-02feb/2023-02feb02--01-ping/">Ping 02/02/2023 .01: xemacs, gemini, gemtext</a></h1>
+					<time>🗓️ 02 Feb, 2023</time>
 					<br><div class="description">
 						
-						<p>
-<code class="verbatim">ncal -3</code> 이 뭐냐하면:</p>
-<p>
-<a href="https://man7.org/linux/man-pages/man1/cal.1.html">https://man7.org/linux/man-pages/man1/cal.1.html</a></p>
-<p>
-…뭐 이런건데, 개인적으로 저전력 글쓰기 전용머신에서 사용하는
-스크립트에서 배포판이 달라서 패키지를 못찾겠어서 <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, …그냥 직접
-짜서 대체했다.</p>
-<p>
-<a href="https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e488">https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e488</a></p>
-<p>
-그래서 스크린샷은:</p>
-<p>
-<img src="/2023-03mar/journal-edit-cal3.png" alt="/2023-03mar/journal-edit-cal3.png" title="/2023-03mar/journal-edit-cal3.png" /></p>
-<p>
-재밌었던 부분은:</p>
-<ol>
-<li>어차피 Perl으로 전부 짜서 쓰는 스크립트였는데,
-아예 외부 커맨드라인 도구 의존성을 더 없애서 뿌듯하다.</li>
-<li>매달 달력을 문자열으로 뽑았는데, 3달치를 뽑아서, 이걸 한 row에
-표시하고 싶었는데, <a href="https://metacpan.org/pod/Text::Table">Text::Table</a>으로 적절히 간단히 완료.</li>
-<li><a href="https://metacpan.org/pod/Term::ANSIColor">Term::ANSIColor</a>와 <a href="https://perldoc.perl.org/perlre">perlre</a>을 써서 깔끔하게 원하는 일자에 highlighting
-해서 편안했다.</li>
-<li>
-<p>…더 해킹을 해서, <code class="verbatim">calendar(..)</code> 결과문자열을 적당히 파싱해서,
-작은 Text::Table으로 만들어서, 그것들으로 조합하고 했었어도 될거
-같아.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-03mar/cxx-defer/">C&#43;&#43;: Golang-ish `defer`-macro</a></h1>
-					<time>🗓️ 02 Mar, 2023</time>
-					<br><div class="description">
-						
-						<p>
-별거 없는데, 문득 심심해서 툭닥거려봤다.</p>
-<p>
-<div>
+						<div>
   <nav id="TableOfContents">
-<ul>
-<li><a href="#headline-1">원하는 것과 접근법</a>
-</li>
-<li><a href="#headline-2"><code class="verbatim">defer.inl</code> :</a>
-</li>
-<li><a href="#headline-3">사용예</a>
-</li>
-<li><a href="#headline-4">제약사항과 생각해볼꺼리</a>
-</li>
-<li><a href="#headline-5">Footnotes</a>
-</li>
-</ul>
+  <ul>
+    <li><a href="#1-제미니-계획">1. &ldquo;제미니 계획&rdquo;</a></li>
+    <li><a href="#2-just-like-the-good-ol-days">2. just like the good ol&rsquo; days</a></li>
+    <li><a href="#차라리-돈을-내고-글을-읽겠다만">차라리 돈을 내고 글을 읽겠다&hellip;만</a></li>
+  </ul>
 </nav>
 </div>
-</p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-원하는 것과 접근법
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<ol>
-<li><a href="https://go.dev/blog/defer-panic-and-recover">https://go.dev/blog/defer-panic-and-recover</a></li>
-<li><a href="https://docs.rs/defer/latest/defer/fn.defer.html">https://docs.rs/defer/latest/defer/fn.defer.html</a></li>
-<li><a href="https://ziglang.org/documentation/master/#defer">https://ziglang.org/documentation/master/#defer</a></li>
-</ol>
-<p>
-  golang/zig에서처럼 <code class="verbatim">defer</code> 등록한 LIFO순서대로 호출되도록.</p>
-<p>
-  검색해보면, 대부분 RAII을 사용하거나 하는 것들이 보인다:</p>
-<ul>
-<li><a href="https://duckduckgo.com/?q=c%2B%2B+golang+defer">DDG: c++ golang defer</a></li>
-<li><a href="https://stackoverflow.com/questions/33050620/golang-style-defer-in-c">https://stackoverflow.com/questions/33050620/golang-style-defer-in-c</a></li>
-<li><a href="https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop">https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop</a></li>
-<li><a href="https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/">https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/</a></li>
-</ul>
-<p>
-  …그냥 <code class="verbatim">std::shared_ptr&lt;void&gt;</code> 을 이용하는 방식이 마음에
-  들었다. 그리고 조금 더 간단하게 사용하려고 매크로로 만들어 봤다.</p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-<code class="verbatim">defer.inl</code> :
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<div class="src src-c++">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
-</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
-</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
-</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
-</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
-</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">  <span class="cm">/* -*- mode: c++; -*- */</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="cp">#ifndef defer_INL
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define defer_INL 1
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl">  <span class="cp">#define _Defer_CONCAT_IMPL( x, y ) x##y
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y )
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl">  <span class="cp">#define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk)
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl">  <span class="cp">#endif </span><span class="cm">/*defer_INL*/</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-  <a href="https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html"><code class="verbatim">__COUNTER__</code></a> 이용해서 매크로가 생성한 <code class="verbatim">std::shared_ptr&lt;..&gt;</code> 변수의
-  이름이 겹치지 않도록 해봤다. (…위에 검색한 링크들에도 사용하듯이)</p>&hellip;
+
+<hr>
+<p>추억이 그리워지는 시대여서 그런거 같기도 하다.
+그럼에도 어차피 그렇게 다시 사용하기엔 끔찍할텐데.</p>
+<h1 id="1-제미니-계획">1. &ldquo;제미니 계획&rdquo;</h1>
+<p><a href="https://en.wikipedia.org/wiki/Gemini_(protocol)">gemini protocol</a> 을 기반으로 뭔가 새로운 것을 상상하면 즐겁지만,</p>
+<p>정말 제한적이어서, 내 마음대로의 확장을 떠올리게 된다.</p>
+<p>실은, gemtext와 gemini protocol은 마음에 드는 부분이 바로 그런점이지만: 오히려 제한적이고, 그냥 무시해도 되는 것들을 굳이 지원해줘야 할 것 같은 기분에 져서 우겨넣으면서 complexity만 무한대으로 보낼바엔, 이렇게 무시할 것은 잘 무시하는게 더 좋은거 같아.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-02feb/2023-02feb26--01-css/">Ping 26/02/2023 .01 : 디자인 css 가볍게 수정</a></h1>
-					<time>🗓️ 26 Feb, 2023</time>
+					<h1 class="title"><a href="/posts/2022-11nov/2022-11nov13--01-ping/">Ping 13/11/2022 .01</a></h1>
+					<time>🗓️ 13 Nov, 2022</time>
 					<br><div class="description">
 						
-						<p>
-아예 아무런 스타일도 주지 않고, 그냥 알아서 html/css만으로 잘 보이도록
-고쳤다. 웹폰트니 그런것도 그냥 껐고.</p>
-<p>
-불필요한 스타일이나 폰트로딩을 줄여서 가볍고, 어차피 웹브라우져의
-&#39;reader mode&#39; 지원 같은걸로 내가 스타일 주는 것보다 훨씬 읽기 편안하게
-볼 수 있을테니까.</p>
-<p>
-lynx, w3m 같은 <a href="https://en.wikipedia.org/wiki/Text-based_web_browser">텍스트 웹브라우져</a>에서 읽으나 그냥 무거운 웹브라우져으로
-읽으나 사람마다 알아서 잘 읽히도록 하는데에만 집중해봤다.</p>&hellip;
+						<p>비가 많이 내렸다. 일년간 어떻게든 자라던 잎들이 낙엽이 되어 떨어졌다.</p>
+<p>그런데 딱히 걱정스러울게 없었다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun29--02-ping/">react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</a></h1>
+					<time>🗓️ 29 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p><a href="https://jasonformat.com/islands-architecture/">https://jasonformat.com/islands-architecture/</a></p>
+<p>&hellip;이전에 몇번 언급한 <a href="https://hotwired.dev/">hotwired</a> 처럼. ㅎㅎ</p>
+<p>지금의 reactjs, vuejs등은 다음과 같은 방식이 기본:</p>
+<ol>
+<li>server: rest/gql등으로 요청을 받아서, json으로 응답.</li>
+<li>browser(client): 응답으로 받은 json을 받아서, html을 생성하여 렌더링.</li>
+</ol>
+<p>&hellip;이게 편하다고 생각해서 여기로 온거 같아. 나말고도 대부분의 사람들이
+웹화면을 개발하던 시절에는 이렇게 만들고 싶었었던거 같아. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>그리고 당연히 ui개발이기 때문에 &lsquo;컴포넌트모델&rsquo;이나 값바인딩 같은 것들을 원했었고, 현재의 리액트와 같은 형태에 이르른 것 같아.</p>
+<p>물론, vdom이 복잡도를 많이 낮춰줬지만, 희안하게도 예상하지 못하던 문제를 몇가지 더 만들어낸 것 같아. 그래서 요즘엔 ssr이니 seo을 생각해서 다른 방식의 프레임웍들을 사용하려고 하고 있고, 더 나아가서 <a href="https://www.patterns.dev/posts/progressive-hydration/">progressive hydration</a> 같은 쪽으로 더 세밀해지는 양상 같아.<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun29--01-ping/">linux/unix 팁 29/06/2022 .01</a></h1>
+					<time>🗓️ 29 Jun, 2022</time>
+					<br><div class="description">
+						
+						<div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</a></li>
+    <li><a href="#ssh으로-키보드마우스-안-붙이고">ssh으로 키보드/마우스 안 붙이고</a>
+      <ul>
+        <li><a href="#vconsole-conspy">vconsole: <code>conspy</code></a></li>
+        <li><a href="#x11-x2x으로-여러-머신스크린에-걸쳐서-마우스키보드-공유">x11: <code>x2x</code>으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+<hr>
+<p>리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.</p>
+<p>그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.</p>
+<h1 id="zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</h1>
+<p>최근/디렉토리 이동한 히스토리에 따라서 (&ldquo;frecent&rdquo;) 이동하기:</p>
+<p>fzf+zsh의 <code>Control-R</code>도 좋고<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,</p>
+<p>oh-my-zsh 내장인 <code>plugins=(z)</code>도 좋지만<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>&hellip;나는 가능하면 <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a>이 가장 가볍고 좋은거 같다.</p>
+<p>설치하고 나서,
+<code>eval &quot;$(zoxide init zsh)&quot;</code></p>
+<p>그리고, <code>z SOME-DIR</code>, <code>zi</code> 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun24--01-grug/">The Grug Brained Developer</a></h1>
+					<time>🗓️ 24 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p>감동적인 글이다ㅋ:</p>
+<p><a href="https://grugbrain.dev/">https://grugbrain.dev/</a></p>
+<p>문법도 완전 grug스럽게 작성해서 반가운 글이었다.</p>
+<p>완전히 모두 내 생각과 같지는 않아도, 이야기하는 <em>&ldquo;FOLD&rdquo; 때문에</em> 일어나는 일들과
+조금은 그래도 <em>grug답게</em> 그냥 해내려는 생각들이 유용.</p>
+<p>그치, grug이 공룡과 구분되는 점은 그런거겠지. ㅎㅎ&hellip;</p>
+<p>msa, reactjs, ejb, osgi. 공감하는 생각들.</p>
+<p>&hellip; black think juice 맛있다.</p>&hellip;
 						
 					</div>
                                         
@@ -324,11 +283,11 @@ lynx, w3m 같은 <a href="https://en.wikipedia.org/wiki/Text-based_web_browser">
             <a href="/page/7/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(8/59)</span>
+        <span class="page-number">(8/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/9/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -338,7 +297,7 @@ lynx, w3m 같은 <a href="https://en.wikipedia.org/wiki/Text-based_web_browser">
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762760861</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

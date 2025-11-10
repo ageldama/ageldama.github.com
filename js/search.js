@@ -27,7 +27,7 @@ function showSearchResults(searchTerm, searchResults) {
 <% if (searchResults.length > 0) { %>
     <ol>
         <% searchResults.forEach(function(row, idx){ %>
-            <li><a href="<%= row.permalink %>"><%= row.title %></a>
+            <li><a href="<%= row.permalink %>"><em class='search-result-row'><%= row.title %></em></a>
                 <div><%= row.contents %></div></li>
         <% }); %>
     </ol>

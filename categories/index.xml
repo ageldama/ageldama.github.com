@@ -7,20 +7,41 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 15 Sep 2025 08:26:26 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Nov 2025 06:35:45 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Freebsd</title>
-      <link>https://ageldama.github.io/categories/freebsd/</link>
-      <pubDate>Mon, 15 Sep 2025 08:26:26 +0000</pubDate>
-      <guid>https://ageldama.github.io/categories/freebsd/</guid>
+      <title>Programming</title>
+      <link>https://ageldama.github.io/categories/programming/</link>
+      <pubDate>Mon, 10 Nov 2025 06:35:45 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tv</title>
+      <link>https://ageldama.github.io/categories/tv/</link>
+      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/tv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>https://ageldama.github.io/categories/software/</link>
+      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/software/</guid>
       <description></description>
     </item>
     <item>
       <title>Blog</title>
       <link>https://ageldama.github.io/categories/blog/</link>
-      <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
+      <pubDate>Thu, 18 Sep 2025 08:26:26 +0000</pubDate>
       <guid>https://ageldama.github.io/categories/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Freebsd</title>
+      <link>https://ageldama.github.io/categories/freebsd/</link>
+      <pubDate>Mon, 15 Sep 2025 08:26:26 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/freebsd/</guid>
       <description></description>
     </item>
     <item>
@@ -42,13 +63,6 @@
       <link>https://ageldama.github.io/categories/blogging/</link>
       <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
       <guid>https://ageldama.github.io/categories/blogging/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programming</title>
-      <link>https://ageldama.github.io/categories/programming/</link>
-      <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
-      <guid>https://ageldama.github.io/categories/programming/</guid>
       <description></description>
     </item>
     <item>
@@ -77,13 +91,6 @@
       <link>https://ageldama.github.io/categories/coding/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
       <guid>https://ageldama.github.io/categories/coding/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Software</title>
-      <link>https://ageldama.github.io/categories/software/</link>
-      <pubDate>Sun, 12 Jun 2022 13:45:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/categories/software/</guid>
       <description></description>
     </item>
     <item>

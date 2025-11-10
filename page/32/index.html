@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.147.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1762760861">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.037f6cece4a3d809e20779e53a5fee5893d65bb165bf1698e599df0da6489664.css" integrity="sha256-A39s7OSj2AniB3nlOl/uWJPWW7FlvxaY5ZnfDaZIlmQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
                     
                 
             
@@ -66,9 +66,9 @@
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#fff',  
-      buttonColorDark: '#100f2c',  
-      buttonColorLight: '#fff', 
+      backgroundColor: '#cccccc',  
+      buttonColorDark: '#566666',  
+      buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -149,80 +149,176 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><h6><i>"One of the nice things about getting older is that you come to understand that you can integrate multiple aspects of your life together. When you're young, you think everything has to be binary, as that's exactly how you feel at that age".</i></h6> - Min Jin Lee</blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-06jun/ping-29mon/">Ping 29/Jun/2020</a></h1>
-					<time>🗓️ 29 Jun, 2020</time>
+					<h1 class="title"><a href="/posts/2018-10oct/rpi3-hifiberry-dacplus-config/">HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정</a></h1>
+					<time>🗓️ 03 Oct, 2018</time>
 					<br><div class="description">
 						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-이해하기
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>읽고 생각하고, 글을 쓰고 살아온 방법과 길에 대해서, 만난 이들과의
-  일화들에 대한 이해가 더욱 깊어진 것 같다. 그리고 내가 내린 판단과
-  결정이 만족스러운 것이었었다. 더욱 명확한 기분이다.</p>
-<p>
-  하던 생각들이, 꽤 정확하게 파악했었더라, 그를 기반해 예측한 것이
-  맞는 것을 알게 될 때면 더욱 만족스러운 기분이 든다. </p>
-<p>
-  훌륭한 이들, 존경스러운 이도 있고, 한편으로는 말을 꺼내기도 한심해질
-  정도의 이도 있다. 정말 안타까운 느낌이다.</p>
-<p>
-  정말 시간은 위대하다는 생각을 한다. 내가 시간의 역할을 욕심내어서는
-  안되겠다는 생각도 한다. </p>&hellip;
+						<p><a href="https://www.hifiberry.com/">https://www.hifiberry.com/</a> 요거 Raspberry Pi 3에 세팅한 모험에 대한
+이야기.</p>
+<h1 id="wifi잡기">WIFI잡기</h1>
+<pre tabindex="0"><code># /etc/wpa_supplicant/wpa_supplicant.conf 
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+#update_config=1
+country=GB
+
+network={
+	ssid=&#34;iptime&#34;
+	psk=&#34;xxxxxxxxxx&#34;
+	key_mgmt=WPA-PSK
+}
+</code></pre><ol>
+<li><code>wpa_passphrase</code> 안쓰고 그냥 plaintext으로 써도 동작.</li>
+<li>내 공유기랑은 <code>country=GB</code> 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤.</li>
+<li>그리고 <code>ip link set wlan0 {up|down}</code> 정도로 wlan0 인터페이스를 up/down하면됨.</li>
+</ol>
+<h1 id="사운드-드라이버-설정">사운드 드라이버 설정</h1>
+<ol>
+<li>내장 사운드카드 드라이버는 <a href="https://ko.wikipedia.org/wiki/Modprobe">modprobe</a> blacklist에 추가해서 끄자.</li>
+<li><code>/boot/config.txt</code>에 HiFiBerry DAC+ 드라이버 오버레이를 지정해야함.</li>
+</ol>
+<h2 id="내장-사운드-드라이버-끄기">내장 사운드 드라이버 끄기</h2>
+<p>다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-06jun/ping-16tue/">Ping 16/Jun/2020</a></h1>
-					<time>🗓️ 16 Jun, 2020</time>
+					<h1 class="title"><a href="/posts/2018-10oct/03wed-ping/">Ping 03/10/2018</a></h1>
+					<time>🗓️ 03 Oct, 2018</time>
 					<br><div class="description">
 						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-FreeBSD을 조금 오래된 컴퓨터에 계속 사용하기.
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>매일 업무를 보는데에 메인 피씨, 랩탑은 여전히 아치리눅스를 잘 쓰고
-  있다. 그리고 조금 사양이 부족한 사이드킥 피씨 본체에는 FreeBSD을
-  여전히 설치해놓고 쓰고 있다.</p>
-<p>
-  처음 생각보다 훨씬 더 많이 활용하게 되는 것 같다. 그리고 훨씬
-  가볍게, 안정적이고 강력한 느낌이다. 물론 오히려 리눅스가 더
-  빠르다거나 안정적인 부분들을 금새 발견할 수 있다. 그리고 리눅스와
-  동일하게 쓰려고 들지 않는게 더 속편한 부분도 많다.</p>
-<p>
-  예를 들어, 당연히 Steam 같은 것은 기대를 안한다. 그리고 의외로
-  USB스택은 리눅스에 비해서 종종 실망스럽고, 다양한 파일시스템 지원도
-  그렇다. FUSE을 통해서 리눅스처럼 다양한 파일시스템을 지원하지만
-  그렇게 안심하고 쓸만한 것은 아닌 것 같다. (몇 개의 경험을 해보고
-  나니)</p>&hellip;
+						<h1 id="hifiberry--raspberry-pi-3">HiFiBerry + Raspberry Pi 3</h1>
+<p>tweet 1047432827866767360</p>
+<p>요것임.</p>
+<ul>
+<li><a href="https://www.hifiberry.com/products/dacplus/">https://www.hifiberry.com/products/dacplus/</a></li>
+<li><a href="http://eleparts.co.kr/goods/view?no=3700883">http://eleparts.co.kr/goods/view?no=3700883</a></li>
+</ul>
+<p>정말 예전, 한 3년전쯤에 사서 한국집에 묵혀두고, 그때는 세팅에 실패해서
+<em>안되는건가&hellip;</em> 이러고 포기하고 있다가 다시 시도해봤다.</p>
+<p>조금 삽질을 몇번하다가, 그리고 정 안되면 똑같은 부품 다시 주문해서라도
+어쩐지 만들어보고 싶다는 알수 없는 의지가 발동해서 세팅에 성공. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>어쨌든 <a href="https://www.freebsd.org/">FreeBSD</a>을 설치해서 써볼까하다가
+드라이버 지원이 필요한게 안되서 포기.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>결론은,</p>
+<ol>
+<li>라디오, MP3 걸어놓고 듣기에 좋다.</li>
+<li>음질은 확실히 이어폰으로 들어보면 같은곡에 대해서 훨씬 깨끗하고 노이즈 없이 재생하는거 <strong>같다</strong></li>
+<li><a href="http://www.runeaudio.com/">RuneAudio</a>,
+<a href="https://www.mopidy.com/">Mopidy</a> 같은걸로 Web UI 세팅해서 쓸수도
+있는거 같은데, 그냥 난 SSH으로만 들어가서 쓰기에 나쁘지 않아서
+거기까니 삽질은 포기.</li>
+<li>마음먹고 PulseAudio 서버로 써서 윈도, 리눅스에서 사운드 출력을
+이걸로 할수있게도 가능한데 일단은 여기까진 안가기로.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></li>
+</ol>
+<h1 id="gnupg-재밌게-쓰기">GnuPG 재밌게 쓰기</h1>
+<p>딱히 쓸얘기는 없는데, 그냥 <a href="https://gnupg.org/">GnuPG</a>을 더 많이 쓰게
+된거 같아.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-06jun/ping-06sat/">Ping 06/Jun/2020</a></h1>
-					<time>🗓️ 06 Jun, 2020</time>
+					<h1 class="title"><a href="/posts/2018-09sep/cquery-vs-cmake-ide/">CQuery &#43; LSP vs CMake-IDE &#43; RTags</a></h1>
+					<time>🗓️ 23 Sep, 2018</time>
 					<br><div class="description">
 						
-						<p>
-조금 더 혼자 진행해오던 일을 계속하기로 결정했다. </p>
-<p>
-좋은 사람들과 스타트업임을 알고 있고, 이전에 함께 일하면서도
-인격적으로나 능력적으로 모두 훌륭한 사람들임을 잘 알고 있다.</p>
-<p>
-그럼에도 나 자신이 이번엔 더 차이를 만들어야겠다고 결심했던 것을
-끝까지 해나가고 싶어서다. 합류하면 정말 많은 부분 이득이 많겠지만,
-개인적으로도 많이 힘든 고민을 하고 결정을 내렸다.</p>&hellip;
+						<p>LSP + CQuery을 써보려고 했는데, 결국 <a href="/posts/2018-05may-emacs-cmake-ide-screencast/">CMake-IDE +
+RTags</a> 조합으로
+원래대로 쓰게될거 같아. :</p>
+<ol>
+<li><code>_build/</code> 와 같이 CMake, Ninja, Makefile등의 파일들을 별도의
+디렉토리로 만들어서 필드하고 싶은데, 제대로 지원을 못한다.
+1. 그냥 프로젝트 소스코드랑 같이 generate하고 <code>gcc</code>등의 중간
+파일이 모두 같이 남아서 지저분해져서 싫어함.</li>
+</ol>
+<p>아직은 별로 내 마음에 꼭 들게 만들기는 어려울거 같아서. 그래도
+인상적이었던 부분들:</p>
+<ol>
+<li>flycheck에 전용으로 연동되어 있는 점.</li>
+<li>company-lsp이 생각보다 훨씬 부드럽고 자동완성 잘되는거.</li>
+</ol>
+<p>미래에는 그냥 LSP기반만 남을거 같아서, 이것도 &ldquo;helm-rg의 모험&quot;처럼
+아직은 완전히 전환은 못할거 같긴하다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-09sep/23sun-todos/">해보기 23/09/2018</a></h1>
+					<time>🗓️ 23 Sep, 2018</time>
+					<br><div class="description">
+						
+						<h1 id="lsp-갖고놀기">LSP 갖고놀기</h1>
+<blockquote>
+<p>Language Server Protocol : <a href="https://langserver.org/">https://langserver.org/</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p></blockquote>
+<ul>
+<li>ES6:
+<a href="https://github.com/sourcegraph/javascript-typescript-langserver">https://github.com/sourcegraph/javascript-typescript-langserver</a>
+<ul>
+<li>다른건 FlyCheck + Eslint으로 만족스러운데, 코드네비게이션만 좀.</li>
+</ul>
+</li>
+<li>C/C++:
+<ul>
+<li><a href="https://github.com/cquery-project/cquery">https://github.com/cquery-project/cquery</a></li>
+<li><a href="https://github.com/MaskRay/ccls">https://github.com/MaskRay/ccls</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="es6-기능들-다시-한번-주욱-읽어보기">ES6 기능들 다시 한번 주욱 읽어보기</h1>
+<blockquote>
+<p><a href="http://es6-features.org/">http://es6-features.org/</a></p></blockquote>
+<p>딱히 뭣도 몰라서 한번 주욱 읽어보려고. 더 알고 싶지는 않다만&hellip;</p>
+<p>tweet 1039770698187563009</p>
+<p>&hellip;이런 언어지만.</p>
+<h1 id="대안으로서-reasonml">대안으로서 ReasonML?</h1>
+<ul>
+<li><a href="https://reasonml.github.io/">https://reasonml.github.io/</a></li>
+<li><a href="https://github.com/ocaml/merlin">https://github.com/ocaml/merlin</a></li>
+</ul>
+<p>..예전에 좋아하던 OCaml 다시 실용적으로 써도 재밌을거 같기도하고.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%99%98_%EC%9B%90%EC%B9%99">https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%99%98_%EC%9B%90%EC%B9%99</a> 이거아님.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-09sep/23sun-ping/">Ping 23/09/2018</a></h1>
+					<time>🗓️ 23 Sep, 2018</time>
+					<br><div class="description">
+						
+						<h1 id="영화-멀홀랜드-드라이브">영화: &lt;멀홀랜드 드라이브&gt;</h1>
+<figure><img src="/images/2018-09sep/mulholland-dr-poster-kr.jpg" width="400">
+</figure>
+
+<p>씁쓸. 그리고 영화 다보고 해석들 읽고 다시 생각하고 장면들에서 느끼던
+이상함점들이 왜 그랬었구나 맞춰보니 더 씁쓸. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>그리고 살면서 사랑이나 그런 환상을 갖는것들처럼 그런 완전한 꿈을
+생각하듯이 달콤한 전반부의 내용들이 이해됨.</p>
+<h1 id="추석-연휴에-서울에-있기">추석 연휴에 서울에 있기</h1>
+<p>어차피 고향도, 친척들도 거의 다 서울에 살아서 평생 명절마다 서울에서
+보내는게 너무 익숙하다. 그리고 이맘때가 나는 서울에서 좋은거 같아.</p>
+<p>그냥 적당히 조용하고 차소음도 사라지고 (심지어 우리집은 큰길에서 한참
+멀리있음에도) 공기도 훨씬 좋아진다. 밤거리도 한적해지고. 이런 분위기를
+좋아해서.</p>&hellip;
 						
 					</div>
                                         
@@ -245,11 +341,11 @@ FreeBSD을 조금 오래된 컴퓨터에 계속 사용하기.
             <a href="/page/31/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(32/59)</span>
+        <span class="page-number">(32/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/33/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -259,7 +355,7 @@ FreeBSD을 조금 오래된 컴퓨터에 계속 사용하기.
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762760861</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

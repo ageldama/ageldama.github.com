@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.147.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1762760861">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.037f6cece4a3d809e20779e53a5fee5893d65bb165bf1698e599df0da6489664.css" integrity="sha256-A39s7OSj2AniB3nlOl/uWJPWW7FlvxaY5ZnfDaZIlmQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
                     
                 
             
@@ -66,9 +66,9 @@
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#fff',  
-      buttonColorDark: '#100f2c',  
-      buttonColorLight: '#fff', 
+      backgroundColor: '#cccccc',  
+      buttonColorDark: '#566666',  
+      buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -149,151 +149,152 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><h6><i>"One of the nice things about getting older is that you come to understand that you can integrate multiple aspects of your life together. When you're young, you think everything has to be binary, as that's exactly how you feel at that age".</i></h6> - Min Jin Lee</blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-11nov/ping-02mon/">Ping 02/Nov/2020</a></h1>
-					<time>🗓️ 02 Nov, 2020</time>
-					<br><div class="description">
-						
-						<p>
-(functional) reactive 관련들을 다시 찾아 보고 있다.</p>
-<p>
-예전에 webdev은 아니고 백엔드를 위해서 <a href="https://github.com/ReactiveX/rxjs">rxjs</a> 을 쓸 일이 있었었고
-꽤 재밌었다. node.js에서 async/await 이전에 동시성 처리를 하기에
-유용하게 쓸 수 있었었고, 실은 그냥 <a href="https://stackoverflow.com/questions/51542865/is-rxjs-observable-a-monad">monad이어서</a> 조금만 이해를 하고
-사용하면 여러모로 편리했었다.</p>
-<p>
-https://github.com/stoeffel/awesome-frp-js 여기에 보면 rxjs이외에도
-다른 js을 위한 FRP라이브러리들이 많이 생겼었다.</p>
-<p>
-그 중에 흥미가 있어서 <a href="https://github.com/baconjs/bacon.js">bacon.js</a> 을 읽고 rxjs에서 만들어 본 작은 예제
-프로젝트를 다시 작성해봤다. 깔끔했다.</p>
-<p>
-rxjs으로 작성했었던 작은 예제는 다음과 같다.</p>
-<div class="src src-javascript">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
-</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
-</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
-</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
-</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
-</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
-</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
-</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
-</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
-</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
-</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
-</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
-</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
-</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
-</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
-</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
-</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
-</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
-</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
-</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
-</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="kr">import</span> <span class="p">{</span> <span class="nx">fromEvent</span><span class="p">,</span> <span class="nx">Subject</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// eslint-disable-next-line object-curly-newline
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">import</span> <span class="p">{</span> <span class="nx">debounceTime</span><span class="p">,</span> <span class="nx">mapTo</span><span class="p">,</span> <span class="nx">scan</span><span class="p">,</span> <span class="nx">map</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;rxjs/operators&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">import</span> <span class="nx">jquery</span> <span class="nx">from</span> <span class="s1">&#39;jquery&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">counter$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Subject</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">counter$</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">scan</span><span class="p">((</span><span class="nx">n</span><span class="p">,</span> <span class="nx">acc</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">+</span> <span class="nx">acc</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">debounceTime</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">count</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#count&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">count</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">counter2$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Subject</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">counter2$</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">scan</span><span class="p">((</span><span class="nx">n</span><span class="p">,</span> <span class="nx">acc</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">+</span> <span class="nx">acc</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">count</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#count2&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">count</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">increase$</span> <span class="o">=</span> <span class="nx">fromEvent</span><span class="p">(</span><span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#increase&#39;</span><span class="p">),</span> <span class="s1">&#39;click&#39;</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">mapTo</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">decrease$</span> <span class="o">=</span> <span class="nx">fromEvent</span><span class="p">(</span><span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#decrease&#39;</span><span class="p">),</span> <span class="s1">&#39;click&#39;</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">mapTo</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">increase$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter$</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">increase$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">map</span><span class="p">((</span><span class="nx">n</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter2$</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">decrease$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter$</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">decrease$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">map</span><span class="p">((</span><span class="nx">n</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter2$</span><span class="p">);</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-(<code>package.json</code>, <code>webpack.config.js</code>, 관련 html 파일 등은 생략했다.)</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/asdf-subdir-finder-1st/">&#34;asdf-subdir-finder&#34; released!</a></h1>
-					<time>🗓️ 26 Oct, 2020</time>
-					<br><div class="description">
-						
-						<p>
-지난번 포스팅한 &#34;<a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">asdf 정의를 내 코드베이스의 하위디렉토리에서 자동으로
-로딩하기</a>&#34;를 프로젝트으로 만들었다.</p>
-<p>
-<a href="https://github.com/ageldama/asdf-subdir-finder">https://github.com/ageldama/asdf-subdir-finder</a></p>
-<p>
-사람마다 커먼리습으로 작업하는 스타일에 따라 많이 다를 수 있어서 안
-써도 되기도 하지만, 그냥 정리해서 공개는 해봤다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">&#34;커먼리습 ASDF 불러오기 편하게 하기&#34; 대모험</a></h1>
-					<time>🗓️ 23 Oct, 2020</time>
+					<h1 class="title"><a href="/posts/2020-08aug/ping-14fri/">Ping 14/Aug/2020</a></h1>
+					<time>🗓️ 14 Aug, 2020</time>
 					<br><div class="description">
 						
 						<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
-ASDF와 system definition file 검색의 정석
+빌드도구의 경험과 Meson을 사용하기
 </h2>
 <div id="outline-text-headline-1" class="outline-text-2">
-<p>이전에 <a href="/posts/2018-11nov/cl-asdf-custom-load-script/">ASDF을 이용하여 커먼리습 프로젝트의 의존성, 시스템을 로딩하기</a>
-  에 대해서 설명한 적이 있었다.</p>
 <p>
-  이전에 다룬 내용은 정석적으로 <code>$HOME/common-lisp</code> 디렉토리에 <code>.asd</code>
-  파일을 심볼릭링크를 걸고, <code>(asdf:load-system ..)</code> 을 시도하는
-  내용이었었다.</p>
+  <a href="https://github.com/ageldama/meson-abc">Meson-ABC 갖고 놀아본 코드</a></p>
+<p>
+  아주 예전에 commercially 성공적이었었던 C++ 프로젝트를 홀로 기획, 설계, 개발했었었다.</p>
+<p>
+  처음에는 GNU Makefile으로 간단히 시작했었었다. 타겟 플랫폼이 뻔하게 윈도였기 때문이다.</p>
+<p>
+  그 이전에는 ANSI C으로 작성한 <a href="https://sourceforge.net/projects/sdlhan/">SDL 조합형 비트맵 출력 오픈소스</a>
+  라이브러리 같은 것들을 작업할 때는 그냥 GNU Autotools 을 쓰거나
+  했었었다.</p>
+<p>
+  하지만 그렇게 configure 하거나 할 부분도 없고 처음 혼자 시작하며
+  다른 신경 쓸 것도 무지하게 많았었던 프로젝트였고 더욱이 기간도
+  한정적이었었다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+  그리고 SCons 같은 것을 조금 쓰다가, 결국 더 간단히 Rake으로 빌드를
+  작성해 한동안 썼었다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping-13thu/">Ping 13/Aug/2020</a></h1>
+					<time>🗓️ 13 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+프비 워크스테이션을 만들어놓고 그렇게 좋은 사양은 절대 아닌 조용한
+슬림PC에서, 또 가능한 마우스를 안 써도 좋게 세팅해놓고 편안하게
+이맥스에서 작업을 해나간다.</p>
+<p>
+FM라디오의 가끔 지글거리는 잡음도 좋은 것 같다.</p>
+<p>
+계속해서 신경을 쓰게 만들고 끊기고 광고가 나오고 또 클릭을 유도하고
+멍청하게 징징거리는 것으로 돈으로 바꾸는 요즘의 수많은 다른 매체들보다
+훨씬 나를 편안하게 만든다.</p>
+<p>
+다른 매체들도 비슷하지 않을까. SNS도 그런 것 같고 대부분의 앱, 심지어
+운영체제도 그런 환경들과는 다른.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping2-01sat/">Ping (2nd) 01/Aug/2020</a></h1>
+					<time>🗓️ 01 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+지난번 포스팅에서 이야기한 것처럼, 인연이 있던 창업자가 새로 창업한
+회사에 제안이 있었었다. 더 없이 아쉬운 기회이고 미안했지만 내가 하고
+있던 일을 계속하고 싶어서 아쉬운 기회이지만 거절했다. 내 능력에 벅찬
+일일 것이고, 또 내게 손해가 있겠지만 내가 결심한바대로 해나가는 것이
+내게는 맞는 일이란 생각이다.</p>
+<p>
+이미 당시에 한국에서 유명한 기업으로부터 창업한지 얼마 되지도 않아
+ 투자를 잘 받고, 안정적으로 성장할 준비를 하고 있었다.</p>
+<p>
+그 키워드의 기술을 당시에 연구하고 공개한 MS 이외에도 IBM에서도
+오픈소스로 작업한 툴킷을 공개하고 실용적인 단계에서 활용이 가능한
+형태로 공유를 시작했다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping-01sat/">Ping 01/Aug/2020</a></h1>
+					<time>🗓️ 01 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+오랬만에 내 환경을 더 다듬었다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Emacs, Evil, General.el.
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>매일 이맥스에서 코딩을 하면서 조금은 Vim보다 키바인딩이 편집에
+    불리한 것 같았었다. 그렇다고 Vim을 쓰고 싶지는 않았다. 검색이나
+    다중편집 같은 이맥스만의 기능을 Vim에서 흉내내는 것은 별로 마음에
+    차지 않는 정도이고 또 화면 flickering도 이맥스 GUI을 쓸 때보다
+    터미널 Vim은 심해서 난 피곤해.</p>
+<p>
+    그래서 Evil-mode을 종종 썼는데 문제는 내가 만들어놓은 general.el
+    키바인딩들이 Evil을 고려하지 않고 만들어서 evil모드를 toggle하며
+    써야했었었다. 특히 내 이맥스 모드에서의 키바인딩의 prefix이
+    C-z인데, evil-mode에서는 emacs mode으로 전환을 위해서 사용.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-07jul/ping-24fri/">Ping 24/Jul/2020</a></h1>
+					<time>🗓️ 24 Jul, 2020</time>
+					<br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+여름방학을 보내고 왔다.
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>지난 한달여, 꽤 즐겁게 보낸 것 같다. 그리고 순수하고 맑은 마음으로
+  행복했었던 것 같다.</p>
+<p>
+  하늘도 여름 같이 맑고 파랗고 공기도 좋았었다. 매일 열심히 집중해서
+  일할 수 있었고 좋았다.</p>
+<p>
+  그리고 그렇기 때문에 조금은 아련하다. </p>
+<p>
+  이런 느낌.</p>
+<ul>
+<li>
+<p><strong>(기쿠지로의 여름 OST) Summer / 히사이시 조</strong></p>
+<ul>
+<li><a href="https://youtu.be/_t1KvFMUNws">https://youtu.be/_t1KvFMUNws</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 <div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
-Prototyping등 더 편안하게 혼자 코딩을 할 때는…
+Games: Doom 64, Ion Fury.
 </h2>
 <div id="outline-text-headline-2" class="outline-text-2">
-<p>혼자 커먼리습 코딩을 하면서, 나는 더 간단하게 프로젝트를 시작하는
-  방법을 선호한다.</p>
-<p>
-  커먼리습이 파일 이름이나 경로에 대해서 의존하는 것이 아니고,
-  컴파일시점, 로딩시점에 순서에 따라 로딩해서 최종적으로 컴파일하여
-  적재한 결과 이미지를 더 중요하게 여기기 때문에, 그리고 그런 컴파일,
-  빌드, 로딩과 같은 모든 단계들 자체도 커먼리습 표현식 그자체로
-  동작하기 때문에 그냥 하나의 소스파일을 섹션별로 나눠서 작업하면
-  편리하다.</p>&hellip;
+<p>Doom 64을 플레이. 클래식 둠, 둠2이랑은 또 완전히 다른
+  게임이었음. 몬스터들 모델링, 음악, 레벨디자인 모두 완전히 새로
+  만들어서 재밌었다. 그리고 꽤 다른 분위기라서 플레이하기 좋았다.</p>&hellip;
 						
 					</div>
                                         
@@ -316,11 +317,11 @@ Prototyping등 더 편안하게 혼자 코딩을 할 때는…
             <a href="/page/18/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(19/59)</span>
+        <span class="page-number">(19/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/20/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -330,7 +331,7 @@ Prototyping등 더 편안하게 혼자 코딩을 할 때는…
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762760861</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

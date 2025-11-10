@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.147.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1762760861">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.037f6cece4a3d809e20779e53a5fee5893d65bb165bf1698e599df0da6489664.css" integrity="sha256-A39s7OSj2AniB3nlOl/uWJPWW7FlvxaY5ZnfDaZIlmQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
                     
                 
             
@@ -66,9 +66,9 @@
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#fff',  
-      buttonColorDark: '#100f2c',  
-      buttonColorLight: '#fff', 
+      backgroundColor: '#cccccc',  
+      buttonColorDark: '#566666',  
+      buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -149,127 +149,217 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><h6><i>"One of the nice things about getting older is that you come to understand that you can integrate multiple aspects of your life together. When you're young, you think everything has to be binary, as that's exactly how you feel at that age".</i></h6> - Min Jin Lee</blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2024-03mar/2024-03mar23--01-ping/">공각기동대, 1995</a></h1>
-					<time>🗓️ 23 Mar, 2024</time>
+					<h1 class="title"><a href="/posts/2023-03mar/2023-03mar08--01-ping/">Ping 08/03/2023 .01 : 전자책읽기</a></h1>
+					<time>🗓️ 08 Mar, 2023</time>
 					<br><div class="description">
 						
 						<p>
-가끔 다시 본다. 그리고 마지막 장면을 보면서 덕력이 폭발하면서 종종 그런 생각에 빠짐.</p>
-<p>
-저런 시나리오를 쓴 사람은 어떤 기분이었을까 완전 쩐다.</p>&hellip;
+linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁들만 나열,
+별로 내용은 길게 늘여 쓰지 않으려고:</p>
+<ol>
+<li>
+<p>linux, 그중에서도 가벼운 하드웨어와 단순하게 잘 동작하는 배포판.</p>
+<ul>
+<li>여러가지 불필요한 군더더기 없고, 패키지들이 조금 오래된
+버젼이어도, 안정적으로만 동작하면 상관 없음.</li>
+<li>그래서, debian stable -or- testing 쓰면 속이 편함.</li>
+<li>하드웨어는 raspberry pi 3/4 둘 다 좋았다. <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>
+…특히 전력소모도 거의 없고, 딱 모니터 연결해 놓고 팬소음 거의
+없이 쾌적하게 책을 읽기 좋다.</li>
+</ul>
+</li>
+<li>
+<p>calibre 책파일 관리, 읽기 모두 만족스러움</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/">FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정</a></h1>
-					<time>🗓️ 05 Nov, 2023</time>
+					<h1 class="title"><a href="/posts/2023-03mar/perl-cal3/">`ncal -3` 직접 Perl으로 짜봤다</a></h1>
+					<time>🗓️ 02 Mar, 2023</time>
 					<br><div class="description">
 						
-						<div id="outline-container-headline-1" class="outline-2">
+						<p>
+<code class="verbatim">ncal -3</code> 이 뭐냐하면:</p>
+<p>
+<a href="https://man7.org/linux/man-pages/man1/cal.1.html">https://man7.org/linux/man-pages/man1/cal.1.html</a></p>
+<p>
+…뭐 이런건데, 개인적으로 저전력 글쓰기 전용머신에서 사용하는
+스크립트에서 배포판이 달라서 패키지를 못찾겠어서 <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, …그냥 직접
+짜서 대체했다.</p>
+<p>
+<a href="https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e488">https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e488</a></p>
+<p>
+그래서 스크린샷은:</p>
+<p>
+<img src="/2023-03mar/journal-edit-cal3.png" alt="/2023-03mar/journal-edit-cal3.png" title="/2023-03mar/journal-edit-cal3.png" /></p>
+<p>
+재밌었던 부분은:</p>
+<ol>
+<li>어차피 Perl으로 전부 짜서 쓰는 스크립트였는데,
+아예 외부 커맨드라인 도구 의존성을 더 없애서 뿌듯하다.</li>
+<li>매달 달력을 문자열으로 뽑았는데, 3달치를 뽑아서, 이걸 한 row에
+표시하고 싶었는데, <a href="https://metacpan.org/pod/Text::Table">Text::Table</a>으로 적절히 간단히 완료.</li>
+<li><a href="https://metacpan.org/pod/Term::ANSIColor">Term::ANSIColor</a>와 <a href="https://perldoc.perl.org/perlre">perlre</a>을 써서 깔끔하게 원하는 일자에 highlighting
+해서 편안했다.</li>
+<li>
+<p>…더 해킹을 해서, <code class="verbatim">calendar(..)</code> 결과문자열을 적당히 파싱해서,
+작은 Text::Table으로 만들어서, 그것들으로 조합하고 했었어도 될거
+같아.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2023-03mar/cxx-defer/">C&#43;&#43;: Golang-ish `defer`-macro</a></h1>
+					<time>🗓️ 02 Mar, 2023</time>
+					<br><div class="description">
+						
+						<p>
+별거 없는데, 문득 심심해서 툭닥거려봤다.</p>
+<p>
+<div>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">원하는 것과 접근법</a>
+</li>
+<li><a href="#headline-2"><code class="verbatim">defer.inl</code> :</a>
+</li>
+<li><a href="#headline-3">사용예</a>
+</li>
+<li><a href="#headline-4">제약사항과 생각해볼꺼리</a>
+</li>
+<li><a href="#headline-5">Footnotes</a>
+</li>
+</ul>
+</nav>
+</div>
+</p>
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
-freebsd에서 samba 파일서버 세팅은 프비핸드북 참고
+원하는 것과 접근법
 </h2>
 <div id="outline-text-headline-1" class="outline-text-2">
-<p><a href="https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba">https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba</a></p>
+<ol>
+<li><a href="https://go.dev/blog/defer-panic-and-recover">https://go.dev/blog/defer-panic-and-recover</a></li>
+<li><a href="https://docs.rs/defer/latest/defer/fn.defer.html">https://docs.rs/defer/latest/defer/fn.defer.html</a></li>
+<li><a href="https://ziglang.org/documentation/master/#defer">https://ziglang.org/documentation/master/#defer</a></li>
+</ol>
+<p>
+  golang/zig에서처럼 <code class="verbatim">defer</code> 등록한 LIFO순서대로 호출되도록.</p>
+<p>
+  검색해보면, 대부분 RAII을 사용하거나 하는 것들이 보인다:</p>
+<ul>
+<li><a href="https://duckduckgo.com/?q=c%2B%2B+golang+defer">DDG: c++ golang defer</a></li>
+<li><a href="https://stackoverflow.com/questions/33050620/golang-style-defer-in-c">https://stackoverflow.com/questions/33050620/golang-style-defer-in-c</a></li>
+<li><a href="https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop">https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop</a></li>
+<li><a href="https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/">https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/</a></li>
+</ul>
+<p>
+  …그냥 <code class="verbatim">std::shared_ptr&lt;void&gt;</code> 을 이용하는 방식이 마음에
+  들었다. 그리고 조금 더 간단하게 사용하려고 매크로로 만들어 봤다.</p>
 </div>
 </div>
 <div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
-symlink을 samba에 노출하기
+<code class="verbatim">defer.inl</code> :
 </h2>
 <div id="outline-text-headline-2" class="outline-text-2">
+<div class="src src-c++">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">  <span class="cm">/* -*- mode: c++; -*- */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cp">#ifndef defer_INL
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define defer_INL 1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#define _Defer_CONCAT_IMPL( x, y ) x##y
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y )
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk)
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#endif </span><span class="cm">/*defer_INL*/</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
 <p>
-<code>/usr/local/etc/smb4.conf</code> 파일에 다음을 추가:</p>
-<div class="src src-conf">
-<pre tabindex="0"><code class="language-conf" data-lang="conf">[global]
-...
-allow insecure wide links =	yes
-
-
-[share]
-...
-follow symlinks = yes
-wide links = yes
-unix extensions = no</code></pre>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
-mdns으로 samba 파일서버를 네트웍에 광고하기
-</h2>
-<div id="outline-text-headline-3" class="outline-text-2">
-<p>
-  보통은 avahi을 써왔는데, mdnsresponder이 더 가볍다고 해서 이렇게 세팅해봄.</p>
-<ol>
-<li><code>pkg install mDNSResponder</code></li>
-<li>
-<p><code>/etc/rc.conf</code> 에 추가:</p>
-<div class="src src-conf">
-<pre tabindex="0"><code class="language-conf" data-lang="conf">mdnsresponderposix_enable=&#34;YES&#34;
-mdnsresponderposix_flags=&#34;-f /usr/local/etc/mdnsresponderposix.conf&#34;</code></pre>
-</div>
-</li>
-<li>
-<p>호스트이름은 <code>freebsd-samsung</code> 으로 smb서비스를 노출.</p>&hellip;
+  <a href="https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html"><code class="verbatim">__COUNTER__</code></a> 이용해서 매크로가 생성한 <code class="verbatim">std::shared_ptr&lt;..&gt;</code> 변수의
+  이름이 겹치지 않도록 해봤다. (…위에 검색한 링크들에도 사용하듯이)</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</a></h1>
-					<time>🗓️ 05 Nov, 2023</time>
+					<h1 class="title"><a href="/posts/2023-02feb/2023-02feb26--01-css/">Ping 26/02/2023 .01 : 디자인 css 가볍게 수정</a></h1>
+					<time>🗓️ 26 Feb, 2023</time>
 					<br><div class="description">
 						
 						<p>
-나도 x11에서 wayland 기반으로 옮겨가고 있는데, 다른 것들은 대부분
-괜찮거나 포기.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+아예 아무런 스타일도 주지 않고, 그냥 알아서 html/css만으로 잘 보이도록
+고쳤다. 웹폰트니 그런것도 그냥 껐고.</p>
 <p>
-가볍고 좋은데, debian chromium에서 ibus으로 한글 입력이 안되어서
-알아봤다.</p>
-<hr>
-<div id="outline-container-headline-1" class="outline-3">
-<h3 id="headline-1">
-1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨.
-</h3>
-<div id="outline-text-headline-1" class="outline-text-3">
-<ul>
-<li>힌트 얻음: <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2058976">https://bugzilla.redhat.com/show_bug.cgi?id=2058976</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-3">
-<h3 id="headline-2">
-2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지?
-</h3>
-<div id="outline-text-headline-2" class="outline-text-3">
-<div class="src src-shell">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  <span class="k">for</span> pid in  <span class="k">$(</span>pgrep chromium<span class="k">)</span><span class="p">;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">#echo $pid</span>
-</span></span><span class="line"><span class="cl">      grep -i gtk /proc/<span class="s2">&#34;</span><span class="nv">$pid</span><span class="s2">&#34;</span>/maps
-</span></span><span class="line"><span class="cl">  <span class="k">done</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
+불필요한 스타일이나 폰트로딩을 줄여서 가볍고, 어차피 웹브라우져의
+&#39;reader mode&#39; 지원 같은걸로 내가 스타일 주는 것보다 훨씬 읽기 편안하게
+볼 수 있을테니까.</p>
 <p>
-==&gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&gt; ibus
-연동안됨.</p>&hellip;
+lynx, w3m 같은 <a href="https://en.wikipedia.org/wiki/Text-based_web_browser">텍스트 웹브라우져</a>에서 읽으나 그냥 무거운 웹브라우져으로
+읽으나 사람마다 알아서 잘 읽히도록 하는데에만 집중해봤다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2023-02feb/2023-02feb19--02-ping/">Ping 19/02/2023 .02 : 이름에 대한 추측 (2) HAL, IBM, JCL</a></h1>
+					<time>🗓️ 19 Feb, 2023</time>
+					<br><div class="description">
+						
+						<p>
+(…지난번 <a href="../2023-02feb07--01-ping/">C/C++/D/Zig 이름에 대한 추측</a>
+에 이어서, 그냥 떠올라서)</p>
+<ol>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/HAL_9000">HAL 9000</a> –&gt; IBM</p>
+<ol>
+<li>ASCII방식, 혹은 그냥 알파벳에서 한글자씩 앞으로 땡기면, &#34;IBM&#34;이 된다.</li>
+</ol>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Job_Control_Language">JCL</a></p>
+<ol>
+<li>IBM의 &#34;Job Control Language&#34;, 메인프레임 등에서 스크립팅을 위해
+쓴다고 한다.</li>
+<li>&#34;IBM&#34;에서 다시 또 한글자씩 앞으로 땡기면, &#34;JCL&#34;.</li>
+</ol>
+</li>
+</ol>
+<p>
+ㅎㅎ뭐 그냥 그렇다고.</p>&hellip;
 						
 					</div>
                                         
@@ -292,11 +382,11 @@ mdnsresponderposix_flags=&#34;-f /usr/local/etc/mdnsresponderposix.conf&#34;</co
             <a href="/page/5/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(6/59)</span>
+        <span class="page-number">(6/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/7/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -306,7 +396,7 @@ mdnsresponderposix_flags=&#34;-f /usr/local/etc/mdnsresponderposix.conf&#34;</co
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762760861</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

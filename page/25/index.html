@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.147.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1762760861">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.037f6cece4a3d809e20779e53a5fee5893d65bb165bf1698e599df0da6489664.css" integrity="sha256-A39s7OSj2AniB3nlOl/uWJPWW7FlvxaY5ZnfDaZIlmQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
                     
                 
             
@@ -66,9 +66,9 @@
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#fff',  
-      buttonColorDark: '#100f2c',  
-      buttonColorLight: '#fff', 
+      backgroundColor: '#cccccc',  
+      buttonColorDark: '#566666',  
+      buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -149,78 +149,147 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><h6><i>"One of the nice things about getting older is that you come to understand that you can integrate multiple aspects of your life together. When you're young, you think everything has to be binary, as that's exactly how you feel at that age".</i></h6> - Min Jin Lee</blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-09sep/ping-17thu/">Ping 17/Sep/2020</a></h1>
-					<time>🗓️ 17 Sep, 2020</time>
+					<h1 class="title"><a href="/posts/2019-12dec/org-spreadsheet-and-babel/">Org모드에서 스프레드시트 기능과 Babel 섞어쓰기</a></h1>
+					<time>🗓️ 13 Dec, 2019</time>
 					<br><div class="description">
 						
 						<p>
-영화 &#39;바그다드 카페&#39;를 어릴 때에는 &#39;주말의 명화&#39; 정도에서 다
-번역/더빙된, 그리고 아마 편집에 엄청나게 많이 짤려나갔을 버젼으로
-봤었던거 같은데 아무것도 기억에 남아있지 않았었다.</p>
+쩌는 <a href="https://seorenn.github.io/org-spreadsheet.html">Org-mode Spreadsheet 소개</a> 를 읽고 감명 받아서 따라해봅니다.</p>
 <p>
-심지어 이번에 다시 디렉터스컷으로 구해서 보면서 내가 기억에 남아 있던
-것들은 완전 다른 영화인 것 같았다. 그렇게 기억만큼 어둡지도 않았고
-오히려 너무 밝아서 오글거렸다. 아마도 좋은 오글거림이지만.</p>
+다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리
+<code>defun</code> / <code>defmacro</code> 으로 정의해놓고 그걸 spreadsheet에서 불러 쓸 수
+있을지가 궁금했습니다.</p>
 <p>
-기억에는 그렇게 남은 이미지는 브라운관 화면과 더빙 품질 등도 한 몫
-했을 것 같다.</p>
-<p>
-실은 영어를 어떻게 쓰는지, 처음 단어별로 끊어서 이야기 하는 시점(時
-─)과 그 이후에 사람 이름을 어떻게 발음 하는 것(야스민/재스민 등)
-억양과 발음, 단어 등등 듣고 있으면서 시간이 흘러감에 따라서 변화하는
-것을 봐야 하는 영화인데 더빙이었다면 어떻게 표현했을지 난감할 것
-같다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>&hellip;
+그래서 다음과 같이 해보면 가능할지를 실험:</p>
+<ol>
+<li>
+<p>Org-Babel으로 원하는 함수를 정의한다.</p>
+<ul>
+<li>그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다.</li>
+</ul>
+</li>
+<li>Spreadsheet에서 불러서 쓸 수 있는지 확인해본다.</li>
+</ol>
+<p>우선 <code>C-h a</code> 을 눌러 <code>vsum</code> 을 검색해보니, <code>defun calcFunc-vsum (&amp;rest
+vecs)</code> 으로 미리 선언되어 있는거 같았습니다. 이런 형태로 내가 정의하는
+함수도 구현해보면 될까 싶습니다.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-09sep/ping-16wed/">Ping 16/Sep/2020</a></h1>
-					<time>🗓️ 16 Sep, 2020</time>
+					<h1 class="title"><a href="/posts/2019-12dec/the-web-and-the-free-world/">원하는 웹브라우져, 웹환경, 그리고 익숙하지만 싫은 어떤 신앙체계</a></h1>
+					<time>🗓️ 11 Dec, 2019</time>
 					<br><div class="description">
 						
 						<p>
-그간 작업해오던 일이 있어서 과분하게 고마운 제안, 이미 익숙한
-사람들과, 거기에 훌륭한 이들과 멋진 일을 함께 하자는 제안들을 거절을
-하며 손해를 보며 살고 있었다.</p>
+  지금의 웹환경은 너무 과도한 치장, 보이는 이미지 중심이어서 딱
+  한가지 측면을 제외하고 모든 면에서 정말 끔찍하다는 생각이
+  들었다. 하긴 그러니 많은 사람들이 열심히 쓰는걸지도 몰라.</p>
 <p>
-그리고 그 일은 마무리를 짓고 다시 또 이야기들을 하고 들으며
-돌아다녔다. 그리고 생각보다 훨씬 체력소모가 컸었던 것 같다.</p>
+  그래서 정말 많은 사람들이 오히려 그런 치장, 자바스크립트로 덩어리진
+  화면을 로딩 하느라 보이지 않는 시간을 조금씩 모아서 낭비하고 있다는
+  생각도 든다. …그리고 또 그걸 만든다고 시간은 버려지고. 그렇게
+  모두가 하는 방식대로 하는 수 밖엔 다른 방법을 모르겠고, 그렇게
+  만들어가는 자바스크립트, 프론트엔드 개발자들의 시간도 마찬가지고.</p>
+<p>
+  더욱이 그런 &lt;예쁘고 조잡한&gt; 화면이 정보의 전달도, 명확하게 사람들이
+  사용할 수 있는 화면을 만들어 준다고 생각지도 않는다. 컴퓨터에 조금
+  관심이 없는 사람도 조금 평균적인 기준이랑 다르거나, 그런 평균적인
+  기준을 따라가려고 흉내와 고생은 많이 했지만 그러지는 못한 사이트를
+  써보라고 한다면 당혹한다. 나는 그렇다. 차라리 단순한 텍스트 메뉴와
+  숫자나 방향키 입력을 통한 텍스트 메뉴가 더 명확하고 나을 지경인거
+  같다. 하지만 잘 디자인되고 개발한 화면에서는 정보 전달도, 사용성도
+  좋겠지만, …문제는 그런 사이트는 거의 본적이 없다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/dissect-radio-gaga/">radio-recorder 프로젝트 설명</a></h1>
+					<time>🗓️ 11 Dec, 2019</time>
+					<br><div class="description">
+						
+						<p>
+2년전쯤에 한국 라디오를 혼자 듣고 싶었었다. 하지만 시차가 많이 나는
+지역에 살았었다. (8시간 정도 느림)</p>
+<p>
+그래서 한국 인터넷 라디오를 녹음해서 개인적으로 들을 수 있다면 좋겠다는
+아이디어로 작업했던 프로젝트 소스코드를 공개한다.</p>
+<p>
+<a href="https://github.com/ageldama/radio-recorder">https://github.com/ageldama/radio-recorder</a></p>
+<p>
+방송사의 인터넷 라디오를 녹음 하는 스크립트는 커밋에서 제외하고
+공개한다. 이는 방송사에게 문제가 될 수 있으므로 개인적으로 알아내서
+사용하고 타인과 공유하지 않기를 바란다.</p>
 <div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
-글쓰기, 코딩하기
+프로그램 구성
 </h2>
 <div id="outline-text-headline-1" class="outline-text-2">
-<p>지난 기간 동안 해온 작업을 마무리지었고, 앞으로는 다른 일에 매진해야
-  할 것 같다. 하지만 그럼에도 가능하면 너무 흐름을 잃지 않고 글을
-  꾸준히 쓰고 공개하지 않더라도 깃헙에 올리며 살아가야겠다. </p>&hellip;
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+cron 서버
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<ul>
+<li>지정된 시간에 녹음/인코딩 스크립트를 실행하는 스케쥴을 담당한다.</li>
+<li>오래된 임시 파일 정리 등등도.</li>
+<li>
+<p>한국의 시간대와 내가 있는 시간대가 달라서 다른 cron scheduler을
+쓰지 않고 그냥 짰었던거 같다.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-09sep/ping-14mon/">Ping 14/Sep/2020</a></h1>
-					<time>🗓️ 14 Sep, 2020</time>
+					<h1 class="title"><a href="/posts/2019-12dec/foo/">Org 파일으로 Hugo 포스팅 테스트</a></h1>
+					<time>🗓️ 11 Dec, 2019</time>
 					<br><div class="description">
 						
 						<p>
-작년 말, 올해 초만해도, 그때 내가 사람들과 이야기를 하며 기본소득에
-대한 지지를 이야기하면 반응은 시원찮았었다. 자신이 초능력자라고 말하는
-예전 대선에 도전했었던 어느 사람에 비유하며 웃었었고 나는 그런
-반응들이 못마땅했었다.</p>
+적당히 잘 동작하는거 같으니 앞으로는 그냥 혼란스러운 Markdown 대신에
+그냥 Org 파일으로 블로깅 하며 될거 같다. 행벜.</p>
 <p>
-또는 나는 나 자신이 못 가진 자라고 생각해서 은근히 더 공정하고 분배에
-집중한 사회가 되기를 바랬었다. 왜냐하면 내가 더 안정적이고 피곤할
-일들, 혹은 감정적으로도 시달리며 살기는 이미 지친 것 같아서다. 그런
-일들을 감내하게 만드는 것은 경제적 이유였었고 더한 모습들이 우리
-사회에서는 결국 돈 때문일테니까라고 생각해서였다.</p>&hellip;
+예전 버젼 Hugo에서는 지원을 제대로 못하던거 같은데, 어느샌가 업데이트
+하니까 되는거 같아서 그냥 슬그머니
+쓰기로. <a href="https://gohugo.io/content-management/formats/">https://gohugo.io/content-management/formats/</a></p>
+<p>
+기존 마크다운들도 인라인 이미지 문법을 바꾸고, ToC 표시 설정도 바뀌어서 조금 변경.</p>
+<p>
+아쉬운건 여전히 Org 파일에서 ToC 지원은 빠져 있는거
+같아서… <a href="https://github.com/snosov1/toc-org">https://github.com/snosov1/toc-org</a> 설치해봤다. 그냥 고민할
+필요가 없었구나. ㅋ</p>
+<p>
+제일 좋은건 code syntax highlight이 예뻐졌다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Table of Contents                                    &lt;– :TOC: –&gt;
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ul>
+<li>
+<p><a href="#foobar">foobar</a></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/cl-state-machine-1st-release/">First release of cl-state-machine</a></h1>
+					<time>🗓️ 09 Dec, 2019</time>
+					<br><div class="description">
+						
+						<p>Made a small state machine library/DSL in/for CommonLisp.</p>
+<p><a href="https://github.com/ageldama/cl-state-machine">https://github.com/ageldama/cl-state-machine</a></p>&hellip;
 						
 					</div>
                                         
@@ -243,11 +312,11 @@
             <a href="/page/24/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(25/59)</span>
+        <span class="page-number">(25/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/26/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -257,7 +326,7 @@
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762760861</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

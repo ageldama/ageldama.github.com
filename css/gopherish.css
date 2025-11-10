@@ -1,9 +1,10 @@
 @charset "UTF-8";
 /* Neo둥근모 */
+@import url("/neodgm-webfont/neodgm/style.css");
 /* Neo둥근모 Code */
+@import url("/neodgm-webfont/neodgm_code/style.css");
 html {
-  overflow-y: scroll;
-  font-family: serif;
+  font-family: "NeoDunggeunmo", serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,22 +15,29 @@ html {
    */
 }
 
-.body {
+body {
+  background-color: #cccccc;
   /* margin-left: 0.3rem; */
   /* margin-right: 0.3rem; */
 }
 
 .footnote-body {
+  margin-top: -2rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
+.footnote-definition {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
 code {
-  font-family: monospace;
+  font-family: "NeoDunggeunmo Code", monospace;
 }
 
 pre {
-  font-family: monospace;
+  font-family: "NeoDunggeunmo Code", monospace;
 }
 
 ul.tags {
@@ -41,33 +49,22 @@ ul.tags {
 ul.tags li {
   /* display: inline; */
   /* padding-bottom: 1rem; */
-  font-family: monospace;
+  font-family: "NeoDunggeunmo Code", monospace;
 }
 
 .tags li::before {
   /* content: "🏷️"; */
 }
 
-.site-description {
-  display: flex;
-  justify-content: space-between;
-  font-family: serif;
-  font-size: 1.0rem;
-}
-
-.site-description > blockquote {
-  background-color: #cccccc;
-  box-shadow: 9px 9px 0px 2px green;
-}
-
 .title > .meta {
-  font-family: monospace;
+  font-family: "NeoDunggeunmo Code", monospace;
   margin-left: 0.3rem;
 }
 
-blockquote {
+article blockquote {
   padding: .1em .2em;
-  border: solid 1px;
+  border: solid 1px #eddddd;
+  box-shadow: 2px 2px 0px 0px green;
 }
 
 figure {
@@ -101,27 +98,83 @@ header {
 
 .main a {
   font-size: 3.0rem;
-  font-family: monospace;
+  font-family: "NeoDunggeunmo Code", monospace;
 }
 
 header nav a {
-  font-family: monospace;
+  font-family: "NeoDunggeunmo Code", monospace;
   font-size: 1.0rem;
   /* padding-bottom: 0.4rem; */
   margin-left: 1.3rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+article section.body h1, h2, h3, h4, h5, h6 {
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
   font-size: 1.2rem;
-  margin-top: 2em;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+.site-description {
+  display: flex;
+  justify-content: space-between;
+  font-family: "NeoDunggeunmo", serif;
+  font-size: 1.0rem;
+  /*animation: night-lights $site_description_anim_secs infinite;
+    -webkit-animation: night-lights $site_description_anim_secs infinite;
+    -moz-animation: night-lights $site_description_anim_secs infinite;
+    -o-animation: night-lights $site_description_anim_secs infinite;*/
+}
+
+.site-description blockquote {
+  background-color: #eccccc;
+  border: solid 1px #eddddd;
+  box-shadow: 0.04em 0.04em #fc0049, 0.08em 0.08em #fe8f01, 0.12em 0.12em #fdf21f, 0.16em 0.16em #3fdf4b, 0.2em 0.2em #3462fe;
+  padding: .5em .5em;
+}
+
+.site-description h1, h2, h3, h4, h5, h6 {
+  margin-top: 0rem;
 }
 
 section.list-item {
-  border-bottom: dashed 1px red;
+  border: solid 1px #eddddd;
+  box-shadow: 2px 2px 0px 0px green;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: #eccccc;
 }
 
 h1.title::before {
-  content: '# ';
+  content: '$ ';
 }
 
 /*
@@ -163,6 +216,13 @@ article .title {
   margin-bottom: 1em;
 }
 
+article {
+  padding-left: 0.5rem;
+  box-shadow: 2px 2px 0px 0px green;
+  border: solid 1px #eddddd;
+  background-color: #eccccc;
+}
+
 /* Callout */
 .callout {
   padding: 1em;
@@ -194,7 +254,7 @@ table td{
 .pagination {
   text-align: center;
   font-size: 1.1rem;
-  font-family: monospace;
+  font-family: "NeoDunggeunmo Code", monospace;
 }
 
 a {
@@ -261,11 +321,12 @@ a:visited {
 }
 
 .site-title {
+  font-family: "NeoDunggeunmo Code", monospace;
   text-decoration: none;
   font-weight: bold;
   padding: 1rem;
-  color: green;
-  text-shadow: 3px 3px 1px #bfecf7;
+  color: #00ffff;
+  text-shadow: 3px 3px 3px #bfecf7;
 }
 
 /* --- Search --- */
@@ -286,6 +347,10 @@ a:visited {
   padding-right: 0.1rem;
 }
 
+.search-result-row {
+  font-weight: bold;
+}
+
 /* @import './loaders'; */
 /*
 .pagefind-ui div {
@@ -303,5 +368,9 @@ li.post .meta {
 }
 
 */
+.tocjs {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
 
 /*# sourceMappingURL=gopherish.css.map */

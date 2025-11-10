@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.147.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1762760861">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.037f6cece4a3d809e20779e53a5fee5893d65bb165bf1698e599df0da6489664.css" integrity="sha256-A39s7OSj2AniB3nlOl/uWJPWW7FlvxaY5ZnfDaZIlmQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
                     
                 
             
@@ -66,9 +66,9 @@
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#fff',  
-      buttonColorDark: '#100f2c',  
-      buttonColorLight: '#fff', 
+      backgroundColor: '#cccccc',  
+      buttonColorDark: '#566666',  
+      buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -149,66 +149,134 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><h6><i>"One of the nice things about getting older is that you come to understand that you can integrate multiple aspects of your life together. When you're young, you think everything has to be binary, as that's exactly how you feel at that age".</i></h6> - Min Jin Lee</blockquote></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-11nov/ping-10tue/">Ping 10/Nov/2020</a></h1>
-					<time>🗓️ 10 Nov, 2020</time>
+					<h1 class="title"><a href="/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/">Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</a></h1>
+					<time>🗓️ 27 Aug, 2020</time>
 					<br><div class="description">
 						
 						<p>
-올해 초에는 Vue.js을 많이 쓸일이 있었었다.</p>
+arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.</p>
 <p>
-아주 오래 전에, Adobe Flex에서 MXML, ActionScript3 같은 것을 써서 화면
-컴포넌트를 만들던 이후로 거의 10여년 만에 화면에 필요한 컴포넌트를
-만들고 개발을 해봤다.</p>
+USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을
+쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고
+유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.</p>
 <p>
-그 중간 중간 jQuery을 이용해서 웹화면을 만들거나 하는 경험도 있기는
-했었는데, 재밌게도 그 이전에 사용하던 MXML, AS3의 컴포넌트 중심
-개발방식이 훨씬 앞선 것이었다는 생각을 했다.</p>
+정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마
+<a href="https://github.com/aircrack-ng/rtl8812au">https://github.com/aircrack-ng/rtl8812au</a> 이 드라이버가 살렸다.</p>
+<div class="src src-text">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># lsusb
+</span></span><span class="line"><span class="cl">Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU]</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
 <p>
-실제로 2008년 정도에도, 현재의 ES6 같은 느낌의 AS3으로, Class based
-OO을 하고 코딩을 하고, 화면 컴포넌트들을 JSX와 유사한 모양의 MXML으로
-조직하고, 또 바인딩을 이용해서 지금의 Vue, React에서 State을 이용하여
-데이터를 이용하여 컴포넌트를 어떻게 그릴지 결정해서 개발을 했었었다.</p>&hellip;
+그것도 DKMS으로 빌드하면 안되고 그냥 <code>make install</code> 해서 동작하게
+되었다. 다행이었다. </p>
+<p>
+그리고 나서 나중에도 로딩하도록 /etc/module-load
+<code>/etc/modules-load.d/rtlusb.conf</code> 에 <code>88XXau</code> 라인을 넣고 저장.</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-11nov/ping-05thu/">Ping 05/Nov/2020</a></h1>
-					<time>🗓️ 05 Nov, 2020</time>
+					<h1 class="title"><a href="/posts/2020-08aug/ping-27thu/">Ping 27/Aug/2020</a></h1>
+					<time>🗓️ 27 Aug, 2020</time>
 					<br><div class="description">
 						
 						<p>
-책을 몇 권 주문했다. 관심이 생긴 새로운 분야에 대한 책들이었는데
-흥미롭게도 그 중 두 권이 서로 완전히 다른 분야인데 역저자가
-같았다. 아마도 역자 소개에 나온 자신의 업무, 맡은 영역에서 필요하거나
-관심이 깊어서 번역한 것 같다. 재밌었다.</p>
+그간 진행해오던 프로젝트는 성능에 대해서 premature optimization을
+고려해서 만들기 보다는 architectural한 면에 비중을 갖고 가능성을
+염두에두고 선택을 해오며 만들었다.</p>
 <p>
-그리고 갖고 있는 한국어로는 아직 나오지 않은 책을 세 권 정도 읽고
-싶어서 다시 펼쳤다. 예전에도 조금 읽었었던 책들인데 마음에 들었던
-구절들, 생각들이 다시 읽혀져 즐거웠다.</p>&hellip;
+그럼에도 꽤 괜찮은 성능이었었고, 이제는 첫번째 버젼의 완성과 문서
+작성도 완료한 시점이어서 앞으로 성능을 높일 방안을 고민해보고 실험을
+몇개 수행해서 방법 결정해봤다.</p>
+<p>
+(현재 사용하는 방법과 새로이 사용할 방안의 이름은 모두 변경했다.)</p>
+<ol>
+<li>
+<p>기존 성능 측정은:</p>
+<ol>
+<li>
+<p>X event-writer</p>
+<ul>
+<li>commit을 한번에 하지 않고, 매 이벤트마다 수행해서
+느림. (현재는 변경되었음)</li>
+<li>약 11,196-microseconds (11-ms)</li>
+</ul>
+</li>
+<li>
+<p>X journal-writer</p>&hellip;
 						
 					</div>
                                         
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-11nov/org-more-1st-rel/">&#34;org-more.el&#34; released!</a></h1>
-					<time>🗓️ 04 Nov, 2020</time>
+					<h1 class="title"><a href="/posts/2020-08aug/ping-25tue/">Ping 25/Aug/2020</a></h1>
+					<time>🗓️ 25 Aug, 2020</time>
 					<br><div class="description">
 						
 						<p>
-<a href="https://github.com/ageldama/org-more">org-more.el: search .org files have certain tags (#+tags[]:
-or #+tags[]:)</a></p>
+the end of the belle époque?</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping-24mon/">Ping 24/Aug/2020</a></h1>
+					<time>🗓️ 24 Aug, 2020</time>
+					<br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+&#34;프로젝트&#34;
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>진행해온 프로젝트의 문서를 작성 중.</p>
 <p>
-개인 위키, KB처럼 org 파일 모음을 사용하고 있는데, 디렉토리 계층과
-직접 링크 관계만이 아니라 같은 태그들으로 묶어서 각 파일들을 검색하고
-리스팅 할 수 있도록 만들었다.</p>&hellip;
+  문서를 작성하면서 더 보충/보강할 내용들이 튀어나온다.</p>
+<p>
+  이 또한 사실 즐겁다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+게임하기
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>Doom64 리메이크를 클리어했다. 마지막 레벨에서는 도저히 깰 수 없어서
+  그냥 마지막 한 마리를 잡기 위해서 치트를 켜서 아쉽다. 하지만 그
+  마지막 보스 이전에 타이드는 그냥 제정신으로 다 죽여서 재밌었다.</p>
+<p>
+  다음 게임은 퀘이크 시리즈를 다시 플레이할까 생각 중. 폴아웃4,
+  스카이림을 다시 로드해서 플레이를 하며 그 세계에서 시간을 보내도
+  좋겠지만 조금은 다른 게임을 하고 싶어서.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping2-14fri/">Ping (2nd) 14/Aug/2020</a></h1>
+					<time>🗓️ 14 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+ㅎㅎ좋다. 이제 문서와 추가적인 작은 도구 몇 개를 더 만드는 것만 남았구나.</p>&hellip;
 						
 					</div>
                                         
@@ -231,11 +299,11 @@ or #+tags[]:)</a></p>
             <a href="/page/17/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(18/59)</span>
+        <span class="page-number">(18/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/19/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -245,7 +313,7 @@ or #+tags[]:)</a></p>
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762760861</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frankenphp on 아겔로그</title>
+    <link>http://localhost:1313/tags/frankenphp/</link>
+    <description>Recent content in Frankenphp on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 30 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/frankenphp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>http서버 benchmark와 흥미로운 결과 (tcl, node.js, python, perl, frankenphp, nginx, civetweb)</title>
+      <link>http://localhost:1313/posts/2025-09sep/httpd-bench-fun/</link>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-09sep/httpd-bench-fun/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

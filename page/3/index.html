@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.147.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1757927470">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1762760861">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.037f6cece4a3d809e20779e53a5fee5893d65bb165bf1698e599df0da6489664.css" integrity="sha256-A39s7OSj2AniB3nlOl/uWJPWW7FlvxaY5ZnfDaZIlmQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
                     
                 
             
@@ -66,9 +66,9 @@
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#fff',  
-      buttonColorDark: '#100f2c',  
-      buttonColorLight: '#fff', 
+      backgroundColor: '#cccccc',  
+      buttonColorDark: '#566666',  
+      buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -149,9 +149,63 @@
 
 
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><blockquote><h6><i>"One of the nice things about getting older is that you come to understand that you can integrate multiple aspects of your life together. When you're young, you think everything has to be binary, as that's exactly how you feel at that age".</i></h6> - Min Jin Lee</blockquote></div>
 				
 				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2025-05may/term-ddakong-v0.0.8-release/">ddakong v0.0.8 릴리즈: 안정화 및 플러그인 시스템</a></h1>
+					<time>🗓️ 03 May, 2025</time>
+					<br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+스크린샷:
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><img src="/2025-05may/KIMCHI-cropped.png" alt="/2025-05may/KIMCHI-cropped.png" title="/2025-05may/KIMCHI-cropped.png" /></p>
+<p>
+&lt; <a href="https://github.com/ageldama/term-ddakong">https://github.com/ageldama/term-ddakong</a> &gt;</p>
+<p>
+&lt; <a href="https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8">https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8</a> &gt;</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+릴리즈 v0.0.8
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>안정화/문서화하고, 이제 플러그인 시스템을 도입해서 원하는대로
+hackable🪓🔥한 터미널용 입력기가 되었다.</p>
+<p>
+플러그인 작성해서:</p>
+<ol>
+<li>한글만이 아니라 다른 언어 입력기로 사용할 수도 있음.</li>
+<li>UTF-8 이외에 다른 인코딩으로 출력가능함. (예: EUC-KR, EUC-JP …)</li>
+<li>토글키(<code>Control-H</code>) 마음에 안들면 바꾸면 됨.</li>
+<li>등등등</li>
+</ol>
+<p>
+오늘 한 작업들은:</p>
+<ol>
+<li>안정화 많이 진행했다.</li>
+<li>코드 문서화 주석작성 다 했다.</li>
+<li>
+<p>cross-platform build 자동화해서 릴리즈 때 편해졌다.</p>
+<ul>
+<li>armhf (raspberry pi 32bit), aarch64 (raspberry pi 64bit),
+i386 (32bit), x86_64 모두 릴리즈하고 있다.</li>
+<li>..혹시나 어디선가 i386 기계 터미널에서 한글을 입력하고 싶은
+사람이 있을거 같아서.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item">
 					<h1 class="title"><a href="/posts/2025-05may/term-ddakong-initial-release/">ddakong 한글입력기 릴리즈</a></h1>
@@ -399,6 +453,52 @@ linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었�
                                         
 				</section>
 				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2025-03mar/2025-03mar20--01--darkmode-js/">darkmode.js으로 변경</a></h1>
+					<time>🗓️ 20 Mar, 2025</time>
+					<br><div class="description">
+						
+						<p>
+직접 짠 css/js에서 <a href="https://darkmodejs.learn.uno/">darkmode.js</a>으로 변경했다.
+css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.</p>
+<p>
+변경도 예쁘게 애니메이션 나오고, system preference 지정도 자동으로 되고.</p>
+<div id="outline-container-headline-1" class="outline-3">
+<h3 id="headline-1">
+(미래의 나를 위해) css/html에서 class
+</h3>
+<div id="outline-text-headline-1" class="outline-text-3">
+<div class="src src-css">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">darkmode--activated</span> <span class="p">.</span><span class="nc">logo</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">mix-blend-mode</span><span class="p">:</span> <span class="kc">difference</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<div class="src src-html">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;darkmode-ignore&#34;</span><span class="p">&gt;</span>😬<span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
 				
 
 
@@ -416,11 +516,11 @@ linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었�
             <a href="/page/2/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(3/59)</span>
+        <span class="page-number">(3/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/4/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/59/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -430,7 +530,7 @@ linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었�
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762760861</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

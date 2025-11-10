@@ -7,14 +7,21 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 15 Sep 2025 08:25:26 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/filesystem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</title>
+      <link>https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/</link>
+      <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/</guid>
+      <description>&lt;p&gt;&#xA;코딩을 하다보면, 파일변경시에 자동으로 빌드, 서버재시작, 혹은&#xA;테스트케이스를 실행 되도록 하면 꽤 편리할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;커먼리습 같은 경우엔 바로 실행중인 코드가 변경되는 방식이어서 신경&#xA;쓸게 별로 없고, Rails 같은 웹프레임웍은 자동으로 재시작하거나 변경된&#xA;코드를 다시 로딩해주기도 하고, PHP 계열도 웹브라우저를 refresh하면&#xA;자동적으로 새 코드으로 실행하게 된다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다른 컴파일이 필요한 언어나, 파이썬, 펄 같은 언어들, 혹은 자동으로&#xA;코드에 반영되는 언어/프레임웍을 사용하더라도, 원하는 태스크(예:&#xA;테스트케이스 실행) 같은걸 걸어 놓으려면 커맨드라인에서 지정해두는게&#xA;낫다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>[작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템)</title>
       <link>https://ageldama.github.io/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/</link>
       <pubDate>Mon, 15 Sep 2025 08:25:26 +0000</pubDate>
       <guid>https://ageldama.github.io/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/</guid>
-      <description>&lt;p&gt;&#xA;freebsd을 써오면서 좀 불만이었던게&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, usb으로 외장 hdd을 연결할 때&#xA;호환성 혹은 성능이 너무 느림.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 아예 빠른 유선랜을 연결해놓고 samba으로 파일을 백업/공유했었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;호환성은 &lt;a href=&#34;https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup&#34;&gt;linux luks&lt;/a&gt; 지원도 아쉽지만, 대부분의 외장하드 파일시스템을 잘&#xA;지원하지 못하는거 같았어서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데, 이번에 다시 시도하면서 그냥 얌전하게 &lt;a href=&#34;https://wiki.freebsd.org/FUSEFS&#34;&gt;fusefs&lt;/a&gt; + &lt;a href=&#34;https://www.freshports.org/sysutils/fusefs-exfat&#34;&gt;fusefs-exfat&lt;/a&gt;&#xA;사용하니 그럭저럭 괜찮은 성능이 나와서 이렇게 해야겠구나 생각.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;fusefs + ntfs 같은 port도 있는데, 이것도 빠를거 같지만, exfat이 더&#xA;구현이 빠를거 같다. (파일시스템 구조부터 훨씬 단순할테니까)&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Footnotes&#xA;&lt;/h2&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;footnotes&#34;&gt;&#xA;&lt;hr class=&#34;footnotes-separatator&#34;/&gt;&#xA;&lt;div class=&#34;footnote-definitions&#34;&gt;&#xA;&lt;div class=&#34;footnote-definition&#34;&gt;&#xA;&lt;sup id=&#34;footnote-1&#34;&gt;&lt;a href=&#34;#footnote-reference-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;&lt;div class=&#34;footnote-body&#34;&gt;&#xA;&lt;p&gt;물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지원 등등&#xA;hw driver지원이 항상 부족하지만.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&#xA;freebsd을 써오면서 좀 불만이었던게&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, usb으로 외장 hdd을 연결할 때&#xA;호환성 혹은 성능이 너무 느림.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 아예 빠른 유선랜을 연결해놓고 samba으로 파일을 백업/공유했었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;호환성은 &lt;a href=&#34;https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup&#34;&gt;linux luks&lt;/a&gt; 지원도 아쉽지만, 대부분의 외장하드 파일시스템을 잘&#xA;지원하지 못하는거 같았어서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데, 이번에 다시 시도하면서 그냥 얌전하게 &lt;a href=&#34;https://wiki.freebsd.org/FUSEFS&#34;&gt;fusefs&lt;/a&gt; + &lt;a href=&#34;https://www.freshports.org/sysutils/fusefs-exfat&#34;&gt;fusefs-exfat&lt;/a&gt;&#xA;사용하니 그럭저럭 괜찮은 성능이 나와서 이렇게 해야겠구나 생각.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;fusefs + ntfs 같은 port도 있는데, 이것도 빠를거 같지만, exfat이 더&#xA;구현이 빠를거 같다. (파일시스템 구조부터 훨씬 단순할테니까)&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Footnotes&#xA;&lt;/h2&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;footnotes&#34;&gt;&#xA;&lt;hr class=&#34;footnotes-separatator&#34;&gt;&#xA;&lt;div class=&#34;footnote-definitions&#34;&gt;&#xA;&lt;div class=&#34;footnote-definition&#34;&gt;&#xA;&lt;sup id=&#34;footnote-1&#34;&gt;&lt;a href=&#34;#footnote-reference-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;&lt;div class=&#34;footnote-body&#34;&gt;&#xA;&lt;p&gt;물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지원 등등&#xA;hw driver지원이 항상 부족하지만.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
