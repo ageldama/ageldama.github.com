@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.150.1">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758695811">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763549920">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
                     
                 
             
@@ -154,6 +154,72 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-10oct/05fri-ping/">Ping 05/10/2018</a></h1>
+					<time>🗓️ 05 Oct, 2018</time>
+					<br><div class="description">
+						
+						<h1 id="lamy2000-사용하면서">Lamy2000 사용하면서</h1>
+<p>tweet 1048150207110688768</p>
+<p>tweet 1048059130429100033</p>
+<ol>
+<li>잉크는 Lamy 잉크를 사서 쓰자.
+<ul>
+<li>다른 잉크보다 훨씬 번짐도 적고,</li>
+<li>필기감도 좋다. 약간 더 비싸지만 어쩔 수 없다.</li>
+</ul>
+</li>
+<li>손에 힘을 더 빼야한다.</li>
+</ol>
+<h1 id="데스크탑-피씨-리눅스-설치">데스크탑 피씨 리눅스 설치</h1>
+<p>HDD 데이터 디스크로 쓰던거 용량 큰쪽에 그냥 백업하고 날린 다음에
+리눅스를 통으로 설치.</p>
+<p><a href="https://store.steampowered.com/">Steam</a> 게임이나 가끔하느라 윈도
+host에 리눅스 guest으로 VM 설정해서 주로 써왔는데, 그냥 리눅스를
+host으로 쓰기로 결정.</p>
+<p><a href="https://flathub.org/apps/details/com.valvesoftware.Steam">Flatpak</a>으로
+나와서 배포판이나 데스크탑 환경에 상관없이 설치가 가능해져서 그냥
+설치하고 써보기로 했다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-10oct/rpi3-hifiberry-dacplus-config/">HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정</a></h1>
+					<time>🗓️ 03 Oct, 2018</time>
+					<br><div class="description">
+						
+						<p><a href="https://www.hifiberry.com/">https://www.hifiberry.com/</a> 요거 Raspberry Pi 3에 세팅한 모험에 대한
+이야기.</p>
+<h1 id="wifi잡기">WIFI잡기</h1>
+<pre tabindex="0"><code># /etc/wpa_supplicant/wpa_supplicant.conf 
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+#update_config=1
+country=GB
+
+network={
+	ssid=&#34;iptime&#34;
+	psk=&#34;xxxxxxxxxx&#34;
+	key_mgmt=WPA-PSK
+}
+</code></pre><ol>
+<li><code>wpa_passphrase</code> 안쓰고 그냥 plaintext으로 써도 동작.</li>
+<li>내 공유기랑은 <code>country=GB</code> 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤.</li>
+<li>그리고 <code>ip link set wlan0 {up|down}</code> 정도로 wlan0 인터페이스를 up/down하면됨.</li>
+</ol>
+<h1 id="사운드-드라이버-설정">사운드 드라이버 설정</h1>
+<ol>
+<li>내장 사운드카드 드라이버는 <a href="https://ko.wikipedia.org/wiki/Modprobe">modprobe</a> blacklist에 추가해서 끄자.</li>
+<li><code>/boot/config.txt</code>에 HiFiBerry DAC+ 드라이버 오버레이를 지정해야함.</li>
+</ol>
+<h2 id="내장-사운드-드라이버-끄기">내장 사운드 드라이버 끄기</h2>
+<p>다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2018-10oct/03wed-ping/">Ping 03/10/2018</a></h1>
 					<time>🗓️ 03 Oct, 2018</time>
 					<br><div class="description">
@@ -265,51 +331,6 @@ RTags</a> 조합으로
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2018-09sep/23sun-ping/">Ping 23/09/2018</a></h1>
-					<time>🗓️ 23 Sep, 2018</time>
-					<br><div class="description">
-						
-						<h1 id="영화-멀홀랜드-드라이브">영화: &lt;멀홀랜드 드라이브&gt;</h1>
-<figure><img src="/images/2018-09sep/mulholland-dr-poster-kr.jpg" width="400">
-</figure>
-
-<p>씁쓸. 그리고 영화 다보고 해석들 읽고 다시 생각하고 장면들에서 느끼던
-이상함점들이 왜 그랬었구나 맞춰보니 더 씁쓸. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<p>그리고 살면서 사랑이나 그런 환상을 갖는것들처럼 그런 완전한 꿈을
-생각하듯이 달콤한 전반부의 내용들이 이해됨.</p>
-<h1 id="추석-연휴에-서울에-있기">추석 연휴에 서울에 있기</h1>
-<p>어차피 고향도, 친척들도 거의 다 서울에 살아서 평생 명절마다 서울에서
-보내는게 너무 익숙하다. 그리고 이맘때가 나는 서울에서 좋은거 같아.</p>
-<p>그냥 적당히 조용하고 차소음도 사라지고 (심지어 우리집은 큰길에서 한참
-멀리있음에도) 공기도 훨씬 좋아진다. 밤거리도 한적해지고. 이런 분위기를
-좋아해서.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2018-09sep/22sat-ping/">Ping 22/09/2018</a></h1>
-					<time>🗓️ 22 Sep, 2018</time>
-					<br><div class="description">
-						
-						<h1 id="새-만년필--pilot-kaküno">새 만년필 : Pilot Kaküno!</h1>
-<p>tweet 1043371766318424064</p>
-<p>필기감은 같은 모델, 각 제품별로 조금씩 다른듯.  가격이 저렴해서 만년필
-취미를 권하고 싶은 3개를 사서 회사 다른팀이나 같은 연구소 사람들에게
-선물했다.</p>
-<h1 id="게임--둠2016-쉐도우-오브-더-툼레이더">게임 : 둠2016, 쉐도우 오브 더 툼레이더</h1>
-<p>가끔 시간이 날때, 예전에는 길을 못찾아서 많이 진행을 못했었던, <a href="https://en.wikipedia.org/wiki/Doom_(2016_video_game)">둠
-2016</a> 을 다시
-하고 있다. 지금은 꽤 많이 진행해서 <em>&ldquo;내가 바로 둠가이다. 10점 만점에
-12점인 사나이!&rdquo;</em> 모드로 플레이 할수있게 됐다.</p>
-<p><a href="https://en.wikipedia.org/wiki/Doom_Eternal">둠 이터널</a> 나오면 바로 지르게 될거 같아.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -327,11 +348,11 @@ RTags</a> 조합으로
             <a href="/page/31/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(32/36)</span>
+        <span class="page-number">(32/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/33/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -341,7 +362,7 @@ RTags</a> 조합으로
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758695811</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763549920</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

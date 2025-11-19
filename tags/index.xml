@@ -7,8 +7,120 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 24 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Byte-Compile</title>
+      <link>https://ageldama.github.io/tags/byte-compile/</link>
+      <pubDate>Sun, 16 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/byte-compile/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Configuration</title>
+      <link>https://ageldama.github.io/tags/configuration/</link>
+      <pubDate>Sun, 16 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/configuration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Elisp</title>
+      <link>https://ageldama.github.io/tags/elisp/</link>
+      <pubDate>Sun, 16 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/elisp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Emacs</title>
+      <link>https://ageldama.github.io/tags/emacs/</link>
+      <pubDate>Sun, 16 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/emacs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Emacs-Lisp</title>
+      <link>https://ageldama.github.io/tags/emacs-lisp/</link>
+      <pubDate>Sun, 16 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/emacs-lisp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Macro</title>
+      <link>https://ageldama.github.io/tags/macro/</link>
+      <pubDate>Sun, 16 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/macro/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Provide</title>
+      <link>https://ageldama.github.io/tags/provide/</link>
+      <pubDate>Sun, 16 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/provide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Require</title>
+      <link>https://ageldama.github.io/tags/require/</link>
+      <pubDate>Sun, 16 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/require/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Common-Lisp</title>
+      <link>https://ageldama.github.io/tags/common-lisp/</link>
+      <pubDate>Mon, 10 Nov 2025 06:35:45 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/common-lisp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Compiler</title>
+      <link>https://ageldama.github.io/tags/compiler/</link>
+      <pubDate>Mon, 10 Nov 2025 06:35:45 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/compiler/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Declaration</title>
+      <link>https://ageldama.github.io/tags/declaration/</link>
+      <pubDate>Mon, 10 Nov 2025 06:35:45 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/declaration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Defmacro</title>
+      <link>https://ageldama.github.io/tags/defmacro/</link>
+      <pubDate>Mon, 10 Nov 2025 06:35:45 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/defmacro/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lisp</title>
+      <link>https://ageldama.github.io/tags/lisp/</link>
+      <pubDate>Mon, 10 Nov 2025 06:35:45 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/lisp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Runtime</title>
+      <link>https://ageldama.github.io/tags/runtime/</link>
+      <pubDate>Mon, 10 Nov 2025 06:35:45 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/runtime/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sbcl</title>
+      <link>https://ageldama.github.io/tags/sbcl/</link>
+      <pubDate>Mon, 10 Nov 2025 06:35:45 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/sbcl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TIL</title>
+      <link>https://ageldama.github.io/tags/til/</link>
+      <pubDate>Mon, 10 Nov 2025 06:35:45 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/til/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Apply</title>
       <link>https://ageldama.github.io/tags/apply/</link>
@@ -112,13 +224,6 @@
       <link>https://ageldama.github.io/tags/lambda/</link>
       <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/lambda/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Lisp</title>
-      <link>https://ageldama.github.io/tags/lisp/</link>
-      <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/lisp/</guid>
       <description></description>
     </item>
     <item>
@@ -665,13 +770,6 @@
       <link>https://ageldama.github.io/tags/e502ma/</link>
       <pubDate>Mon, 15 Sep 2025 08:26:26 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/e502ma/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Emacs</title>
-      <link>https://ageldama.github.io/tags/emacs/</link>
-      <pubDate>Mon, 15 Sep 2025 08:26:26 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/emacs/</guid>
       <description></description>
     </item>
     <item>
@@ -1263,20 +1361,6 @@
       <description></description>
     </item>
     <item>
-      <title>Elisp</title>
-      <link>https://ageldama.github.io/tags/elisp/</link>
-      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/elisp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Emacs-Lisp</title>
-      <link>https://ageldama.github.io/tags/emacs-lisp/</link>
-      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/emacs-lisp/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Emacslisp</title>
       <link>https://ageldama.github.io/tags/emacslisp/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
@@ -1673,13 +1757,6 @@
       <link>https://ageldama.github.io/tags/longjmp/</link>
       <pubDate>Thu, 02 Mar 2023 16:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/longjmp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Macro</title>
-      <link>https://ageldama.github.io/tags/macro/</link>
-      <pubDate>Thu, 02 Mar 2023 16:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/macro/</guid>
       <description></description>
     </item>
     <item>
@@ -2740,13 +2817,6 @@
       <description></description>
     </item>
     <item>
-      <title>Common-Lisp</title>
-      <link>https://ageldama.github.io/tags/common-lisp/</link>
-      <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/common-lisp/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Dynamic-Binding</title>
       <link>https://ageldama.github.io/tags/dynamic-binding/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
@@ -3507,13 +3577,6 @@
       <link>https://ageldama.github.io/tags/rxjava/</link>
       <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
       <guid>https://ageldama.github.io/tags/rxjava/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Sbcl</title>
-      <link>https://ageldama.github.io/tags/sbcl/</link>
-      <pubDate>Sat, 25 Feb 2017 16:40:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/sbcl/</guid>
       <description></description>
     </item>
     <item>

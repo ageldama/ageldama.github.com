@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.150.1">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758695811">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763549920">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
                     
                 
             
@@ -152,6 +152,115 @@
 				<div class="site-description"><blockquote><h6><i>"One of the nice things about getting older is that you come to understand that you can integrate multiple aspects of your life together. When you're young, you think everything has to be binary, as that's exactly how you feel at that age".</i></h6> - Min Jin Lee</blockquote></div>
 				
 				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-11nov/ping-02mon/">Ping 02/Nov/2020</a></h1>
+					<time>🗓️ 02 Nov, 2020</time>
+					<br><div class="description">
+						
+						<p>
+(functional) reactive 관련들을 다시 찾아 보고 있다.</p>
+<p>
+예전에 webdev은 아니고 백엔드를 위해서 <a href="https://github.com/ReactiveX/rxjs">rxjs</a> 을 쓸 일이 있었었고
+꽤 재밌었다. node.js에서 async/await 이전에 동시성 처리를 하기에
+유용하게 쓸 수 있었었고, 실은 그냥 <a href="https://stackoverflow.com/questions/51542865/is-rxjs-observable-a-monad">monad이어서</a> 조금만 이해를 하고
+사용하면 여러모로 편리했었다.</p>
+<p>
+https://github.com/stoeffel/awesome-frp-js 여기에 보면 rxjs이외에도
+다른 js을 위한 FRP라이브러리들이 많이 생겼었다.</p>
+<p>
+그 중에 흥미가 있어서 <a href="https://github.com/baconjs/bacon.js">bacon.js</a> 을 읽고 rxjs에서 만들어 본 작은 예제
+프로젝트를 다시 작성해봤다. 깔끔했다.</p>
+<p>
+rxjs으로 작성했었던 작은 예제는 다음과 같다.</p>
+<div class="src src-javascript">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
+</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
+</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
+</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
+</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
+</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
+</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
+</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
+</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
+</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
+</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
+</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
+</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="kr">import</span> <span class="p">{</span> <span class="nx">fromEvent</span><span class="p">,</span> <span class="nx">Subject</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// eslint-disable-next-line object-curly-newline
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">import</span> <span class="p">{</span> <span class="nx">debounceTime</span><span class="p">,</span> <span class="nx">mapTo</span><span class="p">,</span> <span class="nx">scan</span><span class="p">,</span> <span class="nx">map</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;rxjs/operators&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">import</span> <span class="nx">jquery</span> <span class="nx">from</span> <span class="s1">&#39;jquery&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">counter$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Subject</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">counter$</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">scan</span><span class="p">((</span><span class="nx">n</span><span class="p">,</span> <span class="nx">acc</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">+</span> <span class="nx">acc</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">debounceTime</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">count</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#count&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">count</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">counter2$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Subject</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">counter2$</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">scan</span><span class="p">((</span><span class="nx">n</span><span class="p">,</span> <span class="nx">acc</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">+</span> <span class="nx">acc</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">count</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#count2&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">count</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">increase$</span> <span class="o">=</span> <span class="nx">fromEvent</span><span class="p">(</span><span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#increase&#39;</span><span class="p">),</span> <span class="s1">&#39;click&#39;</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">mapTo</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">decrease$</span> <span class="o">=</span> <span class="nx">fromEvent</span><span class="p">(</span><span class="nx">jquery</span><span class="p">(</span><span class="s1">&#39;#decrease&#39;</span><span class="p">),</span> <span class="s1">&#39;click&#39;</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">mapTo</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">increase$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter$</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">increase$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">map</span><span class="p">((</span><span class="nx">n</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter2$</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">decrease$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter$</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">decrease$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">map</span><span class="p">((</span><span class="nx">n</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">counter2$</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+(<code>package.json</code>, <code>webpack.config.js</code>, 관련 html 파일 등은 생략했다.)</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-10oct/asdf-subdir-finder-1st/">&#34;asdf-subdir-finder&#34; released!</a></h1>
+					<time>🗓️ 26 Oct, 2020</time>
+					<br><div class="description">
+						
+						<p>
+지난번 포스팅한 &#34;<a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">asdf 정의를 내 코드베이스의 하위디렉토리에서 자동으로
+로딩하기</a>&#34;를 프로젝트으로 만들었다.</p>
+<p>
+<a href="https://github.com/ageldama/asdf-subdir-finder">https://github.com/ageldama/asdf-subdir-finder</a></p>
+<p>
+사람마다 커먼리습으로 작업하는 스타일에 따라 많이 다를 수 있어서 안
+써도 되기도 하지만, 그냥 정리해서 공개는 해봤다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item">
 					<h1 class="title"><a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">&#34;커먼리습 ASDF 불러오기 편하게 하기&#34; 대모험</a></h1>
@@ -315,69 +424,6 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/ping-19mon/">Ping 19/Oct/2020</a></h1>
-					<time>🗓️ 19 Oct, 2020</time>
-					<br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-가을
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>도르트문트 집은 꽤 평화로웠다. 날씨가 좋은 날도 많고 공기도
-  맑았다. 한가한 주말이 되면 창문을 열고 잔디가 깔린 정원을 보며
-  담배를 태우고 커피를 내려 마셨다.</p>
-<p>
-  그리고 지하세탁장에 빨래를 돌려놓고 핑크플로이드의 다크사이드 오브
-  더 문 앨범을 좋은 스피커로 틀어놓았다. 잘 어울렸다.</p>
-<p>
-  서울의 변두리에서 맞는 이번 가을은 그런 기분이다. 조용하고 가을
-  햇살과 공기가 맑아졌다.</p>
-<p>
-  그리고 핑크플로이드를 그렇게 여유롭게 들을 수 있었다.</p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-오늘 읽으려는 글
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p><a href="http://www.mcs.vuw.ac.nz/comp/Publications/CS-TR-02-9.abs.html">http://www.mcs.vuw.ac.nz/comp/Publications/CS-TR-02-9.abs.html</a></p>
-</div>
-</div>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/ping-17sat-2nd/">Ping (2nd) 17/Oct/2020</a></h1>
-					<time>🗓️ 17 Oct, 2020</time>
-					<br><div class="description">
-						
-						<p>
-  올해 초 <a href="https://github.com/ageldama/cl-state-machine">cl-state-machine 라이브러리</a>를 만들어 공개한 이후로
-  커먼리습을 쓰지는 않았다.</p>
-<p>
-  다른 직업상 쓰는 언어들만을 쓰고 오픈소스와 개인적으로 만들고 싶은
-  프로젝트를 위해서 쓰는 언어인 커먼리습은 미뤄두었었다.</p>
-<p>
-  다시 커먼리습을 해야겠다고 생각이 들었다. 개인적으로 만들고 싶은
-  프로젝트도 있고, 그 프로젝트를 위해서 프론트엔드를 만드는데 React와
-  Vue을 써보고 이해하고 있어도 쓰고 싶지는 않기 때문이다.</p>
-<p>
-  사실 커먼리습은 그렇게 문법이 예쁘지도, 멋진 React와 같은 멋진
-  프레임웍이나 최신의 유행하는 라이브러리들을 모두 갖고 있지도 않다.</p>
-<p>
-  <a href="https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec">HyperSpec</a>을 읽다 보면 아주 쉽게 정의되어 있는 키워드들이 일관성이
-  있지도, 지금 시대의 관점에서 보기에 익숙한 현대적인 용어들을
-  사용해서 이름을 지어놓지도 않았다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -395,11 +441,11 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
             <a href="/page/12/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(13/36)</span>
+        <span class="page-number">(13/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/14/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -409,7 +455,7 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758695811</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763549920</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

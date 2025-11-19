@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.150.1">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758695811">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763549920">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
                     
                 
             
@@ -154,6 +154,61 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/">NeoVim, Evil-mode and Emacs의 모험</a></h1>
+					<time>🗓️ 28 Jul, 2018</time>
+					<br><div class="description">
+						
+						<h2 id="내적모순">&ldquo;내적모순&rdquo;</h2>
+<p>이맥스에서 <a href="https://www.emacswiki.org/emacs/Evil">Evil</a>을 쓰면서 몇가지 짜증나는게 있어왔다.</p>
+<ol>
+<li>Evil 자체의 문서화가 조금 거시기하다.
+<ol>
+<li>거기에
+<a href="https://github.com/justbur/emacs-which-key">Which-Key</a>같은
+키바인딩을 실시간으로 확인할 수 있는 방법도 제대로 안먹히게
+된거라, 이맥스에서 쩔어주는 기능인 <em>자기 자신을 확인하며 단축키
+안외우기</em> 같은게 다 무의미해짐.</li>
+<li>공식 사이트 들어가도 문서는 없다. 그냥 Vim 온라인 help을 보거나
+하라는 친절인거 같다.</li>
+</ol>
+</li>
+<li>Magit, Edb, 등등 대부분의 이맥스의 다른 Major mode들이랑은 정말
+충돌하는 경우가 너무 많음.
+<ol>
+<li><a href="https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421">https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421</a></li>
+<li>위의 링크만 봐도, 내가 얼마나 충돌이 나는 모드들을 경험했는지
+알수있다.</li>
+</ol>
+</li>
+</ol>
+<h2 id="그럼에도-포기할수없는-나의-영도자">그럼에도 포기할수없는 나의 영도자</h2>
+<p>좋은점, 그래도 고집을 갖고 계속 써야겠다고 생각하던 부분은:</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/">Emacs &#43; CMake-IDE Screencast</a></h1>
+					<time>🗓️ 08 May, 2018</time>
+					<br><div class="description">
+						
+						<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/R5tV-mp8WnE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<h1 id="이건-무엇인가">이건 무엇인가</h1>
+<p>Emacs Configurations: <a href="https://github.com/ageldama/configs/tree/master/emacs/cmake-ide">https://github.com/ageldama/configs/tree/master/emacs/cmake-ide</a></p>
+<p>이맥스에서 C++ 개발 편하게 하려고 이것저것 알아보다가 결국엔 <a href="https://github.com/atilaneves/cmake-ide">CMake-IDE</a> + <a href="https://github.com/Andersbakken/rtags">RTags</a> 조합이 제일 괜찮다는 결론에 도달해서 만들어본 설정이다.</p>
+<p>원래 사용하는 환경이 <a href="https://github.com/emacs-evil/evil">Evil</a>은 아니었는데,
+<a href="http://spacemacs.org/">Spacemacs</a> 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.</p>
+<p>지금은 그냥 Spacemacs은 다운도 잘되고 너무 무겁고 설정을 <a href="http://spacemacs.org/layers/LAYERS.html">레이어 방식</a> 으로 할게 아니면 짜증나게 하는 부분도 많고, 그렇다고 레이어가 완전히 내가 그냥 커스텀으로 만들어서 바로바로 머지하는 구조도 아니고 중앙에서 관리하는 방식으로만 되는거 같아서, 옆으로 치우고, 바닐라 이맥스에 Spacemacs스럽게 직접 설정해서 가볍게 사용하고 있다. :-)</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2018-04apr/2018-04apr-golang-windows-vscode/">Golang Windows에서 Vscode이랑 행복하게 쓰기</a></h1>
 					<time>🗓️ 14 Apr, 2018</time>
 					<br><div class="description">
@@ -205,52 +260,6 @@
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2017/2017-07-11-myself/">2017년 7월 11일, 요즘 나는</a></h1>
-					<time>🗓️ 11 Jul, 2017</time>
-					<br><div class="description">
-						
-						<p>한국에 와서 다시 일을 다니고 있음. 백엔드 소프트웨어 엔지니어로 과거에
-이미 다른 사람들이 만들어놓은걸 마음에 들지 않는 모양을 조금씩
-고쳐가고 그럭저럭 출퇴근.</p>
-<p>장마도 오고 엄청나게 덥다. 묘하게 독일에서 똑같은 8시간 근무인데
-한국에서는 출퇴근이 엄청나게 힘들다는 생각이 들었다. 그리고 실제로
-집밖에서 생활하는 시간을 생각하면 하루 8시간 수면을 하기도 빠듯해서
-정말 이상하구나 생각이든다. 거기에 독일에서 생활할때는 나혼자 생활해서
-밥이며 청소 같은것들도 내가 혼자해야 했었던걸 생각해도 이상할 정도로
-한국에서의 생활은 시간이 쪼들린다.</p>
-<p>여하튼 재미있는건 요즘엔 Python, Flask, SQLAlchemy으로 나름대로
-재미있게 작업하고 나름대로 능률적으로 작업을 하고 TDD 잘 적용해서 문제
-없게 편안하게 작업하는 방법들을 익힌거 같다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2017/2017-02-26-aync-rxjava-and-monad/">예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a></h1>
-					<time>🗓️ 26 Feb, 2017</time>
-					<br><div class="description">
-						
-						<p>예전 내가 썼던 블로그가 갑자기 떠올랐다. <a href="http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html">http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html</a></p>
-<p>내용은,</p>
-<ol>
-<li>콜백헬 싫다.</li>
-<li>그런데, 하스켈의 IO Monad처럼 imperative code을 작성할 수 있으면,
-3. 이것들끼리의 제어권을 주고 받는걸 event loop측에서 제어하면서도,
-4. 각각의 statements끼리 그냥 주욱 흐름대로 작성한것과 다르지 않게 짜기 쉽다.</li>
-</ol>
-<p>굳이 이 얘기 왜 하냐하면, 사실 요즘에 RxJava2 보고, Python3에서
-asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운 체이닝을
-구현하고, 그걸로 콜백들을 풀어서 잘 해결하고 있는거 같은 인상이
-들어서.</p>
-<p>결론? 내 아이디어 부심. 그리고 조금 더 잘 생각하고 실제로 어떻게
-구현할지 고민해봤다면 좋았을거라는, 나 자신의 능력 한탄하기.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -268,11 +277,11 @@ asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운
             <a href="/page/33/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(34/36)</span>
+        <span class="page-number">(34/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/35/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -282,7 +291,7 @@ asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758695811</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763549920</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

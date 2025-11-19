@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.150.1">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758695811">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763549920">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
                     
                 
             
@@ -154,6 +154,86 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-01jan/real-communication-skills/">&lt;소프트스킬&gt;, &lt;커뮤니케이션 스킬&gt;은 어떻게 한국 사회에서 괴물을 만드는지</a></h1>
+					<time>🗓️ 03 Jan, 2020</time>
+					<br><div class="description">
+						
+						<p>
+우선 이야기를 시작하기 전에 일러두고 싶다. 내게 &lt;소프트스킬&gt;<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>은
+매우 재밌게, 유용하게 읽은 책이었다. (2016년에)</p>
+<p>
+이 이야기는 사실 커뮤니케이션스킬, 소프트스킬을 권장하고, 어떻게
+해야 할까 하는 고민에서 나오는, 또한 그런 정말 중요한 것이 어떻게
+(적어도 내가 느끼기엔) 이상한 괴물을 옹호하기 위해 변질되어 쓰이는지에
+대한 것이다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+&lt;사회생활&gt;, &lt;원만함&gt;에 대해
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>나는 자라오며 계속해서 잔소리를 들어왔다. 말해주는 사람들은 내
+  아버지와 몇몇 친척 형, 주변 친구들이었다. 그리고 하나도 그런 말들을
+  새겨 듣지 않았고, 잘했다고 생각한다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a></h1>
+					<time>🗓️ 30 Dec, 2019</time>
+					<br><div class="description">
+						
+						<p>
+다음의 간단한 코드를 읽어보자.</p>
+<div class="src src-js">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;lexical&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">maker</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;dynamic&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">assert</span><span class="p">(</span><span class="nx">maker</span><span class="p">()()</span> <span class="o">==</span> <span class="s2">&#34;???&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+<code>maker()()</code> 의 결과는 <code>&#39;dynamic&#39;</code> 이다.</p>
+<p>
+심지어, 맨 마지막에 있는 <code>{..}</code> 블록을 넘어가서도 <code>x</code> 의 값은 여전이
+<code>&#39;dynamic&#39;</code> 이다.</p>
+<p>
+자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난
+느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도
+속하지 않는 느낌이고, 이번에 새로 추가된 <code>let</code> 도 이해하기가 어려운게
+아니라 그냥 제대로 망가져 있는거 같다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-12dec/direnv/">direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기</a></h1>
 					<time>🗓️ 29 Dec, 2019</time>
 					<br><div class="description">
@@ -275,86 +355,6 @@ compilation-mode, realgud: 실행 파일 찾아서 실행하기, 디버깅하기
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-12dec/hololog-perl-cli-1st-rel/">Hololog Perl/CLI 버젼</a></h1>
-					<time>🗓️ 17 Dec, 2019</time>
-					<br><div class="description">
-						
-						<p>
-<a href="https://github.com/ageldama/hololog-perl-cli">https://github.com/ageldama/hololog-perl-cli</a></p>
-<p>
-한줄씩 메모를 하는걸 좋아하고, 그냥 데스크탑에서 PDF을 읽거나
-웹페이지를 읽으면서 어딘가에 생각난거나 이해한걸 필기하면서 진행하고
-싶어서 만들었다.</p>
-<p>
-다음 트윗 타래에서 이야기한것처럼, 그냥 트위터 비밀계를 써도 괜찮지만,
-그것도 너무 웹브라우져 열고 하다보면 산만해져서.</p>
-<p>
-tweet 1206138361968070656 </p>
-<p>
-처음 시작은 <a href="https://www.gnu.org/software/coreutils/manual/html_node/cat-invocation.html">Unix/GNU cat</a> 을 간단하게 터미널에서 쓰면 된다는 생각이
-들었다.</p>
-<div class="src src-shell">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cat &gt;&gt; foo.txt</span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-..그런데 유닉스가 아닌 사람들, 윈도를 쓰는 사람들은 어떻게 하지?</p>
-<div class="src src-shell">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">copy con foo.txt</span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-..사실 위와 같이 <code>cmd.exe</code> 에서 실행해도 되겠지만, 뭔가 그래도 윈도
-사용자들이나 터미널 화면을 무서워하는 사람들이 저런거
-좋아할까.. 싶어서 조금 생각.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-12dec/org-spreadsheet-and-babel/">Org모드에서 스프레드시트 기능과 Babel 섞어쓰기</a></h1>
-					<time>🗓️ 13 Dec, 2019</time>
-					<br><div class="description">
-						
-						<p>
-쩌는 <a href="https://seorenn.github.io/org-spreadsheet.html">Org-mode Spreadsheet 소개</a> 를 읽고 감명 받아서 따라해봅니다.</p>
-<p>
-다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리
-<code>defun</code> / <code>defmacro</code> 으로 정의해놓고 그걸 spreadsheet에서 불러 쓸 수
-있을지가 궁금했습니다.</p>
-<p>
-그래서 다음과 같이 해보면 가능할지를 실험:</p>
-<ol>
-<li>
-<p>Org-Babel으로 원하는 함수를 정의한다.</p>
-<ul>
-<li>그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다.</li>
-</ul>
-</li>
-<li>Spreadsheet에서 불러서 쓸 수 있는지 확인해본다.</li>
-</ol>
-<p>우선 <code>C-h a</code> 을 눌러 <code>vsum</code> 을 검색해보니, <code>defun calcFunc-vsum (&amp;rest
-vecs)</code> 으로 미리 선언되어 있는거 같았습니다. 이런 형태로 내가 정의하는
-함수도 구현해보면 될까 싶습니다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -372,11 +372,11 @@ vecs)</code> 으로 미리 선언되어 있는거 같았습니다. 이런 형태
             <a href="/page/23/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(24/36)</span>
+        <span class="page-number">(24/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/25/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -386,7 +386,7 @@ vecs)</code> 으로 미리 선언되어 있는거 같았습니다. 이런 형태
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758695811</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763549920</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

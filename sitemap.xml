@@ -2,6 +2,75 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ageldama.github.io/tags/byte-compile/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/configuration/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/elisp/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/emacs/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/emacs-lisp/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/macro/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/programming/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/provide/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/require/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2025-11nov/cl-defmacro-fwd-declaration/</loc>
+    <lastmod>2025-11-10T06:35:45+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/common-lisp/</loc>
+    <lastmod>2025-11-10T06:35:45+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/compiler/</loc>
+    <lastmod>2025-11-10T06:35:45+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/declaration/</loc>
+    <lastmod>2025-11-10T06:35:45+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/defmacro/</loc>
+    <lastmod>2025-11-10T06:35:45+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/lisp/</loc>
+    <lastmod>2025-11-10T06:35:45+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/runtime/</loc>
+    <lastmod>2025-11-10T06:35:45+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/sbcl/</loc>
+    <lastmod>2025-11-10T06:35:45+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/til/</loc>
+    <lastmod>2025-11-10T06:35:45+00:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
@@ -15,9 +84,6 @@
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/callback-hell/</loc>
-    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/categories/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/closure/</loc>
@@ -53,9 +119,6 @@
     <loc>https://ageldama.github.io/tags/lambda/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/lisp/</loc>
-    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/metaprogramming/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
@@ -65,13 +128,7 @@
     <loc>https://ageldama.github.io/tags/perl/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/process/</loc>
-    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/categories/programming/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/restarting/</loc>
@@ -81,9 +138,6 @@
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/shell/</loc>
-    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/tcl/</loc>
@@ -108,9 +162,6 @@
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/xargs/</loc>
-    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2025-09sep/the-x-files-90s-vibe/</loc>
@@ -318,9 +369,6 @@
     <lastmod>2025-09-15T08:26:26+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/e502ma/</loc>
-    <lastmod>2025-09-15T08:26:26+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/emacs/</loc>
     <lastmod>2025-09-15T08:26:26+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/epub/</loc>
@@ -629,12 +677,6 @@
     <loc>https://ageldama.github.io/tags/cppcheck/</loc>
     <lastmod>2024-05-06T07:51:13+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/elisp/</loc>
-    <lastmod>2024-05-06T07:51:13+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/emacs-lisp/</loc>
-    <lastmod>2024-05-06T07:51:13+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/emacslisp/</loc>
     <lastmod>2024-05-06T07:51:13+00:00</lastmod>
   </url><url>
@@ -843,9 +885,6 @@
     <lastmod>2023-03-02T16:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/longjmp/</loc>
-    <lastmod>2023-03-02T16:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/macro/</loc>
     <lastmod>2023-03-02T16:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/raii/</loc>
@@ -1571,9 +1610,6 @@
     <loc>https://ageldama.github.io/tags/soft-skill/</loc>
     <lastmod>2020-01-03T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/common-lisp/</loc>
-    <lastmod>2019-12-30T00:00:00+09:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/dynamic-binding/</loc>
     <lastmod>2019-12-30T00:00:00+09:00</lastmod>
   </url><url>
@@ -2082,9 +2118,6 @@
     <lastmod>2017-02-26T13:50:00+01:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/categories/lisp/</loc>
-    <lastmod>2017-02-25T16:40:00+01:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/sbcl/</loc>
     <lastmod>2017-02-25T16:40:00+01:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2017/2017-02-25-sbcl-osx-multithread/</loc>

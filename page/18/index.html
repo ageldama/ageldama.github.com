@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.150.1">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758695811">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763549920">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
                     
                 
             
@@ -154,6 +154,65 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/ping-28fri/">Ping 28/Aug/2020</a></h1>
+					<time>🗓️ 28 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+날씨가 덥고 습하다. 거기에 마스크까지 해야해서 내가 좋아하는
+오래걷기를 하기에 그다지 좋은 시절은 아니다.</p>
+<p>
+문득 생각이 들었다. 아주 얼마 전까지만해도 이런 상황을 대부분의 자기
+자신이 정상이라고 믿고 싶어하는 이들은 모두가 이렇게 살아가는 세상을
+이야기를 들으면 비웃었을 것이다. 그리고 실제로 그런 일들을 많이 보아온
+것 같다. 방독면이나 산소마스크 방호복 대신에 KF94 마스크일뿐인.</p>
+<p>
+많은 아이디어와 예견들이 맞아들어가는 시절이다. 한편으로는 그런 것을
+이해하고 세상의 변화에 대해서 조금은 알맞게 나 자신이 알아채고 살아온
+것이 뿌듯하면서도 꼭 달갑지는 않기도 하다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/">Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</a></h1>
+					<time>🗓️ 27 Aug, 2020</time>
+					<br><div class="description">
+						
+						<p>
+arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.</p>
+<p>
+USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을
+쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고
+유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.</p>
+<p>
+정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마
+<a href="https://github.com/aircrack-ng/rtl8812au">https://github.com/aircrack-ng/rtl8812au</a> 이 드라이버가 살렸다.</p>
+<div class="src src-text">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># lsusb
+</span></span><span class="line"><span class="cl">Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU]</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+그것도 DKMS으로 빌드하면 안되고 그냥 <code>make install</code> 해서 동작하게
+되었다. 다행이었다. </p>
+<p>
+그리고 나서 나중에도 로딩하도록 /etc/module-load
+<code>/etc/modules-load.d/rtlusb.conf</code> 에 <code>88XXau</code> 라인을 넣고 저장.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2020-08aug/ping-27thu/">Ping 27/Aug/2020</a></h1>
 					<time>🗓️ 27 Aug, 2020</time>
 					<br><div class="description">
@@ -233,50 +292,6 @@ the end of the belle époque?</p>&hellip;
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-08aug/ping2-14fri/">Ping (2nd) 14/Aug/2020</a></h1>
-					<time>🗓️ 14 Aug, 2020</time>
-					<br><div class="description">
-						
-						<p>
-ㅎㅎ좋다. 이제 문서와 추가적인 작은 도구 몇 개를 더 만드는 것만 남았구나.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-08aug/ping-14fri/">Ping 14/Aug/2020</a></h1>
-					<time>🗓️ 14 Aug, 2020</time>
-					<br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-빌드도구의 경험과 Meson을 사용하기
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>
-  <a href="https://github.com/ageldama/meson-abc">Meson-ABC 갖고 놀아본 코드</a></p>
-<p>
-  아주 예전에 commercially 성공적이었었던 C++ 프로젝트를 홀로 기획, 설계, 개발했었었다.</p>
-<p>
-  처음에는 GNU Makefile으로 간단히 시작했었었다. 타겟 플랫폼이 뻔하게 윈도였기 때문이다.</p>
-<p>
-  그 이전에는 ANSI C으로 작성한 <a href="https://sourceforge.net/projects/sdlhan/">SDL 조합형 비트맵 출력 오픈소스</a>
-  라이브러리 같은 것들을 작업할 때는 그냥 GNU Autotools 을 쓰거나
-  했었었다.</p>
-<p>
-  하지만 그렇게 configure 하거나 할 부분도 없고 처음 혼자 시작하며
-  다른 신경 쓸 것도 무지하게 많았었던 프로젝트였고 더욱이 기간도
-  한정적이었었다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
-<p>
-  그리고 SCons 같은 것을 조금 쓰다가, 결국 더 간단히 Rake으로 빌드를
-  작성해 한동안 썼었다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -294,11 +309,11 @@ the end of the belle époque?</p>&hellip;
             <a href="/page/17/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
         
 	</span>
-        <span class="page-number">(18/36)</span>
+        <span class="page-number">(18/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/19/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -308,7 +323,7 @@ the end of the belle époque?</p>&hellip;
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758695811</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763549920</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

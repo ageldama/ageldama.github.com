@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.9">
+	<meta name="generator" content="Hugo 0.150.1">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1758695810">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763549920">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.4f73d84c50c05667a239931c9ca423557f7e7cd5d80333ee0ee57c790af80614.css" integrity="sha256-T3PYTFDAVmeiOZMcnKQjVX9&#43;fNXYAzPuDuV8eQr4BhQ=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
                     
                 
             
@@ -154,6 +154,113 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2025-11nov/my-elisp-requires/">내 emacs elisp &#34;requires&#34;</a></h1>
+					<time>🗓️ 16 Nov, 2025</time>
+					<br><div class="description">
+						
+						<p>
+Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.</p>
+<p>
+다음처럼 <code>init.el</code>-파일에서 로딩함: <a href="https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/samples/EXAMPLE-init.el">사용예시</a></p>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">ag-requires</span>
+</span></span><span class="line"><span class="cl">   <span class="nb">:tag-:*feats</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="nb">:compile</span>  <span class="c1">;; ... 바이트컴파일</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-recentf</span>                  <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-savehist</span>                 <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-avy</span>                      <span class="c1">; dpkg=elpa-avy</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="nb">:nocompile</span> <span class="c1">;; ... 여기부터는 바이트컴파일X</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-rg</span>                       <span class="c1">; dpkg=elpa-rg</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-c</span>                        <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-perl5</span>                    <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<ol>
+<li>
+<p>자동으로 byte-compile해서 로딩속도 빨라지도록 매크로 짜놓았음:</p>
+<ul>
+<li><a href="https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95">https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95</a></li>
+</ul>
+</li>
+<li>예전에 짜놓은거, 버그 고치고 다시 빠르게 로딩되도록 잘 써먹어서
+기분 좋음.</li>
+</ol>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2025-11nov/cl-defmacro-fwd-declaration/">[TIL] common-lisp defmacro와 forward-declaration</a></h1>
+					<time>🗓️ 10 Nov, 2025</time>
+					<br><div class="description">
+						
+						<p>
+의외로 단순한건데, 컴파일한 sbcl image에서 runtime에 unbound variable
+컨디션을 발생시킬 수 있음.</p>
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defmacro</span> <span class="nv">with-foo-bar</span> <span class="p">(</span><span class="nv">base-str</span> <span class="p">(</span><span class="nv">foo-var</span> <span class="nv">bar-var</span><span class="p">)</span> <span class="k">&amp;rest</span> <span class="nv">body</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;BASE-STR에 foo, bar 문자열을 붙인 FOO-VAR, BAR-VAR 바인딩을 만들어,
+</span></span></span><span class="line"><span class="cl"><span class="s">  BODY을 해당 바인딩을 적용하여 실행&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">;; NOTE let-대신 symbol-macrolet 사용해도 ok:</span>
+</span></span><span class="line"><span class="cl">    <span class="o">`</span><span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="o">,</span><span class="nv">foo-var</span> <span class="p">(</span><span class="nf">format</span> <span class="no">nil</span> <span class="s">&#34;FOO:~a&#34;</span> <span class="o">,</span><span class="nv">base-str</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="o">,</span><span class="nv">bar-var</span> <span class="p">(</span><span class="nf">format</span> <span class="no">nil</span> <span class="s">&#34;BAR:~a&#34;</span> <span class="o">,</span><span class="nv">base-str</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">       <span class="o">,@</span><span class="nv">body</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 매크로 with-foo-bar 사용:</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">with-foo-bar</span> <span class="s">&#34;hello&#34;</span> <span class="p">(</span><span class="nv">a</span> <span class="nv">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">format</span> <span class="no">t</span> <span class="s">&#34;~a // ~a~%&#34;</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;; [OUTPUT] FOO:hello // BAR:hello</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+단순하게 코드가 커지면<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, <code>defmacro</code>-선언보다 해당매크로 호출이
+컴파일러가 볼 때에 먼저 위치할 수 있는데, 그런 경우엔 좀 어이없지만,
+<code>unbound variable</code> 런타임 컨디션이 발생.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a></h1>
 					<time>🗓️ 24 Sep, 2025</time>
 					<br><div class="description">
@@ -220,65 +327,6 @@ jwz은 커먼리습, Lucid Emacs, Xscreensaver 등으로 유명하지만, 가장
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2025-09sep/blog-css-redesign-again/">블로그 css 조금 더 수정</a></h1>
-					<time>🗓️ 18 Sep, 2025</time>
-					<br><div class="description">
-						
-						<p>
-너무 흰색 배경에 눈이 짠한거 같아서 바꿔봤다.</p>
-<p>
-darkmode 켜면 되기야 하겠지만.</p>
-<p>
-과거 Solaris/SunOS의 SunView이나 CDE환경 색상을 좀 흉내내고 싶었다.</p>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/SunView">https://en.wikipedia.org/wiki/SunView</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Common_Desktop_Environment">https://en.wikipedia.org/wiki/Common_Desktop_Environment</a></li>
-</ul>
-<p>
-나는 마음에 좀 드는거 같다.</p>
-<p>
-hugo theme을 정리해서 공개/공유해도 좋겠다는 생각을 하는데…
-너무 정리가 않되어 있어서. 다음으로 미뤄야겠다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2025-09sep/freebsd-why/">freebsd &#43; 고물랩탑 쓸만하다(재밌다!)</a></h1>
-					<time>🗓️ 15 Sep, 2025</time>
-					<br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-시도하기 이전에는
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을
-  서브랩탑으로 집책상에서 써왔었다.</p>
-<p>
-  메모리도 4GB, 확장이 불가능하고. 배터리도 조금 부풀었고 충전도 잘 되지
-  않는다. 거기에 외부전원어댑터를 붙이지 않으면 어째서인지 eDP이
-  출력되지 않는다. ㅎㅎㅎ</p>
-<p>
-  그래도 어쨌든 debian-stable 설치해놓고 samba 서버로 책상에서 쓰거나
-  하기엔 적당했다. 딱히 동영상을 틀어 놓거나 하는 것도 포기해야 할
-  정도로 빠르지도 않았다. 웹브라우징도 느렸다.</p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-그러다가 freebsd 설치를 했다 (<code>14.3-RELEASE</code> <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>)
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p>원래도 freebsd이 gui이나 latency이 중요한 체감이 훨씬 가볍고 부드럽게
-  느껴지는걸 알고 있었다. 그런데 이번에는 너무 <span style="text-decoration: underline;">극적으로 즐거웠다</span>.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -296,11 +344,11 @@ hugo theme을 정리해서 공개/공유해도 좋겠다는 생각을 하는데�
             <span aria-hidden="true">Prev⛔</span>
 	
 	</span>
-        <span class="page-number">(1/36)</span>
+        <span class="page-number">(1/37)</span>
 	<span class="page-item page-next">
 	
             <a href="/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/36/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
+            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
         
 	</span>
 </ul>
@@ -310,7 +358,7 @@ hugo theme을 정리해서 공개/공유해도 좋겠다는 생각을 하는데�
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1758695810</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763549920</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>
