@@ -2,10 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ageldama.github.io/tags/byte-compile/</loc>
-    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/categories/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/concurrency/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/concurrent/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/cpython/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/gil/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/interp/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/ipc/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/multicore/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/parallelism/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/programming/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/python/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/pythonic/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/queue/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/tcl/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/thread/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/threading/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/byte-compile/</loc>
     <lastmod>2025-11-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/configuration/</loc>
@@ -23,25 +80,13 @@
     <loc>https://ageldama.github.io/tags/macro/</loc>
     <lastmod>2025-11-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/categories/programming/</loc>
-    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/provide/</loc>
     <lastmod>2025-11-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/require/</loc>
     <lastmod>2025-11-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
-    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/</loc>
-    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-11-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2025-11nov/cl-defmacro-fwd-declaration/</loc>
@@ -107,9 +152,6 @@
     <loc>https://ageldama.github.io/tags/function-coloring/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/gil/</loc>
-    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/inotify/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
@@ -140,13 +182,7 @@
     <loc>https://ageldama.github.io/tags/shell/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/tcl/</loc>
-    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/tcllib/</loc>
-    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/threading/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/throttle/</loc>
@@ -687,9 +723,6 @@
     <lastmod>2024-05-06T07:51:13+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/gcc/</loc>
-    <lastmod>2024-05-06T07:51:13+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/python/</loc>
     <lastmod>2024-05-06T07:51:13+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/xmake/</loc>
@@ -1316,9 +1349,6 @@
     <loc>https://ageldama.github.io/tags/oop/</loc>
     <lastmod>2020-09-04T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/pythonic/</loc>
-    <lastmod>2020-09-04T00:00:00+09:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/posts/2020-09sep/perspective-on-python/</loc>
     <lastmod>2020-09-04T00:00:00+09:00</lastmod>
   </url><url>
@@ -1918,9 +1948,6 @@
   </url><url>
     <loc>https://ageldama.github.io/posts/2019-02feb/2019-02feb07thu-ping/</loc>
     <lastmod>2019-02-07T17:30:00+09:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/concurrency/</loc>
-    <lastmod>2019-02-07T15:30:00+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2019-02feb/2019-02feb07thu-gosched-fun/</loc>
     <lastmod>2019-02-07T15:30:00+09:00</lastmod>

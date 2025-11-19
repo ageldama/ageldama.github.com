@@ -7,8 +7,106 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sun, 16 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Concurrency</title>
+      <link>https://ageldama.github.io/tags/concurrency/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Concurrent</title>
+      <link>https://ageldama.github.io/tags/concurrent/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/concurrent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cpython</title>
+      <link>https://ageldama.github.io/tags/cpython/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/cpython/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gil</title>
+      <link>https://ageldama.github.io/tags/gil/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/gil/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interp</title>
+      <link>https://ageldama.github.io/tags/interp/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/interp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ipc</title>
+      <link>https://ageldama.github.io/tags/ipc/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ipc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multicore</title>
+      <link>https://ageldama.github.io/tags/multicore/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/multicore/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Parallelism</title>
+      <link>https://ageldama.github.io/tags/parallelism/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/parallelism/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://ageldama.github.io/tags/python/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pythonic</title>
+      <link>https://ageldama.github.io/tags/pythonic/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/pythonic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Queue</title>
+      <link>https://ageldama.github.io/tags/queue/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/queue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tcl</title>
+      <link>https://ageldama.github.io/tags/tcl/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/tcl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Thread</title>
+      <link>https://ageldama.github.io/tags/thread/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/thread/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Threading</title>
+      <link>https://ageldama.github.io/tags/threading/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/threading/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Byte-Compile</title>
       <link>https://ageldama.github.io/tags/byte-compile/</link>
@@ -199,13 +297,6 @@
       <description></description>
     </item>
     <item>
-      <title>Gil</title>
-      <link>https://ageldama.github.io/tags/gil/</link>
-      <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/gil/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Inotify</title>
       <link>https://ageldama.github.io/tags/inotify/</link>
       <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
@@ -276,24 +367,10 @@
       <description></description>
     </item>
     <item>
-      <title>Tcl</title>
-      <link>https://ageldama.github.io/tags/tcl/</link>
-      <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/tcl/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Tcllib</title>
       <link>https://ageldama.github.io/tags/tcllib/</link>
       <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/tcllib/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Threading</title>
-      <link>https://ageldama.github.io/tags/threading/</link>
-      <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/threading/</guid>
       <description></description>
     </item>
     <item>
@@ -1389,13 +1466,6 @@
       <description></description>
     </item>
     <item>
-      <title>Python</title>
-      <link>https://ageldama.github.io/tags/python/</link>
-      <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Xmake</title>
       <link>https://ageldama.github.io/tags/xmake/</link>
       <pubDate>Mon, 06 May 2024 07:51:13 +0000</pubDate>
@@ -2376,13 +2446,6 @@
       <description></description>
     </item>
     <item>
-      <title>Pythonic</title>
-      <link>https://ageldama.github.io/tags/pythonic/</link>
-      <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/pythonic/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Zero-Overhead</title>
       <link>https://ageldama.github.io/tags/zero-overhead/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
@@ -3311,13 +3374,6 @@
       <link>https://ageldama.github.io/tags/networkmanager/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0900</pubDate>
       <guid>https://ageldama.github.io/tags/networkmanager/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Concurrency</title>
-      <link>https://ageldama.github.io/tags/concurrency/</link>
-      <pubDate>Thu, 07 Feb 2019 15:30:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/concurrency/</guid>
       <description></description>
     </item>
     <item>

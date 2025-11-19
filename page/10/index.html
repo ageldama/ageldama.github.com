@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.150.1">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763549920">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763554792">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +154,50 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/algebraic-effects-for-everyone/">&#34;모두를 위한 algebraic effects!&#34; ...정말루?</a></h1>
+					<time>🗓️ 13 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p>뭐 대충 다음과 같은 글들:</p>
+<p><a href="https://www.eff-lang.org/handlers-tutorial.pdf">https://www.eff-lang.org/handlers-tutorial.pdf</a></p>
+<p><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf</a></p>
+<p>&hellip;그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)</p>
+<p><a href="https://hackage.haskell.org/package/fused-effects">https://hackage.haskell.org/package/fused-effects</a></p>
+<p><a href="https://github.com/dry-rb/dry-effects">https://github.com/dry-rb/dry-effects</a></p>
+<p><a href="https://github.com/digital-fabric/affect">https://github.com/digital-fabric/affect</a></p>
+<p><a href="https://github.com/macabeus/js-proposal-algebraic-effects">https://github.com/macabeus/js-proposal-algebraic-effects</a></p>
+<p><a href="https://github.com/nythrox/effects.js">https://github.com/nythrox/effects.js</a></p>
+<p><a href="https://www.janestreet.com/tech-talks/effective-programming/">https://www.janestreet.com/tech-talks/effective-programming/</a></p>
+<p><a href="https://github.com/ocaml-multicore/effects-examples">https://github.com/ocaml-multicore/effects-examples</a></p>
+<p><a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/">https://overreacted.io/algebraic-effects-for-the-rest-of-us/</a></p>
+<p>&hellip;음&hellip; 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.</p>
+<p>오히려 dry-rb, affect이 더 명확하기는 한거 같아.</p>
+<p>가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.</p>
+<p>분명히 장점을 볼 수 있을거 같은 개념 같다.</p>
+<p>왜냐하면,</p>
+<ol>
+<li>지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면,</li>
+<li>하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.
+<ol>
+<li>그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용.</li>
+<li>(&hellip;그때 그때 Haskell do-notation등에 따라 분리해서 표현)</li>
+<li>좋은점이라면 좋은점일수도 있겠지만.</li>
+</ol>
+</li>
+<li>그런데, aeffects을 이용한다면,
+<ol>
+<li>굳이 그렇게 복잡하게 나누지 않아도 괜찮고,</li>
+<li>monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여.</li>
+</ol>
+</li>
+</ol>
+<p>당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (&hellip;일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, &hellip;처럼)</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun13--01-ping/">Ping 13/06/2022 .01</a></h1>
 					<time>🗓️ 13 Jun, 2022</time>
 					<br><div class="description">
@@ -237,57 +281,6 @@
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-jekyll/2022-06-08--02-pytest-fixtures-and-complexity-mgmt/">pytest fixtures와 의존성관리, 그리고 복잡도관리</a></h1>
-					<time>🗓️ 08 Jun, 2022</time>
-					<br><div class="description">
-						
-						<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
-</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
-</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
-</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
-</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
-</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
-</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
-</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
-</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
-</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
-</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
-</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12">12</a>
-</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13">13</a>
-</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14">14</a>
-</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15">15</a>
-</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16">16</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ...tests/conftest.py</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pytest</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nd">@pytest.fixture</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">name</span><span class="p">():</span> <span class="k">return</span> <span class="s1">&#39;Pokemon&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nd">@pytest.fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="s1">&#39;function&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">monster</span><span class="p">(</span><span class="n">name</span><span class="p">):</span> <span class="o">...</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># ...tests/foo_test.py :</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_beast</span><span class="p">(</span><span class="n">monster</span><span class="p">):</span> <span class="o">...</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># &lt;--- `def monster(..)`의 결과를 주입 받음.</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><a href="https://docs.pytest.org/en/6.2.x/fixture.html">https://docs.pytest.org/en/6.2.x/fixture.html</a></p>
-<p>&hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨.
-내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -319,7 +312,7 @@
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763549920</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763554792</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>
