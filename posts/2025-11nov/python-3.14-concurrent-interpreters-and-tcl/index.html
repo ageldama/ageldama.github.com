@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1763554792">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1763618008">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 최근의 파이썬은 아주 오랬동안 multicore/parallelism을 지원하기 위해
@@ -283,9 +283,26 @@ Python스러움, Pythonic한 방식?
 </div>
 <div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
-(부록) Tcl 데자뷰
+(EDIT: 2025-11-20 Thu) concurrent.futures + interpreters
 </h2>
 <div id="outline-text-headline-2" class="outline-text-2">
+<p><a href="https://docs.python.org/3/library/concurrent.futures.html#interpreterpoolexecutor">https://docs.python.org/3/library/concurrent.futures.html#interpreterpoolexecutor</a></p>
+<blockquote>
+<p>The InterpreterPoolExecutor class uses a pool of interpreters to execute calls asynchronously. It is a ThreadPoolExecutor subclass, which means each worker is running in its own thread. The difference here is that each worker has its own interpreter, and runs each task using that interpreter.</p>
+<p>
+  The biggest benefit to using interpreters instead of only threads is true multi-core parallelism. Each interpreter has its own Global Interpreter Lock, so code running in one interpreter can run on one CPU core, while code in another interpreter runs unblocked on a different core.</p>
+</blockquote>
+<p>
+  interpreters + threading 이미 바로 쓸 수 있도록 해놓은 모듈이 3.14+
+  부터 추가됨. ㅎㅎ 직접 interpreters와 스레드를 묶어서 쓰려고 애쓰지
+  않아도 바로 쓸 수 있도록.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+(부록) Tcl 데자뷰
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
 <p>Tcl도 (파이썬만큼이나 역사가 30년이 넘은 언어이니만큼) GIL 이슈가
   동일했다.</p>
 <p>
@@ -307,8 +324,8 @@ Python스러움, Pythonic한 방식?
   👴🏽)</p>
 </div>
 </div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
 Footnotes
 </h2>
 </div>
@@ -380,7 +397,7 @@ Footnotes
 <footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763554792</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763618008</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>
