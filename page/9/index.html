@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.2">
+	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1762765270">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763833465">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.29950944d387d406cc56aae53098f2c224eeaa5ef550fe235a4a29d47d8c8a9e.css" integrity="sha256-KZUJRNOH1AbMVqrlMJjywiTuql71UP4jWkop1H2Mip4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
                     
                 
             
@@ -154,6 +154,80 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun29--02-ping/">react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</a></h1>
+					<time>🗓️ 29 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p><a href="https://jasonformat.com/islands-architecture/">https://jasonformat.com/islands-architecture/</a></p>
+<p>&hellip;이전에 몇번 언급한 <a href="https://hotwired.dev/">hotwired</a> 처럼. ㅎㅎ</p>
+<p>지금의 reactjs, vuejs등은 다음과 같은 방식이 기본:</p>
+<ol>
+<li>server: rest/gql등으로 요청을 받아서, json으로 응답.</li>
+<li>browser(client): 응답으로 받은 json을 받아서, html을 생성하여 렌더링.</li>
+</ol>
+<p>&hellip;이게 편하다고 생각해서 여기로 온거 같아. 나말고도 대부분의 사람들이
+웹화면을 개발하던 시절에는 이렇게 만들고 싶었었던거 같아. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>그리고 당연히 ui개발이기 때문에 &lsquo;컴포넌트모델&rsquo;이나 값바인딩 같은 것들을 원했었고, 현재의 리액트와 같은 형태에 이르른 것 같아.</p>
+<p>물론, vdom이 복잡도를 많이 낮춰줬지만, 희안하게도 예상하지 못하던 문제를 몇가지 더 만들어낸 것 같아. 그래서 요즘엔 ssr이니 seo을 생각해서 다른 방식의 프레임웍들을 사용하려고 하고 있고, 더 나아가서 <a href="https://www.patterns.dev/posts/progressive-hydration/">progressive hydration</a> 같은 쪽으로 더 세밀해지는 양상 같아.<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun29--01-ping/">linux/unix 팁 29/06/2022 .01</a></h1>
+					<time>🗓️ 29 Jun, 2022</time>
+					<br><div class="description">
+						
+						<div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</a></li>
+    <li><a href="#ssh으로-키보드마우스-안-붙이고">ssh으로 키보드/마우스 안 붙이고</a>
+      <ul>
+        <li><a href="#vconsole-conspy">vconsole: <code>conspy</code></a></li>
+        <li><a href="#x11-x2x으로-여러-머신스크린에-걸쳐서-마우스키보드-공유">x11: <code>x2x</code>으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+<hr>
+<p>리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.</p>
+<p>그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.</p>
+<h1 id="zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</h1>
+<p>최근/디렉토리 이동한 히스토리에 따라서 (&ldquo;frecent&rdquo;) 이동하기:</p>
+<p>fzf+zsh의 <code>Control-R</code>도 좋고<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,</p>
+<p>oh-my-zsh 내장인 <code>plugins=(z)</code>도 좋지만<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>&hellip;나는 가능하면 <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a>이 가장 가볍고 좋은거 같다.</p>
+<p>설치하고 나서,
+<code>eval &quot;$(zoxide init zsh)&quot;</code></p>
+<p>그리고, <code>z SOME-DIR</code>, <code>zi</code> 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun24--01-grug/">The Grug Brained Developer</a></h1>
+					<time>🗓️ 24 Jun, 2022</time>
+					<br><div class="description">
+						
+						<p>감동적인 글이다ㅋ:</p>
+<p><a href="https://grugbrain.dev/">https://grugbrain.dev/</a></p>
+<p>문법도 완전 grug스럽게 작성해서 반가운 글이었다.</p>
+<p>완전히 모두 내 생각과 같지는 않아도, 이야기하는 <em>&ldquo;FOLD&rdquo; 때문에</em> 일어나는 일들과
+조금은 그래도 <em>grug답게</em> 그냥 해내려는 생각들이 유용.</p>
+<p>그치, grug이 공룡과 구분되는 점은 그런거겠지. ㅎㅎ&hellip;</p>
+<p>msa, reactjs, ejb, osgi. 공감하는 생각들.</p>
+<p>&hellip; black think juice 맛있다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/">&#34;Software disenchantment&#34;</a></h1>
 					<time>🗓️ 19 Jun, 2022</time>
 					<br><div class="description">
@@ -161,7 +235,8 @@
 						<p><a href="https://tonsky.me/blog/disenchantment/">https://tonsky.me/blog/disenchantment/</a></p>
 <p>재밌게 읽었다. 계속 생각해오던, 이전 포스팅에서도 이야기한 생각들.</p>
 <blockquote>
-<p>&ldquo;&hellip;의 진보도 항상 그때그때의 1보만이 진보이며 2보도 3보도 n+1보도 결코&hellip;&rdquo;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p></blockquote>
+<p>&ldquo;&hellip;의 진보도 항상 그때그때의 1보만이 진보이며 2보도 3보도 n+1보도 결코&hellip;&rdquo;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+</blockquote>
 <p>:winking_face:</p>
 <p>&hellip;그치 ejb/xml을 쓰든, 뭔가 또 새로운 언어나 프레임웍으로 대단한것처럼, 진보한것처럼 쓰려고 해도,
 현실적으로는 빌드도 오히려 <a href="https://ant.apache.org/">apache ant</a> 쓸때보다 더 엉망일지도. 성능이든 iteration의 가벼움이든.</p>
@@ -189,117 +264,6 @@
 발열 때문에 버벅거리는건 훨씬 적다.</p>
 <p>&ldquo;rpi4은 빠르니까!&ldquo;이라면서 나름대로 데탑/랩탑에서 쓰는 설정 그대로, openbox+lxpanel 정도 올려서 쓰고 있고,
 rpi3b+은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있을까 싶기도 하지만. &hellip;어차피 둘 다 엄청 가벼울거 같은데도.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun15--01-ping/">Ping 15/06/2022 .01</a></h1>
-					<time>🗓️ 15 Jun, 2022</time>
-					<br><div class="description">
-						
-						<p>비 내리는 화요일. &#x2614;</p>
-<div>
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</a></li>
-    <li><a href="#postgresql-as-an-api-server">postgresql, as an api server?</a></li>
-  </ul>
-</nav>
-</div>
-
-<hr>
-<h1 id="jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</h1>
-<p>재밌는걸 찾았다.</p>
-<p><a href="https://jinja.palletsprojects.com/en/3.1.x/">jinja2</a>을 사용하면서, 하위 include으로 내려갈수록,
-file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야
-template cache을 무시하는거 같아.</p>
-<p>그래서,</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
-</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
-</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
-</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
-</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
-</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
-</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
-</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
-</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
-</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
-</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// gulpfile.js:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">buildTask</span> <span class="o">=</span> <span class="nx">series</span><span class="p">(</span><span class="nx">cleanTask</span><span class="p">,</span> <span class="nx">esbuildTask</span><span class="p">,</span> <span class="nx">injectTask</span><span class="p">,</span> <span class="nx">touchInjectedTask</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">watchTask</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">watch</span><span class="p">(</span><span class="s2">&#34;./js/**/*.js&#34;</span><span class="p">,</span> <span class="nx">buildTask</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">watch</span> <span class="o">=</span> <span class="nx">watchTask</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">build</span> <span class="o">=</span> <span class="nx">buildTask</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">clean</span> <span class="o">=</span> <span class="nx">cleanTask</span><span class="p">;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>&hellip;대략 잘 동작하고, <a href="https://esbuild.github.io/">webpack보다 엄청나게 빠르다</a> ㅎㅎ.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/algebraic-effects-for-everyone/">&#34;모두를 위한 algebraic effects!&#34; ...정말루?</a></h1>
-					<time>🗓️ 13 Jun, 2022</time>
-					<br><div class="description">
-						
-						<p>뭐 대충 다음과 같은 글들:</p>
-<p><a href="https://www.eff-lang.org/handlers-tutorial.pdf">https://www.eff-lang.org/handlers-tutorial.pdf</a></p>
-<p><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf</a></p>
-<p>&hellip;그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)</p>
-<p><a href="https://hackage.haskell.org/package/fused-effects">https://hackage.haskell.org/package/fused-effects</a></p>
-<p><a href="https://github.com/dry-rb/dry-effects">https://github.com/dry-rb/dry-effects</a></p>
-<p><a href="https://github.com/digital-fabric/affect">https://github.com/digital-fabric/affect</a></p>
-<p><a href="https://github.com/macabeus/js-proposal-algebraic-effects">https://github.com/macabeus/js-proposal-algebraic-effects</a></p>
-<p><a href="https://github.com/nythrox/effects.js">https://github.com/nythrox/effects.js</a></p>
-<p><a href="https://www.janestreet.com/tech-talks/effective-programming/">https://www.janestreet.com/tech-talks/effective-programming/</a></p>
-<p><a href="https://github.com/ocaml-multicore/effects-examples">https://github.com/ocaml-multicore/effects-examples</a></p>
-<p><a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/">https://overreacted.io/algebraic-effects-for-the-rest-of-us/</a></p>
-<p>&hellip;음&hellip; 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.</p>
-<p>오히려 dry-rb, affect이 더 명확하기는 한거 같아.</p>
-<p>가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.</p>
-<p>분명히 장점을 볼 수 있을거 같은 개념 같다.</p>
-<p>왜냐하면,</p>
-<ol>
-<li>지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면,</li>
-<li>하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.
-<ol>
-<li>그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용.</li>
-<li>(&hellip;그때 그때 Haskell do-notation등에 따라 분리해서 표현)</li>
-<li>좋은점이라면 좋은점일수도 있겠지만.</li>
-</ol>
-</li>
-<li>그런데, aeffects을 이용한다면,
-<ol>
-<li>굳이 그렇게 복잡하게 나누지 않아도 괜찮고,</li>
-<li>monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여.</li>
-</ol>
-</li>
-</ol>
-<p>당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (&hellip;일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, &hellip;처럼)</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2022-06jun/2022-06jun13--01-ping/">Ping 13/06/2022 .01</a></h1>
-					<time>🗓️ 13 Jun, 2022</time>
-					<br><div class="description">
-						
-						<p>기운 없는 날&hellip; 쉬어야겠다.</p>&hellip;
 						
 					</div>
                                         
@@ -336,7 +300,7 @@ template cache을 무시하는거 같아.</p>
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762765270</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763833465</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

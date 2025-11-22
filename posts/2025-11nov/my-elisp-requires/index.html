@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>내 emacs elisp &#34;requires&#34; - 아겔로그</title><meta name="hugo-gen-timestamp" content="1763833465">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.
+
+다음처럼 init.el-파일에서 로딩함: 사용예시
+
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+
+
+  (ag-requires
+   :tag-:*feats
+
+   :compile  ;; ... 바이트컴파일
+   &#39;ag-feat-recentf                  ; dpkg=&#43;
+   &#39;ag-feat-savehist                 ; dpkg=&#43;
+   &#39;ag-feat-avy                      ; dpkg=elpa-avy
+
+   :nocompile ;; ... 여기부터는 바이트컴파일X
+   &#39;ag-feat-rg                       ; dpkg=elpa-rg
+   &#39;ag-feat-c                        ; dpkg=&#43;
+   &#39;ag-feat-perl5                    ; dpkg=&#43;
+   )
+
+
+
+
+
+자동으로 byte-compile해서 로딩속도 빨라지도록 매크로 짜놓았음:
+
+https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95
+
+
+예전에 짜놓은거, 버그 고치고 다시 빠르게 로딩되도록 잘 써먹어서
+기분 좋음.
+" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="내 emacs elisp &#34;requires&#34;">
+  <meta property="og:description" content="Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.
+다음처럼 init.el-파일에서 로딩함: 사용예시
+1 2 3 4 5 6 7 8 9 10 11 12 13 (ag-requires :tag-:*feats :compile ;; ... 바이트컴파일 &#39;ag-feat-recentf ; dpkg=&#43; &#39;ag-feat-savehist ; dpkg=&#43; &#39;ag-feat-avy ; dpkg=elpa-avy :nocompile ;; ... 여기부터는 바이트컴파일X &#39;ag-feat-rg ; dpkg=elpa-rg &#39;ag-feat-c ; dpkg=&#43; &#39;ag-feat-perl5 ; dpkg=&#43; ) 자동으로 byte-compile해서 로딩속도 빨라지도록 매크로 짜놓았음:
+https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95 예전에 짜놓은거, 버그 고치고 다시 빠르게 로딩되도록 잘 써먹어서 기분 좋음.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-11-16T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-16T00:00:00+00:00">
+    <meta property="article:tag" content="Emacs">
+    <meta property="article:tag" content="Elisp">
+    <meta property="article:tag" content="Emacs-Lisp">
+    <meta property="article:tag" content="Configuration">
+    <meta property="article:tag" content="Macro">
+    <meta property="article:tag" content="Require">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="내 emacs elisp &#34;requires&#34;">
+  <meta name="twitter:description" content="Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.
+다음처럼 init.el-파일에서 로딩함: 사용예시
+1 2 3 4 5 6 7 8 9 10 11 12 13 (ag-requires :tag-:*feats :compile ;; ... 바이트컴파일 &#39;ag-feat-recentf ; dpkg=&#43; &#39;ag-feat-savehist ; dpkg=&#43; &#39;ag-feat-avy ; dpkg=elpa-avy :nocompile ;; ... 여기부터는 바이트컴파일X &#39;ag-feat-rg ; dpkg=elpa-rg &#39;ag-feat-c ; dpkg=&#43; &#39;ag-feat-perl5 ; dpkg=&#43; ) 자동으로 byte-compile해서 로딩속도 빨라지도록 매크로 짜놓았음:
+https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95 예전에 짜놓은거, 버그 고치고 다시 빠르게 로딩되도록 잘 써먹어서 기분 좋음.">
+
+	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+	        
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+    <nav>
+        
+            <a href="/posts/archive/">Index🗃️🏷️</a>
+        
+            <a href="/myself/">Contact📨</a>
+        
+
+	
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#cccccc',  
+      buttonColorDark: '#566666',  
+      buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+    var darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    window.darkmode = darkmode;
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+<main>
+	<article data-pagefind-body>
+		<div class="title">
+			<h1 class="title" data-pagefind-meta="title">내 emacs elisp &#34;requires&#34;</h1>
+                        <time style="display: none;"
+                            data-pagefind-meta="date[datetime]"
+                            datetime="2025-11-16" pubdate>
+                            16 Nov 2025
+                        </time>
+			<div class="meta"> 🗓️ 16 Nov, 2025</div>
+		</div>
+		
+		
+		<section class="body">
+			<p>
+Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.</p>
+<p>
+다음처럼 <code>init.el</code>-파일에서 로딩함: <a href="https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/samples/EXAMPLE-init.el">사용예시</a></p>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">ag-requires</span>
+</span></span><span class="line"><span class="cl">   <span class="nb">:tag-:*feats</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="nb">:compile</span>  <span class="c1">;; ... 바이트컴파일</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-recentf</span>                  <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-savehist</span>                 <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-avy</span>                      <span class="c1">; dpkg=elpa-avy</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="nb">:nocompile</span> <span class="c1">;; ... 여기부터는 바이트컴파일X</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-rg</span>                       <span class="c1">; dpkg=elpa-rg</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-c</span>                        <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-perl5</span>                    <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<ol>
+<li>
+<p>자동으로 byte-compile해서 로딩속도 빨라지도록 매크로 짜놓았음:</p>
+<ul>
+<li><a href="https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95">https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95</a></li>
+</ul>
+</li>
+<li>예전에 짜놓은거, 버그 고치고 다시 빠르게 로딩되도록 잘 써먹어서
+기분 좋음.</li>
+</ol>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li style="display: inline">#<a href="/tags/emacs">emacs</a></li>
+					
+					<li style="display: inline">#<a href="/tags/elisp">elisp</a></li>
+					
+					<li style="display: inline">#<a href="/tags/emacs-lisp">emacs-lisp</a></li>
+					
+					<li style="display: inline">#<a href="/tags/configuration">configuration</a></li>
+					
+					<li style="display: inline">#<a href="/tags/macro">macro</a></li>
+					
+					<li style="display: inline">#<a href="/tags/require">require</a></li>
+					
+					<li style="display: inline">#<a href="/tags/provide">provide</a></li>
+					
+					<li style="display: inline">#<a href="/tags/byte-compile">byte-compile</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+
+<footer>
+  
+  <div class="footer-info">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763833465</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  
+</script></div>
+    </body>
+</html>

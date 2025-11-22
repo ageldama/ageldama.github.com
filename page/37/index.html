@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.2">
+	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1762765270">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763833466">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.29950944d387d406cc56aae53098f2c224eeaa5ef550fe235a4a29d47d8c8a9e.css" integrity="sha256-KZUJRNOH1AbMVqrlMJjywiTuql71UP4jWkop1H2Mip4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
                     
                 
             
@@ -154,6 +154,87 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-02-travis-ci-jekyll-gh/">Github.io 블로그 TraviCI으로 빌드해서 배포하기</a></h1>
+					<time>🗓️ 02 Jan, 2017</time>
+					<br><div class="description">
+						
+						<p>.. <em><a href="/github/jekyll/2017/01/01/github-jekyll.html">여기</a></em> 에 불만을 적었듯이,
+여러가지로 그냥은 만족하기 어려운 부분이 있었다.</p>
+<p>그런데, Travis-CI을 통해서 빌드해서 배포한다는 분이
+계셨다. <a href="https://twitter.com/Realignist/status/815554589889994752">https://twitter.com/Realignist/status/815554589889994752</a></p>
+<p>..난 생각 못해본 방법. ㅎㅎ <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>그래서 도전.</p>
+<ol>
+<li>우선 Jekyll 소스용 저장소로 분리하고,</li>
+<li>배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다.</li>
+<li><a href="https://github.com/felixrieseberg/travis-jekyll-git">https://github.com/felixrieseberg/travis-jekyll-git</a> 여기 참고해서 삽질.</li>
+<li>결과물은 <a href="https://github.com/ageldama/ageldama-gh-jekyll">https://github.com/ageldama/ageldama-gh-jekyll</a></li>
+</ol>
+<p>..진행하면서 처음에 좀 짜증났던거,</p>
+<ol>
+<li><code>Gemfile</code> 에 설치할 의존성들 지정하고, <code>bundle update</code>.
+<ol>
+<li>그리고 그것만으로는 안되고, <code>.travis.yml</code> 파일에 gem설치를
+지정해야했다. <a href="https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5">https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5</a></li>
+</ol>
+</li>
+<li>Travis-CI 작업의 세팅에서 <code>git_target</code> 환경변수에 URL지정할때&hellip;
+<ol>
+<li><code>github.com/ageldama/ageldama-gh-jekyll.git</code> 처럼 <code>https://</code> 스킴 부분 빼고,</li>
+<li>또 뒤에 <code>.git</code> 깜빡하면 당연히 git-push 안됨. ㅋ</li>
+</ol>
+</li>
+</ol>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>솔직히 내가 뭘 제대로 하겠습니까.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-01-github-jekyll/">Github.io의 Jekyll 버젼이랑 차이?</a></h1>
+					<time>🗓️ 01 Jan, 2017</time>
+					<br><div class="description">
+						
+						<p>다 만족스럽고 좋은데, 로컬에서 Jekyll 실행해서 미리보기한 결과랑
+Github에 올려서 렌더링한거랑 마크다운 결과가 조금 달라서 짜증난다.</p>
+<p>아마 마크다운 렌더러 버젼 차이 때문일거 같은데 ㅜ.ㅜ</p>
+<pre tabindex="0"><code>% jekyll -v
+jekyll 3.3.1
+</code></pre>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2017/2017-01-01-getting-started-with-emacs/">Emacs이랑 친해지기</a></h1>
+					<time>🗓️ 01 Jan, 2017</time>
+					<br><div class="description">
+						
+						<blockquote>
+<p>&ldquo;이맥스를 어떻게 배우면 좋은지 모르겠다. 여러번 도전해봤지만 항상 별로였다.&rdquo;</p>
+</blockquote>
+<p>..어느날 한 동료가 물어봤다. (<em>그렇다 나는 일터에서도 이맥스를 켜놓고
+계속 쓴다.</em>)</p>
+<p>솔직히 기본적으로 매일 <a href="http://orgmode.org/">Org-mode</a>으로 계획, 일정
+등등 정리하고 계속 개인적으로 정리하면서 쓰고, 파이썬, Go, Clojure
+같은거 할때도 편집하고 테스트하기도 편하니까 선호하는 편인거
+같다. (자바랑 스칼라은 물론 그냥 IntelliJ 쓴다.)</p>
+<p>여튼 그날 간단히 짝프로그래밍하듯이 같이 앉아서 몇가지 이야기를 하고,
+내 설정 파일 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 이나 어떻게 접근하는게 좋은지에 대해서
+잠깐 이야기를 했었다. 그걸 블로깅으로 써보고 싶다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2017/2017-01-01-welcome-to-jekyll/">Welcome to Jekyll!</a></h1>
 					<time>🗓️ 01 Jan, 2017</time>
 					<br><div class="description">
@@ -196,7 +277,7 @@
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762765270</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763833466</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

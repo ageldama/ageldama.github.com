@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.2">
+	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1762765270">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763833465">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.29950944d387d406cc56aae53098f2c224eeaa5ef550fe235a4a29d47d8c8a9e.css" integrity="sha256-KZUJRNOH1AbMVqrlMJjywiTuql71UP4jWkop1H2Mip4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
                     
                 
             
@@ -154,6 +154,111 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/cl-toy-stack-lang/">cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</a></h1>
+					<time>🗓️ 16 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>일단 첫번째 버젼 다 만들었다.</p>
+<blockquote>
+<p><a href="https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0">https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0</a></p>
+</blockquote>
+<p>그냥 장난으로 인터프리터도 아니라 그냥
+<a href="http://clhs.lisp.se/Body/f_eval.htm">eval</a> 이용한 간단한 파서도
+필요없이 lexer만으로 만들만한
+<a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">Forth</a>
+비슷한 언어를 만듬.</p>
+<p>명령어도 실용적인 목적이 아닌만큼 그냥 문자열 장난 밖엔 없다.</p>
+<h1 id="느낀점">느낀점</h1>
+<ol>
+<li><strong>라이브러리 좋은거 갖다 잘쓰자</strong>
+<ul>
+<li><a href="http://quickdocs.org/uiop/">uiop</a> 같은거,</li>
+<li><a href="http://clhs.lisp.se/Body/24_aba.htm">feature-expression</a> 삽질을 적게하거나 안해도됨. 더
+portable하고 잘 굴러가는.</li>
+</ul>
+</li>
+<li><strong>Test!</strong>
+3. 짜고 하나씩 진화시켜가면서 다시 돌리는 재미.</li>
+<li><strong>Idiomatic하게</strong> 그리고 역시 Test!
+<ol>
+<li>..처음엔 그냥 전역변수에 상태를 갖도록 만들고,</li>
+<li>그걸 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_abaab.htm">dynamic binding</a>으로 바꿔서 파라미터화하고,</li>
+<li>또 그걸 다시 상태를 캡슐화하는 클래스로 감싸고,</li>
+<li>처음엔 단순하게 리습스럽게 짜고 그걸 진화시키고,</li>
+<li>그리고 역시 다시 테스트.</li>
+</ol>
+</li>
+<li><strong><em>아는만큼 보인다</em></strong>
+<ul>
+<li><code>setf</code> 병렬로 하기, +destructuring</li>
+<li><code>asdf:operate</code> + <code>:build-op</code> :
+<a href="http://www.sbcl.org/">SBCL</a>/<a href="https://common-lisp.net/project/ecl/">ECL</a>
+등 리습컴파일러에 관계 없이 실행이미지 빌드 편안하게
+<ul>
+<li><a href="https://github.com/xach/buildapp">https://github.com/xach/buildapp</a> 같은거 써볼까 하다가,
+처음엔 그냥 간단히 쉘스크립팅으로 시작.</li>
+</ul>
+</li>
+<li>기타 등등</li>
+</ul>
+</li>
+</ol>
+<p>&hellip;그리고 무엇보다 재밌었다. 그리고 뭐가됐든 그냥 짜보고 굴러가는
+형태로 계속해서 작은 프로그램을 많이 만들고 하면서 놀아야겠다고
+생각했다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-15tue/">Ping 15/Oct/2019</a></h1>
+					<time>🗓️ 15 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>커먼리습으로 간단한
+<a href="https://en.wikipedia.org/wiki/Stack-oriented_programming">스택기반</a>
+장난감 프로그래밍언어를 만들고있다.</p>
+<blockquote>
+<p><a href="https://github.com/ageldama/cl-toy-stack-lang">https://github.com/ageldama/cl-toy-stack-lang</a></p>
+</blockquote>
+<p>튜링컴플릿이나 그런거 관심도 없고 사실 Parser도 적절하게 만들지 않았다.</p>
+<p>다만 유니코드 잘되고 쓸만한 lexer generator이 커먼리습에 있는지가 궁금했다.</p>
+<p>적당히 내일 정도면 어느 정도 완전히 굴러가는 프로그램으로 다 만들고 마무리 할 듯.</p>
+<p>처음에는 <a href="https://www.quicklisp.org/">QuickLisp</a> 에서 어떤 Lexer을
+써야할까 고민하다가, cl-lex 쓰다가 실망스러웠다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>그러다가 만난게 <a href="https://github.com/rigetti/alexa">Alexa</a> 인데, 가장
+마음에 드는 lexer generator.</p>
+<p><a href="https://www.rigetti.com/">https://www.rigetti.com/</a> 이 회사를 발견. 커먼리습으로 <a href="https://github.com/rigetti/quilc">Quil
+Compiler</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> 만들고 퀀텀컴퓨팅
+관련된 기업인가 보다.</p>
+<p>그리고 깃헙 저장소 살펴보는데 흥미롭고 써보면 어떨까 싶은게 많이 보였다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-14mon/">Ping 14/Oct/2019</a></h1>
+					<time>🗓️ 14 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>어제 오늘 요즘에 들어서 생각을 겨우 하기 시작한 고민을 사람들이 트윗하더라.</p>
+<p>tweet 1183311320822607872</p>
+<p>..이번에 직장을 그만두고<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 새로운 직장을 열심히 알아보고 있지는 않고
+있다.</p>
+<p>몇군데 인터뷰를 진행도 해보고 했지만, 모두 솔직히 나도 모르겠고 거절도
+많이 받고 해서 꾸준히 진행을 하고 있지는 않다. 그리고 나도 이직을 하고
+recruiting 과정을 한국만이 아니라 독일에서도 다양하게 겪어보니
+어떤것이 좋거나 나쁜 신호인지 캐치하게 되는거 같고, 또 그런 시그널들이
+생각보다 적절하게 그 회사측의 모습이나 생각을 반영하는게 맞는거
+같더라.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-10oct/ping-13sun/">Ping 13/Oct/2019</a></h1>
 					<time>🗓️ 13 Oct, 2019</time>
 					<br><div class="description">
@@ -221,68 +326,6 @@ deck으로 쌓아만 놓는다.</li>
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-10oct/cl-rutils/">rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</a></h1>
-					<time>🗓️ 11 Oct, 2019</time>
-					<br><div class="description">
-						
-						<p>커먼리습은 <a href="https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec">CLHS</a>
-이후로 언어 자체 정의는 변하지 않았다.</p>
-<p>구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거
-같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 <a href="https://en.wikipedia.org/wiki/Lisp_reader">lisp
-reader</a>을 확장하는게
-CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스펙을 잘
-구현해놓았으니까.</p>
-<p>결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면
-언제든지 매크로를 만들듯이 확장하면 되니까.</p>
-<blockquote>
-<p><em>&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;</em></p></blockquote>
-<p>이런 커먼리습 확장 <em>&lsquo;라이브러리&rsquo;</em> 들이 여러가지 있는데, 가장 요즘에
-쓸만할거 같다고 생각하는건 rutils이다. <a href="https://github.com/vseloved/rutils">https://github.com/vseloved/rutils</a></p>
-<p><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code> 같은거
-매번 반복해서 쳐넣는걸 그냥 <code>eval-always</code>으로 바꿔준다거나.
-<code>gensym</code>하는것도 <code>with-gensyms</code> 제공하거나 하는 이런류의
-라이브러리들에서 보통 제공하는것들부터.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-10oct/ping-11fri/">Ping 11/Oct/2019</a></h1>
-					<time>🗓️ 11 Oct, 2019</time>
-					<br><div class="description">
-						
-						<p>매일 글쓰기. 블로깅하기 나도 해볼까.</p>
-<p>해보려는 이유는 메모는 계속해서 하면서 살고 있는데, 연속해서 같은
-주제에 대해서 더 생각하고 하면서 발전시키는 방법으로 일기를 쓰는것과
-반복적으로, 또 이전에 썼었던 글을 읽어보면서 거기에서 더 나아가서
-고쳐나가고 발전시키는 방법으로 블로깅이 나쁘지 않은거 같아서.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-10oct/ping-08tue/">Ping 08/Oct/2019</a></h1>
-					<time>🗓️ 08 Oct, 2019</time>
-					<br><div class="description">
-						
-						<p>어제는 하루 종일 아는 사람들을 만나고 돌아다녔다.</p>
-<p>한국에서 운전을 하게 되고 재미를 붙이고 살고 있다.</p>
-<p>비가 오는 날이었지만 상쾌해서 북한산 국립공원 근처, 은평한옥마을,
-진관사를 다녔다. 차를 타고 이동하면서 편하고 좋았다. 행동반경이
-넓어지고 운전하면서 아직은 매순간이 재밌다.</p>
-<p>비가 내려서 구름과 안개가 북한산 자락에 깔려서 운치있었다. 카페에
-앉아서 산풍경을 감상했다. 학생때는 자주 학교에서 소풍이나 백일장을
-서오릉이나 북한산으로 왔었었는데. 그때도 가끔 생각했지만 비가 내려
-세상이 이렇게 젖었을때 애처롭게 어둡기도 하고 깨끗한 습기를 머금은
-숲이 상쾌해서 생명을 느끼게 해준다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -314,7 +357,7 @@ CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762765270</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763833465</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>scripts-rofi-perl5 릴리즈 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1763833465">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+https://github.com/ageldama/scripts-rofi-perl5
+
+
+
+스크립트 많이 작성해서 자동화해서 쓰는데, 터미널 열거나 하기 귀찮고,
+모두 한 디렉토리에 넣어두기도 정리가 안되는거 같아서 작성해서 몇 년
+전부터 써왔다.
+
+자동으로 최근 실행한 스크립트부터 표시하도록 히스토리를 저장해서
+순위표시.1
+
+최근에 &#34;터미널 내부에서 실행하기&#34; 기능을 추가하고 좀 많이 다듬어서
+릴리즈.
+
+터미널 안에서 실행되어야 하는 스크립트인데, 그냥 창없이 실행되면
+낭패이기 때문에2, 과거 실행내역에 따라서, 터미널에서 실행하던
+스크립트라면 다시 터미널에서 실행되도록 권해주기 기능도 추가.
+
+나 같이 x윈도 환경을 커스터마이징해서 내게 맞춰서 쓰는 사람이나
+좋아할거 같은 도구. ㅎㅎ" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2025-11nov/scripts-rofi-perl5-release/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="scripts-rofi-perl5 릴리즈">
+  <meta property="og:description" content="https://github.com/ageldama/scripts-rofi-perl5
+스크립트 많이 작성해서 자동화해서 쓰는데, 터미널 열거나 하기 귀찮고, 모두 한 디렉토리에 넣어두기도 정리가 안되는거 같아서 작성해서 몇 년 전부터 써왔다.
+자동으로 최근 실행한 스크립트부터 표시하도록 히스토리를 저장해서 순위표시.1
+최근에 &#34;터미널 내부에서 실행하기&#34; 기능을 추가하고 좀 많이 다듬어서 릴리즈.
+터미널 안에서 실행되어야 하는 스크립트인데, 그냥 창없이 실행되면 낭패이기 때문에2, 과거 실행내역에 따라서, 터미널에서 실행하던 스크립트라면 다시 터미널에서 실행되도록 권해주기 기능도 추가.
+나 같이 x윈도 환경을 커스터마이징해서 내게 맞춰서 쓰는 사람이나 좋아할거 같은 도구. ㅎㅎ">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-11-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-22T00:00:00+00:00">
+    <meta property="article:tag" content="Rofi">
+    <meta property="article:tag" content="Dmenu">
+    <meta property="article:tag" content="Perl">
+    <meta property="article:tag" content="Script">
+    <meta property="article:tag" content="Launcher">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="scripts-rofi-perl5 릴리즈">
+  <meta name="twitter:description" content="https://github.com/ageldama/scripts-rofi-perl5
+스크립트 많이 작성해서 자동화해서 쓰는데, 터미널 열거나 하기 귀찮고, 모두 한 디렉토리에 넣어두기도 정리가 안되는거 같아서 작성해서 몇 년 전부터 써왔다.
+자동으로 최근 실행한 스크립트부터 표시하도록 히스토리를 저장해서 순위표시.1
+최근에 &#34;터미널 내부에서 실행하기&#34; 기능을 추가하고 좀 많이 다듬어서 릴리즈.
+터미널 안에서 실행되어야 하는 스크립트인데, 그냥 창없이 실행되면 낭패이기 때문에2, 과거 실행내역에 따라서, 터미널에서 실행하던 스크립트라면 다시 터미널에서 실행되도록 권해주기 기능도 추가.
+나 같이 x윈도 환경을 커스터마이징해서 내게 맞춰서 쓰는 사람이나 좋아할거 같은 도구. ㅎㅎ">
+
+	
+		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+	        
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+    <nav>
+        
+            <a href="/posts/archive/">Index🗃️🏷️</a>
+        
+            <a href="/myself/">Contact📨</a>
+        
+
+	
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#cccccc',  
+      buttonColorDark: '#566666',  
+      buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+    var darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    window.darkmode = darkmode;
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+<main>
+	<article data-pagefind-body>
+		<div class="title">
+			<h1 class="title" data-pagefind-meta="title">scripts-rofi-perl5 릴리즈</h1>
+                        <time style="display: none;"
+                            data-pagefind-meta="date[datetime]"
+                            datetime="2025-11-22" pubdate>
+                            22 Nov 2025
+                        </time>
+			<div class="meta"> 🗓️ 22 Nov, 2025</div>
+		</div>
+		
+		
+		<section class="body">
+			
+<p>
+<a href="https://github.com/ageldama/scripts-rofi-perl5">https://github.com/ageldama/scripts-rofi-perl5</a></p>
+<p>
+<img src="/posts/2025-11nov/scripts-rofi-perl5-screenshot.png" alt="/posts/2025-11nov/scripts-rofi-perl5-screenshot.png" title="/posts/2025-11nov/scripts-rofi-perl5-screenshot.png" /></p>
+<p>
+스크립트 많이 작성해서 자동화해서 쓰는데, 터미널 열거나 하기 귀찮고,
+모두 한 디렉토리에 넣어두기도 정리가 안되는거 같아서 작성해서 몇 년
+전부터 써왔다.</p>
+<p>
+자동으로 최근 실행한 스크립트부터 표시하도록 히스토리를 저장해서
+순위표시.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+최근에 &#34;터미널 내부에서 실행하기&#34; 기능을 추가하고 좀 많이 다듬어서
+릴리즈.</p>
+<p>
+터미널 안에서 실행되어야 하는 스크립트인데, 그냥 창없이 실행되면
+낭패이기 때문에<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>, 과거 실행내역에 따라서, 터미널에서 실행하던
+스크립트라면 다시 터미널에서 실행되도록 권해주기 기능도 추가.</p>
+<p>
+나 같이 x윈도 환경을 커스터마이징해서 내게 맞춰서 쓰는 사람이나
+좋아할거 같은 도구. ㅎㅎ</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>원래는 DBD/SQLite3을 썼다가, 더 가볍게 그냥 Perl 내장
+Storable으로 수정.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p>직접 프로세스 찾아서 <code>kill</code> 해주기 귀찮으니까.</p>
+</div>
+</div>
+</div>
+</div>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li style="display: inline">#<a href="/tags/rofi">rofi</a></li>
+					
+					<li style="display: inline">#<a href="/tags/dmenu">dmenu</a></li>
+					
+					<li style="display: inline">#<a href="/tags/perl">perl</a></li>
+					
+					<li style="display: inline">#<a href="/tags/script">script</a></li>
+					
+					<li style="display: inline">#<a href="/tags/launcher">launcher</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+
+<footer>
+  
+  <div class="footer-info">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763833465</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      
+  </div>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+<script>
+  
+</script></div>
+    </body>
+</html>

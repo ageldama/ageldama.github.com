@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.147.2">
+	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1762765270">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763833465">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.29950944d387d406cc56aae53098f2c224eeaa5ef550fe235a4a29d47d8c8a9e.css" integrity="sha256-KZUJRNOH1AbMVqrlMJjywiTuql71UP4jWkop1H2Mip4=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
                     
                 
             
@@ -154,6 +154,69 @@
 				
 				
 				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/cl-rutils/">rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</a></h1>
+					<time>🗓️ 11 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>커먼리습은 <a href="https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec">CLHS</a>
+이후로 언어 자체 정의는 변하지 않았다.</p>
+<p>구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거
+같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 <a href="https://en.wikipedia.org/wiki/Lisp_reader">lisp
+reader</a>을 확장하는게
+CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스펙을 잘
+구현해놓았으니까.</p>
+<p>결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면
+언제든지 매크로를 만들듯이 확장하면 되니까.</p>
+<blockquote>
+<p><em>&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;</em></p>
+</blockquote>
+<p>이런 커먼리습 확장 <em>&lsquo;라이브러리&rsquo;</em> 들이 여러가지 있는데, 가장 요즘에
+쓸만할거 같다고 생각하는건 rutils이다. <a href="https://github.com/vseloved/rutils">https://github.com/vseloved/rutils</a></p>
+<p><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code> 같은거
+매번 반복해서 쳐넣는걸 그냥 <code>eval-always</code>으로 바꿔준다거나.
+<code>gensym</code>하는것도 <code>with-gensyms</code> 제공하거나 하는 이런류의
+라이브러리들에서 보통 제공하는것들부터.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-11fri/">Ping 11/Oct/2019</a></h1>
+					<time>🗓️ 11 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>매일 글쓰기. 블로깅하기 나도 해볼까.</p>
+<p>해보려는 이유는 메모는 계속해서 하면서 살고 있는데, 연속해서 같은
+주제에 대해서 더 생각하고 하면서 발전시키는 방법으로 일기를 쓰는것과
+반복적으로, 또 이전에 썼었던 글을 읽어보면서 거기에서 더 나아가서
+고쳐나가고 발전시키는 방법으로 블로깅이 나쁘지 않은거 같아서.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2019-10oct/ping-08tue/">Ping 08/Oct/2019</a></h1>
+					<time>🗓️ 08 Oct, 2019</time>
+					<br><div class="description">
+						
+						<p>어제는 하루 종일 아는 사람들을 만나고 돌아다녔다.</p>
+<p>한국에서 운전을 하게 되고 재미를 붙이고 살고 있다.</p>
+<p>비가 오는 날이었지만 상쾌해서 북한산 국립공원 근처, 은평한옥마을,
+진관사를 다녔다. 차를 타고 이동하면서 편하고 좋았다. 행동반경이
+넓어지고 운전하면서 아직은 매순간이 재밌다.</p>
+<p>비가 내려서 구름과 안개가 북한산 자락에 깔려서 운치있었다. 카페에
+앉아서 산풍경을 감상했다. 학생때는 자주 학교에서 소풍이나 백일장을
+서오릉이나 북한산으로 왔었었는데. 그때도 가끔 생각했지만 비가 내려
+세상이 이렇게 젖었을때 애처롭게 어둡기도 하고 깨끗한 습기를 머금은
+숲이 상쾌해서 생명을 느끼게 해준다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
 					<h1 class="title"><a href="/posts/2019-03mar/2019-03mar17-ping/">Ping 17/03/2019</a></h1>
 					<time>🗓️ 17 Mar, 2019</time>
 					<br><div class="description">
@@ -194,83 +257,6 @@ manual</a>에
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/2019feb27-ping/">Ping 26/02/2019</a></h1>
-					<time>🗓️ 26 Feb, 2019</time>
-					<br><div class="description">
-						
-						<h1 id="번아웃-회의감">번아웃, 회의감</h1>
-<p>아무래도 번아웃이 온거 같다. 일을 해야 하는데 아무런 생각이나 의욕도
-떠오르지 않는다.</p>
-<p>아무것도 제대로 하지 못할거 같고, 해서 의미도 없을거라는 생각이 강하다.</p>
-<p>일하는것에 회의가 심하다. 실제로는 아무것도 제대로 알지 못하고 그냥
-싫으니까 반대에 사람들 사이를 조작해서 악의적으로 행동하고 그렇게
-조장하는것에 이제는 삶에서 너무 많이 봐온거 같고, 그런 사이에서
-무력하게 지내고 해야한다는게 무엇보다 지친다.</p>
-<p>그리고 그렇게 때문에 해야할 이유도, 굳이 마음을 써야할 이유도
-모르겠다.</p>
-<p>그냥 개인적으로 하고 싶던 설정이나 만지작거리면서 시간을 보내봐도 딱히
-그게 지나고 나면 하고 싶은것도 없어진다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/counsel-ivy&#43;cpp-ide/">Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)</a></h1>
-					<time>🗓️ 26 Feb, 2019</time>
-					<br><div class="description">
-						
-						<p>최근에 이맥스 설정을
-<a href="https://github.com/emacs-helm/helm">Helm</a>기반에서
-<a href="https://github.com/abo-abo/swiper">Ivy/Counsel</a>으로 전부 바꿨다.</p>
-<p>더 가볍고, 적당히 잘 동작하고,
-<a href="https://github.com/BurntSushi/ripgrep">Ripgrep</a>이랑 기본적으로
-설정이 가능해서 편함.</p>
-<p>거기에 <code>C-c C-o</code>
-(<a href="https://oremacs.com/2015/11/04/ivy-occur/">ivy-occur</a>) +
-<a href="https://github.com/mhayashi1120/Emacs-wgrep">wgrep</a>이 Helm에선
-동작할때가 그때그때 기능에 따라 달라서 짜증나고, 심지어 플러그인을
-설정해서 써야하거나 해서 정말 좋아하는 기능인데 우울하게 만들었는데,
-Ivy이 훨씬 깔끔하게 동작하고 일관성있게 잘 동작함.</p>
-<p>처음에는 Helm에서 하는 기능들을 그대로 옮기려고만 생각하다가, 오히려
-Ivy에 맞춰서 내가 익숙해지고, 더 낫게 할 방법들이 있어서 그냥 내가
-adopt해서 편안해졌다.</p>
-<h1 id="cmake--compile_commandsjson">CMake + <code>compile_commands.json</code></h1>
-<p>이전에는 <a href="https://github.com/Andersbakken/rtags">RTags</a>을 사용해서
-&lsquo;&lsquo;정말로&rsquo;&rsquo; C++ 프로젝트를 Clang등을 이용해서 파싱하고, 그걸
-인덱싱한걸로 정확한 navigation, code completion을 구성해 사용하려고
-했었었다. 그리고 타입 정보다 그런거 다 있으니 제대로 굴러가서 꽤
-쓸만하고.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/2019-02feb26-ping/">Ping 26/02/2019</a></h1>
-					<time>🗓️ 26 Feb, 2019</time>
-					<br><div class="description">
-						
-						<h1 id="게임-발더스게이트ee-원숭이섬의-비밀-se--steamplay-등등">게임: 발더스게이트EE, &lsquo;원숭이섬의 비밀&rsquo; SE + SteamPlay, 등등</h1>
-<p>아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced Edition들
-올라와있었다.  발더스게이트1, 2 모두. 시간이 될때마다 조금씩 플레이
-중.</p>
-<p>새로 UI이나 그래픽 요소들 등등 리마스터 한건지 훨씬 좋아진거 같다.</p>
-<p><a href="https://store.steampowered.com/app/32360/The_Secret_of_Monkey_Island_Special_Edition/">원숭이섬의 비밀: Special
-Edition</a>
-이것도 시간날때
-플레이. <a href="https://www.scummvm.org/">ScummVM</a> 으로 옛날 그래픽으로 다시
-해도 좋겠지만, 오히려 애니메이션이나 그래픽 다시 그린게 나는 더 마음에
-들어서 이쪽이 좋은거 같다.</p>
-<p><a href="https://store.steampowered.com/app/336140/Unavowed/">Unavowed</a>. 이런류의
-어드벤쳐 꾸준히 만드는 &ldquo;WadjetEyeGames&quot;이 내 취향에 잘 맞는걸 계속
-만들고 있는거 같아서 기뻤다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -302,7 +288,7 @@ Edition</a>
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1762765270</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763833465</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>
