@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-<<<<<<< HEAD
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763833465">
-=======
-	<meta name="generator" content="Hugo 0.150.1">
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763618008">
->>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763833498">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -160,7 +154,6 @@
 				
 				
 				<section class="list-item">
-<<<<<<< HEAD
 					<h1 class="title"><a href="/posts/2020-10oct/leet-code-1614-2nd/">CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
 					<time>🗓️ 21 Oct, 2020</time>
 					<br><div class="description">
@@ -212,8 +205,6 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
 				</section>
 				
 				<section class="list-item">
-=======
->>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
 					<h1 class="title"><a href="/posts/2020-10oct/leet-code-1614/">CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
 					<time>🗓️ 20 Oct, 2020</time>
 					<br><div class="description">
@@ -377,133 +368,6 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
                                         
 				</section>
 				
-<<<<<<< HEAD
-=======
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2020-10oct/ping-17sat/">Ping 16/Oct/2020</a></h1>
-					<time>🗓️ 16 Oct, 2020</time>
-					<br><div class="description">
-						
-						<p>
-ADT<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>만큼 만들어 쓰는 것은 아니지만, 그냥 Kotlin, Python의
-dataclass 정도는 쓰고 싶어서 CommonLisp 매크로를 만들어봤다.<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
-<p>
-<a href="https://common-lisp.net/project/cdr/document/8/cleqcmp.html">equals</a> 라이브러리를 써서 동치 비교와 CLOS의 <code>print-object</code> generic
-function을 구현해서 to-string 정도만 되도록 만들어 봤다.</p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-macro body
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<div class="src src-lisp">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
-</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
-</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
-</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
-</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
-</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
-</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
-</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
-</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
-</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
-</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
-</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
-</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
-</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
-</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
-</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
-</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
-</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
-</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
-</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
-</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
-</span><span class="lnt" id="29"><a class="lnlinks" href="#29">29</a>
-</span><span class="lnt" id="30"><a class="lnlinks" href="#30">30</a>
-</span><span class="lnt" id="31"><a class="lnlinks" href="#31">31</a>
-</span><span class="lnt" id="32"><a class="lnlinks" href="#32">32</a>
-</span><span class="lnt" id="33"><a class="lnlinks" href="#33">33</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defmacro</span> <span class="nv">define-data-class</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">class-name</span> <span class="nv">parent-classes</span> <span class="nv">slot-names</span>
-</span></span><span class="line"><span class="cl">     <span class="k">&amp;key</span> <span class="p">(</span><span class="nv">no-print-slot-names</span> <span class="no">nil</span><span class="p">)</span> <span class="p">(</span><span class="nv">no-equals-slot-names</span> <span class="no">nil</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">flet</span> <span class="p">((</span><span class="nv">accessor-symbol</span> <span class="p">(</span><span class="nv">slot-name</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="nv">alexandria:format-symbol</span> <span class="vg">*package*</span>
-</span></span><span class="line"><span class="cl">                                     <span class="s">&#34;~a-~a&#34;</span> <span class="nf">class-name</span> <span class="nv">slot-name</span><span class="p">)))</span>  
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nc">list</span> <span class="ss">&#39;progn</span>          
-</span></span><span class="line"><span class="cl">          <span class="c1">;; defclass</span>
-</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">slot-defs</span> <span class="p">(</span><span class="nb">loop</span> <span class="nv">for</span> <span class="nv">slot-name</span> <span class="nv">in</span> <span class="nv">slot-names</span>
-</span></span><span class="line"><span class="cl">                                 <span class="nv">collecting</span> <span class="o">`</span><span class="p">(</span><span class="o">,</span><span class="nv">slot-name</span>
-</span></span><span class="line"><span class="cl">                                              <span class="ss">:initarg</span> <span class="o">,</span><span class="p">(</span><span class="nv">alexandria:make-keyword</span> <span class="nv">slot-name</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                                              <span class="ss">:accessor</span> <span class="o">,</span><span class="p">(</span><span class="nv">accessor-symbol</span> <span class="nv">slot-name</span><span class="p">)))))</span>
-</span></span><span class="line"><span class="cl">            <span class="o">`</span><span class="p">(</span><span class="nb">defclass</span> <span class="o">,</span><span class="nf">class-name</span> <span class="o">,</span><span class="nv">parent-classes</span> <span class="o">,</span><span class="nv">slot-defs</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">          <span class="c1">;; defmethod print-object</span>
-</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="k">let*</span> <span class="p">((</span><span class="nv">print-slot-names</span> <span class="p">(</span><span class="nf">set-difference</span> <span class="nv">slot-names</span>
-</span></span><span class="line"><span class="cl">                                                   <span class="nv">no-print-slot-names</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nv">fmt-ctrl</span> <span class="p">(</span><span class="nf">format</span> <span class="no">nil</span> <span class="s">&#34;~{~a=~~a~^, ~}&#34;</span> <span class="nv">print-slot-names</span><span class="p">)))</span>
-</span></span><span class="line"><span class="cl">            <span class="o">`</span><span class="p">(</span><span class="nb">defmethod</span> <span class="nf">print-object</span> <span class="p">((</span><span class="nv">obj</span> <span class="o">,</span><span class="nf">class-name</span><span class="p">)</span> <span class="nc">stream</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nb">print-unreadable-object</span> <span class="p">(</span><span class="nv">obj</span> <span class="nc">stream</span> <span class="ss">:type</span> <span class="no">t</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nb">with-slots</span> <span class="o">,</span><span class="nv">print-slot-names</span> <span class="nv">obj</span>
-</span></span><span class="line"><span class="cl">                   <span class="p">(</span><span class="nf">format</span> <span class="nc">stream</span> <span class="o">,</span><span class="nv">fmt-ctrl</span> <span class="o">,@</span><span class="nv">print-slot-names</span><span class="p">)))))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">          <span class="c1">;; defmethod equals:equals</span>
-</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="k">let*</span> <span class="p">((</span><span class="nv">equals-slot-names</span> <span class="p">(</span><span class="nf">set-difference</span> <span class="nv">slot-names</span>
-</span></span><span class="line"><span class="cl">                                                    <span class="nv">no-equals-slot-names</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nv">equals-exprs</span> <span class="p">(</span><span class="nb">loop</span> <span class="nv">for</span> <span class="nv">equals-slot-name</span> <span class="nv">in</span> <span class="nv">equals-slot-names</span>
-</span></span><span class="line"><span class="cl">                                     <span class="nv">collecting</span> <span class="o">`</span><span class="p">(</span><span class="nv">equals:equals</span> <span class="p">(</span><span class="nf">slot-value</span> <span class="nv">lhs</span> <span class="p">(</span><span class="k">quote</span> <span class="o">,</span><span class="nv">equals-slot-name</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">                                                                <span class="p">(</span><span class="nf">slot-value</span> <span class="nv">rhs</span> <span class="p">(</span><span class="k">quote</span> <span class="o">,</span><span class="nv">equals-slot-name</span><span class="p">))))))</span>
-</span></span><span class="line"><span class="cl">            <span class="o">`</span><span class="p">(</span><span class="nb">defmethod</span> <span class="nv">equals:equals</span> <span class="p">((</span><span class="nv">lhs</span> <span class="o">,</span><span class="nf">class-name</span><span class="p">)</span> <span class="p">(</span><span class="nv">rhs</span> <span class="o">,</span><span class="nf">class-name</span><span class="p">)</span> <span class="k">&amp;rest</span> <span class="nv">args</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">ignore</span> <span class="nv">args</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nb">and</span> <span class="no">t</span> <span class="o">,@</span><span class="nv">equals-exprs</span><span class="p">)))</span>
-</span></span><span class="line"><span class="cl">          <span class="p">)))</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-synopsis / usage
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<div class="src src-lisp">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">define-data-class</span> <span class="nv">animal</span> <span class="p">()</span> <span class="p">(</span><span class="nv">name</span> <span class="nv">age</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">define-data-class</span> <span class="nv">bird</span> <span class="p">(</span><span class="nv">animal</span><span class="p">)</span> <span class="p">())</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">equals:equals</span> <span class="p">(</span><span class="nf">make-instance</span> <span class="ss">&#39;animal</span> <span class="ss">:name</span> <span class="s">&#34;foo&#34;</span> <span class="ss">:age</span> <span class="mi">18</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nf">make-instance</span> <span class="ss">&#39;animal</span> <span class="ss">:name</span> <span class="s">&#34;foo&#34;</span> <span class="ss">:age</span> <span class="mi">18</span><span class="p">))</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-  오랬만에 재밌었다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
->>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
 				
 
 
@@ -535,11 +399,7 @@ synopsis / usage
 			<footer>
   
   <div class="footer-info">
-<<<<<<< HEAD
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763833465</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-=======
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763618008</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
->>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763833498</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>
