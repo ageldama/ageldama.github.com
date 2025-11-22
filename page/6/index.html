@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
+<<<<<<< HEAD
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763833465">
+=======
+	<meta name="generator" content="Hugo 0.150.1">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1763618008">
+>>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -154,6 +160,7 @@
 				
 				
 				<section class="list-item">
+<<<<<<< HEAD
 					<h1 class="title"><a href="/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</a></h1>
 					<time>🗓️ 05 Nov, 2023</time>
 					<br><div class="description">
@@ -205,6 +212,8 @@
 				</section>
 				
 				<section class="list-item">
+=======
+>>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
 					<h1 class="title"><a href="/posts/2023-03mar/2023-03mar15--wired-desktop/">내 책상에서 유선랜 환경</a></h1>
 					<time>🗓️ 15 Mar, 2023</time>
 					<br><div class="description">
@@ -350,6 +359,106 @@ linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁�
                                         
 				</section>
 				
+<<<<<<< HEAD
+=======
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2023-03mar/cxx-defer/">C&#43;&#43;: Golang-ish `defer`-macro</a></h1>
+					<time>🗓️ 02 Mar, 2023</time>
+					<br><div class="description">
+						
+						<p>
+별거 없는데, 문득 심심해서 툭닥거려봤다.</p>
+<p>
+<div>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">원하는 것과 접근법</a>
+</li>
+<li><a href="#headline-2"><code class="verbatim">defer.inl</code> :</a>
+</li>
+<li><a href="#headline-3">사용예</a>
+</li>
+<li><a href="#headline-4">제약사항과 생각해볼꺼리</a>
+</li>
+<li><a href="#headline-5">Footnotes</a>
+</li>
+</ul>
+</nav>
+</div>
+</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+원하는 것과 접근법
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li><a href="https://go.dev/blog/defer-panic-and-recover">https://go.dev/blog/defer-panic-and-recover</a></li>
+<li><a href="https://docs.rs/defer/latest/defer/fn.defer.html">https://docs.rs/defer/latest/defer/fn.defer.html</a></li>
+<li><a href="https://ziglang.org/documentation/master/#defer">https://ziglang.org/documentation/master/#defer</a></li>
+</ol>
+<p>
+  golang/zig에서처럼 <code class="verbatim">defer</code> 등록한 LIFO순서대로 호출되도록.</p>
+<p>
+  검색해보면, 대부분 RAII을 사용하거나 하는 것들이 보인다:</p>
+<ul>
+<li><a href="https://duckduckgo.com/?q=c%2B%2B+golang+defer">DDG: c++ golang defer</a></li>
+<li><a href="https://stackoverflow.com/questions/33050620/golang-style-defer-in-c">https://stackoverflow.com/questions/33050620/golang-style-defer-in-c</a></li>
+<li><a href="https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop">https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop</a></li>
+<li><a href="https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/">https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/</a></li>
+</ul>
+<p>
+  …그냥 <code class="verbatim">std::shared_ptr&lt;void&gt;</code> 을 이용하는 방식이 마음에
+  들었다. 그리고 조금 더 간단하게 사용하려고 매크로로 만들어 봤다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+<code class="verbatim">defer.inl</code> :
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div class="src src-c++">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">  <span class="cm">/* -*- mode: c++; -*- */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cp">#ifndef defer_INL
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define defer_INL 1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#define _Defer_CONCAT_IMPL( x, y ) x##y
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y )
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk)
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#endif </span><span class="cm">/*defer_INL*/</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  <a href="https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html"><code class="verbatim">__COUNTER__</code></a> 이용해서 매크로가 생성한 <code class="verbatim">std::shared_ptr&lt;..&gt;</code> 변수의
+  이름이 겹치지 않도록 해봤다. (…위에 검색한 링크들에도 사용하듯이)</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+>>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
 				
 
 
@@ -381,7 +490,11 @@ linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁�
 			<footer>
   
   <div class="footer-info">
+<<<<<<< HEAD
       2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763833465</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+=======
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1763618008</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+>>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
       
   </div>
 </footer>

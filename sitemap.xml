@@ -3,6 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ageldama.github.io/categories/</loc>
+<<<<<<< HEAD
     <lastmod>2025-11-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/dmenu/</loc>
@@ -34,6 +35,9 @@
   </url><url>
     <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+=======
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+>>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
   </url><url>
     <loc>https://ageldama.github.io/tags/concurrency/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
@@ -59,6 +63,15 @@
     <loc>https://ageldama.github.io/tags/parallelism/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
+<<<<<<< HEAD
+=======
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/programming/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+>>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
     <loc>https://ageldama.github.io/tags/python/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -71,6 +84,12 @@
     <loc>https://ageldama.github.io/tags/queue/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
+<<<<<<< HEAD
+=======
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+>>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
     <loc>https://ageldama.github.io/tags/tcl/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -80,6 +99,12 @@
     <loc>https://ageldama.github.io/tags/threading/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
+<<<<<<< HEAD
+=======
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+>>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
     <loc>https://ageldama.github.io/tags/byte-compile/</loc>
     <lastmod>2025-11-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -185,6 +210,12 @@
     <loc>https://ageldama.github.io/tags/oneliner/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
+<<<<<<< HEAD
+=======
+    <loc>https://ageldama.github.io/tags/perl/</loc>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+>>>>>>> a923d5c0d26da988bcff135841d2c952465cbbc6
     <loc>https://ageldama.github.io/tags/process/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
