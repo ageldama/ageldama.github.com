@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764428621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764438376">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="https://jasonformat.com/islands-architecture/
 &hellip;이전에 몇번 언급한 hotwired 처럼. ㅎㅎ
@@ -42,18 +42,14 @@ server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client
 server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client): 응답으로 받은 json을 받아서, html을 생성하여 렌더링. …이게 편하다고 생각해서 여기로 온거 같아. 나말고도 대부분의 사람들이 웹화면을 개발하던 시절에는 이렇게 만들고 싶었었던거 같아. 1 2
 그리고 당연히 ui개발이기 때문에 ‘컴포넌트모델’이나 값바인딩 같은 것들을 원했었고, 현재의 리액트와 같은 형태에 이르른 것 같아.
 물론, vdom이 복잡도를 많이 낮춰줬지만, 희안하게도 예상하지 못하던 문제를 몇가지 더 만들어낸 것 같아. 그래서 요즘엔 ssr이니 seo을 생각해서 다른 방식의 프레임웍들을 사용하려고 하고 있고, 더 나아가서 progressive hydration 같은 쪽으로 더 세밀해지는 양상 같아.2">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.2109b9ad5948b5f5021c80ef4e32e387e2e2c6a8045c45fd06a0a5d40445dfe0.css" integrity="sha256-IQm5rVlItfUCHIDvTjLjh&#43;LixqgEXEX9BqCl1ARF3&#43;A=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.c28d68df36090a1957836b81a0879ce8f07e323dbd97a405dd366b00e6b95027.css" integrity="sha256-wo1o3zYJChlXg2uBoIec6PB&#43;Mj29l6QF3TZrAOa5UCc=" crossorigin="anonymous">
                     
                 
             
@@ -64,7 +60,7 @@ server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
@@ -72,12 +68,10 @@ server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client
 
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">索引 INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">連絡處 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -100,34 +94,38 @@ server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+      
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
-        
-<div class="post-prevnext">
+        <nav class="post-prevnext" aria-label="posts">
     
-    <span class="post-next"><a href="https://ageldama.github.io/posts/2022-11nov/2022-11nov13--01-ping/"> [(新) Ping 13/11/2022 .01]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2022-11nov/2022-11nov13--01-ping/">(新) Ping 13/11/2022 .01</a>
     
 
     
-    <span class="post-prev"><a href="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/">[(舊) linux/unix 팁 29/06/2022 .01]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/">(舊) linux/unix 팁 29/06/2022 .01</a>
     
-</div>
+</nav>
 
 
 	<article data-pagefind-body>
 		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		    <h1 class="title" data-pagefind-meta="title">
+                        <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#terminal"/></svg> react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</h1>
+			<div class="meta">
+                            <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#calendar"/></svg>
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2022-06-29" pubdate>
-                            29 Jun 2022
+                            2022年06月29日
                         </time>
-			<div class="meta"> 🗓️ 29 Jun, 2022</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -186,39 +184,35 @@ next.js ssr처럼 <code>[name].tsx</code> 같은 file system routing도 지원�
 		</div>
 	</article>
 
-        
-<div class="post-prevnext">
+        <nav class="post-prevnext" aria-label="posts">
     
-    <span class="post-next"><a href="https://ageldama.github.io/posts/2022-11nov/2022-11nov13--01-ping/"> [(新) Ping 13/11/2022 .01]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2022-11nov/2022-11nov13--01-ping/">(新) Ping 13/11/2022 .01</a>
     
 
     
-    <span class="post-prev"><a href="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/">[(舊) linux/unix 팁 29/06/2022 .01]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/">(舊) linux/unix 팁 29/06/2022 .01</a>
     
-</div>
+</nav>
 
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764428621</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
+<footer class="py-3 my-4">
+  <p class="text-center">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764438376</code> | Subscribe <a href="/index.xml" >
+      <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#rss-fill"/></svg> RSS</a>
   </div>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

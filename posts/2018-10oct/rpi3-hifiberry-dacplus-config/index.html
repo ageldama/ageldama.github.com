@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764428621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764438376">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="https://www.hifiberry.com/ 요거 Raspberry Pi 3에 세팅한 모험에 대한
 이야기.
@@ -48,18 +48,14 @@ WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run
   <meta name="twitter:title" content="HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정">
   <meta name="twitter:description" content="https://www.hifiberry.com/ 요거 Raspberry Pi 3에 세팅한 모험에 대한 이야기.
 WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev #update_config=1 country=GB network={ ssid=&#34;iptime&#34; psk=&#34;xxxxxxxxxx&#34; key_mgmt=WPA-PSK } wpa_passphrase 안쓰고 그냥 plaintext으로 써도 동작. 내 공유기랑은 country=GB 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤. 그리고 ip link set wlan0 {up|down} 정도로 wlan0 인터페이스를 up/down하면됨. 사운드 드라이버 설정 내장 사운드카드 드라이버는 modprobe blacklist에 추가해서 끄자. /boot/config.txt에 HiFiBerry DAC&#43; 드라이버 오버레이를 지정해야함. 내장 사운드 드라이버 끄기 다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.2109b9ad5948b5f5021c80ef4e32e387e2e2c6a8045c45fd06a0a5d40445dfe0.css" integrity="sha256-IQm5rVlItfUCHIDvTjLjh&#43;LixqgEXEX9BqCl1ARF3&#43;A=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.c28d68df36090a1957836b81a0879ce8f07e323dbd97a405dd366b00e6b95027.css" integrity="sha256-wo1o3zYJChlXg2uBoIec6PB&#43;Mj29l6QF3TZrAOa5UCc=" crossorigin="anonymous">
                     
                 
             
@@ -70,7 +66,7 @@ WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
@@ -78,12 +74,10 @@ WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run
 
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">索引 INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">連絡處 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -106,34 +100,38 @@ WIFI잡기 # /etc/wpa_supplicant/wpa_supplicant.conf ctrl_interface=DIR=/var/run
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+      
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
-        
-<div class="post-prevnext">
+        <nav class="post-prevnext" aria-label="posts">
     
-    <span class="post-next"><a href="https://ageldama.github.io/posts/2018-10oct/05fri-ping/"> [(新) Ping 05/10/2018]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2018-10oct/05fri-ping/">(新) Ping 05/10/2018</a>
     
 
     
-    <span class="post-prev"><a href="https://ageldama.github.io/posts/2018-10oct/03wed-ping/">[(舊) Ping 03/10/2018]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2018-10oct/03wed-ping/">(舊) Ping 03/10/2018</a>
     
-</div>
+</nav>
 
 
 	<article data-pagefind-body>
 		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		    <h1 class="title" data-pagefind-meta="title">
+                        <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#terminal"/></svg> HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정</h1>
+			<div class="meta">
+                            <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#calendar"/></svg>
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2018-10-03" pubdate>
-                            03 Oct 2018
+                            2018年10月03日
                         </time>
-			<div class="meta"> 🗓️ 03 Oct, 2018</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -237,39 +235,35 @@ pcm.!default {
 		</div>
 	</article>
 
-        
-<div class="post-prevnext">
+        <nav class="post-prevnext" aria-label="posts">
     
-    <span class="post-next"><a href="https://ageldama.github.io/posts/2018-10oct/05fri-ping/"> [(新) Ping 05/10/2018]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2018-10oct/05fri-ping/">(新) Ping 05/10/2018</a>
     
 
     
-    <span class="post-prev"><a href="https://ageldama.github.io/posts/2018-10oct/03wed-ping/">[(舊) Ping 03/10/2018]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2018-10oct/03wed-ping/">(舊) Ping 03/10/2018</a>
     
-</div>
+</nav>
 
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764428621</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
+<footer class="py-3 my-4">
+  <p class="text-center">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764438376</code> | Subscribe <a href="/index.xml" >
+      <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#rss-fill"/></svg> RSS</a>
   </div>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

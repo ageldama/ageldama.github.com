@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764428621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764438376">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="일단 첫번째 버젼 다 만들었다.
 
@@ -75,18 +75,14 @@ https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0
 그냥 장난으로 인터프리터도 아니라 그냥 eval 이용한 간단한 파서도 필요없이 lexer만으로 만들만한 Forth 비슷한 언어를 만듬.
 명령어도 실용적인 목적이 아닌만큼 그냥 문자열 장난 밖엔 없다.
 느낀점 라이브러리 좋은거 갖다 잘쓰자 uiop 같은거, feature-expression 삽질을 적게하거나 안해도됨. 더 portable하고 잘 굴러가는. Test! 3. 짜고 하나씩 진화시켜가면서 다시 돌리는 재미. Idiomatic하게 그리고 역시 Test! ..처음엔 그냥 전역변수에 상태를 갖도록 만들고, 그걸 dynamic binding으로 바꿔서 파라미터화하고, 또 그걸 다시 상태를 캡슐화하는 클래스로 감싸고, 처음엔 단순하게 리습스럽게 짜고 그걸 진화시키고, 그리고 역시 다시 테스트. 아는만큼 보인다 setf 병렬로 하기, &#43;destructuring asdf:operate &#43; :build-op : SBCL/ECL 등 리습컴파일러에 관계 없이 실행이미지 빌드 편안하게 https://github.com/xach/buildapp 같은거 써볼까 하다가, 처음엔 그냥 간단히 쉘스크립팅으로 시작. 기타 등등 …그리고 무엇보다 재밌었다. 그리고 뭐가됐든 그냥 짜보고 굴러가는 형태로 계속해서 작은 프로그램을 많이 만들고 하면서 놀아야겠다고 생각했다.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.2109b9ad5948b5f5021c80ef4e32e387e2e2c6a8045c45fd06a0a5d40445dfe0.css" integrity="sha256-IQm5rVlItfUCHIDvTjLjh&#43;LixqgEXEX9BqCl1ARF3&#43;A=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.c28d68df36090a1957836b81a0879ce8f07e323dbd97a405dd366b00e6b95027.css" integrity="sha256-wo1o3zYJChlXg2uBoIec6PB&#43;Mj29l6QF3TZrAOa5UCc=" crossorigin="anonymous">
                     
                 
             
@@ -97,7 +93,7 @@ https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
@@ -105,12 +101,10 @@ https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0
 
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">索引 INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">連絡處 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -133,34 +127,38 @@ https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+      
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
-        
-<div class="post-prevnext">
+        <nav class="post-prevnext" aria-label="posts">
     
-    <span class="post-next"><a href="https://ageldama.github.io/posts/2019-10oct/ping-20sun/"> [(新) Ping 20/Oct/2019]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2019-10oct/ping-20sun/">(新) Ping 20/Oct/2019</a>
     
 
     
-    <span class="post-prev"><a href="https://ageldama.github.io/posts/2019-10oct/ping-15tue/">[(舊) Ping 15/Oct/2019]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2019-10oct/ping-15tue/">(舊) Ping 15/Oct/2019</a>
     
-</div>
+</nav>
 
 
 	<article data-pagefind-body>
 		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		    <h1 class="title" data-pagefind-meta="title">
+                        <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#terminal"/></svg> cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</h1>
+			<div class="meta">
+                            <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#calendar"/></svg>
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2019-10-16" pubdate>
-                            16 Oct 2019
+                            2019年10月16日
                         </time>
-			<div class="meta"> 🗓️ 16 Oct, 2019</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -232,39 +230,35 @@ portable하고 잘 굴러가는.</li>
 		</div>
 	</article>
 
-        
-<div class="post-prevnext">
+        <nav class="post-prevnext" aria-label="posts">
     
-    <span class="post-next"><a href="https://ageldama.github.io/posts/2019-10oct/ping-20sun/"> [(新) Ping 20/Oct/2019]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2019-10oct/ping-20sun/">(新) Ping 20/Oct/2019</a>
     
 
     
-    <span class="post-prev"><a href="https://ageldama.github.io/posts/2019-10oct/ping-15tue/">[(舊) Ping 15/Oct/2019]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2019-10oct/ping-15tue/">(舊) Ping 15/Oct/2019</a>
     
-</div>
+</nav>
 
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764428621</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
+<footer class="py-3 my-4">
+  <p class="text-center">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764438376</code> | Subscribe <a href="/index.xml" >
+      <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#rss-fill"/></svg> RSS</a>
   </div>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

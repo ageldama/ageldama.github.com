@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>scripts-rofi-perl5 릴리즈 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764428621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>scripts-rofi-perl5 릴리즈 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764438376">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 https://github.com/ageldama/scripts-rofi-perl5
@@ -53,18 +53,14 @@ https://github.com/ageldama/scripts-rofi-perl5
 최근에 &#34;터미널 내부에서 실행하기&#34; 기능을 추가하고 좀 많이 다듬어서 릴리즈.
 터미널 안에서 실행되어야 하는 스크립트인데, 그냥 창없이 실행되면 낭패이기 때문에2, 과거 실행내역에 따라서, 터미널에서 실행하던 스크립트라면 다시 터미널에서 실행되도록 권해주기 기능도 추가.
 나 같이 x윈도 환경을 커스터마이징해서 내게 맞춰서 쓰는 사람이나 좋아할거 같은 도구. ㅎㅎ">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.2109b9ad5948b5f5021c80ef4e32e387e2e2c6a8045c45fd06a0a5d40445dfe0.css" integrity="sha256-IQm5rVlItfUCHIDvTjLjh&#43;LixqgEXEX9BqCl1ARF3&#43;A=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.c28d68df36090a1957836b81a0879ce8f07e323dbd97a405dd366b00e6b95027.css" integrity="sha256-wo1o3zYJChlXg2uBoIec6PB&#43;Mj29l6QF3TZrAOa5UCc=" crossorigin="anonymous">
                     
                 
             
@@ -75,7 +71,7 @@ https://github.com/ageldama/scripts-rofi-perl5
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
@@ -83,12 +79,10 @@ https://github.com/ageldama/scripts-rofi-perl5
 
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">索引 INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">連絡處 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -111,34 +105,38 @@ https://github.com/ageldama/scripts-rofi-perl5
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+      
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
-        
-<div class="post-prevnext">
+        <nav class="post-prevnext" aria-label="posts">
     
-    <span class="post-next">🈳 NO-NEXT-POST</span>
+        <a class="btn btn-light disabled" role="button" aria-disabled="true" href="">(空)</a>
     
 
     
-    <span class="post-prev"><a href="https://ageldama.github.io/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/">[(舊) Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/">(舊) Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰</a>
     
-</div>
+</nav>
 
 
 	<article data-pagefind-body>
 		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">scripts-rofi-perl5 릴리즈</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		    <h1 class="title" data-pagefind-meta="title">
+                        <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#terminal"/></svg> scripts-rofi-perl5 릴리즈</h1>
+			<div class="meta">
+                            <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#calendar"/></svg>
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2025-11-22" pubdate>
-                            22 Nov 2025
+                            2025年11月22日
                         </time>
-			<div class="meta"> 🗓️ 22 Nov, 2025</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -213,39 +211,35 @@ Storable으로 수정.</p>
 		</div>
 	</article>
 
-        
-<div class="post-prevnext">
+        <nav class="post-prevnext" aria-label="posts">
     
-    <span class="post-next">🈳 NO-NEXT-POST</span>
+        <a class="btn btn-light disabled" role="button" aria-disabled="true" href="">(空)</a>
     
 
     
-    <span class="post-prev"><a href="https://ageldama.github.io/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/">[(舊) Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/">(舊) Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰</a>
     
-</div>
+</nav>
 
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764428621</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
+<footer class="py-3 my-4">
+  <p class="text-center">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764438376</code> | Subscribe <a href="/index.xml" >
+      <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#rss-fill"/></svg> RSS</a>
   </div>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

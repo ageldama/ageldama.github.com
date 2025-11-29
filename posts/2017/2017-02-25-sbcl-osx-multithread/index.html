@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기. - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764428621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기. - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764438376">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="SBCL은 멀티쓰레딩을 잘 지원하는 커먼리습 컴파일러이지만,
 공식사이트에서 제공하는 리눅스 바이너리가 아니라 OSX 바이너리는
@@ -70,18 +70,14 @@ http://www.sbcl.org/manual/#Threading
 http://haminhvuong-blog.tumblr.com/post/22109095116/compile-sbcl-with-multi-thread-enabled-on-os-x
 create customize-target-features.lisp with content
 1 2 3 4 5 6 7 8 (lambda (features) (flet ((enable (x) (pushnew x features)) (disable (x) (setf features (remove x features)))) ;; Threading support, available only on x86/x86-64 Linux, x86Solaris ;; and x86 Mac OS X (experimental). (enable :sb-thread))) 그리고 다음의 커맨드들로 빌드하고 설치 끝.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.2109b9ad5948b5f5021c80ef4e32e387e2e2c6a8045c45fd06a0a5d40445dfe0.css" integrity="sha256-IQm5rVlItfUCHIDvTjLjh&#43;LixqgEXEX9BqCl1ARF3&#43;A=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.c28d68df36090a1957836b81a0879ce8f07e323dbd97a405dd366b00e6b95027.css" integrity="sha256-wo1o3zYJChlXg2uBoIec6PB&#43;Mj29l6QF3TZrAOa5UCc=" crossorigin="anonymous">
                     
                 
             
@@ -92,7 +88,7 @@ create customize-target-features.lisp with content
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
@@ -100,12 +96,10 @@ create customize-target-features.lisp with content
 
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">索引 INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">連絡處 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -128,34 +122,38 @@ create customize-target-features.lisp with content
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+      
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
-        
-<div class="post-prevnext">
+        <nav class="post-prevnext" aria-label="posts">
     
-    <span class="post-next"><a href="https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/"> [(新) 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/">(新) 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a>
     
 
     
-    <span class="post-prev"><a href="https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/">[(舊) 2017년 1월, 요즘 나는.]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/">(舊) 2017년 1월, 요즘 나는.</a>
     
-</div>
+</nav>
 
 
 	<article data-pagefind-body>
 		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기.</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		    <h1 class="title" data-pagefind-meta="title">
+                        <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#terminal"/></svg> SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기.</h1>
+			<div class="meta">
+                            <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#calendar"/></svg>
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2017-02-25" pubdate>
-                            25 Feb 2017
+                            2017年02月25日
                         </time>
-			<div class="meta"> 🗓️ 25 Feb, 2017</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -229,39 +227,35 @@ create customize-target-features.lisp with content
 		</div>
 	</article>
 
-        
-<div class="post-prevnext">
+        <nav class="post-prevnext" aria-label="posts">
     
-    <span class="post-next"><a href="https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/"> [(新) 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/">(新) 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a>
     
 
     
-    <span class="post-prev"><a href="https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/">[(舊) 2017년 1월, 요즘 나는.]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/">(舊) 2017년 1월, 요즘 나는.</a>
     
-</div>
+</nav>
 
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764428621</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
+<footer class="py-3 my-4">
+  <p class="text-center">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764438376</code> | Subscribe <a href="/index.xml" >
+      <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#rss-fill"/></svg> RSS</a>
   </div>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

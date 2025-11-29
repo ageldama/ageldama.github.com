@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>내 책상에서 유선랜 환경 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764428621">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>내 책상에서 유선랜 환경 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764438376">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 개인환경을 조금 특이하게 사용하는데, 그 이유와 방식.
@@ -61,18 +61,14 @@ why: 유선랜? (무선랜 대신) 키보드/마우스 입력이 가장 부드�
 x2x으로 연결하거나, ssh-x11-forwarding으로 다른 컴퓨터에서 실행하는 프로그램을 디스플레이와 입력장치만 현재 자리에서 그대로 사용할 때에 네트웍 연결속도가 딜레이가 적어야 쾌적해서. 1
 why: x11? (wayland 대신) 요즘 리눅스/bsd 데스크탑 기본설치하면 wayland으로 세팅하는 경우도 많은데, 네트웍을 통해서 ssh-x11-forwarding 1 사용하거나 x2x 사용하기는 아직 부족한거 같아서, 나는 그냥 x11 사용함.
 거기에 xdotool 같은 gui-automation/scripting이나 warpd 같은 키보드를 마우스으로 편안하게 쓰도록 해주는 xtest이나, qjoypad 처럼 2 게임패드/조이스틱을 편안하게 마우스/키보드으로 매핑해서 쓰는게 나는 많은데 모두 x11만 지원하거나, 아직은 x11에서만 쓸만한 수준으로 동작해서.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.2109b9ad5948b5f5021c80ef4e32e387e2e2c6a8045c45fd06a0a5d40445dfe0.css" integrity="sha256-IQm5rVlItfUCHIDvTjLjh&#43;LixqgEXEX9BqCl1ARF3&#43;A=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.c28d68df36090a1957836b81a0879ce8f07e323dbd97a405dd366b00e6b95027.css" integrity="sha256-wo1o3zYJChlXg2uBoIec6PB&#43;Mj29l6QF3TZrAOa5UCc=" crossorigin="anonymous">
                     
                 
             
@@ -83,7 +79,7 @@ why: x11? (wayland 대신) 요즘 리눅스/bsd 데스크탑 기본설치하면 
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
@@ -91,12 +87,10 @@ why: x11? (wayland 대신) 요즘 리눅스/bsd 데스크탑 기본설치하면 
 
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">索引 INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">連絡處 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -119,34 +113,38 @@ why: x11? (wayland 대신) 요즘 리눅스/bsd 데스크탑 기본설치하면 
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+      
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
-        
-<div class="post-prevnext">
+        <nav class="post-prevnext" aria-label="posts">
     
-    <span class="post-next"><a href="https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/"> [(新) Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">(新) Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</a>
     
 
     
-    <span class="post-prev"><a href="https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/">[(舊) News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/">(舊) News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes</a>
     
-</div>
+</nav>
 
 
 	<article data-pagefind-body>
 		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">내 책상에서 유선랜 환경</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		    <h1 class="title" data-pagefind-meta="title">
+                        <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#terminal"/></svg> 내 책상에서 유선랜 환경</h1>
+			<div class="meta">
+                            <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#calendar"/></svg>
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2023-03-15" pubdate>
-                            15 Mar 2023
+                            2023年03月15日
                         </time>
-			<div class="meta"> 🗓️ 15 Mar, 2023</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -330,39 +328,35 @@ Footnotes
 		</div>
 	</article>
 
-        
-<div class="post-prevnext">
+        <nav class="post-prevnext" aria-label="posts">
     
-    <span class="post-next"><a href="https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/"> [(新) Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">(新) Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</a>
     
 
     
-    <span class="post-prev"><a href="https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/">[(舊) News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes]</a></span>
+        <a class="btn btn-light" href="https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/">(舊) News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes</a>
     
-</div>
+</nav>
 
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764428621</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
+<footer class="py-3 my-4">
+  <p class="text-center">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764438376</code> | Subscribe <a href="/index.xml" >
+      <svg fill="currentColor" width="1em" height="1em" ><use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#rss-fill"/></svg> RSS</a>
   </div>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>
