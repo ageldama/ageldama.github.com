@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764428621">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.2109b9ad5948b5f5021c80ef4e32e387e2e2c6a8045c45fd06a0a5d40445dfe0.css" integrity="sha256-IQm5rVlItfUCHIDvTjLjh&#43;LixqgEXEX9BqCl1ARF3&#43;A=" crossorigin="anonymous">
                     
                 
             
@@ -154,83 +154,6 @@
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2018-09sep/cquery-vs-cmake-ide/">CQuery &#43; LSP vs CMake-IDE &#43; RTags</a></h1>
-					<time>🗓️ 23 Sep, 2018</time>
-					<br><div class="description">
-						
-						<p>LSP + CQuery을 써보려고 했는데, 결국 <a href="/posts/2018-05may-emacs-cmake-ide-screencast/">CMake-IDE +
-RTags</a> 조합으로
-원래대로 쓰게될거 같아. :</p>
-<ol>
-<li><code>_build/</code> 와 같이 CMake, Ninja, Makefile등의 파일들을 별도의
-디렉토리로 만들어서 필드하고 싶은데, 제대로 지원을 못한다.
-1. 그냥 프로젝트 소스코드랑 같이 generate하고 <code>gcc</code>등의 중간
-파일이 모두 같이 남아서 지저분해져서 싫어함.</li>
-</ol>
-<p>아직은 별로 내 마음에 꼭 들게 만들기는 어려울거 같아서. 그래도
-인상적이었던 부분들:</p>
-<ol>
-<li>flycheck에 전용으로 연동되어 있는 점.</li>
-<li>company-lsp이 생각보다 훨씬 부드럽고 자동완성 잘되는거.</li>
-</ol>
-<p>미래에는 그냥 LSP기반만 남을거 같아서, 이것도 &ldquo;helm-rg의 모험&quot;처럼
-아직은 완전히 전환은 못할거 같긴하다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2018-09sep/23sun-todos/">해보기 23/09/2018</a></h1>
-					<time>🗓️ 23 Sep, 2018</time>
-					<br><div class="description">
-						
-						<h1 id="lsp-갖고놀기">LSP 갖고놀기</h1>
-<blockquote>
-<p>Language Server Protocol : <a href="https://langserver.org/">https://langserver.org/</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-</blockquote>
-<ul>
-<li>ES6:
-<a href="https://github.com/sourcegraph/javascript-typescript-langserver">https://github.com/sourcegraph/javascript-typescript-langserver</a>
-<ul>
-<li>다른건 FlyCheck + Eslint으로 만족스러운데, 코드네비게이션만 좀.</li>
-</ul>
-</li>
-<li>C/C++:
-<ul>
-<li><a href="https://github.com/cquery-project/cquery">https://github.com/cquery-project/cquery</a></li>
-<li><a href="https://github.com/MaskRay/ccls">https://github.com/MaskRay/ccls</a></li>
-</ul>
-</li>
-</ul>
-<h1 id="es6-기능들-다시-한번-주욱-읽어보기">ES6 기능들 다시 한번 주욱 읽어보기</h1>
-<blockquote>
-<p><a href="http://es6-features.org/">http://es6-features.org/</a></p>
-</blockquote>
-<p>딱히 뭣도 몰라서 한번 주욱 읽어보려고. 더 알고 싶지는 않다만&hellip;</p>
-<p>tweet 1039770698187563009</p>
-<p>&hellip;이런 언어지만.</p>
-<h1 id="대안으로서-reasonml">대안으로서 ReasonML?</h1>
-<ul>
-<li><a href="https://reasonml.github.io/">https://reasonml.github.io/</a></li>
-<li><a href="https://github.com/ocaml/merlin">https://github.com/ocaml/merlin</a></li>
-</ul>
-<p>..예전에 좋아하던 OCaml 다시 실용적으로 써도 재밌을거 같기도하고.</p>
-<hr>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p><a href="https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%99%98_%EC%9B%90%EC%B9%99">https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%99%98_%EC%9B%90%EC%B9%99</a> 이거아님.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
 					<h1 class="title"><a href="/posts/2018-09sep/23sun-ping/">Ping 23/09/2018</a></h1>
 					<time>🗓️ 23 Sep, 2018</time>
 					<br><div class="description">
@@ -295,6 +218,50 @@ RTags</a> 조합으로
                                         
 				</section>
 				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-09sep/2018-09sep15sat-my-choices-linux/">어째서 아치리눅스를 쓰며 데스크탑환경을 안쓰는지</a></h1>
+					<time>🗓️ 15 Sep, 2018</time>
+					<br><div class="description">
+						
+						<p>나는 데스크탑 환경을 사용 안한지 꽤 오래된것 같아.</p>
+<p>예전엔 이런식이었던거 같아:</p>
+<blockquote>
+<p>왠만하면, 그냥 세팅하는데 시간낭비하지말고 그냥 제공되는 Gnome, KDE
+같이 예쁜거 쓰자.</p>
+</blockquote>
+<p>&hellip;였었는데, 어느날 ASUS 넷북에 낮은 CPU파워으로 리눅스를 설정하고,
+이런 &ldquo;가벼운 데스크탑 환경&quot;을 직접 꾸며서 사용하면서, 오히려 맥북보다
+더 편하고 계속 쓰고 싶게 만들고, 내가 더 빠져서 사랑하며 사용하는걸 본
+이후로 집과 직장의 데스크탑도 모두 바꾸게됐다.</p>
+<p>그리고 가장 마우스 사용으로부터 오는 잡다한 스트레스나 그런것들도 없고
+가장 내게 익숙하고 편안한 환경을 만들어서 행복하게 쓸수있는거 같아.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/2018-09sep/2018-09sep15sat-ping/">Ping 15/09/2018</a></h1>
+					<time>🗓️ 15 Sep, 2018</time>
+					<br><div class="description">
+						
+						<h1 id="새-만년필--lamy-2000-해피해킹-기계식-키보드">새 만년필 : LAMY 2000, 해피해킹, 기계식 키보드</h1>
+<p>새 만년필을 샀는데, 조금 저렴한 폴리카보네이트 버젼의 LAMY 2000을
+샀다. 기존에 LAMY Lx, 사파리는 행복하게 써왔었는데, 카트리지를 사용해
+충전하는 방식이 아니고 또 가격대도 조금은 높은 만년필을 질렀다.</p>
+<p>아직 병잉크는 받지 못해서 충전해서 사용은 못해봤다. 기대된다.</p>
+<p>처음 만년필질을 시작할때는,</p>
+<blockquote>
+<p>뭐 그냥 저렴한 저가형 브랜드 실용적인 목적으로만 사서 써야지, 그러니
+사파리랑 Lx정도까진 뭐&hellip;</p>
+</blockquote>
+<p>..이런 마인드였었다가 점점 만년필 자체로 글을 쓰는 감각에 중독되는거
+같아. 기계식키보드도 그런거 같고.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
 				
 
 
@@ -326,7 +293,7 @@ RTags</a> 조합으로
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764428621</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>

@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764428621">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -27,7 +27,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/gopherish.2109b9ad5948b5f5021c80ef4e32e387e2e2c6a8045c45fd06a0a5d40445dfe0.css" integrity="sha256-IQm5rVlItfUCHIDvTjLjh&#43;LixqgEXEX9BqCl1ARF3&#43;A=" crossorigin="anonymous">
                     
                 
             
@@ -154,65 +154,6 @@
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/posts/2017/2017-01-02-travis-ci-jekyll-gh/">Github.io 블로그 TraviCI으로 빌드해서 배포하기</a></h1>
-					<time>🗓️ 02 Jan, 2017</time>
-					<br><div class="description">
-						
-						<p>.. <em><a href="/github/jekyll/2017/01/01/github-jekyll.html">여기</a></em> 에 불만을 적었듯이,
-여러가지로 그냥은 만족하기 어려운 부분이 있었다.</p>
-<p>그런데, Travis-CI을 통해서 빌드해서 배포한다는 분이
-계셨다. <a href="https://twitter.com/Realignist/status/815554589889994752">https://twitter.com/Realignist/status/815554589889994752</a></p>
-<p>..난 생각 못해본 방법. ㅎㅎ <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<p>그래서 도전.</p>
-<ol>
-<li>우선 Jekyll 소스용 저장소로 분리하고,</li>
-<li>배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다.</li>
-<li><a href="https://github.com/felixrieseberg/travis-jekyll-git">https://github.com/felixrieseberg/travis-jekyll-git</a> 여기 참고해서 삽질.</li>
-<li>결과물은 <a href="https://github.com/ageldama/ageldama-gh-jekyll">https://github.com/ageldama/ageldama-gh-jekyll</a></li>
-</ol>
-<p>..진행하면서 처음에 좀 짜증났던거,</p>
-<ol>
-<li><code>Gemfile</code> 에 설치할 의존성들 지정하고, <code>bundle update</code>.
-<ol>
-<li>그리고 그것만으로는 안되고, <code>.travis.yml</code> 파일에 gem설치를
-지정해야했다. <a href="https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5">https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5</a></li>
-</ol>
-</li>
-<li>Travis-CI 작업의 세팅에서 <code>git_target</code> 환경변수에 URL지정할때&hellip;
-<ol>
-<li><code>github.com/ageldama/ageldama-gh-jekyll.git</code> 처럼 <code>https://</code> 스킴 부분 빼고,</li>
-<li>또 뒤에 <code>.git</code> 깜빡하면 당연히 git-push 안됨. ㅋ</li>
-</ol>
-</li>
-</ol>
-<hr>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>솔직히 내가 뭘 제대로 하겠습니까.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2017/2017-01-01-github-jekyll/">Github.io의 Jekyll 버젼이랑 차이?</a></h1>
-					<time>🗓️ 01 Jan, 2017</time>
-					<br><div class="description">
-						
-						<p>다 만족스럽고 좋은데, 로컬에서 Jekyll 실행해서 미리보기한 결과랑
-Github에 올려서 렌더링한거랑 마크다운 결과가 조금 달라서 짜증난다.</p>
-<p>아마 마크다운 렌더러 버젼 차이 때문일거 같은데 ㅜ.ㅜ</p>
-<pre tabindex="0"><code>% jekyll -v
-jekyll 3.3.1
-</code></pre>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
 					<h1 class="title"><a href="/posts/2017/2017-01-01-getting-started-with-emacs/">Emacs이랑 친해지기</a></h1>
 					<time>🗓️ 01 Jan, 2017</time>
 					<br><div class="description">
@@ -277,7 +218,7 @@ jekyll 3.3.1
 			<footer>
   
   <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764428621</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
       
   </div>
 </footer>
