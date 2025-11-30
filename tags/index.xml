@@ -7,8 +7,43 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sat, 22 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Nov 2025 10:00:00 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Css</title>
+      <link>https://ageldama.github.io/tags/css/</link>
+      <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Emoji</title>
+      <link>https://ageldama.github.io/tags/emoji/</link>
+      <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/emoji/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://ageldama.github.io/tags/hugo/</link>
+      <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ping</title>
+      <link>https://ageldama.github.io/tags/ping/</link>
+      <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ping/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://ageldama.github.io/tags/programming/</link>
+      <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Dmenu</title>
       <link>https://ageldama.github.io/tags/dmenu/</link>
@@ -773,13 +808,6 @@
       <description></description>
     </item>
     <item>
-      <title>Css</title>
-      <link>https://ageldama.github.io/tags/css/</link>
-      <pubDate>Thu, 18 Sep 2025 08:26:26 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/css/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Css3</title>
       <link>https://ageldama.github.io/tags/css3/</link>
       <pubDate>Thu, 18 Sep 2025 08:26:26 +0000</pubDate>
@@ -1025,13 +1053,6 @@
       <description></description>
     </item>
     <item>
-      <title>Hugo</title>
-      <link>https://ageldama.github.io/tags/hugo/</link>
-      <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Index.json</title>
       <link>https://ageldama.github.io/tags/index.json/</link>
       <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
@@ -1228,13 +1249,6 @@
       <description></description>
     </item>
     <item>
-      <title>Ping</title>
-      <link>https://ageldama.github.io/tags/ping/</link>
-      <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ping/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Retro</title>
       <link>https://ageldama.github.io/tags/retro/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
@@ -1400,13 +1414,6 @@
       <link>https://ageldama.github.io/tags/gamdev/</link>
       <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/gamdev/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programming</title>
-      <link>https://ageldama.github.io/tags/programming/</link>
-      <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/programming/</guid>
       <description></description>
     </item>
     <item>

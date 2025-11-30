@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764510850">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764512544">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -149,6 +149,43 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/perl-cal3/">🧧 `ncal -3` 직접 Perl으로 짜봤다</a></h1>
+                                    <time>2023年03月02日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+<code class="verbatim">ncal -3</code> 이 뭐냐하면:</p>
+<p>
+<a href="https://man7.org/linux/man-pages/man1/cal.1.html">https://man7.org/linux/man-pages/man1/cal.1.html</a></p>
+<p>
+…뭐 이런건데, 개인적으로 저전력 글쓰기 전용머신에서 사용하는
+스크립트에서 배포판이 달라서 패키지를 못찾겠어서 <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, …그냥 직접
+짜서 대체했다.</p>
+<p>
+<a href="https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e488">https://github.com/ageldama/configs/commit/66bd92b42ba5a5ee03b9336370c3a8f84293e488</a></p>
+<p>
+그래서 스크린샷은:</p>
+<p>
+<img src="/2023-03mar/journal-edit-cal3.png" alt="/2023-03mar/journal-edit-cal3.png" title="/2023-03mar/journal-edit-cal3.png" /></p>
+<p>
+재밌었던 부분은:</p>
+<ol>
+<li>어차피 Perl으로 전부 짜서 쓰는 스크립트였는데,
+아예 외부 커맨드라인 도구 의존성을 더 없애서 뿌듯하다.</li>
+<li>매달 달력을 문자열으로 뽑았는데, 3달치를 뽑아서, 이걸 한 row에
+표시하고 싶었는데, <a href="https://metacpan.org/pod/Text::Table">Text::Table</a>으로 적절히 간단히 완료.</li>
+<li><a href="https://metacpan.org/pod/Term::ANSIColor">Term::ANSIColor</a>와 <a href="https://perldoc.perl.org/perlre">perlre</a>을 써서 깔끔하게 원하는 일자에 highlighting
+해서 편안했다.</li>
+<li>
+<p>…더 해킹을 해서, <code class="verbatim">calendar(..)</code> 결과문자열을 적당히 파싱해서,
+작은 Text::Table으로 만들어서, 그것들으로 조합하고 했었어도 될거
+같아.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/cxx-defer/">🍯 C&#43;&#43;: Golang-ish `defer`-macro</a></h1>
                                     <time>2023年03月02日
@@ -346,40 +383,6 @@ lynx, w3m 같은 <a href="https://en.wikipedia.org/wiki/Text-based_web_browser">
                                         
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2023-02feb/2023-02feb07--01-ping/">🧑‍🍼 Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측</a></h1>
-                                    <time>2023年02月07日
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-문득 떠오른 생각이라서, 그냥 추측.</p>
-<ol>
-<li>
-<p><strong><strong>C</strong></strong> : <em>로마숫자(roman numeral)</em> 으로 100.</p>
-<ol>
-<li>처음부터 의도한 숫자가 100이 아니었을거란건 나도 알거 같아.
-BCPL이나 그런 역사에 대해 나도 조금은 아니까.</li>
-<li>그런데 그 이후에 따르는 언어들이 그런 패턴을 만든거 같아서 재미로
-쓰는 글.</li>
-</ol>
-</li>
-<li>
-<p><strong><strong>C++</strong></strong> : 위의 로마숫자이란 생각과 <em>C언어의 <code>x++</code> 연산</em> 으로 생각해보면,</p>
-<ol>
-<li>즉시 평가할 때에는 C == 100, 그냥 C와 같아 보임.</li>
-<li>그런데 저장된 값은 +1, == 101.</li>
-<li>…어쨌든 그냥 볼 때엔, 씨언어와 거의 같아 보이지만, 그래도 좀
-더 성장했다고. 그리고 겸손하게 오직 +1.</li>
-<li>(그냥 겸손하다고 될 문제인가 싶다… C++ 좋아하지만 ㅎㅎ)</li>
-</ol>
-</li>
-<li>
-<p><strong><strong>D</strong></strong> : C에서 다음 단계으로 발전했으니, 이번엔 다섯배, 역시 로마숫자, 500.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -404,7 +407,7 @@ BCPL이나 그런 역사에 대해 나도 조금은 아니까.</li>
 
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510850</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

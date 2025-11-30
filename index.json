@@ -8,12 +8,12 @@
  "description": "",
  "contents": ""},
  {
-     "permalink": "https://ageldama.github.io/posts/2025-11nov/scripts-rofi-perl5-release/","title": "😪 scripts-rofi-perl5 릴리즈",
+     "permalink": "https://ageldama.github.io/posts/2025-11nov/blog-post-title-emojis/","title": "🐌 블로그 디자인 수정 + 제목 자동 emoji 붙여주기",
      
-     "tags": ["rofi", "dmenu", "perl", "script", "launcher"],
+     "tags": ["ping", "css", "emoji", "programming", "hugo"],
      
  "description": "",
- "contents": " https://github.com/ageldama/scripts-rofi-perl5\n스크립트 많이 작성해서 자동화해서 쓰는데, 터미널 열거나 하기 귀찮고, 모두 한 디렉토리에 넣어두기도 정리가 안되는거 같아서 작성해서 몇 년 전부터 써왔다.\n자동으로 최근 실행한 스크립트부터 표시하도록 히스토리를 저장해서 순위표시.1\n최근에 \u0026#34;터미널 내부에서 실행하기\u0026#34; 기능을 추가하고 좀 많이 다듬어서 릴리즈.\n터미널 안에서 실행되어야 하는 스크립트인데, 그냥 창없이 실행되면 낭패이기 때문에2, 과거 실행내역에 따라서, 터미널에서 실행하던 스크립트라면 다시 터미널에서 실행되도록 권해주기 기능도 추가.\n나 같이 x윈도 환경을 커스터마이징해서 내게 맞춰서 쓰는 사람이나 좋아할거 같은 도구. ㅎㅎ\nFootnotes 1 원래는 DBD/SQLite3을 썼다가, 더 가볍게 그냥 Perl 내장 Storable으로 수정.\n2 직접 프로세스 찾아서 kill 해주기 귀찮으니까.\n"},
+ "contents": " 블로그 CSS을 또 수정하고, 레이아웃도 좀 더 고쳤다. 간단하게 가볍게 보였으면 해서.\n그런데 그간 고민해오던 것들이 있음:\n(예전에) 귀찮아서 new-ping.pl-스크립트 같은거 짜놓고 자동 생성한 포스팅 제목으로 그대로 포스팅한 \u0026#34;Ping …..\u0026#34;-같은 제목의 포스팅들은 archives에서 봐도 뭐가 뭔지 구분이 안됨. h1-같은 markdown/org-mode에서 export한 제목과 각 포스팅의 제목(이것도 h1-같은 태그인)이 눈에 딱 들게 구분이 되지 않았음. archives에서 각 포스팅의 preview을 표시했다 조금 내용도 나오니까 찾아보기 더 수월해진거 같다. ㅎㅎ 그리고 막상 이렇게 전체 목록 / 시간에 따라, 내용을 조금이나마 보여주니까 일대기 형식이라 재밌네.\n포스팅 제목에 자동으로(!) emoji을 붙여주도록 했다 🤖 랜덤하게, 혹은 특정한 값에 의해, emoji 목록에서 선택하여 자동으로 붙여주기,,를 하면 좀 각 포스팅별로 구분되어 보일 것 같아서 시도.\n그런데, 페이지 렌더링 때마다 매번 랜덤하게 붙여주면, 그 포스팅의 개성이 사라지는거 같아서, 해당 포스팅의 제목/내용 같은 문자열 조합에 따라서 emoji 목록에서 선택하는 방식으로 구현해 봤다.\n어차피 static site generator을 사용하고 있으므로, 선택지는:\njavascript : 웹브라우저가 페이지 렌더링 할 때에. static site generator templating : 포스팅 publish 전에 html에 생성. 자바스크립트를 쓰면 쉽겠지만, 자바스크립트가 없는 웹브라우저를 쓰는 누군가👽를 위해서 (2)번 방식, static site generator templating만을 쓰기로 했다.\n그래서 구현해봤다:\n1 2 3 4 5 6 7 {{- /* layouts/partials/emojibyhash.html */ -}} {{- $emojis := slice \u0026#34;😀\u0026#34; \u0026#34;😃\u0026#34; /* ...여기에 엄청 많이 이모지 목록 나열... */ -}} {{- $h := crypto.SHA1 .input -}} {{- $hn := cast.ToInt (add \u0026#34;0x\u0026#34; (slicestr $h 36)) -}} {{- $emoji_idx := mod $hn (len $emojis) -}} {{- $emoji := index $emojis $emoji_idx -}} {{- return $emoji -}} 어떤 문자열을 전달 받고(.input), 그걸 sha1 \u0026gt;\u0026gt; slice _ 36 \u0026gt;\u0026gt; ToInt-해서 작은 정수값으로 만들고, 그 정수값으로 remainder연산해서 이모지목록에서 선택하는 방식.\n주어진 문자열(.input)만 고정되어 있다면, 항상 같은 이모지를 선택해주도록 했다.\n사용하는 곳에선:\n1 2 {{- $emoji := partial \u0026#34;emojibyhash.html\u0026#34; (dict \u0026#34;input\u0026#34; .Title) -}} \u0026lt;h1\u0026gt;{{ $emoji }} {{ .Title }}\u0026lt;/h1\u0026gt; hugo template partials을 활용해서, 이렇게 function-or-macro 같이 사용할 수 있더라. shortcodes1으로 만들어서 쓰는 방식도 가능하던데, 일단 그냥 partials으로 무식하게 만들어봤다.\n…재밌었다. ㅎㅎ\n포스팅에 자동으로 emoji을 붙여주니 좀 걱정도 생긴다 🫣 음… 자동으로 붙여주는건 정말 좋은데 걱정이: …포스팅 제목에 따라서 붙은 이모지 조합이, 종종 nsfw하거나 괴상한 의미로 읽힐 수도 있을거 같은 예가 좀 보여서.\nFootnotes 1 https://gohugo.io/templates/shortcode/\n"},
  {
      "permalink": "https://ageldama.github.io/","title": "💡 아겔로그",
      
@@ -21,6 +21,13 @@
      
  "description": "",
  "contents": ""},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-11nov/scripts-rofi-perl5-release/","title": "😪 scripts-rofi-perl5 릴리즈",
+     
+     "tags": ["rofi", "dmenu", "perl", "script", "launcher"],
+     
+ "description": "",
+ "contents": " https://github.com/ageldama/scripts-rofi-perl5\n스크립트 많이 작성해서 자동화해서 쓰는데, 터미널 열거나 하기 귀찮고, 모두 한 디렉토리에 넣어두기도 정리가 안되는거 같아서 작성해서 몇 년 전부터 써왔다.\n자동으로 최근 실행한 스크립트부터 표시하도록 히스토리를 저장해서 순위표시.1\n최근에 \u0026#34;터미널 내부에서 실행하기\u0026#34; 기능을 추가하고 좀 많이 다듬어서 릴리즈.\n터미널 안에서 실행되어야 하는 스크립트인데, 그냥 창없이 실행되면 낭패이기 때문에2, 과거 실행내역에 따라서, 터미널에서 실행하던 스크립트라면 다시 터미널에서 실행되도록 권해주기 기능도 추가.\n나 같이 x윈도 환경을 커스터마이징해서 내게 맞춰서 쓰는 사람이나 좋아할거 같은 도구. ㅎㅎ\nFootnotes 1 원래는 DBD/SQLite3을 썼다가, 더 가볍게 그냥 Perl 내장 Storable으로 수정.\n2 직접 프로세스 찾아서 kill 해주기 귀찮으니까.\n"},
  {
      "permalink": "https://ageldama.github.io/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/","title": "🌘 Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰",
      
