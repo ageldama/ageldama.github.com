@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>&#34;모두를 위한 algebraic effects!&#34; ...정말루? - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>&#34;모두를 위한 algebraic effects!&#34; ...정말루? - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522312">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="뭐 대충 다음과 같은 글들:
 https://www.eff-lang.org/handlers-tutorial.pdf
@@ -38,7 +38,7 @@ monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보�
 
 당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (&hellip;일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, &hellip;처럼)" />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/">
+	<meta property="og:url" content="http://localhost:1313/posts/2022-06jun/algebraic-effects-for-everyone/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="&#34;모두를 위한 algebraic effects!&#34; ...정말루?">
   <meta property="og:description" content="뭐 대충 다음과 같은 글들:
@@ -88,15 +88,13 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
 분명히 장점을 볼 수 있을거 같은 개념 같다.
 왜냐하면,
 지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능. 그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용. (…그때 그때 Haskell do-notation등에 따라 분리해서 표현) 좋은점이라면 좋은점일수도 있겠지만. 그런데, aeffects을 이용한다면, 굳이 그렇게 복잡하게 나누지 않아도 괜찮고, monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여. 당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (…일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, …처럼)">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -109,7 +107,7 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -119,7 +117,7 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -158,14 +156,69 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun15--01-ping/">⬅️ Ping 15/06/2022 .01</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/2022-06jun15--01-ping/">⬅️ Ping 15/06/2022 .01</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun13--01-ping/">➡️ Ping 13/06/2022 .01</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/2022-06jun13--01-ping/">➡️ Ping 13/06/2022 .01</a>
     
 </nav>
 
@@ -352,30 +405,20 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun15--01-ping/">⬅️ Ping 15/06/2022 .01</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/2022-06jun15--01-ping/">⬅️ Ping 15/06/2022 .01</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun13--01-ping/">➡️ Ping 13/06/2022 .01</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/2022-06jun13--01-ping/">➡️ Ping 13/06/2022 .01</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522312</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>

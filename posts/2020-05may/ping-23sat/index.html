@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 23/May/2020 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 23/May/2020 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522311">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 지난 2달여간 매일 같이 몰입해 매진한 작업의 성능 테스트를
@@ -17,7 +17,7 @@
 알고 있는 것들을 다시 확인했는데 그것들은 나 자신으로부터 배운 것들과
 타산지석의 가르침들이었었다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2020-05may/ping-23sat/">
+	<meta property="og:url" content="http://localhost:1313/posts/2020-05may/ping-23sat/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="Ping 23/May/2020">
   <meta property="og:description" content="지난 2달여간 매일 같이 몰입해 매진한 작업의 성능 테스트를 진행했다. 그리고 매 시점마다 테스트와 측정 결과에서 놀라던 것과 마찬가지 포인트에서 많은 관점이 변화한다. 아직도 많은 일을 더 해나가야겠지만 그래도 지금은 이 정도에서 우선은 만족스럽다.
@@ -35,15 +35,13 @@
   <meta name="twitter:description" content="지난 2달여간 매일 같이 몰입해 매진한 작업의 성능 테스트를 진행했다. 그리고 매 시점마다 테스트와 측정 결과에서 놀라던 것과 마찬가지 포인트에서 많은 관점이 변화한다. 아직도 많은 일을 더 해나가야겠지만 그래도 지금은 이 정도에서 우선은 만족스럽다.
 작년과 재작년, 그 이전에는 매 일터마다 배울 점들이 있었던 것 같다. 그리고 지난 포스팅에도 말했듯이 내 많은 관점들을 발전시켜준 좋은 사람들과 멋진 경험들을 했었던 것 같다.
 다만 올해 잠시 조인했었던 곳에서는 정반대의 경험이었었다. 많은, 이미 알고 있는 것들을 다시 확인했는데 그것들은 나 자신으로부터 배운 것들과 타산지석의 가르침들이었었다.">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -56,7 +54,7 @@
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -66,7 +64,7 @@
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -105,14 +103,69 @@
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-05may/ping-28thu/">⬅️ Ping 28/May/2020</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2020-05may/ping-28thu/">⬅️ Ping 28/May/2020</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-05may/ping-18mon/">➡️ Ping 18/May/2020</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2020-05may/ping-18mon/">➡️ Ping 18/May/2020</a>
     
 </nav>
 
@@ -170,30 +223,20 @@
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-05may/ping-28thu/">⬅️ Ping 28/May/2020</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2020-05may/ping-28thu/">⬅️ Ping 28/May/2020</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-05may/ping-18mon/">➡️ Ping 18/May/2020</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2020-05may/ping-18mon/">➡️ Ping 18/May/2020</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522311</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>

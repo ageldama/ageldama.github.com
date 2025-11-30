@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Emacs에서 window 전환을 편하게, ace-window - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Emacs에서 window 전환을 편하게, ace-window - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522311">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="이맥스에서 코딩하거나 마크다운이나 Org으로 글을 쓰고 정리하는데, 그간
 그냥 그럭저럭 나는 이맥스를 나한테 맞춰서 사용하고 있다고 생각하고
@@ -14,7 +14,7 @@ C-x 2 이나 C-x 3으로 창을 분할해놓고 쓰는게 보통인데, 이때 �
 이동만해왔었다.
 그런데, 창이 3개 이상이 되고, 현재 창의 다음 창 이 아니라, 이전 창 으로 이동하고 싶으면?" />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2017/2017-01-22-emacs-ace-window/">
+	<meta property="og:url" content="http://localhost:1313/posts/2017/2017-01-22-emacs-ace-window/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="Emacs에서 window 전환을 편하게, ace-window">
   <meta property="og:description" content="이맥스에서 코딩하거나 마크다운이나 Org으로 글을 쓰고 정리하는데, 그간 그냥 그럭저럭 나는 이맥스를 나한테 맞춰서 사용하고 있다고 생각하고 있었던거 같다. 1
@@ -36,15 +36,13 @@ C-x 2 이나 C-x 3으로 창을 분할해놓고 쓰는게 보통인데, 이때 �
 그런데, 항상 뭔가 불편한데, 그냥 바쁘다는 이유로 깊이 생각은 안하고 대충 대충 때우면서 사용해왔었던게 있었다. 바로 window 끼리 전환하는 방법.
 C-x 2 이나 C-x 3으로 창을 분할해놓고 쓰는게 보통인데, 이때 나는 그냥 아무 생각없이 C-x o만을 이용해서 다음 윈도우 으로 이동만해왔었다.
 그런데, 창이 3개 이상이 되고, 현재 창의 다음 창 이 아니라, 이전 창 으로 이동하고 싶으면?">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -57,7 +55,7 @@ C-x 2 이나 C-x 3으로 창을 분할해놓고 쓰는게 보통인데, 이때 �
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -67,7 +65,7 @@ C-x 2 이나 C-x 3으로 창을 분할해놓고 쓰는게 보통인데, 이때 �
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -106,14 +104,69 @@ C-x 2 이나 C-x 3으로 창을 분할해놓고 쓰는게 보통인데, 이때 �
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-22-java-immutables-classic-problem/">⬅️ Java Immutables와 친숙한 오래된 문제들</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-01-22-java-immutables-classic-problem/">⬅️ Java Immutables와 친숙한 오래된 문제들</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-02-source-hilite-testing/">➡️ Jekyll &#43; Rouge 소스코드 하일라이팅 테스트</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-01-02-source-hilite-testing/">➡️ Jekyll &#43; Rouge 소스코드 하일라이팅 테스트</a>
     
 </nav>
 
@@ -194,30 +247,20 @@ C-x 2 이나 C-x 3으로 창을 분할해놓고 쓰는게 보통인데, 이때 �
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-22-java-immutables-classic-problem/">⬅️ Java Immutables와 친숙한 오래된 문제들</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-01-22-java-immutables-classic-problem/">⬅️ Java Immutables와 친숙한 오래된 문제들</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-02-source-hilite-testing/">➡️ Jekyll &#43; Rouge 소스코드 하일라이팅 테스트</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-01-02-source-hilite-testing/">➡️ Jekyll &#43; Rouge 소스코드 하일라이팅 테스트</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522311</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>

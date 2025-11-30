@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>NetworkManager &#43; dnsmasq으로 인터넷공유 만들기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>NetworkManager &#43; dnsmasq으로 인터넷공유 만들기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522311">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="필요성, 궁금함, 현재 상황
 
@@ -41,7 +41,7 @@ dnsmasq의 DHCP 설정을 추가한다.
 
 설정파일의 내용은 1:" />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">
+	<meta property="og:url" content="http://localhost:1313/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="NetworkManager &#43; dnsmasq으로 인터넷공유 만들기">
   <meta property="og:description" content="필요성, 궁금함, 현재 상황 메인 데스크탑을 무선랜으로 인터넷에 연결하고 사용함. 다른 기기들도 모두 기본적으로 무선으로 LAN접속. 다 좋은데, 메인 데스크탑 &lt;-&gt; 라즈베리파이 접속할때 ssh 접속도 느린거 같을때가 있음. 무선랜 접속이 많고, 블루투스 등등 다른 간섭도 많을거고, 어쨌든 조금 물리적으로 거리가 있는 무선공유기까지 갔다 오는거니까. 그래서 사용 안하고 있는 데스크탑의 내장 유선 랜포트로 인터넷연결을 공유하는 Private network을 만들어서 유선으로 연결해보기로 했다. 정말 체감이 빨라질지 궁금했고 직접 수동으로 설정하는게 거의 없거나, 내가 사용하고 있는 NetworkManager에서 쉽게 설정이 가능할거 같았다. - https://wiki.archlinux.org/index.php/NetworkManager#Sharing_internet_connection_over_Ethernet 진행과 추가적인 설정 그냥 nm-applet 사용해서 wired connection에 인터넷 공유를 체크한게 설정 전부. dnsmasq 패키지만 설치하고, 별도로 systemctl으로 enable/start한건 없음. (NetworkManager에서 자동으로 관리) 잘 동작함. ㅎㅎ 추가적으로, Private Network에 접속하는 호스트의 MAC 어드레스에 IP주소를 고정해서 접속이 편하도록 설정했다. MAC주소에 고정IP 할당하기 dnsmasq의 DHCP 설정을 추가한다. /etc/NetworkManager/dnsmasq-shared.d/static-ips.conf 파일을 작성했다. 별도의 재시작 없이, 파일 저장하고, 그냥 유선연결을 끊었다가 다시 연결하면 끝. 나머지는 NetworkManager이 다 자동으로 처리. 설정파일의 내용은 1:">
@@ -57,15 +57,13 @@ dnsmasq의 DHCP 설정을 추가한다.
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="NetworkManager &#43; dnsmasq으로 인터넷공유 만들기">
   <meta name="twitter:description" content="필요성, 궁금함, 현재 상황 메인 데스크탑을 무선랜으로 인터넷에 연결하고 사용함. 다른 기기들도 모두 기본적으로 무선으로 LAN접속. 다 좋은데, 메인 데스크탑 &lt;-&gt; 라즈베리파이 접속할때 ssh 접속도 느린거 같을때가 있음. 무선랜 접속이 많고, 블루투스 등등 다른 간섭도 많을거고, 어쨌든 조금 물리적으로 거리가 있는 무선공유기까지 갔다 오는거니까. 그래서 사용 안하고 있는 데스크탑의 내장 유선 랜포트로 인터넷연결을 공유하는 Private network을 만들어서 유선으로 연결해보기로 했다. 정말 체감이 빨라질지 궁금했고 직접 수동으로 설정하는게 거의 없거나, 내가 사용하고 있는 NetworkManager에서 쉽게 설정이 가능할거 같았다. - https://wiki.archlinux.org/index.php/NetworkManager#Sharing_internet_connection_over_Ethernet 진행과 추가적인 설정 그냥 nm-applet 사용해서 wired connection에 인터넷 공유를 체크한게 설정 전부. dnsmasq 패키지만 설치하고, 별도로 systemctl으로 enable/start한건 없음. (NetworkManager에서 자동으로 관리) 잘 동작함. ㅎㅎ 추가적으로, Private Network에 접속하는 호스트의 MAC 어드레스에 IP주소를 고정해서 접속이 편하도록 설정했다. MAC주소에 고정IP 할당하기 dnsmasq의 DHCP 설정을 추가한다. /etc/NetworkManager/dnsmasq-shared.d/static-ips.conf 파일을 작성했다. 별도의 재시작 없이, 파일 저장하고, 그냥 유선연결을 끊었다가 다시 연결하면 끝. 나머지는 NetworkManager이 다 자동으로 처리. 설정파일의 내용은 1:">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -78,7 +76,7 @@ dnsmasq의 DHCP 설정을 추가한다.
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -88,7 +86,7 @@ dnsmasq의 DHCP 설정을 추가한다.
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -127,14 +125,69 @@ dnsmasq의 DHCP 설정을 추가한다.
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/2019-02feb26-ping/">⬅️ Ping 26/02/2019</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-02feb/2019-02feb26-ping/">⬅️ Ping 26/02/2019</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/2019-02feb07thu-ping/">➡️ Ping 07/02/2019</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-02feb/2019-02feb07thu-ping/">➡️ Ping 07/02/2019</a>
     
 </nav>
 
@@ -241,30 +294,20 @@ IP주소를 고정해서 접속이 편하도록 설정했다.</li>
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/2019-02feb26-ping/">⬅️ Ping 26/02/2019</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-02feb/2019-02feb26-ping/">⬅️ Ping 26/02/2019</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/2019-02feb07thu-ping/">➡️ Ping 07/02/2019</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-02feb/2019-02feb07thu-ping/">➡️ Ping 07/02/2019</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522311</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>

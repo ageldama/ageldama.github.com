@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>(Common Lisp의 어두운 면) Equality - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>(Common Lisp의 어두운 면) Equality - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522311">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까
 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로
@@ -36,7 +36,7 @@ Special Operator PROGV
 이렇게 나열해 놓으면 꽤 무서워 보이지만, 막상 차이를 이해하면 별로
 복잡하지도 않아서 나중엔 더 편안해진다. (정말로)" />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2019-11nov/the-dark-side-of-cl-equality/">
+	<meta property="og:url" content="http://localhost:1313/posts/2019-11nov/the-dark-side-of-cl-equality/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="(Common Lisp의 어두운 면) Equality">
   <meta property="og:description" content="오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로 생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을 리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.
@@ -59,15 +59,13 @@ let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Funct
   <meta name="twitter:description" content="오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로 생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을 리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.
 뭐 커먼리습의 CLHS - HyperSpec을 읽다보면 비슷한데 아주 약간씩 미묘하게 달라서 지원하는 것들이 있다:
 let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Function MAP Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON Function MAP-INTO prog Macro PROG1, PROG2 Special Operator PROGN Macro PROG, PROG* Special Operator PROGV …그밖에도 좀 더 있을듯? 이렇게 나열해 놓으면 꽤 무서워 보이지만, 막상 차이를 이해하면 별로 복잡하지도 않아서 나중엔 더 편안해진다. (정말로)">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -80,7 +78,7 @@ let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Funct
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -90,7 +88,7 @@ let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Funct
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -129,14 +127,69 @@ let Special Operator LET, LET* Special Operator FLET, LABELS, MACROLET map Funct
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/tips-ecl-clisp/">⬅️ 커먼리습 설정하기, ASDF 시스템 코드를 받기</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-12dec/tips-ecl-clisp/">⬅️ 커먼리습 설정하기, ASDF 시스템 코드를 받기</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-11nov/why-sharpsign-in-method-path/">➡️ (소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-11nov/why-sharpsign-in-method-path/">➡️ (소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</a>
     
 </nav>
 
@@ -758,30 +811,20 @@ Smalltalk을 통해 IDE, GUI, 마우스 등을 발명, 도입하셨습니다&hel
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/tips-ecl-clisp/">⬅️ 커먼리습 설정하기, ASDF 시스템 코드를 받기</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-12dec/tips-ecl-clisp/">⬅️ 커먼리습 설정하기, ASDF 시스템 코드를 받기</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-11nov/why-sharpsign-in-method-path/">➡️ (소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-11nov/why-sharpsign-in-method-path/">➡️ (소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522311</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>

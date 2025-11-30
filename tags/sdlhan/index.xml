@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sdlhan on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/sdlhan/</link>
+    <link>http://localhost:1313/tags/sdlhan/</link>
     <description>Recent content in Sdlhan on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/sdlhan/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/sdlhan/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 14/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping-14fri/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping-14fri/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping-14fri/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping-14fri/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;빌드도구의 경험과 Meson을 사용하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  &lt;a href=&#34;https://github.com/ageldama/meson-abc&#34;&gt;Meson-ABC 갖고 놀아본 코드&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  아주 예전에 commercially 성공적이었었던 C++ 프로젝트를 홀로 기획, 설계, 개발했었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  처음에는 GNU Makefile으로 간단히 시작했었었다. 타겟 플랫폼이 뻔하게 윈도였기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그 이전에는 ANSI C으로 작성한 &lt;a href=&#34;https://sourceforge.net/projects/sdlhan/&#34;&gt;SDL 조합형 비트맵 출력 오픈소스&lt;/a&gt;&#xA;  라이브러리 같은 것들을 작업할 때는 그냥 GNU Autotools 을 쓰거나&#xA;  했었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  하지만 그렇게 configure 하거나 할 부분도 없고 처음 혼자 시작하며&#xA;  다른 신경 쓸 것도 무지하게 많았었던 프로젝트였고 더욱이 기간도&#xA;  한정적이었었다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 SCons 같은 것을 조금 쓰다가, 결국 더 간단히 Rake으로 빌드를&#xA;  작성해 한동안 썼었다.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Im on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/im/</link>
+    <link>http://localhost:1313/tags/im/</link>
     <description>Recent content in Im on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Thu, 08 May 2025 19:17:25 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/im/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/im/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ddakong v1.1 릴리즈: FreeBSD / kqueue</title>
-      <link>https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.1-release/</link>
+      <link>http://localhost:1313/posts/2025-05may/term-ddakong-v1.1-release/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.1-release/</guid>
+      <guid>http://localhost:1313/posts/2025-05may/term-ddakong-v1.1-release/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;릴리즈 v1.1&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  freebsd 지원: 빌드가능하도록 수정 + kqueue 이벤트처리 추가&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  (원래는 epoll/linux만 지원)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&amp;lt;&lt;a href=&#34;https://github.com/ageldama/term-ddakong/releases/tag/v1.1&#34;&gt;https://github.com/ageldama/term-ddakong/releases/tag/v1.1&lt;/a&gt;&amp;gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;darwin/osx, openbsd 등은 빌드+실행될거 같은데 확신은 못하겠믐.&lt;/li&gt;&#xA;&lt;li&gt;매 릴리즈마다 크로스컴파일해서 바이너리릴리즈해왔는데, 리눅스는&#xA;aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라&#xA;이번엔 스킵.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;…오랬만에 freebsd 켜서 쓰는데, 반응속도감 역시 엄청좋다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>ddakong v1.0 릴리즈: lua scripting 시스템</title>
-      <link>https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.0-release/</link>
+      <link>http://localhost:1313/posts/2025-05may/term-ddakong-v1.0-release/</link>
       <pubDate>Wed, 07 May 2025 19:28:25 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.0-release/</guid>
+      <guid>http://localhost:1313/posts/2025-05may/term-ddakong-v1.0-release/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;릴리즈 v1.0&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  ANSI C/DLL 플러그인만이 아니라, Lua scripting plugin 만들어서,&#xA;  그냥 루아스크립팅만으로 플러그인 같은 확장이 가능해졌다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 이것저것 안정화/문서화하고, 더욱 hackable🪓🔥하고 가벼운&#xA;  터미널입력기가 되었음.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;a href=&#34;https://github.com/ageldama/term-ddakong/releases/tag/v1.0&#34;&gt;https://github.com/ageldama/term-ddakong/releases/tag/v1.0&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>ddakong v0.0.8 릴리즈: 안정화 및 플러그인 시스템</title>
-      <link>https://ageldama.github.io/posts/2025-05may/term-ddakong-v0.0.8-release/</link>
+      <link>http://localhost:1313/posts/2025-05may/term-ddakong-v0.0.8-release/</link>
       <pubDate>Sat, 03 May 2025 14:32:25 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-05may/term-ddakong-v0.0.8-release/</guid>
-      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;스크린샷:&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://ageldama.github.io/2025-05may/KIMCHI-cropped.png&#34; alt=&#34;/2025-05may/KIMCHI-cropped.png&#34; title=&#34;/2025-05may/KIMCHI-cropped.png&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&amp;lt; &lt;a href=&#34;https://github.com/ageldama/term-ddakong&#34;&gt;https://github.com/ageldama/term-ddakong&lt;/a&gt; &amp;gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&amp;lt; &lt;a href=&#34;https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8&#34;&gt;https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8&lt;/a&gt; &amp;gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;릴리즈 v0.0.8&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;안정화/문서화하고, 이제 플러그인 시스템을 도입해서 원하는대로&#xA;hackable🪓🔥한 터미널용 입력기가 되었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;플러그인 작성해서:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;한글만이 아니라 다른 언어 입력기로 사용할 수도 있음.&lt;/li&gt;&#xA;&lt;li&gt;UTF-8 이외에 다른 인코딩으로 출력가능함. (예: EUC-KR, EUC-JP …)&lt;/li&gt;&#xA;&lt;li&gt;토글키(&lt;code&gt;Control-H&lt;/code&gt;) 마음에 안들면 바꾸면 됨.&lt;/li&gt;&#xA;&lt;li&gt;등등등&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;오늘 한 작업들은:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;안정화 많이 진행했다.&lt;/li&gt;&#xA;&lt;li&gt;코드 문서화 주석작성 다 했다.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;cross-platform build 자동화해서 릴리즈 때 편해졌다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;armhf (raspberry pi 32bit), aarch64 (raspberry pi 64bit),&#xA;i386 (32bit), x86_64 모두 릴리즈하고 있다.&lt;/li&gt;&#xA;&lt;li&gt;..혹시나 어디선가 i386 기계 터미널에서 한글을 입력하고 싶은&#xA;사람이 있을거 같아서.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+      <guid>http://localhost:1313/posts/2025-05may/term-ddakong-v0.0.8-release/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;스크린샷:&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/2025-05may/KIMCHI-cropped.png&#34; alt=&#34;/2025-05may/KIMCHI-cropped.png&#34; title=&#34;/2025-05may/KIMCHI-cropped.png&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&amp;lt; &lt;a href=&#34;https://github.com/ageldama/term-ddakong&#34;&gt;https://github.com/ageldama/term-ddakong&lt;/a&gt; &amp;gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&amp;lt; &lt;a href=&#34;https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8&#34;&gt;https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8&lt;/a&gt; &amp;gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;릴리즈 v0.0.8&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;안정화/문서화하고, 이제 플러그인 시스템을 도입해서 원하는대로&#xA;hackable🪓🔥한 터미널용 입력기가 되었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;플러그인 작성해서:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;한글만이 아니라 다른 언어 입력기로 사용할 수도 있음.&lt;/li&gt;&#xA;&lt;li&gt;UTF-8 이외에 다른 인코딩으로 출력가능함. (예: EUC-KR, EUC-JP …)&lt;/li&gt;&#xA;&lt;li&gt;토글키(&lt;code&gt;Control-H&lt;/code&gt;) 마음에 안들면 바꾸면 됨.&lt;/li&gt;&#xA;&lt;li&gt;등등등&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;오늘 한 작업들은:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;안정화 많이 진행했다.&lt;/li&gt;&#xA;&lt;li&gt;코드 문서화 주석작성 다 했다.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;cross-platform build 자동화해서 릴리즈 때 편해졌다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;armhf (raspberry pi 32bit), aarch64 (raspberry pi 64bit),&#xA;i386 (32bit), x86_64 모두 릴리즈하고 있다.&lt;/li&gt;&#xA;&lt;li&gt;..혹시나 어디선가 i386 기계 터미널에서 한글을 입력하고 싶은&#xA;사람이 있을거 같아서.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>ddakong 한글입력기 릴리즈</title>
-      <link>https://ageldama.github.io/posts/2025-05may/term-ddakong-initial-release/</link>
+      <link>http://localhost:1313/posts/2025-05may/term-ddakong-initial-release/</link>
       <pubDate>Fri, 02 May 2025 10:06:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-05may/term-ddakong-initial-release/</guid>
+      <guid>http://localhost:1313/posts/2025-05may/term-ddakong-initial-release/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;&lt;a href=&#34;https://github.com/ageldama/term-ddakong&#34;&gt;https://github.com/ageldama/term-ddakong&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;일단 내가 fbterm에서 가볍게 한글쓰고 싶어서 만듦.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;ansi c99만으로 가볍게 작성했다. 다른 라이브러리 의존않고.&#xA;만족스럽다. 빌드하니까 25 KB 정도 나오네. 만족.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;더 했으면 하는 일들은:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;lua -or- dlopen 등으로 다른 입력기 지원하기 (예: 3벌식)&lt;/li&gt;&#xA;&lt;li&gt;utf-8 이외의 인코딩 지원하기&lt;/li&gt;&#xA;&lt;li&gt;raspberry pi 32/64 바이너리 릴리즈 (armhf, arm64)&lt;/li&gt;&#xA;&lt;li&gt;소스코드 조금 포매팅, 주석작성, 문서화&lt;/li&gt;&#xA;&lt;li&gt;빌드개선 : 사용하는 함수 등 체크하기 강화 (예: &lt;code&gt;epoll&lt;/code&gt; …어차피&#xA;거의 다 있지만.)&lt;/li&gt;&#xA;&lt;li&gt;스크린샷? ㅎㅎ&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
   </channel>

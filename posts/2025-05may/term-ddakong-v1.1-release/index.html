@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ddakong v1.1 릴리즈: FreeBSD / kqueue - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ddakong v1.1 릴리즈: FreeBSD / kqueue - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522312">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 
@@ -25,7 +25,7 @@ aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라
 
 " />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.1-release/">
+	<meta property="og:url" content="http://localhost:1313/posts/2025-05may/term-ddakong-v1.1-release/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="ddakong v1.1 릴리즈: FreeBSD / kqueue">
   <meta property="og:description" content="릴리즈 v1.1 freebsd 지원: 빌드가능하도록 수정 &#43; kqueue 이벤트처리 추가
@@ -50,15 +50,13 @@ darwin/osx, openbsd 등은 빌드&#43;실행될거 같은데 확신은 못하겠
 (원래는 epoll/linux만 지원)
 &lt;https://github.com/ageldama/term-ddakong/releases/tag/v1.1&gt;
 darwin/osx, openbsd 등은 빌드&#43;실행될거 같은데 확신은 못하겠믐. 매 릴리즈마다 크로스컴파일해서 바이너리릴리즈해왔는데, 리눅스는 aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라 이번엔 스킵. …오랬만에 freebsd 켜서 쓰는데, 반응속도감 역시 엄청좋다.">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -71,7 +69,7 @@ darwin/osx, openbsd 등은 빌드&#43;실행될거 같은데 확신은 못하겠
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -81,7 +79,7 @@ darwin/osx, openbsd 등은 빌드&#43;실행될거 같은데 확신은 못하겠
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -120,14 +118,69 @@ darwin/osx, openbsd 등은 빌드&#43;실행될거 같은데 확신은 못하겠
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/">⬅️ 블로그 검색을 다시 짰다 (PageFind 제거)</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-09sep/no-pagefind-anymore/">⬅️ 블로그 검색을 다시 짰다 (PageFind 제거)</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.0-release/">➡️ ddakong v1.0 릴리즈: lua scripting 시스템</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-05may/term-ddakong-v1.0-release/">➡️ ddakong v1.0 릴리즈: lua scripting 시스템</a>
     
 </nav>
 
@@ -215,30 +268,20 @@ aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/">⬅️ 블로그 검색을 다시 짰다 (PageFind 제거)</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-09sep/no-pagefind-anymore/">⬅️ 블로그 검색을 다시 짰다 (PageFind 제거)</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.0-release/">➡️ ddakong v1.0 릴리즈: lua scripting 시스템</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-05may/term-ddakong-v1.0-release/">➡️ ddakong v1.0 릴리즈: lua scripting 시스템</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522312</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>

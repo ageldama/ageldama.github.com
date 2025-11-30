@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 20/Oct/2019 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 20/Oct/2019 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522311">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="장거리 드라이브
 고속도로를 내려와서 국도에 들어서서 우회전 신호대기에서 창문을
@@ -17,7 +17,7 @@
 게임: 번아웃 파라다이스
 &lsquo;벗아웃 파라다이스&rsquo;, 리마스터 버전으로 만난다 - 이도원 기자 입력: 2018/02/22" />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2019-10oct/ping-20sun/">
+	<meta property="og:url" content="http://localhost:1313/posts/2019-10oct/ping-20sun/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="Ping 20/Oct/2019">
   <meta property="og:description" content="장거리 드라이브 고속도로를 내려와서 국도에 들어서서 우회전 신호대기에서 창문을 내리자마자 깨달은게 공기가 말도 안되게 좋았다.
@@ -37,15 +37,13 @@
 가보고 싶었던 곳들을 돌아다니고 정말 많은게 변했구나 싶기도 하고 쓸쓸했다. 세상에 이런 곳도 아직 있구나, 내가 사는 세상이, 그게 절대적으로 전부라고 생각하는 복잡하고 발전된 모습이 아니라, 이런 곳이 있을 수 있구나 싶어서 신기했다.
 다시 또 가고 싶다. 아주 옛날엔 거기가 지루하다고 생각했었던거 같은데.
 게임: 번아웃 파라다이스 ‘벗아웃 파라다이스’, 리마스터 버전으로 만난다 - 이도원 기자 입력: 2018/02/22">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -58,7 +56,7 @@
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -68,7 +66,7 @@
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -107,14 +105,69 @@
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/blog-font/">⬅️ 블로그 폰트 적용</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-10oct/blog-font/">⬅️ 블로그 폰트 적용</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/cl-toy-stack-lang/">➡️ cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-10oct/cl-toy-stack-lang/">➡️ cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</a>
     
 </nav>
 
@@ -184,30 +237,20 @@
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/blog-font/">⬅️ 블로그 폰트 적용</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-10oct/blog-font/">⬅️ 블로그 폰트 적용</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/cl-toy-stack-lang/">➡️ cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-10oct/cl-toy-stack-lang/">➡️ cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522311</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>

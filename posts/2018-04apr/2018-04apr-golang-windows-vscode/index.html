@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Golang Windows에서 Vscode이랑 행복하게 쓰기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Golang Windows에서 Vscode이랑 행복하게 쓰기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522311">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Golang 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아.
 그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 VsCode 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만&hellip;)
@@ -9,7 +9,7 @@
 Mingw64 설치하고, $MINGW64/bin 디렉토리 $PATH에 걸어주니 잘됨.
 VsCode에서 디버거도 잘 붙고 만족스럽다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2018-04apr/2018-04apr-golang-windows-vscode/">
+	<meta property="og:url" content="http://localhost:1313/posts/2018-04apr/2018-04apr-golang-windows-vscode/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="Golang Windows에서 Vscode이랑 행복하게 쓰기">
   <meta property="og:description" content="Golang 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아. 그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 VsCode 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만…)
@@ -30,15 +30,13 @@ VsCode에서 디버거도 잘 붙고 만족스럽다.">
   <meta name="twitter:description" content="Golang 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아. 그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 VsCode 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만…)
 여튼 그런데 윈도에서 기본적으로 C컴파일러 설치되어 있어야 제대로 굴러가서, Mingw64 설치하고, $MINGW64/bin 디렉토리 $PATH에 걸어주니 잘됨.
 VsCode에서 디버거도 잘 붙고 만족스럽다.">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -51,7 +49,7 @@ VsCode에서 디버거도 잘 붙고 만족스럽다.">
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -61,7 +59,7 @@ VsCode에서 디버거도 잘 붙고 만족스럽다.">
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -100,14 +98,69 @@ VsCode에서 디버거도 잘 붙고 만족스럽다.">
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/">⬅️ Emacs &#43; CMake-IDE Screencast</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/">⬅️ Emacs &#43; CMake-IDE Screencast</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-10-22-blogging/">➡️ 2017년 10월 22일, 블로깅 귀찮아</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-10-22-blogging/">➡️ 2017년 10월 22일, 블로깅 귀찮아</a>
     
 </nav>
 
@@ -154,30 +207,20 @@ VsCode에서 디버거도 잘 붙고 만족스럽다.">
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/">⬅️ Emacs &#43; CMake-IDE Screencast</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/">⬅️ Emacs &#43; CMake-IDE Screencast</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-10-22-blogging/">➡️ 2017년 10월 22일, 블로깅 귀찮아</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-10-22-blogging/">➡️ 2017년 10월 22일, 블로깅 귀찮아</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522311</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>

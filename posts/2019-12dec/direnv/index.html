@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522311">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 
@@ -33,7 +33,7 @@ Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
 표기하거나, getenv 해서 문자열을 가져와서 상대 경로 등으로 지정된
 값을 매번 절대 경로로 만드는 작업을 해야할테니까." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2019-12dec/direnv/">
+	<meta property="og:url" content="http://localhost:1313/posts/2019-12dec/direnv/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기">
   <meta property="og:description" content="프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다.
@@ -64,15 +64,13 @@ Node.js에서 Unix environment variable으로 .env 파일을 로딩해주는 역
 Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
 그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을 짜주고 하기 싫었고,
 .env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서 경로를 조립하고 하는데 별로라는 생각이 들었다. 항상 절대 경로만 표기하거나, getenv 해서 문자열을 가져와서 상대 경로 등으로 지정된 값을 매번 절대 경로로 만드는 작업을 해야할테니까.">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -85,7 +83,7 @@ Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -95,7 +93,7 @@ Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -134,14 +132,69 @@ Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">⬅️ Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">⬅️ Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/moonshot-1st-rel/">➡️ moonshot.el 최초 릴리즈</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-12dec/moonshot-1st-rel/">➡️ moonshot.el 최초 릴리즈</a>
     
 </nav>
 
@@ -420,30 +473,20 @@ flycheck의 내장된 flake8, pylint등의 checker와 잘 어울리지 못해서
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">⬅️ Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">⬅️ Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/moonshot-1st-rel/">➡️ moonshot.el 최초 릴리즈</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2019-12dec/moonshot-1st-rel/">➡️ moonshot.el 최초 릴리즈</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522311</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>

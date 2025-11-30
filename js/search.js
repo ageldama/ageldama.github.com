@@ -4,14 +4,16 @@
 function resetSearchResults() {
     $('.search-results').empty();
     $('.search-loading-indicator').hide();
-    $('main.list').fadeIn();
+    $('main').fadeIn();
+    // $('main.list').fadeIn();
 }
 
 var showSearchResults_template = null;
 function showSearchResults(searchTerm, searchResults) {
     $('.search-results').empty();
     $('.search-loading-indicator').hide();
-    $('main.list').fadeOut();
+    $('main').fadeOut();
+    // $('main.list').fadeOut();
 
     const $resultsContainer = $('.search-results');
 

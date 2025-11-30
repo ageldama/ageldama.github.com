@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522312">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="https://jasonformat.com/islands-architecture/
 &hellip;이전에 몇번 언급한 hotwired 처럼. ㅎㅎ
@@ -15,7 +15,7 @@ browser(client): 응답으로 받은 json을 받아서, html을 생성하여 렌
 그리고 당연히 ui개발이기 때문에 &lsquo;컴포넌트모델&rsquo;이나 값바인딩 같은 것들을 원했었고, 현재의 리액트와 같은 형태에 이르른 것 같아.
 물론, vdom이 복잡도를 많이 낮춰줬지만, 희안하게도 예상하지 못하던 문제를 몇가지 더 만들어낸 것 같아. 그래서 요즘엔 ssr이니 seo을 생각해서 다른 방식의 프레임웍들을 사용하려고 하고 있고, 더 나아가서 progressive hydration 같은 쪽으로 더 세밀해지는 양상 같아.2" />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--02-ping/">
+	<meta property="og:url" content="http://localhost:1313/posts/2022-06jun/2022-06jun29--02-ping/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno">
   <meta property="og:description" content="https://jasonformat.com/islands-architecture/
@@ -42,15 +42,13 @@ server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client
 server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client): 응답으로 받은 json을 받아서, html을 생성하여 렌더링. …이게 편하다고 생각해서 여기로 온거 같아. 나말고도 대부분의 사람들이 웹화면을 개발하던 시절에는 이렇게 만들고 싶었었던거 같아. 1 2
 그리고 당연히 ui개발이기 때문에 ‘컴포넌트모델’이나 값바인딩 같은 것들을 원했었고, 현재의 리액트와 같은 형태에 이르른 것 같아.
 물론, vdom이 복잡도를 많이 낮춰줬지만, 희안하게도 예상하지 못하던 문제를 몇가지 더 만들어낸 것 같아. 그래서 요즘엔 ssr이니 seo을 생각해서 다른 방식의 프레임웍들을 사용하려고 하고 있고, 더 나아가서 progressive hydration 같은 쪽으로 더 세밀해지는 양상 같아.2">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -63,7 +61,7 @@ server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -73,7 +71,7 @@ server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -112,14 +110,69 @@ server: rest/gql등으로 요청을 받아서, json으로 응답. browser(client
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-11nov/2022-11nov13--01-ping/">⬅️ Ping 13/11/2022 .01</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-11nov/2022-11nov13--01-ping/">⬅️ Ping 13/11/2022 .01</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/">➡️ linux/unix 팁 29/06/2022 .01</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/2022-06jun29--01-ping/">➡️ linux/unix 팁 29/06/2022 .01</a>
     
 </nav>
 
@@ -192,30 +245,20 @@ next.js ssr처럼 <code>[name].tsx</code> 같은 file system routing도 지원�
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-11nov/2022-11nov13--01-ping/">⬅️ Ping 13/11/2022 .01</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-11nov/2022-11nov13--01-ping/">⬅️ Ping 13/11/2022 .01</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/">➡️ linux/unix 팁 29/06/2022 .01</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/2022-06jun29--01-ping/">➡️ linux/unix 팁 29/06/2022 .01</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522312</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>

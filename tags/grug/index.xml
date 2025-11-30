@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grug on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/grug/</link>
+    <link>http://localhost:1313/tags/grug/</link>
     <description>Recent content in Grug on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Fri, 24 Jun 2022 04:16:26 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/grug/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/grug/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Grug Brained Developer</title>
-      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/</link>
+      <link>http://localhost:1313/posts/2022-06jun/2022-06jun24--01-grug/</link>
       <pubDate>Fri, 24 Jun 2022 04:16:26 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/</guid>
+      <guid>http://localhost:1313/posts/2022-06jun/2022-06jun24--01-grug/</guid>
       <description>&lt;p&gt;감동적인 글이다ㅋ:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://grugbrain.dev/&#34;&gt;https://grugbrain.dev/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;문법도 완전 grug스럽게 작성해서 반가운 글이었다.&lt;/p&gt;&#xA;&lt;p&gt;완전히 모두 내 생각과 같지는 않아도, 이야기하는 &lt;em&gt;&amp;ldquo;FOLD&amp;rdquo; 때문에&lt;/em&gt; 일어나는 일들과&#xA;조금은 그래도 &lt;em&gt;grug답게&lt;/em&gt; 그냥 해내려는 생각들이 유용.&lt;/p&gt;&#xA;&lt;p&gt;그치, grug이 공룡과 구분되는 점은 그런거겠지. ㅎㅎ&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;msa, reactjs, ejb, osgi. 공감하는 생각들.&lt;/p&gt;&#xA;&lt;p&gt;&amp;hellip; black think juice 맛있다.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>linux/unix 팁 29/06/2022 .01 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>linux/unix 팁 29/06/2022 .01 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522312">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
   
@@ -29,7 +29,7 @@ oh-my-zsh 내장인 plugins=(z)도 좋지만2
 eval &quot;$(zoxide init zsh)&quot;
 그리고, z SOME-DIR, zi 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ" />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/">
+	<meta property="og:url" content="http://localhost:1313/posts/2022-06jun/2022-06jun29--01-ping/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="linux/unix 팁 29/06/2022 .01">
   <meta property="og:description" content="zoxide 으로 chdir 간단하게 ssh으로 키보드/마우스 안 붙이고 vconsole: conspy x11: x2x으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유 리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.
@@ -61,15 +61,13 @@ oh-my-zsh 내장인 plugins=(z)도 좋지만2
 …나는 가능하면 zoxide이 가장 가볍고 좋은거 같다.
 설치하고 나서, eval &#34;$(zoxide init zsh)&#34;
 그리고, z SOME-DIR, zi 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -82,7 +80,7 @@ oh-my-zsh 내장인 plugins=(z)도 좋지만2
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -92,7 +90,7 @@ oh-my-zsh 내장인 plugins=(z)도 좋지만2
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -131,14 +129,69 @@ oh-my-zsh 내장인 plugins=(z)도 좋지만2
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--02-ping/">⬅️ react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/2022-06jun29--02-ping/">⬅️ react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/">➡️ The Grug Brained Developer</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/2022-06jun24--01-grug/">➡️ The Grug Brained Developer</a>
     
 </nav>
 
@@ -235,30 +288,20 @@ oh-my-zsh 내장인 plugins=(z)도 좋지만2
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--02-ping/">⬅️ react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/2022-06jun29--02-ping/">⬅️ react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/">➡️ The Grug Brained Developer</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/2022-06jun24--01-grug/">➡️ The Grug Brained Developer</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522312</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>

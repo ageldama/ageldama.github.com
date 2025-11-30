@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기. - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기. - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522311">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="SBCL은 멀티쓰레딩을 잘 지원하는 커먼리습 컴파일러이지만,
 공식사이트에서 제공하는 리눅스 바이너리가 아니라 OSX 바이너리는
@@ -39,7 +39,7 @@ create customize-target-features.lisp with content
 
 그리고 다음의 커맨드들로 빌드하고 설치 끝." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2017/2017-02-25-sbcl-osx-multithread/">
+	<meta property="og:url" content="http://localhost:1313/posts/2017/2017-02-25-sbcl-osx-multithread/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기.">
   <meta property="og:description" content="SBCL은 멀티쓰레딩을 잘 지원하는 커먼리습 컴파일러이지만, 공식사이트에서 제공하는 리눅스 바이너리가 아니라 OSX 바이너리는 멀티쓰레딩이 꺼져서 컴파일되어있다.
@@ -70,15 +70,13 @@ http://www.sbcl.org/manual/#Threading
 http://haminhvuong-blog.tumblr.com/post/22109095116/compile-sbcl-with-multi-thread-enabled-on-os-x
 create customize-target-features.lisp with content
 1 2 3 4 5 6 7 8 (lambda (features) (flet ((enable (x) (pushnew x features)) (disable (x) (setf features (remove x features)))) ;; Threading support, available only on x86/x86-64 Linux, x86Solaris ;; and x86 Mac OS X (experimental). (enable :sb-thread))) 그리고 다음의 커맨드들로 빌드하고 설치 끝.">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -91,7 +89,7 @@ create customize-target-features.lisp with content
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -101,7 +99,7 @@ create customize-target-features.lisp with content
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -140,14 +138,69 @@ create customize-target-features.lisp with content
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/">⬅️ 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-02-26-aync-rxjava-and-monad/">⬅️ 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/">➡️ 2017년 1월, 요즘 나는.</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-01-29-myself-nowadays/">➡️ 2017년 1월, 요즘 나는.</a>
     
 </nav>
 
@@ -235,30 +288,20 @@ create customize-target-features.lisp with content
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/">⬅️ 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-02-26-aync-rxjava-and-monad/">⬅️ 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/">➡️ 2017년 1월, 요즘 나는.</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-01-29-myself-nowadays/">➡️ 2017년 1월, 요즘 나는.</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522311</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>

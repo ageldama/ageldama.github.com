@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>xmake, compile_commands.json, flycheck - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764512544">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>xmake, compile_commands.json, flycheck - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522312">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 cmake/warp등을 써보면서 c/c&#43;&#43; 개발할 때에 빌드도구 갖고 놀다가,
@@ -37,7 +37,7 @@ https://github.com/ageldama/configs/blob/master/emacs/feat/flycheck-compcmdsjson
 
 …요렇게 만들어서 세팅해서 쓰니 편안." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/">
+	<meta property="og:url" content="http://localhost:1313/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="xmake, compile_commands.json, flycheck">
   <meta property="og:description" content="cmake/warp등을 써보면서 c/c&#43;&#43; 개발할 때에 빌드도구 갖고 놀다가, 이번에 마음을 열고 xmake을 익혀봄.
@@ -68,15 +68,13 @@ ccache등도 바로 지원하고, lua으로 스크립팅도 그럭저럭 할만�
 emacs / flycheck &#43; c/c&#43;&#43; 개발할 때에 단점이, 자동적으로 외부 3rd-party 라이브러리의 include-path을 설정해주지 않아서, [dirs-local](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html) 같은걸 세팅해주길 기대한다는 점.
 그래서 그냥 xmake project -vD -k compile_commands -m debug 같이 compile_commands.json 생성하고,
 이걸 파싱해서 표준출력으로 include-paths https://github.com/ageldama/configs/blob/master/compile_commands_json_incdirs.py 현재 소스코드 버퍼 기준으로 가장 가까운 compile_commands.json 파일 위치 찾는 elisp 함수 https://github.com/ageldama/configs/blob/master/emacs/elisp/compcmdsjson-tiny.el 위 (1)&#43;(2)을 조합해서 flycheck을 위한 변수 1 들을 설정하는 elisp 함수 https://github.com/ageldama/configs/blob/master/emacs/elisp/flycheck-compcmdsjson.el 그리고 위 (3)을 c/c&#43;&#43;-mode에 자동적으로 적용하고, 또 단축키도 만드는 elisp 코드 https://github.com/ageldama/configs/blob/master/emacs/feat/flycheck-compcmdsjson.el …요렇게 만들어서 세팅해서 쓰니 편안.">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -89,7 +87,7 @@ emacs / flycheck &#43; c/c&#43;&#43; 개발할 때에 단점이, 자동적으로
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -99,7 +97,7 @@ emacs / flycheck &#43; c/c&#43;&#43; 개발할 때에 단점이, 자동적으로
         <input id="search-query" name="search-query"
                class="search-query"
                tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
+               placeholder="🔎 검색 (search)"/>
     </div>
 
     <nav>
@@ -138,14 +136,69 @@ emacs / flycheck &#43; c/c&#43;&#43; 개발할 때에 단점이, 자동적으로
 </script>
 
 
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar12--01-data-prog/">⬅️ data-driven programming &amp; data-driven design &amp; data-oriented programming ???</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-03mar/2025-03mar12--01-data-prog/">⬅️ data-driven programming &amp; data-driven design &amp; data-oriented programming ???</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2024-03mar/2024-03mar23--01-ping/">➡️ 공각기동대, 1995</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2024-03mar/2024-03mar23--01-ping/">➡️ 공각기동대, 1995</a>
     
 </nav>
 
@@ -263,30 +316,20 @@ Footnotes
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar12--01-data-prog/">⬅️ data-driven programming &amp; data-driven design &amp; data-oriented programming ???</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-03mar/2025-03mar12--01-data-prog/">⬅️ data-driven programming &amp; data-driven design &amp; data-oriented programming ???</a>
     
 
     
-        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2024-03mar/2024-03mar23--01-ping/">➡️ 공각기동대, 1995</a>
+        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2024-03mar/2024-03mar23--01-ping/">➡️ 공각기동대, 1995</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764512544</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522312</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 <script> </script></div>
     </body>
 </html>
