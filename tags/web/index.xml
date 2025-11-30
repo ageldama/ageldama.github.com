@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on 아겔로그</title>
-    <link>http://localhost:1313/tags/web/</link>
+    <link>https://ageldama.github.io/tags/web/</link>
     <description>Recent content in Web on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Fri, 19 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(주절주절) jwz의 netscape navigator 2.0 출시 30주년, 내 기억들, 그리고 오늘</title>
-      <link>http://localhost:1313/posts/2025-09sep/netscape-30yrs-jwz/</link>
+      <link>https://ageldama.github.io/posts/2025-09sep/netscape-30yrs-jwz/</link>
       <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-09sep/netscape-30yrs-jwz/</guid>
+      <guid>https://ageldama.github.io/posts/2025-09sep/netscape-30yrs-jwz/</guid>
       <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://www.jwz.org/blog/2025/09/netscape-navigator-2-0-was-released-30-years-ago-today/&#34;&gt;https://www.jwz.org/blog/2025/09/netscape-navigator-2-0-was-released-30-years-ago-today/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;jwz&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;이 넷스케이프 웹브라우저 2.0 출시 30주년 포스팅을 올렸다.&#xA;jwz은 커먼리습, Lucid Emacs, Xscreensaver 등으로 유명하지만, 가장 역사적으로 큰 족적은 아마도 넷스케이프 웹브라우저의 초기 개발자라는 점일거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;넷스케이프는 90년대의 닷컴시대를 열고, 우리가 현대에 알고 있는 웹브라우저를 대중이 쓸 수 있도록 만들어준 제품이었다고 생각한다. 그 이전의 Mosaic 브라우저는 내 생각엔 더 딱딱하고 techie이 아닌 사람이 접근하기는 좀 껄끄러웠을 것 같다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;넷스케이프 2.0 시점에, 우리가 알고 있는 &amp;#34;JavaScript&amp;#34;이 웹브라우저에 도입되었고, 그이후에 마이크로소프트의 유명한 &amp;#34;Internet Explorer&amp;#34; 시대가 시작된다. (이하 &amp;#34;IE&amp;#34;)&lt;/p&gt;</description>
     </item>
     <item>
       <title>react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</title>
-      <link>http://localhost:1313/posts/2022-06jun/2022-06jun29--02-ping/</link>
+      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun29--02-ping/</link>
       <pubDate>Wed, 29 Jun 2022 17:03:58 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2022-06jun/2022-06jun29--02-ping/</guid>
+      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun29--02-ping/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://jasonformat.com/islands-architecture/&#34;&gt;https://jasonformat.com/islands-architecture/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&amp;hellip;이전에 몇번 언급한 &lt;a href=&#34;https://hotwired.dev/&#34;&gt;hotwired&lt;/a&gt; 처럼. ㅎㅎ&lt;/p&gt;&#xA;&lt;p&gt;지금의 reactjs, vuejs등은 다음과 같은 방식이 기본:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;server: rest/gql등으로 요청을 받아서, json으로 응답.&lt;/li&gt;&#xA;&lt;li&gt;browser(client): 응답으로 받은 json을 받아서, html을 생성하여 렌더링.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&amp;hellip;이게 편하다고 생각해서 여기로 온거 같아. 나말고도 대부분의 사람들이&#xA;웹화면을 개발하던 시절에는 이렇게 만들고 싶었었던거 같아. &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;그리고 당연히 ui개발이기 때문에 &amp;lsquo;컴포넌트모델&amp;rsquo;이나 값바인딩 같은 것들을 원했었고, 현재의 리액트와 같은 형태에 이르른 것 같아.&lt;/p&gt;&#xA;&lt;p&gt;물론, vdom이 복잡도를 많이 낮춰줬지만, 희안하게도 예상하지 못하던 문제를 몇가지 더 만들어낸 것 같아. 그래서 요즘엔 ssr이니 seo을 생각해서 다른 방식의 프레임웍들을 사용하려고 하고 있고, 더 나아가서 &lt;a href=&#34;https://www.patterns.dev/posts/progressive-hydration/&#34;&gt;progressive hydration&lt;/a&gt; 같은 쪽으로 더 세밀해지는 양상 같아.&lt;sup id=&#34;fnref1:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>원하는 웹브라우져, 웹환경, 그리고 익숙하지만 싫은 어떤 신앙체계</title>
-      <link>http://localhost:1313/posts/2019-12dec/the-web-and-the-free-world/</link>
+      <link>https://ageldama.github.io/posts/2019-12dec/the-web-and-the-free-world/</link>
       <pubDate>Wed, 11 Dec 2019 02:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2019-12dec/the-web-and-the-free-world/</guid>
+      <guid>https://ageldama.github.io/posts/2019-12dec/the-web-and-the-free-world/</guid>
       <description>&lt;p&gt;&#xA;  지금의 웹환경은 너무 과도한 치장, 보이는 이미지 중심이어서 딱&#xA;  한가지 측면을 제외하고 모든 면에서 정말 끔찍하다는 생각이&#xA;  들었다. 하긴 그러니 많은 사람들이 열심히 쓰는걸지도 몰라.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그래서 정말 많은 사람들이 오히려 그런 치장, 자바스크립트로 덩어리진&#xA;  화면을 로딩 하느라 보이지 않는 시간을 조금씩 모아서 낭비하고 있다는&#xA;  생각도 든다. …그리고 또 그걸 만든다고 시간은 버려지고. 그렇게&#xA;  모두가 하는 방식대로 하는 수 밖엔 다른 방법을 모르겠고, 그렇게&#xA;  만들어가는 자바스크립트, 프론트엔드 개발자들의 시간도 마찬가지고.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  더욱이 그런 &amp;lt;예쁘고 조잡한&amp;gt; 화면이 정보의 전달도, 명확하게 사람들이&#xA;  사용할 수 있는 화면을 만들어 준다고 생각지도 않는다. 컴퓨터에 조금&#xA;  관심이 없는 사람도 조금 평균적인 기준이랑 다르거나, 그런 평균적인&#xA;  기준을 따라가려고 흉내와 고생은 많이 했지만 그러지는 못한 사이트를&#xA;  써보라고 한다면 당혹한다. 나는 그렇다. 차라리 단순한 텍스트 메뉴와&#xA;  숫자나 방향키 입력을 통한 텍스트 메뉴가 더 명확하고 나을 지경인거&#xA;  같다. 하지만 잘 디자인되고 개발한 화면에서는 정보 전달도, 사용성도&#xA;  좋겠지만, …문제는 그런 사이트는 거의 본적이 없다.&lt;/p&gt;</description>
     </item>
   </channel>

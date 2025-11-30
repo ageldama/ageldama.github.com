@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522312">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522729">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 최근의 파이썬은 아주 오랬동안 multicore/parallelism을 지원하기 위해
@@ -24,7 +24,7 @@ concurrent.interpreters 추가된 것이 더 흥미롭다.
 
 별거 아닌거 같지만 얻을 수 있는 이점은:" />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="http://localhost:1313/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/">
+	<meta property="og:url" content="https://ageldama.github.io/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰">
   <meta property="og:description" content="최근의 파이썬은 아주 오랬동안 multicore/parallelism을 지원하기 위해 걸림돌이었던 GIL에서 자유로워진 &#34;no-GIL&#34; 옵션이 베타 단계. (&#34;free GIL&#34; 혹은 &#34;free threading&#34;이라고도 부르는듯) https://blog.jetbrains.com/ko/pycharm/2025/08/faster-python-unlocking-the-python-global-interpreter-lock/
@@ -49,13 +49,15 @@ concurrent.interpreters 추가된 것이 더 흥미롭다.
 &#34;no-GIL&#34;이 분명히 중요한 변화이겠지만, 내겐 Python 3.14에 concurrent.interpreters 추가된 것이 더 흥미롭다.
 이게 과연 Parallelism을 지원하기 위한 방식일까 하고 바로 알아차라기는 어렵지만 조금 생각해보면:
 새로운 프로세스를 만들지는 않는다 (multiprocessing 모듈) 직접 같은 GIL을 공유하는 스레드를 만들지도 않는다 (threading 모듈) 하지만, 같은 프로세스 안에서 다른 GIL을 사용하는, 파이썬 인터프리터를 만들고, 다른 인터프리터와 적당한 정도로 IPC이 가능하고 (Queue 정도) 다른 인터프리터가 실행했으면 하는 파이썬 코드를 전달 가능. 별거 아닌거 같지만 얻을 수 있는 이점은:">
-<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    <link rel="stylesheet" href="/css/styles.css">
+                    
+                        <link rel="stylesheet" href="/css/styles.f0fe171ffa0090153c32a275e8472b237d80b4f83acf5bf480b01f95c60ad3de.css" integrity="sha256-8P4XH/oAkBU8MqJ16EcrI32AtPg6z1v0gLAflcYK094=" crossorigin="anonymous">
+                    
                 
             
         
@@ -68,25 +70,26 @@ concurrent.interpreters 추가된 것이 더 흥미롭다.
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="http://localhost:1313/">아겔로그</a>
+           href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
-
-    <div class="search-form">
-        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
-        <input id="search-query" name="search-query"
-               class="search-query"
-               tabindex="1"
-               placeholder="🔎 검색 (search)"/>
-    </div>
 
     <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
         
             <a href="/posts/archive/">🗂️ INDEX</a>
         
             <a href="/myself/">📨 CONTACT</a>
         
+
     </nav>
 </header>
 
@@ -175,11 +178,11 @@ concurrent.interpreters 추가된 것이 더 흥미롭다.
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-11nov/scripts-rofi-perl5-release/">⬅️ scripts-rofi-perl5 릴리즈</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/scripts-rofi-perl5-release/">⬅️ scripts-rofi-perl5 릴리즈</a>
     
 
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-11nov/my-elisp-requires/">➡️ 내 emacs elisp &#34;requires&#34;</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/">➡️ 내 emacs elisp &#34;requires&#34;</a>
     
 </nav>
 
@@ -464,20 +467,30 @@ Footnotes
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-11nov/scripts-rofi-perl5-release/">⬅️ scripts-rofi-perl5 릴리즈</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/scripts-rofi-perl5-release/">⬅️ scripts-rofi-perl5 릴리즈</a>
     
 
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-11nov/my-elisp-requires/">➡️ 내 emacs elisp &#34;requires&#34;</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/">➡️ 내 emacs elisp &#34;requires&#34;</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522312</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522729</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
 <script> </script></div>
     </body>
 </html>

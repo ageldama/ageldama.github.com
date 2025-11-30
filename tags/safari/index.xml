@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Safari on 아겔로그</title>
-    <link>http://localhost:1313/tags/safari/</link>
+    <link>https://ageldama.github.io/tags/safari/</link>
     <description>Recent content in Safari on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Fri, 19 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/safari/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/safari/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(주절주절) jwz의 netscape navigator 2.0 출시 30주년, 내 기억들, 그리고 오늘</title>
-      <link>http://localhost:1313/posts/2025-09sep/netscape-30yrs-jwz/</link>
+      <link>https://ageldama.github.io/posts/2025-09sep/netscape-30yrs-jwz/</link>
       <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-09sep/netscape-30yrs-jwz/</guid>
+      <guid>https://ageldama.github.io/posts/2025-09sep/netscape-30yrs-jwz/</guid>
       <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://www.jwz.org/blog/2025/09/netscape-navigator-2-0-was-released-30-years-ago-today/&#34;&gt;https://www.jwz.org/blog/2025/09/netscape-navigator-2-0-was-released-30-years-ago-today/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;jwz&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;이 넷스케이프 웹브라우저 2.0 출시 30주년 포스팅을 올렸다.&#xA;jwz은 커먼리습, Lucid Emacs, Xscreensaver 등으로 유명하지만, 가장 역사적으로 큰 족적은 아마도 넷스케이프 웹브라우저의 초기 개발자라는 점일거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;넷스케이프는 90년대의 닷컴시대를 열고, 우리가 현대에 알고 있는 웹브라우저를 대중이 쓸 수 있도록 만들어준 제품이었다고 생각한다. 그 이전의 Mosaic 브라우저는 내 생각엔 더 딱딱하고 techie이 아닌 사람이 접근하기는 좀 껄끄러웠을 것 같다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;넷스케이프 2.0 시점에, 우리가 알고 있는 &amp;#34;JavaScript&amp;#34;이 웹브라우저에 도입되었고, 그이후에 마이크로소프트의 유명한 &amp;#34;Internet Explorer&amp;#34; 시대가 시작된다. (이하 &amp;#34;IE&amp;#34;)&lt;/p&gt;</description>
     </item>
   </channel>

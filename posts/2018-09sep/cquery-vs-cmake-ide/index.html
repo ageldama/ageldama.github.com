@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CQuery &#43; LSP vs CMake-IDE &#43; RTags - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522311">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CQuery &#43; LSP vs CMake-IDE &#43; RTags - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522729">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="LSP &#43; CQuery을 써보려고 했는데, 결국 CMake-IDE &#43;
 RTags 조합으로
@@ -21,7 +21,7 @@ company-lsp이 생각보다 훨씬 부드럽고 자동완성 잘되는거.
 미래에는 그냥 LSP기반만 남을거 같아서, 이것도 &ldquo;helm-rg의 모험&quot;처럼
 아직은 완전히 전환은 못할거 같긴하다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="http://localhost:1313/posts/2018-09sep/cquery-vs-cmake-ide/">
+	<meta property="og:url" content="https://ageldama.github.io/posts/2018-09sep/cquery-vs-cmake-ide/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="CQuery &#43; LSP vs CMake-IDE &#43; RTags">
   <meta property="og:description" content="LSP &#43; CQuery을 써보려고 했는데, 결국 CMake-IDE &#43; RTags 조합으로 원래대로 쓰게될거 같아. :
@@ -42,13 +42,15 @@ flycheck에 전용으로 연동되어 있는 점. company-lsp이 생각보다 �
   <meta name="twitter:description" content="LSP &#43; CQuery을 써보려고 했는데, 결국 CMake-IDE &#43; RTags 조합으로 원래대로 쓰게될거 같아. :
 _build/ 와 같이 CMake, Ninja, Makefile등의 파일들을 별도의 디렉토리로 만들어서 필드하고 싶은데, 제대로 지원을 못한다. 1. 그냥 프로젝트 소스코드랑 같이 generate하고 gcc등의 중간 파일이 모두 같이 남아서 지저분해져서 싫어함. 아직은 별로 내 마음에 꼭 들게 만들기는 어려울거 같아서. 그래도 인상적이었던 부분들:
 flycheck에 전용으로 연동되어 있는 점. company-lsp이 생각보다 훨씬 부드럽고 자동완성 잘되는거. 미래에는 그냥 LSP기반만 남을거 같아서, 이것도 “helm-rg의 모험&#34;처럼 아직은 완전히 전환은 못할거 같긴하다.">
-<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    <link rel="stylesheet" href="/css/styles.css">
+                    
+                        <link rel="stylesheet" href="/css/styles.f0fe171ffa0090153c32a275e8472b237d80b4f83acf5bf480b01f95c60ad3de.css" integrity="sha256-8P4XH/oAkBU8MqJ16EcrI32AtPg6z1v0gLAflcYK094=" crossorigin="anonymous">
+                    
                 
             
         
@@ -61,25 +63,26 @@ flycheck에 전용으로 연동되어 있는 점. company-lsp이 생각보다 �
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="http://localhost:1313/">아겔로그</a>
+           href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
-
-    <div class="search-form">
-        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
-        <input id="search-query" name="search-query"
-               class="search-query"
-               tabindex="1"
-               placeholder="🔎 검색 (search)"/>
-    </div>
 
     <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
         
             <a href="/posts/archive/">🗂️ INDEX</a>
         
             <a href="/myself/">📨 CONTACT</a>
         
+
     </nav>
 </header>
 
@@ -168,11 +171,11 @@ flycheck에 전용으로 연동되어 있는 점. company-lsp이 생각보다 �
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2018-10oct/03wed-ping/">⬅️ Ping 03/10/2018</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-10oct/03wed-ping/">⬅️ Ping 03/10/2018</a>
     
 
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2018-09sep/23sun-todos/">➡️ 해보기 23/09/2018</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-09sep/23sun-todos/">➡️ 해보기 23/09/2018</a>
     
 </nav>
 
@@ -232,20 +235,30 @@ RTags</a> 조합으로
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2018-10oct/03wed-ping/">⬅️ Ping 03/10/2018</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-10oct/03wed-ping/">⬅️ Ping 03/10/2018</a>
     
 
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2018-09sep/23sun-todos/">➡️ 해보기 23/09/2018</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-09sep/23sun-todos/">➡️ 해보기 23/09/2018</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522311</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522729</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
 <script> </script></div>
     </body>
 </html>

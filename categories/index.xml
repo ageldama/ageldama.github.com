@@ -2,165 +2,165 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 아겔로그</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://ageldama.github.io/categories/</link>
     <description>Recent content in Categories on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 30 Nov 2025 10:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>http://localhost:1313/categories/blog/</link>
+      <link>https://ageldama.github.io/categories/blog/</link>
       <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/blog/</guid>
+      <guid>https://ageldama.github.io/categories/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>http://localhost:1313/categories/programming/</link>
+      <link>https://ageldama.github.io/categories/programming/</link>
       <pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/programming/</guid>
+      <guid>https://ageldama.github.io/categories/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Tv</title>
-      <link>http://localhost:1313/categories/tv/</link>
+      <link>https://ageldama.github.io/categories/tv/</link>
       <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/tv/</guid>
+      <guid>https://ageldama.github.io/categories/tv/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
-      <link>http://localhost:1313/categories/software/</link>
+      <link>https://ageldama.github.io/categories/software/</link>
       <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/software/</guid>
+      <guid>https://ageldama.github.io/categories/software/</guid>
       <description></description>
     </item>
     <item>
       <title>Freebsd</title>
-      <link>http://localhost:1313/categories/freebsd/</link>
+      <link>https://ageldama.github.io/categories/freebsd/</link>
       <pubDate>Mon, 15 Sep 2025 08:26:26 +0000</pubDate>
-      <guid>http://localhost:1313/categories/freebsd/</guid>
+      <guid>https://ageldama.github.io/categories/freebsd/</guid>
       <description></description>
     </item>
     <item>
       <title>Ddakong</title>
-      <link>http://localhost:1313/categories/ddakong/</link>
+      <link>https://ageldama.github.io/categories/ddakong/</link>
       <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
-      <guid>http://localhost:1313/categories/ddakong/</guid>
+      <guid>https://ageldama.github.io/categories/ddakong/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/categories/linux/</link>
+      <link>https://ageldama.github.io/categories/linux/</link>
       <pubDate>Wed, 07 May 2025 19:28:25 +0900</pubDate>
-      <guid>http://localhost:1313/categories/linux/</guid>
+      <guid>https://ageldama.github.io/categories/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Blogging</title>
-      <link>http://localhost:1313/categories/blogging/</link>
+      <link>https://ageldama.github.io/categories/blogging/</link>
       <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
-      <guid>http://localhost:1313/categories/blogging/</guid>
+      <guid>https://ageldama.github.io/categories/blogging/</guid>
       <description></description>
     </item>
     <item>
       <title>Life</title>
-      <link>http://localhost:1313/categories/life/</link>
+      <link>https://ageldama.github.io/categories/life/</link>
       <pubDate>Sat, 23 Mar 2024 15:46:14 +0000</pubDate>
-      <guid>http://localhost:1313/categories/life/</guid>
+      <guid>https://ageldama.github.io/categories/life/</guid>
       <description></description>
     </item>
     <item>
       <title>Hack</title>
-      <link>http://localhost:1313/categories/hack/</link>
+      <link>https://ageldama.github.io/categories/hack/</link>
       <pubDate>Sun, 05 Nov 2023 05:40:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/hack/</guid>
+      <guid>https://ageldama.github.io/categories/hack/</guid>
       <description></description>
     </item>
     <item>
       <title>News</title>
-      <link>http://localhost:1313/categories/news/</link>
+      <link>https://ageldama.github.io/categories/news/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>http://localhost:1313/categories/news/</guid>
+      <guid>https://ageldama.github.io/categories/news/</guid>
       <description></description>
     </item>
     <item>
       <title>Coding</title>
-      <link>http://localhost:1313/categories/coding/</link>
+      <link>https://ageldama.github.io/categories/coding/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/coding/</guid>
+      <guid>https://ageldama.github.io/categories/coding/</guid>
       <description></description>
     </item>
     <item>
       <title>Scrapbook</title>
-      <link>http://localhost:1313/categories/scrapbook/</link>
+      <link>https://ageldama.github.io/categories/scrapbook/</link>
       <pubDate>Sun, 12 Jun 2022 04:37:12 +0000</pubDate>
-      <guid>http://localhost:1313/categories/scrapbook/</guid>
+      <guid>https://ageldama.github.io/categories/scrapbook/</guid>
       <description></description>
     </item>
     <item>
       <title>Emacs</title>
-      <link>http://localhost:1313/categories/emacs/</link>
+      <link>https://ageldama.github.io/categories/emacs/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:01 +0900</pubDate>
-      <guid>http://localhost:1313/categories/emacs/</guid>
+      <guid>https://ageldama.github.io/categories/emacs/</guid>
       <description></description>
     </item>
     <item>
       <title>Code</title>
-      <link>http://localhost:1313/categories/code/</link>
+      <link>https://ageldama.github.io/categories/code/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/categories/code/</guid>
+      <guid>https://ageldama.github.io/categories/code/</guid>
       <description></description>
     </item>
     <item>
       <title>Rants</title>
-      <link>http://localhost:1313/categories/rants/</link>
+      <link>https://ageldama.github.io/categories/rants/</link>
       <pubDate>Sun, 22 Oct 2017 21:42:00 +0100</pubDate>
-      <guid>http://localhost:1313/categories/rants/</guid>
+      <guid>https://ageldama.github.io/categories/rants/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/categories/docker/</link>
+      <link>https://ageldama.github.io/categories/docker/</link>
       <pubDate>Tue, 11 Jul 2017 20:20:00 +0900</pubDate>
-      <guid>http://localhost:1313/categories/docker/</guid>
+      <guid>https://ageldama.github.io/categories/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Myself</title>
-      <link>http://localhost:1313/categories/myself/</link>
+      <link>https://ageldama.github.io/categories/myself/</link>
       <pubDate>Tue, 11 Jul 2017 18:35:00 +0900</pubDate>
-      <guid>http://localhost:1313/categories/myself/</guid>
+      <guid>https://ageldama.github.io/categories/myself/</guid>
       <description></description>
     </item>
     <item>
       <title>Lisp</title>
-      <link>http://localhost:1313/categories/lisp/</link>
+      <link>https://ageldama.github.io/categories/lisp/</link>
       <pubDate>Sat, 25 Feb 2017 16:40:00 +0100</pubDate>
-      <guid>http://localhost:1313/categories/lisp/</guid>
+      <guid>https://ageldama.github.io/categories/lisp/</guid>
       <description></description>
     </item>
     <item>
       <title>Erlang</title>
-      <link>http://localhost:1313/categories/erlang/</link>
+      <link>https://ageldama.github.io/categories/erlang/</link>
       <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
-      <guid>http://localhost:1313/categories/erlang/</guid>
+      <guid>https://ageldama.github.io/categories/erlang/</guid>
       <description></description>
     </item>
     <item>
       <title>Java</title>
-      <link>http://localhost:1313/categories/java/</link>
+      <link>https://ageldama.github.io/categories/java/</link>
       <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
-      <guid>http://localhost:1313/categories/java/</guid>
+      <guid>https://ageldama.github.io/categories/java/</guid>
       <description></description>
     </item>
     <item>
       <title>Jekyll Update</title>
-      <link>http://localhost:1313/categories/jekyll-update/</link>
+      <link>https://ageldama.github.io/categories/jekyll-update/</link>
       <pubDate>Sun, 01 Jan 2017 09:54:02 +0100</pubDate>
-      <guid>http://localhost:1313/categories/jekyll-update/</guid>
+      <guid>https://ageldama.github.io/categories/jekyll-update/</guid>
       <description></description>
     </item>
   </channel>

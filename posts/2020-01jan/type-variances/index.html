@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Covariant, Contravariant, Invariant등 Type Variances 이해하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522311">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Covariant, Contravariant, Invariant등 Type Variances 이해하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522729">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 거의 그대로 베껴온 원본 글
@@ -28,7 +28,7 @@ Subtype, 일반화(Generalization), 특화(Specialization)
   이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고
   가정하겠다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="http://localhost:1313/posts/2020-01jan/type-variances/">
+	<meta property="og:url" content="https://ageldama.github.io/posts/2020-01jan/type-variances/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="Covariant, Contravariant, Invariant등 Type Variances 이해하기">
   <meta property="og:description" content="거의 그대로 베껴온 원본 글
@@ -55,13 +55,15 @@ Subtype, 일반화(Generalization), 특화(Specialization) 타입을 말할 때,
 왜냐하면, 전달한 값이 그 타입의 범위 안에서 전달 받은 쪽에서 취급이 제한된다는 보장이 있어야 안전한 코드를 컴파일러는 생성해줄 수 있다. (혹은 그렇게 안전한지 체크를 해준다.)
 Subtype, 일반화(Generalization), 특화(Specialization) 타입을 말할 때, 나는 보통 객체지향언어에서의 클래스의 상속 관계를 떠올린다. 꼭 그렇지는 않겠지만, 이 글에서도 그렇게 설명을 해보겠다.
 이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고 가정하겠다.">
-<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    <link rel="stylesheet" href="/css/styles.css">
+                    
+                        <link rel="stylesheet" href="/css/styles.f0fe171ffa0090153c32a275e8472b237d80b4f83acf5bf480b01f95c60ad3de.css" integrity="sha256-8P4XH/oAkBU8MqJ16EcrI32AtPg6z1v0gLAflcYK094=" crossorigin="anonymous">
+                    
                 
             
         
@@ -74,25 +76,26 @@ Subtype, 일반화(Generalization), 특화(Specialization) 타입을 말할 때,
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="http://localhost:1313/">아겔로그</a>
+           href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
-
-    <div class="search-form">
-        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
-        <input id="search-query" name="search-query"
-               class="search-query"
-               tabindex="1"
-               placeholder="🔎 검색 (search)"/>
-    </div>
 
     <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
         
             <a href="/posts/archive/">🗂️ INDEX</a>
         
             <a href="/myself/">📨 CONTACT</a>
         
+
     </nav>
 </header>
 
@@ -181,11 +184,11 @@ Subtype, 일반화(Generalization), 특화(Specialization) 타입을 말할 때,
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2020-01jan/100days-of/">⬅️ 100일의 기록</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-01jan/100days-of/">⬅️ 100일의 기록</a>
     
 
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2020-01jan/esup-emacs-init-speed/">➡️ Emacs 시작 시간 빠르게 만들기</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-01jan/esup-emacs-init-speed/">➡️ Emacs 시작 시간 빠르게 만들기</a>
     
 </nav>
 
@@ -526,20 +529,30 @@ Footnotes
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2020-01jan/100days-of/">⬅️ 100일의 기록</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-01jan/100days-of/">⬅️ 100일의 기록</a>
     
 
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2020-01jan/esup-emacs-init-speed/">➡️ Emacs 시작 시간 빠르게 만들기</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-01jan/esup-emacs-init-speed/">➡️ Emacs 시작 시간 빠르게 만들기</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522311</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522729</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
 <script> </script></div>
     </body>
 </html>

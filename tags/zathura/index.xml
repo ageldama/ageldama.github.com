@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zathura on 아겔로그</title>
-    <link>http://localhost:1313/tags/zathura/</link>
+    <link>https://ageldama.github.io/tags/zathura/</link>
     <description>Recent content in Zathura on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 15 Sep 2025 08:26:26 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/zathura/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/zathura/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>freebsd &#43; 고물랩탑 쓸만하다(재밌다!)</title>
-      <link>http://localhost:1313/posts/2025-09sep/freebsd-why/</link>
+      <link>https://ageldama.github.io/posts/2025-09sep/freebsd-why/</link>
       <pubDate>Mon, 15 Sep 2025 08:26:26 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-09sep/freebsd-why/</guid>
+      <guid>https://ageldama.github.io/posts/2025-09sep/freebsd-why/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;시도하기 이전에는&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을&#xA;  서브랩탑으로 집책상에서 써왔었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  메모리도 4GB, 확장이 불가능하고. 배터리도 조금 부풀었고 충전도 잘 되지&#xA;  않는다. 거기에 외부전원어댑터를 붙이지 않으면 어째서인지 eDP이&#xA;  출력되지 않는다. ㅎㅎㅎ&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그래도 어쨌든 debian-stable 설치해놓고 samba 서버로 책상에서 쓰거나&#xA;  하기엔 적당했다. 딱히 동영상을 틀어 놓거나 하는 것도 포기해야 할&#xA;  정도로 빠르지도 않았다. 웹브라우징도 느렸다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;그러다가 freebsd 설치를 했다 (&lt;code&gt;14.3-RELEASE&lt;/code&gt; &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;)&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;원래도 freebsd이 gui이나 latency이 중요한 체감이 훨씬 가볍고 부드럽게&#xA;  느껴지는걸 알고 있었다. 그런데 이번에는 너무 &lt;span style=&#34;text-decoration: underline;&#34;&gt;극적으로 즐거웠다&lt;/span&gt;.&lt;/p&gt;</description>
     </item>
   </channel>

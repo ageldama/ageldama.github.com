@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anime on 아겔로그</title>
-    <link>http://localhost:1313/tags/anime/</link>
+    <link>https://ageldama.github.io/tags/anime/</link>
     <description>Recent content in Anime on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sat, 23 Mar 2024 15:46:14 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/anime/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/anime/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>공각기동대, 1995</title>
-      <link>http://localhost:1313/posts/2024-03mar/2024-03mar23--01-ping/</link>
+      <link>https://ageldama.github.io/posts/2024-03mar/2024-03mar23--01-ping/</link>
       <pubDate>Sat, 23 Mar 2024 15:46:14 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2024-03mar/2024-03mar23--01-ping/</guid>
+      <guid>https://ageldama.github.io/posts/2024-03mar/2024-03mar23--01-ping/</guid>
       <description>&lt;p&gt;&#xA;가끔 다시 본다. 그리고 마지막 장면을 보면서 덕력이 폭발하면서 종종 그런 생각에 빠짐.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;저런 시나리오를 쓴 사람은 어떤 기분이었을까 완전 쩐다.&lt;/p&gt;</description>
     </item>
   </channel>

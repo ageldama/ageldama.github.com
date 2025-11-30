@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522312">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764522729">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 코딩을 하다보면, 파일변경시에 자동으로 빌드, 서버재시작, 혹은
@@ -17,7 +17,7 @@
 테스트케이스 실행) 같은걸 걸어 놓으려면 커맨드라인에서 지정해두는게
 낫다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="http://localhost:1313/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">
+	<meta property="og:url" content="https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백">
   <meta property="og:description" content="코딩을 하다보면, 파일변경시에 자동으로 빌드, 서버재시작, 혹은 테스트케이스를 실행 되도록 하면 꽤 편리할 수 있다.
@@ -40,13 +40,15 @@
   <meta name="twitter:description" content="코딩을 하다보면, 파일변경시에 자동으로 빌드, 서버재시작, 혹은 테스트케이스를 실행 되도록 하면 꽤 편리할 수 있다.
 커먼리습 같은 경우엔 바로 실행중인 코드가 변경되는 방식이어서 신경 쓸게 별로 없고, Rails 같은 웹프레임웍은 자동으로 재시작하거나 변경된 코드를 다시 로딩해주기도 하고, PHP 계열도 웹브라우저를 refresh하면 자동적으로 새 코드으로 실행하게 된다.
 다른 컴파일이 필요한 언어나, 파이썬, 펄 같은 언어들, 혹은 자동으로 코드에 반영되는 언어/프레임웍을 사용하더라도, 원하는 태스크(예: 테스트케이스 실행) 같은걸 걸어 놓으려면 커맨드라인에서 지정해두는게 낫다.">
-<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    <link rel="stylesheet" href="/css/styles.css">
+                    
+                        <link rel="stylesheet" href="/css/styles.f0fe171ffa0090153c32a275e8472b237d80b4f83acf5bf480b01f95c60ad3de.css" integrity="sha256-8P4XH/oAkBU8MqJ16EcrI32AtPg6z1v0gLAflcYK094=" crossorigin="anonymous">
+                    
                 
             
         
@@ -59,25 +61,26 @@
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="http://localhost:1313/">아겔로그</a>
+           href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
-
-    <div class="search-form">
-        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
-        <input id="search-query" name="search-query"
-               class="search-query"
-               tabindex="1"
-               placeholder="🔎 검색 (search)"/>
-    </div>
 
     <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
         
             <a href="/posts/archive/">🗂️ INDEX</a>
         
             <a href="/myself/">📨 CONTACT</a>
         
+
     </nav>
 </header>
 
@@ -166,11 +169,11 @@
 <main>
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-11nov/cl-defmacro-fwd-declaration/">⬅️ [TIL] common-lisp defmacro와 forward-declaration</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/cl-defmacro-fwd-declaration/">⬅️ [TIL] common-lisp defmacro와 forward-declaration</a>
     
 
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-09sep/the-x-files-90s-vibe/">➡️ &#34;the x files&#34; / 90년대의 분위기</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/the-x-files-90s-vibe/">➡️ &#34;the x files&#34; / 90년대의 분위기</a>
     
 </nav>
 
@@ -524,20 +527,30 @@ Footnotes
 
         <nav class="post-prevnext" aria-label="posts">
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-11nov/cl-defmacro-fwd-declaration/">⬅️ [TIL] common-lisp defmacro와 forward-declaration</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/cl-defmacro-fwd-declaration/">⬅️ [TIL] common-lisp defmacro와 forward-declaration</a>
     
 
     
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-09sep/the-x-files-90s-vibe/">➡️ &#34;the x files&#34; / 90년대의 분위기</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/the-x-files-90s-vibe/">➡️ &#34;the x files&#34; / 90년대의 분위기</a>
     
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522312</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764522729</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
 <script> </script></div>
     </body>
 </html>

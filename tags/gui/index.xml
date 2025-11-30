@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gui on 아겔로그</title>
-    <link>http://localhost:1313/tags/gui/</link>
+    <link>https://ageldama.github.io/tags/gui/</link>
     <description>Recent content in Gui on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Thu, 18 Sep 2025 08:26:26 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/gui/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/gui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>블로그 css 조금 더 수정</title>
-      <link>http://localhost:1313/posts/2025-09sep/blog-css-redesign-again/</link>
+      <link>https://ageldama.github.io/posts/2025-09sep/blog-css-redesign-again/</link>
       <pubDate>Thu, 18 Sep 2025 08:26:26 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-09sep/blog-css-redesign-again/</guid>
+      <guid>https://ageldama.github.io/posts/2025-09sep/blog-css-redesign-again/</guid>
       <description>&lt;p&gt;&#xA;너무 흰색 배경에 눈이 짠한거 같아서 바꿔봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;darkmode 켜면 되기야 하겠지만.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;과거 Solaris/SunOS의 SunView이나 CDE환경 색상을 좀 흉내내고 싶었다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/SunView&#34;&gt;https://en.wikipedia.org/wiki/SunView&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Common_Desktop_Environment&#34;&gt;https://en.wikipedia.org/wiki/Common_Desktop_Environment&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;나는 마음에 좀 드는거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;hugo theme을 정리해서 공개/공유해도 좋겠다는 생각을 하는데…&#xA;너무 정리가 않되어 있어서. 다음으로 미뤄야겠다.&lt;/p&gt;</description>
     </item>
   </channel>

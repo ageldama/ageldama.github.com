@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reading on 아겔로그</title>
-    <link>http://localhost:1313/tags/reading/</link>
+    <link>https://ageldama.github.io/tags/reading/</link>
     <description>Recent content in Reading on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/reading/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/reading/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 05/Nov/2020</title>
-      <link>http://localhost:1313/posts/2020-11nov/ping-05thu/</link>
+      <link>https://ageldama.github.io/posts/2020-11nov/ping-05thu/</link>
       <pubDate>Thu, 05 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2020-11nov/ping-05thu/</guid>
+      <guid>https://ageldama.github.io/posts/2020-11nov/ping-05thu/</guid>
       <description>&lt;p&gt;&#xA;책을 몇 권 주문했다. 관심이 생긴 새로운 분야에 대한 책들이었는데&#xA;흥미롭게도 그 중 두 권이 서로 완전히 다른 분야인데 역저자가&#xA;같았다. 아마도 역자 소개에 나온 자신의 업무, 맡은 영역에서 필요하거나&#xA;관심이 깊어서 번역한 것 같다. 재밌었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 갖고 있는 한국어로는 아직 나오지 않은 책을 세 권 정도 읽고&#xA;싶어서 다시 펼쳤다. 예전에도 조금 읽었었던 책들인데 마음에 들었던&#xA;구절들, 생각들이 다시 읽혀져 즐거웠다.&lt;/p&gt;</description>
     </item>
   </channel>
