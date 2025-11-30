@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 04/02/2023 .01: 씨언어의 장자 zig, rust, golang, c&#43;&#43; ??? - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 04/02/2023 .01: 씨언어의 장자 zig, rust, golang, c&#43;&#43; ??? - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764510814">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 최근에 재미로 zig 을 정말 재밌게 &#39;읽었다&#39;. 공부해보고 실제로 뭔가
@@ -41,42 +41,46 @@ zig으로 프로그램을 짜는게 궁금하던 부분은 haskell의 monad을 �
   <meta name="twitter:description" content="최근에 재미로 zig 을 정말 재밌게 &#39;읽었다&#39;. 공부해보고 실제로 뭔가 코딩을 많이 해보거나 한 것은 아니고, 대체 어떻게 동작하는 프로그램을 이걸로 만들라고 하는건지 이해하고 싶었기 때문에 해봤다.
 zig으로 프로그램을 짜는게 궁금하던 부분은 haskell의 monad을 이용한 방식, 혹은 apl이나 prolog으로 실제프로그램을 어떻게 만들 수 있을지 패러다임부터 다른 언어를 공부하고 생각해보는 것과는 조금 다를수도 있겠다. 어쨌든 그냥 imperative언어이니까.
 오히려, zig을 어떻게 써먹어야 할지 궁금하던 지점은, c&#43;&#43;의 스마트포인터와 move semantics등을 이해하는 것이나, rust의 borrowing checker, rc/arc등을 이해하는 것과 마찬가지인 것 같다. 둘 다 이해하고 익숙해지면 그렇게 부담스럽지 않을거 같긴 하다.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
                     
                 
             
         
 
         <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-	
+
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
+
+    <div class="search-form">
+        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">🗂️ INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">📨 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -89,9 +93,9 @@ zig으로 프로그램을 짜는게 궁금하던 부분은 haskell의 monad을 �
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#cccccc',  
-      buttonColorDark: '#566666',  
-      buttonColorLight: '#566666', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -99,22 +103,35 @@ zig으로 프로그램을 짜는게 궁금하던 부분은 haskell의 monad을 �
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+    
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-02feb/2023-02feb07--01-ping/">⬅️ Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/">➡️ Ping 03/02/2023 .01: 블로그 디자인 수정</a>
+    
+</nav>
+
+
 	<article data-pagefind-body>
-		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">Ping 04/02/2023 .01: 씨언어의 장자 zig, rust, golang, c&#43;&#43; ???</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		<div class="title"><h1 class="title" data-pagefind-meta="title">🔋 Ping 04/02/2023 .01: 씨언어의 장자 zig, rust, golang, c&#43;&#43; ???</h1>
+			<div class="meta">
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2023-02-04" pubdate>
-                            04 Feb 2023
+                            2023年02月04日
                         </time>
-			<div class="meta"> 🗓️ 04 Feb, 2023</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -269,54 +286,59 @@ c++의 <code class="verbatim">std::shared_ptr</code> 같은 reference-counted sh
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li style="display: inline">#<a href="/tags/ping">ping</a></li>
-					
-					<li style="display: inline">#<a href="/tags/cpp">cpp</a></li>
-					
-					<li style="display: inline">#<a href="/tags/cee">cee</a></li>
-					
-					<li style="display: inline">#<a href="/tags/zig">zig</a></li>
-					
-					<li style="display: inline">#<a href="/tags/comptime">comptime</a></li>
-					
-					<li style="display: inline">#<a href="/tags/rustlang">rustlang</a></li>
-					
-					<li style="display: inline">#<a href="/tags/golang">golang</a></li>
-					
-					<li style="display: inline">#<a href="/tags/typescript">typescript</a></li>
-					
-					<li style="display: inline">#<a href="/tags/commonlisp">commonlisp</a></li>
-					
-					<li style="display: inline">#<a href="/tags/cppfront">cppfront</a></li>
-					
+				    <li style="display: inline">🏷️ <a href="/tags/ping">ping</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/cpp">cpp</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/cee">cee</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/zig">zig</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/comptime">comptime</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/rustlang">rustlang</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/golang">golang</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/typescript">typescript</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/commonlisp">commonlisp</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/cppfront">cppfront</a></li>
+				    
 				</ul>
 			</nav>
 			
 			
 		</div>
 	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-02feb/2023-02feb07--01-ping/">⬅️ Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/">➡️ Ping 03/02/2023 .01: 블로그 디자인 수정</a>
+    
+</nav>
+
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
-  </div>
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510814</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

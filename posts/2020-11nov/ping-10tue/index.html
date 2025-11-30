@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 10/Nov/2020 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 10/Nov/2020 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764510814">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 올해 초에는 Vue.js을 많이 쓸일이 있었었다.
@@ -44,42 +44,46 @@ OO을 하고 코딩을 하고, 화면 컴포넌트들을 JSX와 유사한 모양
 아주 오래 전에, Adobe Flex에서 MXML, ActionScript3 같은 것을 써서 화면 컴포넌트를 만들던 이후로 거의 10여년 만에 화면에 필요한 컴포넌트를 만들고 개발을 해봤다.
 그 중간 중간 jQuery을 이용해서 웹화면을 만들거나 하는 경험도 있기는 했었는데, 재밌게도 그 이전에 사용하던 MXML, AS3의 컴포넌트 중심 개발방식이 훨씬 앞선 것이었다는 생각을 했다.
 실제로 2008년 정도에도, 현재의 ES6 같은 느낌의 AS3으로, Class based OO을 하고 코딩을 하고, 화면 컴포넌트들을 JSX와 유사한 모양의 MXML으로 조직하고, 또 바인딩을 이용해서 지금의 Vue, React에서 State을 이용하여 데이터를 이용하여 컴포넌트를 어떻게 그릴지 결정해서 개발을 했었었다.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
                     
                 
             
         
 
         <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-	
+
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
+
+    <div class="search-form">
+        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">🗂️ INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">📨 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -92,9 +96,9 @@ OO을 하고 코딩을 하고, 화면 컴포넌트들을 JSX와 유사한 모양
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#cccccc',  
-      buttonColorDark: '#566666',  
-      buttonColorLight: '#566666', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -102,22 +106,35 @@ OO을 하고 코딩을 하고, 화면 컴포넌트들을 JSX와 유사한 모양
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+    
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-11nov/leet-code-1614-3rd/">⬅️ Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-11nov/ping-05thu/">➡️ Ping 05/Nov/2020</a>
+    
+</nav>
+
+
 	<article data-pagefind-body>
-		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">Ping 10/Nov/2020</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		<div class="title"><h1 class="title" data-pagefind-meta="title">💷 Ping 10/Nov/2020</h1>
+			<div class="meta">
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2020-11-10" pubdate>
-                            10 Nov 2020
+                            2020年11月10日
                         </time>
-			<div class="meta"> 🗓️ 10 Nov, 2020</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -167,54 +184,59 @@ Flex3을 할 때 보다는. 하지만 리액트도 마찬가지고, 어쩌면 �
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li style="display: inline">#<a href="/tags/ping">ping</a></li>
-					
-					<li style="display: inline">#<a href="/tags/vuejs">vuejs</a></li>
-					
-					<li style="display: inline">#<a href="/tags/reactjs">reactjs</a></li>
-					
-					<li style="display: inline">#<a href="/tags/vuex">vuex</a></li>
-					
-					<li style="display: inline">#<a href="/tags/redux">redux</a></li>
-					
-					<li style="display: inline">#<a href="/tags/jsx">jsx</a></li>
-					
-					<li style="display: inline">#<a href="/tags/as3">as3</a></li>
-					
-					<li style="display: inline">#<a href="/tags/flex3">flex3</a></li>
-					
-					<li style="display: inline">#<a href="/tags/mxml">mxml</a></li>
-					
-					<li style="display: inline">#<a href="/tags/bindable">bindable</a></li>
-					
+				    <li style="display: inline">🏷️ <a href="/tags/ping">ping</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/vuejs">vuejs</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/reactjs">reactjs</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/vuex">vuex</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/redux">redux</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/jsx">jsx</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/as3">as3</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/flex3">flex3</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/mxml">mxml</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/bindable">bindable</a></li>
+				    
 				</ul>
 			</nav>
 			
 			
 		</div>
 	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-11nov/leet-code-1614-3rd/">⬅️ Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-11nov/ping-05thu/">➡️ Ping 05/Nov/2020</a>
+    
+</nav>
+
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
-  </div>
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510814</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

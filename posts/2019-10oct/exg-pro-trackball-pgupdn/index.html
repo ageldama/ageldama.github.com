@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ELECOM EX-G Pro Trackball 잉여 버튼을 Page Up/Down으로 쓰기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ELECOM EX-G Pro Trackball 잉여 버튼을 Page Up/Down으로 쓰기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764510814">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="컴퓨터를 많이 쓰니까 다른 부분보다 손목이 먼저 망가져서, 손목을 조금만
 큰 각도로 꺾으면 아프다. ㅠ.ㅠ.. 예전에도 그랬었는데1
@@ -48,42 +48,46 @@ xev으로
 마우스 안쓰고, 트랙볼 쓰기2 키보드 넘패드 부분 없는 짧은 86키 레이아웃 쓰기 로지텍 마블 트랙맨 잘 쓰다가, 지름을 받아서 조금 다음 티어의 제품으로 업그레이드 해봤다.
 그래서 바꾼게 –&gt; 엘레컴 EX-G Pro Trackball ..그런데 다 좋은데, 저기 있는 Function assignment button 이라고 써있는게 2개가 더 달려있음.3
 이 추가기능버튼들은 윈도였다면 벤더에서 제공하는 프로그램을 통해서 할당이 가능할거 같은데, 리눅스/X윈도에서는 xev으로 확인해보니 그냥 Button 10번, 11번이었다.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
                     
                 
             
         
 
         <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-	
+
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
+
+    <div class="search-form">
+        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">🗂️ INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">📨 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -96,9 +100,9 @@ xev으로
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#cccccc',  
-      buttonColorDark: '#566666',  
-      buttonColorLight: '#566666', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -106,22 +110,35 @@ xev으로
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+    
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-11nov/ping-01fri/">⬅️ Ping 01/Nov/2019</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/blog-font/">➡️ 블로그 폰트 적용</a>
+    
+</nav>
+
+
 	<article data-pagefind-body>
-		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">ELECOM EX-G Pro Trackball 잉여 버튼을 Page Up/Down으로 쓰기</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		<div class="title"><h1 class="title" data-pagefind-meta="title">🦱 ELECOM EX-G Pro Trackball 잉여 버튼을 Page Up/Down으로 쓰기</h1>
+			<div class="meta">
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2019-10-25" pubdate>
-                            25 Oct 2019
+                            2019年10月25日
                         </time>
-			<div class="meta"> 🗓️ 25 Oct, 2019</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -227,48 +244,53 @@ Guile으로 설정 파일 쓸거면 그냥 거기서 키이벤트 발생하는 �
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li style="display: inline">#<a href="/tags/linux">linux</a></li>
-					
-					<li style="display: inline">#<a href="/tags/xorg">xorg</a></li>
-					
-					<li style="display: inline">#<a href="/tags/xdotool">xdotool</a></li>
-					
-					<li style="display: inline">#<a href="/tags/xbindkeys">xbindkeys</a></li>
-					
-					<li style="display: inline">#<a href="/tags/xev">xev</a></li>
-					
-					<li style="display: inline">#<a href="/tags/trackball">trackball</a></li>
-					
-					<li style="display: inline">#<a href="/tags/mouse">mouse</a></li>
-					
+				    <li style="display: inline">🏷️ <a href="/tags/linux">linux</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/xorg">xorg</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/xdotool">xdotool</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/xbindkeys">xbindkeys</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/xev">xev</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/trackball">trackball</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/mouse">mouse</a></li>
+				    
 				</ul>
 			</nav>
 			
 			
 		</div>
 	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-11nov/ping-01fri/">⬅️ Ping 01/Nov/2019</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/blog-font/">➡️ 블로그 폰트 적용</a>
+    
+</nav>
+
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
-  </div>
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510814</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

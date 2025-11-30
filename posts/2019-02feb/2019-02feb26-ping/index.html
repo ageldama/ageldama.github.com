@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 26/02/2019 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 26/02/2019 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764510814">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="게임: 발더스게이트EE, &lsquo;원숭이섬의 비밀&rsquo; SE &#43; SteamPlay, 등등
 아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced Edition들
@@ -38,42 +38,46 @@ Unavowed. 이런류의 어드벤쳐 꾸준히 만드는 “WadjetEyeGames&#34;�
 새로 UI이나 그래픽 요소들 등등 리마스터 한건지 훨씬 좋아진거 같다.
 원숭이섬의 비밀: Special Edition 이것도 시간날때 플레이. ScummVM 으로 옛날 그래픽으로 다시 해도 좋겠지만, 오히려 애니메이션이나 그래픽 다시 그린게 나는 더 마음에 들어서 이쪽이 좋은거 같다.
 Unavowed. 이런류의 어드벤쳐 꾸준히 만드는 “WadjetEyeGames&#34;이 내 취향에 잘 맞는걸 계속 만들고 있는거 같아서 기뻤다.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
                     
                 
             
         
 
         <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-	
+
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
+
+    <div class="search-form">
+        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">🗂️ INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">📨 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -86,9 +90,9 @@ Unavowed. 이런류의 어드벤쳐 꾸준히 만드는 “WadjetEyeGames&#34;�
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#cccccc',  
-      buttonColorDark: '#566666',  
-      buttonColorLight: '#566666', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -96,22 +100,35 @@ Unavowed. 이런류의 어드벤쳐 꾸준히 만드는 “WadjetEyeGames&#34;�
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+    
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/counsel-ivy&#43;cpp-ide/">⬅️ Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">➡️ NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</a>
+    
+</nav>
+
+
 	<article data-pagefind-body>
-		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">Ping 26/02/2019</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		<div class="title"><h1 class="title" data-pagefind-meta="title">👩‍🦼 Ping 26/02/2019</h1>
+			<div class="meta">
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2019-02-26" pubdate>
-                            26 Feb 2019
+                            2019年02月26日
                         </time>
-			<div class="meta"> 🗓️ 26 Feb, 2019</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -232,36 +249,41 @@ VirtualBox에 설치해서 계속 사용할거 같긴하다.</p>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li style="display: inline">#<a href="/tags/ping">ping</a></li>
-					
+				    <li style="display: inline">🏷️ <a href="/tags/ping">ping</a></li>
+				    
 				</ul>
 			</nav>
 			
 			
 		</div>
 	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/counsel-ivy&#43;cpp-ide/">⬅️ Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">➡️ NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</a>
+    
+</nav>
+
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
-  </div>
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510814</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

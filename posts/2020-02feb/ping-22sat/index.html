@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 22/Feb/2020 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 22/Feb/2020 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764510814">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 
@@ -42,42 +42,46 @@
 윈도7 설치된 것도 꽤 가볍고 빠르게 정리되어 있었다. 그냥 FreeBSD을 처음에는 설치하려고 하다가, 결국 애플리케이션이나 그냥 적당히 잘 돌아가는, 이맥스 정보만 잘 동작하는 기계면 될 것 같아서 아치리눅스를 설치.
 만족스럽다.
 데스크탑 원래 사용하던 것도 그렇게 엄청나게 좋은 것은 아니지만 만족스러운 사용인데, 문제는 책상 가운데에 모니터랑 키보드를 놓고 쓰면 책을 읽을 자리가 없어져서 항상 키보드 등을 한 켠으로 밀어놓는다.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
                     
                 
             
         
 
         <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-	
+
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
+
+    <div class="search-form">
+        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">🗂️ INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">📨 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -90,9 +94,9 @@
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#cccccc',  
-      buttonColorDark: '#566666',  
-      buttonColorLight: '#566666', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -100,22 +104,35 @@
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+    
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-02feb/make-grub2-usb/">⬅️ Grub2, Archlinux ISO으로 만능 USB 메모리스틱 만들기</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-02feb/ping-15sat/">➡️ Ping 15/Feb/2020</a>
+    
+</nav>
+
+
 	<article data-pagefind-body>
-		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">Ping 22/Feb/2020</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		<div class="title"><h1 class="title" data-pagefind-meta="title">💡 Ping 22/Feb/2020</h1>
+			<div class="meta">
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2020-02-22" pubdate>
-                            22 Feb 2020
+                            2020年02月22日
                         </time>
-			<div class="meta"> 🗓️ 22 Feb, 2020</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -159,36 +176,41 @@
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li style="display: inline">#<a href="/tags/ping">ping</a></li>
-					
+				    <li style="display: inline">🏷️ <a href="/tags/ping">ping</a></li>
+				    
 				</ul>
 			</nav>
 			
 			
 		</div>
 	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-02feb/make-grub2-usb/">⬅️ Grub2, Archlinux ISO으로 만능 USB 메모리스틱 만들기</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-02feb/ping-15sat/">➡️ Ping 15/Feb/2020</a>
+    
+</nav>
+
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
-  </div>
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510814</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

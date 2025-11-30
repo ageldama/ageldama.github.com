@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Emacs &#43; CMake-IDE Screencast - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Emacs &#43; CMake-IDE Screencast - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764510814">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
       
@@ -39,42 +39,46 @@ Spacemacs 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.
 이맥스에서 C&#43;&#43; 개발 편하게 하려고 이것저것 알아보다가 결국엔 CMake-IDE &#43; RTags 조합이 제일 괜찮다는 결론에 도달해서 만들어본 설정이다.
 원래 사용하는 환경이 Evil은 아니었는데, Spacemacs 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.
 지금은 그냥 Spacemacs은 다운도 잘되고 너무 무겁고 설정을 레이어 방식 으로 할게 아니면 짜증나게 하는 부분도 많고, 그렇다고 레이어가 완전히 내가 그냥 커스텀으로 만들어서 바로바로 머지하는 구조도 아니고 중앙에서 관리하는 방식으로만 되는거 같아서, 옆으로 치우고, 바닐라 이맥스에 Spacemacs스럽게 직접 설정해서 가볍게 사용하고 있다. :-)">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
                     
                 
             
         
 
         <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-	
+
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
+
+    <div class="search-form">
+        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">🗂️ INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">📨 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -87,9 +91,9 @@ Spacemacs 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#cccccc',  
-      buttonColorDark: '#566666',  
-      buttonColorLight: '#566666', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -97,22 +101,35 @@ Spacemacs 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+    
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/">⬅️ NeoVim, Evil-mode and Emacs의 모험</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-04apr/2018-04apr-golang-windows-vscode/">➡️ Golang Windows에서 Vscode이랑 행복하게 쓰기</a>
+    
+</nav>
+
+
 	<article data-pagefind-body>
-		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">Emacs &#43; CMake-IDE Screencast</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		<div class="title"><h1 class="title" data-pagefind-meta="title">🫰 Emacs &#43; CMake-IDE Screencast</h1>
+			<div class="meta">
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2018-05-08" pubdate>
-                            08 May 2018
+                            2018年05月08日
                         </time>
-			<div class="meta"> 🗓️ 08 May, 2018</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -322,54 +339,59 @@ Spacemacs 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li style="display: inline">#<a href="/tags/workflow">workflow</a></li>
-					
-					<li style="display: inline">#<a href="/tags/editor">editor</a></li>
-					
-					<li style="display: inline">#<a href="/tags/emacs">emacs</a></li>
-					
-					<li style="display: inline">#<a href="/tags/cmake">cmake</a></li>
-					
-					<li style="display: inline">#<a href="/tags/cmake-ide">cmake-ide</a></li>
-					
-					<li style="display: inline">#<a href="/tags/ide">ide</a></li>
-					
-					<li style="display: inline">#<a href="/tags/ninja">ninja</a></li>
-					
-					<li style="display: inline">#<a href="/tags/rtags">rtags</a></li>
-					
-					<li style="display: inline">#<a href="/tags/rdm">rdm</a></li>
-					
-					<li style="display: inline">#<a href="/tags/screencast">screencast</a></li>
-					
+				    <li style="display: inline">🏷️ <a href="/tags/workflow">workflow</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/editor">editor</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/emacs">emacs</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/cmake">cmake</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/cmake-ide">cmake-ide</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/ide">ide</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/ninja">ninja</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/rtags">rtags</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/rdm">rdm</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/screencast">screencast</a></li>
+				    
 				</ul>
 			</nav>
 			
 			
 		</div>
 	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/">⬅️ NeoVim, Evil-mode and Emacs의 모험</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-04apr/2018-04apr-golang-windows-vscode/">➡️ Golang Windows에서 Vscode이랑 행복하게 쓰기</a>
+    
+</nav>
+
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
-  </div>
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510814</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

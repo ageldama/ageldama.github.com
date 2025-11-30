@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764510815">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -16,44 +16,48 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="아겔로그">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
                     
                 
             
         
 
         <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-	
+
 	
 </head>
 
-	<body>
-		<div class="content">
+        <body>
+                <div class="container">
 			<header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
+
+    <div class="search-form">
+        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">🗂️ INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">📨 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -66,9 +70,9 @@
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#cccccc',  
-      buttonColorDark: '#566666',  
-      buttonColorLight: '#566666', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -76,23 +80,16 @@
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+    
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 
 			<div class="search">
-    <div class="search-form">
-        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
-        <input id="search-query" name="search-query"
-               class="search-query"
-               tabindex="1"
-               placeholder="검색어를 입력 (search phrase)"/>
-    </div>
-
-
     <div class="search-results"></div>
 </div>
 
@@ -149,67 +146,14 @@
 
 
 			<main class="list">
-				<div class="site-description"><blockquote><h6><i>"One of the nice things about getting older is that you come to understand that you can integrate multiple aspects of your life together. When you're young, you think everything has to be binary, as that's exactly how you feel at that age".</i></h6> - Min Jin Lee</blockquote></div>
+				<div class="site-description"></div>
 				
 				
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/2019feb27-ping/">Ping 26/02/2019</a></h1>
-					<time>🗓️ 26 Feb, 2019</time>
-					<br><div class="description">
-						
-						<h1 id="번아웃-회의감">번아웃, 회의감</h1>
-<p>아무래도 번아웃이 온거 같다. 일을 해야 하는데 아무런 생각이나 의욕도
-떠오르지 않는다.</p>
-<p>아무것도 제대로 하지 못할거 같고, 해서 의미도 없을거라는 생각이 강하다.</p>
-<p>일하는것에 회의가 심하다. 실제로는 아무것도 제대로 알지 못하고 그냥
-싫으니까 반대에 사람들 사이를 조작해서 악의적으로 행동하고 그렇게
-조장하는것에 이제는 삶에서 너무 많이 봐온거 같고, 그런 사이에서
-무력하게 지내고 해야한다는게 무엇보다 지친다.</p>
-<p>그리고 그렇게 때문에 해야할 이유도, 굳이 마음을 써야할 이유도
-모르겠다.</p>
-<p>그냥 개인적으로 하고 싶던 설정이나 만지작거리면서 시간을 보내봐도 딱히
-그게 지나고 나면 하고 싶은것도 없어진다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/counsel-ivy&#43;cpp-ide/">Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)</a></h1>
-					<time>🗓️ 26 Feb, 2019</time>
-					<br><div class="description">
-						
-						<p>최근에 이맥스 설정을
-<a href="https://github.com/emacs-helm/helm">Helm</a>기반에서
-<a href="https://github.com/abo-abo/swiper">Ivy/Counsel</a>으로 전부 바꿨다.</p>
-<p>더 가볍고, 적당히 잘 동작하고,
-<a href="https://github.com/BurntSushi/ripgrep">Ripgrep</a>이랑 기본적으로
-설정이 가능해서 편함.</p>
-<p>거기에 <code>C-c C-o</code>
-(<a href="https://oremacs.com/2015/11/04/ivy-occur/">ivy-occur</a>) +
-<a href="https://github.com/mhayashi1120/Emacs-wgrep">wgrep</a>이 Helm에선
-동작할때가 그때그때 기능에 따라 달라서 짜증나고, 심지어 플러그인을
-설정해서 써야하거나 해서 정말 좋아하는 기능인데 우울하게 만들었는데,
-Ivy이 훨씬 깔끔하게 동작하고 일관성있게 잘 동작함.</p>
-<p>처음에는 Helm에서 하는 기능들을 그대로 옮기려고만 생각하다가, 오히려
-Ivy에 맞춰서 내가 익숙해지고, 더 낫게 할 방법들이 있어서 그냥 내가
-adopt해서 편안해졌다.</p>
-<h1 id="cmake--compile_commandsjson">CMake + <code>compile_commands.json</code></h1>
-<p>이전에는 <a href="https://github.com/Andersbakken/rtags">RTags</a>을 사용해서
-&lsquo;&lsquo;정말로&rsquo;&rsquo; C++ 프로젝트를 Clang등을 이용해서 파싱하고, 그걸
-인덱싱한걸로 정확한 navigation, code completion을 구성해 사용하려고
-했었었다. 그리고 타입 정보다 그런거 다 있으니 제대로 굴러가서 꽤
-쓸만하고.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/2019-02feb26-ping/">Ping 26/02/2019</a></h1>
-					<time>🗓️ 26 Feb, 2019</time>
-					<br><div class="description">
+				<section class="list-item"><h1 class="title"><a href="/posts/2019-02feb/2019-02feb26-ping/">👩‍🦼 Ping 26/02/2019</a></h1>
+                                    <time>2019年02月26日
+                                        </time>
+                                        <br><div class="description">
 						
 						<h1 id="게임-발더스게이트ee-원숭이섬의-비밀-se--steamplay-등등">게임: 발더스게이트EE, &lsquo;원숭이섬의 비밀&rsquo; SE + SteamPlay, 등등</h1>
 <p>아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced Edition들
@@ -230,10 +174,10 @@ Edition</a>
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</a></h1>
-					<time>🗓️ 26 Feb, 2019</time>
-					<br><div class="description">
+				<section class="list-item"><h1 class="title"><a href="/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">💧 NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</a></h1>
+                                    <time>2019年02月26日
+                                        </time>
+                                        <br><div class="description">
 						
 						<h1 id="필요성-궁금함-현재-상황">필요성, 궁금함, 현재 상황</h1>
 <ol>
@@ -277,10 +221,10 @@ IP주소를 고정해서 접속이 편하도록 설정했다.</li>
                                         
 				</section>
 				
-				<section class="list-item">
-					<h1 class="title"><a href="/posts/2019-02feb/2019-02feb07thu-ping/">Ping 07/02/2019</a></h1>
-					<time>🗓️ 07 Feb, 2019</time>
-					<br><div class="description">
+				<section class="list-item"><h1 class="title"><a href="/posts/2019-02feb/2019-02feb07thu-ping/">🦍 Ping 07/02/2019</a></h1>
+                                    <time>2019年02月07日
+                                        </time>
+                                        <br><div class="description">
 						
 						<h1 id="golang-사랑">Golang 사랑</h1>
 <p>회사일로 Golang을 다시 잡고 쓰게됐다.</p>
@@ -300,55 +244,196 @@ IP주소를 고정해서 접속이 편하도록 설정했다.</li>
                                         
 				</section>
 				
+				<section class="list-item"><h1 class="title"><a href="/posts/2019-02feb/2019-02feb07thu-gosched-fun/">🟡 Golang Goroutine, Channel, I/O 그리고 Scheduler 이해해보기</a></h1>
+                                    <time>2019年02月07日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>Go언어를 요즘에 진지하게 생각하고 계속해서 자료를 찾아보며 익히고
+있다.</p>
+<p>가장 흥미있는 부분은 Goroutine scheduler 구현과 I/O시스템을 어떻게
+만들었을까인데, 아직은 소스코드를 뜯어 읽고 하지는 못하지만, 그냥 내가
+만들었다면 아마 이렇지 않을까 하는 정도의 추측을 갖고 반대로 예제들을
+만들어보며 확인해보고 있다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>우선 현재의 추측은 다음과 같다.</p>
+<ol>
+<li><code>GOMAXPROCS</code> 같은걸 이용해서 실행시간에는 필요한만큼만
+최소한으로만 OS Thread을 시작하는듯. <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
+<ol>
+<li>너무 많은 스레드가 있어도 어차피 Context switching 비용만
+늘어나고 별 의미는 커녕 더 나쁠 수 있으니까.</li>
+</ol>
+</li>
+<li>Goroutine들은 Go runtime의 Scheduler이 서로 실행기회를 나눠준다.
+<ol>
+<li>실행기회를 다른 goroutine에 yield하는 방법은,</li>
+<li>I/O operation을 실행하거나</li>
+<li>Channel에 Receive/Send할때</li>
+</ol>
+</li>
+<li>위 (2.2)에서 I/O operation이 Async I/O으로 구현되었을거라고 생각.
+<ol>
+<li>왜냐하면, 그래야 blocking 안되고, Go scheduler으로 실행이 넘어가고,</li>
+<li>Go scheduler은 I/O event loop을 통해서 적절하게 다음에 실행할
+Goroutine을 결정할 수 있을테니까.</li>
+</ol>
+</li>
+</ol>
+<h1 id="예제-프로그램-코드">예제 프로그램 코드</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12">12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13">13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14">14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15">15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16">16</a>
+</span><span class="lnt" id="hl-0-17"><a class="lnlinks" href="#hl-0-17">17</a>
+</span><span class="lnt" id="hl-0-18"><a class="lnlinks" href="#hl-0-18">18</a>
+</span><span class="lnt" id="hl-0-19"><a class="lnlinks" href="#hl-0-19">19</a>
+</span><span class="lnt" id="hl-0-20"><a class="lnlinks" href="#hl-0-20">20</a>
+</span><span class="lnt" id="hl-0-21"><a class="lnlinks" href="#hl-0-21">21</a>
+</span><span class="lnt" id="hl-0-22"><a class="lnlinks" href="#hl-0-22">22</a>
+</span><span class="lnt" id="hl-0-23"><a class="lnlinks" href="#hl-0-23">23</a>
+</span><span class="lnt" id="hl-0-24"><a class="lnlinks" href="#hl-0-24">24</a>
+</span><span class="lnt" id="hl-0-25"><a class="lnlinks" href="#hl-0-25">25</a>
+</span><span class="lnt" id="hl-0-26"><a class="lnlinks" href="#hl-0-26">26</a>
+</span><span class="lnt" id="hl-0-27"><a class="lnlinks" href="#hl-0-27">27</a>
+</span><span class="lnt" id="hl-0-28"><a class="lnlinks" href="#hl-0-28">28</a>
+</span><span class="lnt" id="hl-0-29"><a class="lnlinks" href="#hl-0-29">29</a>
+</span><span class="lnt" id="hl-0-30"><a class="lnlinks" href="#hl-0-30">30</a>
+</span><span class="lnt" id="hl-0-31"><a class="lnlinks" href="#hl-0-31">31</a>
+</span><span class="lnt" id="hl-0-32"><a class="lnlinks" href="#hl-0-32">32</a>
+</span><span class="lnt" id="hl-0-33"><a class="lnlinks" href="#hl-0-33">33</a>
+</span><span class="lnt" id="hl-0-34"><a class="lnlinks" href="#hl-0-34">34</a>
+</span><span class="lnt" id="hl-0-35"><a class="lnlinks" href="#hl-0-35">35</a>
+</span><span class="lnt" id="hl-0-36"><a class="lnlinks" href="#hl-0-36">36</a>
+</span><span class="lnt" id="hl-0-37"><a class="lnlinks" href="#hl-0-37">37</a>
+</span><span class="lnt" id="hl-0-38"><a class="lnlinks" href="#hl-0-38">38</a>
+</span><span class="lnt" id="hl-0-39"><a class="lnlinks" href="#hl-0-39">39</a>
+</span><span class="lnt" id="hl-0-40"><a class="lnlinks" href="#hl-0-40">40</a>
+</span><span class="lnt" id="hl-0-41"><a class="lnlinks" href="#hl-0-41">41</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="s">&#34;fmt&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="s">&#34;runtime&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="s">&#34;sync&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="s">&#34;time&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">func</span><span class="w"> </span><span class="nf">timer</span><span class="p">(</span><span class="nx">wg</span><span class="w"> </span><span class="o">*</span><span class="nx">sync</span><span class="p">.</span><span class="nx">WaitGroup</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;timer started&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">select</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">case</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">time</span><span class="p">.</span><span class="nf">After</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">):</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// NOTE: this never happens while it can&#39;t get any chance to run by scheduler</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="nx">wg</span><span class="p">.</span><span class="nf">Done</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">func</span><span class="w"> </span><span class="nf">printer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// DO NOTHING</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// NOTE: doing any I/O here can yield to gorountine scheduler</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">func</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">var</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="nx">wg</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">sync</span><span class="p">.</span><span class="nx">WaitGroup</span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">runtime</span><span class="p">.</span><span class="nf">GOMAXPROCS</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">wg</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">go</span><span class="w"> </span><span class="nf">printer</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">go</span><span class="w"> </span><span class="nf">timer</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">wg</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">wg</span><span class="p">.</span><span class="nf">Wait</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;bye&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="실행결과-결론-생각">실행결과, 결론, 생각</h1>
+<p>예상한대로,</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2018-11nov/cl-asdf-custom-load-script/">🧡 ASDF으로 간단한 의존성 연결과 로딩하기</a></h1>
+                                    <time>2018年11月03日
+                                        </time>
+                                        <br><div class="description">
+						
+						<h1 id="system-이런게-왜-필요하지-require있잖아">System? 이런게 왜 필요하지? <code>require</code>있잖아</h1>
+<p>대부분의 유명한 프로그래밍언어들이 <em>커먼리습의 System</em> 에 대응하는
+기능이 명확하게 없으니까, 다른 프로그래밍 하거나 하는 방법으로
+이야기를 하지는 않아야겠다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p><a href="https://lispcookbook.github.io/cl-cookbook/systems.html">https://lispcookbook.github.io/cl-cookbook/systems.html</a> 에서 마음에 드는 설명을 찾을수 있다.</p>
+<blockquote>
+<p>A <strong>system</strong> is a collection of Lisp files that together constitute an
+application or a library, and that should therefore be managed as a
+whole. A <strong>system definition</strong> describes which source files make up the
+system, what the dependencies among them are, and the order they
+should be compiled and loaded in.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
 				
 
 
+<nav class="posts-pagination" aria-label="Page navigation">
 
+    
+    <a href="/" class="posts-pagination-btn" aria-label="Last">Last⏮️</a>
+    <a href="/page/29/" class="posts-pagination-btn" aria-label="Newer">Newer⏪</a>
+    
 
+    <span class="posts-pagination-indicator" >
+        (( 30 of 37 ))
+    </span>
 
+    
+    <a href="/page/31/" class="posts-pagination-btn" aria-label="Older">⏩Older</a>
+    <a href="/page/37/" class="posts-pagination-btn" aria-label="First">⏭️First</a>
+    
+</nav>
 
-
-
-
-<ul class="pagination">
-	<span class="page-item page-prev">
-	
-            <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">First⏮️</span></a>
-            <a href="/page/29/" class="page-link" aria-label="Previous"><span aria-hidden="true">Prev⏪</span></a>
-        
-	</span>
-        <span class="page-number">(30/37)</span>
-	<span class="page-item page-next">
-	
-            <a href="/page/31/" class="page-link" aria-label="Next"><span aria-hidden="true">Next⏩</span></a>
-            <a href="/page/37/" class="page-link" aria-label="Last"><span aria-hidden="true">Last⏭️</span></a>
-        
-	</span>
-</ul>
 
 
 			</main>
-			<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
-  </div>
+			<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510815</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script>
 		</div>
 	</body>
 </html>

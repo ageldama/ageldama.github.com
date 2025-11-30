@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34; - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34; - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764510814">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른
@@ -54,42 +54,46 @@ def find_paren_count(s):
   <meta name="twitter:title" content="Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;">
   <meta name="twitter:description" content="지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현 을 다른 언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고 싶었다.
 1 2 3 4 5 6 7 8 from itertools import accumulate def find_paren_count(s): gen_only_parens = (ch == &#39;(&#39; and 1 or -1 for ch in s if ch in (&#39;(&#39;, &#39;)&#39;,)) return max(accumulate(gen_only_parens)) 다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
                     
                 
             
         
 
         <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-	
+
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
+
+    <div class="search-form">
+        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">🗂️ INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">📨 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -102,9 +106,9 @@ def find_paren_count(s):
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#cccccc',  
-      buttonColorDark: '#566666',  
-      buttonColorLight: '#566666', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -112,22 +116,35 @@ def find_paren_count(s):
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+    
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-11nov/ping-13fri/">⬅️ Ping 13/Nov/2020</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-11nov/ping-10tue/">➡️ Ping 10/Nov/2020</a>
+    
+</nav>
+
+
 	<article data-pagefind-body>
-		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		<div class="title"><h1 class="title" data-pagefind-meta="title">🎫 Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</h1>
+			<div class="meta">
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2020-11-11" pubdate>
-                            11 Nov 2020
+                            2020年11月11日
                         </time>
-			<div class="meta"> 🗓️ 11 Nov, 2020</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -170,44 +187,49 @@ def find_paren_count(s):
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li style="display: inline">#<a href="/tags/leet-code">leet-code</a></li>
-					
-					<li style="display: inline">#<a href="/tags/python">python</a></li>
-					
-					<li style="display: inline">#<a href="/tags/generator">generator</a></li>
-					
-					<li style="display: inline">#<a href="/tags/lazy">lazy</a></li>
-					
-					<li style="display: inline">#<a href="/tags/stream">stream</a></li>
-					
+				    <li style="display: inline">🏷️ <a href="/tags/leet-code">leet-code</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/python">python</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/generator">generator</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/lazy">lazy</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/stream">stream</a></li>
+				    
 				</ul>
 			</nav>
 			
 			
 		</div>
 	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-11nov/ping-13fri/">⬅️ Ping 13/Nov/2020</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-11nov/ping-10tue/">➡️ Ping 10/Nov/2020</a>
+    
+</nav>
+
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
-  </div>
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510814</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

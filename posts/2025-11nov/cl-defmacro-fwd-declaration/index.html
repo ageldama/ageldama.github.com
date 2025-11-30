@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[TIL] common-lisp defmacro와 forward-declaration - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[TIL] common-lisp defmacro와 forward-declaration - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764510815">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 의외로 단순한건데, 컴파일한 sbcl image에서 runtime에 unbound variable
@@ -64,42 +64,46 @@ unbound variable 런타임 컨디션이 발생." />
   <meta name="twitter:title" content="[TIL] common-lisp defmacro와 forward-declaration">
   <meta name="twitter:description" content="의외로 단순한건데, 컴파일한 sbcl image에서 runtime에 unbound variable 컨디션을 발생시킬 수 있음.
 1 2 3 4 5 6 7 8 9 10 11 12 (defmacro with-foo-bar (base-str (foo-var bar-var) &amp;rest body) &#34;BASE-STR에 foo, bar 문자열을 붙인 FOO-VAR, BAR-VAR 바인딩을 만들어, BODY을 해당 바인딩을 적용하여 실행&#34; ;; NOTE let-대신 symbol-macrolet 사용해도 ok: `(let ((,foo-var (format nil &#34;FOO:~a&#34; ,base-str)) (,bar-var (format nil &#34;BAR:~a&#34; ,base-str))) ,@body)) ;;; 매크로 with-foo-bar 사용: (with-foo-bar &#34;hello&#34; (a b) (format t &#34;~a // ~a~%&#34; a b)) ;; [OUTPUT] FOO:hello // BAR:hello 단순하게 코드가 커지면1, defmacro-선언보다 해당매크로 호출이 컴파일러가 볼 때에 먼저 위치할 수 있는데, 그런 경우엔 좀 어이없지만, unbound variable 런타임 컨디션이 발생.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
                     
                 
             
         
 
         <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-	
+
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
+
+    <div class="search-form">
+        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">🗂️ INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">📨 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -112,9 +116,9 @@ unbound variable 런타임 컨디션이 발생." />
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#cccccc',  
-      buttonColorDark: '#566666',  
-      buttonColorLight: '#566666', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -122,22 +126,35 @@ unbound variable 런타임 컨디션이 발생." />
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+    
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/">⬅️ 내 emacs elisp &#34;requires&#34;</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">➡️ [throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a>
+    
+</nav>
+
+
 	<article data-pagefind-body>
-		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">[TIL] common-lisp defmacro와 forward-declaration</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		<div class="title"><h1 class="title" data-pagefind-meta="title">🧬 [TIL] common-lisp defmacro와 forward-declaration</h1>
+			<div class="meta">
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2025-11-10" pubdate>
-                            10 Nov 2025
+                            2025年11月10日
                         </time>
-			<div class="meta"> 🗓️ 10 Nov, 2025</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -684,52 +701,57 @@ Footnotes
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li style="display: inline">#<a href="/tags/til">TIL</a></li>
-					
-					<li style="display: inline">#<a href="/tags/common-lisp">common-lisp</a></li>
-					
-					<li style="display: inline">#<a href="/tags/lisp">lisp</a></li>
-					
-					<li style="display: inline">#<a href="/tags/macro">macro</a></li>
-					
-					<li style="display: inline">#<a href="/tags/defmacro">defmacro</a></li>
-					
-					<li style="display: inline">#<a href="/tags/declaration">declaration</a></li>
-					
-					<li style="display: inline">#<a href="/tags/sbcl">sbcl</a></li>
-					
-					<li style="display: inline">#<a href="/tags/compiler">compiler</a></li>
-					
-					<li style="display: inline">#<a href="/tags/runtime">runtime</a></li>
-					
+				    <li style="display: inline">🏷️ <a href="/tags/til">TIL</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/common-lisp">common-lisp</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/lisp">lisp</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/macro">macro</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/defmacro">defmacro</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/declaration">declaration</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/sbcl">sbcl</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/compiler">compiler</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/runtime">runtime</a></li>
+				    
 				</ul>
 			</nav>
 			
 			
 		</div>
 	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/">⬅️ 내 emacs elisp &#34;requires&#34;</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">➡️ [throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a>
+    
+</nav>
+
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
-  </div>
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510815</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

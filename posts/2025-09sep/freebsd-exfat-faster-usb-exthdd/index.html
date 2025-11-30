@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템) - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템) - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764510815">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 freebsd을 써오면서 좀 불만이었던게1, usb으로 외장 hdd을 연결할 때
@@ -60,42 +60,46 @@ Footnotes 1 물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지
 그런데, 이번에 다시 시도하면서 그냥 얌전하게 fusefs &#43; fusefs-exfat 사용하니 그럭저럭 괜찮은 성능이 나와서 이렇게 해야겠구나 생각.
 fusefs &#43; ntfs 같은 port도 있는데, 이것도 빠를거 같지만, exfat이 더 구현이 빠를거 같다. (파일시스템 구조부터 훨씬 단순할테니까)
 Footnotes 1 물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지원 등등 hw driver지원이 항상 부족하지만.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
                     
                 
             
         
 
         <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-	
+
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
+
+    <div class="search-form">
+        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">🗂️ INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">📨 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -108,9 +112,9 @@ Footnotes 1 물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#cccccc',  
-      buttonColorDark: '#566666',  
-      buttonColorLight: '#566666', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -118,22 +122,35 @@ Footnotes 1 물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+    
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/freebsd-why/">⬅️ freebsd &#43; 고물랩탑 쓸만하다(재밌다!)</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/">➡️ 블로그 검색을 다시 짰다 (PageFind 제거)</a>
+    
+</nav>
+
+
 	<article data-pagefind-body>
-		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">[작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템)</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		<div class="title"><h1 class="title" data-pagefind-meta="title">🔴 [작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템)</h1>
+			<div class="meta">
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2025-09-15" pubdate>
-                            15 Sep 2025
+                            2025年09月15日
                         </time>
-			<div class="meta"> 🗓️ 15 Sep, 2025</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -178,54 +195,59 @@ hw driver지원이 항상 부족하지만.</p>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li style="display: inline">#<a href="/tags/exfat">exfat</a></li>
-					
-					<li style="display: inline">#<a href="/tags/ntfs">ntfs</a></li>
-					
-					<li style="display: inline">#<a href="/tags/fusefs">fusefs</a></li>
-					
-					<li style="display: inline">#<a href="/tags/fuse">fuse</a></li>
-					
-					<li style="display: inline">#<a href="/tags/linux">linux</a></li>
-					
-					<li style="display: inline">#<a href="/tags/hdd">hdd</a></li>
-					
-					<li style="display: inline">#<a href="/tags/usb">usb</a></li>
-					
-					<li style="display: inline">#<a href="/tags/exthdd">exthdd</a></li>
-					
-					<li style="display: inline">#<a href="/tags/filesystem">filesystem</a></li>
-					
-					<li style="display: inline">#<a href="/tags/freebsd">freebsd</a></li>
-					
+				    <li style="display: inline">🏷️ <a href="/tags/exfat">exfat</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/ntfs">ntfs</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/fusefs">fusefs</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/fuse">fuse</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/linux">linux</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/hdd">hdd</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/usb">usb</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/exthdd">exthdd</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/filesystem">filesystem</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/freebsd">freebsd</a></li>
+				    
 				</ul>
 			</nav>
 			
 			
 		</div>
 	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/freebsd-why/">⬅️ freebsd &#43; 고물랩탑 쓸만하다(재밌다!)</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/">➡️ 블로그 검색을 다시 짰다 (PageFind 제거)</a>
+    
+</nav>
+
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
-  </div>
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510815</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

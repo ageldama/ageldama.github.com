@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Zettelkästen? - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Zettelkästen? - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764510814">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="어제 Ping에서 계속
 블로깅을 하면서 생각 하는걸 계속 다듬어 갔으면 좋겠다는 말을 했었는데,
@@ -60,42 +60,46 @@ deck으로 쌓아만 놓는다.
 마침 HN에 그런걸 하기 적절해 보이는 글이 올라와서 읽어봤다.1
 간략히 정리해보면,
 생각 적기: 짧은 길이 메모를 적어서 생각만으로 카드를 만들고,2 3 이 상태에서는 우선 각 카드는 “순번없음 (Unsorted)” 상태 deck으로 쌓아만 놓는다. 순서매기기(1): 카드끼리 1, 2, 3 같이 순서를 두고 정렬. ‘Unsorted’ deck에서 꺼내와서 정리하는거겠지. 각 순서는 생각의 순서일수도 있겠고, 아니면 그냥 구분되는 다른 생각의 단절을 나타내는 방법으로 쓸수도 있겠지. 순서매기기(2): 그리고 위에 만든 1, 2, 3와 같은 순서 카드에 딸린 하위 생각들은, 1a, 1b, 2a, 2a1, 2a2 와 같이 alphanumeric으로 하위 생각들을 표현해 나간다. 연결하기: 그리고 각 카드들의 서로 연결 을 적어나간다. 예를 들어, 1a에서 하위 카드가 아닌데도 연관이 있는 2a1, 2a2으로 연결을 갖는다면, 1a 카드에 2a1, 2a2을 링크 라고 적어준다. 위 3단계에서 계층적으로 순서를 할당하는걸 시각화해보면 다음과 같은 트리가 되겠지4:">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
                     
                 
             
         
 
         <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-	
+
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
+
+    <div class="search-form">
+        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">🗂️ INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">📨 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -108,9 +112,9 @@ deck으로 쌓아만 놓는다.
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#cccccc',  
-      buttonColorDark: '#566666',  
-      buttonColorLight: '#566666', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -118,22 +122,35 @@ deck으로 쌓아만 놓는다.
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+    
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/ping-13sun/">⬅️ Ping 13/Oct/2019</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/cl-rutils/">➡️ rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</a>
+    
+</nav>
+
+
 	<article data-pagefind-body>
-		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">Zettelkästen?</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		<div class="title"><h1 class="title" data-pagefind-meta="title">📐 Zettelkästen?</h1>
+			<div class="meta">
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2019-10-12" pubdate>
-                            12 Oct 2019
+                            2019年10月12日
                         </time>
-			<div class="meta"> 🗓️ 12 Oct, 2019</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -233,36 +250,41 @@ deck으로 쌓아만 놓는다.</li>
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li style="display: inline">#<a href="/tags/thinking">thinking</a></li>
-					
+				    <li style="display: inline">🏷️ <a href="/tags/thinking">thinking</a></li>
+				    
 				</ul>
 			</nav>
 			
 			
 		</div>
 	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/ping-13sun/">⬅️ Ping 13/Oct/2019</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/cl-rutils/">➡️ rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</a>
+    
+</nav>
+
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
-  </div>
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510814</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>

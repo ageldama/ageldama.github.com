@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>&#34;the x files&#34; / 90년대의 분위기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764168059">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>&#34;the x files&#34; / 90년대의 분위기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764510815">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 90년대 중반, 학생일 때, KBS2였나에서 그 유명한 시그널 음악과 성우들의
@@ -44,42 +44,46 @@
 그런 &#34;공상과학&#34; 영화나 해외TV 드라마는 SF에 대한 취향, 더 나아가서는 여러가지 가능성의 상상과 특정한 분야에 대한 흥미를 갖는데 도움이 된 것 같다.
 실제로 &#34;스컬리효과&#34;1를 받거나, 철학2에 대한 흥미를 갖기 시작한 것 같다. 물론 &#34;멀더스러움&#34;도 많이 익히게 되었지 않았을까.
 요즘에도 그냥 방에서 뭔가를 할 때에, 항상 틀어 놓고 할일을 하게 된다. 책을 읽건 코딩이나 글을 쓰고 있건.">
-
-	
-		<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
-
-	        
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
                     
-                        <link rel="stylesheet" href="/css/gopherish.d228e94e5e96123ec2aa626c899fa8528a6bc890180261604d30a640f9010590.css" integrity="sha256-0ijpTl6WEj7CqmJsiZ&#43;oUopryJAYAmFgTTCmQPkBBZA=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.0f066e98239337d388595de75ce3671a4b66b91e55a42cc4bc23a5ee4df88d8e.css" integrity="sha256-DwZumCOTN9OIWV3nXONnGktmuR5VpCzEvCOl7k34jY4=" crossorigin="anonymous">
                     
                 
             
         
 
         <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-	
+
 	
 </head>
 <body>
-        <div class="content"><header>
+        <div class="container"><header>
     <div class="main ">
         <a class="site-title "
            href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
+
+    <div class="search-form">
+        <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+        <input id="search-query" name="search-query"
+               class="search-query"
+               tabindex="1"
+               placeholder="검색어를 입력 (search phrase)"/>
+    </div>
+
     <nav>
         
-            <a href="/posts/archive/">Index🗃️🏷️</a>
+            <a href="/posts/archive/">🗂️ INDEX</a>
         
-            <a href="/myself/">Contact📨</a>
+            <a href="/myself/">📨 CONTACT</a>
         
-
-	
     </nav>
 </header>
 
@@ -92,9 +96,9 @@
       
       time: '0.5s', 
       mixColor: '#fff', 
-      backgroundColor: '#cccccc',  
-      buttonColorDark: '#566666',  
-      buttonColorLight: '#566666', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
       saveInCookies: true, 
       label: '🌓', 
       autoMatchOsTheme: true 
@@ -102,22 +106,35 @@
     var darkmode = new Darkmode(options);
     darkmode.showWidget();
     window.darkmode = darkmode;
+
+    
+
   }
-  window.addEventListener('load', addDarkmodeWidget);
+ window.addEventListener('load', addDarkmodeWidget);
 </script>
 
 
 <main>
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">⬅️ [throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/netscape-30yrs-jwz/">➡️ (주절주절) jwz의 netscape navigator 2.0 출시 30주년, 내 기억들, 그리고 오늘</a>
+    
+</nav>
+
+
 	<article data-pagefind-body>
-		<div class="title">
-			<h1 class="title" data-pagefind-meta="title">&#34;the x files&#34; / 90년대의 분위기</h1>
-                        <time style="display: none;"
-                            data-pagefind-meta="date[datetime]"
+		<div class="title"><h1 class="title" data-pagefind-meta="title">🧑‍⚖️ &#34;the x files&#34; / 90년대의 분위기</h1>
+			<div class="meta">
+                        <time data-pagefind-meta="date[datetime]"
                             datetime="2025-09-20" pubdate>
-                            20 Sep 2025
+                            2025年09月20日
                         </time>
-			<div class="meta"> 🗓️ 20 Sep, 2025</div>
-		</div>
+                        </div>
+                </div>
 		
 		
 		<section class="body">
@@ -213,60 +230,65 @@ Footnotes
 			<nav class="nav tags">
 				<ul class="tags">
 					
-					<li style="display: inline">#<a href="/tags/the_x_files">the_x_files</a></li>
-					
-					<li style="display: inline">#<a href="/tags/90s">90s</a></li>
-					
-					<li style="display: inline">#<a href="/tags/tv">tv</a></li>
-					
-					<li style="display: inline">#<a href="/tags/show">show</a></li>
-					
-					<li style="display: inline">#<a href="/tags/thriller">thriller</a></li>
-					
-					<li style="display: inline">#<a href="/tags/horror">horror</a></li>
-					
-					<li style="display: inline">#<a href="/tags/mystery">mystery</a></li>
-					
-					<li style="display: inline">#<a href="/tags/dana">dana</a></li>
-					
-					<li style="display: inline">#<a href="/tags/scully">scully</a></li>
-					
-					<li style="display: inline">#<a href="/tags/mulder">mulder</a></li>
-					
-					<li style="display: inline">#<a href="/tags/fox">fox</a></li>
-					
-					<li style="display: inline">#<a href="/tags/dubbed">dubbed</a></li>
-					
-					<li style="display: inline">#<a href="/tags/nostalgic">nostalgic</a></li>
-					
+				    <li style="display: inline">🏷️ <a href="/tags/the_x_files">the_x_files</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/90s">90s</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/tv">tv</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/show">show</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/thriller">thriller</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/horror">horror</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/mystery">mystery</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/dana">dana</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/scully">scully</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/mulder">mulder</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/fox">fox</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/dubbed">dubbed</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/nostalgic">nostalgic</a></li>
+				    
 				</ul>
 			</nav>
 			
 			
 		</div>
 	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">⬅️ [throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a>
+    
+
+    
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/netscape-30yrs-jwz/">➡️ (주절주절) jwz의 netscape navigator 2.0 출시 30주년, 내 기억들, 그리고 오늘</a>
+    
+</nav>
+
 </main>
 
-<footer>
-  
-  <div class="footer-info">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764168059</code> | Subscribe <a href="/index.xml" >RSS&lt;/></a>
-      
-  </div>
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764510815</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSB7MGHZ4V');
-</script>
-<script>
-  
-</script></div>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
     </body>
 </html>
