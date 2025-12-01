@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Throttle - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764570542">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Throttle - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764576642">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -21,7 +21,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/styles.22a48c682c59650472b9fdd543c92b287e75003f1b93627e0dc805a3bfd739d9.css" integrity="sha256-IqSMaCxZZQRyuf3VQ8krKH51AD8bk2J&#43;DcgFo7/XOdk=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.74fc80102ad6b9f8fd86a24e464dd336400546ca8c2ffecbcf4dec25e20f235a.css" integrity="sha256-dPyAECrWufj9hqJORk3TNkAFRsqML/7Lz03sJeIPI1o=" crossorigin="anonymous">
                     
                 
             
@@ -55,11 +55,14 @@
             <a href="/myself/">📨 CONTACT</a>
         
 
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">🌓 dark?</button>
+
     </nav>
 </header>
 
 <script src="/js/darkmode-js.min.js"></script>
 <script>
+
   function addDarkmodeWidget() {
     var options = {
       
@@ -68,26 +71,35 @@
       time: '0.5s', 
       mixColor: '#fff', 
       backgroundColor: '#f6f5f3',  
-        buttonColorDark: '#566666',  
-        buttonColorLight: '#566666', 
+      buttonColorDark: '#566666',  
+      buttonColorLight: '#566666', 
       saveInCookies: true, 
-      label: '🌓', 
+         
       autoMatchOsTheme: true 
     }
 
     var darkmode = new Darkmode(options);
     window.darkmode = darkmode;
-      darkmode.showWidget();
 
-      if (window.screen.width <= 600) {
-          $('.darkmode-toggle').css({
-              'position': 'absolute',
-              'top': '10px',
-              'left': window.screen.width - 60,
-          });
+      let dark_count = 0;
+      $('.dark-mode-btn').click(function(){
+          dark_count ++;
+          if (dark_count % 18 === 0) {
+              
+              if (darkmode.isActivated()) {
+                  darkmode.toggle(); 
+              }
+          } else {
+              darkmode.toggle();
+          }
+      });
 
-          $('.darkmode-layer--button').hide();
-      }
+      
+
+       
+
+
+
 
     
 
@@ -104,7 +116,7 @@
 			<a href="/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a> <span class="meta">24 Sep, 2025</span>
 		</li></ul>
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570542</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764576642</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
