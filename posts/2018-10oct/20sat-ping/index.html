@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 20/10/2018 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764523836">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 20/10/2018 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764566667">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="날씨가 너무 좋은 가을.
 tweet 1053557185534251008
@@ -53,7 +53,7 @@ tweet 1053557478925918208
             
                 
                     
-                        <link rel="stylesheet" href="/css/styles.1faf2a80195995f35395b9b58eed6860ff6245f37689f98f25491bd52790277b.css" integrity="sha256-H68qgBlZlfNTlbm1ju1oYP9iRfN2ifmPJUkb1SeQJ3s=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.87f653c620d91641ca0c712ad4664b0ebb7c3b936f731361d35a7c457cfb2d81.css" integrity="sha256-h/ZTxiDZFkHKDHEq1GZLDrt8O5NvcxNh01p8RXz7LYE=" crossorigin="anonymous">
                     
                 
             
@@ -106,9 +106,20 @@ tweet 1053557478925918208
       label: '🌓', 
       autoMatchOsTheme: true 
     }
+
     var darkmode = new Darkmode(options);
-    darkmode.showWidget();
     window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
 
     
 
@@ -174,13 +185,17 @@ tweet 1053557478925918208
 
 <main>
         <nav class="post-prevnext" aria-label="posts">
-    
+    <span class="post-prevnext-side">
+        
         <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-11nov/03sat-ping/">⬅️ Ping 03/11/2018</a>
-    
+        
+    </span>
 
-    
+    <span class="post-prevnext-side">
+        
         <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-10oct/10wed-thought/">➡️ 생각 10/10/2018</a>
-    
+        
+    </span>
 </nav>
 
 
@@ -255,19 +270,23 @@ tweet 1053557478925918208
 	</article>
 
         <nav class="post-prevnext" aria-label="posts">
-    
+    <span class="post-prevnext-side">
+        
         <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-11nov/03sat-ping/">⬅️ Ping 03/11/2018</a>
-    
+        
+    </span>
 
-    
+    <span class="post-prevnext-side">
+        
         <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-10oct/10wed-thought/">➡️ 생각 10/10/2018</a>
-    
+        
+    </span>
 </nav>
 
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764523836</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764566667</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
