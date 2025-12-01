@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.152.2">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764570386">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:url" content="https://ageldama.github.io/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="아겔로그">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="아겔로그">
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/styles.1d7019d2254b088f6602c8d95ed9a4ed3f3d202a66b37b4be719f7410e8ab0bc.css" integrity="sha256-HXAZ0iVLCI9mAsjZXtmk7T89ICpms3tL5xn3QQ6KsLw=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+
+	
+</head>
+
+        <body>
+                <div class="container">
+			<header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+
+    <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
+        
+            <a href="/posts/archive/">🗂️ INDEX</a>
+        
+            <a href="/myself/">📨 CONTACT</a>
+        
+
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+
+    var darkmode = new Darkmode(options);
+    window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
+
+    
+
+  }
+ window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+			<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+
+			<main class="list">
+				<div class="site-description"></div>
+				
+				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-08aug/ping-30sun/">🛟 Ping 30/Aug/2020</a></h1>
+                                    <time>2020年08月30日
+                                        </time>
+                                        <br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+프로젝트 마무리
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>문서도 초안을 다 썼고, 마무리 중.</p>
+<p>
+  분산 커밋로그에 저장하고 읽는 것들을 aync. io을 이용해서 실행되도록
+  하고 있다. 처음엔 그냥 C라이브러리 기반으로 된 blocking 버젼으로
+  만족스러울 정도로 빠른 커밋로그라 그럭저럭 괜찮았는데 한개의 실제
+  사이클인 것처럼 줄일 수 있어서.</p>
+<p>
+  또 그냥 failure을 처리하는 부분을 바꾸고, 전체 애플리케이션을
+  특정시점에 더 실제 실행시점처럼 흉내내서 동작하도록 만들 수 있게
+  했다.</p>
+<p>
+  마무리도 마지막 검증이랑 마쳐가고 있고. 8월도 마무리
+  되어간다. 시간이 빠르다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+<strong>EDIT</strong> 모두 완료!
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>클라이언트 애플리케이션, 문서, 만족스러운 검증 등등 원하는 것들을 다
+  완료했다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-08aug/ping-28fri/">🔹 Ping 28/Aug/2020</a></h1>
+                                    <time>2020年08月28日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+날씨가 덥고 습하다. 거기에 마스크까지 해야해서 내가 좋아하는
+오래걷기를 하기에 그다지 좋은 시절은 아니다.</p>
+<p>
+문득 생각이 들었다. 아주 얼마 전까지만해도 이런 상황을 대부분의 자기
+자신이 정상이라고 믿고 싶어하는 이들은 모두가 이렇게 살아가는 세상을
+이야기를 들으면 비웃었을 것이다. 그리고 실제로 그런 일들을 많이 보아온
+것 같다. 방독면이나 산소마스크 방호복 대신에 KF94 마스크일뿐인.</p>
+<p>
+많은 아이디어와 예견들이 맞아들어가는 시절이다. 한편으로는 그런 것을
+이해하고 세상의 변화에 대해서 조금은 알맞게 나 자신이 알아채고 살아온
+것이 뿌듯하면서도 꼭 달갑지는 않기도 하다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/">🏩 Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</a></h1>
+                                    <time>2020年08月27日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.</p>
+<p>
+USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을
+쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고
+유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.</p>
+<p>
+정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마
+<a href="https://github.com/aircrack-ng/rtl8812au">https://github.com/aircrack-ng/rtl8812au</a> 이 드라이버가 살렸다.</p>
+<div class="src src-text">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># lsusb
+</span></span><span class="line"><span class="cl">Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU]</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+그것도 DKMS으로 빌드하면 안되고 그냥 <code>make install</code> 해서 동작하게
+되었다. 다행이었다. </p>
+<p>
+그리고 나서 나중에도 로딩하도록 /etc/module-load
+<code>/etc/modules-load.d/rtlusb.conf</code> 에 <code>88XXau</code> 라인을 넣고 저장.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-08aug/ping-27thu/">➰ Ping 27/Aug/2020</a></h1>
+                                    <time>2020年08月27日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+그간 진행해오던 프로젝트는 성능에 대해서 premature optimization을
+고려해서 만들기 보다는 architectural한 면에 비중을 갖고 가능성을
+염두에두고 선택을 해오며 만들었다.</p>
+<p>
+그럼에도 꽤 괜찮은 성능이었었고, 이제는 첫번째 버젼의 완성과 문서
+작성도 완료한 시점이어서 앞으로 성능을 높일 방안을 고민해보고 실험을
+몇개 수행해서 방법 결정해봤다.</p>
+<p>
+(현재 사용하는 방법과 새로이 사용할 방안의 이름은 모두 변경했다.)</p>
+<ol>
+<li>
+<p>기존 성능 측정은:</p>
+<ol>
+<li>
+<p>X event-writer</p>
+<ul>
+<li>commit을 한번에 하지 않고, 매 이벤트마다 수행해서
+느림. (현재는 변경되었음)</li>
+<li>약 11,196-microseconds (11-ms)</li>
+</ul>
+</li>
+<li>
+<p>X journal-writer</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-08aug/ping-25tue/">🍰 Ping 25/Aug/2020</a></h1>
+                                    <time>2020年08月25日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+the end of the belle époque?</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+
+<nav class="posts-pagination" aria-label="Page navigation">
+
+    
+    <a href="/" class="posts-pagination-btn" aria-label="Last">Last⏮️</a>
+    <a href="/page/17/" class="posts-pagination-btn" aria-label="Newer">Newer⏪</a>
+    
+
+    <span class="posts-pagination-indicator" >
+        (( 18 of 37 ))
+    </span>
+
+    
+    <a href="/page/19/" class="posts-pagination-btn" aria-label="Older">⏩Older</a>
+    <a href="/page/37/" class="posts-pagination-btn" aria-label="First">⏭️First</a>
+    
+</nav>
+
+
+
+			</main>
+			<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570386</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script>
+		</div>
+	</body>
+</html>

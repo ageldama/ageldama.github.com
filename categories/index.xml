@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 아겔로그</title>
+    <link>https://ageldama.github.io/categories/</link>
+    <description>Recent content in Categories on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 30 Nov 2025 10:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog</title>
+      <link>https://ageldama.github.io/categories/blog/</link>
+      <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://ageldama.github.io/categories/programming/</link>
+      <pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tv</title>
+      <link>https://ageldama.github.io/categories/tv/</link>
+      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/tv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>https://ageldama.github.io/categories/software/</link>
+      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Freebsd</title>
+      <link>https://ageldama.github.io/categories/freebsd/</link>
+      <pubDate>Mon, 15 Sep 2025 08:26:26 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/freebsd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ddakong</title>
+      <link>https://ageldama.github.io/categories/ddakong/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/categories/ddakong/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://ageldama.github.io/categories/linux/</link>
+      <pubDate>Wed, 07 May 2025 19:28:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blogging</title>
+      <link>https://ageldama.github.io/categories/blogging/</link>
+      <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/blogging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Life</title>
+      <link>https://ageldama.github.io/categories/life/</link>
+      <pubDate>Sat, 23 Mar 2024 15:46:14 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hack</title>
+      <link>https://ageldama.github.io/categories/hack/</link>
+      <pubDate>Sun, 05 Nov 2023 05:40:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/hack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>News</title>
+      <link>https://ageldama.github.io/categories/news/</link>
+      <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/news/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding</title>
+      <link>https://ageldama.github.io/categories/coding/</link>
+      <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scrapbook</title>
+      <link>https://ageldama.github.io/categories/scrapbook/</link>
+      <pubDate>Sun, 12 Jun 2022 04:37:12 +0000</pubDate>
+      <guid>https://ageldama.github.io/categories/scrapbook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Emacs</title>
+      <link>https://ageldama.github.io/categories/emacs/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/categories/emacs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Code</title>
+      <link>https://ageldama.github.io/categories/code/</link>
+      <pubDate>Tue, 08 May 2018 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/categories/code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rants</title>
+      <link>https://ageldama.github.io/categories/rants/</link>
+      <pubDate>Sun, 22 Oct 2017 21:42:00 +0100</pubDate>
+      <guid>https://ageldama.github.io/categories/rants/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://ageldama.github.io/categories/docker/</link>
+      <pubDate>Tue, 11 Jul 2017 20:20:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/categories/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Myself</title>
+      <link>https://ageldama.github.io/categories/myself/</link>
+      <pubDate>Tue, 11 Jul 2017 18:35:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/categories/myself/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lisp</title>
+      <link>https://ageldama.github.io/categories/lisp/</link>
+      <pubDate>Sat, 25 Feb 2017 16:40:00 +0100</pubDate>
+      <guid>https://ageldama.github.io/categories/lisp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Erlang</title>
+      <link>https://ageldama.github.io/categories/erlang/</link>
+      <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
+      <guid>https://ageldama.github.io/categories/erlang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>https://ageldama.github.io/categories/java/</link>
+      <pubDate>Sun, 22 Jan 2017 16:15:00 +0100</pubDate>
+      <guid>https://ageldama.github.io/categories/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jekyll Update</title>
+      <link>https://ageldama.github.io/categories/jekyll-update/</link>
+      <pubDate>Sun, 01 Jan 2017 09:54:02 +0100</pubDate>
+      <guid>https://ageldama.github.io/categories/jekyll-update/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

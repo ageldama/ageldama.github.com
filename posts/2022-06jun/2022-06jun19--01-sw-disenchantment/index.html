@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>&#34;Software disenchantment&#34; - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764570386">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="https://tonsky.me/blog/disenchantment/
+재밌게 읽었다. 계속 생각해오던, 이전 포스팅에서도 이야기한 생각들.
+
+&ldquo;&hellip;의 진보도 항상 그때그때의 1보만이 진보이며 2보도 3보도 n&#43;1보도 결코&hellip;&rdquo;1
+
+:winking_face:
+&hellip;그치 ejb/xml을 쓰든, 뭔가 또 새로운 언어나 프레임웍으로 대단한것처럼, 진보한것처럼 쓰려고 해도,
+현실적으로는 빌드도 오히려 apache ant 쓸때보다 더 엉망일지도. 성능이든 iteration의 가벼움이든.
+정말 진보는 커녕 오히려 더 ㅎㅎ&hellip; 오히려, apache ant으로라면 명확하게 확실하게 동작하도록 만들기나 잘 하겠지만.
+
+
+
+
+Walter Benjamin의 &ldquo;Arcades Project&quot;의 인용, &ldquo;매달린 절벽에서 손을 뗄 수 있는가?&rdquo; 강신주 저. &hellip;책에서는 그런 문맥이 아니었었지만, 내 생각엔 이런 문맥에도 맞지 않나 싶어서.&#160;&#x21a9;&#xfe0e;" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="&#34;Software disenchantment&#34;">
+  <meta property="og:description" content="https://tonsky.me/blog/disenchantment/
+재밌게 읽었다. 계속 생각해오던, 이전 포스팅에서도 이야기한 생각들.
+“…의 진보도 항상 그때그때의 1보만이 진보이며 2보도 3보도 n&#43;1보도 결코…”1
+:winking_face:
+…그치 ejb/xml을 쓰든, 뭔가 또 새로운 언어나 프레임웍으로 대단한것처럼, 진보한것처럼 쓰려고 해도, 현실적으로는 빌드도 오히려 apache ant 쓸때보다 더 엉망일지도. 성능이든 iteration의 가벼움이든.
+정말 진보는 커녕 오히려 더 ㅎㅎ… 오히려, apache ant으로라면 명확하게 확실하게 동작하도록 만들기나 잘 하겠지만.
+Walter Benjamin의 “Arcades Project&#34;의 인용, “매달린 절벽에서 손을 뗄 수 있는가?” 강신주 저. …책에서는 그런 문맥이 아니었었지만, 내 생각엔 이런 문맥에도 맞지 않나 싶어서. ↩︎">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-06-19T15:26:29+00:00">
+    <meta property="article:modified_time" content="2022-06-19T15:26:29+00:00">
+    <meta property="article:tag" content="Ping">
+    <meta property="article:tag" content="Sw">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="&#34;Software disenchantment&#34;">
+  <meta name="twitter:description" content="https://tonsky.me/blog/disenchantment/
+재밌게 읽었다. 계속 생각해오던, 이전 포스팅에서도 이야기한 생각들.
+“…의 진보도 항상 그때그때의 1보만이 진보이며 2보도 3보도 n&#43;1보도 결코…”1
+:winking_face:
+…그치 ejb/xml을 쓰든, 뭔가 또 새로운 언어나 프레임웍으로 대단한것처럼, 진보한것처럼 쓰려고 해도, 현실적으로는 빌드도 오히려 apache ant 쓸때보다 더 엉망일지도. 성능이든 iteration의 가벼움이든.
+정말 진보는 커녕 오히려 더 ㅎㅎ… 오히려, apache ant으로라면 명확하게 확실하게 동작하도록 만들기나 잘 하겠지만.
+Walter Benjamin의 “Arcades Project&#34;의 인용, “매달린 절벽에서 손을 뗄 수 있는가?” 강신주 저. …책에서는 그런 문맥이 아니었었지만, 내 생각엔 이런 문맥에도 맞지 않나 싶어서. ↩︎">
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/styles.1d7019d2254b088f6602c8d95ed9a4ed3f3d202a66b37b4be719f7410e8ab0bc.css" integrity="sha256-HXAZ0iVLCI9mAsjZXtmk7T89ICpms3tL5xn3QQ6KsLw=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+
+	
+</head>
+<body>
+        <div class="container"><header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+
+    <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
+        
+            <a href="/posts/archive/">🗂️ INDEX</a>
+        
+            <a href="/myself/">📨 CONTACT</a>
+        
+
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+
+    var darkmode = new Darkmode(options);
+    window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
+
+    
+
+  }
+ window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+<main>
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/">⬅️ The Grug Brained Developer</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/">➡️ Ping 17/06/2022 .01</a>
+        
+    </span>
+</nav>
+
+
+	<article>
+		<div class="title"><h1 class="title">🎪 &#34;Software disenchantment&#34;</h1>
+			<div class="meta">
+                        <time datetime="2022-06-19" pubdate>
+                            2022年06月19日
+                        </time>
+                        </div>
+                </div>
+		
+		
+		<section class="body">
+			<p><a href="https://tonsky.me/blog/disenchantment/">https://tonsky.me/blog/disenchantment/</a></p>
+<p>재밌게 읽었다. 계속 생각해오던, 이전 포스팅에서도 이야기한 생각들.</p>
+<blockquote>
+<p>&ldquo;&hellip;의 진보도 항상 그때그때의 1보만이 진보이며 2보도 3보도 n+1보도 결코&hellip;&rdquo;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+</blockquote>
+<p>:winking_face:</p>
+<p>&hellip;그치 ejb/xml을 쓰든, 뭔가 또 새로운 언어나 프레임웍으로 대단한것처럼, 진보한것처럼 쓰려고 해도,
+현실적으로는 빌드도 오히려 <a href="https://ant.apache.org/">apache ant</a> 쓸때보다 더 엉망일지도. 성능이든 iteration의 가벼움이든.</p>
+<p>정말 진보는 커녕 오히려 더 ㅎㅎ&hellip; 오히려, apache ant으로라면 명확하게 확실하게 동작하도록 만들기나 잘 하겠지만.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Walter Benjamin의 &ldquo;Arcades Project&quot;의 인용, &ldquo;매달린 절벽에서 손을 뗄 수 있는가?&rdquo; 강신주 저. &hellip;책에서는 그런 문맥이 아니었었지만, 내 생각엔 이런 문맥에도 맞지 않나 싶어서.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+				    <li style="display: inline">🏷️ <a href="/tags/ping">ping</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/sw">sw</a></li>
+				    
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/">⬅️ The Grug Brained Developer</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/">➡️ Ping 17/06/2022 .01</a>
+        
+    </span>
+</nav>
+
+</main>
+
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570386</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
+    </body>
+</html>

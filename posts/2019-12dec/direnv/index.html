@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764570385">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 
+경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든
+moonshot.el 와 유사한걸 검색해봤다.
+
+
+몇 가지
+
+
+이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv
+
+
+NPM: dotenv
+
+
+https://www.npmjs.com/package/dotenv
+
+Node.js에서 Unix environment variable으로 .env 파일을 로딩해주는
+역할인 듯.
+
+Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
+
+그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을
+짜주고 하기 싫었고,
+
+.env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서
+경로를 조립하고 하는데 별로라는 생각이 들었다. 항상 절대 경로만
+표기하거나, getenv 해서 문자열을 가져와서 상대 경로 등으로 지정된
+값을 매번 절대 경로로 만드는 작업을 해야할테니까." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2019-12dec/direnv/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기">
+  <meta property="og:description" content="프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다.
+몇 가지 이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv
+NPM: dotenv https://www.npmjs.com/package/dotenv
+Node.js에서 Unix environment variable으로 .env 파일을 로딩해주는 역할인 듯.
+Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
+그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을 짜주고 하기 싫었고,
+.env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서 경로를 조립하고 하는데 별로라는 생각이 들었다. 항상 절대 경로만 표기하거나, getenv 해서 문자열을 가져와서 상대 경로 등으로 지정된 값을 매번 절대 경로로 만드는 작업을 해야할테니까.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-12-29T00:00:00+09:00">
+    <meta property="article:modified_time" content="2019-12-29T00:00:00+09:00">
+    <meta property="article:tag" content="Direnv">
+    <meta property="article:tag" content="Direnv-Mode">
+    <meta property="article:tag" content="Dot-Envrc">
+    <meta property="article:tag" content="Emacs">
+    <meta property="article:tag" content="C">
+    <meta property="article:tag" content="C&#43;&#43;">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기">
+  <meta name="twitter:description" content="프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다.
+몇 가지 이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv
+NPM: dotenv https://www.npmjs.com/package/dotenv
+Node.js에서 Unix environment variable으로 .env 파일을 로딩해주는 역할인 듯.
+Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.
+그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을 짜주고 하기 싫었고,
+.env 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서 경로를 조립하고 하는데 별로라는 생각이 들었다. 항상 절대 경로만 표기하거나, getenv 해서 문자열을 가져와서 상대 경로 등으로 지정된 값을 매번 절대 경로로 만드는 작업을 해야할테니까.">
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/styles.1d7019d2254b088f6602c8d95ed9a4ed3f3d202a66b37b4be719f7410e8ab0bc.css" integrity="sha256-HXAZ0iVLCI9mAsjZXtmk7T89ICpms3tL5xn3QQ6KsLw=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+
+	
+</head>
+<body>
+        <div class="container"><header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+
+    <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
+        
+            <a href="/posts/archive/">🗂️ INDEX</a>
+        
+            <a href="/myself/">📨 CONTACT</a>
+        
+
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+
+    var darkmode = new Darkmode(options);
+    window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
+
+    
+
+  }
+ window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+<main>
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">⬅️ Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/moonshot-1st-rel/">➡️ moonshot.el 최초 릴리즈</a>
+        
+    </span>
+</nav>
+
+
+	<article>
+		<div class="title"><h1 class="title">1️⃣ direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기</h1>
+			<div class="meta">
+                        <time datetime="2019-12-29" pubdate>
+                            2019年12月29日
+                        </time>
+                        </div>
+                </div>
+		
+		
+		<section class="body">
+			
+<p>
+프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 
+경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든
+<a href="/posts/2019-12dec/moonshot-1st-rel/">moonshot.el</a> 와 유사한걸 검색해봤다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+몇 가지
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv</p>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+NPM: dotenv
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<p><a href="https://www.npmjs.com/package/dotenv">https://www.npmjs.com/package/dotenv</a></p>
+<p>
+Node.js에서 Unix environment variable으로 <code>.env</code> 파일을 로딩해주는
+역할인 듯.</p>
+<p>
+Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.</p>
+<p>
+그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을
+짜주고 하기 싫었고,</p>
+<p>
+<code>.env</code> 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서
+경로를 조립하고 하는데 별로라는 생각이 들었다. 항상 절대 경로만
+표기하거나, <code>getenv</code> 해서 문자열을 가져와서 상대 경로 등으로 지정된
+값을 매번 절대 경로로 만드는 작업을 해야할테니까.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+Python: autoenv
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<p><a href="https://github.com/inishchith/autoenv">https://github.com/inishchith/autoenv</a></p>
+<p>
+파이썬으로 작성되어 있고, <code>.env</code> 파일이 있는 디렉토리에 들어가면
+내용을 스크립트로서 실행해준다.</p>
+<p>
+그리고 그 디렉토리를 떠나면, <code>.env.leave</code> 에 지정된 스크립트를 실행.</p>
+<p>
+..딱 바라는 일들을 할만하게 생겼는데,</p>
+<ol>
+<li>
+<p><code>.env.leave</code> 을 매번 작성해주기 귀찮다.</p>
+<ul>
+<li>설정한 환경 변수를 역으로 해제해주는걸 일일이 해줘야 하는 것
+같다.</li>
+</ul>
+</li>
+<li>autoenv의 프로젝트 페이지에서 direnv을 쓰라고 추천해줬다.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+범용성도 좋고, 성능도 좋고, 기능도 강력하고: direnv
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p><a href="https://direnv.net/">https://direnv.net/</a></p>
+<p>
+우선 파이썬이나 Node.js이 아니라, Golang으로 작성해서 디렉토리에
+진입할 때 가볍다.</p>
+<p>
+그리고 자동으로 디렉토리를 떠날 때, 설정됐던 내용들을
+되돌려준다. (아마 진입 전후의 envrionment variables을 비교해서
+자동으로 처리해주는 것 같다.)</p>
+<p>
+zsh와도 연동이 깔끔했다.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+direnv + Python virtualenv
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>
+Virtualenv을 사용하는 파이썬 프로젝트를 만들려면,</p>
+<p>
+다음과 같은 <code>.envrc</code> 파일을 프로젝트 디렉토리에 하나 만든다.</p>
+<div class="src src-shell">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">layout python</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+그리고 direnv 프로젝트 페이지에 설명된 <a href="https://direnv.net/docs/hook.html">Shell와 연동하는 부분</a> 을 잘
+해놓았다면, 그리고 다음을 실행하면, 바로 위 내용이 활성화된다.</p>
+<div class="src src-shell">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">direnv allow</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+<code>layout python</code> 만으로 자동으로 <code>.direnv/python-...</code> 디렉토리에
+virtualenv을 조성하고, 활성화까지 해준다.</p>
+<p>
+사실, <code>layout python</code> 한 줄은 대충 다음과 같은 내용과 같다:</p>
+<div class="src src-shell">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">VIRTUAL_ENV</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/venv/&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&#34;</span><span class="si">${</span><span class="nv">VIRTUAL_ENV</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  virtualenv <span class="s2">&#34;</span><span class="si">${</span><span class="nv">VIRTUAL_ENV</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">VIRTUAL_ENV</span><span class="si">}</span><span class="s2">/bin/activate&#34;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+위 예제에서는 virtualenv의 디렉토리만 조금 다르게 지정한 것을
+제외하고, virtualenv환경을 만들고, <code>VIRTUAL_ENV</code> 환경변수를 설정해주는
+것, 마지막에 활성화해주는 것 모두 동일하다.</p>
+<p>
+유연하고 강력.</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+이맥스에서 적용
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>
+이맥스에도 연동이 가능하다.</p>
+<p>
+어차피 이맥스에서 파이썬 프로그램을 작성한다고 하더라도,
+virtualenv에만 존재하는 모듈이나 툴을 이용해야 할테니까 적용이
+자동으로 되는게 속편하다.</p>
+<p>
+<a href="https://github.com/wbolster/emacs-direnv">https://github.com/wbolster/emacs-direnv</a></p>
+<p>
+설치와 설정을 마치고, dired (<code class="verbatim">C-x d</code>)으로 프로젝트 디렉토리를 열면,
+<code>PATH</code>, <code>VIRTUAL_ENV</code> 등 환경변수가 자동으로 적용된다.</p>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="c1">;; 다음을 M-: 누르고 입력해서 확인:</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;VIRTUAL_ENV&#34;</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+파이썬 프로젝트 디렉토리나 파일을 열 때 자동으로 Virtualenv을 활성화
+하도록 설정해봤다:</p>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;python-mode-hook</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">                      <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;VIRTUAL_ENV&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">(</span><span class="nv">pyvenv-activate</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;VIRTUAL_ENV&#34;</span><span class="p">)))))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+그래서,
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
+<p>
+파이썬 프로젝트를 예제로 만들고, Emacs와 연동해봤다.</p>
+<p>
+이맥스쪽에는 <a href="https://github.com/emacs-lsp/lsp-python-ms">lsp-python-ms</a> 와 <a href="https://github.com/jorgenschaefer/elpy">elpy</a> 에 적용해서 테스트해봤다.</p>
+<p>
+몇 가지 문제가 있어서 lsp-python-ms은 접어두고, 그냥 기능적으로 잘
+동작하고 부족한거 없는 elpy와 direnv-mode을 쓰기로 했다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+파이썬의 예시만 들었지만 C/C++ 프로젝트를 위한 부분들도 적용을
+해나가면 <a href="https://github.com/ageldama/moonshot">moonshot.el</a> 만을 쓸 때보다 훨씬 깔끔하게 프로젝트 빌드나 경로
+관리가 가능해질거 같다.</p>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>lsp-python-ms은 virtualenv의 경로를 <code class="verbatim">venv</code> 으로만 인식하거나,
+flycheck의 내장된 flake8, pylint등의 checker와 잘 어울리지 못해서
+짜증났다. 아직 LSP으로 바꿀 이유도 없는거 같다. elpy만으로 모든
+기능들이 거의 동일하거나 더 완성도 높게 동작하니까.</p>
+</div>
+</div>
+</div>
+</div>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+				    <li style="display: inline">🏷️ <a href="/tags/direnv">direnv</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/direnv-mode">direnv-mode</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/dot-envrc">dot-envrc</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/emacs">emacs</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/c">c</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/python">python</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/virtualenv">virtualenv</a></li>
+				    
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">⬅️ Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/moonshot-1st-rel/">➡️ moonshot.el 최초 릴리즈</a>
+        
+    </span>
+</nav>
+
+</main>
+
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570385</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
+    </body>
+</html>

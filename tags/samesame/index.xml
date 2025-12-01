@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Samesame on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/samesame/</link>
+    <description>Recent content in Samesame on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sat, 16 Nov 2019 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/samesame/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(Common Lisp의 어두운 면) Equality</title>
+      <link>https://ageldama.github.io/posts/2019-11nov/the-dark-side-of-cl-equality/</link>
+      <pubDate>Sat, 16 Nov 2019 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-11nov/the-dark-side-of-cl-equality/</guid>
+      <description>&lt;p&gt;오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까&#xA;리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로&#xA;생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을&#xA;리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.&lt;/p&gt;&#xA;&lt;p&gt;뭐 커먼리습의 &lt;a href=&#34;http://clhs.lisp.se/Front/index.htm&#34;&gt;CLHS - HyperSpec&lt;/a&gt;을 읽다보면 비슷한데 아주 약간씩&#xA;미묘하게 달라서 지원하는 것들이 있다:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;let&lt;/code&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm&#34;&gt;Special Operator LET, LET*&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm&#34;&gt;Special Operator FLET, LABELS, MACROLET&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;map&lt;/code&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://clhs.lisp.se/Body/f_map.htm&#34;&gt;Function MAP&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm&#34;&gt;Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://clhs.lisp.se/Body/f_map_in.htm#map-into&#34;&gt;Function MAP-INTO&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;prog&lt;/code&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://clhs.lisp.se/Body/m_prog1c.htm&#34;&gt;Macro PROG1, PROG2&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://clhs.lisp.se/Body/s_progn.htm#progn&#34;&gt;Special Operator PROGN&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://clhs.lisp.se/Body/m_prog_.htm#progST&#34;&gt;Macro PROG, PROG*&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://clhs.lisp.se/Body/s_progv.htm#progv&#34;&gt;Special Operator PROGV&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&amp;hellip;그밖에도 좀 더 있을듯?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;이렇게 나열해 놓으면 꽤 무서워 보이지만, 막상 차이를 이해하면 별로&#xA;복잡하지도 않아서 나중엔 더 편안해진다. (정말로)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

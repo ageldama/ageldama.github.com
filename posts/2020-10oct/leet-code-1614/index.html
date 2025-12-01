@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34; - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764570386">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+
+문제
+
+
+https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
+
+
+
+
+작성한 코드     
+
+
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+  (defun max-nested-parentheses (s)
+    (declare (optimize (speed 3) (safety 0))
+             (type simple-string s))
+    (loop with n fixnum = 0
+          for ch across s
+          when (member ch &#39;(#\( #\)))
+          do (incf n (if (eql #\( ch) 1 -1))
+             maximizing n))
+
+
+
+
+
+
+
+코드 의도
+
+
+
+우아한 코드보다는 공간복잡도가 O(1) 이고 싶었다.
+
+
+
+
+
+Edit
+
+
+
+
+SBCL에 맞춰 코드에 타입을 지정해줘봤다.
+
+결과 어셈블리 코드가 조금 짧아졌다.
+
+
+
+
+" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2020-10oct/leet-code-1614/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;">
+  <meta property="og:description" content="문제 https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
+작성한 코드 1 2 3 4 5 6 7 8 (defun max-nested-parentheses (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (loop with n fixnum = 0 for ch across s when (member ch &#39;(#\( #\))) do (incf n (if (eql #\( ch) 1 -1)) maximizing n)) 코드 의도 우아한 코드보다는 공간복잡도가 O(1) 이고 싶었다. Edit SBCL에 맞춰 코드에 타입을 지정해줘봤다.
+결과 어셈블리 코드가 조금 짧아졌다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-10-20T00:00:00+09:00">
+    <meta property="article:modified_time" content="2020-10-20T00:00:00+09:00">
+    <meta property="article:tag" content="Leet-Code">
+    <meta property="article:tag" content="Lisp">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;">
+  <meta name="twitter:description" content="문제 https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
+작성한 코드 1 2 3 4 5 6 7 8 (defun max-nested-parentheses (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (loop with n fixnum = 0 for ch across s when (member ch &#39;(#\( #\))) do (incf n (if (eql #\( ch) 1 -1)) maximizing n)) 코드 의도 우아한 코드보다는 공간복잡도가 O(1) 이고 싶었다. Edit SBCL에 맞춰 코드에 타입을 지정해줘봤다.
+결과 어셈블리 코드가 조금 짧아졌다.">
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/styles.1d7019d2254b088f6602c8d95ed9a4ed3f3d202a66b37b4be719f7410e8ab0bc.css" integrity="sha256-HXAZ0iVLCI9mAsjZXtmk7T89ICpms3tL5xn3QQ6KsLw=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+
+	
+</head>
+<body>
+        <div class="container"><header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+
+    <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
+        
+            <a href="/posts/archive/">🗂️ INDEX</a>
+        
+            <a href="/myself/">📨 CONTACT</a>
+        
+
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+
+    var darkmode = new Darkmode(options);
+    window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
+
+    
+
+  }
+ window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+<main>
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/leet-code-1614-2nd/">⬅️ CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-19mon/">➡️ Ping 19/Oct/2020</a>
+        
+    </span>
+</nav>
+
+
+	<article>
+		<div class="title"><h1 class="title">🫛 CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</h1>
+			<div class="meta">
+                        <time datetime="2020-10-20" pubdate>
+                            2020年10月20日
+                        </time>
+                        </div>
+                </div>
+		
+		
+		<section class="body">
+			
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+문제
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><a href="https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/">https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/</a></p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+작성한 코드     
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">max-nested-parentheses</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">optimize</span> <span class="p">(</span><span class="nv">speed</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nv">safety</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="k">type</span> <span class="kt">simple-string</span> <span class="nv">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">loop</span> <span class="nv">with</span> <span class="nv">n</span> <span class="kt">fixnum</span> <span class="nf">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">          <span class="nv">for</span> <span class="nv">ch</span> <span class="nv">across</span> <span class="nv">s</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">when</span> <span class="p">(</span><span class="nf">member</span> <span class="nv">ch</span> <span class="o">&#39;</span><span class="p">(</span><span class="sc">#\(</span> <span class="sc">#\)</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">do</span> <span class="p">(</span><span class="nb">incf</span> <span class="nv">n</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">eql</span> <span class="sc">#\(</span> <span class="nv">ch</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">-1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">             <span class="nv">maximizing</span> <span class="nv">n</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+코드 의도
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<ol>
+<li>우아한 코드보다는 공간복잡도가 <code>O(1)</code> 이고 싶었다.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+<em>Edit</em>
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<ol>
+<li>
+<p>SBCL에 맞춰 코드에 타입을 지정해줘봤다.</p>
+<ol>
+<li>결과 어셈블리 코드가 조금 짧아졌다.</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+				    <li style="display: inline">🏷️ <a href="/tags/leet-code">leet-code</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/lisp">lisp</a></li>
+				    
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/leet-code-1614-2nd/">⬅️ CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-19mon/">➡️ Ping 19/Oct/2020</a>
+        
+    </span>
+</nav>
+
+</main>
+
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570386</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
+    </body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.152.2">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764570386">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:url" content="https://ageldama.github.io/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="아겔로그">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="아겔로그">
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/styles.1d7019d2254b088f6602c8d95ed9a4ed3f3d202a66b37b4be719f7410e8ab0bc.css" integrity="sha256-HXAZ0iVLCI9mAsjZXtmk7T89ICpms3tL5xn3QQ6KsLw=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+
+	
+</head>
+
+        <body>
+                <div class="container">
+			<header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+
+    <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
+        
+            <a href="/posts/archive/">🗂️ INDEX</a>
+        
+            <a href="/myself/">📨 CONTACT</a>
+        
+
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+
+    var darkmode = new Darkmode(options);
+    window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
+
+    
+
+  }
+ window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+			<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+
+			<main class="list">
+				<div class="site-description"></div>
+				
+				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2019-10oct/ping-15tue/">👩‍🦯 Ping 15/Oct/2019</a></h1>
+                                    <time>2019年10月15日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>커먼리습으로 간단한
+<a href="https://en.wikipedia.org/wiki/Stack-oriented_programming">스택기반</a>
+장난감 프로그래밍언어를 만들고있다.</p>
+<blockquote>
+<p><a href="https://github.com/ageldama/cl-toy-stack-lang">https://github.com/ageldama/cl-toy-stack-lang</a></p>
+</blockquote>
+<p>튜링컴플릿이나 그런거 관심도 없고 사실 Parser도 적절하게 만들지 않았다.</p>
+<p>다만 유니코드 잘되고 쓸만한 lexer generator이 커먼리습에 있는지가 궁금했다.</p>
+<p>적당히 내일 정도면 어느 정도 완전히 굴러가는 프로그램으로 다 만들고 마무리 할 듯.</p>
+<p>처음에는 <a href="https://www.quicklisp.org/">QuickLisp</a> 에서 어떤 Lexer을
+써야할까 고민하다가, cl-lex 쓰다가 실망스러웠다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>그러다가 만난게 <a href="https://github.com/rigetti/alexa">Alexa</a> 인데, 가장
+마음에 드는 lexer generator.</p>
+<p><a href="https://www.rigetti.com/">https://www.rigetti.com/</a> 이 회사를 발견. 커먼리습으로 <a href="https://github.com/rigetti/quilc">Quil
+Compiler</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> 만들고 퀀텀컴퓨팅
+관련된 기업인가 보다.</p>
+<p>그리고 깃헙 저장소 살펴보는데 흥미롭고 써보면 어떨까 싶은게 많이 보였다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2019-10oct/ping-14mon/">🚜 Ping 14/Oct/2019</a></h1>
+                                    <time>2019年10月14日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>어제 오늘 요즘에 들어서 생각을 겨우 하기 시작한 고민을 사람들이 트윗하더라.</p>
+<p>tweet 1183311320822607872</p>
+<p>..이번에 직장을 그만두고<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 새로운 직장을 열심히 알아보고 있지는 않고
+있다.</p>
+<p>몇군데 인터뷰를 진행도 해보고 했지만, 모두 솔직히 나도 모르겠고 거절도
+많이 받고 해서 꾸준히 진행을 하고 있지는 않다. 그리고 나도 이직을 하고
+recruiting 과정을 한국만이 아니라 독일에서도 다양하게 겪어보니
+어떤것이 좋거나 나쁜 신호인지 캐치하게 되는거 같고, 또 그런 시그널들이
+생각보다 적절하게 그 회사측의 모습이나 생각을 반영하는게 맞는거
+같더라.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2019-10oct/ping-13sun/">🌫️ Ping 13/Oct/2019</a></h1>
+                                    <time>2019年10月13日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>집중하는게 내게 더 좋겠다는 생각이든다.</p>
+<p>단시간에 어떤 일에 집중하는 일은 만족스럽다. 그런 시간단위의 집중이
+아니라 기간이라고 할만큼 며칠, 몇주에 걸쳐, 한정된 한두개의
+주제에만 집중해서 생각하고 만들거나 글을 써가는게 필요하다.</p>
+<p>혼자 관심이 가거나 생각하는 주제가 떠오르면
+<a href="https://en.wikipedia.org/wiki/Org-mode">Org파일</a> 한 개나 메모지,
+핸드폰에 적어놓는다. 그리고 내가 가진 정리하는 방식에 따라 조금씩
+생각이 다듬어질때마다 저장매체를 바꿔가며 기록해나간다. 문득 그 <em>Org
+파일</em> 을 열었는데, 너무 많은 내용들이, 그것도 폭넓은 다양한 주제들에
+대해서 걸쳐있음을 봤다.</p>
+<p>다양한 주제에 관심이 있는건 어쩔 수 없겠지만 각 주제마다 내가 투사하는
+시간과 노력이 너무 분산되는거 아닌가 생각해왔다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2019-10oct/zettelkaesten-12sat/">📐 Zettelkästen?</a></h1>
+                                    <time>2019年10月12日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p><a href="https://ageldama.github.io/posts/2019-10oct/ping-11fri/">어제 Ping</a>에서 계속
+블로깅을 하면서 생각 하는걸 계속 다듬어 갔으면 좋겠다는 말을 했었는데,</p>
+<p>마침 <a href="https://news.ycombinator.com/item?id=21208196">HN에 그런걸 하기 적절해 보이는
+글</a>이 올라와서
+읽어봤다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>간략히 정리해보면,</p>
+<ol>
+<li><strong>생각 적기</strong>: <em>짧은 길이</em> 메모를 적어서 생각만으로 카드를 만들고,<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>
+<ol>
+<li>이 상태에서는 우선 각 카드는 &ldquo;<em>순번없음 (Unsorted)</em>&rdquo; 상태
+deck으로 쌓아만 놓는다.</li>
+</ol>
+</li>
+<li><strong>순서매기기(1)</strong>: 카드끼리 1, 2, 3 같이 순서를 두고 정렬.
+<ol>
+<li>&lsquo;<em>Unsorted</em>&rsquo; deck에서 꺼내와서 정리하는거겠지.</li>
+<li>각 순서는 생각의 순서일수도 있겠고,</li>
+<li>아니면 그냥 구분되는 다른 생각의 단절을 나타내는 방법으로
+쓸수도 있겠지.</li>
+</ol>
+</li>
+<li><strong>순서매기기(2)</strong>: 그리고 위에 만든 1, 2, 3와 같은 순서 카드에 딸린 하위 생각들은,
+<ol>
+<li>1a, 1b, 2a, 2a1, 2a2 와 같이 alphanumeric으로 하위 생각들을
+표현해 나간다.</li>
+</ol>
+</li>
+<li><strong>연결하기</strong>: 그리고 각 카드들의 서로 <em>연결</em> 을 적어나간다.
+<ol>
+<li>예를 들어, 1a에서 하위 카드가 아닌데도 연관이 있는 2a1,</li>
+<li>2a2으로 연결을 갖는다면, 1a 카드에 2a1, 2a2을 <em>링크</em> 라고
+적어준다.</li>
+</ol>
+</li>
+</ol>
+<p>위 3단계에서 계층적으로 순서를 할당하는걸 시각화해보면 다음과 같은 트리가 되겠지<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>:</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2019-10oct/cl-rutils/">⚒️ rutils으로 커먼리습 확장해서 clojure 비슷하게, 더 편하게</a></h1>
+                                    <time>2019年10月11日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>커먼리습은 <a href="https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec">CLHS</a>
+이후로 언어 자체 정의는 변하지 않았다.</p>
+<p>구현체마다 조금씩 확장이 있을수도 있지만 딱히 그렇게 하지도 않는거
+같다. 그럴만도 하다고 생각하는게 어차피 커먼리습에서 <a href="https://en.wikipedia.org/wiki/Lisp_reader">lisp
+reader</a>을 확장하는게
+CLHS에서 정의해놓은 <em>기능</em> 중 하나이고, 구현체들도 스펙을 잘
+구현해놓았으니까.</p>
+<p>결국 커먼리습에서 문법이나 그런게 조금 마음에 안들거나 확장하고 싶으면
+언제든지 매크로를 만들듯이 확장하면 되니까.</p>
+<blockquote>
+<p><em>&lsquo;커먼리습 언어 자체를 커먼리습으로 프로그램 할 수 있다&rsquo;</em></p>
+</blockquote>
+<p>이런 커먼리습 확장 <em>&lsquo;라이브러리&rsquo;</em> 들이 여러가지 있는데, 가장 요즘에
+쓸만할거 같다고 생각하는건 rutils이다. <a href="https://github.com/vseloved/rutils">https://github.com/vseloved/rutils</a></p>
+<p><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code> 같은거
+매번 반복해서 쳐넣는걸 그냥 <code>eval-always</code>으로 바꿔준다거나.
+<code>gensym</code>하는것도 <code>with-gensyms</code> 제공하거나 하는 이런류의
+라이브러리들에서 보통 제공하는것들부터.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+
+<nav class="posts-pagination" aria-label="Page navigation">
+
+    
+    <a href="/" class="posts-pagination-btn" aria-label="Last">Last⏮️</a>
+    <a href="/page/27/" class="posts-pagination-btn" aria-label="Newer">Newer⏪</a>
+    
+
+    <span class="posts-pagination-indicator" >
+        (( 28 of 37 ))
+    </span>
+
+    
+    <a href="/page/29/" class="posts-pagination-btn" aria-label="Older">⏩Older</a>
+    <a href="/page/37/" class="posts-pagination-btn" aria-label="First">⏭️First</a>
+    
+</nav>
+
+
+
+			</main>
+			<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570386</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script>
+		</div>
+	</body>
+</html>

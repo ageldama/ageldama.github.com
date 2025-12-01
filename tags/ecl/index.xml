@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ecl on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/ecl/</link>
+    <description>Recent content in Ecl on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Fri, 06 Dec 2019 00:00:01 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/ecl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>커먼리습 설정하기, ASDF 시스템 코드를 받기</title>
+      <link>https://ageldama.github.io/posts/2019-12dec/tips-ecl-clisp/</link>
+      <pubDate>Fri, 06 Dec 2019 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-12dec/tips-ecl-clisp/</guid>
+      <description>&lt;h1 id=&#34;1-asdf을-최신-버젼으로-설정한다&#34;&gt;1. ASDF을 최신 버젼으로 설정한다&lt;/h1&gt;&#xA;&lt;p&gt;(이부분에서 많이 고생했는데) SBCL와 다르게&#xA;&lt;a href=&#34;https://clisp.sourceforge.io/&#34;&gt;CLISP&lt;/a&gt;,&#xA;&lt;a href=&#34;https://common-lisp.net/project/ecl/&#34;&gt;ECL&lt;/a&gt; 은 최신 버젼의 ASDF을&#xA;내장한걸 패키징해놓지 않았다.&lt;/p&gt;&#xA;&lt;p&gt;대부분은 문제가 없이 동작하지만, 내가 작성한 커먼리습 시스템에서&#xA;실행파일을 빌드할 때 문제가 많았다.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;ASDF 의 최신 버젼을 &lt;code&gt;git clone&lt;/code&gt; 해서 적당한 디렉토리에 받는다.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://common-lisp.net/project/asdf/&#34;&gt;https://common-lisp.net/project/asdf/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;make&lt;/code&gt;을 내려받은 ASDF 디렉토리에서 실행한다.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;실행하면 &lt;code&gt;build/asdf.lisp&lt;/code&gt; 파일으로 한 파일으로 뭉쳐서 로딩하게&#xA;편안한 파일을 생성해준다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;내 커먼리습 구현체의 시작설정파일 맨 앞에 다음처럼 추가한다.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;(load &amp;quot;~/local/asdf/build/asdf&amp;quot;)&lt;/code&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;여기서 나는 &lt;code&gt;$HOME/local/asdf/&lt;/code&gt; 에 ASDF을 받았다고 가정.&lt;/li&gt;&#xA;&lt;li&gt;그리고 &lt;code&gt;asdf.lisp&lt;/code&gt; 파일이더라도, 마지막에 &lt;code&gt;.lisp&lt;/code&gt; 확장자는 생략했다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;ECL은 &lt;code&gt;$HOME/.eclrc&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;CLISP은 &lt;code&gt;$HOME/.clisprc.lisp&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;그리고 중요한데, 그 다음에&#xA;&lt;a href=&#34;https://www.quicklisp.org/&#34;&gt;Quicklisp&lt;/a&gt; 초기화 내용이 오도록&#xA;한다.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Quicklisp을 초기화하기 전에 ASDF 최신 버젼이 로딩되어 있는게 더&#xA;나을테니까.&lt;/li&gt;&#xA;&lt;li&gt;어차피 위의 (1~3)의 순서대로 ASDF 먼저 설정한 다음에&#xA;Quicklisp설치한 다음에 &lt;code&gt;ql:add-to-init-file&lt;/code&gt; 실행하면 이런&#xA;순서로 추가해준다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&amp;hellip;별거 아닌데, 이거 때문에 빌드한 결과 실행파일이 이상해서 좀 고생했다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

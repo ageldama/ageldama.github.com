@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>linux/unix 팁 29/06/2022 .01 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764570386">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+  
+  
+    zoxide 으로 chdir 간단하게
+    ssh으로 키보드/마우스 안 붙이고
+      
+        vconsole: conspy
+        x11: x2x으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유
+      
+    
+  
+
+
+
+
+리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.
+그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.
+zoxide 으로 chdir 간단하게
+최근/디렉토리 이동한 히스토리에 따라서 (&ldquo;frecent&rdquo;) 이동하기:
+fzf&#43;zsh의 Control-R도 좋고1,
+oh-my-zsh 내장인 plugins=(z)도 좋지만2
+&hellip;나는 가능하면 zoxide이 가장 가볍고 좋은거 같다.
+설치하고 나서,
+eval &quot;$(zoxide init zsh)&quot;
+그리고, z SOME-DIR, zi 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="linux/unix 팁 29/06/2022 .01">
+  <meta property="og:description" content="zoxide 으로 chdir 간단하게 ssh으로 키보드/마우스 안 붙이고 vconsole: conspy x11: x2x으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유 리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.
+그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.
+zoxide 으로 chdir 간단하게 최근/디렉토리 이동한 히스토리에 따라서 (“frecent”) 이동하기:
+fzf&#43;zsh의 Control-R도 좋고1,
+oh-my-zsh 내장인 plugins=(z)도 좋지만2
+…나는 가능하면 zoxide이 가장 가볍고 좋은거 같다.
+설치하고 나서, eval &#34;$(zoxide init zsh)&#34;
+그리고, z SOME-DIR, zi 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-06-29T15:08:22+00:00">
+    <meta property="article:modified_time" content="2022-06-29T15:08:22+00:00">
+    <meta property="article:tag" content="Ping">
+    <meta property="article:tag" content="X2x">
+    <meta property="article:tag" content="Conspy">
+    <meta property="article:tag" content="Chdir">
+    <meta property="article:tag" content="Ssh">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="linux/unix 팁 29/06/2022 .01">
+  <meta name="twitter:description" content="zoxide 으로 chdir 간단하게 ssh으로 키보드/마우스 안 붙이고 vconsole: conspy x11: x2x으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유 리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.
+그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.
+zoxide 으로 chdir 간단하게 최근/디렉토리 이동한 히스토리에 따라서 (“frecent”) 이동하기:
+fzf&#43;zsh의 Control-R도 좋고1,
+oh-my-zsh 내장인 plugins=(z)도 좋지만2
+…나는 가능하면 zoxide이 가장 가볍고 좋은거 같다.
+설치하고 나서, eval &#34;$(zoxide init zsh)&#34;
+그리고, z SOME-DIR, zi 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ">
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/styles.1d7019d2254b088f6602c8d95ed9a4ed3f3d202a66b37b4be719f7410e8ab0bc.css" integrity="sha256-HXAZ0iVLCI9mAsjZXtmk7T89ICpms3tL5xn3QQ6KsLw=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+
+	
+</head>
+<body>
+        <div class="container"><header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+
+    <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
+        
+            <a href="/posts/archive/">🗂️ INDEX</a>
+        
+            <a href="/myself/">📨 CONTACT</a>
+        
+
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+
+    var darkmode = new Darkmode(options);
+    window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
+
+    
+
+  }
+ window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+<main>
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--02-ping/">⬅️ react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/">➡️ The Grug Brained Developer</a>
+        
+    </span>
+</nav>
+
+
+	<article>
+		<div class="title"><h1 class="title">🌹 linux/unix 팁 29/06/2022 .01</h1>
+			<div class="meta">
+                        <time datetime="2022-06-29" pubdate>
+                            2022年06月29日
+                        </time>
+                        </div>
+                </div>
+		
+		
+		<section class="body">
+			<div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</a></li>
+    <li><a href="#ssh으로-키보드마우스-안-붙이고">ssh으로 키보드/마우스 안 붙이고</a>
+      <ul>
+        <li><a href="#vconsole-conspy">vconsole: <code>conspy</code></a></li>
+        <li><a href="#x11-x2x으로-여러-머신스크린에-걸쳐서-마우스키보드-공유">x11: <code>x2x</code>으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+<hr>
+<p>리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.</p>
+<p>그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.</p>
+<h1 id="zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</h1>
+<p>최근/디렉토리 이동한 히스토리에 따라서 (&ldquo;frecent&rdquo;) 이동하기:</p>
+<p>fzf+zsh의 <code>Control-R</code>도 좋고<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,</p>
+<p>oh-my-zsh 내장인 <code>plugins=(z)</code>도 좋지만<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>&hellip;나는 가능하면 <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a>이 가장 가볍고 좋은거 같다.</p>
+<p>설치하고 나서,
+<code>eval &quot;$(zoxide init zsh)&quot;</code></p>
+<p>그리고, <code>z SOME-DIR</code>, <code>zi</code> 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ</p>
+<h1 id="ssh으로-키보드마우스-안-붙이고">ssh으로 키보드/마우스 안 붙이고</h1>
+<p>책상위에 여러대의 컴퓨터를 놓고 사용하는데, 용도에 따라서, 모두 마우스/키보드를 붙여 놓기 싫다.
+뭐 kvm switch 같은거 사서 써도 되겠지만, 그보다는 어떤 컴퓨터는 모니터만 붙여 놓고 쓰고 등등 같이 사용해서
+그런 방식은 잘 내 책상에서는 잘 맞지 않아서.</p>
+<p>vnc이나 rdp을 통해서 &ldquo;원격데스크톱&quot;으로 사용하는 방식도 아니고 (정말로 물리스크린 여러개를 컴퓨터별로 분리해 쓰는거니까),
+그리고 그건 너무 반응성도 느려서 안 좋아함.</p>
+<p>또, 데스크탑의 키보드 마우스를 공유해주는 솔루션들이 있는거 같기는 한데, 다 내 취향은 아니었었음.
+그리고, 어차피 x11이 네트웍을 통해서 얼마든지 그런걸 공유할 수 있는데 뭐하러 그런걸 더 깔아서 골치가 아파져야겠나.</p>
+<h2 id="vconsole-conspy">vconsole: <code>conspy</code></h2>
+<p>아예, <a href="https://wiki.archlinux.org/title/LightDM#Enabling_autologin">lightdm autlogin</a> 해도 되겠지만, 그마저도 메모리가 아까워서,
+그냥 linux vconsole에 연결해서 바로 로그인하고 싶을 때에 사용한다.</p>
+<p>ssh으로 접속해서, <code>sudo conspy 1</code> 하면 tty1의 키보드/터미널을 그대로 ssh을 통해서 제어가 가능.</p>
+<p><a href="http://conspy.sourceforge.net/">http://conspy.sourceforge.net/</a></p>
+<h2 id="x11-x2x으로-여러-머신스크린에-걸쳐서-마우스키보드-공유">x11: <code>x2x</code>으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유</h2>
+<p><a href="https://github.com/dottedmag/x2x">https://github.com/dottedmag/x2x</a></p>
+<p><code>ssh -CY ageldama@10.0.0.1 x2x -south -to :0</code> 정도로 현재 데탑에서 남쪽에 저 머신의 스크린이 있다고 설정.</p>
+<p>마우스 이동하면, 한 머신인것처럼 포커스가 이동되어서, 조작 가능해짐. ㅎㅎ</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh">https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/z/z.sh">https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/z/z.sh</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+				    <li style="display: inline">🏷️ <a href="/tags/ping">ping</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/x2x">x2x</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/conspy">conspy</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/chdir">chdir</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/ssh">ssh</a></li>
+				    
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--02-ping/">⬅️ react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/">➡️ The Grug Brained Developer</a>
+        
+    </span>
+</nav>
+
+</main>
+
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570386</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
+    </body>
+</html>

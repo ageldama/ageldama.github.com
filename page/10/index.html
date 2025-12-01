@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.152.2">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764570386">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:url" content="https://ageldama.github.io/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="아겔로그">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="아겔로그">
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/styles.1d7019d2254b088f6602c8d95ed9a4ed3f3d202a66b37b4be719f7410e8ab0bc.css" integrity="sha256-HXAZ0iVLCI9mAsjZXtmk7T89ICpms3tL5xn3QQ6KsLw=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+
+	
+</head>
+
+        <body>
+                <div class="container">
+			<header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+
+    <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
+        
+            <a href="/posts/archive/">🗂️ INDEX</a>
+        
+            <a href="/myself/">📨 CONTACT</a>
+        
+
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+
+    var darkmode = new Darkmode(options);
+    window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
+
+    
+
+  }
+ window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+			<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+
+			<main class="list">
+				<div class="site-description"></div>
+				
+				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2022-06jun/2022-06jun15--01-ping/">🔮 Ping 15/06/2022 .01</a></h1>
+                                    <time>2022年06月15日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>비 내리는 화요일. &#x2614;</p>
+<div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</a></li>
+    <li><a href="#postgresql-as-an-api-server">postgresql, as an api server?</a></li>
+  </ul>
+</nav>
+</div>
+
+<hr>
+<h1 id="jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</h1>
+<p>재밌는걸 찾았다.</p>
+<p><a href="https://jinja.palletsprojects.com/en/3.1.x/">jinja2</a>을 사용하면서, 하위 include으로 내려갈수록,
+file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야
+template cache을 무시하는거 같아.</p>
+<p>그래서,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// gulpfile.js:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">buildTask</span> <span class="o">=</span> <span class="nx">series</span><span class="p">(</span><span class="nx">cleanTask</span><span class="p">,</span> <span class="nx">esbuildTask</span><span class="p">,</span> <span class="nx">injectTask</span><span class="p">,</span> <span class="nx">touchInjectedTask</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">watchTask</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">watch</span><span class="p">(</span><span class="s2">&#34;./js/**/*.js&#34;</span><span class="p">,</span> <span class="nx">buildTask</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">watch</span> <span class="o">=</span> <span class="nx">watchTask</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">build</span> <span class="o">=</span> <span class="nx">buildTask</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">clean</span> <span class="o">=</span> <span class="nx">cleanTask</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>&hellip;대략 잘 동작하고, <a href="https://esbuild.github.io/">webpack보다 엄청나게 빠르다</a> ㅎㅎ.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2022-06jun/algebraic-effects-for-everyone/">🥯 &#34;모두를 위한 algebraic effects!&#34; ...정말루?</a></h1>
+                                    <time>2022年06月13日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>뭐 대충 다음과 같은 글들:</p>
+<p><a href="https://www.eff-lang.org/handlers-tutorial.pdf">https://www.eff-lang.org/handlers-tutorial.pdf</a></p>
+<p><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf</a></p>
+<p>&hellip;그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)</p>
+<p><a href="https://hackage.haskell.org/package/fused-effects">https://hackage.haskell.org/package/fused-effects</a></p>
+<p><a href="https://github.com/dry-rb/dry-effects">https://github.com/dry-rb/dry-effects</a></p>
+<p><a href="https://github.com/digital-fabric/affect">https://github.com/digital-fabric/affect</a></p>
+<p><a href="https://github.com/macabeus/js-proposal-algebraic-effects">https://github.com/macabeus/js-proposal-algebraic-effects</a></p>
+<p><a href="https://github.com/nythrox/effects.js">https://github.com/nythrox/effects.js</a></p>
+<p><a href="https://www.janestreet.com/tech-talks/effective-programming/">https://www.janestreet.com/tech-talks/effective-programming/</a></p>
+<p><a href="https://github.com/ocaml-multicore/effects-examples">https://github.com/ocaml-multicore/effects-examples</a></p>
+<p><a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/">https://overreacted.io/algebraic-effects-for-the-rest-of-us/</a></p>
+<p>&hellip;음&hellip; 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.</p>
+<p>오히려 dry-rb, affect이 더 명확하기는 한거 같아.</p>
+<p>가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.</p>
+<p>분명히 장점을 볼 수 있을거 같은 개념 같다.</p>
+<p>왜냐하면,</p>
+<ol>
+<li>지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면,</li>
+<li>하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.
+<ol>
+<li>그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용.</li>
+<li>(&hellip;그때 그때 Haskell do-notation등에 따라 분리해서 표현)</li>
+<li>좋은점이라면 좋은점일수도 있겠지만.</li>
+</ol>
+</li>
+<li>그런데, aeffects을 이용한다면,
+<ol>
+<li>굳이 그렇게 복잡하게 나누지 않아도 괜찮고,</li>
+<li>monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여.</li>
+</ol>
+</li>
+</ol>
+<p>당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (&hellip;일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, &hellip;처럼)</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2022-06jun/2022-06jun13--01-ping/">🧑‍🦯 Ping 13/06/2022 .01</a></h1>
+                                    <time>2022年06月13日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>기운 없는 날&hellip; 쉬어야겠다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2022-06jun/06jun12sun--02-jq-as-vm/">📱 jq manpage와 code</a></h1>
+                                    <time>2022年06月12日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p><a href="https://stedolan.github.io/jq/">https://stedolan.github.io/jq/</a></p>
+<p>jq이 뭐하는 도구인지 소개는 한국어로 많은데, 그걸 갖고 조금 복잡한 패턴을 처리하는 자료는,
+머리 나쁜 내가 이해하기에 적합한 자료는 찾지 못해서, 그냥 manpage을 읽고 시도.</p>
+<p>이미 알고 있는 도구, 혹은 이미 대부분의 unix-like, linux 시스템에 깔려있는 도구들이 있는데,
+막상 그 도구의 manpage을 차분히 읽어 보면, 내가 너무 게을렀었고 알려고 하지 않았기에
+내 삶을 더 도움을 받을 수 있었을텐데, 그렇지 못했었던 도구들이 많은것 같아.</p>
+<p>gnu coreutils, m4, awk, perl 만 해도 그랬었고, 조금이라도 알아가고 응용을 할수록 매일매일이
+더 재밌고 강력해졌었던거 같아.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2022-06jun/06jun12sun--01-some-engr-tough-sells/">↪️ &#34;Some Engineering Tough Sells&#34;</a></h1>
+                                    <time>2022年06月12日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p><a href="https://posco.dev/blog/2022-04-23_draft_some-engineering-tough-sells/">https://posco.dev/blog/2022-04-23_draft_some-engineering-tough-sells/</a></p>
+<p>&hellip;공감이 가는 부분들은:</p>
+<blockquote>
+<ol>
+<li>dynamic serialization isn’t worth it, use statically defined serialization</li>
+<li>untested code is virtually always somewhat wrong</li>
+<li>doing things right pays off sooner than we usually imagine</li>
+<li>an ounce of design is worth a pound of implementation</li>
+<li>in data engineering, the data very often violates your beliefs about the shape</li>
+<li>thinking about, and minimizing edges in your code’s dependency graph is a win</li>
+<li>a good (i.e. programmable, fast, reliable, reproducible) build system solves a lot of practical software engineering problems</li>
+</ol>
+</blockquote>
+<p>&hellip;많은것들을 경험하되, 숙고와 자기객관화는 중요. 아니라면, 경험과 시간은 그저 흘러가게 되니.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+
+<nav class="posts-pagination" aria-label="Page navigation">
+
+    
+    <a href="/" class="posts-pagination-btn" aria-label="Last">Last⏮️</a>
+    <a href="/page/9/" class="posts-pagination-btn" aria-label="Newer">Newer⏪</a>
+    
+
+    <span class="posts-pagination-indicator" >
+        (( 10 of 37 ))
+    </span>
+
+    
+    <a href="/page/11/" class="posts-pagination-btn" aria-label="Older">⏩Older</a>
+    <a href="/page/37/" class="posts-pagination-btn" aria-label="First">⏭️First</a>
+    
+</nav>
+
+
+
+			</main>
+			<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570386</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script>
+		</div>
+	</body>
+</html>

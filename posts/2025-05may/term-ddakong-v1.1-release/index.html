@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ddakong v1.1 릴리즈: FreeBSD / kqueue - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764570386">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+
+릴리즈 v1.1
+
+
+
+  freebsd 지원: 빌드가능하도록 수정 &#43; kqueue 이벤트처리 추가
+
+  (원래는 epoll/linux만 지원)
+
+&lt;https://github.com/ageldama/term-ddakong/releases/tag/v1.1&gt;
+
+darwin/osx, openbsd 등은 빌드&#43;실행될거 같은데 확신은 못하겠믐.
+매 릴리즈마다 크로스컴파일해서 바이너리릴리즈해왔는데, 리눅스는
+aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라
+이번엔 스킵.
+
+
+…오랬만에 freebsd 켜서 쓰는데, 반응속도감 역시 엄청좋다.
+
+" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.1-release/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="ddakong v1.1 릴리즈: FreeBSD / kqueue">
+  <meta property="og:description" content="릴리즈 v1.1 freebsd 지원: 빌드가능하도록 수정 &#43; kqueue 이벤트처리 추가
+(원래는 epoll/linux만 지원)
+&lt;https://github.com/ageldama/term-ddakong/releases/tag/v1.1&gt;
+darwin/osx, openbsd 등은 빌드&#43;실행될거 같은데 확신은 못하겠믐. 매 릴리즈마다 크로스컴파일해서 바이너리릴리즈해왔는데, 리눅스는 aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라 이번엔 스킵. …오랬만에 freebsd 켜서 쓰는데, 반응속도감 역시 엄청좋다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-08T19:17:25+09:00">
+    <meta property="article:modified_time" content="2025-05-08T19:17:25+09:00">
+    <meta property="article:tag" content="Freebsd">
+    <meta property="article:tag" content="Kqueue">
+    <meta property="article:tag" content="Epoll">
+    <meta property="article:tag" content="Select">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Terminal">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ddakong v1.1 릴리즈: FreeBSD / kqueue">
+  <meta name="twitter:description" content="릴리즈 v1.1 freebsd 지원: 빌드가능하도록 수정 &#43; kqueue 이벤트처리 추가
+(원래는 epoll/linux만 지원)
+&lt;https://github.com/ageldama/term-ddakong/releases/tag/v1.1&gt;
+darwin/osx, openbsd 등은 빌드&#43;실행될거 같은데 확신은 못하겠믐. 매 릴리즈마다 크로스컴파일해서 바이너리릴리즈해왔는데, 리눅스는 aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라 이번엔 스킵. …오랬만에 freebsd 켜서 쓰는데, 반응속도감 역시 엄청좋다.">
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/styles.1d7019d2254b088f6602c8d95ed9a4ed3f3d202a66b37b4be719f7410e8ab0bc.css" integrity="sha256-HXAZ0iVLCI9mAsjZXtmk7T89ICpms3tL5xn3QQ6KsLw=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+
+	
+</head>
+<body>
+        <div class="container"><header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+
+    <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
+        
+            <a href="/posts/archive/">🗂️ INDEX</a>
+        
+            <a href="/myself/">📨 CONTACT</a>
+        
+
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+
+    var darkmode = new Darkmode(options);
+    window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
+
+    
+
+  }
+ window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+<main>
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/">⬅️ 블로그 검색을 다시 짰다 (PageFind 제거)</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.0-release/">➡️ ddakong v1.0 릴리즈: lua scripting 시스템</a>
+        
+    </span>
+</nav>
+
+
+	<article>
+		<div class="title"><h1 class="title">🩳 ddakong v1.1 릴리즈: FreeBSD / kqueue</h1>
+			<div class="meta">
+                        <time datetime="2025-05-08" pubdate>
+                            2025年05月08日
+                        </time>
+                        </div>
+                </div>
+		
+		
+		<section class="body">
+			
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+릴리즈 v1.1
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+  freebsd 지원: 빌드가능하도록 수정 + kqueue 이벤트처리 추가</p>
+<p>
+  (원래는 epoll/linux만 지원)</p>
+<p>
+&lt;<a href="https://github.com/ageldama/term-ddakong/releases/tag/v1.1">https://github.com/ageldama/term-ddakong/releases/tag/v1.1</a>&gt;</p>
+<ul>
+<li>darwin/osx, openbsd 등은 빌드+실행될거 같은데 확신은 못하겠믐.</li>
+<li>매 릴리즈마다 크로스컴파일해서 바이너리릴리즈해왔는데, 리눅스는
+aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라
+이번엔 스킵.</li>
+</ul>
+<p>
+…오랬만에 freebsd 켜서 쓰는데, 반응속도감 역시 엄청좋다.</p>
+</div>
+</div>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+				    <li style="display: inline">🏷️ <a href="/tags/freebsd">freebsd</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/kqueue">kqueue</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/epoll">epoll</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/select">select</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/linux">linux</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/terminal">terminal</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/fbdev">fbdev</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/fbterm">fbterm</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/korean">korean</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/hangul">hangul</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/hangeul">hangeul</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/input">input</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/method">method</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/im">im</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/ime">ime</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/c99">c99</a></li>
+				    
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/">⬅️ 블로그 검색을 다시 짰다 (PageFind 제거)</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.0-release/">➡️ ddakong v1.0 릴리즈: lua scripting 시스템</a>
+        
+    </span>
+</nav>
+
+</main>
+
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570386</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
+    </body>
+</html>

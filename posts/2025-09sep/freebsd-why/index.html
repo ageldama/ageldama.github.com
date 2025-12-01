@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>freebsd &#43; 고물랩탑 쓸만하다(재밌다!) - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764570386">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+
+시도하기 이전에는
+
+
+좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을
+  서브랩탑으로 집책상에서 써왔었다.
+
+  메모리도 4GB, 확장이 불가능하고. 배터리도 조금 부풀었고 충전도 잘 되지
+  않는다. 거기에 외부전원어댑터를 붙이지 않으면 어째서인지 eDP이
+  출력되지 않는다. ㅎㅎㅎ
+
+  그래도 어쨌든 debian-stable 설치해놓고 samba 서버로 책상에서 쓰거나
+  하기엔 적당했다. 딱히 동영상을 틀어 놓거나 하는 것도 포기해야 할
+  정도로 빠르지도 않았다. 웹브라우징도 느렸다.
+
+
+
+
+그러다가 freebsd 설치를 했다 (14.3-RELEASE 1)
+
+
+원래도 freebsd이 gui이나 latency이 중요한 체감이 훨씬 가볍고 부드럽게
+  느껴지는걸 알고 있었다. 그런데 이번에는 너무 극적으로 즐거웠다." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2025-09sep/freebsd-why/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="freebsd &#43; 고물랩탑 쓸만하다(재밌다!)">
+  <meta property="og:description" content="시도하기 이전에는 좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을 서브랩탑으로 집책상에서 써왔었다.
+메모리도 4GB, 확장이 불가능하고. 배터리도 조금 부풀었고 충전도 잘 되지 않는다. 거기에 외부전원어댑터를 붙이지 않으면 어째서인지 eDP이 출력되지 않는다. ㅎㅎㅎ
+그래도 어쨌든 debian-stable 설치해놓고 samba 서버로 책상에서 쓰거나 하기엔 적당했다. 딱히 동영상을 틀어 놓거나 하는 것도 포기해야 할 정도로 빠르지도 않았다. 웹브라우징도 느렸다.
+그러다가 freebsd 설치를 했다 (14.3-RELEASE 1) 원래도 freebsd이 gui이나 latency이 중요한 체감이 훨씬 가볍고 부드럽게 느껴지는걸 알고 있었다. 그런데 이번에는 너무 극적으로 즐거웠다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-15T08:26:26+00:00">
+    <meta property="article:modified_time" content="2025-09-15T08:26:26+00:00">
+    <meta property="article:tag" content="Freebsd">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Laptop">
+    <meta property="article:tag" content="Refurb">
+    <meta property="article:tag" content="Debian">
+    <meta property="article:tag" content="Samba">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="freebsd &#43; 고물랩탑 쓸만하다(재밌다!)">
+  <meta name="twitter:description" content="시도하기 이전에는 좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을 서브랩탑으로 집책상에서 써왔었다.
+메모리도 4GB, 확장이 불가능하고. 배터리도 조금 부풀었고 충전도 잘 되지 않는다. 거기에 외부전원어댑터를 붙이지 않으면 어째서인지 eDP이 출력되지 않는다. ㅎㅎㅎ
+그래도 어쨌든 debian-stable 설치해놓고 samba 서버로 책상에서 쓰거나 하기엔 적당했다. 딱히 동영상을 틀어 놓거나 하는 것도 포기해야 할 정도로 빠르지도 않았다. 웹브라우징도 느렸다.
+그러다가 freebsd 설치를 했다 (14.3-RELEASE 1) 원래도 freebsd이 gui이나 latency이 중요한 체감이 훨씬 가볍고 부드럽게 느껴지는걸 알고 있었다. 그런데 이번에는 너무 극적으로 즐거웠다.">
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/styles.1d7019d2254b088f6602c8d95ed9a4ed3f3d202a66b37b4be719f7410e8ab0bc.css" integrity="sha256-HXAZ0iVLCI9mAsjZXtmk7T89ICpms3tL5xn3QQ6KsLw=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+
+	
+</head>
+<body>
+        <div class="container"><header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+
+    <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
+        
+            <a href="/posts/archive/">🗂️ INDEX</a>
+        
+            <a href="/myself/">📨 CONTACT</a>
+        
+
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+
+    var darkmode = new Darkmode(options);
+    window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
+
+    
+
+  }
+ window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+<main>
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/blog-css-redesign-again/">⬅️ 블로그 css 조금 더 수정</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/">➡️ [작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템)</a>
+        
+    </span>
+</nav>
+
+
+	<article>
+		<div class="title"><h1 class="title">🍆 freebsd &#43; 고물랩탑 쓸만하다(재밌다!)</h1>
+			<div class="meta">
+                        <time datetime="2025-09-15" pubdate>
+                            2025年09月15日
+                        </time>
+                        </div>
+                </div>
+		
+		
+		<section class="body">
+			
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+시도하기 이전에는
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을
+  서브랩탑으로 집책상에서 써왔었다.</p>
+<p>
+  메모리도 4GB, 확장이 불가능하고. 배터리도 조금 부풀었고 충전도 잘 되지
+  않는다. 거기에 외부전원어댑터를 붙이지 않으면 어째서인지 eDP이
+  출력되지 않는다. ㅎㅎㅎ</p>
+<p>
+  그래도 어쨌든 debian-stable 설치해놓고 samba 서버로 책상에서 쓰거나
+  하기엔 적당했다. 딱히 동영상을 틀어 놓거나 하는 것도 포기해야 할
+  정도로 빠르지도 않았다. 웹브라우징도 느렸다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+그러다가 freebsd 설치를 했다 (<code>14.3-RELEASE</code> <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>)
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>원래도 freebsd이 gui이나 latency이 중요한 체감이 훨씬 가볍고 부드럽게
+  느껴지는걸 알고 있었다. 그런데 이번에는 너무 <span style="text-decoration: underline;">극적으로 즐거웠다</span>.</p>
+<p>
+  <code>mpv</code> 동영상 보기도 부드럽고(1080p정도도 조금 framedrop이 있긴
+  하지만), firefox으로 웹브라우징도 나쁘지 않다.</p>
+<p>
+  그리고 emacs 쓰는 것도 부드럽고 좋다. 계속 쓰려고 한다. ㅎㅎ</p>
+<p>
+  Sony PS3, PS4, PS5와 Nintendo 3DS, Switch 모두 FreeBSD
+  커널을 갖다 사용하는걸로 알고 있다. 그리고 단순히 BSD License
+  때문만이 아니라, 체감성능상 이점이 명확한 것 같다.<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+어떻게 쓰는게 좋았나
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>리눅스를 쓰는 것처럼 (wayland/gnome/kde 같은 것들을 어차피 원래도
+  바라지 않았지만) 쓰려고 하지 않고, 약간 포기할거 포기하고 더 가볍게
+  쓰니 편하고 좋다.</p>
+<p>
+  <a href="https://ice-wm.org/"><code>icewm</code></a> 만으로 편하고 좋다. ++ <a href="https://github.com/ageldama/configs/tree/master/dotfiles/HOME-icewm">내 dotfiles</a>으로 편안하다.</p>
+<p>
+  원래 리눅스 설정으로도 특별히 무겁다고 생각하진 않았는데 훨씬 가볍게
+  쓸 것들이 더 남아 있던거 같다. (예를 들어, <a href="https://gitlab.com/liguros/liguros-repo/-/tree/develop/sys-fs/bashmount">bashmount</a>을 써왔는데 그런
+  것도 그냥 안쓰고 <code>doas mount ...</code>-정도로 만족한다)</p>
+<p>
+  사용하는 애플리케이션들도 evince =&gt; zathura, koreader =&gt; coolreader3
+  정도로 바꿨다.</p>
+<p>
+  evince, koreader도 가볍지만, 더 가볍고 단순한 프로그램들, 그러면서
+  잘 동작하는 bloat이 적은 애플리케이션들이 더 좋아졌다</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+그럼에도
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>그래도 리눅스데스크탑, 랩탑을 더 사용하고 있다. 물론 집책상에서 혼자
+  쓰는 메인드라이버는 그냥 freebsd이 되었지만.</p>
+<p>
+  Steam을 돌리거나 다른 애플리케이션이 필요하거나 하면 여전히
+  리눅스/debian을 계속 쓰겠지만. ㅎㅎ 책을 읽거나 코딩, 글쓰기, 간단한
+  웹서핑을 위해서는 그냥 앞으로도 freebsd으로 만족하려고.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>freebsd은 <code>CURRENT -&gt; STABLE -&gt; RELEASE</code> 순서로 안정화/릴리즈를
+해나가니 조금 ports 버전이 더 옛날 것들. (debian의 <code>unstable -&gt;
+testing -&gt; stable</code>)</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p>MacOS이 FreeBSD의 네트워크 스택 코드나 POSIX Userland만을 갖다
+사용하고 커널은 XNU/mach 계열을 쓴 것과 달리. 또한 Linux kernel의
+GPL라이센스는 게임콘솔 HW에서 사용하기엔 라이센스가 부담되었을 것
+같다.</p>
+</div>
+</div>
+</div>
+</div>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+				    <li style="display: inline">🏷️ <a href="/tags/freebsd">freebsd</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/linux">linux</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/laptop">laptop</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/refurb">refurb</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/debian">debian</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/samba">samba</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/asus">asus</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/e502ma">e502ma</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/firefox">firefox</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/chrome">chrome</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/mpv">mpv</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/emacs">emacs</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/dotfiles">dotfiles</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/icewm">icewm</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/evince">evince</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/poppler">poppler</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/pdf">pdf</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/zathura">zathura</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/coolreader">coolreader</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/epub">epub</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/koreader">koreader</a></li>
+				    
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/blog-css-redesign-again/">⬅️ 블로그 css 조금 더 수정</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/">➡️ [작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템)</a>
+        
+    </span>
+</nav>
+
+</main>
+
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570386</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
+    </body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Hugo &#43; pagefind 붙여서 검색기능 추가했다 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1764570386">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+https://pagefind.app/
+
+페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는
+pagefind을 붙여봤다.
+
+처음엔 좀 어색했는데, 커스터마이징을 별로 제공하지 않기는 했지만,
+그래도 이것저것 뜯어서 CSS도 마음에 들게 좀 수정하고, JS/DOM 이벤트도
+적당히 잡아서 마음에 들게 동작하게 고쳤다.
+
+별로라고 생각하던 부분들도 다 뜯어 고치고 하면서 더 블로그가 마음에
+들어진다. 🤠" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="Hugo &#43; pagefind 붙여서 검색기능 추가했다">
+  <meta property="og:description" content="https://pagefind.app/
+페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는 pagefind을 붙여봤다.
+처음엔 좀 어색했는데, 커스터마이징을 별로 제공하지 않기는 했지만, 그래도 이것저것 뜯어서 CSS도 마음에 들게 좀 수정하고, JS/DOM 이벤트도 적당히 잡아서 마음에 들게 동작하게 고쳤다.
+별로라고 생각하던 부분들도 다 뜯어 고치고 하면서 더 블로그가 마음에 들어진다. 🤠">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-16T06:25:48+00:00">
+    <meta property="article:modified_time" content="2025-03-16T06:25:48+00:00">
+    <meta property="article:tag" content="Ping">
+    <meta property="article:tag" content="Pagefind">
+    <meta property="article:tag" content="Js">
+    <meta property="article:tag" content="Css">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Jquery">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hugo &#43; pagefind 붙여서 검색기능 추가했다">
+  <meta name="twitter:description" content="https://pagefind.app/
+페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는 pagefind을 붙여봤다.
+처음엔 좀 어색했는데, 커스터마이징을 별로 제공하지 않기는 했지만, 그래도 이것저것 뜯어서 CSS도 마음에 들게 좀 수정하고, JS/DOM 이벤트도 적당히 잡아서 마음에 들게 동작하게 고쳤다.
+별로라고 생각하던 부분들도 다 뜯어 고치고 하면서 더 블로그가 마음에 들어진다. 🤠">
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/styles.1d7019d2254b088f6602c8d95ed9a4ed3f3d202a66b37b4be719f7410e8ab0bc.css" integrity="sha256-HXAZ0iVLCI9mAsjZXtmk7T89ICpms3tL5xn3QQ6KsLw=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+
+	
+</head>
+<body>
+        <div class="container"><header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+
+    <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
+        
+            <a href="/posts/archive/">🗂️ INDEX</a>
+        
+            <a href="/myself/">📨 CONTACT</a>
+        
+
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+
+    var darkmode = new Darkmode(options);
+    window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
+
+    
+
+  }
+ window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+    <div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+<main>
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/">⬅️ xrandr 🖥️모니터 연결 자동전환 스크립트🐫</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/">➡️ css, design 새단장 &#43; dark-mode</a>
+        
+    </span>
+</nav>
+
+
+	<article>
+		<div class="title"><h1 class="title">🚙 Hugo &#43; pagefind 붙여서 검색기능 추가했다</h1>
+			<div class="meta">
+                        <time datetime="2025-03-16" pubdate>
+                            2025年03月16日
+                        </time>
+                        </div>
+                </div>
+		
+		
+		<section class="body">
+			<p>
+<a href="https://pagefind.app/">https://pagefind.app/</a></p>
+<p>
+페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는
+pagefind을 붙여봤다.</p>
+<p>
+처음엔 좀 어색했는데, 커스터마이징을 별로 제공하지 않기는 했지만,
+그래도 이것저것 뜯어서 CSS도 마음에 들게 좀 수정하고, JS/DOM 이벤트도
+적당히 잡아서 마음에 들게 동작하게 고쳤다.</p>
+<p>
+별로라고 생각하던 부분들도 다 뜯어 고치고 하면서 더 블로그가 마음에
+들어진다. 🤠</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+				    <li style="display: inline">🏷️ <a href="/tags/ping">ping</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/pagefind">pagefind</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/js">js</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/css">css</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/hugo">hugo</a></li>
+				    
+				    <li style="display: inline">🏷️ <a href="/tags/jquery">jquery</a></li>
+				    
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+
+        <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/">⬅️ xrandr 🖥️모니터 연결 자동전환 스크립트🐫</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/">➡️ css, design 새단장 &#43; dark-mode</a>
+        
+    </span>
+</nav>
+
+</main>
+
+<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570386</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script></div>
+    </body>
+</html>

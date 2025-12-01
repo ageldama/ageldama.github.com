@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Counsel on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/counsel/</link>
+    <description>Recent content in Counsel on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 26 Feb 2019 01:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/counsel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)</title>
+      <link>https://ageldama.github.io/posts/2019-02feb/counsel-ivy&#43;cpp-ide/</link>
+      <pubDate>Tue, 26 Feb 2019 01:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-02feb/counsel-ivy&#43;cpp-ide/</guid>
+      <description>&lt;p&gt;최근에 이맥스 설정을&#xA;&lt;a href=&#34;https://github.com/emacs-helm/helm&#34;&gt;Helm&lt;/a&gt;기반에서&#xA;&lt;a href=&#34;https://github.com/abo-abo/swiper&#34;&gt;Ivy/Counsel&lt;/a&gt;으로 전부 바꿨다.&lt;/p&gt;&#xA;&lt;p&gt;더 가볍고, 적당히 잘 동작하고,&#xA;&lt;a href=&#34;https://github.com/BurntSushi/ripgrep&#34;&gt;Ripgrep&lt;/a&gt;이랑 기본적으로&#xA;설정이 가능해서 편함.&lt;/p&gt;&#xA;&lt;p&gt;거기에 &lt;code&gt;C-c C-o&lt;/code&gt;&#xA;(&lt;a href=&#34;https://oremacs.com/2015/11/04/ivy-occur/&#34;&gt;ivy-occur&lt;/a&gt;) +&#xA;&lt;a href=&#34;https://github.com/mhayashi1120/Emacs-wgrep&#34;&gt;wgrep&lt;/a&gt;이 Helm에선&#xA;동작할때가 그때그때 기능에 따라 달라서 짜증나고, 심지어 플러그인을&#xA;설정해서 써야하거나 해서 정말 좋아하는 기능인데 우울하게 만들었는데,&#xA;Ivy이 훨씬 깔끔하게 동작하고 일관성있게 잘 동작함.&lt;/p&gt;&#xA;&lt;p&gt;처음에는 Helm에서 하는 기능들을 그대로 옮기려고만 생각하다가, 오히려&#xA;Ivy에 맞춰서 내가 익숙해지고, 더 낫게 할 방법들이 있어서 그냥 내가&#xA;adopt해서 편안해졌다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;cmake--compile_commandsjson&#34;&gt;CMake + &lt;code&gt;compile_commands.json&lt;/code&gt;&lt;/h1&gt;&#xA;&lt;p&gt;이전에는 &lt;a href=&#34;https://github.com/Andersbakken/rtags&#34;&gt;RTags&lt;/a&gt;을 사용해서&#xA;&amp;lsquo;&amp;lsquo;정말로&amp;rsquo;&amp;rsquo; C++ 프로젝트를 Clang등을 이용해서 파싱하고, 그걸&#xA;인덱싱한걸로 정확한 navigation, code completion을 구성해 사용하려고&#xA;했었었다. 그리고 타입 정보다 그런거 다 있으니 제대로 굴러가서 꽤&#xA;쓸만하고.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

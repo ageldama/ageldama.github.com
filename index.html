@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.152.2">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764570385">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:url" content="https://ageldama.github.io/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="아겔로그">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="아겔로그">
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/styles.1d7019d2254b088f6602c8d95ed9a4ed3f3d202a66b37b4be719f7410e8ab0bc.css" integrity="sha256-HXAZ0iVLCI9mAsjZXtmk7T89ICpms3tL5xn3QQ6KsLw=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+
+	
+</head>
+
+        <body>
+                <div class="container">
+			<header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+
+    <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
+        
+            <a href="/posts/archive/">🗂️ INDEX</a>
+        
+            <a href="/myself/">📨 CONTACT</a>
+        
+
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+
+    var darkmode = new Darkmode(options);
+    window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
+
+    
+
+  }
+ window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+			<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+
+			<main class="list">
+				<div class="site-description"></div>
+				
+				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2025-11nov/blog-post-title-emojis/">🐌 블로그 디자인 수정 &#43; 제목 자동 emoji 붙여주기</a></h1>
+                                    <time>2025年11月30日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+블로그 CSS을 또 수정하고, 레이아웃도 좀 더 고쳤다. 간단하게 가볍게
+보였으면 해서.</p>
+<p>
+그런데 그간 고민해오던 것들이 있음:</p>
+<ol>
+<li>(예전에) 귀찮아서 <code>new-ping.pl</code>-스크립트 같은거 짜놓고 자동
+생성한 포스팅 제목으로 그대로 포스팅한 &#34;<em>Ping …..</em>&#34;-같은 제목의
+포스팅들은 archives에서 봐도 뭐가 뭔지 구분이 안됨.</li>
+<li><code>h1</code>-같은 markdown/org-mode에서 export한 제목과
+각 포스팅의 제목(이것도 <code>h1</code>-같은 태그인)이 눈에 딱 들게 구분이
+되지 않았음.</li>
+</ol>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+archives에서 각 포스팅의 preview을 표시했다
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>조금 내용도 나오니까 찾아보기 더 수월해진거 같다. ㅎㅎ
+  그리고 막상 이렇게 전체 목록 / 시간에 따라, 내용을 조금이나마
+  보여주니까 일대기 형식이라 재밌네.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2025-11nov/scripts-rofi-perl5-release/">😪 scripts-rofi-perl5 릴리즈</a></h1>
+                                    <time>2025年11月22日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+<a href="https://github.com/ageldama/scripts-rofi-perl5">https://github.com/ageldama/scripts-rofi-perl5</a></p>
+<p>
+<img src="/posts/2025-11nov/scripts-rofi-perl5-screenshot.png" alt="/posts/2025-11nov/scripts-rofi-perl5-screenshot.png" title="/posts/2025-11nov/scripts-rofi-perl5-screenshot.png" /></p>
+<p>
+스크립트 많이 작성해서 자동화해서 쓰는데, 터미널 열거나 하기 귀찮고,
+모두 한 디렉토리에 넣어두기도 정리가 안되는거 같아서 작성해서 몇 년
+전부터 써왔다.</p>
+<p>
+자동으로 최근 실행한 스크립트부터 표시하도록 히스토리를 저장해서
+순위표시.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+최근에 &#34;터미널 내부에서 실행하기&#34; 기능을 추가하고 좀 많이 다듬어서
+릴리즈.</p>
+<p>
+터미널 안에서 실행되어야 하는 스크립트인데, 그냥 창없이 실행되면
+낭패이기 때문에<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>, 과거 실행내역에 따라서, 터미널에서 실행하던
+스크립트라면 다시 터미널에서 실행되도록 권해주기 기능도 추가.</p>
+<p>
+나 같이 x윈도 환경을 커스터마이징해서 내게 맞춰서 쓰는 사람이나
+좋아할거 같은 도구. ㅎㅎ</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/">🌘 Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰</a></h1>
+                                    <time>2025年11月19日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+최근의 파이썬은 아주 오랬동안 multicore/parallelism을 지원하기 위해
+걸림돌이었던 GIL에서 자유로워진 &#34;no-GIL&#34; 옵션이 베타 단계.
+(&#34;free GIL&#34; 혹은 &#34;free threading&#34;이라고도 부르는듯) <a href="https://blog.jetbrains.com/ko/pycharm/2025/08/faster-python-unlocking-the-python-global-interpreter-lock/">https://blog.jetbrains.com/ko/pycharm/2025/08/faster-python-unlocking-the-python-global-interpreter-lock/</a></p>
+<p>
+&#34;no-GIL&#34;이 분명히 중요한 변화이겠지만, 내겐 Python 3.14에
+<a href="https://docs.python.org/3/library/concurrent.interpreters.html">concurrent.interpreters</a> 추가된 것이 더 흥미롭다.</p>
+<p>
+이게 과연 Parallelism을 지원하기 위한 방식일까 하고 바로 알아차라기는
+어렵지만 조금 생각해보면:</p>
+<ol>
+<li>새로운 프로세스를 만들지는 않는다 (<code>multiprocessing</code> 모듈)</li>
+<li>직접 같은 GIL을 공유하는 스레드를 만들지도 않는다 (<code>threading</code> 모듈)</li>
+<li>하지만, 같은 프로세스 안에서 다른 GIL을 사용하는, 파이썬
+인터프리터를 만들고,</li>
+<li>다른 인터프리터와 적당한 정도로 IPC이 가능하고 (Queue 정도)</li>
+<li>다른 인터프리터가 실행했으면 하는 파이썬 코드를 전달 가능.</li>
+</ol>
+<p>
+별거 아닌거 같지만 얻을 수 있는 이점은:</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2025-11nov/my-elisp-requires/">🕯️ 내 emacs elisp &#34;requires&#34;</a></h1>
+                                    <time>2025年11月16日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.</p>
+<p>
+다음처럼 <code>init.el</code>-파일에서 로딩함: <a href="https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/samples/EXAMPLE-init.el">사용예시</a></p>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">ag-requires</span>
+</span></span><span class="line"><span class="cl">   <span class="nb">:tag-:*feats</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="nb">:compile</span>  <span class="c1">;; ... 바이트컴파일</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-recentf</span>                  <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-savehist</span>                 <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-avy</span>                      <span class="c1">; dpkg=elpa-avy</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="nb">:nocompile</span> <span class="c1">;; ... 여기부터는 바이트컴파일X</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-rg</span>                       <span class="c1">; dpkg=elpa-rg</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-c</span>                        <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-perl5</span>                    <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<ol>
+<li>
+<p>자동으로 byte-compile해서 로딩속도 빨라지도록 매크로 짜놓았음:</p>
+<ul>
+<li><a href="https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95">https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95</a></li>
+</ul>
+</li>
+<li>예전에 짜놓은거, 버그 고치고 다시 빠르게 로딩되도록 잘 써먹어서
+기분 좋음.</li>
+</ol>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2025-11nov/cl-defmacro-fwd-declaration/">🧬 [TIL] common-lisp defmacro와 forward-declaration</a></h1>
+                                    <time>2025年11月10日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+의외로 단순한건데, 컴파일한 sbcl image에서 runtime에 unbound variable
+컨디션을 발생시킬 수 있음.</p>
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defmacro</span> <span class="nv">with-foo-bar</span> <span class="p">(</span><span class="nv">base-str</span> <span class="p">(</span><span class="nv">foo-var</span> <span class="nv">bar-var</span><span class="p">)</span> <span class="k">&amp;rest</span> <span class="nv">body</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;BASE-STR에 foo, bar 문자열을 붙인 FOO-VAR, BAR-VAR 바인딩을 만들어,
+</span></span></span><span class="line"><span class="cl"><span class="s">  BODY을 해당 바인딩을 적용하여 실행&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">;; NOTE let-대신 symbol-macrolet 사용해도 ok:</span>
+</span></span><span class="line"><span class="cl">    <span class="o">`</span><span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="o">,</span><span class="nv">foo-var</span> <span class="p">(</span><span class="nf">format</span> <span class="no">nil</span> <span class="s">&#34;FOO:~a&#34;</span> <span class="o">,</span><span class="nv">base-str</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="o">,</span><span class="nv">bar-var</span> <span class="p">(</span><span class="nf">format</span> <span class="no">nil</span> <span class="s">&#34;BAR:~a&#34;</span> <span class="o">,</span><span class="nv">base-str</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">       <span class="o">,@</span><span class="nv">body</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 매크로 with-foo-bar 사용:</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">with-foo-bar</span> <span class="s">&#34;hello&#34;</span> <span class="p">(</span><span class="nv">a</span> <span class="nv">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">format</span> <span class="no">t</span> <span class="s">&#34;~a // ~a~%&#34;</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;; [OUTPUT] FOO:hello // BAR:hello</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+단순하게 코드가 커지면<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, <code>defmacro</code>-선언보다 해당매크로 호출이
+컴파일러가 볼 때에 먼저 위치할 수 있는데, 그런 경우엔 좀 어이없지만,
+<code>unbound variable</code> 런타임 컨디션이 발생.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+
+<nav class="posts-pagination" aria-label="Page navigation">
+
+    
+    <a class="posts-pagination-btn disabled">Last⏮️</a>
+    <a class="posts-pagination-btn disabled">Newer⏪</a>
+    
+
+    <span class="posts-pagination-indicator" >
+        (( 1 of 37 ))
+    </span>
+
+    
+    <a href="/page/2/" class="posts-pagination-btn" aria-label="Older">⏩Older</a>
+    <a href="/page/37/" class="posts-pagination-btn" aria-label="First">⏭️First</a>
+    
+</nav>
+
+
+
+			</main>
+			<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570385</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script>
+		</div>
+	</body>
+</html>

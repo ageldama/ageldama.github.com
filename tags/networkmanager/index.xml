@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Networkmanager on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/networkmanager/</link>
+    <description>Recent content in Networkmanager on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 26 Feb 2019 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/networkmanager/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</title>
+      <link>https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/</guid>
+      <description>&lt;h1 id=&#34;필요성-궁금함-현재-상황&#34;&gt;필요성, 궁금함, 현재 상황&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;메인 데스크탑을 무선랜으로 인터넷에 연결하고 사용함.&lt;/li&gt;&#xA;&lt;li&gt;다른 기기들도 모두 기본적으로 무선으로 LAN접속.&lt;/li&gt;&#xA;&lt;li&gt;다 좋은데, 메인 데스크탑 &amp;lt;-&amp;gt; 라즈베리파이 접속할때 ssh 접속도&#xA;느린거 같을때가 있음.&lt;/li&gt;&#xA;&lt;li&gt;무선랜 접속이 많고, 블루투스 등등 다른 간섭도 많을거고,&lt;/li&gt;&#xA;&lt;li&gt;어쨌든 조금 물리적으로 거리가 있는 무선공유기까지 갔다&#xA;오는거니까.&lt;/li&gt;&#xA;&lt;li&gt;그래서 사용 안하고 있는 데스크탑의 내장 유선 랜포트로 인터넷연결을&#xA;공유하는 Private network을 만들어서 유선으로 연결해보기로 했다.&lt;/li&gt;&#xA;&lt;li&gt;정말 체감이 빨라질지 궁금했고&lt;/li&gt;&#xA;&lt;li&gt;직접 수동으로 설정하는게 거의 없거나,&lt;/li&gt;&#xA;&lt;li&gt;내가 사용하고 있는 NetworkManager에서 쉽게 설정이 가능할거&#xA;같았다.&#xA;- &lt;a href=&#34;https://wiki.archlinux.org/index.php/NetworkManager#Sharing_internet_connection_over_Ethernet&#34;&gt;https://wiki.archlinux.org/index.php/NetworkManager#Sharing_internet_connection_over_Ethernet&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h1 id=&#34;진행과-추가적인-설정&#34;&gt;진행과 추가적인 설정&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;그냥&#xA;&lt;a href=&#34;https://wiki.archlinux.org/index.php/NetworkManager#nm-applet&#34;&gt;nm-applet&lt;/a&gt;&#xA;사용해서 wired connection에 인터넷 공유를 체크한게 설정 전부.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.thekelleys.org.uk/dnsmasq/doc.html&#34;&gt;dnsmasq&lt;/a&gt; 패키지만&#xA;설치하고, 별도로 systemctl으로 enable/start한건&#xA;없음. (NetworkManager에서 자동으로 관리)&lt;/li&gt;&#xA;&lt;li&gt;잘 동작함. ㅎㅎ&lt;/li&gt;&#xA;&lt;li&gt;추가적으로, Private Network에 접속하는 호스트의 MAC 어드레스에&#xA;IP주소를 고정해서 접속이 편하도록 설정했다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;mac주소에-고정ip-할당하기&#34;&gt;MAC주소에 고정IP 할당하기&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;dnsmasq의 DHCP 설정을 추가한다.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;/etc/NetworkManager/dnsmasq-shared.d/static-ips.conf&lt;/code&gt; 파일을 작성했다.&lt;/li&gt;&#xA;&lt;li&gt;별도의 재시작 없이, 파일 저장하고, 그냥 유선연결을 끊었다가 다시 연결하면 끝.&lt;/li&gt;&#xA;&lt;li&gt;나머지는 NetworkManager이 다 자동으로 처리.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;설정파일의 내용은 &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

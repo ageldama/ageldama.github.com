@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.152.2">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1764570386">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+	<meta property="og:url" content="https://ageldama.github.io/">
+  <meta property="og:site_name" content="아겔로그">
+  <meta property="og:title" content="아겔로그">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="아겔로그">
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
+
+        
+            
+            
+                
+                    
+                        <link rel="stylesheet" href="/css/styles.1d7019d2254b088f6602c8d95ed9a4ed3f3d202a66b37b4be719f7410e8ab0bc.css" integrity="sha256-HXAZ0iVLCI9mAsjZXtmk7T89ICpms3tL5xn3QQ6KsLw=" crossorigin="anonymous">
+                    
+                
+            
+        
+
+        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+
+	
+</head>
+
+        <body>
+                <div class="container">
+			<header>
+    <div class="main ">
+        <a class="site-title "
+           href="https://ageldama.github.io/">아겔로그</a>
+    </div>
+
+
+    <nav>
+        <div class="search-form">
+            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+            <input id="search-query" name="search-query"
+                class="search-query"
+                tabindex="1"
+                placeholder="🔎 검색 (search)"/>
+        </div>
+
+        
+            <a href="/posts/archive/">🗂️ INDEX</a>
+        
+            <a href="/myself/">📨 CONTACT</a>
+        
+
+    </nav>
+</header>
+
+<script src="/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    var options = {
+      
+      
+      
+      time: '0.5s', 
+      mixColor: '#fff', 
+      backgroundColor: '#f6f5f3',  
+        buttonColorDark: '#566666',  
+        buttonColorLight: '#566666', 
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }
+
+    var darkmode = new Darkmode(options);
+    window.darkmode = darkmode;
+      darkmode.showWidget();
+
+      if (window.screen.width <= 600) {
+          $('.darkmode-toggle').css({
+              'position': 'absolute',
+              'top': '10px',
+              'left': window.screen.width - 60,
+          });
+
+          $('.darkmode-layer--button').hide();
+      }
+
+    
+
+  }
+ window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+			<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<template id="search-results-title">
+    <h2>검색어(search term): <span id="search-term"></span></h2>
+</template>
+
+
+<template id="search-results-no-results">
+    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
+</template>
+
+
+<template id="search-results-results-header">
+    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
+</template>
+
+
+<template id="search-result-template"><div class="search_summary">
+    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+    <p><em class="search_snippet"></em></p>
+    <small>
+        <table>
+            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
+            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
+        </table>
+    </small>
+</div></template>
+
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+
+<script src="/js/lodash.min.js"></script>
+<script src="/js/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+
+			<main class="list">
+				<div class="site-description"></div>
+				
+				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-02feb/ping-22sat/">💡 Ping 22/Feb/2020</a></h1>
+                                    <time>2020年02月22日
+                                        </time>
+                                        <br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+내가 책상을 쓰는 방법, 고물 컴퓨터를 고쳐 쓰기
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>오래된 피씨 본체를 얻었다. 슬림한 케이스의 삼성 컴퓨터.</p>
+<p>
+  윈도7 설치된 것도 꽤 가볍고 빠르게 정리되어 있었다. 그냥 FreeBSD을
+  처음에는 설치하려고 하다가, 결국 애플리케이션이나 그냥 적당히 잘
+  돌아가는, 이맥스 정보만 잘 동작하는 기계면 될 것 같아서 아치리눅스를
+  설치.</p>
+<p>
+  만족스럽다.</p>
+<p>
+  데스크탑 원래 사용하던 것도 그렇게 엄청나게 좋은 것은 아니지만
+  만족스러운 사용인데, 문제는 책상 가운데에 모니터랑 키보드를 놓고
+  쓰면 책을 읽을 자리가 없어져서 항상 키보드 등을 한 켠으로
+  밀어놓는다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-02feb/ping-15sat/">🌓 Ping 15/Feb/2020</a></h1>
+                                    <time>2020年02月15日
+                                        </time>
+                                        <br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+새벽, 이른 저녁, 풍경과 공기, 일상, 꾸준함
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>매일 이른 새벽에 깨어나 일정한 방식으로 하루를 보낸다. 만족스럽다.</p>
+<p>
+  매일 매일 조금씩 다른, 하지만 같은 궤도를 걷는다. 그리고 궤도는
+  조금씩 변해가겠지.</p>
+<p>
+  춥거나 공기가 좋지 않거나. 하지만 그래도 일상은 매일매일이 귀한
+  시간이다.</p>
+<p>
+  꾸준히 이렇게 살아가면서 행복하다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+트위스비 에코
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>매일 일터에서 집에서 메모, 스케치를 하고 글을 쓸 때 만년필을 여전히
+  쓴다. 결국 계속해서 꾸준히 쓰는 만년필은 라미 사파리와 트위스비
+  에코.</p>
+<p>
+  라미 사파리는 잉크를 다 쓰고 나면 잘 씻어서 보관을 해둘까 생각하고
+  있다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-02feb/ping-09sun/">🍚 Ping 09/Feb/2020</a></h1>
+                                    <time>2020年02月09日
+                                        </time>
+                                        <br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+책: 초난감 기업의 조건
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>&#39;기계인간&#39;님의 트윗으로 소개를 받았다. 너무 잘 소개를 해주셔서
+  기대가 많았다. 그리고 기대만큼 재밌는 책이다.</p>
+<p>
+  경영서적, 마케팅, 혹은 자기계발서처럼 무언가 교훈을 얻고 싶어서
+  읽지는 않는다. 그냥 다른 사람들의 처절한 실패담과 그 아둔함을 보면서
+  쓰게 웃고 싶을 뿐이다.</p>
+<p>
+  그 사람들이 얼마나 멍청했는지는 잘 모르겠다. 그리고 그걸 비웃고 싶은
+  것은 아니다. 오히려 사람들이 그런 멍청함을 구현해내는 분위기, 흐름,
+  예의를 지키느라, 혹은 눈치를 보느라 제대로된 길에 들어서지 못하는
+  어떤 형태의 인간 사회에 대해 그렇게 냉소하고 싶어지게 만든다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-01jan/100days-of/">🌵 100일의 기록</a></h1>
+                                    <time>2020年01月04日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p><img src="/images/2020-01jan/100days.png" alt="/images/2020-01jan/100days.png" title="/images/2020-01jan/100days.png" /></p>
+<p>
+어느 날이었을지, 기록과 기억이 생생하다. 왜인지는 모르겠지만, 그날
+새벽부터 앞으로 100일간 시도해보고 싶은게 생겼다.</p>
+<p>
+그래서 그 당장 시작했다. 그리고 별로 해낸 것도 없는 주제에 당당하게
+만족스러운 기분으로 &#34;1일&#34;과 그날 날짜를 필기 노트에 적었다. 그리고 그
+다음 날, 또 다음 날.</p>
+<p>
+그렇게 100일을 채웠다. 매일 나는 행복했다. 고요함, 주변에서 일어나는
+일들을 내려놓고 평화로웠다. 그리고 수 많은 것들을 다시 생각하고
+무엇보다 생각을 비울 수 있었다. 덕분에 이제는 관점과 행동이 더 많이
+변한 것 같다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-01jan/type-variances/">⏪ Covariant, Contravariant, Invariant등 Type Variances 이해하기</a></h1>
+                                    <time>2020年01月03日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+<a href="https://blog.daftcode.pl/covariance-contravariance-and-invariance-the-ultimate-python-guide-8fabc0c24278">거의 그대로 베껴온 원본 글</a></p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+계약서로서의 타입
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>타입을 생각할 때, &lt;계약서&gt;로 생각하는 것이 편하다.</p>
+<p>
+  왜냐하면, 전달한 값이 그 타입의 범위 안에서 전달 받은 쪽에서
+  취급이 제한된다는 보장이 있어야 안전한 코드를 컴파일러는 생성해줄 수
+  있다. (혹은 그렇게 안전한지 체크를 해준다.)</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Subtype, 일반화(Generalization), 특화(Specialization)
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>타입을 말할 때, 나는 보통 객체지향언어에서의 클래스의 상속 관계를
+  떠올린다. 꼭 그렇지는 않겠지만, 이 글에서도 그렇게 설명을 해보겠다.</p>
+<p>
+  이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고
+  가정하겠다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
+				
+
+
+<nav class="posts-pagination" aria-label="Page navigation">
+
+    
+    <a href="/" class="posts-pagination-btn" aria-label="Last">Last⏮️</a>
+    <a href="/page/22/" class="posts-pagination-btn" aria-label="Newer">Newer⏪</a>
+    
+
+    <span class="posts-pagination-indicator" >
+        (( 23 of 37 ))
+    </span>
+
+    
+    <a href="/page/24/" class="posts-pagination-btn" aria-label="Older">⏩Older</a>
+    <a href="/page/37/" class="posts-pagination-btn" aria-label="First">⏭️First</a>
+    
+</nav>
+
+
+
+			</main>
+			<footer class="global-footer">
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1764570386</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
+<script> </script>
+		</div>
+	</body>
+</html>
