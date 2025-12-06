@@ -2,10 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ageldama.github.io/categories/blog/</loc>
-    <lastmod>2025-11-30T10:00:00+00:00</lastmod>
+    <loc>https://ageldama.github.io/posts/2025-12dec/reactjs&#43;nextjs-rce/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/categories/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/javascript/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/nextjs/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/rce/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/reactjs/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/rms/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/scheme/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/security/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/tcl/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/vulnerability/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/blog/</loc>
     <lastmod>2025-11-30T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/css/</loc>
@@ -20,19 +59,10 @@
     <loc>https://ageldama.github.io/tags/ping/</loc>
     <lastmod>2025-11-30T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2025-11-30T10:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/programming/</loc>
     <lastmod>2025-11-30T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
-    <lastmod>2025-11-30T10:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/posts/2025-11nov/blog-post-title-emojis/</loc>
-    <lastmod>2025-11-30T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-11-30T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/dmenu/</loc>
@@ -90,9 +120,6 @@
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/queue/</loc>
-    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/tcl/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/thread/</loc>
@@ -318,9 +345,6 @@
     <lastmod>2025-09-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/iphone/</loc>
-    <lastmod>2025-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/javascript/</loc>
     <lastmod>2025-09-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/js/</loc>
@@ -1211,9 +1235,6 @@
     <loc>https://ageldama.github.io/posts/2020-11nov/ping-10tue/</loc>
     <lastmod>2020-11-10T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/reactjs/</loc>
-    <lastmod>2020-11-10T00:00:00+09:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/redux/</loc>
     <lastmod>2020-11-10T00:00:00+09:00</lastmod>
   </url><url>
@@ -1644,9 +1665,6 @@
     <lastmod>2019-12-30T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/</loc>
-    <lastmod>2019-12-30T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/scheme/</loc>
     <lastmod>2019-12-30T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/compilation-mode/</loc>

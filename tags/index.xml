@@ -7,8 +7,64 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sun, 30 Nov 2025 10:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Dec 2025 10:20:00 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript</title>
+      <link>https://ageldama.github.io/tags/javascript/</link>
+      <pubDate>Sat, 06 Dec 2025 10:20:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nextjs</title>
+      <link>https://ageldama.github.io/tags/nextjs/</link>
+      <pubDate>Sat, 06 Dec 2025 10:20:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/nextjs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rce</title>
+      <link>https://ageldama.github.io/tags/rce/</link>
+      <pubDate>Sat, 06 Dec 2025 10:20:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/rce/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reactjs</title>
+      <link>https://ageldama.github.io/tags/reactjs/</link>
+      <pubDate>Sat, 06 Dec 2025 10:20:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/reactjs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rms</title>
+      <link>https://ageldama.github.io/tags/rms/</link>
+      <pubDate>Sat, 06 Dec 2025 10:20:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/rms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scheme</title>
+      <link>https://ageldama.github.io/tags/scheme/</link>
+      <pubDate>Sat, 06 Dec 2025 10:20:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/scheme/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tcl</title>
+      <link>https://ageldama.github.io/tags/tcl/</link>
+      <pubDate>Sat, 06 Dec 2025 10:20:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/tcl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vulnerability</title>
+      <link>https://ageldama.github.io/tags/vulnerability/</link>
+      <pubDate>Sat, 06 Dec 2025 10:20:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/vulnerability/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Css</title>
       <link>https://ageldama.github.io/tags/css/</link>
@@ -154,13 +210,6 @@
       <link>https://ageldama.github.io/tags/queue/</link>
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/queue/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tcl</title>
-      <link>https://ageldama.github.io/tags/tcl/</link>
-      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/tcl/</guid>
       <description></description>
     </item>
     <item>
@@ -644,13 +693,6 @@
       <link>https://ageldama.github.io/tags/iphone/</link>
       <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/iphone/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Javascript</title>
-      <link>https://ageldama.github.io/tags/javascript/</link>
-      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
@@ -2285,13 +2327,6 @@
       <description></description>
     </item>
     <item>
-      <title>Reactjs</title>
-      <link>https://ageldama.github.io/tags/reactjs/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/reactjs/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Redux</title>
       <link>https://ageldama.github.io/tags/redux/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
@@ -2884,13 +2919,6 @@
       <link>https://ageldama.github.io/tags/lexical-binding/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
       <guid>https://ageldama.github.io/tags/lexical-binding/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Scheme</title>
-      <link>https://ageldama.github.io/tags/scheme/</link>
-      <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/scheme/</guid>
       <description></description>
     </item>
     <item>

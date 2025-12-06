@@ -1,7 +1,21 @@
 
 [
  {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/reactjs+nextjs-rce/","title": "🌋 (주절주절) react.js / next.js RCE 보안문제와 아기 히틀러 딜레마",
+     
+     "tags": ["javascript", "nextjs", "reactjs", "rce", "vulnerability", "tcl", "scheme", "rms"],
+     
+ "description": "",
+ "contents": " 2~3일 전부터 해외 커뮤니티에서는 크게 이슈가 됐고, 한국 뉴스피드 등은 이제 좀 올라오는거 같다.\nHN: RCE Vulnerability in React and Next.js (github.com/vercel) 댓글을 보면 충격적이다.\n예전 log4j RCE보다 내 생각엔 위험할 것 같다. …왜냐하면 누구나 아무 생각 없이 그냥 써왔을거고, 그러려고 선택한 스택일테니까. 🥟\n공교롭게도, HN: 30 years ago today \u0026#34;Netscape and Sun announce JavaScript\u0026#34; (archive.org) …였다고 한다. 🎂\n그리고 문득 또 다른 거의 30여년 전의 어떤 논쟁, 세상을 뒤바꾼 논쟁이 떠올랐다:\ncomp.lang.tcl: Why you should not use Tcl\n그리고 나머지는 잘 아는대로, Brendan Eich은 원래는 Scheme을 웹브라우저에 넣고 싶었지만, 마케팅에 유리할 것 같은 \u0026#34;Java스러운\u0026#34; 언어를 10일만에 만들고, 그게 JavaScript이 되었다고 한다. 1\n어쩌면 그 언어가 Tcl이었을수도 있고, 어쩌면 그냥 Scheme이었을수도 있겠지만.\n아참. comp.lang.tcl-의 저 유명한 rms의 글의 내용도, Tcl언어가 외부의 입력을 그대로 실행(eval)해버릴 위험이 크므로, Tcl은 제발 그만 쓰고 (자기가 좋아하는 리습계열인) Scheme을 써야 한다는 주장이다.\n하지만 흥미롭게도 현재의 우리는 스킴을 쓰지도, 웹브라우저에 스킴이 내장되지도 않은 시대를 살고 있다. 더더욱이 rms의 GNU Guile도 그렇게 메인스트림 언어나 스크립팅 언어라고 하기엔 좀 인기가 많이 부족한 느낌이다.\nGNU GIMP의 Script-Fu이라던지 나는 재밌게 써보긴 했었다. 그런데 그마저도 Guile이 아니라 SIOD 구현이었던 것 같다.2 ㅎㅎ\n어차피 현대 사회의 모습을 남들이 이해하건 않건 규정한 자유소프트웨어/오픈소스의 시작인 GNU Manifesto-에서부터 \u0026#34;…(우리는) 커먼리습을 다 구현해놓았고, 앞으로 다들 그걸 쓰게 될 것이다.\u0026#34;-는 식의 말들도 지금에 와서 보면 이게 뭔 뜬금 없는 과거의 상상화스러운 미래비전인가 싶다.\n흥미롭다.\n이해하건 못하건, 현재의 인터넷과 모든IT 기반이 오픈소스에 깊이 의존하는데, 그 시대를 만든 안목자의 선언에서 그다지 이뤄지지 않은 부분도 많다는걸 생각해본다. 지금 시대에 유명인사들이 하는 모든 말들이 꼭 예언적이진 않을거란 생각을 하게 된다.\n그리고 이상하게도, Tcl 같은 언어에서 멀리 떠나가 Scheme + Java =\u0026gt; JavaScript 같은 요상한 조합을 만들어 내면서까지 웹브라우저에 스크립팅 언어를 심었는데, 그게 결국엔 먼 시간을 돌고 돌아서 보안문제를 마치 원래 Tcl이 심어져 있었더라면 일으켰을 양상을 보안이슈를 만드는 것 같기도 하다.\n문득 역사나 예언을 전혀 모르지만 이런 이야기가 떠올랐다: 위키백과: \u0026#34;Killing baby Hitler\u0026#34; 💀\nFootnotes 1 https://www.reddit.com/r/programming/comments/16v7zv2/was_javascript_really_made_in_10_days/\n2 카메라로 OpenCV 안면인식을 하고, 그에 따라 얼굴에 \u0026#34;가상화장\u0026#34;을 적용해주는 프로젝트에 참여한 적이 있다. GIMP Headless Server을 만들고, 좌표들에 따라 Scheme스크립트를 실행해서 이미지에 \u0026#34;필터\u0026#34;를 적용해주는 부분, JSON/Telnet기반 프로토콜을 정의하고 요청을 받아 처리하는 서버를 만들었던 것 같다.\n"},
+ {
      "permalink": "https://ageldama.github.io/posts/","title": "▫️ Posts",
+     
+     "tags": [],
+     
+ "description": "",
+ "contents": ""},
+ {
+     "permalink": "https://ageldama.github.io/","title": "💡 아겔로그",
      
      "tags": [],
      
@@ -14,13 +28,6 @@
      
  "description": "",
  "contents": " 블로그 CSS을 또 수정하고, 레이아웃도 좀 더 고쳤다. 간단하게 가볍게 보였으면 해서.\n그런데 그간 고민해오던 것들이 있음:\n(예전에) 귀찮아서 new-ping.pl-스크립트 같은거 짜놓고 자동 생성한 포스팅 제목으로 그대로 포스팅한 \u0026#34;Ping …..\u0026#34;-같은 제목의 포스팅들은 archives에서 봐도 뭐가 뭔지 구분이 안됨. h1-같은 markdown/org-mode에서 export한 제목과 각 포스팅의 제목(이것도 h1-같은 태그인)이 눈에 딱 들게 구분이 되지 않았음. archives에서 각 포스팅의 preview을 표시했다 조금 내용도 나오니까 찾아보기 더 수월해진거 같다. ㅎㅎ 그리고 막상 이렇게 전체 목록 / 시간에 따라, 내용을 조금이나마 보여주니까 일대기 형식이라 재밌네.\n포스팅 제목에 자동으로(!) emoji을 붙여주도록 했다 🤖 랜덤하게, 혹은 특정한 값에 의해, emoji 목록에서 선택하여 자동으로 붙여주기,,를 하면 좀 각 포스팅별로 구분되어 보일 것 같아서 시도.\n그런데, 페이지 렌더링 때마다 매번 랜덤하게 붙여주면, 그 포스팅의 개성이 사라지는거 같아서, 해당 포스팅의 제목/내용 같은 문자열 조합에 따라서 emoji 목록에서 선택하는 방식으로 구현해 봤다.\n어차피 static site generator을 사용하고 있으므로, 선택지는:\njavascript : 웹브라우저가 페이지 렌더링 할 때에. static site generator templating : 포스팅 publish 전에 html에 생성. 자바스크립트를 쓰면 쉽겠지만, 자바스크립트가 없는 웹브라우저를 쓰는 누군가👽를 위해서 (2)번 방식, static site generator templating만을 쓰기로 했다.\n그래서 구현해봤다:\n1 2 3 4 5 6 7 {{- /* layouts/partials/emojibyhash.html */ -}} {{- $emojis := slice \u0026#34;😀\u0026#34; \u0026#34;😃\u0026#34; /* ...여기에 엄청 많이 이모지 목록 나열... */ -}} {{- $h := crypto.SHA1 .input -}} {{- $hn := cast.ToInt (add \u0026#34;0x\u0026#34; (slicestr $h 36)) -}} {{- $emoji_idx := mod $hn (len $emojis) -}} {{- $emoji := index $emojis $emoji_idx -}} {{- return $emoji -}} 어떤 문자열을 전달 받고(.input), 그걸 sha1 \u0026gt;\u0026gt; slice _ 36 \u0026gt;\u0026gt; ToInt-해서 작은 정수값으로 만들고, 그 정수값으로 remainder연산해서 이모지목록에서 선택하는 방식.\n주어진 문자열(.input)만 고정되어 있다면, 항상 같은 이모지를 선택해주도록 했다.\n사용하는 곳에선:\n1 2 {{- $emoji := partial \u0026#34;emojibyhash.html\u0026#34; (dict \u0026#34;input\u0026#34; .Title) -}} \u0026lt;h1\u0026gt;{{ $emoji }} {{ .Title }}\u0026lt;/h1\u0026gt; hugo template partials을 활용해서, 이렇게 function-or-macro 같이 사용할 수 있더라. shortcodes1으로 만들어서 쓰는 방식도 가능하던데, 일단 그냥 partials으로 무식하게 만들어봤다.\n…재밌었다. ㅎㅎ\n포스팅에 자동으로 emoji을 붙여주니 좀 걱정도 생긴다 🫣 음… 자동으로 붙여주는건 정말 좋은데 걱정이: …포스팅 제목에 따라서 붙은 이모지 조합이, 종종 nsfw하거나 괴상한 의미로 읽힐 수도 있을거 같은 예가 좀 보여서.\nFootnotes 1 https://gohugo.io/templates/shortcode/\n"},
- {
-     "permalink": "https://ageldama.github.io/","title": "💡 아겔로그",
-     
-     "tags": [],
-     
- "description": "",
- "contents": ""},
  {
      "permalink": "https://ageldama.github.io/posts/2025-11nov/scripts-rofi-perl5-release/","title": "😪 scripts-rofi-perl5 릴리즈",
      

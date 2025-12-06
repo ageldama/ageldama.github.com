@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765003359">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765019127">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -176,6 +176,60 @@ $('body').addClass('acid-decay');
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2025-05may/term-ddakong-v0.0.8-release/">✝️ ddakong v0.0.8 릴리즈: 안정화 및 플러그인 시스템</a></h1>
+                                    <time>2025年05月03日
+                                        </time>
+                                        <br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+스크린샷:
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><img src="/2025-05may/KIMCHI-cropped.png" alt="/2025-05may/KIMCHI-cropped.png" title="/2025-05may/KIMCHI-cropped.png" /></p>
+<p>
+&lt; <a href="https://github.com/ageldama/term-ddakong">https://github.com/ageldama/term-ddakong</a> &gt;</p>
+<p>
+&lt; <a href="https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8">https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8</a> &gt;</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+릴리즈 v0.0.8
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>안정화/문서화하고, 이제 플러그인 시스템을 도입해서 원하는대로
+hackable🪓🔥한 터미널용 입력기가 되었다.</p>
+<p>
+플러그인 작성해서:</p>
+<ol>
+<li>한글만이 아니라 다른 언어 입력기로 사용할 수도 있음.</li>
+<li>UTF-8 이외에 다른 인코딩으로 출력가능함. (예: EUC-KR, EUC-JP …)</li>
+<li>토글키(<code>Control-H</code>) 마음에 안들면 바꾸면 됨.</li>
+<li>등등등</li>
+</ol>
+<p>
+오늘 한 작업들은:</p>
+<ol>
+<li>안정화 많이 진행했다.</li>
+<li>코드 문서화 주석작성 다 했다.</li>
+<li>
+<p>cross-platform build 자동화해서 릴리즈 때 편해졌다.</p>
+<ul>
+<li>armhf (raspberry pi 32bit), aarch64 (raspberry pi 64bit),
+i386 (32bit), x86_64 모두 릴리즈하고 있다.</li>
+<li>..혹시나 어디선가 i386 기계 터미널에서 한글을 입력하고 싶은
+사람이 있을거 같아서.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item"><h1 class="title"><a href="/posts/2025-05may/term-ddakong-initial-release/">👶 ddakong 한글입력기 릴리즈</a></h1>
                                     <time>2025年05月02日
@@ -469,33 +523,6 @@ css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.</p>
                                         
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2025-03mar/2025-03mar18--01-xrandr/">🎃 xrandr 🖥️모니터 연결 자동전환 스크립트🐫</a></h1>
-                                    <time>2025年03月18日
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.
-다 편한데, 🪟윈도나 icewm처럼 <code>Windows+P</code> 누르면, 다음 모니터연결
-조합으로 전환되는게 부러웠다.</p>
-<p>
-매번 터미널 열고 <code>xrandr</code> 치거나, <a href="https://christian.amsuess.com/tools/arandr/">arandr</a> 열어서 세팅하기 귀찮으니까.
-(물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)</p>
-<p>
-그래서 그냥 윈도의 <code>Win+P</code> 키처럼 동작하도록 스크립트를 짜봤다.</p>
-<p>
-🐫 <a href="https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl">https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl</a></p>
-<p>
-Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.</p>
-<p>
-그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,
-예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별
-생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -520,7 +547,7 @@ Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.</p
 
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765003359</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765019127</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

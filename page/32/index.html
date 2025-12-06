@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765003359">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765019127">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -177,6 +177,40 @@ $('body').addClass('acid-decay');
 				
 				
 				
+				<section class="list-item"><h1 class="title"><a href="/posts/2018-10oct/10wed-steamplay-on-linux/">👜 SteamPlay On Linux</a></h1>
+                                    <time>2018年10月10日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>집에 있는 데스크탑에서 윈도10 그냥 사서 설치하고, 거기에
+<a href="https://store.steampowered.com/">스팀</a> 설치해서 게임이나 하는데
+사용했었음</p>
+<p>거기에 대부분의 작업은 그냥 리눅스에서 하는게 훨씬 편하고 해서
+Virtualbox에 아치리눅스 게스트 만들어놓고 거기에 접속해서
+작업했었었다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>그러다가
+<a href="https://support.steampowered.com/kb_article.php?ref=9439-QHKN-1308">SteamPlay</a>이란걸
+알게됐고, 모든 게임이 다 지원되는건 아니더라도 그냥 앞으로 나올
+게임들중에 리눅스를 지원하거나 <a href="https://www.winehq.org/">Wine</a>을
+통해서 실행할 수 있으면 이걸 쓰는게 더 낫고 윈도가 싫었다.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>여튼, 좀 설치하고 써보니:</p>
+<ol>
+<li>모든 게임을 지원하지 않는다.
+1. 적당히 지원될거라고 생각하던 게임들도 그냥 <em>됐고, SteamPlay지원
+안해도 돌려볼랜다</em> 체크해봤자 제대로 안굴러감.</li>
+<li>게임패드나 그런것 지원은 윈도보다 편안함. 그냥 USB 꽂으면 바로 동작.</li>
+<li>처음엔 Flatpak같은걸로 설치해서 깔끔하게 해보려다가 그냥
+Pacman으로 Runtime/Native 설치해서 오히려 속편함.</li>
+<li>NVidia Proprietary Driver 설치했으면, 조금 더 구글링해서
+고쳐줘야할게 생김.</li>
+</ol>
+<p>하프라이프2이나 그런것만 돌려봤는데 전혀 리눅스라서 따로 신경쓸건
+없었다. 폴아웃3이나 그런게 동작 안하는건 너무 슬펐다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
 				<section class="list-item"><h1 class="title"><a href="/posts/2018-10oct/06sat-cd-ripping/">👇 CD Ripping!</a></h1>
                                     <time>2018年10月06日
                                         </time>
@@ -327,33 +361,6 @@ network={
                                         
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2018-09sep/cquery-vs-cmake-ide/">⏺️ CQuery &#43; LSP vs CMake-IDE &#43; RTags</a></h1>
-                                    <time>2018年09月23日
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>LSP + CQuery을 써보려고 했는데, 결국 <a href="/posts/2018-05may-emacs-cmake-ide-screencast/">CMake-IDE +
-RTags</a> 조합으로
-원래대로 쓰게될거 같아. :</p>
-<ol>
-<li><code>_build/</code> 와 같이 CMake, Ninja, Makefile등의 파일들을 별도의
-디렉토리로 만들어서 필드하고 싶은데, 제대로 지원을 못한다.
-1. 그냥 프로젝트 소스코드랑 같이 generate하고 <code>gcc</code>등의 중간
-파일이 모두 같이 남아서 지저분해져서 싫어함.</li>
-</ol>
-<p>아직은 별로 내 마음에 꼭 들게 만들기는 어려울거 같아서. 그래도
-인상적이었던 부분들:</p>
-<ol>
-<li>flycheck에 전용으로 연동되어 있는 점.</li>
-<li>company-lsp이 생각보다 훨씬 부드럽고 자동완성 잘되는거.</li>
-</ol>
-<p>미래에는 그냥 LSP기반만 남을거 같아서, 이것도 &ldquo;helm-rg의 모험&quot;처럼
-아직은 완전히 전환은 못할거 같긴하다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -378,7 +385,7 @@ RTags</a> 조합으로
 
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765003359</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765019127</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
