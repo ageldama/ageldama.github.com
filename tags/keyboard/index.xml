@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Keyboard on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/keyboard/</link>
+    <link>http://localhost:1313/tags/keyboard/</link>
     <description>Recent content in Keyboard on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/keyboard/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/keyboard/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 23/Nov/2020</title>
-      <link>https://ageldama.github.io/posts/2020-11nov/ping-23tue/</link>
+      <link>http://localhost:1313/posts/2020-11nov/ping-23tue/</link>
       <pubDate>Mon, 23 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-11nov/ping-23tue/</guid>
+      <guid>http://localhost:1313/posts/2020-11nov/ping-23tue/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;logitech k480 bluetooth keyboard&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.logitech.com/ko-kr/product/multi-device-keyboard-k480&#34;&gt;https://www.logitech.com/ko-kr/product/multi-device-keyboard-k480&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  받아서 묵혀두던 키보드. 팬터그래프 방식을 쓰던 것과는 또 다르지만&#xA;  그럭저럭 마음에 든다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  가장 마음에 드는 부분은, 키들끼리의 간격이 적당하고, 키보드&#xA;  레이아웃에서 마우스 이동이 없도록 키패드 부분이 없는 방식인 점,&#xA;  그리고 장난감스러운 키보드지만 그렇다고 오타가 넘치도록 너무 대충&#xA;  만들어진 것은 아닌 것 같아서 그럭저럭 짜증을 유발하지 않으면서&#xA;  적당히 쓸 수 있는 것 같아서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  책상에 공간을 너무 잡아먹지도 않아서 그럭저럭 괜찮다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  다만 블루투스 방식이어서, 건전지를 써서 내게는 조금은 감점.&lt;/p&gt;</description>
     </item>
   </channel>

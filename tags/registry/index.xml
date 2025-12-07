@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Registry on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/registry/</link>
+    <link>http://localhost:1313/tags/registry/</link>
     <description>Recent content in Registry on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Tue, 11 Jul 2017 20:20:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/registry/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/registry/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HOWTO: Private Docker Registry?</title>
-      <link>https://ageldama.github.io/posts/2017/2017-07-11-private-docker-registry-howto/</link>
+      <link>http://localhost:1313/posts/2017/2017-07-11-private-docker-registry-howto/</link>
       <pubDate>Tue, 11 Jul 2017 20:20:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2017/2017-07-11-private-docker-registry-howto/</guid>
+      <guid>http://localhost:1313/posts/2017/2017-07-11-private-docker-registry-howto/</guid>
       <description>&lt;p&gt;말보다 예제 깃헙 Project &amp;ndash; &lt;a href=&#34;https://github.com/ageldama/private-docker-registry-howto&#34;&gt;https://github.com/ageldama/private-docker-registry-howto&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;내 피씨에서 작업하던거 서버에 바로 올려보고 싶은데,&lt;/li&gt;&#xA;&lt;li&gt;회사에 레지스트리가 없을때,&lt;/li&gt;&#xA;&lt;li&gt;혹은 레지스트리를 개발서버에 올리지도 못하고 어쨌든 개발서버에 도커 이미지 옮기고 싶을때&lt;/li&gt;&#xA;&lt;li&gt;..이런 이상한 상황에서도 쓸만하도록 고민해봄.&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
   </channel>

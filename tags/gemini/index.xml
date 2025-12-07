@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gemini on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/gemini/</link>
+    <link>http://localhost:1313/tags/gemini/</link>
     <description>Recent content in Gemini on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Thu, 02 Feb 2023 15:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/gemini/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/gemini/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 02/02/2023 .01: xemacs, gemini, gemtext</title>
-      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb02--01-ping/</link>
+      <link>http://localhost:1313/posts/2023-02feb/2023-02feb02--01-ping/</link>
       <pubDate>Thu, 02 Feb 2023 15:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb02--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb02--01-ping/</guid>
       <description>&lt;div&gt;&#xA;  &lt;nav id=&#34;TableOfContents&#34;&gt;&#xA;  &lt;ul&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#1-제미니-계획&#34;&gt;1. &amp;ldquo;제미니 계획&amp;rdquo;&lt;/a&gt;&lt;/li&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#2-just-like-the-good-ol-days&#34;&gt;2. just like the good ol&amp;rsquo; days&lt;/a&gt;&lt;/li&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#차라리-돈을-내고-글을-읽겠다만&#34;&gt;차라리 돈을 내고 글을 읽겠다&amp;hellip;만&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;/ul&gt;&#xA;&lt;/nav&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;추억이 그리워지는 시대여서 그런거 같기도 하다.&#xA;그럼에도 어차피 그렇게 다시 사용하기엔 끔찍할텐데.&lt;/p&gt;&#xA;&lt;h1 id=&#34;1-제미니-계획&#34;&gt;1. &amp;ldquo;제미니 계획&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Gemini_(protocol)&#34;&gt;gemini protocol&lt;/a&gt; 을 기반으로 뭔가 새로운 것을 상상하면 즐겁지만,&lt;/p&gt;&#xA;&lt;p&gt;정말 제한적이어서, 내 마음대로의 확장을 떠올리게 된다.&lt;/p&gt;&#xA;&lt;p&gt;실은, gemtext와 gemini protocol은 마음에 드는 부분이 바로 그런점이지만: 오히려 제한적이고, 그냥 무시해도 되는 것들을 굳이 지원해줘야 할 것 같은 기분에 져서 우겨넣으면서 complexity만 무한대으로 보낼바엔, 이렇게 무시할 것은 잘 무시하는게 더 좋은거 같아.&lt;/p&gt;</description>
     </item>
   </channel>
