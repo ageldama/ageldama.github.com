@@ -7,8 +7,78 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sat, 06 Dec 2025 10:20:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kill</title>
+      <link>https://ageldama.github.io/tags/kill/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/kill/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://ageldama.github.io/tags/linux/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pgid</title>
+      <link>https://ageldama.github.io/tags/pgid/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/pgid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pgrp</title>
+      <link>https://ageldama.github.io/tags/pgrp/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/pgrp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pid</title>
+      <link>https://ageldama.github.io/tags/pid/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/pid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Posix</title>
+      <link>https://ageldama.github.io/tags/posix/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/posix/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Procfs</title>
+      <link>https://ageldama.github.io/tags/procfs/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/procfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sid</title>
+      <link>https://ageldama.github.io/tags/sid/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/sid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Signal</title>
+      <link>https://ageldama.github.io/tags/signal/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/signal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unix</title>
+      <link>https://ageldama.github.io/tags/unix/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/unix/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Javascript</title>
       <link>https://ageldama.github.io/tags/javascript/</link>
@@ -990,13 +1060,6 @@
       <description></description>
     </item>
     <item>
-      <title>Linux</title>
-      <link>https://ageldama.github.io/tags/linux/</link>
-      <pubDate>Mon, 15 Sep 2025 08:26:26 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Mpv</title>
       <link>https://ageldama.github.io/tags/mpv/</link>
       <pubDate>Mon, 15 Sep 2025 08:26:26 +0000</pubDate>
@@ -1862,13 +1925,6 @@
       <link>https://ageldama.github.io/tags/term/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/term/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Unix</title>
-      <link>https://ageldama.github.io/tags/unix/</link>
-      <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/unix/</guid>
       <description></description>
     </item>
     <item>

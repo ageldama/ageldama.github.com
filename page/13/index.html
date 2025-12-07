@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765090629">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765102664">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -23,7 +23,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/styles.d8b80e94e57df786a6162342e5d476938cc80c44f96ea816a89dbc65dc8005fd.css" integrity="sha256-2LgOlOV994amFiNC5dR2k4zIDET5bqgWqJ28ZdyABf0=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.b9e17ea4211fb0b9cc6f70adc024b67a356c837f27bc73432f5252f1ee9b433e.css" integrity="sha256-ueF&#43;pCEfsLnMb3CtwCS2ejVsg38nvHNDL1JS8e6bQz4=" crossorigin="anonymous">
                     
                 
             
@@ -177,6 +177,46 @@ $('body').addClass('acid-decay');
 				
 				
 				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-11nov/leet-code-1614-3rd/">🎫 Python &#43; Generator / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
+                                    <time>2020年11月11日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+<a href="/posts/2020-10oct/leet-code-1614/">지난 번 작성한 Common Lisp / LOOP매크로을 이용한 구현</a> 을 다른
+언어에서였다면, 비슷한 조건으로 메모리 복잡도 O(1)으로 풀어보고
+싶었다.</p>
+<div class="src src-python">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">accumulate</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">find_paren_count</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gen_only_parens</span> <span class="o">=</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="s1">&#39;(&#39;</span> <span class="ow">and</span> <span class="mi">1</span> <span class="ow">or</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                       <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span>
+</span></span><span class="line"><span class="cl">                       <span class="k">if</span> <span class="n">ch</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">,))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">gen_only_parens</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+다른 언어에서도 lazy stream을 지원한다면 비슷하게 풀 수 있을 것 같다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
 				<section class="list-item"><h1 class="title"><a href="/posts/2020-11nov/ping-10tue/">💷 Ping 10/Nov/2020</a></h1>
                                     <time>2020年11月10日
                                         </time>
@@ -329,24 +369,6 @@ rxjs으로 작성했었던 작은 예제는 다음과 같다.</p>
                                         
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2020-10oct/asdf-subdir-finder-1st/">📥 &#34;asdf-subdir-finder&#34; released!</a></h1>
-                                    <time>2020年10月26日
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-지난번 포스팅한 &#34;<a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">asdf 정의를 내 코드베이스의 하위디렉토리에서 자동으로
-로딩하기</a>&#34;를 프로젝트으로 만들었다.</p>
-<p>
-<a href="https://github.com/ageldama/asdf-subdir-finder">https://github.com/ageldama/asdf-subdir-finder</a></p>
-<p>
-사람마다 커먼리습으로 작업하는 스타일에 따라 많이 다를 수 있어서 안
-써도 되기도 하지만, 그냥 정리해서 공개는 해봤다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -371,7 +393,7 @@ rxjs으로 작성했었던 작은 예제는 다음과 같다.</p>
 
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765090629</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765102664</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

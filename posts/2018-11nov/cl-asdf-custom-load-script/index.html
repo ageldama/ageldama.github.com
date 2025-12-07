@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ASDF으로 간단한 의존성 연결과 로딩하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765090629">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ASDF으로 간단한 의존성 연결과 로딩하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765102664">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="System? 이런게 왜 필요하지? require있잖아
 대부분의 유명한 프로그래밍언어들이 커먼리습의 System 에 대응하는
@@ -42,7 +42,7 @@ A system is a collection of Lisp files that together constitute an application o
             
                 
                     
-                        <link rel="stylesheet" href="/css/styles.d8b80e94e57df786a6162342e5d476938cc80c44f96ea816a89dbc65dc8005fd.css" integrity="sha256-2LgOlOV994amFiNC5dR2k4zIDET5bqgWqJ28ZdyABf0=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.b9e17ea4211fb0b9cc6f70adc024b67a356c837f27bc73432f5252f1ee9b433e.css" integrity="sha256-ueF&#43;pCEfsLnMb3CtwCS2ejVsg38nvHNDL1JS8e6bQz4=" crossorigin="anonymous">
                     
                 
             
@@ -132,7 +132,7 @@ $('body').addClass('acid-decay');
 </script>
 
 
-    <div class="search">
+<div class="search">
     <div class="search-results"></div>
 </div>
 
@@ -188,7 +188,7 @@ $('body').addClass('acid-decay');
 <script src="/js/search.js"></script>
 
 <main>
-        <nav class="post-prevnext" aria-label="posts">
+    <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
         
         <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/2019-02feb07thu-gosched-fun/">⬅️ Golang Goroutine, Channel, I/O 그리고 Scheduler 이해해보기</a>
@@ -203,6 +203,26 @@ $('body').addClass('acid-decay');
 </nav>
 
 
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#system-이런게-왜-필요하지-require있잖아">System? 이런게 왜 필요하지? <code>require</code>있잖아</a>
+      <ul>
+        <li><a href="#a-1-modules-require-provide">A-1. <code>*modules*</code>, <code>require</code>, <code>provide</code></a></li>
+        <li><a href="#a-2-load을-그대로-써도-된다만-makefile만은">A-2. <code>load</code>을 그대로 써도 된다만… <code>Makefile</code>만은…</a></li>
+        <li><a href="#a-3-패키지랑은-다른것">A-3. 패키지랑은 다른것.</a></li>
+        <li><a href="#그래서-asdf-같은-것들이-생기고-필요해짐">그래서, asdf 같은 것들이 생기고 필요해짐.</a></li>
+      </ul>
+    </li>
+    <li><a href="#asdf-quicklisp">ASDF? Quicklisp?</a></li>
+    <li><a href="#간단한-프로젝트-만들어서-준비">간단한 프로젝트 만들어서 준비</a></li>
+    <li><a href="#기본-규칙들">기본 규칙들</a></li>
+    <li><a href="#사용하기">사용하기</a></li>
+    <li><a href="#그런데-이걸-어떻게-로딩한다고">그런데, 이걸 어떻게 로딩한다고?</a></li>
+    <li><a href="#그냥-legacy-asdfcentral-registry-쓰기">그냥 legacy, <code>asdf:*central-registry*</code> 쓰기</a></li>
+    <li><a href="#마무리-생각">마무리 생각</a></li>
+  </ul>
+</nav>
+    
 	<article>
 		<div class="title"><h1 class="title">🧡 ASDF으로 간단한 의존성 연결과 로딩하기</h1>
 			<div class="meta">
@@ -565,7 +585,7 @@ Jigsaw</a>
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765090629</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765102664</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
