@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>jq manpage와 code - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765090211">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>jq manpage와 code - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765090629">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="https://stedolan.github.io/jq/
 jq이 뭐하는 도구인지 소개는 한국어로 많은데, 그걸 갖고 조금 복잡한 패턴을 처리하는 자료는,
@@ -12,7 +12,7 @@ jq이 뭐하는 도구인지 소개는 한국어로 많은데, 그걸 갖고 조
 gnu coreutils, m4, awk, perl 만 해도 그랬었고, 조금이라도 알아가고 응용을 할수록 매일매일이
 더 재밌고 강력해졌었던거 같아." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="http://localhost:1313/posts/2022-06jun/06jun12sun--02-jq-as-vm/">
+	<meta property="og:url" content="https://ageldama.github.io/posts/2022-06jun/06jun12sun--02-jq-as-vm/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="jq manpage와 code">
   <meta property="og:description" content="https://stedolan.github.io/jq/
@@ -34,13 +34,15 @@ gnu coreutils, m4, awk, perl 만 해도 그랬었고, 조금이라도 알아가�
 jq이 뭐하는 도구인지 소개는 한국어로 많은데, 그걸 갖고 조금 복잡한 패턴을 처리하는 자료는, 머리 나쁜 내가 이해하기에 적합한 자료는 찾지 못해서, 그냥 manpage을 읽고 시도.
 이미 알고 있는 도구, 혹은 이미 대부분의 unix-like, linux 시스템에 깔려있는 도구들이 있는데, 막상 그 도구의 manpage을 차분히 읽어 보면, 내가 너무 게을렀었고 알려고 하지 않았기에 내 삶을 더 도움을 받을 수 있었을텐데, 그렇지 못했었던 도구들이 많은것 같아.
 gnu coreutils, m4, awk, perl 만 해도 그랬었고, 조금이라도 알아가고 응용을 할수록 매일매일이 더 재밌고 강력해졌었던거 같아.">
-<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    <link rel="stylesheet" href="/css/styles.css">
+                    
+                        <link rel="stylesheet" href="/css/styles.d8b80e94e57df786a6162342e5d476938cc80c44f96ea816a89dbc65dc8005fd.css" integrity="sha256-2LgOlOV994amFiNC5dR2k4zIDET5bqgWqJ28ZdyABf0=" crossorigin="anonymous">
+                    
                 
             
         
@@ -53,7 +55,7 @@ gnu coreutils, m4, awk, perl 만 해도 그랬었고, 조금이라도 알아가�
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="http://localhost:1313/">아겔로그</a>
+           href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
 
@@ -188,13 +190,13 @@ $('body').addClass('acid-decay');
         <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/2022-06jun13--01-ping/">⬅️ Ping 13/06/2022 .01</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun13--01-ping/">⬅️ Ping 13/06/2022 .01</a>
         
     </span>
 
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/06jun12sun--01-some-engr-tough-sells/">➡️ &#34;Some Engineering Tough Sells&#34;</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/06jun12sun--01-some-engr-tough-sells/">➡️ &#34;Some Engineering Tough Sells&#34;</a>
         
     </span>
 </nav>
@@ -295,13 +297,13 @@ $('body').addClass('acid-decay');
         <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/2022-06jun13--01-ping/">⬅️ Ping 13/06/2022 .01</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun13--01-ping/">⬅️ Ping 13/06/2022 .01</a>
         
     </span>
 
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2022-06jun/06jun12sun--01-some-engr-tough-sells/">➡️ &#34;Some Engineering Tough Sells&#34;</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/06jun12sun--01-some-engr-tough-sells/">➡️ &#34;Some Engineering Tough Sells&#34;</a>
         
     </span>
 </nav>
@@ -309,9 +311,19 @@ $('body').addClass('acid-decay');
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765090211</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765090629</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
 <script> </script></div>
     </body>
 </html>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Conditions on 아겔로그</title>
-    <link>http://localhost:1313/tags/conditions/</link>
+    <link>https://ageldama.github.io/tags/conditions/</link>
     <description>Recent content in Conditions on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 13 Jun 2022 14:11:14 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/conditions/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/conditions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#34;모두를 위한 algebraic effects!&#34; ...정말루?</title>
-      <link>http://localhost:1313/posts/2022-06jun/algebraic-effects-for-everyone/</link>
+      <link>https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/</link>
       <pubDate>Mon, 13 Jun 2022 14:11:14 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2022-06jun/algebraic-effects-for-everyone/</guid>
+      <guid>https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/</guid>
       <description>&lt;p&gt;뭐 대충 다음과 같은 글들:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.eff-lang.org/handlers-tutorial.pdf&#34;&gt;https://www.eff-lang.org/handlers-tutorial.pdf&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf&#34;&gt;https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&amp;hellip;그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://hackage.haskell.org/package/fused-effects&#34;&gt;https://hackage.haskell.org/package/fused-effects&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/dry-rb/dry-effects&#34;&gt;https://github.com/dry-rb/dry-effects&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/digital-fabric/affect&#34;&gt;https://github.com/digital-fabric/affect&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/macabeus/js-proposal-algebraic-effects&#34;&gt;https://github.com/macabeus/js-proposal-algebraic-effects&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/nythrox/effects.js&#34;&gt;https://github.com/nythrox/effects.js&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.janestreet.com/tech-talks/effective-programming/&#34;&gt;https://www.janestreet.com/tech-talks/effective-programming/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/ocaml-multicore/effects-examples&#34;&gt;https://github.com/ocaml-multicore/effects-examples&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://overreacted.io/algebraic-effects-for-the-rest-of-us/&#34;&gt;https://overreacted.io/algebraic-effects-for-the-rest-of-us/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&amp;hellip;음&amp;hellip; 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.&lt;/p&gt;&#xA;&lt;p&gt;오히려 dry-rb, affect이 더 명확하기는 한거 같아.&lt;/p&gt;&#xA;&lt;p&gt;가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.&lt;/p&gt;&#xA;&lt;p&gt;분명히 장점을 볼 수 있을거 같은 개념 같다.&lt;/p&gt;&#xA;&lt;p&gt;왜냐하면,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면,&lt;/li&gt;&#xA;&lt;li&gt;하나의 monad context에서는, 한가지 타입의 monad만을 표현가능.&#xA;&lt;ol&gt;&#xA;&lt;li&gt;그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용.&lt;/li&gt;&#xA;&lt;li&gt;(&amp;hellip;그때 그때 Haskell do-notation등에 따라 분리해서 표현)&lt;/li&gt;&#xA;&lt;li&gt;좋은점이라면 좋은점일수도 있겠지만.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;그런데, aeffects을 이용한다면,&#xA;&lt;ol&gt;&#xA;&lt;li&gt;굳이 그렇게 복잡하게 나누지 않아도 괜찮고,&lt;/li&gt;&#xA;&lt;li&gt;monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (&amp;hellip;일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, &amp;hellip;처럼)&lt;/p&gt;</description>
     </item>
   </channel>

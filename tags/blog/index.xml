@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on 아겔로그</title>
-    <link>http://localhost:1313/tags/blog/</link>
+    <link>https://ageldama.github.io/tags/blog/</link>
     <description>Recent content in Blog on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Thu, 18 Sep 2025 08:26:26 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>블로그 css 조금 더 수정</title>
-      <link>http://localhost:1313/posts/2025-09sep/blog-css-redesign-again/</link>
+      <link>https://ageldama.github.io/posts/2025-09sep/blog-css-redesign-again/</link>
       <pubDate>Thu, 18 Sep 2025 08:26:26 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-09sep/blog-css-redesign-again/</guid>
+      <guid>https://ageldama.github.io/posts/2025-09sep/blog-css-redesign-again/</guid>
       <description>&lt;p&gt;&#xA;너무 흰색 배경에 눈이 짠한거 같아서 바꿔봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;darkmode 켜면 되기야 하겠지만.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;과거 Solaris/SunOS의 SunView이나 CDE환경 색상을 좀 흉내내고 싶었다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/SunView&#34;&gt;https://en.wikipedia.org/wiki/SunView&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Common_Desktop_Environment&#34;&gt;https://en.wikipedia.org/wiki/Common_Desktop_Environment&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;나는 마음에 좀 드는거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;hugo theme을 정리해서 공개/공유해도 좋겠다는 생각을 하는데…&#xA;너무 정리가 않되어 있어서. 다음으로 미뤄야겠다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>블로그 검색을 다시 짰다 (PageFind 제거)</title>
-      <link>http://localhost:1313/posts/2025-09sep/no-pagefind-anymore/</link>
+      <link>https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/</link>
       <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-09sep/no-pagefind-anymore/</guid>
+      <guid>https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/</guid>
       <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://pagefind.app/&#34;&gt;pagefind&lt;/a&gt;이 freebsd 환경에서 동작하지 않아서, 그냥 다시 짰다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;fuse.js을 사용하는 예제 등이 있었지만&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, 그럴거면 그냥 ajax으로&#xA;얻은 &lt;code&gt;index.json&lt;/code&gt;-을 직접 검색해도 될거 같아서 그냥 javascript 작성&#xA;오랬만에.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 ui등도 내 취향에 맞게 간단하게 만들어서 만족스럽다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;pagefind처럼 검색어에 따라 필요한 만큼만 http get하는게 아니라 조금&#xA;아쉽지만, 전체 &lt;code&gt;index.json&lt;/code&gt;-fetch해도 500kb 안쪽인거 같아서 괜찮지&#xA;않을까 싶음. (거기에 브라우저캐슁도 먹으니까)&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Footnotes&#xA;&lt;/h2&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;footnotes&#34;&gt;&#xA;&lt;hr class=&#34;footnotes-separatator&#34;/&gt;&#xA;&lt;div class=&#34;footnote-definitions&#34;&gt;&#xA;&lt;div class=&#34;footnote-definition&#34;&gt;&#xA;&lt;sup id=&#34;footnote-1&#34;&gt;&lt;a href=&#34;#footnote-reference-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;&lt;div class=&#34;footnote-body&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://findstar.pe.kr/2021/07/10/fuse-search-on-hugo/&#34;&gt;https://findstar.pe.kr/2021/07/10/fuse-search-on-hugo/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>darkmode.js으로 변경</title>
-      <link>http://localhost:1313/posts/2025-03mar/2025-03mar20--01--darkmode-js/</link>
+      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar20--01--darkmode-js/</link>
       <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-03mar/2025-03mar20--01--darkmode-js/</guid>
+      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar20--01--darkmode-js/</guid>
       <description>&lt;p&gt;&#xA;직접 짠 css/js에서 &lt;a href=&#34;https://darkmodejs.learn.uno/&#34;&gt;darkmode.js&lt;/a&gt;으로 변경했다.&#xA;css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;변경도 예쁘게 애니메이션 나오고, system preference 지정도 자동으로 되고.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-3&#34;&gt;&#xA;&lt;h3 id=&#34;headline-1&#34;&gt;&#xA;(미래의 나를 위해) css/html에서 class&#xA;&lt;/h3&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-3&#34;&gt;&#xA;&lt;div class=&#34;src src-css&#34;&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#1&#34;&gt;1&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#2&#34;&gt;2&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#3&#34;&gt;3&lt;/a&gt;&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;darkmode--activated&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;logo&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;mix-blend-mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;difference&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;src src-html&#34;&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#1&#34;&gt;1&lt;/a&gt;&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;darkmode-ignore&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;😬&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>css, design 새단장 &#43; dark-mode</title>
-      <link>http://localhost:1313/posts/2025-03mar/2025-03mar15--01-new-css/</link>
+      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/</link>
       <pubDate>Sat, 15 Mar 2025 12:25:01 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-03mar/2025-03mar15--01-new-css/</guid>
+      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/</guid>
       <description>&lt;p&gt;&#xA;css 더 단순하게 만들고, 디자인들도 그냥 내 마음에 들게 뜯어 고침.&#xA;다크모드도 작업해서 만들어 넣고.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;css 애니메이션도 작업해 넣었다가, gpu 너무 쓰는거 같아서 그냥 끄고&#xA;정적효과로만 냅둠.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;hugo 같은 static site generator이 좋은 점, 그리고 그냥 단순한 css와&#xA;오래된 jquery으로 그냥 뚝딱거려서 작업.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 03/02/2023 .01: 블로그 디자인 수정</title>
-      <link>http://localhost:1313/posts/2023-02feb/2023-02feb03--01-ping/</link>
+      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/</link>
       <pubDate>Fri, 03 Feb 2023 18:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb03--01-ping/</guid>
+      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/</guid>
       <description>&lt;p&gt;블로그를 내려놓았다가, 다시 글을 쓰고 생각들을 어느 정도는 공개를 하고&#xA;지내고 싶어져서 다시 열었다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/athul/archie&#34;&gt;사용하던 테마&lt;/a&gt;를 수정해서 쓰기로&#xA;하고, CSS을 여기저기서 복붙해서 적용해보고, &lt;a href=&#34;https://galmuri.quiple.dev/&#34;&gt;갈무리&#xA;웹폰트&lt;/a&gt;도 적용해서, 오히려 원본 테마보다&#xA;더 가볍게 적당히 만들어봤다.&lt;/p&gt;&#xA;&lt;p&gt;색상도, 외양과 기능 디자인 모두 어느 정도 내 취향에 맞게 꾸며 봤다.&lt;/p&gt;</description>
     </item>
   </channel>

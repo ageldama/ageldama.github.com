@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기. - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765090210">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기. - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765090629">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="SBCL은 멀티쓰레딩을 잘 지원하는 커먼리습 컴파일러이지만,
 공식사이트에서 제공하는 리눅스 바이너리가 아니라 OSX 바이너리는
@@ -39,7 +39,7 @@ create customize-target-features.lisp with content
 
 그리고 다음의 커맨드들로 빌드하고 설치 끝." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="http://localhost:1313/posts/2017/2017-02-25-sbcl-osx-multithread/">
+	<meta property="og:url" content="https://ageldama.github.io/posts/2017/2017-02-25-sbcl-osx-multithread/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기.">
   <meta property="og:description" content="SBCL은 멀티쓰레딩을 잘 지원하는 커먼리습 컴파일러이지만, 공식사이트에서 제공하는 리눅스 바이너리가 아니라 OSX 바이너리는 멀티쓰레딩이 꺼져서 컴파일되어있다.
@@ -70,13 +70,15 @@ http://www.sbcl.org/manual/#Threading
 http://haminhvuong-blog.tumblr.com/post/22109095116/compile-sbcl-with-multi-thread-enabled-on-os-x
 create customize-target-features.lisp with content
 1 2 3 4 5 6 7 8 (lambda (features) (flet ((enable (x) (pushnew x features)) (disable (x) (setf features (remove x features)))) ;; Threading support, available only on x86/x86-64 Linux, x86Solaris ;; and x86 Mac OS X (experimental). (enable :sb-thread))) 그리고 다음의 커맨드들로 빌드하고 설치 끝.">
-<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    <link rel="stylesheet" href="/css/styles.css">
+                    
+                        <link rel="stylesheet" href="/css/styles.d8b80e94e57df786a6162342e5d476938cc80c44f96ea816a89dbc65dc8005fd.css" integrity="sha256-2LgOlOV994amFiNC5dR2k4zIDET5bqgWqJ28ZdyABf0=" crossorigin="anonymous">
+                    
                 
             
         
@@ -89,7 +91,7 @@ create customize-target-features.lisp with content
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="http://localhost:1313/">아겔로그</a>
+           href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
 
@@ -224,13 +226,13 @@ $('body').addClass('acid-decay');
         <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-02-26-aync-rxjava-and-monad/">⬅️ 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/">⬅️ 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a>
         
     </span>
 
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-01-29-myself-nowadays/">➡️ 2017년 1월, 요즘 나는.</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/">➡️ 2017년 1월, 요즘 나는.</a>
         
     </span>
 </nav>
@@ -320,13 +322,13 @@ $('body').addClass('acid-decay');
         <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-02-26-aync-rxjava-and-monad/">⬅️ 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/">⬅️ 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a>
         
     </span>
 
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2017/2017-01-29-myself-nowadays/">➡️ 2017년 1월, 요즘 나는.</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/">➡️ 2017년 1월, 요즘 나는.</a>
         
     </span>
 </nav>
@@ -334,9 +336,19 @@ $('body').addClass('acid-decay');
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765090210</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765090629</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
 <script> </script></div>
     </body>
 </html>

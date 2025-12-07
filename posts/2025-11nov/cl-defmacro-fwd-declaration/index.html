@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[TIL] common-lisp defmacro와 forward-declaration - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765090211">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[TIL] common-lisp defmacro와 forward-declaration - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765090629">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 의외로 단순한건데, 컴파일한 sbcl image에서 runtime에 unbound variable
@@ -43,7 +43,7 @@
 컴파일러가 볼 때에 먼저 위치할 수 있는데, 그런 경우엔 좀 어이없지만,
 unbound variable 런타임 컨디션이 발생." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="http://localhost:1313/posts/2025-11nov/cl-defmacro-fwd-declaration/">
+	<meta property="og:url" content="https://ageldama.github.io/posts/2025-11nov/cl-defmacro-fwd-declaration/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="[TIL] common-lisp defmacro와 forward-declaration">
   <meta property="og:description" content="의외로 단순한건데, 컴파일한 sbcl image에서 runtime에 unbound variable 컨디션을 발생시킬 수 있음.
@@ -64,13 +64,15 @@ unbound variable 런타임 컨디션이 발생." />
   <meta name="twitter:title" content="[TIL] common-lisp defmacro와 forward-declaration">
   <meta name="twitter:description" content="의외로 단순한건데, 컴파일한 sbcl image에서 runtime에 unbound variable 컨디션을 발생시킬 수 있음.
 1 2 3 4 5 6 7 8 9 10 11 12 (defmacro with-foo-bar (base-str (foo-var bar-var) &amp;rest body) &#34;BASE-STR에 foo, bar 문자열을 붙인 FOO-VAR, BAR-VAR 바인딩을 만들어, BODY을 해당 바인딩을 적용하여 실행&#34; ;; NOTE let-대신 symbol-macrolet 사용해도 ok: `(let ((,foo-var (format nil &#34;FOO:~a&#34; ,base-str)) (,bar-var (format nil &#34;BAR:~a&#34; ,base-str))) ,@body)) ;;; 매크로 with-foo-bar 사용: (with-foo-bar &#34;hello&#34; (a b) (format t &#34;~a // ~a~%&#34; a b)) ;; [OUTPUT] FOO:hello // BAR:hello 단순하게 코드가 커지면1, defmacro-선언보다 해당매크로 호출이 컴파일러가 볼 때에 먼저 위치할 수 있는데, 그런 경우엔 좀 어이없지만, unbound variable 런타임 컨디션이 발생.">
-<script src="http://localhost:1313/js/jquery-3.7.1.min.js"></script>
+<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
             
             
                 
-                    <link rel="stylesheet" href="/css/styles.css">
+                    
+                        <link rel="stylesheet" href="/css/styles.d8b80e94e57df786a6162342e5d476938cc80c44f96ea816a89dbc65dc8005fd.css" integrity="sha256-2LgOlOV994amFiNC5dR2k4zIDET5bqgWqJ28ZdyABf0=" crossorigin="anonymous">
+                    
                 
             
         
@@ -83,7 +85,7 @@ unbound variable 런타임 컨디션이 발생." />
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="http://localhost:1313/">아겔로그</a>
+           href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
 
@@ -218,13 +220,13 @@ $('body').addClass('acid-decay');
         <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-11nov/my-elisp-requires/">⬅️ 내 emacs elisp &#34;requires&#34;</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/">⬅️ 내 emacs elisp &#34;requires&#34;</a>
         
     </span>
 
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">➡️ [throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">➡️ [throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a>
         
     </span>
 </nav>
@@ -812,13 +814,13 @@ Footnotes
         <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-11nov/my-elisp-requires/">⬅️ 내 emacs elisp &#34;requires&#34;</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/">⬅️ 내 emacs elisp &#34;requires&#34;</a>
         
     </span>
 
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">➡️ [throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">➡️ [throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a>
         
     </span>
 </nav>
@@ -826,9 +828,19 @@ Footnotes
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765090211</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765090629</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
 <script> </script></div>
     </body>
 </html>
