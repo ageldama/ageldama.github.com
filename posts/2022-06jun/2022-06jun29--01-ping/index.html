@@ -1,23 +1,9 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>linux/unix 팁 29/06/2022 .01 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765102664">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>linux/unix 팁 29/06/2022 .01 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765120081">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
-  
-  
-    zoxide 으로 chdir 간단하게
-    ssh으로 키보드/마우스 안 붙이고
-      
-        vconsole: conspy
-        x11: x2x으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유
-      
-    
-  
-
-
-
-
 리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.
 그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.
 zoxide 으로 chdir 간단하게
@@ -27,19 +13,24 @@ oh-my-zsh 내장인 plugins=(z)도 좋지만2
 &hellip;나는 가능하면 zoxide이 가장 가볍고 좋은거 같다.
 설치하고 나서,
 eval &quot;$(zoxide init zsh)&quot;
-그리고, z SOME-DIR, zi 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ" />
+그리고, z SOME-DIR, zi 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ
+ssh으로 키보드/마우스 안 붙이고
+책상위에 여러대의 컴퓨터를 놓고 사용하는데, 용도에 따라서, 모두 마우스/키보드를 붙여 놓기 싫다.
+뭐 kvm switch 같은거 사서 써도 되겠지만, 그보다는 어떤 컴퓨터는 모니터만 붙여 놓고 쓰고 등등 같이 사용해서
+그런 방식은 잘 내 책상에서는 잘 맞지 않아서." />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="linux/unix 팁 29/06/2022 .01">
-  <meta property="og:description" content="zoxide 으로 chdir 간단하게 ssh으로 키보드/마우스 안 붙이고 vconsole: conspy x11: x2x으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유 리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.
+  <meta property="og:description" content="리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.
 그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.
 zoxide 으로 chdir 간단하게 최근/디렉토리 이동한 히스토리에 따라서 (“frecent”) 이동하기:
 fzf&#43;zsh의 Control-R도 좋고1,
 oh-my-zsh 내장인 plugins=(z)도 좋지만2
 …나는 가능하면 zoxide이 가장 가볍고 좋은거 같다.
 설치하고 나서, eval &#34;$(zoxide init zsh)&#34;
-그리고, z SOME-DIR, zi 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ">
+그리고, z SOME-DIR, zi 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ
+ssh으로 키보드/마우스 안 붙이고 책상위에 여러대의 컴퓨터를 놓고 사용하는데, 용도에 따라서, 모두 마우스/키보드를 붙여 놓기 싫다. 뭐 kvm switch 같은거 사서 써도 되겠지만, 그보다는 어떤 컴퓨터는 모니터만 붙여 놓고 쓰고 등등 같이 사용해서 그런 방식은 잘 내 책상에서는 잘 맞지 않아서.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -53,14 +44,15 @@ oh-my-zsh 내장인 plugins=(z)도 좋지만2
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="linux/unix 팁 29/06/2022 .01">
-  <meta name="twitter:description" content="zoxide 으로 chdir 간단하게 ssh으로 키보드/마우스 안 붙이고 vconsole: conspy x11: x2x으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유 리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.
+  <meta name="twitter:description" content="리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.
 그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.
 zoxide 으로 chdir 간단하게 최근/디렉토리 이동한 히스토리에 따라서 (“frecent”) 이동하기:
 fzf&#43;zsh의 Control-R도 좋고1,
 oh-my-zsh 내장인 plugins=(z)도 좋지만2
 …나는 가능하면 zoxide이 가장 가볍고 좋은거 같다.
 설치하고 나서, eval &#34;$(zoxide init zsh)&#34;
-그리고, z SOME-DIR, zi 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ">
+그리고, z SOME-DIR, zi 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ
+ssh으로 키보드/마우스 안 붙이고 책상위에 여러대의 컴퓨터를 놓고 사용하는데, 용도에 따라서, 모두 마우스/키보드를 붙여 놓기 싫다. 뭐 kvm switch 같은거 사서 써도 되겠지만, 그보다는 어떤 컴퓨터는 모니터만 붙여 놓고 쓰고 등등 같이 사용해서 그런 방식은 잘 내 책상에서는 잘 맞지 않아서.">
 <script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
         
@@ -252,21 +244,7 @@ $('body').addClass('acid-decay');
 		
 		
 		<section class="body">
-			<div>
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</a></li>
-    <li><a href="#ssh으로-키보드마우스-안-붙이고">ssh으로 키보드/마우스 안 붙이고</a>
-      <ul>
-        <li><a href="#vconsole-conspy">vconsole: <code>conspy</code></a></li>
-        <li><a href="#x11-x2x으로-여러-머신스크린에-걸쳐서-마우스키보드-공유">x11: <code>x2x</code>으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-</div>
-
-<hr>
+			<hr>
 <p>리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.</p>
 <p>그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.</p>
 <h1 id="zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</h1>
@@ -348,7 +326,7 @@ $('body').addClass('acid-decay');
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765102664</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765120081</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
