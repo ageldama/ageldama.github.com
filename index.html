@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765120080">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765353176">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -177,6 +177,44 @@ $('body').addClass('acid-decay');
 				
 				
 				
+				<section class="list-item"><h1 class="title"><a href="/posts/2025-12dec/factor-and-io/">🚥 (주절주절) Factor와 Io</a></h1>
+                                    <time>2025年12月10日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+Factor와 Io 모두 예전에 덕질하던 프로그래밍언어.</p>
+<p>
+이번엔 추억놀음이나 포스팅해보려고.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Factor
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li><a href="https://factorcode.org/">https://factorcode.org/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Factor_(programming_language)">https://en.wikipedia.org/wiki/Factor_(programming_language)</a></li>
+</ol>
+<p>
+팩터는 Functional, Concatenative programming언어인데, Forth와 같은
+방식의 평가규칙을 가졌지만, Semantics은 Smalltalk이나 Lisp 같이
+고수준의 추상화를 작성하기 적절했었다. 그리고 Native compilation +
+Image-based 시스템이어서 커먼리습이랑 비슷하게 사용도 가능해서
+좋았었다.</p>
+<p>
+오랬만에 &#34;ego searching&#34; 해봤다 😶‍🌫️ :</p>
+<a href="/posts/2025-12dec/factor-ageldama-googling.png" width="600px"><img src="/posts/2025-12dec/factor-ageldama-googling.png" alt="/posts/2025-12dec/factor-ageldama-googling.png"/></a>
+<p>
+<a href="https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html">https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html</a>
+같은 문서를 어떻게 요악해서 AI이 보여주는지 잘 모르겠다, 신기할 정도다.</p>
+<p>
+&#34;Hallucination 🫥&#34;도 좀 있긴하다. 다른 부분은 다 맞는거 같은데(ㅋㅋ),
+윈도 빌드를 제공하거나 했다는 언급은, 내가 그랬었나 싶다. ㅎㅎ</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
 				<section class="list-item"><h1 class="title"><a href="/posts/2025-12dec/pgrp-rhapsody/">🐮 process-tree 정리의 rhapsody</a></h1>
                                     <time>2025年12月07日
                                         </time>
@@ -305,36 +343,6 @@ archives에서 각 포스팅의 preview을 표시했다
                                         
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/">🌘 Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰</a></h1>
-                                    <time>2025年11月19日
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-최근의 파이썬은 아주 오랬동안 multicore/parallelism을 지원하기 위해
-걸림돌이었던 GIL에서 자유로워진 &#34;no-GIL&#34; 옵션이 베타 단계.
-(&#34;free GIL&#34; 혹은 &#34;free threading&#34;이라고도 부르는듯) <a href="https://blog.jetbrains.com/ko/pycharm/2025/08/faster-python-unlocking-the-python-global-interpreter-lock/">https://blog.jetbrains.com/ko/pycharm/2025/08/faster-python-unlocking-the-python-global-interpreter-lock/</a></p>
-<p>
-&#34;no-GIL&#34;이 분명히 중요한 변화이겠지만, 내겐 Python 3.14에
-<a href="https://docs.python.org/3/library/concurrent.interpreters.html">concurrent.interpreters</a> 추가된 것이 더 흥미롭다.</p>
-<p>
-이게 과연 Parallelism을 지원하기 위한 방식일까 하고 바로 알아차라기는
-어렵지만 조금 생각해보면:</p>
-<ol>
-<li>새로운 프로세스를 만들지는 않는다 (<code>multiprocessing</code> 모듈)</li>
-<li>직접 같은 GIL을 공유하는 스레드를 만들지도 않는다 (<code>threading</code> 모듈)</li>
-<li>하지만, 같은 프로세스 안에서 다른 GIL을 사용하는, 파이썬
-인터프리터를 만들고,</li>
-<li>다른 인터프리터와 적당한 정도로 IPC이 가능하고 (Queue 정도)</li>
-<li>다른 인터프리터가 실행했으면 하는 파이썬 코드를 전달 가능.</li>
-</ol>
-<p>
-별거 아닌거 같지만 얻을 수 있는 이점은:</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -346,12 +354,12 @@ archives에서 각 포스팅의 preview을 표시했다
     
 
     <span class="posts-pagination-indicator" >
-        (( 1 of 37 ))
+        (( 1 of 38 ))
     </span>
 
     
     <a href="/page/2/" class="posts-pagination-btn" aria-label="Older">⏩Older</a>
-    <a href="/page/37/" class="posts-pagination-btn" aria-label="First">⏭️First</a>
+    <a href="/page/38/" class="posts-pagination-btn" aria-label="First">⏭️First</a>
     
 </nav>
 
@@ -359,7 +367,7 @@ archives에서 각 포스팅의 preview을 표시했다
 
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765120081</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765353176</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

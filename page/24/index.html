@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765120081">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765353176">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -177,6 +177,32 @@ $('body').addClass('acid-decay');
 				
 				
 				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-02feb/ping-09sun/">🍚 Ping 09/Feb/2020</a></h1>
+                                    <time>2020年02月09日
+                                        </time>
+                                        <br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+책: 초난감 기업의 조건
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>&#39;기계인간&#39;님의 트윗으로 소개를 받았다. 너무 잘 소개를 해주셔서
+  기대가 많았다. 그리고 기대만큼 재밌는 책이다.</p>
+<p>
+  경영서적, 마케팅, 혹은 자기계발서처럼 무언가 교훈을 얻고 싶어서
+  읽지는 않는다. 그냥 다른 사람들의 처절한 실패담과 그 아둔함을 보면서
+  쓰게 웃고 싶을 뿐이다.</p>
+<p>
+  그 사람들이 얼마나 멍청했는지는 잘 모르겠다. 그리고 그걸 비웃고 싶은
+  것은 아니다. 오히려 사람들이 그런 멍청함을 구현해내는 분위기, 흐름,
+  예의를 지키느라, 혹은 눈치를 보느라 제대로된 길에 들어서지 못하는
+  어떤 형태의 인간 사회에 대해 그렇게 냉소하고 싶어지게 만든다.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
 				<section class="list-item"><h1 class="title"><a href="/posts/2020-01jan/100days-of/">🌵 100일의 기록</a></h1>
                                     <time>2020年01月04日
                                         </time>
@@ -298,60 +324,6 @@ esup profiler
                                         
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">📓 Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a></h1>
-                                    <time>2019年12月30日
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-다음의 간단한 코드를 읽어보자.</p>
-<div class="src src-js">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
-</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
-</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
-</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
-</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;lexical&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">maker</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;dynamic&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">assert</span><span class="p">(</span><span class="nx">maker</span><span class="p">()()</span> <span class="o">==</span> <span class="s2">&#34;???&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-<code>maker()()</code> 의 결과는 <code>&#39;dynamic&#39;</code> 이다.</p>
-<p>
-심지어, 맨 마지막에 있는 <code>{..}</code> 블록을 넘어가서도 <code>x</code> 의 값은 여전이
-<code>&#39;dynamic&#39;</code> 이다.</p>
-<p>
-자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난
-느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도
-속하지 않는 느낌이고, 이번에 새로 추가된 <code>let</code> 도 이해하기가 어려운게
-아니라 그냥 제대로 망가져 있는거 같다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -363,12 +335,12 @@ esup profiler
     
 
     <span class="posts-pagination-indicator" >
-        (( 24 of 37 ))
+        (( 24 of 38 ))
     </span>
 
     
     <a href="/page/25/" class="posts-pagination-btn" aria-label="Older">⏩Older</a>
-    <a href="/page/37/" class="posts-pagination-btn" aria-label="First">⏭️First</a>
+    <a href="/page/38/" class="posts-pagination-btn" aria-label="First">⏭️First</a>
     
 </nav>
 
@@ -376,7 +348,7 @@ esup profiler
 
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765120081</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765353176</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

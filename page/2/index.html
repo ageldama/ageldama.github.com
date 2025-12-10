@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765120081">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765353176">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -177,6 +177,36 @@ $('body').addClass('acid-decay');
 				
 				
 				
+				<section class="list-item"><h1 class="title"><a href="/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/">🌘 Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰</a></h1>
+                                    <time>2025年11月19日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+최근의 파이썬은 아주 오랬동안 multicore/parallelism을 지원하기 위해
+걸림돌이었던 GIL에서 자유로워진 &#34;no-GIL&#34; 옵션이 베타 단계.
+(&#34;free GIL&#34; 혹은 &#34;free threading&#34;이라고도 부르는듯) <a href="https://blog.jetbrains.com/ko/pycharm/2025/08/faster-python-unlocking-the-python-global-interpreter-lock/">https://blog.jetbrains.com/ko/pycharm/2025/08/faster-python-unlocking-the-python-global-interpreter-lock/</a></p>
+<p>
+&#34;no-GIL&#34;이 분명히 중요한 변화이겠지만, 내겐 Python 3.14에
+<a href="https://docs.python.org/3/library/concurrent.interpreters.html">concurrent.interpreters</a> 추가된 것이 더 흥미롭다.</p>
+<p>
+이게 과연 Parallelism을 지원하기 위한 방식일까 하고 바로 알아차라기는
+어렵지만 조금 생각해보면:</p>
+<ol>
+<li>새로운 프로세스를 만들지는 않는다 (<code>multiprocessing</code> 모듈)</li>
+<li>직접 같은 GIL을 공유하는 스레드를 만들지도 않는다 (<code>threading</code> 모듈)</li>
+<li>하지만, 같은 프로세스 안에서 다른 GIL을 사용하는, 파이썬
+인터프리터를 만들고,</li>
+<li>다른 인터프리터와 적당한 정도로 IPC이 가능하고 (Queue 정도)</li>
+<li>다른 인터프리터가 실행했으면 하는 파이썬 코드를 전달 가능.</li>
+</ol>
+<p>
+별거 아닌거 같지만 얻을 수 있는 이점은:</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
 				<section class="list-item"><h1 class="title"><a href="/posts/2025-11nov/my-elisp-requires/">🕯️ 내 emacs elisp &#34;requires&#34;</a></h1>
                                     <time>2025年11月16日
                                         </time>
@@ -332,25 +362,6 @@ Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.</p>
                                         
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2025-09sep/netscape-30yrs-jwz/">🥣 (주절주절) jwz의 netscape navigator 2.0 출시 30주년, 내 기억들, 그리고 오늘</a></h1>
-                                    <time>2025年09月19日
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-<a href="https://www.jwz.org/blog/2025/09/netscape-navigator-2-0-was-released-30-years-ago-today/">https://www.jwz.org/blog/2025/09/netscape-navigator-2-0-was-released-30-years-ago-today/</a></p>
-<p>
-jwz<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>이 넷스케이프 웹브라우저 2.0 출시 30주년 포스팅을 올렸다.
-jwz은 커먼리습, Lucid Emacs, Xscreensaver 등으로 유명하지만, 가장 역사적으로 큰 족적은 아마도 넷스케이프 웹브라우저의 초기 개발자라는 점일거 같다.</p>
-<p>
-넷스케이프는 90년대의 닷컴시대를 열고, 우리가 현대에 알고 있는 웹브라우저를 대중이 쓸 수 있도록 만들어준 제품이었다고 생각한다. 그 이전의 Mosaic 브라우저는 내 생각엔 더 딱딱하고 techie이 아닌 사람이 접근하기는 좀 껄끄러웠을 것 같다.<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
-<p>
-넷스케이프 2.0 시점에, 우리가 알고 있는 &#34;JavaScript&#34;이 웹브라우저에 도입되었고, 그이후에 마이크로소프트의 유명한 &#34;Internet Explorer&#34; 시대가 시작된다. (이하 &#34;IE&#34;)</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -362,12 +373,12 @@ jwz은 커먼리습, Lucid Emacs, Xscreensaver 등으로 유명하지만, 가장
     
 
     <span class="posts-pagination-indicator" >
-        (( 2 of 37 ))
+        (( 2 of 38 ))
     </span>
 
     
     <a href="/page/3/" class="posts-pagination-btn" aria-label="Older">⏩Older</a>
-    <a href="/page/37/" class="posts-pagination-btn" aria-label="First">⏭️First</a>
+    <a href="/page/38/" class="posts-pagination-btn" aria-label="First">⏭️First</a>
     
 </nav>
 
@@ -375,7 +386,7 @@ jwz은 커먼리습, Lucid Emacs, Xscreensaver 등으로 유명하지만, 가장
 
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765120081</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765353176</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

@@ -2,8 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ageldama.github.io/posts/2025-12dec/factor-and-io/</loc>
+    <lastmod>2025-12-10T06:46:13+00:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/categories/</loc>
-    <lastmod>2025-12-07T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-10T06:46:13+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/factor/</loc>
+    <lastmod>2025-12-10T06:46:13+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/factorcode/</loc>
+    <lastmod>2025-12-10T06:46:13+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/io/</loc>
+    <lastmod>2025-12-10T06:46:13+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/iolanguage/</loc>
+    <lastmod>2025-12-10T06:46:13+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/language/</loc>
+    <lastmod>2025-12-10T06:46:13+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-12-10T06:46:13+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/programming/</loc>
+    <lastmod>2025-12-10T06:46:13+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2025-12-10T06:46:13+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2025-12-10T06:46:13+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/kill/</loc>
     <lastmod>2025-12-07T00:00:00+00:00</lastmod>
@@ -23,16 +53,10 @@
     <loc>https://ageldama.github.io/tags/posix/</loc>
     <lastmod>2025-12-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2025-12-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/posts/2025-12dec/pgrp-rhapsody/</loc>
     <lastmod>2025-12-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/procfs/</loc>
-    <lastmod>2025-12-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/categories/programming/</loc>
     <lastmod>2025-12-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/sid/</loc>
@@ -41,13 +65,7 @@
     <loc>https://ageldama.github.io/tags/signal/</loc>
     <lastmod>2025-12-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
-    <lastmod>2025-12-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/unix/</loc>
-    <lastmod>2025-12-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-12-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2025-12dec/reactjs&#43;nextjs-rce/</loc>
@@ -2169,9 +2187,6 @@
     <lastmod>2017-02-26T13:50:00+01:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/haskell/</loc>
-    <lastmod>2017-02-26T13:50:00+01:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/io/</loc>
     <lastmod>2017-02-26T13:50:00+01:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/rxjava/</loc>

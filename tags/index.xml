@@ -7,8 +7,43 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sun, 07 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Dec 2025 06:46:13 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Factor</title>
+      <link>https://ageldama.github.io/tags/factor/</link>
+      <pubDate>Wed, 10 Dec 2025 06:46:13 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/factor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Factorcode</title>
+      <link>https://ageldama.github.io/tags/factorcode/</link>
+      <pubDate>Wed, 10 Dec 2025 06:46:13 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/factorcode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Io</title>
+      <link>https://ageldama.github.io/tags/io/</link>
+      <pubDate>Wed, 10 Dec 2025 06:46:13 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/io/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Iolanguage</title>
+      <link>https://ageldama.github.io/tags/iolanguage/</link>
+      <pubDate>Wed, 10 Dec 2025 06:46:13 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/iolanguage/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Language</title>
+      <link>https://ageldama.github.io/tags/language/</link>
+      <pubDate>Wed, 10 Dec 2025 06:46:13 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/language/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Kill</title>
       <link>https://ageldama.github.io/tags/kill/</link>
@@ -3682,13 +3717,6 @@
       <link>https://ageldama.github.io/tags/haskell/</link>
       <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
       <guid>https://ageldama.github.io/tags/haskell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Io</title>
-      <link>https://ageldama.github.io/tags/io/</link>
-      <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/io/</guid>
       <description></description>
     </item>
     <item>
