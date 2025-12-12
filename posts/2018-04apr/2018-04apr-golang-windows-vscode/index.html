@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Golang Windows에서 Vscode이랑 행복하게 쓰기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765461351">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Golang Windows에서 Vscode이랑 행복하게 쓰기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765527224">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Golang 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아.
 그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 VsCode 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만&hellip;)
@@ -37,7 +37,7 @@ VsCode에서 디버거도 잘 붙고 만족스럽다.">
             
                 
                     
-                        <link rel="stylesheet" href="/css/styles.fb14c2b54c60e3de13a790dbea7bec2f4c3271e2ac7b5e7b06d4d8717f8f2d1a.css" integrity="sha256-&#43;xTCtUxg494Tp5Db6nvsL0wyceKse157BtTYcX&#43;PLRo=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.3552a576d2bbfea88d7f55942d682396d8d4e38218c29ad7cebe73bc25969b58.css" integrity="sha256-NVKldtK7/qiNf1WULWgjltjU44IYwprXzr5zvCWWm1g=" crossorigin="anonymous">
                     
                 
             
@@ -60,9 +60,10 @@ VsCode에서 디버거도 잘 붙고 만족스럽다.">
             <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
 
             <input id="search-query" name="search-query"
-                class="search-query"
-                tabindex="1"
-                placeholder="🔎 검색 (search)"/>
+                   type="text"
+                   class="search-query"
+                   tabindex="1"
+                   placeholder="🔎 검색 (search)"/>
         </div>
 
         
@@ -71,61 +72,66 @@ VsCode에서 디버거도 잘 붙고 만족스럽다.">
             <a href="/myself/">📨 CONTACT</a>
         
 
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">🌓 dark?</button>
+            <button class="dark-mode-btn"
+                    aria-label="toggle dark-mode">🌓 dark?</button>
 
     </nav>
 </header>
 
+
+
 <script src="/js/darkmode-js.min.js"></script>
 <script>
 
-  function addDarkmodeWidget() {
-    var options = {
-        
-        
-        
-        time: '0.5s', 
-        mixColor: '#fff', 
-        
-        backgroundColor: '#fffbeb',  
-        buttonColorDark: '#566666',  
-        buttonColorLight: '#566666', 
-        saveInCookies: true, 
+ function addDarkmodeWidget() {
+     var options = {
          
-        autoMatchOsTheme: true 
-    }
+         
+         
+         time: '0.5s', 
+         mixColor: '#fff', 
+         
+         backgroundColor: '#fffbeb',  
+         buttonColorDark: '#566666',  
+         buttonColorLight: '#566666', 
+         saveInCookies: true, 
+          
+         autoMatchOsTheme: true 
+     }
 
-      var darkmode = new Darkmode(options);
-    window.darkmode = darkmode;
+     var darkmode = new Darkmode(options);
+     window.darkmode = darkmode;
 
-      let dark_count = 0;
-      $('.dark-mode-btn').click(function(){
-          dark_count ++;
-          if (dark_count % 18 === 0) {
-              alert('DEEP♂️DARK♂️FANTASY💘');
-              if (!darkmode.isActivated()) {
-                  darkmode.toggle(); 
-              }
-              letitrain();
-          } else {
-              darkmode.toggle();
-          }
-      });
+     let dark_count = 0;
+     $('.dark-mode-btn').click(function(){
+         dark_count ++;
+         if (dark_count % 18 === 0) {
+             alert('DEEP♂️DARK♂️FANTASY💘');
+             if (!darkmode.isActivated()) {
+                 darkmode.toggle(); 
+             }
+             
+             
+         } else {
+             darkmode.toggle();
+         }
+     });
+
+     
 
       
 
-       
+     
 
-    
-
-  }
+ }
  window.addEventListener('load', addDarkmodeWidget);
 
 
-function letitrain() {
-$('body').addClass('acid-decay');
-}
+ function letitrain() {
+     $('body').addClass('acid-decay');
+ }
 </script>
+
 
 
 <div class="search">
@@ -258,7 +264,7 @@ $('body').addClass('acid-decay');
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765461351</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765527224</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
