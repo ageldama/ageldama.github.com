@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>블로그 디자인 수정 &#43; 제목 자동 emoji 붙여주기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765559310">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>블로그 디자인 수정 &#43; 제목 자동 emoji 붙여주기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765560954">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 블로그 CSS을 또 수정하고, 레이아웃도 좀 더 고쳤다. 간단하게 가볍게
@@ -99,8 +99,12 @@ archives에서 각 포스팅의 preview을 표시했다
 </header>
 
 <script src="/js/bundle.js"></script>
+<script src="/js/js-splash-2.0.min.js"></script>
 <script src="/js/darkmode-js.min.js"></script>
 <script>
+
+ let dark_count = 0;
+ let dark_hit = 5;
 
  function addDarkmodeWidget() {
      var options = {
@@ -122,13 +126,15 @@ archives에서 각 포스팅의 preview을 표시했다
      var darkmode = new Darkmode(options);
      window.darkmode = darkmode;
 
-     let dark_count = 0;
      $('.dark-mode-btn').click(function(){
          dark_count ++;
-         if (dark_count % 18 === 0) {
-             alert('DEEP♂️DARK♂️FANTASY💘');
+         if (dark_count === dark_hit) {
+             splashText('show me the money!💲');
              moneymoneymoney();
          } else {
+             if (dark_count % 2 === 0) {
+                 splashCount(dark_count, dark_hit);
+             }
              darkmode.toggle();
          }
      });
@@ -140,14 +146,43 @@ archives에서 각 포스팅의 preview을 표시했다
          letitsnow();
          $('.snow-mode-btn').prop('disabled', true);
      });
+ }
 
-     }
+
  window.addEventListener('load', addDarkmodeWidget);
 
 
  function letitrain() {
      $('body').addClass('acid-decay');
  }
+
+
+ function splashCount(left, tot) {
+     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
+         use: true,
+         start: FancyAnimation.moveIn,
+         end: FancyAnimation.rubberBand
+     });
+     splash.fromText(`${left}/${tot}`,  10, {
+         color: '#00ff00',
+         'font-family': 'monospace',
+         'font-size': '20rem',
+     });
+ }
+
+ function splashText(txt) {
+     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
+         use: true,
+         start: FancyAnimation.moveIn,
+         end: FancyAnimation.rubberBand
+     });
+     splash.fromText(txt,  18*60*1000, {
+         color: '#ffd700',
+         'font-family': 'fantasy',
+         'font-size': '2rem',
+     });
+ }
+
 </script>
 
 
@@ -415,7 +450,7 @@ Footnotes
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765559310</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765560954</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

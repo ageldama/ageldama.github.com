@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 03/10/2018 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765559309">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 03/10/2018 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765560953">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="HiFiBerry &#43; Raspberry Pi 3
 tweet 1047432827866767360
@@ -109,8 +109,12 @@ https://www.hifiberry.com/products/dacplus/ http://eleparts.co.kr/goods/view?no=
 </header>
 
 <script src="/js/bundle.js"></script>
+<script src="/js/js-splash-2.0.min.js"></script>
 <script src="/js/darkmode-js.min.js"></script>
 <script>
+
+ let dark_count = 0;
+ let dark_hit = 5;
 
  function addDarkmodeWidget() {
      var options = {
@@ -132,13 +136,15 @@ https://www.hifiberry.com/products/dacplus/ http://eleparts.co.kr/goods/view?no=
      var darkmode = new Darkmode(options);
      window.darkmode = darkmode;
 
-     let dark_count = 0;
      $('.dark-mode-btn').click(function(){
          dark_count ++;
-         if (dark_count % 18 === 0) {
-             alert('DEEP♂️DARK♂️FANTASY💘');
+         if (dark_count === dark_hit) {
+             splashText('show me the money!💲');
              moneymoneymoney();
          } else {
+             if (dark_count % 2 === 0) {
+                 splashCount(dark_count, dark_hit);
+             }
              darkmode.toggle();
          }
      });
@@ -150,14 +156,43 @@ https://www.hifiberry.com/products/dacplus/ http://eleparts.co.kr/goods/view?no=
          letitsnow();
          $('.snow-mode-btn').prop('disabled', true);
      });
+ }
 
-     }
+
  window.addEventListener('load', addDarkmodeWidget);
 
 
  function letitrain() {
      $('body').addClass('acid-decay');
  }
+
+
+ function splashCount(left, tot) {
+     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
+         use: true,
+         start: FancyAnimation.moveIn,
+         end: FancyAnimation.rubberBand
+     });
+     splash.fromText(`${left}/${tot}`,  10, {
+         color: '#00ff00',
+         'font-family': 'monospace',
+         'font-size': '20rem',
+     });
+ }
+
+ function splashText(txt) {
+     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
+         use: true,
+         start: FancyAnimation.moveIn,
+         end: FancyAnimation.rubberBand
+     });
+     splash.fromText(txt,  18*60*1000, {
+         color: '#ffd700',
+         'font-family': 'fantasy',
+         'font-size': '2rem',
+     });
+ }
+
 </script>
 
 
@@ -357,7 +392,7 @@ WIFI이 필요한데, 그냥 내 방에서 무선으로 실행하고, 무선브�
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765559309</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765560953</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
