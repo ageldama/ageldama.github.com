@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 19/Jun/2021 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765538970">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 19/Jun/2021 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765558583">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,
@@ -85,11 +85,13 @@ Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 �
             <button class="dark-mode-btn"
                     aria-label="toggle dark-mode">🌓 dark?</button>
 
+            <button class="snow-mode-btn"
+                    aria-label="toggle dark-mode">☃️ snow?</button>
+
     </nav>
 </header>
 
-
-
+<script src="/js/bundle.js"></script>
 <script src="/js/darkmode-js.min.js"></script>
 <script>
 
@@ -100,6 +102,7 @@ Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 �
          
          time: '0.5s', 
          mixColor: '#fff', 
+         
          
          backgroundColor: '#fffbeb',  
          buttonColorDark: '#566666',  
@@ -120,20 +123,21 @@ Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 �
              if (!darkmode.isActivated()) {
                  darkmode.toggle(); 
              }
-             
-             
+             letitsnow();
          } else {
              darkmode.toggle();
          }
      });
 
-     
+     $('.snow-mode-btn').click(function(){
+         if (!darkmode.isActivated()) {
+             darkmode.toggle(); 
+         }
+         letitsnow();
+         $('.snow-mode-btn').prop('disabled', true);
+     });
 
-      
-
-     
-
- }
+     }
  window.addEventListener('load', addDarkmodeWidget);
 
 
@@ -357,7 +361,7 @@ Footnotes
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765538970</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765558583</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

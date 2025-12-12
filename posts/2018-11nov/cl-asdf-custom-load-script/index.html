@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ASDF으로 간단한 의존성 연결과 로딩하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765538970">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ASDF으로 간단한 의존성 연결과 로딩하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765558583">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="System? 이런게 왜 필요하지? require있잖아
 대부분의 유명한 프로그래밍언어들이 커먼리습의 System 에 대응하는
@@ -80,11 +80,13 @@ A system is a collection of Lisp files that together constitute an application o
             <button class="dark-mode-btn"
                     aria-label="toggle dark-mode">🌓 dark?</button>
 
+            <button class="snow-mode-btn"
+                    aria-label="toggle dark-mode">☃️ snow?</button>
+
     </nav>
 </header>
 
-
-
+<script src="/js/bundle.js"></script>
 <script src="/js/darkmode-js.min.js"></script>
 <script>
 
@@ -95,6 +97,7 @@ A system is a collection of Lisp files that together constitute an application o
          
          time: '0.5s', 
          mixColor: '#fff', 
+         
          
          backgroundColor: '#fffbeb',  
          buttonColorDark: '#566666',  
@@ -115,20 +118,21 @@ A system is a collection of Lisp files that together constitute an application o
              if (!darkmode.isActivated()) {
                  darkmode.toggle(); 
              }
-             
-             
+             letitsnow();
          } else {
              darkmode.toggle();
          }
      });
 
-     
+     $('.snow-mode-btn').click(function(){
+         if (!darkmode.isActivated()) {
+             darkmode.toggle(); 
+         }
+         letitsnow();
+         $('.snow-mode-btn').prop('disabled', true);
+     });
 
-      
-
-     
-
- }
+     }
  window.addEventListener('load', addDarkmodeWidget);
 
 
@@ -592,7 +596,7 @@ Jigsaw</a>
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765538970</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765558583</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>해보기 23/09/2018 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765538970">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>해보기 23/09/2018 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765558583">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="LSP 갖고놀기
 
@@ -115,11 +115,13 @@ https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%
             <button class="dark-mode-btn"
                     aria-label="toggle dark-mode">🌓 dark?</button>
 
+            <button class="snow-mode-btn"
+                    aria-label="toggle dark-mode">☃️ snow?</button>
+
     </nav>
 </header>
 
-
-
+<script src="/js/bundle.js"></script>
 <script src="/js/darkmode-js.min.js"></script>
 <script>
 
@@ -130,6 +132,7 @@ https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%
          
          time: '0.5s', 
          mixColor: '#fff', 
+         
          
          backgroundColor: '#fffbeb',  
          buttonColorDark: '#566666',  
@@ -150,20 +153,21 @@ https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%
              if (!darkmode.isActivated()) {
                  darkmode.toggle(); 
              }
-             
-             
+             letitsnow();
          } else {
              darkmode.toggle();
          }
      });
 
-     
+     $('.snow-mode-btn').click(function(){
+         if (!darkmode.isActivated()) {
+             darkmode.toggle(); 
+         }
+         letitsnow();
+         $('.snow-mode-btn').prop('disabled', true);
+     });
 
-      
-
-     
-
- }
+     }
  window.addEventListener('load', addDarkmodeWidget);
 
 
@@ -339,7 +343,7 @@ https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765538970</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765558583</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

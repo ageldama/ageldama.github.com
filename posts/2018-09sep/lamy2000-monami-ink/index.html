@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Lamy 2000 &#43; 모나미 병잉크 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765538970">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Lamy 2000 &#43; 모나미 병잉크 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765558583">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="라미2000 사고, 모나미 병잉크 처음으로 사서 충전을
 겨우했다. 카트리지방식만 계속 써오다가 처음에는 엄청 어떻게 피스톤
@@ -78,11 +78,13 @@ tweet 1040804232339742720
             <button class="dark-mode-btn"
                     aria-label="toggle dark-mode">🌓 dark?</button>
 
+            <button class="snow-mode-btn"
+                    aria-label="toggle dark-mode">☃️ snow?</button>
+
     </nav>
 </header>
 
-
-
+<script src="/js/bundle.js"></script>
 <script src="/js/darkmode-js.min.js"></script>
 <script>
 
@@ -93,6 +95,7 @@ tweet 1040804232339742720
          
          time: '0.5s', 
          mixColor: '#fff', 
+         
          
          backgroundColor: '#fffbeb',  
          buttonColorDark: '#566666',  
@@ -113,20 +116,21 @@ tweet 1040804232339742720
              if (!darkmode.isActivated()) {
                  darkmode.toggle(); 
              }
-             
-             
+             letitsnow();
          } else {
              darkmode.toggle();
          }
      });
 
-     
+     $('.snow-mode-btn').click(function(){
+         if (!darkmode.isActivated()) {
+             darkmode.toggle(); 
+         }
+         letitsnow();
+         $('.snow-mode-btn').prop('disabled', true);
+     });
 
-      
-
-     
-
- }
+     }
  window.addEventListener('load', addDarkmodeWidget);
 
 
@@ -275,7 +279,7 @@ tweet 1040804232339742720
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765538970</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765558583</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

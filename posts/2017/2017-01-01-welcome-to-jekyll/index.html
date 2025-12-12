@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Welcome to Jekyll! - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765538969">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Welcome to Jekyll! - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765558582">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.
 To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post.ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works." />
@@ -66,11 +66,13 @@ To add new posts, simply add a file in the _posts directory that follows the con
             <button class="dark-mode-btn"
                     aria-label="toggle dark-mode">🌓 dark?</button>
 
+            <button class="snow-mode-btn"
+                    aria-label="toggle dark-mode">☃️ snow?</button>
+
     </nav>
 </header>
 
-
-
+<script src="/js/bundle.js"></script>
 <script src="/js/darkmode-js.min.js"></script>
 <script>
 
@@ -81,6 +83,7 @@ To add new posts, simply add a file in the _posts directory that follows the con
          
          time: '0.5s', 
          mixColor: '#fff', 
+         
          
          backgroundColor: '#fffbeb',  
          buttonColorDark: '#566666',  
@@ -101,20 +104,21 @@ To add new posts, simply add a file in the _posts directory that follows the con
              if (!darkmode.isActivated()) {
                  darkmode.toggle(); 
              }
-             
-             
+             letitsnow();
          } else {
              darkmode.toggle();
          }
      });
 
-     
+     $('.snow-mode-btn').click(function(){
+         if (!darkmode.isActivated()) {
+             darkmode.toggle(); 
+         }
+         letitsnow();
+         $('.snow-mode-btn').prop('disabled', true);
+     });
 
-      
-
-     
-
- }
+     }
  window.addEventListener('load', addDarkmodeWidget);
 
 
@@ -247,7 +251,7 @@ print_hi(&lsquo;Tom&rsquo;)
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765538969</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765558582</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

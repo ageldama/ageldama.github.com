@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765538970">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765558583">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 
@@ -120,11 +120,13 @@ mdnsresponderposix_enable=&#34;YES&#34; mdnsresponderposix_flags=&#34;-f /usr/lo
             <button class="dark-mode-btn"
                     aria-label="toggle dark-mode">🌓 dark?</button>
 
+            <button class="snow-mode-btn"
+                    aria-label="toggle dark-mode">☃️ snow?</button>
+
     </nav>
 </header>
 
-
-
+<script src="/js/bundle.js"></script>
 <script src="/js/darkmode-js.min.js"></script>
 <script>
 
@@ -135,6 +137,7 @@ mdnsresponderposix_enable=&#34;YES&#34; mdnsresponderposix_flags=&#34;-f /usr/lo
          
          time: '0.5s', 
          mixColor: '#fff', 
+         
          
          backgroundColor: '#fffbeb',  
          buttonColorDark: '#566666',  
@@ -155,20 +158,21 @@ mdnsresponderposix_enable=&#34;YES&#34; mdnsresponderposix_flags=&#34;-f /usr/lo
              if (!darkmode.isActivated()) {
                  darkmode.toggle(); 
              }
-             
-             
+             letitsnow();
          } else {
              darkmode.toggle();
          }
      });
 
-     
+     $('.snow-mode-btn').click(function(){
+         if (!darkmode.isActivated()) {
+             darkmode.toggle(); 
+         }
+         letitsnow();
+         $('.snow-mode-btn').prop('disabled', true);
+     });
 
-      
-
-     
-
- }
+     }
  window.addEventListener('load', addDarkmodeWidget);
 
 
@@ -374,7 +378,7 @@ mdnsresponderposix_flags=&#34;-f /usr/local/etc/mdnsresponderposix.conf&#34;</co
 </main>
 
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765538970</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765558583</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
