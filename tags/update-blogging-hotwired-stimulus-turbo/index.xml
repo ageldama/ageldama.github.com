@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Update Blogging Hotwired Stimulus Turbo on 아겔로그</title>
-    <link>http://localhost:1313/tags/update-blogging-hotwired-stimulus-turbo/</link>
+    <link>https://ageldama.github.io/tags/update-blogging-hotwired-stimulus-turbo/</link>
     <description>Recent content in Update Blogging Hotwired Stimulus Turbo on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 06 Jun 2022 19:50:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/update-blogging-hotwired-stimulus-turbo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/update-blogging-hotwired-stimulus-turbo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hotwired 재밌다.</title>
-      <link>http://localhost:1313/posts/2022-jekyll/2022-06-06--01-hotwired-fun/</link>
+      <link>https://ageldama.github.io/posts/2022-jekyll/2022-06-06--01-hotwired-fun/</link>
       <pubDate>Mon, 06 Jun 2022 19:50:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2022-jekyll/2022-06-06--01-hotwired-fun/</guid>
+      <guid>https://ageldama.github.io/posts/2022-jekyll/2022-06-06--01-hotwired-fun/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://hotwired.dev/&#34;&gt;Hotwired&lt;/a&gt; 재밌다.&lt;/p&gt;&#xA;&lt;p&gt;Stimulus, Turbo + Rails 7 갖고 이것저것 패턴별로 생각해보고 만드는게 즐겁네.&lt;/p&gt;&#xA;&lt;p&gt;딱, 이렇게 문제 그자체를 이해하고 설계해놓은 것들은 익히고 사용하는게 너무 즐겁다.&#xA;rails도 그랬었고, &amp;hellip;처음 볼때에는 뭐 이렇게 단순해? 싶을 정도로.&lt;/p&gt;&#xA;&lt;p&gt;너무 거창하거나, 실제로는 그 문제를 깊이 생각해서 푼게 아니라, 너무 범용적이고 범우주적인 해법(예: 상태관리, 컴포넌트 모델)만으로 퉁치려는것보다는. &amp;hellip;이제 그런것들에 혹하거나 끌리지 않게 되었다.&lt;/p&gt;&#xA;&lt;p&gt;그리고 또 한편으로는, 모든 해법은 단순하고 우아해야만 한다고 믿고 싶어서 믿는 fanboy가 되고 싶지도 않고.&lt;/p&gt;</description>
     </item>
   </channel>

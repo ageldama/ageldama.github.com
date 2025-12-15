@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Deno &#43; esbuild으로 블로그 js빌드 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765813350">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Deno &#43; esbuild으로 블로그 js빌드 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765813487">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 그간 자바스크립트를 이 Hugo으로 생성하는 블로그에 사용하면서, 여기저기
@@ -19,7 +19,7 @@ github cdn의 bandwidth은 여전히 사용하는 것.
 여튼, 그렇다고 사용하는 의존성(예: jquery)의 크기를 줄여서 내보낸 것도
 아니고 점점 의존성관계가 복잡해지는거 같아서 정리를 시작해봤다." />
 	<meta property="og:image" content=""/>
-	<meta property="og:url" content="http://localhost:1313/posts/2025-12dec/hugo-deno&#43;esbuild/">
+	<meta property="og:url" content="https://ageldama.github.io/posts/2025-12dec/hugo-deno&#43;esbuild/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="Deno &#43; esbuild으로 블로그 js빌드">
   <meta property="og:description" content="그간 자바스크립트를 이 Hugo으로 생성하는 블로그에 사용하면서, 여기저기 그냥 &lt;script&gt;-태그를 써왔었다. 한군데로 정리하기도 뭐하고, 자바스크립트를 쓰는 기능은 메인이 아니라고 생각해와서.
@@ -48,7 +48,9 @@ github cdn의 bandwidth은 여전히 사용하는 것.
             
             
                 
-                    <link rel="stylesheet" href="/css/styles.css">
+                    
+                        <link rel="stylesheet" href="/css/styles.8ace4d87ccb8340e9268a9801a0e9d92215bb1fce752c3a6cdb2a3274a268bb7.css" integrity="sha256-is5Nh8y4NA6SaKmAGg6dkiFbsfznUsOmzbKjJ0omi7c=" crossorigin="anonymous">
+                    
                 
             
         
@@ -61,7 +63,7 @@ github cdn의 bandwidth은 여전히 사용하는 것.
         <div class="container"><header>
     <div class="main ">
         <a class="site-title "
-           href="http://localhost:1313/">아겔로그</a>
+           href="https://ageldama.github.io/">아겔로그</a>
     </div>
 
 
@@ -125,7 +127,7 @@ github cdn의 bandwidth은 여전히 사용하는 것.
 
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-12dec/hands-of-necromancy/">➡️ Hands of Necromancy와 영포티의 추억벤또 🍱</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy/">➡️ Hands of Necromancy와 영포티의 추억벤또 🍱</a>
         
     </span>
 </nav>
@@ -275,12 +277,8 @@ server&#34;-이 이미 제공하고 있어서 있어도 무의미했다.</li>
 </ul>
 </li>
 <li>[장점👍] 다수 입력=&gt;출력 설정 쉽다.</li>
-<li>
-<p>[단점👎] 모르겠다.</p>
-<ul>
-<li>deno-bundle보다 크게 minified되진 않는다. 용량은 비슷.</li>
-</ul>
-</li>
+<li>[장점👍] deno-bundle보다 용량도 준거 같다: 280KB =&gt; 200KB</li>
+<li>[단점👎] 모르겠다.</li>
 </ol>
 <div class="src src-makefile">
 <div class="highlight"><div class="chroma">
@@ -421,16 +419,26 @@ Footnotes
 
     <span class="post-prevnext-side">
         
-        <a class="post-prevnext-btn" href="http://localhost:1313/posts/2025-12dec/hands-of-necromancy/">➡️ Hands of Necromancy와 영포티의 추억벤또 🍱</a>
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy/">➡️ Hands of Necromancy와 영포티의 추억벤또 🍱</a>
         
     </span>
 </nav>
 
 </main>
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765813350</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765813487</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YSB7MGHZ4V');
+    </script>
 </div>
     </body>
 </html>

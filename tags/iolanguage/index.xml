@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Iolanguage on 아겔로그</title>
-    <link>http://localhost:1313/tags/iolanguage/</link>
+    <link>https://ageldama.github.io/tags/iolanguage/</link>
     <description>Recent content in Iolanguage on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 10 Dec 2025 06:46:13 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/iolanguage/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/iolanguage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(주절주절) Factor와 Io</title>
-      <link>http://localhost:1313/posts/2025-12dec/factor-and-io/</link>
+      <link>https://ageldama.github.io/posts/2025-12dec/factor-and-io/</link>
       <pubDate>Wed, 10 Dec 2025 06:46:13 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-12dec/factor-and-io/</guid>
-      <description>&lt;p&gt;&#xA;Factor와 Io 모두 예전에 덕질하던 프로그래밍언어.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이번엔 추억놀음이나 포스팅해보려고.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Factor&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://factorcode.org/&#34;&gt;https://factorcode.org/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Factor_(programming_language)&#34;&gt;https://en.wikipedia.org/wiki/Factor_(programming_language)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;팩터는 Functional, Concatenative programming언어인데, Forth와 같은&#xA;방식의 평가규칙을 가졌지만, Semantics은 Smalltalk이나 Lisp 같이&#xA;고수준의 추상화를 작성하기 적절했었다. 그리고 Native compilation +&#xA;Image-based 시스템이어서 커먼리습이랑 비슷하게 사용도 가능해서&#xA;좋았었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;오랬만에 &amp;#34;ego searching&amp;#34; 해봤다 😶‍🌫️ :&lt;/p&gt;&#xA;&lt;a href=&#34;http://localhost:1313/posts/2025-12dec/factor-ageldama-googling.png&#34; width=&#34;600px&#34;&gt;&lt;img src=&#34;http://localhost:1313/posts/2025-12dec/factor-ageldama-googling.png&#34; alt=&#34;/posts/2025-12dec/factor-ageldama-googling.png&#34;/&gt;&lt;/a&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html&#34;&gt;https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html&lt;/a&gt;&#xA;같은 문서를 어떻게 요악해서 AI이 보여주는지 잘 모르겠다, 신기할 정도다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&amp;#34;Hallucination 🫥&amp;#34;도 좀 있긴하다. 다른 부분은 다 맞는거 같은데(ㅋㅋ),&#xA;윈도 빌드를 제공하거나 했다는 언급은, 내가 그랬었나 싶다. ㅎㅎ&lt;/p&gt;</description>
+      <guid>https://ageldama.github.io/posts/2025-12dec/factor-and-io/</guid>
+      <description>&lt;p&gt;&#xA;Factor와 Io 모두 예전에 덕질하던 프로그래밍언어.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이번엔 추억놀음이나 포스팅해보려고.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Factor&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://factorcode.org/&#34;&gt;https://factorcode.org/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Factor_(programming_language)&#34;&gt;https://en.wikipedia.org/wiki/Factor_(programming_language)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;팩터는 Functional, Concatenative programming언어인데, Forth와 같은&#xA;방식의 평가규칙을 가졌지만, Semantics은 Smalltalk이나 Lisp 같이&#xA;고수준의 추상화를 작성하기 적절했었다. 그리고 Native compilation +&#xA;Image-based 시스템이어서 커먼리습이랑 비슷하게 사용도 가능해서&#xA;좋았었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;오랬만에 &amp;#34;ego searching&amp;#34; 해봤다 😶‍🌫️ :&lt;/p&gt;&#xA;&lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/factor-ageldama-googling.png&#34; width=&#34;600px&#34;&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2025-12dec/factor-ageldama-googling.png&#34; alt=&#34;/posts/2025-12dec/factor-ageldama-googling.png&#34;/&gt;&lt;/a&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html&#34;&gt;https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html&lt;/a&gt;&#xA;같은 문서를 어떻게 요악해서 AI이 보여주는지 잘 모르겠다, 신기할 정도다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&amp;#34;Hallucination 🫥&amp;#34;도 좀 있긴하다. 다른 부분은 다 맞는거 같은데(ㅋㅋ),&#xA;윈도 빌드를 제공하거나 했다는 언급은, 내가 그랬었나 싶다. ㅎㅎ&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

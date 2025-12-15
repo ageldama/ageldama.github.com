@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Virtualenv on 아겔로그</title>
-    <link>http://localhost:1313/tags/virtualenv/</link>
+    <link>https://ageldama.github.io/tags/virtualenv/</link>
     <description>Recent content in Virtualenv on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 29 Dec 2019 00:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/virtualenv/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ageldama.github.io/tags/virtualenv/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기</title>
-      <link>http://localhost:1313/posts/2019-12dec/direnv/</link>
+      <link>https://ageldama.github.io/posts/2019-12dec/direnv/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2019-12dec/direnv/</guid>
-      <description>&lt;p&gt;&#xA;프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, &#xA;경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든&#xA;&lt;a href=&#34;http://localhost:1313/posts/2019-12dec/moonshot-1st-rel/&#34;&gt;moonshot.el&lt;/a&gt; 와 유사한걸 검색해봤다.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;몇 가지&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-3&#34;&gt;&#xA;&lt;h3 id=&#34;headline-2&#34;&gt;&#xA;NPM: dotenv&#xA;&lt;/h3&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-3&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.npmjs.com/package/dotenv&#34;&gt;https://www.npmjs.com/package/dotenv&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Node.js에서 Unix environment variable으로 &lt;code&gt;.env&lt;/code&gt; 파일을 로딩해주는&#xA;역할인 듯.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을&#xA;짜주고 하기 싫었고,&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;code&gt;.env&lt;/code&gt; 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서&#xA;경로를 조립하고 하는데 별로라는 생각이 들었다. 항상 절대 경로만&#xA;표기하거나, &lt;code&gt;getenv&lt;/code&gt; 해서 문자열을 가져와서 상대 경로 등으로 지정된&#xA;값을 매번 절대 경로로 만드는 작업을 해야할테니까.&lt;/p&gt;</description>
+      <guid>https://ageldama.github.io/posts/2019-12dec/direnv/</guid>
+      <description>&lt;p&gt;&#xA;프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, &#xA;경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든&#xA;&lt;a href=&#34;https://ageldama.github.io/posts/2019-12dec/moonshot-1st-rel/&#34;&gt;moonshot.el&lt;/a&gt; 와 유사한걸 검색해봤다.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;몇 가지&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;이런 비슷한게 몇 가지 있는데, 내 상황에 쓸만한 것은 direnv&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-3&#34;&gt;&#xA;&lt;h3 id=&#34;headline-2&#34;&gt;&#xA;NPM: dotenv&#xA;&lt;/h3&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-3&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.npmjs.com/package/dotenv&#34;&gt;https://www.npmjs.com/package/dotenv&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Node.js에서 Unix environment variable으로 &lt;code&gt;.env&lt;/code&gt; 파일을 로딩해주는&#xA;역할인 듯.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Shell에서 Hook 걸어서 사용하기엔 별로 인거 같았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 Node.js 이외의 프로젝트에 적용하려면 매번 JS으로 wrapper을&#xA;짜주고 하기 싫었고,&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;code&gt;.env&lt;/code&gt; 파일이 그냥 정적인 key-value 문자열의 나열이라, 파일시스템에서&#xA;경로를 조립하고 하는데 별로라는 생각이 들었다. 항상 절대 경로만&#xA;표기하거나, &lt;code&gt;getenv&lt;/code&gt; 해서 문자열을 가져와서 상대 경로 등으로 지정된&#xA;값을 매번 절대 경로로 만드는 작업을 해야할테니까.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
