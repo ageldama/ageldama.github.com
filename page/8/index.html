@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765560954">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765799773">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -23,7 +23,7 @@
             
                 
                     
-                        <link rel="stylesheet" href="/css/styles.82ce608cfa7bcce0d88446c51318d64092c80cdad84b06fd7ef7d8ebe55a91ba.css" integrity="sha256-gs5gjPp7zODYhEbFExjWQJLIDNrYSwb9fvfY6&#43;Vakbo=" crossorigin="anonymous">
+                        <link rel="stylesheet" href="/css/styles.8ace4d87ccb8340e9268a9801a0e9d92215bb1fce752c3a6cdb2a3274a268bb7.css" integrity="sha256-is5Nh8y4NA6SaKmAGg6dkiFbsfznUsOmzbKjJ0omi7c=" crossorigin="anonymous">
                     
                 
             
@@ -220,6 +220,85 @@
 				
 				
 				
+				<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/cxx-defer/">🍯 C&#43;&#43;: Golang-ish `defer`-macro</a></h1>
+                                    <time>2023年03月02日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+별거 없는데, 문득 심심해서 툭닥거려봤다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+원하는 것과 접근법
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li><a href="https://go.dev/blog/defer-panic-and-recover">https://go.dev/blog/defer-panic-and-recover</a></li>
+<li><a href="https://docs.rs/defer/latest/defer/fn.defer.html">https://docs.rs/defer/latest/defer/fn.defer.html</a></li>
+<li><a href="https://ziglang.org/documentation/master/#defer">https://ziglang.org/documentation/master/#defer</a></li>
+</ol>
+<p>
+  golang/zig에서처럼 <code class="verbatim">defer</code> 등록한 LIFO순서대로 호출되도록.</p>
+<p>
+  검색해보면, 대부분 RAII을 사용하거나 하는 것들이 보인다:</p>
+<ul>
+<li><a href="https://duckduckgo.com/?q=c%2B%2B+golang+defer">DDG: c++ golang defer</a></li>
+<li><a href="https://stackoverflow.com/questions/33050620/golang-style-defer-in-c">https://stackoverflow.com/questions/33050620/golang-style-defer-in-c</a></li>
+<li><a href="https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop">https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop</a></li>
+<li><a href="https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/">https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/</a></li>
+</ul>
+<p>
+  …그냥 <code class="verbatim">std::shared_ptr&lt;void&gt;</code> 을 이용하는 방식이 마음에
+  들었다. 그리고 조금 더 간단하게 사용하려고 매크로로 만들어 봤다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+<code class="verbatim">defer.inl</code> :
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div class="src src-c++">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">  <span class="cm">/* -*- mode: c++; -*- */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cp">#ifndef defer_INL
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define defer_INL 1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#define _Defer_CONCAT_IMPL( x, y ) x##y
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y )
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk)
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#endif </span><span class="cm">/*defer_INL*/</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  <a href="https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html"><code class="verbatim">__COUNTER__</code></a> 이용해서 매크로가 생성한 <code class="verbatim">std::shared_ptr&lt;..&gt;</code> 변수의
+  이름이 겹치지 않도록 해봤다. (…위에 검색한 링크들에도 사용하듯이)</p>&hellip;
+						
+					</div>
+                                        
+				</section>
+				
 				<section class="list-item"><h1 class="title"><a href="/posts/2023-02feb/2023-02feb26--01-css/">⛲ Ping 26/02/2023 .01 : 디자인 css 가볍게 수정</a></h1>
                                     <time>2023年02月26日
                                         </time>
@@ -334,30 +413,6 @@ BCPL이나 그런 역사에 대해 나도 조금은 아니까.</li>
                                         
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2023-02feb/2023-02feb04--01-ping/">🔋 Ping 04/02/2023 .01: 씨언어의 장자 zig, rust, golang, c&#43;&#43; ???</a></h1>
-                                    <time>2023年02月04日
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-최근에 재미로 <a href="https://ziglang.org/">zig</a> 을 정말 재밌게 &#39;읽었다&#39;. 공부해보고 실제로 뭔가
-코딩을 많이 해보거나 한 것은 아니고, 대체 어떻게 동작하는 프로그램을
-이걸로 만들라고 하는건지 이해하고 싶었기 때문에 해봤다.</p>
-<p>
-zig으로 프로그램을 짜는게 궁금하던 부분은 haskell의 monad을 이용한
-방식, 혹은 apl이나 prolog으로 실제프로그램을 어떻게 만들 수 있을지
-패러다임부터 다른 언어를 공부하고 생각해보는 것과는 조금 다를수도
-있겠다. 어쨌든 그냥 imperative언어이니까.</p>
-<p>
-오히려, zig을 어떻게 써먹어야 할지 궁금하던 지점은, c++의
-스마트포인터와 move semantics등을 이해하는 것이나, rust의 borrowing
-checker, rc/arc등을 이해하는 것과 마찬가지인 것 같다.
-둘 다 이해하고 익숙해지면 그렇게 부담스럽지 않을거 같긴 하다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -382,7 +437,7 @@ checker, rc/arc등을 이해하는 것과 마찬가지인 것 같다.
 
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765560954</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765799773</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
