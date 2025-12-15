@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>German on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/german/</link>
+    <link>http://localhost:1313/tags/german/</link>
     <description>Recent content in German on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Tue, 07 Feb 2023 07:48:17 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/german/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/german/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측</title>
-      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb07--01-ping/</link>
+      <link>http://localhost:1313/posts/2023-02feb/2023-02feb07--01-ping/</link>
       <pubDate>Tue, 07 Feb 2023 07:48:17 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb07--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb07--01-ping/</guid>
       <description>&lt;p&gt;&#xA;문득 떠오른 생각이라서, 그냥 추측.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;strong&gt;C&lt;/strong&gt;&lt;/strong&gt; : &lt;em&gt;로마숫자(roman numeral)&lt;/em&gt; 으로 100.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;처음부터 의도한 숫자가 100이 아니었을거란건 나도 알거 같아.&#xA;BCPL이나 그런 역사에 대해 나도 조금은 아니까.&lt;/li&gt;&#xA;&lt;li&gt;그런데 그 이후에 따르는 언어들이 그런 패턴을 만든거 같아서 재미로&#xA;쓰는 글.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;strong&gt;C++&lt;/strong&gt;&lt;/strong&gt; : 위의 로마숫자이란 생각과 &lt;em&gt;C언어의 &lt;code&gt;x++&lt;/code&gt; 연산&lt;/em&gt; 으로 생각해보면,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;즉시 평가할 때에는 C == 100, 그냥 C와 같아 보임.&lt;/li&gt;&#xA;&lt;li&gt;그런데 저장된 값은 +1, == 101.&lt;/li&gt;&#xA;&lt;li&gt;…어쨌든 그냥 볼 때엔, 씨언어와 거의 같아 보이지만, 그래도 좀&#xA;더 성장했다고. 그리고 겸손하게 오직 +1.&lt;/li&gt;&#xA;&lt;li&gt;(그냥 겸손하다고 될 문제인가 싶다… C++ 좋아하지만 ㅎㅎ)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;strong&gt;D&lt;/strong&gt;&lt;/strong&gt; : C에서 다음 단계으로 발전했으니, 이번엔 다섯배, 역시 로마숫자, 500.&lt;/p&gt;</description>
     </item>
   </channel>

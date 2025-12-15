@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.152.2">
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765810154">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765813350">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
-	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
-	<meta property="og:url" content="https://ageldama.github.io/">
+	<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="아겔로그" />
+	<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="아겔로그">
   <meta property="og:locale" content="ko_kr">
@@ -20,9 +20,7 @@
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.8ace4d87ccb8340e9268a9801a0e9d92215bb1fce752c3a6cdb2a3274a268bb7.css" integrity="sha256-is5Nh8y4NA6SaKmAGg6dkiFbsfznUsOmzbKjJ0omi7c=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -37,7 +35,7 @@
 			<header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -97,6 +95,56 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2022-06jun/2022-06jun15--01-ping/">🔮 Ping 15/06/2022 .01</a></h1>
+                                    <time>2022年06月15日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>비 내리는 화요일. &#x2614;</p>
+<hr>
+<h1 id="jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</h1>
+<p>재밌는걸 찾았다.</p>
+<p><a href="https://jinja.palletsprojects.com/en/3.1.x/">jinja2</a>을 사용하면서, 하위 include으로 내려갈수록,
+file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야
+template cache을 무시하는거 같아.</p>
+<p>그래서,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// gulpfile.js:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">buildTask</span> <span class="o">=</span> <span class="nx">series</span><span class="p">(</span><span class="nx">cleanTask</span><span class="p">,</span> <span class="nx">esbuildTask</span><span class="p">,</span> <span class="nx">injectTask</span><span class="p">,</span> <span class="nx">touchInjectedTask</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">watchTask</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">watch</span><span class="p">(</span><span class="s2">&#34;./js/**/*.js&#34;</span><span class="p">,</span> <span class="nx">buildTask</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">watch</span> <span class="o">=</span> <span class="nx">watchTask</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">build</span> <span class="o">=</span> <span class="nx">buildTask</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">clean</span> <span class="o">=</span> <span class="nx">cleanTask</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>&hellip;대략 잘 동작하고, <a href="https://esbuild.github.io/">webpack보다 엄청나게 빠르다</a> ㅎㅎ.</p>
+<hr>
+<h1 id="postgresql-as-an-api-server">postgresql, as an api server?</h1>
+<p>요런것들 올라오는거 보는 재미:</p>&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item"><h1 class="title"><a href="/posts/2022-06jun/algebraic-effects-for-everyone/">🥯 &#34;모두를 위한 algebraic effects!&#34; ...정말루?</a></h1>
                                     <time>2022年06月13日
@@ -195,29 +243,6 @@
                                         
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2022-06jun/2022-06jun11-ping/">👊 Ping 11/06/2022</a></h1>
-                                    <time>2022年06月11日
-                                        </time>
-                                        <br><div class="description">
-						
-						<hr>
-<h1 id="jekyll--hugo">Jekyll &ndash;&gt; Hugo</h1>
-<p>&hellip;Jekyll에서, 결국 다시 가볍고 그냥 잘 동작하는 Hugo으로 블로그 변경.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<h1 id="생각">생각</h1>
-<p>남들이 뭐래도 별 관심 없이.
-실은 그냥 포장지와 리본장식만 변해가는거고,</p>
-<p>반면.
-그 포장지, 리본장식과 그 의미와 가치를 제대로 분간해내지 못하니까.</p>
-<p>도구를 도구로 보면 안되고, 도구가 나를 쓴다는것을 이해해야 하는데.
-그래서 도구를 이용해 자유로워질거라 착각하면, 도구에 얽메여 끌려만 가면&hellip;,
-그런데 도구에 이용당해 복종할수록 자유로워진다면 &hellip;이겠지.</p>
-<p>끌려가며, 내가 생각치 않은곳에 끌려와 진짜 성장을 얻기도 하는 이도 있고,
-끌려가며 원치 않는 방향으로 가며 그게 성장이라고 허울로 하기도 하는 이도 있고.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -242,19 +267,9 @@
 
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765810154</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765813350</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 
 		</div>
 	</body>

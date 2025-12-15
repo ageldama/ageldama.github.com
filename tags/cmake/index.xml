@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cmake on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/cmake/</link>
+    <link>http://localhost:1313/tags/cmake/</link>
     <description>Recent content in Cmake on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ping 14/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping-14fri/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping-14fri/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping-14fri/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping-14fri/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;빌드도구의 경험과 Meson을 사용하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  &lt;a href=&#34;https://github.com/ageldama/meson-abc&#34;&gt;Meson-ABC 갖고 놀아본 코드&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  아주 예전에 commercially 성공적이었었던 C++ 프로젝트를 홀로 기획, 설계, 개발했었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  처음에는 GNU Makefile으로 간단히 시작했었었다. 타겟 플랫폼이 뻔하게 윈도였기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그 이전에는 ANSI C으로 작성한 &lt;a href=&#34;https://sourceforge.net/projects/sdlhan/&#34;&gt;SDL 조합형 비트맵 출력 오픈소스&lt;/a&gt;&#xA;  라이브러리 같은 것들을 작업할 때는 그냥 GNU Autotools 을 쓰거나&#xA;  했었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  하지만 그렇게 configure 하거나 할 부분도 없고 처음 혼자 시작하며&#xA;  다른 신경 쓸 것도 무지하게 많았었던 프로젝트였고 더욱이 기간도&#xA;  한정적이었었다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 SCons 같은 것을 조금 쓰다가, 결국 더 간단히 Rake으로 빌드를&#xA;  작성해 한동안 썼었다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CQuery &#43; LSP vs CMake-IDE &#43; RTags</title>
-      <link>https://ageldama.github.io/posts/2018-09sep/cquery-vs-cmake-ide/</link>
+      <link>http://localhost:1313/posts/2018-09sep/cquery-vs-cmake-ide/</link>
       <pubDate>Sun, 23 Sep 2018 12:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-09sep/cquery-vs-cmake-ide/</guid>
-      <description>&lt;p&gt;LSP + CQuery을 써보려고 했는데, 결국 &lt;a href=&#34;https://ageldama.github.io/posts/2018-05may-emacs-cmake-ide-screencast/&#34;&gt;CMake-IDE +&#xA;RTags&lt;/a&gt; 조합으로&#xA;원래대로 쓰게될거 같아. :&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;_build/&lt;/code&gt; 와 같이 CMake, Ninja, Makefile등의 파일들을 별도의&#xA;디렉토리로 만들어서 필드하고 싶은데, 제대로 지원을 못한다.&#xA;1. 그냥 프로젝트 소스코드랑 같이 generate하고 &lt;code&gt;gcc&lt;/code&gt;등의 중간&#xA;파일이 모두 같이 남아서 지저분해져서 싫어함.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;아직은 별로 내 마음에 꼭 들게 만들기는 어려울거 같아서. 그래도&#xA;인상적이었던 부분들:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;flycheck에 전용으로 연동되어 있는 점.&lt;/li&gt;&#xA;&lt;li&gt;company-lsp이 생각보다 훨씬 부드럽고 자동완성 잘되는거.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;미래에는 그냥 LSP기반만 남을거 같아서, 이것도 &amp;ldquo;helm-rg의 모험&amp;quot;처럼&#xA;아직은 완전히 전환은 못할거 같긴하다.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/2018-09sep/cquery-vs-cmake-ide/</guid>
+      <description>&lt;p&gt;LSP + CQuery을 써보려고 했는데, 결국 &lt;a href=&#34;http://localhost:1313/posts/2018-05may-emacs-cmake-ide-screencast/&#34;&gt;CMake-IDE +&#xA;RTags&lt;/a&gt; 조합으로&#xA;원래대로 쓰게될거 같아. :&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;_build/&lt;/code&gt; 와 같이 CMake, Ninja, Makefile등의 파일들을 별도의&#xA;디렉토리로 만들어서 필드하고 싶은데, 제대로 지원을 못한다.&#xA;1. 그냥 프로젝트 소스코드랑 같이 generate하고 &lt;code&gt;gcc&lt;/code&gt;등의 중간&#xA;파일이 모두 같이 남아서 지저분해져서 싫어함.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;아직은 별로 내 마음에 꼭 들게 만들기는 어려울거 같아서. 그래도&#xA;인상적이었던 부분들:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;flycheck에 전용으로 연동되어 있는 점.&lt;/li&gt;&#xA;&lt;li&gt;company-lsp이 생각보다 훨씬 부드럽고 자동완성 잘되는거.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;미래에는 그냥 LSP기반만 남을거 같아서, 이것도 &amp;ldquo;helm-rg의 모험&amp;quot;처럼&#xA;아직은 완전히 전환은 못할거 같긴하다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Emacs &#43; CMake-IDE Screencast</title>
-      <link>https://ageldama.github.io/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/</link>
+      <link>http://localhost:1313/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/</guid>
+      <guid>http://localhost:1313/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/R5tV-mp8WnE?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;h1 id=&#34;이건-무엇인가&#34;&gt;이건 무엇인가&lt;/h1&gt;&#xA;&lt;p&gt;Emacs Configurations: &lt;a href=&#34;https://github.com/ageldama/configs/tree/master/emacs/cmake-ide&#34;&gt;https://github.com/ageldama/configs/tree/master/emacs/cmake-ide&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;이맥스에서 C++ 개발 편하게 하려고 이것저것 알아보다가 결국엔 &lt;a href=&#34;https://github.com/atilaneves/cmake-ide&#34;&gt;CMake-IDE&lt;/a&gt; + &lt;a href=&#34;https://github.com/Andersbakken/rtags&#34;&gt;RTags&lt;/a&gt; 조합이 제일 괜찮다는 결론에 도달해서 만들어본 설정이다.&lt;/p&gt;&#xA;&lt;p&gt;원래 사용하는 환경이 &lt;a href=&#34;https://github.com/emacs-evil/evil&#34;&gt;Evil&lt;/a&gt;은 아니었는데,&#xA;&lt;a href=&#34;http://spacemacs.org/&#34;&gt;Spacemacs&lt;/a&gt; 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.&lt;/p&gt;&#xA;&lt;p&gt;지금은 그냥 Spacemacs은 다운도 잘되고 너무 무겁고 설정을 &lt;a href=&#34;http://spacemacs.org/layers/LAYERS.html&#34;&gt;레이어 방식&lt;/a&gt; 으로 할게 아니면 짜증나게 하는 부분도 많고, 그렇다고 레이어가 완전히 내가 그냥 커스텀으로 만들어서 바로바로 머지하는 구조도 아니고 중앙에서 관리하는 방식으로만 되는거 같아서, 옆으로 치우고, 바닐라 이맥스에 Spacemacs스럽게 직접 설정해서 가볍게 사용하고 있다. :-)&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,648 +2,648 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ping on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/ping/</link>
+    <link>http://localhost:1313/tags/ping/</link>
     <description>Recent content in Ping on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Sun, 30 Nov 2025 10:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/ping/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ping/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>블로그 디자인 수정 &#43; 제목 자동 emoji 붙여주기</title>
-      <link>https://ageldama.github.io/posts/2025-11nov/blog-post-title-emojis/</link>
+      <link>http://localhost:1313/posts/2025-11nov/blog-post-title-emojis/</link>
       <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-11nov/blog-post-title-emojis/</guid>
+      <guid>http://localhost:1313/posts/2025-11nov/blog-post-title-emojis/</guid>
       <description>&lt;p&gt;&#xA;블로그 CSS을 또 수정하고, 레이아웃도 좀 더 고쳤다. 간단하게 가볍게&#xA;보였으면 해서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데 그간 고민해오던 것들이 있음:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;(예전에) 귀찮아서 &lt;code&gt;new-ping.pl&lt;/code&gt;-스크립트 같은거 짜놓고 자동&#xA;생성한 포스팅 제목으로 그대로 포스팅한 &amp;#34;&lt;em&gt;Ping …..&lt;/em&gt;&amp;#34;-같은 제목의&#xA;포스팅들은 archives에서 봐도 뭐가 뭔지 구분이 안됨.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;h1&lt;/code&gt;-같은 markdown/org-mode에서 export한 제목과&#xA;각 포스팅의 제목(이것도 &lt;code&gt;h1&lt;/code&gt;-같은 태그인)이 눈에 딱 들게 구분이&#xA;되지 않았음.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;archives에서 각 포스팅의 preview을 표시했다&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;조금 내용도 나오니까 찾아보기 더 수월해진거 같다. ㅎㅎ&#xA;  그리고 막상 이렇게 전체 목록 / 시간에 따라, 내용을 조금이나마&#xA;  보여주니까 일대기 형식이라 재밌네.&lt;/p&gt;</description>
     </item>
     <item>
       <title>가볍고 빠른 antiX Linux &#43; runit, koreader 그리고 bloatware</title>
-      <link>https://ageldama.github.io/posts/2025-04apr/2025-04apr02--01-antix-linux/</link>
+      <link>http://localhost:1313/posts/2025-04apr/2025-04apr02--01-antix-linux/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-04apr/2025-04apr02--01-antix-linux/</guid>
+      <guid>http://localhost:1313/posts/2025-04apr/2025-04apr02--01-antix-linux/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;antiX linux&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;오래된 랩탑으로 fedora 그냥 아무 생각없이 대충 쓰는데 좀 버벅. 어차피&#xA;메인드라이버도 아니고 그냥 그러려니 하고 살다가, 좀 답답해서&#xA;lightweight linux distro을 골라봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://antixlinux.com/&#34;&gt;https://antixlinux.com/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;거기에 이전에 시도했던 void linux에서 마음에 들었었던 runit을 init으로&#xA;쓰는 spin으로 선택해서 설치했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;결과는… 놀라울 정도로 가벼웠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;luks disk encryption + btrfs을 기존에는 적용했다가(btrfs이&#xA;기본옵션이어서 귀찮아서), 이번에는 그냥 ext4만으로 설치해서 더&#xA;가벼운걸까 싶기도 하고.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;systemd은 익숙해질수로 편안해지기는 했었는데, 그럼에도 확실히 전통적인&#xA;linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>darkmode.js으로 변경</title>
-      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar20--01--darkmode-js/</link>
+      <link>http://localhost:1313/posts/2025-03mar/2025-03mar20--01--darkmode-js/</link>
       <pubDate>Thu, 20 Mar 2025 11:51:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar20--01--darkmode-js/</guid>
+      <guid>http://localhost:1313/posts/2025-03mar/2025-03mar20--01--darkmode-js/</guid>
       <description>&lt;p&gt;&#xA;직접 짠 css/js에서 &lt;a href=&#34;https://darkmodejs.learn.uno/&#34;&gt;darkmode.js&lt;/a&gt;으로 변경했다.&#xA;css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;변경도 예쁘게 애니메이션 나오고, system preference 지정도 자동으로 되고.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-3&#34;&gt;&#xA;&lt;h3 id=&#34;headline-1&#34;&gt;&#xA;(미래의 나를 위해) css/html에서 class&#xA;&lt;/h3&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-3&#34;&gt;&#xA;&lt;div class=&#34;src src-css&#34;&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#1&#34;&gt;1&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#2&#34;&gt;2&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#3&#34;&gt;3&lt;/a&gt;&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;darkmode--activated&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;logo&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;mix-blend-mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;difference&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;src src-html&#34;&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#1&#34;&gt;1&lt;/a&gt;&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;darkmode-ignore&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;😬&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Hugo &#43; pagefind 붙여서 검색기능 추가했다</title>
-      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</link>
+      <link>http://localhost:1313/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</link>
       <pubDate>Sun, 16 Mar 2025 06:25:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</guid>
+      <guid>http://localhost:1313/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</guid>
       <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://pagefind.app/&#34;&gt;https://pagefind.app/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는&#xA;pagefind을 붙여봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;처음엔 좀 어색했는데, 커스터마이징을 별로 제공하지 않기는 했지만,&#xA;그래도 이것저것 뜯어서 CSS도 마음에 들게 좀 수정하고, JS/DOM 이벤트도&#xA;적당히 잡아서 마음에 들게 동작하게 고쳤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;별로라고 생각하던 부분들도 다 뜯어 고치고 하면서 더 블로그가 마음에&#xA;들어진다. 🤠&lt;/p&gt;</description>
     </item>
     <item>
       <title>css, design 새단장 &#43; dark-mode</title>
-      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/</link>
+      <link>http://localhost:1313/posts/2025-03mar/2025-03mar15--01-new-css/</link>
       <pubDate>Sat, 15 Mar 2025 12:25:01 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/</guid>
+      <guid>http://localhost:1313/posts/2025-03mar/2025-03mar15--01-new-css/</guid>
       <description>&lt;p&gt;&#xA;css 더 단순하게 만들고, 디자인들도 그냥 내 마음에 들게 뜯어 고침.&#xA;다크모드도 작업해서 만들어 넣고.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;css 애니메이션도 작업해 넣었다가, gpu 너무 쓰는거 같아서 그냥 끄고&#xA;정적효과로만 냅둠.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;hugo 같은 static site generator이 좋은 점, 그리고 그냥 단순한 css와&#xA;오래된 jquery으로 그냥 뚝딱거려서 작업.&lt;/p&gt;</description>
     </item>
     <item>
       <title>공각기동대, 1995</title>
-      <link>https://ageldama.github.io/posts/2024-03mar/2024-03mar23--01-ping/</link>
+      <link>http://localhost:1313/posts/2024-03mar/2024-03mar23--01-ping/</link>
       <pubDate>Sat, 23 Mar 2024 15:46:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2024-03mar/2024-03mar23--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2024-03mar/2024-03mar23--01-ping/</guid>
       <description>&lt;p&gt;&#xA;가끔 다시 본다. 그리고 마지막 장면을 보면서 덕력이 폭발하면서 종종 그런 생각에 빠짐.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;저런 시나리오를 쓴 사람은 어떤 기분이었을까 완전 쩐다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes</title>
-      <link>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/</link>
+      <link>http://localhost:1313/posts/2023-03mar/2023-03mar08--02-ping--news/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/</guid>
+      <guid>http://localhost:1313/posts/2023-03mar/2023-03mar08--02-ping--news/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;&amp;#34;리액트가 날 인질으로 잡고 있어요&amp;#34;&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://emnudge.dev/blog/react-hostage&#34;&gt;https://emnudge.dev/blog/react-hostage&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  …말해 뭘할까 싶은데. :see_no_evil:&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  포스팅 자체는 react, hooks 같은 것들의 complexity에 대한&#xA;  이야기이지만.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  오히려 흥미롭게 생각하는 것은, 과거 한국에서 &amp;#39;퍼블리셔&amp;#39;라고 하던&#xA;  사람들이 어떻게 되었는가 생각해보며, 함께 지금의 &amp;#39;프론트엔드&#xA;  개발자&amp;#39;, 혹은 &amp;#39;앱 개발자&amp;#39;, &amp;#39;리액트 개발자&amp;#39;, &amp;#39;자바스크립트&#xA;  개발자&amp;#39;들이 앞으로 어떻게 될지 상상해본다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  대부분의 현재의 저런 테크/키워드들은 완전히 사라질거 같고, 그렇다면&#xA;  다른 직종으로 우회하거나, 변화된 상황에 맞춰가겠지 싶다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;&amp;#34;헛소리/bullshit 없이 엔지니어링 재능이 있는 사람을 고용하기&amp;#34;&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://jes.al/2023/03/how-to-hire-engineering-talent-without-the-bs/&#34;&gt;https://jes.al/2023/03/how-to-hire-engineering-talent-without-the-bs/&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 08/03/2023 .01 : 전자책읽기</title>
-      <link>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--01-ping/</link>
+      <link>http://localhost:1313/posts/2023-03mar/2023-03mar08--01-ping/</link>
       <pubDate>Wed, 08 Mar 2023 06:15:08 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2023-03mar/2023-03mar08--01-ping/</guid>
       <description>&lt;p&gt;&#xA;linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁들만 나열,&#xA;별로 내용은 길게 늘여 쓰지 않으려고:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;linux, 그중에서도 가벼운 하드웨어와 단순하게 잘 동작하는 배포판.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;여러가지 불필요한 군더더기 없고, 패키지들이 조금 오래된&#xA;버젼이어도, 안정적으로만 동작하면 상관 없음.&lt;/li&gt;&#xA;&lt;li&gt;그래서, debian stable -or- testing 쓰면 속이 편함.&lt;/li&gt;&#xA;&lt;li&gt;하드웨어는 raspberry pi 3/4 둘 다 좋았다. &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;…특히 전력소모도 거의 없고, 딱 모니터 연결해 놓고 팬소음 거의&#xA;없이 쾌적하게 책을 읽기 좋다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;calibre 책파일 관리, 읽기 모두 만족스러움&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 26/02/2023 .01 : 디자인 css 가볍게 수정</title>
-      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb26--01-css/</link>
+      <link>http://localhost:1313/posts/2023-02feb/2023-02feb26--01-css/</link>
       <pubDate>Sun, 26 Feb 2023 08:19:57 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb26--01-css/</guid>
+      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb26--01-css/</guid>
       <description>&lt;p&gt;&#xA;아예 아무런 스타일도 주지 않고, 그냥 알아서 html/css만으로 잘 보이도록&#xA;고쳤다. 웹폰트니 그런것도 그냥 껐고.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;불필요한 스타일이나 폰트로딩을 줄여서 가볍고, 어차피 웹브라우져의&#xA;&amp;#39;reader mode&amp;#39; 지원 같은걸로 내가 스타일 주는 것보다 훨씬 읽기 편안하게&#xA;볼 수 있을테니까.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;lynx, w3m 같은 &lt;a href=&#34;https://en.wikipedia.org/wiki/Text-based_web_browser&#34;&gt;텍스트 웹브라우져&lt;/a&gt;에서 읽으나 그냥 무거운 웹브라우져으로&#xA;읽으나 사람마다 알아서 잘 읽히도록 하는데에만 집중해봤다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 19/02/2023 .02 : 이름에 대한 추측 (2) HAL, IBM, JCL</title>
-      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb19--02-ping/</link>
+      <link>http://localhost:1313/posts/2023-02feb/2023-02feb19--02-ping/</link>
       <pubDate>Sun, 19 Feb 2023 17:05:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb19--02-ping/</guid>
+      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb19--02-ping/</guid>
       <description>&lt;p&gt;&#xA;(…지난번 &lt;a href=&#34;../2023-02feb07--01-ping/&#34;&gt;C/C++/D/Zig 이름에 대한 추측&lt;/a&gt;&#xA;에 이어서, 그냥 떠올라서)&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/HAL_9000&#34;&gt;HAL 9000&lt;/a&gt; –&amp;gt; IBM&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;ASCII방식, 혹은 그냥 알파벳에서 한글자씩 앞으로 땡기면, &amp;#34;IBM&amp;#34;이 된다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Job_Control_Language&#34;&gt;JCL&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;IBM의 &amp;#34;Job Control Language&amp;#34;, 메인프레임 등에서 스크립팅을 위해&#xA;쓴다고 한다.&lt;/li&gt;&#xA;&lt;li&gt;&amp;#34;IBM&amp;#34;에서 다시 또 한글자씩 앞으로 땡기면, &amp;#34;JCL&amp;#34;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;ㅎㅎ뭐 그냥 그렇다고.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 19/02/2023 .01 : 어른이 되기</title>
-      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb19--01-ping/</link>
+      <link>http://localhost:1313/posts/2023-02feb/2023-02feb19--01-ping/</link>
       <pubDate>Sun, 19 Feb 2023 06:55:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb19--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb19--01-ping/</guid>
       <description>&lt;p&gt;&#xA;(최근 며칠 우울하고 내가 어른이기는 한가 싶은 자괴감에&#xA;빠졌었다. 그래서인지 자기합리화를 위해 이런 글을 쓰고 있는거 같기도&#xA;하다.)&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;나의 옛날 이야기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;80년대의 기억에는, 참 자주도 불량식품 단속에 대한 이야기가 나오던 것&#xA;  같아. 그리고 실제로도 만화, 애니메이션, 게임, 장난감 등등의 라이센스나&#xA;  품질관리에 대한 관념이 희박했던거 같아.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  지금은 이것저것 검정이나 인증마크를 더 붙이기 바쁘게 되어서 너무&#xA;  과도하지 않은가 싶을 정도니까, …그래도 없는 것 보다는 낫지 않을까.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  물론 80, 90년대는 일본문화개방도 되지 않았었고 엄밀하게 말하자면&#xA;  불법은 아니었을테고, 더 나아가서 어린 국민들을 염려한 윗분들의 지시로&#xA;  수많은, 한국산 고전애니메이션이 본의 아니게 붐을 일으켰었다는거 같다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측</title>
-      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb07--01-ping/</link>
+      <link>http://localhost:1313/posts/2023-02feb/2023-02feb07--01-ping/</link>
       <pubDate>Tue, 07 Feb 2023 07:48:17 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb07--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb07--01-ping/</guid>
       <description>&lt;p&gt;&#xA;문득 떠오른 생각이라서, 그냥 추측.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;strong&gt;C&lt;/strong&gt;&lt;/strong&gt; : &lt;em&gt;로마숫자(roman numeral)&lt;/em&gt; 으로 100.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;처음부터 의도한 숫자가 100이 아니었을거란건 나도 알거 같아.&#xA;BCPL이나 그런 역사에 대해 나도 조금은 아니까.&lt;/li&gt;&#xA;&lt;li&gt;그런데 그 이후에 따르는 언어들이 그런 패턴을 만든거 같아서 재미로&#xA;쓰는 글.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;strong&gt;C++&lt;/strong&gt;&lt;/strong&gt; : 위의 로마숫자이란 생각과 &lt;em&gt;C언어의 &lt;code&gt;x++&lt;/code&gt; 연산&lt;/em&gt; 으로 생각해보면,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;즉시 평가할 때에는 C == 100, 그냥 C와 같아 보임.&lt;/li&gt;&#xA;&lt;li&gt;그런데 저장된 값은 +1, == 101.&lt;/li&gt;&#xA;&lt;li&gt;…어쨌든 그냥 볼 때엔, 씨언어와 거의 같아 보이지만, 그래도 좀&#xA;더 성장했다고. 그리고 겸손하게 오직 +1.&lt;/li&gt;&#xA;&lt;li&gt;(그냥 겸손하다고 될 문제인가 싶다… C++ 좋아하지만 ㅎㅎ)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;strong&gt;D&lt;/strong&gt;&lt;/strong&gt; : C에서 다음 단계으로 발전했으니, 이번엔 다섯배, 역시 로마숫자, 500.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 04/02/2023 .01: 씨언어의 장자 zig, rust, golang, c&#43;&#43; ???</title>
-      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb04--01-ping/</link>
+      <link>http://localhost:1313/posts/2023-02feb/2023-02feb04--01-ping/</link>
       <pubDate>Sat, 04 Feb 2023 16:46:54 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb04--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb04--01-ping/</guid>
       <description>&lt;p&gt;&#xA;최근에 재미로 &lt;a href=&#34;https://ziglang.org/&#34;&gt;zig&lt;/a&gt; 을 정말 재밌게 &amp;#39;읽었다&amp;#39;. 공부해보고 실제로 뭔가&#xA;코딩을 많이 해보거나 한 것은 아니고, 대체 어떻게 동작하는 프로그램을&#xA;이걸로 만들라고 하는건지 이해하고 싶었기 때문에 해봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;zig으로 프로그램을 짜는게 궁금하던 부분은 haskell의 monad을 이용한&#xA;방식, 혹은 apl이나 prolog으로 실제프로그램을 어떻게 만들 수 있을지&#xA;패러다임부터 다른 언어를 공부하고 생각해보는 것과는 조금 다를수도&#xA;있겠다. 어쨌든 그냥 imperative언어이니까.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;오히려, zig을 어떻게 써먹어야 할지 궁금하던 지점은, c++의&#xA;스마트포인터와 move semantics등을 이해하는 것이나, rust의 borrowing&#xA;checker, rc/arc등을 이해하는 것과 마찬가지인 것 같다.&#xA;둘 다 이해하고 익숙해지면 그렇게 부담스럽지 않을거 같긴 하다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 03/02/2023 .01: 블로그 디자인 수정</title>
-      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/</link>
+      <link>http://localhost:1313/posts/2023-02feb/2023-02feb03--01-ping/</link>
       <pubDate>Fri, 03 Feb 2023 18:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb03--01-ping/</guid>
       <description>&lt;p&gt;블로그를 내려놓았다가, 다시 글을 쓰고 생각들을 어느 정도는 공개를 하고&#xA;지내고 싶어져서 다시 열었다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/athul/archie&#34;&gt;사용하던 테마&lt;/a&gt;를 수정해서 쓰기로&#xA;하고, CSS을 여기저기서 복붙해서 적용해보고, &lt;a href=&#34;https://galmuri.quiple.dev/&#34;&gt;갈무리&#xA;웹폰트&lt;/a&gt;도 적용해서, 오히려 원본 테마보다&#xA;더 가볍게 적당히 만들어봤다.&lt;/p&gt;&#xA;&lt;p&gt;색상도, 외양과 기능 디자인 모두 어느 정도 내 취향에 맞게 꾸며 봤다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 02/02/2023 .01: xemacs, gemini, gemtext</title>
-      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb02--01-ping/</link>
+      <link>http://localhost:1313/posts/2023-02feb/2023-02feb02--01-ping/</link>
       <pubDate>Thu, 02 Feb 2023 15:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb02--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb02--01-ping/</guid>
       <description>&lt;hr&gt;&#xA;&lt;p&gt;추억이 그리워지는 시대여서 그런거 같기도 하다.&#xA;그럼에도 어차피 그렇게 다시 사용하기엔 끔찍할텐데.&lt;/p&gt;&#xA;&lt;h1 id=&#34;1-제미니-계획&#34;&gt;1. &amp;ldquo;제미니 계획&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Gemini_(protocol)&#34;&gt;gemini protocol&lt;/a&gt; 을 기반으로 뭔가 새로운 것을 상상하면 즐겁지만,&lt;/p&gt;&#xA;&lt;p&gt;정말 제한적이어서, 내 마음대로의 확장을 떠올리게 된다.&lt;/p&gt;&#xA;&lt;p&gt;실은, gemtext와 gemini protocol은 마음에 드는 부분이 바로 그런점이지만: 오히려 제한적이고, 그냥 무시해도 되는 것들을 굳이 지원해줘야 할 것 같은 기분에 져서 우겨넣으면서 complexity만 무한대으로 보낼바엔, 이렇게 무시할 것은 잘 무시하는게 더 좋은거 같아.&lt;/p&gt;&#xA;&lt;p&gt;gemtext은 아예 어떤 마크업에 대한 고려도 실은 없고, inline links 같은 것도 지원하지 않는다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 13/11/2022 .01</title>
-      <link>https://ageldama.github.io/posts/2022-11nov/2022-11nov13--01-ping/</link>
+      <link>http://localhost:1313/posts/2022-11nov/2022-11nov13--01-ping/</link>
       <pubDate>Sun, 13 Nov 2022 08:05:25 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2022-11nov/2022-11nov13--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2022-11nov/2022-11nov13--01-ping/</guid>
       <description>&lt;p&gt;비가 많이 내렸다. 일년간 어떻게든 자라던 잎들이 낙엽이 되어 떨어졌다.&lt;/p&gt;&#xA;&lt;p&gt;그런데 딱히 걱정스러울게 없었다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</title>
-      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun29--02-ping/</link>
+      <link>http://localhost:1313/posts/2022-06jun/2022-06jun29--02-ping/</link>
       <pubDate>Wed, 29 Jun 2022 17:03:58 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun29--02-ping/</guid>
+      <guid>http://localhost:1313/posts/2022-06jun/2022-06jun29--02-ping/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://jasonformat.com/islands-architecture/&#34;&gt;https://jasonformat.com/islands-architecture/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&amp;hellip;이전에 몇번 언급한 &lt;a href=&#34;https://hotwired.dev/&#34;&gt;hotwired&lt;/a&gt; 처럼. ㅎㅎ&lt;/p&gt;&#xA;&lt;p&gt;지금의 reactjs, vuejs등은 다음과 같은 방식이 기본:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;server: rest/gql등으로 요청을 받아서, json으로 응답.&lt;/li&gt;&#xA;&lt;li&gt;browser(client): 응답으로 받은 json을 받아서, html을 생성하여 렌더링.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&amp;hellip;이게 편하다고 생각해서 여기로 온거 같아. 나말고도 대부분의 사람들이&#xA;웹화면을 개발하던 시절에는 이렇게 만들고 싶었었던거 같아. &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;그리고 당연히 ui개발이기 때문에 &amp;lsquo;컴포넌트모델&amp;rsquo;이나 값바인딩 같은 것들을 원했었고, 현재의 리액트와 같은 형태에 이르른 것 같아.&lt;/p&gt;&#xA;&lt;p&gt;물론, vdom이 복잡도를 많이 낮춰줬지만, 희안하게도 예상하지 못하던 문제를 몇가지 더 만들어낸 것 같아. 그래서 요즘엔 ssr이니 seo을 생각해서 다른 방식의 프레임웍들을 사용하려고 하고 있고, 더 나아가서 &lt;a href=&#34;https://www.patterns.dev/posts/progressive-hydration/&#34;&gt;progressive hydration&lt;/a&gt; 같은 쪽으로 더 세밀해지는 양상 같아.&lt;sup id=&#34;fnref1:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>linux/unix 팁 29/06/2022 .01</title>
-      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/</link>
+      <link>http://localhost:1313/posts/2022-06jun/2022-06jun29--01-ping/</link>
       <pubDate>Wed, 29 Jun 2022 15:08:22 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2022-06jun/2022-06jun29--01-ping/</guid>
       <description>&lt;hr&gt;&#xA;&lt;p&gt;리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.&lt;/p&gt;&#xA;&lt;p&gt;그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.&lt;/p&gt;&#xA;&lt;h1 id=&#34;zoxide-으로-chdir-간단하게&#34;&gt;zoxide 으로 chdir 간단하게&lt;/h1&gt;&#xA;&lt;p&gt;최근/디렉토리 이동한 히스토리에 따라서 (&amp;ldquo;frecent&amp;rdquo;) 이동하기:&lt;/p&gt;&#xA;&lt;p&gt;fzf+zsh의 &lt;code&gt;Control-R&lt;/code&gt;도 좋고&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;,&lt;/p&gt;&#xA;&lt;p&gt;oh-my-zsh 내장인 &lt;code&gt;plugins=(z)&lt;/code&gt;도 좋지만&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&amp;hellip;나는 가능하면 &lt;a href=&#34;https://github.com/ajeetdsouza/zoxide&#34;&gt;zoxide&lt;/a&gt;이 가장 가볍고 좋은거 같다.&lt;/p&gt;&#xA;&lt;p&gt;설치하고 나서,&#xA;&lt;code&gt;eval &amp;quot;$(zoxide init zsh)&amp;quot;&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;그리고, &lt;code&gt;z SOME-DIR&lt;/code&gt;, &lt;code&gt;zi&lt;/code&gt; 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ&lt;/p&gt;&#xA;&lt;h1 id=&#34;ssh으로-키보드마우스-안-붙이고&#34;&gt;ssh으로 키보드/마우스 안 붙이고&lt;/h1&gt;&#xA;&lt;p&gt;책상위에 여러대의 컴퓨터를 놓고 사용하는데, 용도에 따라서, 모두 마우스/키보드를 붙여 놓기 싫다.&#xA;뭐 kvm switch 같은거 사서 써도 되겠지만, 그보다는 어떤 컴퓨터는 모니터만 붙여 놓고 쓰고 등등 같이 사용해서&#xA;그런 방식은 잘 내 책상에서는 잘 맞지 않아서.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Grug Brained Developer</title>
-      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/</link>
+      <link>http://localhost:1313/posts/2022-06jun/2022-06jun24--01-grug/</link>
       <pubDate>Fri, 24 Jun 2022 04:16:26 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/</guid>
+      <guid>http://localhost:1313/posts/2022-06jun/2022-06jun24--01-grug/</guid>
       <description>&lt;p&gt;감동적인 글이다ㅋ:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://grugbrain.dev/&#34;&gt;https://grugbrain.dev/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;문법도 완전 grug스럽게 작성해서 반가운 글이었다.&lt;/p&gt;&#xA;&lt;p&gt;완전히 모두 내 생각과 같지는 않아도, 이야기하는 &lt;em&gt;&amp;ldquo;FOLD&amp;rdquo; 때문에&lt;/em&gt; 일어나는 일들과&#xA;조금은 그래도 &lt;em&gt;grug답게&lt;/em&gt; 그냥 해내려는 생각들이 유용.&lt;/p&gt;&#xA;&lt;p&gt;그치, grug이 공룡과 구분되는 점은 그런거겠지. ㅎㅎ&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;msa, reactjs, ejb, osgi. 공감하는 생각들.&lt;/p&gt;&#xA;&lt;p&gt;&amp;hellip; black think juice 맛있다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>&#34;Software disenchantment&#34;</title>
-      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/</link>
+      <link>http://localhost:1313/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/</link>
       <pubDate>Sun, 19 Jun 2022 15:26:29 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/</guid>
+      <guid>http://localhost:1313/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://tonsky.me/blog/disenchantment/&#34;&gt;https://tonsky.me/blog/disenchantment/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;재밌게 읽었다. 계속 생각해오던, 이전 포스팅에서도 이야기한 생각들.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;&amp;hellip;의 진보도 항상 그때그때의 1보만이 진보이며 2보도 3보도 n+1보도 결코&amp;hellip;&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;:winking_face:&lt;/p&gt;&#xA;&lt;p&gt;&amp;hellip;그치 ejb/xml을 쓰든, 뭔가 또 새로운 언어나 프레임웍으로 대단한것처럼, 진보한것처럼 쓰려고 해도,&#xA;현실적으로는 빌드도 오히려 &lt;a href=&#34;https://ant.apache.org/&#34;&gt;apache ant&lt;/a&gt; 쓸때보다 더 엉망일지도. 성능이든 iteration의 가벼움이든.&lt;/p&gt;&#xA;&lt;p&gt;정말 진보는 커녕 오히려 더 ㅎㅎ&amp;hellip; 오히려, apache ant으로라면 명확하게 확실하게 동작하도록 만들기나 잘 하겠지만.&lt;/p&gt;&#xA;&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;&#xA;&lt;hr&gt;&#xA;&lt;ol&gt;&#xA;&lt;li id=&#34;fn:1&#34;&gt;&#xA;&lt;p&gt;Walter Benjamin의 &amp;ldquo;Arcades Project&amp;quot;의 인용, &amp;ldquo;매달린 절벽에서 손을 뗄 수 있는가?&amp;rdquo; 강신주 저. &amp;hellip;책에서는 그런 문맥이 아니었었지만, 내 생각엔 이런 문맥에도 맞지 않나 싶어서.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 17/06/2022 .01</title>
-      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/</link>
+      <link>http://localhost:1313/posts/2022-06jun/2022-06jun17--01-ping/</link>
       <pubDate>Fri, 17 Jun 2022 02:50:41 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2022-06jun/2022-06jun17--01-ping/</guid>
       <description>&lt;h1 id=&#34;code-bloat-has-become-astronomical&#34;&gt;&amp;ldquo;Code bloat has become astronomical&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/&#34;&gt;https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;극공감. 그렇다고 의존성 포함하면 몇 기가나 되는 것들이, 하는 일을 보면 안습.&#xA;&amp;hellip;그렇다고 그런 방법들만을 고르는 안목이 엄청나게 힙한것도, 스스로에게 이익이 되는것도 아니고.&lt;/p&gt;&#xA;&lt;p&gt;데스크탑에 작은 서브모니터 연결해놓은 rpi3b+이 rpi4보다 빠르지는 않을지 몰라도, micro-sd 버벅거림이랑&#xA;발열 때문에 버벅거리는건 훨씬 적다.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;rpi4은 빠르니까!&amp;ldquo;이라면서 나름대로 데탑/랩탑에서 쓰는 설정 그대로, openbox+lxpanel 정도 올려서 쓰고 있고,&#xA;rpi3b+은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있을까 싶기도 하지만. &amp;hellip;어차피 둘 다 엄청 가벼울거 같은데도.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 15/06/2022 .01</title>
-      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun15--01-ping/</link>
+      <link>http://localhost:1313/posts/2022-06jun/2022-06jun15--01-ping/</link>
       <pubDate>Wed, 15 Jun 2022 11:22:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun15--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2022-06jun/2022-06jun15--01-ping/</guid>
       <description>&lt;p&gt;비 내리는 화요일. &amp;#x2614;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;jinja2-template-include--cache--file-time&#34;&gt;jinja2 template include + cache? + file-time&lt;/h1&gt;&#xA;&lt;p&gt;재밌는걸 찾았다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://jinja.palletsprojects.com/en/3.1.x/&#34;&gt;jinja2&lt;/a&gt;을 사용하면서, 하위 include으로 내려갈수록,&#xA;file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야&#xA;template cache을 무시하는거 같아.&lt;/p&gt;&#xA;&lt;p&gt;그래서,&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-1&#34;&gt; 1&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-2&#34;&gt; 2&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-3&#34;&gt; 3&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-4&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-4&#34;&gt; 4&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-5&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-5&#34;&gt; 5&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-6&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-6&#34;&gt; 6&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-7&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-7&#34;&gt; 7&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-8&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-8&#34;&gt; 8&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-9&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-9&#34;&gt; 9&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-10&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-10&#34;&gt;10&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-11&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-11&#34;&gt;11&lt;/a&gt;&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// gulpfile.js:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;buildTask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;series&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cleanTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;esbuildTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;injectTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;touchInjectedTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;watchTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;watch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;./js/**/*.js&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;buildTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;exports&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;watch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;watchTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;exports&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;build&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;buildTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;exports&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;clean&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;cleanTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;&amp;hellip;대략 잘 동작하고, &lt;a href=&#34;https://esbuild.github.io/&#34;&gt;webpack보다 엄청나게 빠르다&lt;/a&gt; ㅎㅎ.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;postgresql-as-an-api-server&#34;&gt;postgresql, as an api server?&lt;/h1&gt;&#xA;&lt;p&gt;요런것들 올라오는거 보는 재미:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 13/06/2022 .01</title>
-      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun13--01-ping/</link>
+      <link>http://localhost:1313/posts/2022-06jun/2022-06jun13--01-ping/</link>
       <pubDate>Mon, 13 Jun 2022 05:10:14 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun13--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2022-06jun/2022-06jun13--01-ping/</guid>
       <description>&lt;p&gt;기운 없는 날&amp;hellip; 쉬어야겠다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 11/06/2022</title>
-      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun11-ping/</link>
+      <link>http://localhost:1313/posts/2022-06jun/2022-06jun11-ping/</link>
       <pubDate>Sat, 11 Jun 2022 03:10:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun11-ping/</guid>
+      <guid>http://localhost:1313/posts/2022-06jun/2022-06jun11-ping/</guid>
       <description>&lt;hr&gt;&#xA;&lt;h1 id=&#34;jekyll--hugo&#34;&gt;Jekyll &amp;ndash;&amp;gt; Hugo&lt;/h1&gt;&#xA;&lt;p&gt;&amp;hellip;Jekyll에서, 결국 다시 가볍고 그냥 잘 동작하는 Hugo으로 블로그 변경.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;생각&#34;&gt;생각&lt;/h1&gt;&#xA;&lt;p&gt;남들이 뭐래도 별 관심 없이.&#xA;실은 그냥 포장지와 리본장식만 변해가는거고,&lt;/p&gt;&#xA;&lt;p&gt;반면.&#xA;그 포장지, 리본장식과 그 의미와 가치를 제대로 분간해내지 못하니까.&lt;/p&gt;&#xA;&lt;p&gt;도구를 도구로 보면 안되고, 도구가 나를 쓴다는것을 이해해야 하는데.&#xA;그래서 도구를 이용해 자유로워질거라 착각하면, 도구에 얽메여 끌려만 가면&amp;hellip;,&#xA;그런데 도구에 이용당해 복종할수록 자유로워진다면 &amp;hellip;이겠지.&lt;/p&gt;&#xA;&lt;p&gt;끌려가며, 내가 생각치 않은곳에 끌려와 진짜 성장을 얻기도 하는 이도 있고,&#xA;끌려가며 원치 않는 방향으로 가며 그게 성장이라고 허울로 하기도 하는 이도 있고.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 19/Jun/2021</title>
-      <link>https://ageldama.github.io/posts/2021-06jun/ping-19sat/</link>
+      <link>http://localhost:1313/posts/2021-06jun/ping-19sat/</link>
       <pubDate>Sat, 19 Jun 2021 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2021-06jun/ping-19sat/</guid>
+      <guid>http://localhost:1313/posts/2021-06jun/ping-19sat/</guid>
       <description>&lt;p&gt;&#xA;그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,&#xA;github repositories도 대부분은 private으로 변경해놓고 지냈었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;하지만 그래도 coding과 글쓰기는 계속 하고 있었었고, 글을 조금씩이라도 공개할까 싶어 다시 문을 연다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것,&#xA;또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.&#xA;이제는 너무 이맥스 + evil 설정 등에 익숙해져서 vim을 오히려 더 설정해서 쓰고 싶은 생각도 들지 않는다.&#xA;..하지만 다른 이들에게 이맥스를 쓰라고 권하기는 머뭇거려진다. 어릴 때부터 이맥스를 사용했고 그렇게 습관으로 하나씩 하나씩 이맥스 컨벤션과 모드들에 익숙해져서 시간이 오래 걸렸었던 것 같으니까.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 29/Nov/2020</title>
-      <link>https://ageldama.github.io/posts/2020-11nov/ping-29sun/</link>
+      <link>http://localhost:1313/posts/2020-11nov/ping-29sun/</link>
       <pubDate>Sun, 29 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-11nov/ping-29sun/</guid>
+      <guid>http://localhost:1313/posts/2020-11nov/ping-29sun/</guid>
       <description>&lt;p&gt;&#xA;2020년이 지나간다. 금새 또 봄이 올텐데 기대된다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 23/Nov/2020</title>
-      <link>https://ageldama.github.io/posts/2020-11nov/ping-23tue/</link>
+      <link>http://localhost:1313/posts/2020-11nov/ping-23tue/</link>
       <pubDate>Mon, 23 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-11nov/ping-23tue/</guid>
+      <guid>http://localhost:1313/posts/2020-11nov/ping-23tue/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;logitech k480 bluetooth keyboard&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.logitech.com/ko-kr/product/multi-device-keyboard-k480&#34;&gt;https://www.logitech.com/ko-kr/product/multi-device-keyboard-k480&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  받아서 묵혀두던 키보드. 팬터그래프 방식을 쓰던 것과는 또 다르지만&#xA;  그럭저럭 마음에 든다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  가장 마음에 드는 부분은, 키들끼리의 간격이 적당하고, 키보드&#xA;  레이아웃에서 마우스 이동이 없도록 키패드 부분이 없는 방식인 점,&#xA;  그리고 장난감스러운 키보드지만 그렇다고 오타가 넘치도록 너무 대충&#xA;  만들어진 것은 아닌 것 같아서 그럭저럭 짜증을 유발하지 않으면서&#xA;  적당히 쓸 수 있는 것 같아서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  책상에 공간을 너무 잡아먹지도 않아서 그럭저럭 괜찮다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  다만 블루투스 방식이어서, 건전지를 써서 내게는 조금은 감점.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 13/Nov/2020</title>
-      <link>https://ageldama.github.io/posts/2020-11nov/ping-13fri/</link>
+      <link>http://localhost:1313/posts/2020-11nov/ping-13fri/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-11nov/ping-13fri/</guid>
+      <guid>http://localhost:1313/posts/2020-11nov/ping-13fri/</guid>
       <description>&lt;p&gt;&#xA;금새 겨울이 오고 있구나. &lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 10/Nov/2020</title>
-      <link>https://ageldama.github.io/posts/2020-11nov/ping-10tue/</link>
+      <link>http://localhost:1313/posts/2020-11nov/ping-10tue/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-11nov/ping-10tue/</guid>
+      <guid>http://localhost:1313/posts/2020-11nov/ping-10tue/</guid>
       <description>&lt;p&gt;&#xA;올해 초에는 Vue.js을 많이 쓸일이 있었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;아주 오래 전에, Adobe Flex에서 MXML, ActionScript3 같은 것을 써서 화면&#xA;컴포넌트를 만들던 이후로 거의 10여년 만에 화면에 필요한 컴포넌트를&#xA;만들고 개발을 해봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그 중간 중간 jQuery을 이용해서 웹화면을 만들거나 하는 경험도 있기는&#xA;했었는데, 재밌게도 그 이전에 사용하던 MXML, AS3의 컴포넌트 중심&#xA;개발방식이 훨씬 앞선 것이었다는 생각을 했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;실제로 2008년 정도에도, 현재의 ES6 같은 느낌의 AS3으로, Class based&#xA;OO을 하고 코딩을 하고, 화면 컴포넌트들을 JSX와 유사한 모양의 MXML으로&#xA;조직하고, 또 바인딩을 이용해서 지금의 Vue, React에서 State을 이용하여&#xA;데이터를 이용하여 컴포넌트를 어떻게 그릴지 결정해서 개발을 했었었다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 05/Nov/2020</title>
-      <link>https://ageldama.github.io/posts/2020-11nov/ping-05thu/</link>
+      <link>http://localhost:1313/posts/2020-11nov/ping-05thu/</link>
       <pubDate>Thu, 05 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-11nov/ping-05thu/</guid>
+      <guid>http://localhost:1313/posts/2020-11nov/ping-05thu/</guid>
       <description>&lt;p&gt;&#xA;책을 몇 권 주문했다. 관심이 생긴 새로운 분야에 대한 책들이었는데&#xA;흥미롭게도 그 중 두 권이 서로 완전히 다른 분야인데 역저자가&#xA;같았다. 아마도 역자 소개에 나온 자신의 업무, 맡은 영역에서 필요하거나&#xA;관심이 깊어서 번역한 것 같다. 재밌었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 갖고 있는 한국어로는 아직 나오지 않은 책을 세 권 정도 읽고&#xA;싶어서 다시 펼쳤다. 예전에도 조금 읽었었던 책들인데 마음에 들었던&#xA;구절들, 생각들이 다시 읽혀져 즐거웠다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 02/Nov/2020</title>
-      <link>https://ageldama.github.io/posts/2020-11nov/ping-02mon/</link>
+      <link>http://localhost:1313/posts/2020-11nov/ping-02mon/</link>
       <pubDate>Mon, 02 Nov 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-11nov/ping-02mon/</guid>
+      <guid>http://localhost:1313/posts/2020-11nov/ping-02mon/</guid>
       <description>&lt;p&gt;&#xA;(functional) reactive 관련들을 다시 찾아 보고 있다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;예전에 webdev은 아니고 백엔드를 위해서 &lt;a href=&#34;https://github.com/ReactiveX/rxjs&#34;&gt;rxjs&lt;/a&gt; 을 쓸 일이 있었었고&#xA;꽤 재밌었다. node.js에서 async/await 이전에 동시성 처리를 하기에&#xA;유용하게 쓸 수 있었었고, 실은 그냥 &lt;a href=&#34;https://stackoverflow.com/questions/51542865/is-rxjs-observable-a-monad&#34;&gt;monad이어서&lt;/a&gt; 조금만 이해를 하고&#xA;사용하면 여러모로 편리했었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;https://github.com/stoeffel/awesome-frp-js 여기에 보면 rxjs이외에도&#xA;다른 js을 위한 FRP라이브러리들이 많이 생겼었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그 중에 흥미가 있어서 &lt;a href=&#34;https://github.com/baconjs/bacon.js&#34;&gt;bacon.js&lt;/a&gt; 을 읽고 rxjs에서 만들어 본 작은 예제&#xA;프로젝트를 다시 작성해봤다. 깔끔했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;rxjs으로 작성했었던 작은 예제는 다음과 같다.&lt;/p&gt;&#xA;&lt;div class=&#34;src src-javascript&#34;&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#1&#34;&gt; 1&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#2&#34;&gt; 2&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#3&#34;&gt; 3&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;4&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#4&#34;&gt; 4&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;5&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#5&#34;&gt; 5&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;6&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#6&#34;&gt; 6&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;7&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#7&#34;&gt; 7&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;8&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#8&#34;&gt; 8&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;9&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#9&#34;&gt; 9&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;10&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#10&#34;&gt;10&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;11&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#11&#34;&gt;11&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;12&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#12&#34;&gt;12&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;13&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#13&#34;&gt;13&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;14&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#14&#34;&gt;14&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;15&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#15&#34;&gt;15&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;16&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#16&#34;&gt;16&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;17&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#17&#34;&gt;17&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;18&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#18&#34;&gt;18&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;19&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#19&#34;&gt;19&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;20&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#20&#34;&gt;20&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;21&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#21&#34;&gt;21&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;22&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#22&#34;&gt;22&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;23&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#23&#34;&gt;23&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;24&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#24&#34;&gt;24&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;25&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#25&#34;&gt;25&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;26&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#26&#34;&gt;26&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;27&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#27&#34;&gt;27&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;28&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#28&#34;&gt;28&lt;/a&gt;&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;fromEvent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Subject&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;rxjs&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// eslint-disable-next-line object-curly-newline&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;debounceTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;mapTo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;scan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;map&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;rxjs/operators&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;jquery&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;jquery&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;counter$&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Subject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;counter$&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;pipe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nx&#34;&gt;scan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;acc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;acc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nx&#34;&gt;debounceTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;subscribe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;jquery&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;#count&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;counter2$&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Subject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;counter2$&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;pipe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;scan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;acc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;acc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;subscribe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;jquery&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;#count2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;increase$&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;fromEvent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;jquery&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;#increase&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;click&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;pipe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;mapTo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;decrease$&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;fromEvent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;jquery&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;#decrease&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;click&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;pipe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;mapTo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;increase$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;subscribe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;counter$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;increase$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;pipe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;subscribe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;counter2$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;decrease$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;subscribe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;counter$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;decrease$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;pipe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;subscribe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;counter2$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;&#xA;(&lt;code&gt;package.json&lt;/code&gt;, &lt;code&gt;webpack.config.js&lt;/code&gt;, 관련 html 파일 등은 생략했다.)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 19/Oct/2020</title>
-      <link>https://ageldama.github.io/posts/2020-10oct/ping-19mon/</link>
+      <link>http://localhost:1313/posts/2020-10oct/ping-19mon/</link>
       <pubDate>Mon, 19 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-10oct/ping-19mon/</guid>
+      <guid>http://localhost:1313/posts/2020-10oct/ping-19mon/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;가을&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;도르트문트 집은 꽤 평화로웠다. 날씨가 좋은 날도 많고 공기도&#xA;  맑았다. 한가한 주말이 되면 창문을 열고 잔디가 깔린 정원을 보며&#xA;  담배를 태우고 커피를 내려 마셨다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 지하세탁장에 빨래를 돌려놓고 핑크플로이드의 다크사이드 오브&#xA;  더 문 앨범을 좋은 스피커로 틀어놓았다. 잘 어울렸다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  서울의 변두리에서 맞는 이번 가을은 그런 기분이다. 조용하고 가을&#xA;  햇살과 공기가 맑아졌다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 핑크플로이드를 그렇게 여유롭게 들을 수 있었다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;오늘 읽으려는 글&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.mcs.vuw.ac.nz/comp/Publications/CS-TR-02-9.abs.html&#34;&gt;http://www.mcs.vuw.ac.nz/comp/Publications/CS-TR-02-9.abs.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Ping (2nd) 17/Oct/2020</title>
-      <link>https://ageldama.github.io/posts/2020-10oct/ping-17sat-2nd/</link>
+      <link>http://localhost:1313/posts/2020-10oct/ping-17sat-2nd/</link>
       <pubDate>Sat, 17 Oct 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-10oct/ping-17sat-2nd/</guid>
+      <guid>http://localhost:1313/posts/2020-10oct/ping-17sat-2nd/</guid>
       <description>&lt;p&gt;&#xA;  올해 초 &lt;a href=&#34;https://github.com/ageldama/cl-state-machine&#34;&gt;cl-state-machine 라이브러리&lt;/a&gt;를 만들어 공개한 이후로&#xA;  커먼리습을 쓰지는 않았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  다른 직업상 쓰는 언어들만을 쓰고 오픈소스와 개인적으로 만들고 싶은&#xA;  프로젝트를 위해서 쓰는 언어인 커먼리습은 미뤄두었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  다시 커먼리습을 해야겠다고 생각이 들었다. 개인적으로 만들고 싶은&#xA;  프로젝트도 있고, 그 프로젝트를 위해서 프론트엔드를 만드는데 React와&#xA;  Vue을 써보고 이해하고 있어도 쓰고 싶지는 않기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  사실 커먼리습은 그렇게 문법이 예쁘지도, 멋진 React와 같은 멋진&#xA;  프레임웍이나 최신의 유행하는 라이브러리들을 모두 갖고 있지도 않다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;a href=&#34;https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec&#34;&gt;HyperSpec&lt;/a&gt;을 읽다 보면 아주 쉽게 정의되어 있는 키워드들이 일관성이&#xA;  있지도, 지금 시대의 관점에서 보기에 익숙한 현대적인 용어들을&#xA;  사용해서 이름을 지어놓지도 않았다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 17/Oct/2020</title>
-      <link>https://ageldama.github.io/posts/2020-10oct/ping-16fri/</link>
+      <link>http://localhost:1313/posts/2020-10oct/ping-16fri/</link>
       <pubDate>Sat, 17 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-10oct/ping-16fri/</guid>
+      <guid>http://localhost:1313/posts/2020-10oct/ping-16fri/</guid>
       <description>&lt;p&gt;&#xA;웹프론트엔드 개발을 조금씩 해보고 있다. 처음에는 예전 방식으로만&#xA;하려고 하다가 조금씩 겨우 써보던 webpack을 다시 가이드를 차근차근&#xA;공부하고 동작하는 방식을 이해하도록 뜯어보고 돌려봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;생각보다 단순하게, 그리고 확장성 있게 쓸만한 빌드도구였다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다만 문제는 설정이 복잡하고 이해하기 힘든 점보다는 빌드 시간이 너무&#xA;느린 점이었다. (내게는)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 parcel bundler을 시도 했는데, 설정도 거의 필요 없이 바로&#xA;동작하고 하는 점은 좋고, 성능도 정말 빨랐다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다만 Vim/Emacs으로 파일을 편집하고 저장할 때, &lt;code&gt;parcel watch&lt;/code&gt; 대상인&#xA;파일들을 종종 아예 dev-server을 재시작해야만 제대로 동작하는 상태로&#xA;빠지는게 조금 짜증났다. 기본으로 webpack보다는 이런 자잘한 부분이 좀&#xA;덜 다듬어진걸까 싶다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 16/Oct/2020</title>
-      <link>https://ageldama.github.io/posts/2020-10oct/ping-17sat/</link>
+      <link>http://localhost:1313/posts/2020-10oct/ping-17sat/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-10oct/ping-17sat/</guid>
+      <guid>http://localhost:1313/posts/2020-10oct/ping-17sat/</guid>
       <description>&lt;p&gt;&#xA;ADT&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;만큼 만들어 쓰는 것은 아니지만, 그냥 Kotlin, Python의&#xA;dataclass 정도는 쓰고 싶어서 CommonLisp 매크로를 만들어봤다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://common-lisp.net/project/cdr/document/8/cleqcmp.html&#34;&gt;equals&lt;/a&gt; 라이브러리를 써서 동치 비교와 CLOS의 &lt;code&gt;print-object&lt;/code&gt; generic&#xA;function을 구현해서 to-string 정도만 되도록 만들어 봤다.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;macro body&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;div class=&#34;src src-lisp&#34;&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#1&#34;&gt; 1&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#2&#34;&gt; 2&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#3&#34;&gt; 3&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;4&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#4&#34;&gt; 4&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;5&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#5&#34;&gt; 5&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;6&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#6&#34;&gt; 6&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;7&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#7&#34;&gt; 7&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;8&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#8&#34;&gt; 8&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;9&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#9&#34;&gt; 9&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;10&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#10&#34;&gt;10&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;11&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#11&#34;&gt;11&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;12&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#12&#34;&gt;12&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;13&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#13&#34;&gt;13&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;14&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#14&#34;&gt;14&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;15&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#15&#34;&gt;15&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;16&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#16&#34;&gt;16&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;17&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#17&#34;&gt;17&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;18&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#18&#34;&gt;18&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;19&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#19&#34;&gt;19&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;20&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#20&#34;&gt;20&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;21&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#21&#34;&gt;21&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;22&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#22&#34;&gt;22&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;23&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#23&#34;&gt;23&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;24&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#24&#34;&gt;24&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;25&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#25&#34;&gt;25&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;26&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#26&#34;&gt;26&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;27&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#27&#34;&gt;27&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;28&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#28&#34;&gt;28&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;29&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#29&#34;&gt;29&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;30&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#30&#34;&gt;30&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;31&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#31&#34;&gt;31&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;32&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#32&#34;&gt;32&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;33&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#33&#34;&gt;33&lt;/a&gt;&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lisp&#34; data-lang=&#34;lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defmacro&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;define-data-class&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;class-name&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;parent-classes&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;slot-names&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;k&#34;&gt;&amp;amp;key&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;no-print-slot-names&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;no-equals-slot-names&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;flet&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;accessor-symbol&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;slot-name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;alexandria:format-symbol&lt;/span&gt; &lt;span class=&#34;vg&#34;&gt;*package*&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                     &lt;span class=&#34;s&#34;&gt;&amp;#34;~a-~a&amp;#34;&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;class-name&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;slot-name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;  &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;progn&lt;/span&gt;          &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;c1&#34;&gt;;; defclass&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;slot-defs&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;loop&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;slot-name&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;slot-names&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                 &lt;span class=&#34;nv&#34;&gt;collecting&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;slot-name&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                              &lt;span class=&#34;ss&#34;&gt;:initarg&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;alexandria:make-keyword&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;slot-name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                              &lt;span class=&#34;ss&#34;&gt;:accessor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;accessor-symbol&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;slot-name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defclass&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;class-name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;parent-classes&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;slot-defs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;c1&#34;&gt;;; defmethod print-object&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;let*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;print-slot-names&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;set-difference&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;slot-names&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                                   &lt;span class=&#34;nv&#34;&gt;no-print-slot-names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;fmt-ctrl&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;~{~a=~~a~^, ~}&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;print-slot-names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defmethod&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;print-object&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;obj&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;class-name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;stream&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;print-unreadable-object&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;obj&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;stream&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:type&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;with-slots&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;print-slot-names&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;obj&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;stream&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;fmt-ctrl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,@&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;print-slot-names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;c1&#34;&gt;;; defmethod equals:equals&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;let*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;equals-slot-names&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;set-difference&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;slot-names&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                                    &lt;span class=&#34;nv&#34;&gt;no-equals-slot-names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;equals-exprs&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;loop&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;equals-slot-name&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;equals-slot-names&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                     &lt;span class=&#34;nv&#34;&gt;collecting&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;equals:equals&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;slot-value&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;lhs&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;quote&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;equals-slot-name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                                                &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;slot-value&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;rhs&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;quote&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;equals-slot-name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))))))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defmethod&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;equals:equals&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;lhs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;class-name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;rhs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;class-name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;&amp;amp;rest&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;declare&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ignore&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,@&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;equals-exprs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;synopsis / usage&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;div class=&#34;src src-lisp&#34;&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#1&#34;&gt;1&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#2&#34;&gt;2&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#3&#34;&gt;3&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;4&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#4&#34;&gt;4&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;5&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#5&#34;&gt;5&lt;/a&gt;&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;6&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#6&#34;&gt;6&lt;/a&gt;&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lisp&#34; data-lang=&#34;lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;define-data-class&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;animal&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;define-data-class&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;bird&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;animal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;equals:equals&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;make-instance&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;animal&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:name&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;foo&amp;#34;&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:age&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;make-instance&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;animal&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:name&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;foo&amp;#34;&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:age&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;&#xA;  오랬만에 재밌었다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping (2nd) 15/Oct/2020</title>
-      <link>https://ageldama.github.io/posts/2020-10oct/ping-15thu-2nd/</link>
+      <link>http://localhost:1313/posts/2020-10oct/ping-15thu-2nd/</link>
       <pubDate>Thu, 15 Oct 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-10oct/ping-15thu-2nd/</guid>
+      <guid>http://localhost:1313/posts/2020-10oct/ping-15thu-2nd/</guid>
       <description>&lt;p&gt;&#xA;… &amp;#39;田大&amp;#39;이라고 적혀 있었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다른 한문으로 쓰여 있어 읽지 못하는 각각의 수 많은 바램들과 이름들&#xA;사이로 삐뚤빼뚤한 어색한 글씨로 그렇게 적혀 있었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;너무 단순한 이름, 그리고 설명이 붙어 있었듯이, 다른 사람들처럼 많은&#xA;이야기를 적고 싶었지만, 아이여서 그랬는지, 아니면 글을 몰라 그랬는지,&#xA;이름만이라도 적어놓은 그 못그린 그림 같은 두 글자를 읽었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;누군가 아주 오래 전에 그 사람도 아마도 나와 별로 다를 것도 없는&#xA;고민들을 하며 매일을 살았었던 것을 느꼈다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;아주 오랜 세월이 흐른 후에야 그렇게 만났었던 모르는 어떤 사람이&#xA;떠올랐다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 11/Oct/2020</title>
-      <link>https://ageldama.github.io/posts/2020-10oct/ping-11sun/</link>
+      <link>http://localhost:1313/posts/2020-10oct/ping-11sun/</link>
       <pubDate>Sun, 11 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-10oct/ping-11sun/</guid>
+      <guid>http://localhost:1313/posts/2020-10oct/ping-11sun/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;어째서 더 잘 그럴 수 있을까&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;무엇인가를 만드는 일은 사실 두 가지 단계로 발전하는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  단지 목적한 그것만을 만드는 일과, 또는 그것을 반복적으로 생산하고 또&#xA;  더 나은 방법으로 추상화하여 내는 도구를 만들어내는 일으로 구분할 수&#xA;  있는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  직관적으로 생각했을 때에는, 목적이 명확하다면 당연히 그것 자체를&#xA;  만드는 일을 이미 존재하는 도구들을 통해서 표현하고 만들면 그만인 것&#xA;  같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 더 나아가서 결과물을 그냥 직접 만드는 것이 아니라, 그 결과물을&#xA;  만들기 위한 도구까지 같이 만들거나, 그 결과물이 그를 만들기 위해&#xA;  고안된 도구를 통해서 만드는 경우가 비교할 수 없이 생산적이고 그 결과물&#xA;  또한 훨씬 매끄럽고 완성도가 높은 경우가 오히려 보통인 것 같다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 10/Oct/2020</title>
-      <link>https://ageldama.github.io/posts/2020-10oct/ping-10sat/</link>
+      <link>http://localhost:1313/posts/2020-10oct/ping-10sat/</link>
       <pubDate>Sat, 10 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-10oct/ping-10sat/</guid>
+      <guid>http://localhost:1313/posts/2020-10oct/ping-10sat/</guid>
       <description>&lt;p&gt;&#xA;오래 써오던 맥북에어의 WIFI이 성능이 계속 안 좋아졌었던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;모델명을 알아보니, 2012년 형이었다. 정말 오래 썼구나. &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;어차피 MacOS을 여러 가지 이유로 좋아하지 않아서 그냥&#xA;아치리눅스&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;를 설치하고 그대로 쓰고 있다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;최근에는 아예 WIFI을 USB-LAN으로 연결해주는 RPi을 만들어 쓰고&#xA;있었다. 물론 내장WIFI은 너무 느려서 &lt;code&gt;nmcli r wifi off&lt;/code&gt; 을 기본으로&#xA;아예 S/W Disable시켜놓고 살았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;어쩌다 계기가 있어서, USB-LAN연결용 RPi을 챙기지 못한 외부에서 어쩔 수&#xA;없이 쓰려고 시도해보니, 아예 조금 내장WIFI을 쓰면 조금 동작하다가&#xA;시스템이 뻗어버린다. …아예 맛이 갔나보다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 08/Oct/2020</title>
-      <link>https://ageldama.github.io/posts/2020-10oct/ping-08thu/</link>
+      <link>http://localhost:1313/posts/2020-10oct/ping-08thu/</link>
       <pubDate>Thu, 08 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-10oct/ping-08thu/</guid>
+      <guid>http://localhost:1313/posts/2020-10oct/ping-08thu/</guid>
       <description>&lt;p&gt;&#xA;벌써 겨울 날씨에 매일 다가가는 것 같다. 시간이 흘러가는 것을 며칠&#xA;눈치 채지 못하다가 다시 눈치 챌 수 있게 되었다. 다행이다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping (2nd) 04/Oct/2020</title>
-      <link>https://ageldama.github.io/posts/2020-10oct/ping-04sun-2nd/</link>
+      <link>http://localhost:1313/posts/2020-10oct/ping-04sun-2nd/</link>
       <pubDate>Sun, 04 Oct 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-10oct/ping-04sun-2nd/</guid>
+      <guid>http://localhost:1313/posts/2020-10oct/ping-04sun-2nd/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;막귀의 이어폰 선호&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;정말 이어폰을 여러 개를 아작을 내면서 살아온 것 같다. 헤드폰은&#xA;  겨울에만 편안한거 같고.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  일을 하며 소음에서 분리되고 싶을 때, 집중하면서 또 집중 상태에 들기&#xA;  위해서 시간을 버리며 고생하고 싶지 않을 때도 많이 쓴다. 덕분에&#xA;  청력은 조금 나빠지는 거 같다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  과거에는 정말 싸구려 이어폰, KTX에서 나눠주는 일회용 이어폰을 꽤&#xA;  오래 쓴적도 있다. 특유의 딱딱하고 AM라디오스럽게 소리를 만들어&#xA;  버려서 이상한 소리가 나지만 막 쓰기 좋아서였다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 그 이후로는 나도 모르게 어쩌다가 DAC칩이 좋은 것이 붙어&#xA;  있다는 스마트폰과 거기에 번들로 줬었던 쿼드비트 이어폰을 재밌게&#xA;  썼었다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 04/Oct/2020</title>
-      <link>https://ageldama.github.io/posts/2020-10oct/ping-04sun/</link>
+      <link>http://localhost:1313/posts/2020-10oct/ping-04sun/</link>
       <pubDate>Sun, 04 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-10oct/ping-04sun/</guid>
+      <guid>http://localhost:1313/posts/2020-10oct/ping-04sun/</guid>
       <description>&lt;p&gt;&#xA;연휴 이전에는 이런 저런 사람들을 만나고 이야기를 나눌 기회가 많았다.&#xA;그러면서 대부분 흔하게 느끼고 생각한 것은 사람들은 자신의 머릿 속에&#xA;이미 만남 이전부터 만들어놓은 상상에 있는 누군가를 만나고, 실제로는&#xA;나를 만나서 이야기를 나눈 사람들은 극히 드물었던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;물론 그 이전에도 마찬가지였다. 어떤 사람들은 같이 생활하고 일하거나&#xA;하며 지내는 경우에도 그렇게 살아가며, 자기 자신의 이미지에 대해서도&#xA;너무 현실과 괴리가 커서 문제를 일으키는 사람들도 보았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;누구나 직접 누군가나 어떤 상황을 마주하는 것이 아니라 이미지와 각자가&#xA;이해하고 수용할 수 있는 정도로 살아가겠지만 그 정도가 너무 심한 경우를&#xA;본다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 26/Sep/2020</title>
-      <link>https://ageldama.github.io/posts/2020-09sep/ping-26sat/</link>
+      <link>http://localhost:1313/posts/2020-09sep/ping-26sat/</link>
       <pubDate>Sat, 26 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-09sep/ping-26sat/</guid>
+      <guid>http://localhost:1313/posts/2020-09sep/ping-26sat/</guid>
       <description>&lt;p&gt;&#xA;영화, 소설, ..심지어 프로그래밍언어나 사람, idea을 접할 때 어떤 것들은&#xA;그 자체로 화려해보이고 천재적이라는 것을 느낄 수 있을지도 모른다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;프로그래밍언어이나 기술, idea에 대해서는 오히려 그렇게 직관적으로&#xA;결론을 내리기 어려울 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;영화와 같은 표현은 그런 것을 만날 수 있을거라고 쉽게 오해하는 것&#xA;같다. 단지 바라보는 것만으로 명작임을 느낄 수 있을거라고&#xA;말이다. 그리고 그렇기 때문에 자신의 입맛을 만족시키는 그것이, 또는&#xA;그것만이 명작일 것이라고 오해하기 쉽다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데 그렇지 않은 경우를 많이 본다. 영화만을 한정지어서도 그것을&#xA;이해하기 위해서 더 많은 주변을 둘러보고 그 자체를 깊게 살펴보고&#xA;생각해야 하는 경우. 그렇게 바라본 다음에야 그 영화가 영화라는 매체로서&#xA;표현될 수 밖에 없는 이야기와 방식을 너무 적절하게 사용했음을&#xA;알아챈다. 그리고 그런 것을 나는 명작이라고 생각한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 23/Sep/2020</title>
-      <link>https://ageldama.github.io/posts/2020-09sep/ping-23wed/</link>
+      <link>http://localhost:1313/posts/2020-09sep/ping-23wed/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-09sep/ping-23wed/</guid>
+      <guid>http://localhost:1313/posts/2020-09sep/ping-23wed/</guid>
       <description>&lt;p&gt;&#xA;이제서야 유한하다는 것을 더욱 깊이 생각해본다. 그리고 얼마나 달콤한&#xA;행복을 살아가는지 깨닫는다. 매일 매일이 별 것 없지만 그대로 너무나&#xA;내게는 행복하다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;언젠가 내 마지막을 맞이하면 모든 것들이, 나만이 마음 속에 간직한 이&#xA;많은 감정과 기쁨들 모두 그대로 담아둔 채 떠나야겠지만 그게 모두의&#xA;다들 똑같을 것만 같다. 그렇게 억울하지는 않아졌다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 17/Sep/2020</title>
-      <link>https://ageldama.github.io/posts/2020-09sep/ping-17thu/</link>
+      <link>http://localhost:1313/posts/2020-09sep/ping-17thu/</link>
       <pubDate>Thu, 17 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-09sep/ping-17thu/</guid>
+      <guid>http://localhost:1313/posts/2020-09sep/ping-17thu/</guid>
       <description>&lt;p&gt;&#xA;영화 &amp;#39;바그다드 카페&amp;#39;를 어릴 때에는 &amp;#39;주말의 명화&amp;#39; 정도에서 다&#xA;번역/더빙된, 그리고 아마 편집에 엄청나게 많이 짤려나갔을 버젼으로&#xA;봤었던거 같은데 아무것도 기억에 남아있지 않았었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;심지어 이번에 다시 디렉터스컷으로 구해서 보면서 내가 기억에 남아 있던&#xA;것들은 완전 다른 영화인 것 같았다. 그렇게 기억만큼 어둡지도 않았고&#xA;오히려 너무 밝아서 오글거렸다. 아마도 좋은 오글거림이지만.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;기억에는 그렇게 남은 이미지는 브라운관 화면과 더빙 품질 등도 한 몫&#xA;했을 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;실은 영어를 어떻게 쓰는지, 처음 단어별로 끊어서 이야기 하는 시점(時&#xA;─)과 그 이후에 사람 이름을 어떻게 발음 하는 것(야스민/재스민 등)&#xA;억양과 발음, 단어 등등 듣고 있으면서 시간이 흘러감에 따라서 변화하는&#xA;것을 봐야 하는 영화인데 더빙이었다면 어떻게 표현했을지 난감할 것&#xA;같다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 16/Sep/2020</title>
-      <link>https://ageldama.github.io/posts/2020-09sep/ping-16wed/</link>
+      <link>http://localhost:1313/posts/2020-09sep/ping-16wed/</link>
       <pubDate>Wed, 16 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-09sep/ping-16wed/</guid>
+      <guid>http://localhost:1313/posts/2020-09sep/ping-16wed/</guid>
       <description>&lt;p&gt;&#xA;그간 작업해오던 일이 있어서 과분하게 고마운 제안, 이미 익숙한&#xA;사람들과, 거기에 훌륭한 이들과 멋진 일을 함께 하자는 제안들을 거절을&#xA;하며 손해를 보며 살고 있었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 그 일은 마무리를 짓고 다시 또 이야기들을 하고 들으며&#xA;돌아다녔다. 그리고 생각보다 훨씬 체력소모가 컸었던 것 같다.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;글쓰기, 코딩하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;지난 기간 동안 해온 작업을 마무리지었고, 앞으로는 다른 일에 매진해야&#xA;  할 것 같다. 하지만 그럼에도 가능하면 너무 흐름을 잃지 않고 글을&#xA;  꾸준히 쓰고 공개하지 않더라도 깃헙에 올리며 살아가야겠다. &lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 14/Sep/2020</title>
-      <link>https://ageldama.github.io/posts/2020-09sep/ping-14mon/</link>
+      <link>http://localhost:1313/posts/2020-09sep/ping-14mon/</link>
       <pubDate>Mon, 14 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-09sep/ping-14mon/</guid>
+      <guid>http://localhost:1313/posts/2020-09sep/ping-14mon/</guid>
       <description>&lt;p&gt;&#xA;작년 말, 올해 초만해도, 그때 내가 사람들과 이야기를 하며 기본소득에&#xA;대한 지지를 이야기하면 반응은 시원찮았었다. 자신이 초능력자라고 말하는&#xA;예전 대선에 도전했었던 어느 사람에 비유하며 웃었었고 나는 그런&#xA;반응들이 못마땅했었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;또는 나는 나 자신이 못 가진 자라고 생각해서 은근히 더 공정하고 분배에&#xA;집중한 사회가 되기를 바랬었다. 왜냐하면 내가 더 안정적이고 피곤할&#xA;일들, 혹은 감정적으로도 시달리며 살기는 이미 지친 것 같아서다. 그런&#xA;일들을 감내하게 만드는 것은 경제적 이유였었고 더한 모습들이 우리&#xA;사회에서는 결국 돈 때문일테니까라고 생각해서였다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 12/Sep/2020</title>
-      <link>https://ageldama.github.io/posts/2020-09sep/ping-12sat/</link>
+      <link>http://localhost:1313/posts/2020-09sep/ping-12sat/</link>
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-09sep/ping-12sat/</guid>
+      <guid>http://localhost:1313/posts/2020-09sep/ping-12sat/</guid>
       <description>&lt;p&gt;&#xA;어떤 개념에 대해 너무도 미신적인 관점을 가진 사람들을 너무 흔하게&#xA;본다. 하지만 그들이 생각하는 것은 그렇게 믿고 싶어서 선택한 신화적인&#xA;모습이라 더 이상하다. 경험에 기반한 성숙함이 다르기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;하지만 그들이 믿고 싶은 것과 현실은 정반대일수밖에 없다. 그리고 내가&#xA;경험한 바에 따라서도 실제로도 항상 예외를 찾지 못하도록 그렇다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다만 세상을 보는 시각이 아직은 어둡기 때문이거나, 마치 그것이 진실인&#xA;양 주장하고 싶은 이이기 때문이리라.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;어느쪽이건 좋은 일이 있든 힘이 들든 진심으로 축하하고 위로를 할 방법도&#xA;알지 못하거나, 마지 못해 해야하는 상황에서도 그 방법도 의도도 모두&#xA;혼탁해 함께 하면 괴로울 따름이다. 그들이 딱지붙이기를 하고 싶은 이들이&#xA;오히려 비교할 수 없이 인간적이고, 존중과 존경을 받을만한 인격을 갖추고&#xA;있다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 31/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping-31mon/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping-31mon/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping-31mon/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping-31mon/</guid>
       <description>&lt;p&gt;&#xA;여름이 끝나가는 느낌이다. 또 무더워지는 날이 며칠 있겠지만 지금은&#xA;가을이 온 것만 같은 밤공기와 풀냄새가 향긋하다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 30/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping-30sun/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping-30sun/</link>
       <pubDate>Sun, 30 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping-30sun/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping-30sun/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;프로젝트 마무리&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;문서도 초안을 다 썼고, 마무리 중.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  분산 커밋로그에 저장하고 읽는 것들을 aync. io을 이용해서 실행되도록&#xA;  하고 있다. 처음엔 그냥 C라이브러리 기반으로 된 blocking 버젼으로&#xA;  만족스러울 정도로 빠른 커밋로그라 그럭저럭 괜찮았는데 한개의 실제&#xA;  사이클인 것처럼 줄일 수 있어서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  또 그냥 failure을 처리하는 부분을 바꾸고, 전체 애플리케이션을&#xA;  특정시점에 더 실제 실행시점처럼 흉내내서 동작하도록 만들 수 있게&#xA;  했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  마무리도 마지막 검증이랑 마쳐가고 있고. 8월도 마무리&#xA;  되어간다. 시간이 빠르다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;&lt;strong&gt;EDIT&lt;/strong&gt; 모두 완료!&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;클라이언트 애플리케이션, 문서, 만족스러운 검증 등등 원하는 것들을 다&#xA;  완료했다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 28/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping-28fri/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping-28fri/</link>
       <pubDate>Fri, 28 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping-28fri/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping-28fri/</guid>
       <description>&lt;p&gt;&#xA;날씨가 덥고 습하다. 거기에 마스크까지 해야해서 내가 좋아하는&#xA;오래걷기를 하기에 그다지 좋은 시절은 아니다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;문득 생각이 들었다. 아주 얼마 전까지만해도 이런 상황을 대부분의 자기&#xA;자신이 정상이라고 믿고 싶어하는 이들은 모두가 이렇게 살아가는 세상을&#xA;이야기를 들으면 비웃었을 것이다. 그리고 실제로 그런 일들을 많이 보아온&#xA;것 같다. 방독면이나 산소마스크 방호복 대신에 KF94 마스크일뿐인.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;많은 아이디어와 예견들이 맞아들어가는 시절이다. 한편으로는 그런 것을&#xA;이해하고 세상의 변화에 대해서 조금은 알맞게 나 자신이 알아채고 살아온&#xA;것이 뿌듯하면서도 꼭 달갑지는 않기도 하다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 27/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping-27thu/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping-27thu/</link>
       <pubDate>Thu, 27 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping-27thu/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping-27thu/</guid>
       <description>&lt;p&gt;&#xA;그간 진행해오던 프로젝트는 성능에 대해서 premature optimization을&#xA;고려해서 만들기 보다는 architectural한 면에 비중을 갖고 가능성을&#xA;염두에두고 선택을 해오며 만들었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그럼에도 꽤 괜찮은 성능이었었고, 이제는 첫번째 버젼의 완성과 문서&#xA;작성도 완료한 시점이어서 앞으로 성능을 높일 방안을 고민해보고 실험을&#xA;몇개 수행해서 방법 결정해봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;(현재 사용하는 방법과 새로이 사용할 방안의 이름은 모두 변경했다.)&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;기존 성능 측정은:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;X event-writer&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;commit을 한번에 하지 않고, 매 이벤트마다 수행해서&#xA;느림. (현재는 변경되었음)&lt;/li&gt;&#xA;&lt;li&gt;약 11,196-microseconds (11-ms)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;X journal-writer&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 25/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping-25tue/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping-25tue/</link>
       <pubDate>Tue, 25 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping-25tue/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping-25tue/</guid>
       <description>&lt;p&gt;&#xA;the end of the belle époque?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 24/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping-24mon/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping-24mon/</link>
       <pubDate>Mon, 24 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping-24mon/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping-24mon/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;&amp;#34;프로젝트&amp;#34;&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;진행해온 프로젝트의 문서를 작성 중.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  문서를 작성하면서 더 보충/보강할 내용들이 튀어나온다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  이 또한 사실 즐겁다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;게임하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;Doom64 리메이크를 클리어했다. 마지막 레벨에서는 도저히 깰 수 없어서&#xA;  그냥 마지막 한 마리를 잡기 위해서 치트를 켜서 아쉽다. 하지만 그&#xA;  마지막 보스 이전에 타이드는 그냥 제정신으로 다 죽여서 재밌었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  다음 게임은 퀘이크 시리즈를 다시 플레이할까 생각 중. 폴아웃4,&#xA;  스카이림을 다시 로드해서 플레이를 하며 그 세계에서 시간을 보내도&#xA;  좋겠지만 조금은 다른 게임을 하고 싶어서.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping (2nd) 14/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping2-14fri/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping2-14fri/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping2-14fri/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping2-14fri/</guid>
       <description>&lt;p&gt;&#xA;ㅎㅎ좋다. 이제 문서와 추가적인 작은 도구 몇 개를 더 만드는 것만 남았구나.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 14/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping-14fri/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping-14fri/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping-14fri/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping-14fri/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;빌드도구의 경험과 Meson을 사용하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  &lt;a href=&#34;https://github.com/ageldama/meson-abc&#34;&gt;Meson-ABC 갖고 놀아본 코드&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  아주 예전에 commercially 성공적이었었던 C++ 프로젝트를 홀로 기획, 설계, 개발했었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  처음에는 GNU Makefile으로 간단히 시작했었었다. 타겟 플랫폼이 뻔하게 윈도였기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그 이전에는 ANSI C으로 작성한 &lt;a href=&#34;https://sourceforge.net/projects/sdlhan/&#34;&gt;SDL 조합형 비트맵 출력 오픈소스&lt;/a&gt;&#xA;  라이브러리 같은 것들을 작업할 때는 그냥 GNU Autotools 을 쓰거나&#xA;  했었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  하지만 그렇게 configure 하거나 할 부분도 없고 처음 혼자 시작하며&#xA;  다른 신경 쓸 것도 무지하게 많았었던 프로젝트였고 더욱이 기간도&#xA;  한정적이었었다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 SCons 같은 것을 조금 쓰다가, 결국 더 간단히 Rake으로 빌드를&#xA;  작성해 한동안 썼었다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 13/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping-13thu/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping-13thu/</link>
       <pubDate>Thu, 13 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping-13thu/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping-13thu/</guid>
       <description>&lt;p&gt;&#xA;프비 워크스테이션을 만들어놓고 그렇게 좋은 사양은 절대 아닌 조용한&#xA;슬림PC에서, 또 가능한 마우스를 안 써도 좋게 세팅해놓고 편안하게&#xA;이맥스에서 작업을 해나간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;FM라디오의 가끔 지글거리는 잡음도 좋은 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;계속해서 신경을 쓰게 만들고 끊기고 광고가 나오고 또 클릭을 유도하고&#xA;멍청하게 징징거리는 것으로 돈으로 바꾸는 요즘의 수많은 다른 매체들보다&#xA;훨씬 나를 편안하게 만든다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다른 매체들도 비슷하지 않을까. SNS도 그런 것 같고 대부분의 앱, 심지어&#xA;운영체제도 그런 환경들과는 다른.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping (2nd) 01/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping2-01sat/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping2-01sat/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping2-01sat/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping2-01sat/</guid>
       <description>&lt;p&gt;&#xA;지난번 포스팅에서 이야기한 것처럼, 인연이 있던 창업자가 새로 창업한&#xA;회사에 제안이 있었었다. 더 없이 아쉬운 기회이고 미안했지만 내가 하고&#xA;있던 일을 계속하고 싶어서 아쉬운 기회이지만 거절했다. 내 능력에 벅찬&#xA;일일 것이고, 또 내게 손해가 있겠지만 내가 결심한바대로 해나가는 것이&#xA;내게는 맞는 일이란 생각이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이미 당시에 한국에서 유명한 기업으로부터 창업한지 얼마 되지도 않아&#xA; 투자를 잘 받고, 안정적으로 성장할 준비를 하고 있었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그 키워드의 기술을 당시에 연구하고 공개한 MS 이외에도 IBM에서도&#xA;오픈소스로 작업한 툴킷을 공개하고 실용적인 단계에서 활용이 가능한&#xA;형태로 공유를 시작했다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 01/Aug/2020</title>
-      <link>https://ageldama.github.io/posts/2020-08aug/ping-01sat/</link>
+      <link>http://localhost:1313/posts/2020-08aug/ping-01sat/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-08aug/ping-01sat/</guid>
+      <guid>http://localhost:1313/posts/2020-08aug/ping-01sat/</guid>
       <description>&lt;p&gt;&#xA;오랬만에 내 환경을 더 다듬었다.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Emacs, Evil, General.el.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;매일 이맥스에서 코딩을 하면서 조금은 Vim보다 키바인딩이 편집에&#xA;    불리한 것 같았었다. 그렇다고 Vim을 쓰고 싶지는 않았다. 검색이나&#xA;    다중편집 같은 이맥스만의 기능을 Vim에서 흉내내는 것은 별로 마음에&#xA;    차지 않는 정도이고 또 화면 flickering도 이맥스 GUI을 쓸 때보다&#xA;    터미널 Vim은 심해서 난 피곤해.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;    그래서 Evil-mode을 종종 썼는데 문제는 내가 만들어놓은 general.el&#xA;    키바인딩들이 Evil을 고려하지 않고 만들어서 evil모드를 toggle하며&#xA;    써야했었었다. 특히 내 이맥스 모드에서의 키바인딩의 prefix이&#xA;    C-z인데, evil-mode에서는 emacs mode으로 전환을 위해서 사용.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 24/Jul/2020</title>
-      <link>https://ageldama.github.io/posts/2020-07jul/ping-24fri/</link>
+      <link>http://localhost:1313/posts/2020-07jul/ping-24fri/</link>
       <pubDate>Fri, 24 Jul 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-07jul/ping-24fri/</guid>
+      <guid>http://localhost:1313/posts/2020-07jul/ping-24fri/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;여름방학을 보내고 왔다.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;지난 한달여, 꽤 즐겁게 보낸 것 같다. 그리고 순수하고 맑은 마음으로&#xA;  행복했었던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  하늘도 여름 같이 맑고 파랗고 공기도 좋았었다. 매일 열심히 집중해서&#xA;  일할 수 있었고 좋았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 그렇기 때문에 조금은 아련하다. &lt;/p&gt;&#xA;&lt;p&gt;&#xA;  이런 느낌.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;(기쿠지로의 여름 OST) Summer / 히사이시 조&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://youtu.be/_t1KvFMUNws&#34;&gt;https://youtu.be/_t1KvFMUNws&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;Games: Doom 64, Ion Fury.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;Doom 64을 플레이. 클래식 둠, 둠2이랑은 또 완전히 다른&#xA;  게임이었음. 몬스터들 모델링, 음악, 레벨디자인 모두 완전히 새로&#xA;  만들어서 재밌었다. 그리고 꽤 다른 분위기라서 플레이하기 좋았다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 19/Jul/2020</title>
-      <link>https://ageldama.github.io/posts/2020-07jul/ping-19sun/</link>
+      <link>http://localhost:1313/posts/2020-07jul/ping-19sun/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-07jul/ping-19sun/</guid>
+      <guid>http://localhost:1313/posts/2020-07jul/ping-19sun/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;쉬는 날.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;그간 4개월 정도 집중해온 작업이 어느 정도 궤도에 올라갔다. 앞으로도&#xA;  더 많은 작업을 해야겠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  하지만 일요일이고, 오늘 하루는 조금 마무리 작업을 해놓고 휴식을 할까&#xA;  마음 먹었다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;1Q84, 하루키 소설 영문판 읽기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;군생활을 할 때 시간을 쪼개서 영문판 책들을 많이 읽었었다. 진중문고와&#xA;  그밖에 휴가를 다녀온 사람들이 놓고간, 세월이 흘러가며 쌓여있는&#xA;  아무도 읽지 않는 좋은 책들을 많이 읽었었던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그중에는 아직도 다시 읽고 싶은 책들과 좋아하는 작가와 철학자들이&#xA;  많이 생겼었던 것 같다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 17/Jul/2020</title>
-      <link>https://ageldama.github.io/posts/2020-07jul/ping-17fri/</link>
+      <link>http://localhost:1313/posts/2020-07jul/ping-17fri/</link>
       <pubDate>Fri, 17 Jul 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-07jul/ping-17fri/</guid>
-      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;GitHub &amp;#34;Arctic Code Vault Contributor&amp;#34;이 되었다.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;[[file:/posts/images/2020-07jul/gh-arctic-code-vault-contributor.png&#xA;]]&lt;/p&gt;&#xA;&lt;p&gt;&#xA;우연히 기여한 몇몇 프로젝트들이 보관되기로 결정됐나보다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;2020년의 코딩.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://ageldama.github.io/posts/images/2020-07jul/gh-ageldama-2020jul.png&#34; alt=&#34;/posts/images/2020-07jul/gh-ageldama-2020jul.png&#34; title=&#34;/posts/images/2020-07jul/gh-ageldama-2020jul.png&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;중간에 비는 부분들이 있지만. ㅎㅎ 공개한 오픈소스 저장소도 2~3개이고,&#xA;가장 많은 비중을 차지하는 것은 비공개로 진행하고 있는 저장소 1개.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;기간으로 봐도 3~4개월이 되어간다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://ageldama.github.io/posts/images/2020-07jul/pytest-pylint-mypy.png&#34; alt=&#34;/posts/images/2020-07jul/pytest-pylint-mypy.png&#34; title=&#34;/posts/images/2020-07jul/pytest-pylint-mypy.png&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;검증 가능하게 꼼꼼히 만들면서 성취감이 크다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+      <guid>http://localhost:1313/posts/2020-07jul/ping-17fri/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;GitHub &amp;#34;Arctic Code Vault Contributor&amp;#34;이 되었다.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;[[file:/posts/images/2020-07jul/gh-arctic-code-vault-contributor.png&#xA;]]&lt;/p&gt;&#xA;&lt;p&gt;&#xA;우연히 기여한 몇몇 프로젝트들이 보관되기로 결정됐나보다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;2020년의 코딩.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/images/2020-07jul/gh-ageldama-2020jul.png&#34; alt=&#34;/posts/images/2020-07jul/gh-ageldama-2020jul.png&#34; title=&#34;/posts/images/2020-07jul/gh-ageldama-2020jul.png&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;중간에 비는 부분들이 있지만. ㅎㅎ 공개한 오픈소스 저장소도 2~3개이고,&#xA;가장 많은 비중을 차지하는 것은 비공개로 진행하고 있는 저장소 1개.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;기간으로 봐도 3~4개월이 되어간다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/images/2020-07jul/pytest-pylint-mypy.png&#34; alt=&#34;/posts/images/2020-07jul/pytest-pylint-mypy.png&#34; title=&#34;/posts/images/2020-07jul/pytest-pylint-mypy.png&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;검증 가능하게 꼼꼼히 만들면서 성취감이 크다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Ping 08/Jul/2020</title>
-      <link>https://ageldama.github.io/posts/2020-07jul/ping-08wed/</link>
+      <link>http://localhost:1313/posts/2020-07jul/ping-08wed/</link>
       <pubDate>Wed, 08 Jul 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-07jul/ping-08wed/</guid>
+      <guid>http://localhost:1313/posts/2020-07jul/ping-08wed/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;배워가기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;올 한해의 절반이 지나갔다. 그리고 중요한 시점에 정말 좋은 결정을&#xA;  내렸던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  생각과 관점이 더 발전하고 그에 따라 삶도 더 변화해갔다. 어떤 것들을&#xA;  거쳐서 어떻게 변화했는지는 쓰고 싶지는 않다. 그리고 어째서 인터넷에&#xA;  그런 글들이 생각보다 잘 없는지 이제는 조금 이해할 수 있어서 굳이 쓸&#xA;  생각도 없다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  너무 당연한 원인, 행동 그리고 결과의 연결이라 만족스럽다. 앞으로의&#xA;  삶을 바라보는 관점도 많이 변했고 더 없이 행복하다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Ping 29/Jun/2020</title>
-      <link>https://ageldama.github.io/posts/2020-06jun/ping-29mon/</link>
+      <link>http://localhost:1313/posts/2020-06jun/ping-29mon/</link>
       <pubDate>Mon, 29 Jun 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-06jun/ping-29mon/</guid>
+      <guid>http://localhost:1313/posts/2020-06jun/ping-29mon/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;이해하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;읽고 생각하고, 글을 쓰고 살아온 방법과 길에 대해서, 만난 이들과의&#xA;  일화들에 대한 이해가 더욱 깊어진 것 같다. 그리고 내가 내린 판단과&#xA;  결정이 만족스러운 것이었었다. 더욱 명확한 기분이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  하던 생각들이, 꽤 정확하게 파악했었더라, 그를 기반해 예측한 것이&#xA;  맞는 것을 알게 될 때면 더욱 만족스러운 기분이 든다. &lt;/p&gt;&#xA;&lt;p&gt;&#xA;  훌륭한 이들, 존경스러운 이도 있고, 한편으로는 말을 꺼내기도 한심해질&#xA;  정도의 이도 있다. 정말 안타까운 느낌이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  정말 시간은 위대하다는 생각을 한다. 내가 시간의 역할을 욕심내어서는&#xA;  안되겠다는 생각도 한다. &lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 16/Jun/2020</title>
-      <link>https://ageldama.github.io/posts/2020-06jun/ping-16tue/</link>
+      <link>http://localhost:1313/posts/2020-06jun/ping-16tue/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-06jun/ping-16tue/</guid>
+      <guid>http://localhost:1313/posts/2020-06jun/ping-16tue/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;FreeBSD을 조금 오래된 컴퓨터에 계속 사용하기.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;매일 업무를 보는데에 메인 피씨, 랩탑은 여전히 아치리눅스를 잘 쓰고&#xA;  있다. 그리고 조금 사양이 부족한 사이드킥 피씨 본체에는 FreeBSD을&#xA;  여전히 설치해놓고 쓰고 있다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  처음 생각보다 훨씬 더 많이 활용하게 되는 것 같다. 그리고 훨씬&#xA;  가볍게, 안정적이고 강력한 느낌이다. 물론 오히려 리눅스가 더&#xA;  빠르다거나 안정적인 부분들을 금새 발견할 수 있다. 그리고 리눅스와&#xA;  동일하게 쓰려고 들지 않는게 더 속편한 부분도 많다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  예를 들어, 당연히 Steam 같은 것은 기대를 안한다. 그리고 의외로&#xA;  USB스택은 리눅스에 비해서 종종 실망스럽고, 다양한 파일시스템 지원도&#xA;  그렇다. FUSE을 통해서 리눅스처럼 다양한 파일시스템을 지원하지만&#xA;  그렇게 안심하고 쓸만한 것은 아닌 것 같다. (몇 개의 경험을 해보고&#xA;  나니)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 06/Jun/2020</title>
-      <link>https://ageldama.github.io/posts/2020-06jun/ping-06sat/</link>
+      <link>http://localhost:1313/posts/2020-06jun/ping-06sat/</link>
       <pubDate>Sat, 06 Jun 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-06jun/ping-06sat/</guid>
+      <guid>http://localhost:1313/posts/2020-06jun/ping-06sat/</guid>
       <description>&lt;p&gt;&#xA;조금 더 혼자 진행해오던 일을 계속하기로 결정했다. &lt;/p&gt;&#xA;&lt;p&gt;&#xA;좋은 사람들과 스타트업임을 알고 있고, 이전에 함께 일하면서도&#xA;인격적으로나 능력적으로 모두 훌륭한 사람들임을 잘 알고 있다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그럼에도 나 자신이 이번엔 더 차이를 만들어야겠다고 결심했던 것을&#xA;끝까지 해나가고 싶어서다. 합류하면 정말 많은 부분 이득이 많겠지만,&#xA;개인적으로도 많이 힘든 고민을 하고 결정을 내렸다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 28/May/2020</title>
-      <link>https://ageldama.github.io/posts/2020-05may/ping-28thu/</link>
+      <link>http://localhost:1313/posts/2020-05may/ping-28thu/</link>
       <pubDate>Thu, 28 May 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-05may/ping-28thu/</guid>
+      <guid>http://localhost:1313/posts/2020-05may/ping-28thu/</guid>
       <description>&lt;p&gt;&#xA;5월, 요즘은 매일이 날씨와 공기가 아름답다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;지금처럼 참 행복하게 지내기 좋은 계절인 것 같다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 23/May/2020</title>
-      <link>https://ageldama.github.io/posts/2020-05may/ping-23sat/</link>
+      <link>http://localhost:1313/posts/2020-05may/ping-23sat/</link>
       <pubDate>Sat, 23 May 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-05may/ping-23sat/</guid>
+      <guid>http://localhost:1313/posts/2020-05may/ping-23sat/</guid>
       <description>&lt;p&gt;&#xA;지난 2달여간 매일 같이 몰입해 매진한 작업의 성능 테스트를&#xA;진행했다. 그리고 매 시점마다 테스트와 측정 결과에서 놀라던 것과&#xA;마찬가지 포인트에서 많은 관점이 변화한다. 아직도 많은 일을 더&#xA;해나가야겠지만 그래도 지금은 이 정도에서 우선은 만족스럽다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;작년과 재작년, 그 이전에는 매 일터마다 배울 점들이 있었던 것&#xA;같다. 그리고 지난 포스팅에도 말했듯이 내 많은 관점들을 발전시켜준 좋은&#xA;사람들과 멋진 경험들을 했었던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다만 올해 잠시 조인했었던 곳에서는 정반대의 경험이었었다. 많은, 이미&#xA;알고 있는 것들을 다시 확인했는데 그것들은 나 자신으로부터 배운 것들과&#xA;타산지석의 가르침들이었었다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 18/May/2020</title>
-      <link>https://ageldama.github.io/posts/2020-05may/ping-18mon/</link>
+      <link>http://localhost:1313/posts/2020-05may/ping-18mon/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-05may/ping-18mon/</guid>
+      <guid>http://localhost:1313/posts/2020-05may/ping-18mon/</guid>
       <description>&lt;p&gt;&#xA;오랬만에 예전 직접 같이 일한 것은 아니지만, 같은 회사에서 일하던&#xA;사람을 만나 오래 이야기를 나눴다. 많은 이야기를 해준 덕분에 재미있는&#xA;이야기들을 많이 알게 됐다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;누군가를 만나고 아주 조금이라도 시간을 함께 하면 언제나 놀랍다. 나&#xA;자신을 변화시키는 경험을 하게 해주는 이였다. 아주 짧은 단편적인&#xA;일화들만을 경험해도 그렇게 해주는 이를 만나 이야기를 나누는 것은&#xA;감사하다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;지나간 사람들과 시간들을 최근에 생각해보며 어떤 사람들이 어떻게 내&#xA;생각에 영향을 주었는지를 보았다. 그리고 감사한 이들이 많이&#xA;떠올랐다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 25/Apr/2020</title>
-      <link>https://ageldama.github.io/posts/2020-04apr/ping-25sat/</link>
+      <link>http://localhost:1313/posts/2020-04apr/ping-25sat/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-04apr/ping-25sat/</guid>
+      <guid>http://localhost:1313/posts/2020-04apr/ping-25sat/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;계속해서 글을 쓰기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;내용은 없음 *&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Ping 22/Feb/2020</title>
-      <link>https://ageldama.github.io/posts/2020-02feb/ping-22sat/</link>
+      <link>http://localhost:1313/posts/2020-02feb/ping-22sat/</link>
       <pubDate>Sat, 22 Feb 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-02feb/ping-22sat/</guid>
+      <guid>http://localhost:1313/posts/2020-02feb/ping-22sat/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;내가 책상을 쓰는 방법, 고물 컴퓨터를 고쳐 쓰기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;오래된 피씨 본체를 얻었다. 슬림한 케이스의 삼성 컴퓨터.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  윈도7 설치된 것도 꽤 가볍고 빠르게 정리되어 있었다. 그냥 FreeBSD을&#xA;  처음에는 설치하려고 하다가, 결국 애플리케이션이나 그냥 적당히 잘&#xA;  돌아가는, 이맥스 정보만 잘 동작하는 기계면 될 것 같아서 아치리눅스를&#xA;  설치.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  만족스럽다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  데스크탑 원래 사용하던 것도 그렇게 엄청나게 좋은 것은 아니지만&#xA;  만족스러운 사용인데, 문제는 책상 가운데에 모니터랑 키보드를 놓고&#xA;  쓰면 책을 읽을 자리가 없어져서 항상 키보드 등을 한 켠으로&#xA;  밀어놓는다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 15/Feb/2020</title>
-      <link>https://ageldama.github.io/posts/2020-02feb/ping-15sat/</link>
+      <link>http://localhost:1313/posts/2020-02feb/ping-15sat/</link>
       <pubDate>Sat, 15 Feb 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-02feb/ping-15sat/</guid>
+      <guid>http://localhost:1313/posts/2020-02feb/ping-15sat/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;새벽, 이른 저녁, 풍경과 공기, 일상, 꾸준함&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;매일 이른 새벽에 깨어나 일정한 방식으로 하루를 보낸다. 만족스럽다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  매일 매일 조금씩 다른, 하지만 같은 궤도를 걷는다. 그리고 궤도는&#xA;  조금씩 변해가겠지.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  춥거나 공기가 좋지 않거나. 하지만 그래도 일상은 매일매일이 귀한&#xA;  시간이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  꾸준히 이렇게 살아가면서 행복하다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;트위스비 에코&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;매일 일터에서 집에서 메모, 스케치를 하고 글을 쓸 때 만년필을 여전히&#xA;  쓴다. 결국 계속해서 꾸준히 쓰는 만년필은 라미 사파리와 트위스비&#xA;  에코.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  라미 사파리는 잉크를 다 쓰고 나면 잘 씻어서 보관을 해둘까 생각하고&#xA;  있다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 09/Feb/2020</title>
-      <link>https://ageldama.github.io/posts/2020-02feb/ping-09sun/</link>
+      <link>http://localhost:1313/posts/2020-02feb/ping-09sun/</link>
       <pubDate>Sun, 09 Feb 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2020-02feb/ping-09sun/</guid>
+      <guid>http://localhost:1313/posts/2020-02feb/ping-09sun/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;책: 초난감 기업의 조건&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&amp;#39;기계인간&amp;#39;님의 트윗으로 소개를 받았다. 너무 잘 소개를 해주셔서&#xA;  기대가 많았다. 그리고 기대만큼 재밌는 책이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  경영서적, 마케팅, 혹은 자기계발서처럼 무언가 교훈을 얻고 싶어서&#xA;  읽지는 않는다. 그냥 다른 사람들의 처절한 실패담과 그 아둔함을 보면서&#xA;  쓰게 웃고 싶을 뿐이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그 사람들이 얼마나 멍청했는지는 잘 모르겠다. 그리고 그걸 비웃고 싶은&#xA;  것은 아니다. 오히려 사람들이 그런 멍청함을 구현해내는 분위기, 흐름,&#xA;  예의를 지키느라, 혹은 눈치를 보느라 제대로된 길에 들어서지 못하는&#xA;  어떤 형태의 인간 사회에 대해 그렇게 냉소하고 싶어지게 만든다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 01/Nov/2019</title>
-      <link>https://ageldama.github.io/posts/2019-11nov/ping-01fri/</link>
+      <link>http://localhost:1313/posts/2019-11nov/ping-01fri/</link>
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-11nov/ping-01fri/</guid>
+      <guid>http://localhost:1313/posts/2019-11nov/ping-01fri/</guid>
       <description>&lt;h1 id=&#34;그-이전의-시간&#34;&gt;그 이전의 시간&lt;/h1&gt;&#xA;&lt;p&gt;한국으로 돌아와 1년 반 정도 한 회사에 다니다가, 정리하고 나와서 시간을&#xA;보내고 있다.&lt;/p&gt;&#xA;&lt;p&gt;관점, 사고방식, 일하는 방식 등등 대화가 통하기도 어려운 상황이었고,&#xA;그런 세계관도 너무 차이가 나서 같이 있기 힘들었었다.&lt;/p&gt;&#xA;&lt;p&gt;그리고 어째서 한국을 떠나기로 결심했었었는지 뒤돌아봤고 거의 동일한&#xA;경험이었다. 조금은 달라진게 있으려나. 아마 그러리라 생각한다. 완전히&#xA;똑같은 경험은 아니다. 왜냐하면 거기에서 내가 얻은게 다르다.&lt;/p&gt;&#xA;&lt;p&gt;어떤 사람은 그럴리 없고 내가 오해를 한거라고 이야기를 해주지만, 그냥&#xA;나는 나와 같은 상황도, 처지도, 지위도 아니었으니 그런 충고가&#xA;무의미하다고 생각한다. 그 사람은 그 사람의 입장으로 경험을 한거고&#xA;그러니 판이하게 달랐겠지.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 20/Oct/2019</title>
-      <link>https://ageldama.github.io/posts/2019-10oct/ping-20sun/</link>
+      <link>http://localhost:1313/posts/2019-10oct/ping-20sun/</link>
       <pubDate>Sun, 20 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-10oct/ping-20sun/</guid>
-      <description>&lt;h2 id=&#34;장거리-드라이브&#34;&gt;장거리 드라이브&lt;/h2&gt;&#xA;&lt;p&gt;고속도로를 내려와서 국도에 들어서서 우회전 신호대기에서 창문을&#xA;내리자마자 깨달은게 공기가 말도 안되게 좋았다.&lt;/p&gt;&#xA;&lt;p&gt;가보고 싶었던 곳들을 돌아다니고 정말 많은게 변했구나 싶기도 하고&#xA;쓸쓸했다. 세상에 이런 곳도 아직 있구나, 내가 사는 세상이, 그게&#xA;절대적으로 전부라고 생각하는 복잡하고 발전된 모습이 아니라, 이런 곳이&#xA;있을 수 있구나 싶어서 신기했다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://ageldama.github.io/posts/images/2019-10oct/20191017_165844.jpg&#34; alt=&#34;img1&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://ageldama.github.io/posts/images/2019-10oct/20191017_171148.jpg&#34; alt=&#34;img2&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://ageldama.github.io/posts/images/2019-10oct/20191017_175340.jpg&#34; alt=&#34;img3&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;다시 또 가고 싶다. 아주 옛날엔 거기가 지루하다고 생각했었던거 같은데.&lt;/p&gt;&#xA;&lt;h2 id=&#34;게임-번아웃-파라다이스&#34;&gt;게임: 번아웃 파라다이스&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.zdnet.co.kr/view/?no=20180222082958&#34;&gt;&amp;lsquo;벗아웃 파라다이스&amp;rsquo;, 리마스터 버전으로 만난다 - 이도원 기자 입력: 2018/02/22&lt;/a&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/2019-10oct/ping-20sun/</guid>
+      <description>&lt;h2 id=&#34;장거리-드라이브&#34;&gt;장거리 드라이브&lt;/h2&gt;&#xA;&lt;p&gt;고속도로를 내려와서 국도에 들어서서 우회전 신호대기에서 창문을&#xA;내리자마자 깨달은게 공기가 말도 안되게 좋았다.&lt;/p&gt;&#xA;&lt;p&gt;가보고 싶었던 곳들을 돌아다니고 정말 많은게 변했구나 싶기도 하고&#xA;쓸쓸했다. 세상에 이런 곳도 아직 있구나, 내가 사는 세상이, 그게&#xA;절대적으로 전부라고 생각하는 복잡하고 발전된 모습이 아니라, 이런 곳이&#xA;있을 수 있구나 싶어서 신기했다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/images/2019-10oct/20191017_165844.jpg&#34; alt=&#34;img1&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/images/2019-10oct/20191017_171148.jpg&#34; alt=&#34;img2&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/images/2019-10oct/20191017_175340.jpg&#34; alt=&#34;img3&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;다시 또 가고 싶다. 아주 옛날엔 거기가 지루하다고 생각했었던거 같은데.&lt;/p&gt;&#xA;&lt;h2 id=&#34;게임-번아웃-파라다이스&#34;&gt;게임: 번아웃 파라다이스&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.zdnet.co.kr/view/?no=20180222082958&#34;&gt;&amp;lsquo;벗아웃 파라다이스&amp;rsquo;, 리마스터 버전으로 만난다 - 이도원 기자 입력: 2018/02/22&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 15/Oct/2019</title>
-      <link>https://ageldama.github.io/posts/2019-10oct/ping-15tue/</link>
+      <link>http://localhost:1313/posts/2019-10oct/ping-15tue/</link>
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-10oct/ping-15tue/</guid>
+      <guid>http://localhost:1313/posts/2019-10oct/ping-15tue/</guid>
       <description>&lt;p&gt;커먼리습으로 간단한&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Stack-oriented_programming&#34;&gt;스택기반&lt;/a&gt;&#xA;장난감 프로그래밍언어를 만들고있다.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/ageldama/cl-toy-stack-lang&#34;&gt;https://github.com/ageldama/cl-toy-stack-lang&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;튜링컴플릿이나 그런거 관심도 없고 사실 Parser도 적절하게 만들지 않았다.&lt;/p&gt;&#xA;&lt;p&gt;다만 유니코드 잘되고 쓸만한 lexer generator이 커먼리습에 있는지가 궁금했다.&lt;/p&gt;&#xA;&lt;p&gt;적당히 내일 정도면 어느 정도 완전히 굴러가는 프로그램으로 다 만들고 마무리 할 듯.&lt;/p&gt;&#xA;&lt;p&gt;처음에는 &lt;a href=&#34;https://www.quicklisp.org/&#34;&gt;QuickLisp&lt;/a&gt; 에서 어떤 Lexer을&#xA;써야할까 고민하다가, cl-lex 쓰다가 실망스러웠다.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;그러다가 만난게 &lt;a href=&#34;https://github.com/rigetti/alexa&#34;&gt;Alexa&lt;/a&gt; 인데, 가장&#xA;마음에 드는 lexer generator.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.rigetti.com/&#34;&gt;https://www.rigetti.com/&lt;/a&gt; 이 회사를 발견. 커먼리습으로 &lt;a href=&#34;https://github.com/rigetti/quilc&#34;&gt;Quil&#xA;Compiler&lt;/a&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; 만들고 퀀텀컴퓨팅&#xA;관련된 기업인가 보다.&lt;/p&gt;&#xA;&lt;p&gt;그리고 깃헙 저장소 살펴보는데 흥미롭고 써보면 어떨까 싶은게 많이 보였다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 14/Oct/2019</title>
-      <link>https://ageldama.github.io/posts/2019-10oct/ping-14mon/</link>
+      <link>http://localhost:1313/posts/2019-10oct/ping-14mon/</link>
       <pubDate>Mon, 14 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-10oct/ping-14mon/</guid>
+      <guid>http://localhost:1313/posts/2019-10oct/ping-14mon/</guid>
       <description>&lt;p&gt;어제 오늘 요즘에 들어서 생각을 겨우 하기 시작한 고민을 사람들이 트윗하더라.&lt;/p&gt;&#xA;&lt;p&gt;tweet 1183311320822607872&lt;/p&gt;&#xA;&lt;p&gt;..이번에 직장을 그만두고&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 새로운 직장을 열심히 알아보고 있지는 않고&#xA;있다.&lt;/p&gt;&#xA;&lt;p&gt;몇군데 인터뷰를 진행도 해보고 했지만, 모두 솔직히 나도 모르겠고 거절도&#xA;많이 받고 해서 꾸준히 진행을 하고 있지는 않다. 그리고 나도 이직을 하고&#xA;recruiting 과정을 한국만이 아니라 독일에서도 다양하게 겪어보니&#xA;어떤것이 좋거나 나쁜 신호인지 캐치하게 되는거 같고, 또 그런 시그널들이&#xA;생각보다 적절하게 그 회사측의 모습이나 생각을 반영하는게 맞는거&#xA;같더라.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 13/Oct/2019</title>
-      <link>https://ageldama.github.io/posts/2019-10oct/ping-13sun/</link>
+      <link>http://localhost:1313/posts/2019-10oct/ping-13sun/</link>
       <pubDate>Sun, 13 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-10oct/ping-13sun/</guid>
+      <guid>http://localhost:1313/posts/2019-10oct/ping-13sun/</guid>
       <description>&lt;p&gt;집중하는게 내게 더 좋겠다는 생각이든다.&lt;/p&gt;&#xA;&lt;p&gt;단시간에 어떤 일에 집중하는 일은 만족스럽다. 그런 시간단위의 집중이&#xA;아니라 기간이라고 할만큼 며칠, 몇주에 걸쳐, 한정된 한두개의&#xA;주제에만 집중해서 생각하고 만들거나 글을 써가는게 필요하다.&lt;/p&gt;&#xA;&lt;p&gt;혼자 관심이 가거나 생각하는 주제가 떠오르면&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Org-mode&#34;&gt;Org파일&lt;/a&gt; 한 개나 메모지,&#xA;핸드폰에 적어놓는다. 그리고 내가 가진 정리하는 방식에 따라 조금씩&#xA;생각이 다듬어질때마다 저장매체를 바꿔가며 기록해나간다. 문득 그 &lt;em&gt;Org&#xA;파일&lt;/em&gt; 을 열었는데, 너무 많은 내용들이, 그것도 폭넓은 다양한 주제들에&#xA;대해서 걸쳐있음을 봤다.&lt;/p&gt;&#xA;&lt;p&gt;다양한 주제에 관심이 있는건 어쩔 수 없겠지만 각 주제마다 내가 투사하는&#xA;시간과 노력이 너무 분산되는거 아닌가 생각해왔다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 11/Oct/2019</title>
-      <link>https://ageldama.github.io/posts/2019-10oct/ping-11fri/</link>
+      <link>http://localhost:1313/posts/2019-10oct/ping-11fri/</link>
       <pubDate>Fri, 11 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-10oct/ping-11fri/</guid>
+      <guid>http://localhost:1313/posts/2019-10oct/ping-11fri/</guid>
       <description>&lt;p&gt;매일 글쓰기. 블로깅하기 나도 해볼까.&lt;/p&gt;&#xA;&lt;p&gt;해보려는 이유는 메모는 계속해서 하면서 살고 있는데, 연속해서 같은&#xA;주제에 대해서 더 생각하고 하면서 발전시키는 방법으로 일기를 쓰는것과&#xA;반복적으로, 또 이전에 썼었던 글을 읽어보면서 거기에서 더 나아가서&#xA;고쳐나가고 발전시키는 방법으로 블로깅이 나쁘지 않은거 같아서.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 08/Oct/2019</title>
-      <link>https://ageldama.github.io/posts/2019-10oct/ping-08tue/</link>
+      <link>http://localhost:1313/posts/2019-10oct/ping-08tue/</link>
       <pubDate>Tue, 08 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-10oct/ping-08tue/</guid>
+      <guid>http://localhost:1313/posts/2019-10oct/ping-08tue/</guid>
       <description>&lt;p&gt;어제는 하루 종일 아는 사람들을 만나고 돌아다녔다.&lt;/p&gt;&#xA;&lt;p&gt;한국에서 운전을 하게 되고 재미를 붙이고 살고 있다.&lt;/p&gt;&#xA;&lt;p&gt;비가 오는 날이었지만 상쾌해서 북한산 국립공원 근처, 은평한옥마을,&#xA;진관사를 다녔다. 차를 타고 이동하면서 편하고 좋았다. 행동반경이&#xA;넓어지고 운전하면서 아직은 매순간이 재밌다.&lt;/p&gt;&#xA;&lt;p&gt;비가 내려서 구름과 안개가 북한산 자락에 깔려서 운치있었다. 카페에&#xA;앉아서 산풍경을 감상했다. 학생때는 자주 학교에서 소풍이나 백일장을&#xA;서오릉이나 북한산으로 왔었었는데. 그때도 가끔 생각했지만 비가 내려&#xA;세상이 이렇게 젖었을때 애처롭게 어둡기도 하고 깨끗한 습기를 머금은&#xA;숲이 상쾌해서 생명을 느끼게 해준다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 17/03/2019</title>
-      <link>https://ageldama.github.io/posts/2019-03mar/2019-03mar17-ping/</link>
+      <link>http://localhost:1313/posts/2019-03mar/2019-03mar17-ping/</link>
       <pubDate>Sun, 17 Mar 2019 07:38:28 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-03mar/2019-03mar17-ping/</guid>
-      <description>&lt;h1 id=&#34;emacsc-개발환경-스크린캐스트&#34;&gt;Emacs/C++ 개발환경 스크린캐스트&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://ageldama.github.io/posts/2019-02feb/counsel-ivy+cpp-ide/&#34;&gt;이전 포스팅&lt;/a&gt; 에서 만들었던&#xA;설정을 스크린캐스트로 찍어서 공유해봤다.&lt;/p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/YOaAqpdz9ts?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;h1 id=&#34;let-over-lambda-읽기&#34;&gt;&amp;ldquo;Let Over Lambda&amp;rdquo; 읽기&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://letoverlambda.com/&#34;&gt;Let Over Lambda&lt;/a&gt;을 읽기&#xA;시작했다. 커먼리습 매크로, 클로져에 대한 이야기를 더 깊이 있게&#xA;설명하고, 그런 기능들이 어떻게 리습이랑 리습이 아닌 &lt;a href=&#34;http://paulgraham.com/avg.html&#34;&gt;&amp;ldquo;Blub&#xA;language&amp;rdquo;&lt;/a&gt;이라고 말하고있는 대부분의&#xA;언어들과의 차이인지를 설명한다.&lt;/p&gt;&#xA;&lt;p&gt;리습의 매크로나 closure을 통해서, 그간 내가 프로그래밍언어 설계를 할때&#xA;포함해야하고, 컴파일러가 지원하도록 손수 만들어놓아야 한다고 믿던&#xA;것들이 얼마나 쉽게 구현되는지를 보며 충격을 받는다. 재밌고 신선하다.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/2019-03mar/2019-03mar17-ping/</guid>
+      <description>&lt;h1 id=&#34;emacsc-개발환경-스크린캐스트&#34;&gt;Emacs/C++ 개발환경 스크린캐스트&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/posts/2019-02feb/counsel-ivy+cpp-ide/&#34;&gt;이전 포스팅&lt;/a&gt; 에서 만들었던&#xA;설정을 스크린캐스트로 찍어서 공유해봤다.&lt;/p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/YOaAqpdz9ts?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;h1 id=&#34;let-over-lambda-읽기&#34;&gt;&amp;ldquo;Let Over Lambda&amp;rdquo; 읽기&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://letoverlambda.com/&#34;&gt;Let Over Lambda&lt;/a&gt;을 읽기&#xA;시작했다. 커먼리습 매크로, 클로져에 대한 이야기를 더 깊이 있게&#xA;설명하고, 그런 기능들이 어떻게 리습이랑 리습이 아닌 &lt;a href=&#34;http://paulgraham.com/avg.html&#34;&gt;&amp;ldquo;Blub&#xA;language&amp;rdquo;&lt;/a&gt;이라고 말하고있는 대부분의&#xA;언어들과의 차이인지를 설명한다.&lt;/p&gt;&#xA;&lt;p&gt;리습의 매크로나 closure을 통해서, 그간 내가 프로그래밍언어 설계를 할때&#xA;포함해야하고, 컴파일러가 지원하도록 손수 만들어놓아야 한다고 믿던&#xA;것들이 얼마나 쉽게 구현되는지를 보며 충격을 받는다. 재밌고 신선하다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 26/02/2019</title>
-      <link>https://ageldama.github.io/posts/2019-02feb/2019feb27-ping/</link>
+      <link>http://localhost:1313/posts/2019-02feb/2019feb27-ping/</link>
       <pubDate>Tue, 26 Feb 2019 16:47:22 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-02feb/2019feb27-ping/</guid>
+      <guid>http://localhost:1313/posts/2019-02feb/2019feb27-ping/</guid>
       <description>&lt;h1 id=&#34;번아웃-회의감&#34;&gt;번아웃, 회의감&lt;/h1&gt;&#xA;&lt;p&gt;아무래도 번아웃이 온거 같다. 일을 해야 하는데 아무런 생각이나 의욕도&#xA;떠오르지 않는다.&lt;/p&gt;&#xA;&lt;p&gt;아무것도 제대로 하지 못할거 같고, 해서 의미도 없을거라는 생각이 강하다.&lt;/p&gt;&#xA;&lt;p&gt;일하는것에 회의가 심하다. 실제로는 아무것도 제대로 알지 못하고 그냥&#xA;싫으니까 반대에 사람들 사이를 조작해서 악의적으로 행동하고 그렇게&#xA;조장하는것에 이제는 삶에서 너무 많이 봐온거 같고, 그런 사이에서&#xA;무력하게 지내고 해야한다는게 무엇보다 지친다.&lt;/p&gt;&#xA;&lt;p&gt;그리고 그렇게 때문에 해야할 이유도, 굳이 마음을 써야할 이유도&#xA;모르겠다.&lt;/p&gt;&#xA;&lt;p&gt;그냥 개인적으로 하고 싶던 설정이나 만지작거리면서 시간을 보내봐도 딱히&#xA;그게 지나고 나면 하고 싶은것도 없어진다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 26/02/2019</title>
-      <link>https://ageldama.github.io/posts/2019-02feb/2019-02feb26-ping/</link>
+      <link>http://localhost:1313/posts/2019-02feb/2019-02feb26-ping/</link>
       <pubDate>Tue, 26 Feb 2019 00:10:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-02feb/2019-02feb26-ping/</guid>
+      <guid>http://localhost:1313/posts/2019-02feb/2019-02feb26-ping/</guid>
       <description>&lt;h1 id=&#34;게임-발더스게이트ee-원숭이섬의-비밀-se--steamplay-등등&#34;&gt;게임: 발더스게이트EE, &amp;lsquo;원숭이섬의 비밀&amp;rsquo; SE + SteamPlay, 등등&lt;/h1&gt;&#xA;&lt;p&gt;아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced Edition들&#xA;올라와있었다.  발더스게이트1, 2 모두. 시간이 될때마다 조금씩 플레이&#xA;중.&lt;/p&gt;&#xA;&lt;p&gt;새로 UI이나 그래픽 요소들 등등 리마스터 한건지 훨씬 좋아진거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://store.steampowered.com/app/32360/The_Secret_of_Monkey_Island_Special_Edition/&#34;&gt;원숭이섬의 비밀: Special&#xA;Edition&lt;/a&gt;&#xA;이것도 시간날때&#xA;플레이. &lt;a href=&#34;https://www.scummvm.org/&#34;&gt;ScummVM&lt;/a&gt; 으로 옛날 그래픽으로 다시&#xA;해도 좋겠지만, 오히려 애니메이션이나 그래픽 다시 그린게 나는 더 마음에&#xA;들어서 이쪽이 좋은거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://store.steampowered.com/app/336140/Unavowed/&#34;&gt;Unavowed&lt;/a&gt;. 이런류의&#xA;어드벤쳐 꾸준히 만드는 &amp;ldquo;WadjetEyeGames&amp;quot;이 내 취향에 잘 맞는걸 계속&#xA;만들고 있는거 같아서 기뻤다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 07/02/2019</title>
-      <link>https://ageldama.github.io/posts/2019-02feb/2019-02feb07thu-ping/</link>
+      <link>http://localhost:1313/posts/2019-02feb/2019-02feb07thu-ping/</link>
       <pubDate>Thu, 07 Feb 2019 17:30:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-02feb/2019-02feb07thu-ping/</guid>
+      <guid>http://localhost:1313/posts/2019-02feb/2019-02feb07thu-ping/</guid>
       <description>&lt;h1 id=&#34;golang-사랑&#34;&gt;Golang 사랑&lt;/h1&gt;&#xA;&lt;p&gt;회사일로 Golang을 다시 잡고 쓰게됐다.&lt;/p&gt;&#xA;&lt;p&gt;예전에도 잠깐 썼었는데&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, 이번엔 그냥 더 오래 진지하게 필요에&#xA;의해서 쓰게됐다.&lt;/p&gt;&#xA;&lt;p&gt;지금 일터에서도 필요에 의해서 작은 프로그램을 작성하고 할 일이&#xA;있어서 쓰다가 아예 서비스 코드에 적용을 하려 일하고있다.&lt;/p&gt;&#xA;&lt;p&gt;많은걸 더 깊이 생각하고 익히는 좋은 계기로 꾸준하게 사용하고 있고,&#xA;만족스럽다. 대부분의 경우에. 그리고 Emacs와 연동도 좋고 언어 자체의&#xA;설계나 그런점들도 너무 좋은거 같다.&lt;/p&gt;&#xA;&lt;p&gt;GC이 있는 언어를 최근에는 꺼리다가 다시 사용하니까 좋은것 같아. 그냥&#xA;문법적은 모호함이 없고 단순함, 머리에 쉽게 기억할만한 규칙들, 혹은&#xA;아예 어떤 규칙도 기억할 필요가 없도록 만들거나 하는게 얼마나 설계에&#xA;좋은지 깨닫는다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 03/11/2018</title>
-      <link>https://ageldama.github.io/posts/2018-11nov/03sat-ping/</link>
+      <link>http://localhost:1313/posts/2018-11nov/03sat-ping/</link>
       <pubDate>Sat, 03 Nov 2018 19:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-11nov/03sat-ping/</guid>
+      <guid>http://localhost:1313/posts/2018-11nov/03sat-ping/</guid>
       <description>&lt;h1 id=&#34;작위를-수여받았다&#34;&gt;작위를 수여받았다&lt;/h1&gt;&#xA;&lt;p&gt;받아본 생일선물 중에 가장 귀여운거였다.&lt;/p&gt;&#xA;&lt;p&gt;tweet 1058052532839231488&lt;/p&gt;&#xA;&lt;h1 id=&#34;씨디리핑-음악듣기&#34;&gt;씨디리핑, 음악듣기&lt;/h1&gt;&#xA;&lt;p&gt;지난달부터 갖고 있던 씨디, 듣고 싶던 앨범들 다시 모으면서 리핑한&#xA;씨디들.&lt;/p&gt;&#xA;&lt;p&gt;조금 더 모으고 싶은 아티스트나 앨범들이 있는데 구하기 어려울거&#xA;같아서 걱정.&lt;/p&gt;&#xA;&lt;p&gt;tweet 1058666194616541184&lt;/p&gt;&#xA;&lt;p&gt;주말에 남는 시간에 씨디 리핑하고 음악 들으며 여유부리기.&lt;/p&gt;&#xA;&lt;hr&gt;</description>
     </item>
     <item>
       <title>Ping 20/10/2018</title>
-      <link>https://ageldama.github.io/posts/2018-10oct/20sat-ping/</link>
+      <link>http://localhost:1313/posts/2018-10oct/20sat-ping/</link>
       <pubDate>Sat, 20 Oct 2018 16:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-10oct/20sat-ping/</guid>
+      <guid>http://localhost:1313/posts/2018-10oct/20sat-ping/</guid>
       <description>&lt;p&gt;날씨가 너무 좋은 가을.&lt;/p&gt;&#xA;&lt;p&gt;tweet 1053557185534251008&lt;/p&gt;&#xA;&lt;h1 id=&#34;만년필&#34;&gt;만년필&lt;/h1&gt;&#xA;&lt;p&gt;만년필용 가죽 파우치를 찾았다. 들고 다니기 조금 더 편안해진거 같아.&lt;/p&gt;&#xA;&lt;p&gt;tweet 1053557157940015104&lt;/p&gt;&#xA;&lt;p&gt;회사분에게 고마운 선물로 딥펜을 받았다.&lt;/p&gt;&#xA;&lt;p&gt;tweet 1053557478925918208&lt;/p&gt;&#xA;&lt;h1 id=&#34;남이-필요한-행복에-대해&#34;&gt;남이 필요한 행복에 대해&lt;/h1&gt;&#xA;&lt;p&gt;가끔 날이 좋으면 예전처럼 누군가와 함께 좋은 공기를 마시며 산책도 하고&#xA;숲에 가고 싶어진다. 특히 요즘 같은 선선한 계절에는.&lt;/p&gt;&#xA;&lt;p&gt;그런데, 꼭 그래야만 나는 행복함을 느끼나 생각해본다. 그냥 방안에&#xA;좋아하는 오디오로 라디오를 틀어놓고 침대에 뭍혀서 지내는것도 좋고 그냥&#xA;적당한 책을 재밌게 읽고 많은 생각을 할 수 있거나 좋아하는 펜으로 글을&#xA;써도 행복한거 같아.&lt;/p&gt;</description>
     </item>
     <item>
       <title>생각 10/10/2018</title>
-      <link>https://ageldama.github.io/posts/2018-10oct/10wed-thought/</link>
+      <link>http://localhost:1313/posts/2018-10oct/10wed-thought/</link>
       <pubDate>Wed, 10 Oct 2018 12:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-10oct/10wed-thought/</guid>
+      <guid>http://localhost:1313/posts/2018-10oct/10wed-thought/</guid>
       <description>&lt;p&gt;연구소에서 종종 휴식시간에 PS4 게임을 하면서 지낸다. 그냥 별로 게임을&#xA;위해서 너무 많은 시간을 보내는걸 원래도 좋아하진 않았지만 독일에 살며&#xA;취미로 다시 시작한 이후로 재미를 붙이고 하고 있었다.&lt;/p&gt;&#xA;&lt;p&gt;그리고 최근에 재밌게 하고 있던 &lt;a href=&#34;https://en.wikipedia.org/wiki/Doom_(2016_video_game)&#34;&gt;DOOM&#xA;2016&lt;/a&gt;을 다른&#xA;게임들보다 내가 좋아하는걸 동료들이 눈치채고 가끔은 둠 이야기를 한다.&lt;/p&gt;&#xA;&lt;p&gt;최근에 그래서인지 &lt;a href=&#34;https://en.wikipedia.org/wiki/John_Carmack&#34;&gt;John&#xA;Carmack&lt;/a&gt; 이야기도 종종&#xA;나온다. 소프트웨어 엔지니어들이니까. 그러다가 한 동료가 Carmack의&#xA;에세이 하나의 링크를 보내줬었다.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;많은 다양한 생각들을 추려낸 블로그포스트. 그리고 가끔 지나가듯이 다른&#xA;주제를 이야기하다 이 에세이에 담긴 &lt;em&gt;만트라&lt;/em&gt; 에 대해서 다시 말하며&#xA;생각을 나눠본다. 그리고 더 그렇게하고 싶다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 05/10/2018</title>
-      <link>https://ageldama.github.io/posts/2018-10oct/05fri-ping/</link>
+      <link>http://localhost:1313/posts/2018-10oct/05fri-ping/</link>
       <pubDate>Fri, 05 Oct 2018 18:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-10oct/05fri-ping/</guid>
+      <guid>http://localhost:1313/posts/2018-10oct/05fri-ping/</guid>
       <description>&lt;h1 id=&#34;lamy2000-사용하면서&#34;&gt;Lamy2000 사용하면서&lt;/h1&gt;&#xA;&lt;p&gt;tweet 1048150207110688768&lt;/p&gt;&#xA;&lt;p&gt;tweet 1048059130429100033&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;잉크는 Lamy 잉크를 사서 쓰자.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;다른 잉크보다 훨씬 번짐도 적고,&lt;/li&gt;&#xA;&lt;li&gt;필기감도 좋다. 약간 더 비싸지만 어쩔 수 없다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;손에 힘을 더 빼야한다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h1 id=&#34;데스크탑-피씨-리눅스-설치&#34;&gt;데스크탑 피씨 리눅스 설치&lt;/h1&gt;&#xA;&lt;p&gt;HDD 데이터 디스크로 쓰던거 용량 큰쪽에 그냥 백업하고 날린 다음에&#xA;리눅스를 통으로 설치.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://store.steampowered.com/&#34;&gt;Steam&lt;/a&gt; 게임이나 가끔하느라 윈도&#xA;host에 리눅스 guest으로 VM 설정해서 주로 써왔는데, 그냥 리눅스를&#xA;host으로 쓰기로 결정.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://flathub.org/apps/details/com.valvesoftware.Steam&#34;&gt;Flatpak&lt;/a&gt;으로&#xA;나와서 배포판이나 데스크탑 환경에 상관없이 설치가 가능해져서 그냥&#xA;설치하고 써보기로 했다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 03/10/2018</title>
-      <link>https://ageldama.github.io/posts/2018-10oct/03wed-ping/</link>
+      <link>http://localhost:1313/posts/2018-10oct/03wed-ping/</link>
       <pubDate>Wed, 03 Oct 2018 20:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-10oct/03wed-ping/</guid>
+      <guid>http://localhost:1313/posts/2018-10oct/03wed-ping/</guid>
       <description>&lt;h1 id=&#34;hifiberry--raspberry-pi-3&#34;&gt;HiFiBerry + Raspberry Pi 3&lt;/h1&gt;&#xA;&lt;p&gt;tweet 1047432827866767360&lt;/p&gt;&#xA;&lt;p&gt;요것임.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.hifiberry.com/products/dacplus/&#34;&gt;https://www.hifiberry.com/products/dacplus/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://eleparts.co.kr/goods/view?no=3700883&#34;&gt;http://eleparts.co.kr/goods/view?no=3700883&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;정말 예전, 한 3년전쯤에 사서 한국집에 묵혀두고, 그때는 세팅에 실패해서&#xA;&lt;em&gt;안되는건가&amp;hellip;&lt;/em&gt; 이러고 포기하고 있다가 다시 시도해봤다.&lt;/p&gt;&#xA;&lt;p&gt;조금 삽질을 몇번하다가, 그리고 정 안되면 똑같은 부품 다시 주문해서라도&#xA;어쩐지 만들어보고 싶다는 알수 없는 의지가 발동해서 세팅에 성공. &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;어쨌든 &lt;a href=&#34;https://www.freebsd.org/&#34;&gt;FreeBSD&lt;/a&gt;을 설치해서 써볼까하다가&#xA;드라이버 지원이 필요한게 안되서 포기.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;결론은,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;라디오, MP3 걸어놓고 듣기에 좋다.&lt;/li&gt;&#xA;&lt;li&gt;음질은 확실히 이어폰으로 들어보면 같은곡에 대해서 훨씬 깨끗하고 노이즈 없이 재생하는거 &lt;strong&gt;같다&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.runeaudio.com/&#34;&gt;RuneAudio&lt;/a&gt;,&#xA;&lt;a href=&#34;https://www.mopidy.com/&#34;&gt;Mopidy&lt;/a&gt; 같은걸로 Web UI 세팅해서 쓸수도&#xA;있는거 같은데, 그냥 난 SSH으로만 들어가서 쓰기에 나쁘지 않아서&#xA;거기까니 삽질은 포기.&lt;/li&gt;&#xA;&lt;li&gt;마음먹고 PulseAudio 서버로 써서 윈도, 리눅스에서 사운드 출력을&#xA;이걸로 할수있게도 가능한데 일단은 여기까진 안가기로.&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h1 id=&#34;gnupg-재밌게-쓰기&#34;&gt;GnuPG 재밌게 쓰기&lt;/h1&gt;&#xA;&lt;p&gt;딱히 쓸얘기는 없는데, 그냥 &lt;a href=&#34;https://gnupg.org/&#34;&gt;GnuPG&lt;/a&gt;을 더 많이 쓰게&#xA;된거 같아.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 23/09/2018</title>
-      <link>https://ageldama.github.io/posts/2018-09sep/23sun-ping/</link>
+      <link>http://localhost:1313/posts/2018-09sep/23sun-ping/</link>
       <pubDate>Sun, 23 Sep 2018 04:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-09sep/23sun-ping/</guid>
-      <description>&lt;h1 id=&#34;영화-멀홀랜드-드라이브&#34;&gt;영화: &amp;lt;멀홀랜드 드라이브&amp;gt;&lt;/h1&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/images/2018-09sep/mulholland-dr-poster-kr.jpg&#34; width=&#34;400&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;씁쓸. 그리고 영화 다보고 해석들 읽고 다시 생각하고 장면들에서 느끼던&#xA;이상함점들이 왜 그랬었구나 맞춰보니 더 씁쓸. &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;그리고 살면서 사랑이나 그런 환상을 갖는것들처럼 그런 완전한 꿈을&#xA;생각하듯이 달콤한 전반부의 내용들이 이해됨.&lt;/p&gt;&#xA;&lt;h1 id=&#34;추석-연휴에-서울에-있기&#34;&gt;추석 연휴에 서울에 있기&lt;/h1&gt;&#xA;&lt;p&gt;어차피 고향도, 친척들도 거의 다 서울에 살아서 평생 명절마다 서울에서&#xA;보내는게 너무 익숙하다. 그리고 이맘때가 나는 서울에서 좋은거 같아.&lt;/p&gt;&#xA;&lt;p&gt;그냥 적당히 조용하고 차소음도 사라지고 (심지어 우리집은 큰길에서 한참&#xA;멀리있음에도) 공기도 훨씬 좋아진다. 밤거리도 한적해지고. 이런 분위기를&#xA;좋아해서.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/2018-09sep/23sun-ping/</guid>
+      <description>&lt;h1 id=&#34;영화-멀홀랜드-드라이브&#34;&gt;영화: &amp;lt;멀홀랜드 드라이브&amp;gt;&lt;/h1&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/images/2018-09sep/mulholland-dr-poster-kr.jpg&#34; width=&#34;400&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;씁쓸. 그리고 영화 다보고 해석들 읽고 다시 생각하고 장면들에서 느끼던&#xA;이상함점들이 왜 그랬었구나 맞춰보니 더 씁쓸. &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;그리고 살면서 사랑이나 그런 환상을 갖는것들처럼 그런 완전한 꿈을&#xA;생각하듯이 달콤한 전반부의 내용들이 이해됨.&lt;/p&gt;&#xA;&lt;h1 id=&#34;추석-연휴에-서울에-있기&#34;&gt;추석 연휴에 서울에 있기&lt;/h1&gt;&#xA;&lt;p&gt;어차피 고향도, 친척들도 거의 다 서울에 살아서 평생 명절마다 서울에서&#xA;보내는게 너무 익숙하다. 그리고 이맘때가 나는 서울에서 좋은거 같아.&lt;/p&gt;&#xA;&lt;p&gt;그냥 적당히 조용하고 차소음도 사라지고 (심지어 우리집은 큰길에서 한참&#xA;멀리있음에도) 공기도 훨씬 좋아진다. 밤거리도 한적해지고. 이런 분위기를&#xA;좋아해서.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 22/09/2018</title>
-      <link>https://ageldama.github.io/posts/2018-09sep/22sat-ping/</link>
+      <link>http://localhost:1313/posts/2018-09sep/22sat-ping/</link>
       <pubDate>Sat, 22 Sep 2018 14:30:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-09sep/22sat-ping/</guid>
+      <guid>http://localhost:1313/posts/2018-09sep/22sat-ping/</guid>
       <description>&lt;h1 id=&#34;새-만년필--pilot-kaküno&#34;&gt;새 만년필 : Pilot Kaküno!&lt;/h1&gt;&#xA;&lt;p&gt;tweet 1043371766318424064&lt;/p&gt;&#xA;&lt;p&gt;필기감은 같은 모델, 각 제품별로 조금씩 다른듯.  가격이 저렴해서 만년필&#xA;취미를 권하고 싶은 3개를 사서 회사 다른팀이나 같은 연구소 사람들에게&#xA;선물했다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;게임--둠2016-쉐도우-오브-더-툼레이더&#34;&gt;게임 : 둠2016, 쉐도우 오브 더 툼레이더&lt;/h1&gt;&#xA;&lt;p&gt;가끔 시간이 날때, 예전에는 길을 못찾아서 많이 진행을 못했었던, &lt;a href=&#34;https://en.wikipedia.org/wiki/Doom_(2016_video_game)&#34;&gt;둠&#xA;2016&lt;/a&gt; 을 다시&#xA;하고 있다. 지금은 꽤 많이 진행해서 &lt;em&gt;&amp;ldquo;내가 바로 둠가이다. 10점 만점에&#xA;12점인 사나이!&amp;rdquo;&lt;/em&gt; 모드로 플레이 할수있게 됐다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Doom_Eternal&#34;&gt;둠 이터널&lt;/a&gt; 나오면 바로 지르게 될거 같아.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 15/09/2018</title>
-      <link>https://ageldama.github.io/posts/2018-09sep/2018-09sep15sat-ping/</link>
+      <link>http://localhost:1313/posts/2018-09sep/2018-09sep15sat-ping/</link>
       <pubDate>Sat, 15 Sep 2018 15:30:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-09sep/2018-09sep15sat-ping/</guid>
+      <guid>http://localhost:1313/posts/2018-09sep/2018-09sep15sat-ping/</guid>
       <description>&lt;h1 id=&#34;새-만년필--lamy-2000-해피해킹-기계식-키보드&#34;&gt;새 만년필 : LAMY 2000, 해피해킹, 기계식 키보드&lt;/h1&gt;&#xA;&lt;p&gt;새 만년필을 샀는데, 조금 저렴한 폴리카보네이트 버젼의 LAMY 2000을&#xA;샀다. 기존에 LAMY Lx, 사파리는 행복하게 써왔었는데, 카트리지를 사용해&#xA;충전하는 방식이 아니고 또 가격대도 조금은 높은 만년필을 질렀다.&lt;/p&gt;&#xA;&lt;p&gt;아직 병잉크는 받지 못해서 충전해서 사용은 못해봤다. 기대된다.&lt;/p&gt;&#xA;&lt;p&gt;처음 만년필질을 시작할때는,&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;뭐 그냥 저렴한 저가형 브랜드 실용적인 목적으로만 사서 써야지, 그러니&#xA;사파리랑 Lx정도까진 뭐&amp;hellip;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;..이런 마인드였었다가 점점 만년필 자체로 글을 쓰는 감각에 중독되는거&#xA;같아. 기계식키보드도 그런거 같고.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Distro on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/distro/</link>
+    <link>http://localhost:1313/tags/distro/</link>
     <description>Recent content in Distro on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 02 Apr 2025 05:51:49 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/distro/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/distro/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>가볍고 빠른 antiX Linux &#43; runit, koreader 그리고 bloatware</title>
-      <link>https://ageldama.github.io/posts/2025-04apr/2025-04apr02--01-antix-linux/</link>
+      <link>http://localhost:1313/posts/2025-04apr/2025-04apr02--01-antix-linux/</link>
       <pubDate>Wed, 02 Apr 2025 05:51:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-04apr/2025-04apr02--01-antix-linux/</guid>
+      <guid>http://localhost:1313/posts/2025-04apr/2025-04apr02--01-antix-linux/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;antiX linux&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;오래된 랩탑으로 fedora 그냥 아무 생각없이 대충 쓰는데 좀 버벅. 어차피&#xA;메인드라이버도 아니고 그냥 그러려니 하고 살다가, 좀 답답해서&#xA;lightweight linux distro을 골라봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://antixlinux.com/&#34;&gt;https://antixlinux.com/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;거기에 이전에 시도했던 void linux에서 마음에 들었었던 runit을 init으로&#xA;쓰는 spin으로 선택해서 설치했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;결과는… 놀라울 정도로 가벼웠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;luks disk encryption + btrfs을 기존에는 적용했다가(btrfs이&#xA;기본옵션이어서 귀찮아서), 이번에는 그냥 ext4만으로 설치해서 더&#xA;가벼운걸까 싶기도 하고.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;systemd은 익숙해질수로 편안해지기는 했었는데, 그럼에도 확실히 전통적인&#xA;linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었다.&lt;/p&gt;</description>
     </item>
   </channel>

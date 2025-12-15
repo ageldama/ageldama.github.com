@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hifiberry on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/hifiberry/</link>
+    <link>http://localhost:1313/tags/hifiberry/</link>
     <description>Recent content in Hifiberry on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Wed, 03 Oct 2018 20:00:00 +0900</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/hifiberry/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/hifiberry/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정</title>
-      <link>https://ageldama.github.io/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</link>
+      <link>http://localhost:1313/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</link>
       <pubDate>Wed, 03 Oct 2018 20:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</guid>
+      <guid>http://localhost:1313/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.hifiberry.com/&#34;&gt;https://www.hifiberry.com/&lt;/a&gt; 요거 Raspberry Pi 3에 세팅한 모험에 대한&#xA;이야기.&lt;/p&gt;&#xA;&lt;h1 id=&#34;wifi잡기&#34;&gt;WIFI잡기&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# /etc/wpa_supplicant/wpa_supplicant.conf &#xA;ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev&#xA;#update_config=1&#xA;country=GB&#xA;&#xA;network={&#xA;&#x9;ssid=&amp;#34;iptime&amp;#34;&#xA;&#x9;psk=&amp;#34;xxxxxxxxxx&amp;#34;&#xA;&#x9;key_mgmt=WPA-PSK&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;wpa_passphrase&lt;/code&gt; 안쓰고 그냥 plaintext으로 써도 동작.&lt;/li&gt;&#xA;&lt;li&gt;내 공유기랑은 &lt;code&gt;country=GB&lt;/code&gt; 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤.&lt;/li&gt;&#xA;&lt;li&gt;그리고 &lt;code&gt;ip link set wlan0 {up|down}&lt;/code&gt; 정도로 wlan0 인터페이스를 up/down하면됨.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h1 id=&#34;사운드-드라이버-설정&#34;&gt;사운드 드라이버 설정&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;내장 사운드카드 드라이버는 &lt;a href=&#34;https://ko.wikipedia.org/wiki/Modprobe&#34;&gt;modprobe&lt;/a&gt; blacklist에 추가해서 끄자.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;/boot/config.txt&lt;/code&gt;에 HiFiBerry DAC+ 드라이버 오버레이를 지정해야함.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;내장-사운드-드라이버-끄기&#34;&gt;내장 사운드 드라이버 끄기&lt;/h2&gt;&#xA;&lt;p&gt;다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음.&lt;/p&gt;</description>
     </item>
   </channel>

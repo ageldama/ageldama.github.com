@@ -2,46 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/hugo/</link>
+    <link>http://localhost:1313/tags/hugo/</link>
     <description>Recent content in Hugo on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sun, 30 Nov 2025 10:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Mon, 15 Dec 2025 00:00:01 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deno &#43; esbuild으로 블로그 js빌드</title>
+      <link>http://localhost:1313/posts/2025-12dec/hugo-deno&#43;esbuild/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:01 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-12dec/hugo-deno&#43;esbuild/</guid>
+      <description>&lt;p&gt;&#xA;그간 자바스크립트를 이 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;으로 생성하는 블로그에 사용하면서, 여기저기&#xA;그냥 &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;-태그를 써왔었다. 한군데로 정리하기도 뭐하고,&#xA;자바스크립트를 쓰는 기능은 메인이 아니라고 생각해와서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;검색, darkmode만 자바스크립트를 사용하고 조금씩 붙여놓은 easter eggs도&#xA;사용하니까 조금씩 늘어난 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그냥 cdnjs 같은걸 써도 되겠지만, 그냥 패키지로 내려받아서 아예 내&#xA;블로그에 올리는게 남에 cdn bandwidth을 줄여주는 도리인 것 같았다…만&#xA;github cdn의 bandwidth은 여전히 사용하는 것.&#xA;&lt;span style=&#34;font-size:3rem;&#34;&gt;😜&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;여튼, 그렇다고 사용하는 의존성(예: jquery)의 크기를 줄여서 내보낸 것도&#xA;아니고 점점 의존성관계가 복잡해지는거 같아서 정리를 시작해봤다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>블로그 디자인 수정 &#43; 제목 자동 emoji 붙여주기</title>
-      <link>https://ageldama.github.io/posts/2025-11nov/blog-post-title-emojis/</link>
+      <link>http://localhost:1313/posts/2025-11nov/blog-post-title-emojis/</link>
       <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-11nov/blog-post-title-emojis/</guid>
+      <guid>http://localhost:1313/posts/2025-11nov/blog-post-title-emojis/</guid>
       <description>&lt;p&gt;&#xA;블로그 CSS을 또 수정하고, 레이아웃도 좀 더 고쳤다. 간단하게 가볍게&#xA;보였으면 해서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데 그간 고민해오던 것들이 있음:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;(예전에) 귀찮아서 &lt;code&gt;new-ping.pl&lt;/code&gt;-스크립트 같은거 짜놓고 자동&#xA;생성한 포스팅 제목으로 그대로 포스팅한 &amp;#34;&lt;em&gt;Ping …..&lt;/em&gt;&amp;#34;-같은 제목의&#xA;포스팅들은 archives에서 봐도 뭐가 뭔지 구분이 안됨.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;h1&lt;/code&gt;-같은 markdown/org-mode에서 export한 제목과&#xA;각 포스팅의 제목(이것도 &lt;code&gt;h1&lt;/code&gt;-같은 태그인)이 눈에 딱 들게 구분이&#xA;되지 않았음.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;archives에서 각 포스팅의 preview을 표시했다&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;조금 내용도 나오니까 찾아보기 더 수월해진거 같다. ㅎㅎ&#xA;  그리고 막상 이렇게 전체 목록 / 시간에 따라, 내용을 조금이나마&#xA;  보여주니까 일대기 형식이라 재밌네.&lt;/p&gt;</description>
     </item>
     <item>
       <title>블로그 검색을 다시 짰다 (PageFind 제거)</title>
-      <link>https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/</link>
+      <link>http://localhost:1313/posts/2025-09sep/no-pagefind-anymore/</link>
       <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/</guid>
+      <guid>http://localhost:1313/posts/2025-09sep/no-pagefind-anymore/</guid>
       <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://pagefind.app/&#34;&gt;pagefind&lt;/a&gt;이 freebsd 환경에서 동작하지 않아서, 그냥 다시 짰다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;fuse.js을 사용하는 예제 등이 있었지만&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, 그럴거면 그냥 ajax으로&#xA;얻은 &lt;code&gt;index.json&lt;/code&gt;-을 직접 검색해도 될거 같아서 그냥 javascript 작성&#xA;오랬만에.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 ui등도 내 취향에 맞게 간단하게 만들어서 만족스럽다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;pagefind처럼 검색어에 따라 필요한 만큼만 http get하는게 아니라 조금&#xA;아쉽지만, 전체 &lt;code&gt;index.json&lt;/code&gt;-fetch해도 500kb 안쪽인거 같아서 괜찮지&#xA;않을까 싶음. (거기에 브라우저캐슁도 먹으니까)&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Footnotes&#xA;&lt;/h2&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;footnotes&#34;&gt;&#xA;&lt;hr class=&#34;footnotes-separatator&#34;/&gt;&#xA;&lt;div class=&#34;footnote-definitions&#34;&gt;&#xA;&lt;div class=&#34;footnote-definition&#34;&gt;&#xA;&lt;sup id=&#34;footnote-1&#34;&gt;&lt;a href=&#34;#footnote-reference-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;&lt;div class=&#34;footnote-body&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://findstar.pe.kr/2021/07/10/fuse-search-on-hugo/&#34;&gt;https://findstar.pe.kr/2021/07/10/fuse-search-on-hugo/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Hugo &#43; pagefind 붙여서 검색기능 추가했다</title>
-      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</link>
+      <link>http://localhost:1313/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</link>
       <pubDate>Sun, 16 Mar 2025 06:25:48 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</guid>
+      <guid>http://localhost:1313/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/</guid>
       <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://pagefind.app/&#34;&gt;https://pagefind.app/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는&#xA;pagefind을 붙여봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;처음엔 좀 어색했는데, 커스터마이징을 별로 제공하지 않기는 했지만,&#xA;그래도 이것저것 뜯어서 CSS도 마음에 들게 좀 수정하고, JS/DOM 이벤트도&#xA;적당히 잡아서 마음에 들게 동작하게 고쳤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;별로라고 생각하던 부분들도 다 뜯어 고치고 하면서 더 블로그가 마음에&#xA;들어진다. 🤠&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 03/02/2023 .01: 블로그 디자인 수정</title>
-      <link>https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/</link>
+      <link>http://localhost:1313/posts/2023-02feb/2023-02feb03--01-ping/</link>
       <pubDate>Fri, 03 Feb 2023 18:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/</guid>
+      <guid>http://localhost:1313/posts/2023-02feb/2023-02feb03--01-ping/</guid>
       <description>&lt;p&gt;블로그를 내려놓았다가, 다시 글을 쓰고 생각들을 어느 정도는 공개를 하고&#xA;지내고 싶어져서 다시 열었다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/athul/archie&#34;&gt;사용하던 테마&lt;/a&gt;를 수정해서 쓰기로&#xA;하고, CSS을 여기저기서 복붙해서 적용해보고, &lt;a href=&#34;https://galmuri.quiple.dev/&#34;&gt;갈무리&#xA;웹폰트&lt;/a&gt;도 적용해서, 오히려 원본 테마보다&#xA;더 가볍게 적당히 만들어봤다.&lt;/p&gt;&#xA;&lt;p&gt;색상도, 외양과 기능 디자인 모두 어느 정도 내 취향에 맞게 꾸며 봤다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Org 파일으로 Hugo 포스팅 테스트</title>
-      <link>https://ageldama.github.io/posts/2019-12dec/foo/</link>
+      <link>http://localhost:1313/posts/2019-12dec/foo/</link>
       <pubDate>Wed, 11 Dec 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/posts/2019-12dec/foo/</guid>
+      <guid>http://localhost:1313/posts/2019-12dec/foo/</guid>
       <description>&lt;p&gt;&#xA;적당히 잘 동작하는거 같으니 앞으로는 그냥 혼란스러운 Markdown 대신에&#xA;그냥 Org 파일으로 블로깅 하며 될거 같다. 행벜.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;예전 버젼 Hugo에서는 지원을 제대로 못하던거 같은데, 어느샌가 업데이트&#xA;하니까 되는거 같아서 그냥 슬그머니&#xA;쓰기로. &lt;a href=&#34;https://gohugo.io/content-management/formats/&#34;&gt;https://gohugo.io/content-management/formats/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;기존 마크다운들도 인라인 이미지 문법을 바꾸고, ToC 표시 설정도 바뀌어서 조금 변경.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;아쉬운건 여전히 Org 파일에서 ToC 지원은 빠져 있는거&#xA;같아서… &lt;a href=&#34;https://github.com/snosov1/toc-org&#34;&gt;https://github.com/snosov1/toc-org&lt;/a&gt; 설치해봤다. 그냥 고민할&#xA;필요가 없었구나. ㅋ&lt;/p&gt;&#xA;&lt;p&gt;&#xA;제일 좋은건 code syntax highlight이 예뻐졌다.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Table of Contents                                    &amp;lt;– :TOC: –&amp;gt;&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;#foobar&#34;&gt;foobar&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>

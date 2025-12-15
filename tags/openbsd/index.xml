@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Openbsd on 아겔로그</title>
-    <link>https://ageldama.github.io/tags/openbsd/</link>
+    <link>http://localhost:1313/tags/openbsd/</link>
     <description>Recent content in Openbsd on 아겔로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
     <lastBuildDate>Mon, 15 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ageldama.github.io/tags/openbsd/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/openbsd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hands of Necromancy와 영포티의 추억벤또 🍱</title>
-      <link>https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy/</link>
+      <link>http://localhost:1313/posts/2025-12dec/hands-of-necromancy/</link>
       <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy/</guid>
-      <description>&lt;p&gt;&#xA;👉 &lt;a href=&#34;https://store.steampowered.com/app/1898610/Hands_of_Necromancy/&#34;&gt;Steam 페이지: Hands of Necromancy&lt;/a&gt;&lt;/p&gt;&#xA;&lt;img src=&#34;https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy.jpg&#34; width=&#34;460&#34;&gt;&#xA;&lt;p&gt;&#xA;예전에 사놓았다가 최근에 다시 플레이.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;사양, 지원&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;GTX 1050+ 이상은 되어야 잘 동작할거 같다.&lt;/li&gt;&#xA;&lt;li&gt;SteamDeck / Linux 기본 지원&lt;/li&gt;&#xA;&lt;li&gt;Gamepad 지원: 그런데 그냥 마우스+키보드로 해도 편함.&#xA;&lt;a href=&#34;https://ageldama.github.io/tags/boomer-shooting/&#34;&gt;boomer-shooting&lt;/a&gt;의 고전적인 키맵이랑 완벽히 동일.&lt;/li&gt;&#xA;&lt;li&gt;아쉽지만 한국어는 지원않음.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;Heretic와 Hexen, 그리고 Doom&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;고전적인 boomer-shooting / heretic, hexen을 연상시킨다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  어린 Doom, Doom II 빠돌이였던 나는&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 어떻게(???) 헤러틱을&#xA;  구했던거 같다. 아마도 Shareware였거나, 어쩌면 운이 좋아서 Full&#xA;  version이었던거 같다. 당시 사양이 그렇게 좋지 않은 컴퓨터를 쓰고&#xA;  있었는데(CPU: 486DX2 50Hz, RAM: 4MB), 펜티엄을 가진 친구에게도&#xA;  돌려보라고 💾 3.5&amp;#34; 디스켓으로 복사해주곤 했던 것 같다.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/2025-12dec/hands-of-necromancy/</guid>
+      <description>&lt;p&gt;&#xA;👉 &lt;a href=&#34;https://store.steampowered.com/app/1898610/Hands_of_Necromancy/&#34;&gt;Steam 페이지: Hands of Necromancy&lt;/a&gt;&lt;/p&gt;&#xA;&lt;img src=&#34;http://localhost:1313/posts/2025-12dec/hands-of-necromancy.jpg&#34; width=&#34;460&#34;&gt;&#xA;&lt;p&gt;&#xA;예전에 사놓았다가 최근에 다시 플레이.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;사양, 지원&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;GTX 1050+ 이상은 되어야 잘 동작할거 같다.&lt;/li&gt;&#xA;&lt;li&gt;SteamDeck / Linux 기본 지원&lt;/li&gt;&#xA;&lt;li&gt;Gamepad 지원: 그런데 그냥 마우스+키보드로 해도 편함.&#xA;&lt;a href=&#34;http://localhost:1313/tags/boomer-shooting/&#34;&gt;boomer-shooting&lt;/a&gt;의 고전적인 키맵이랑 완벽히 동일.&lt;/li&gt;&#xA;&lt;li&gt;아쉽지만 한국어는 지원않음.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;Heretic와 Hexen, 그리고 Doom&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;고전적인 boomer-shooting / heretic, hexen을 연상시킨다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  어린 Doom, Doom II 빠돌이였던 나는&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 어떻게(???) 헤러틱을&#xA;  구했던거 같다. 아마도 Shareware였거나, 어쩌면 운이 좋아서 Full&#xA;  version이었던거 같다. 당시 사양이 그렇게 좋지 않은 컴퓨터를 쓰고&#xA;  있었는데(CPU: 486DX2 50Hz, RAM: 4MB), 펜티엄을 가진 친구에게도&#xA;  돌려보라고 💾 3.5&amp;#34; 디스켓으로 복사해주곤 했던 것 같다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

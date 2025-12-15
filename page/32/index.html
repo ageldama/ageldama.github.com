@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.152.2">
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765810154">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765813350">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
-	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
-	<meta property="og:url" content="https://ageldama.github.io/">
+	<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="아겔로그" />
+	<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="아겔로그">
   <meta property="og:locale" content="ko_kr">
@@ -20,9 +20,7 @@
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.8ace4d87ccb8340e9268a9801a0e9d92215bb1fce752c3a6cdb2a3274a268bb7.css" integrity="sha256-is5Nh8y4NA6SaKmAGg6dkiFbsfznUsOmzbKjJ0omi7c=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -37,7 +35,7 @@
 			<header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -97,6 +95,27 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2018-11nov/cl-asdf-custom-load-script/">🧡 ASDF으로 간단한 의존성 연결과 로딩하기</a></h1>
+                                    <time>2018年11月03日
+                                        </time>
+                                        <br><div class="description">
+						
+						<h1 id="system-이런게-왜-필요하지-require있잖아">System? 이런게 왜 필요하지? <code>require</code>있잖아</h1>
+<p>대부분의 유명한 프로그래밍언어들이 <em>커먼리습의 System</em> 에 대응하는
+기능이 명확하게 없으니까, 다른 프로그래밍 하거나 하는 방법으로
+이야기를 하지는 않아야겠다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p><a href="https://lispcookbook.github.io/cl-cookbook/systems.html">https://lispcookbook.github.io/cl-cookbook/systems.html</a> 에서 마음에 드는 설명을 찾을수 있다.</p>
+<blockquote>
+<p>A <strong>system</strong> is a collection of Lisp files that together constitute an
+application or a library, and that should therefore be managed as a
+whole. A <strong>system definition</strong> describes which source files make up the
+system, what the dependencies among them are, and the order they
+should be compiled and loaded in.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item"><h1 class="title"><a href="/posts/2018-11nov/03sat-ping/">🩻 Ping 03/11/2018</a></h1>
                                     <time>2018年11月03日
@@ -200,53 +219,6 @@ Pacman으로 Runtime/Native 설치해서 오히려 속편함.</li>
                                         
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2018-10oct/06sat-cd-ripping/">👇 CD Ripping!</a></h1>
-                                    <time>2018年10月06日
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>요즘에 <a href="/posts/2018-10oct/03wed-ping/">HiFiBerry DAC+</a>으로 라디오,
-음악을 들으며 귀가 즐거워서..</p>
-<p>갖고 있는 씨디가 별로 없는데, 이유는.</p>
-<ol>
-<li>음악을 듣는걸 게을리했었고,</li>
-<li>딱히 음반으로 들었던건, 테잎 시대에 좀 사다가,
-1. 씨디 시대엔 음원을 구하거나 사는게 더 많아지고,
-2. 씨디를 듣지 않게됨.</li>
-</ol>
-<p>그러다가 그냥 음질이 조금이라도 더 낫게 들을려고 CD ripping이 답이라는
-결론을 얻었다.</p>
-<ol>
-<li>어차피 음원 사는거랑 비슷한 가격이 됨.</li>
-<li>음원을 어차피 내가 만드는거라 원하는 음질으로 떠서 보관하면됨.</li>
-<li>그리고 뭣해서 잃어버려도 다시 떠도됨.</li>
-</ol>
-<p>결국 대장정을 시작했다..</p>
-<h1 id="준비물들을-모았다">준비물들을 모았다.</h1>
-<ol>
-<li>CD-ROM 드라이브를 어차피 구해도 SATA방식으로 구해야할거 같고,
-<ol>
-<li>그냥 굳이 내장형으로 붙이기 싫어서, USB방식 ODD으로 구매.</li>
-</ol>
-</li>
-<li>USB이외에 전원이 따로 있어야 제대로 돌아갈테니, 전원이 빵빵하게
-공급되는 USB허브를 구매.</li>
-<li>USB메모리스틱을 샀다.
-<ol>
-<li>HiFiBerry 기계에 저장소로 붙여주려고.</li>
-<li>그런데 생각해보니 용량이 부족해져서 결국엔 NAS을 조립하게 될거
-같아.</li>
-</ol>
-</li>
-</ol>
-<h1 id="abcde">abcde</h1>
-<p>그냥 <a href="https://en.wikipedia.org/wiki/Cdparanoia">cdparanoia</a> 이랑
-<a href="https://en.wikipedia.org/wiki/FLAC">FLAC</a> 정도로 세팅을 하려고 했다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -271,19 +243,9 @@ Pacman으로 Runtime/Native 설치해서 오히려 속편함.</li>
 
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765810154</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765813350</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 
 		</div>
 	</body>

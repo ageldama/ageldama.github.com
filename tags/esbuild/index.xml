@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Esbuild on 아겔로그</title>
+    <link>http://localhost:1313/tags/esbuild/</link>
+    <description>Recent content in Esbuild on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;http://localhost:1313/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Mon, 15 Dec 2025 00:00:01 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/esbuild/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deno &#43; esbuild으로 블로그 js빌드</title>
+      <link>http://localhost:1313/posts/2025-12dec/hugo-deno&#43;esbuild/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:01 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-12dec/hugo-deno&#43;esbuild/</guid>
+      <description>&lt;p&gt;&#xA;그간 자바스크립트를 이 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;으로 생성하는 블로그에 사용하면서, 여기저기&#xA;그냥 &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;-태그를 써왔었다. 한군데로 정리하기도 뭐하고,&#xA;자바스크립트를 쓰는 기능은 메인이 아니라고 생각해와서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;검색, darkmode만 자바스크립트를 사용하고 조금씩 붙여놓은 easter eggs도&#xA;사용하니까 조금씩 늘어난 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그냥 cdnjs 같은걸 써도 되겠지만, 그냥 패키지로 내려받아서 아예 내&#xA;블로그에 올리는게 남에 cdn bandwidth을 줄여주는 도리인 것 같았다…만&#xA;github cdn의 bandwidth은 여전히 사용하는 것.&#xA;&lt;span style=&#34;font-size:3rem;&#34;&gt;😜&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;여튼, 그렇다고 사용하는 의존성(예: jquery)의 크기를 줄여서 내보낸 것도&#xA;아니고 점점 의존성관계가 복잡해지는거 같아서 정리를 시작해봤다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.152.2">
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765810154">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765813349">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
-	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
-	<meta property="og:url" content="https://ageldama.github.io/">
+	<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="아겔로그" />
+	<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="아겔로그">
   <meta property="og:title" content="아겔로그">
   <meta property="og:locale" content="ko_kr">
@@ -20,9 +20,7 @@
             
             
                 
-                    
-                        <link rel="stylesheet" href="/css/styles.8ace4d87ccb8340e9268a9801a0e9d92215bb1fce752c3a6cdb2a3274a268bb7.css" integrity="sha256-is5Nh8y4NA6SaKmAGg6dkiFbsfznUsOmzbKjJ0omi7c=" crossorigin="anonymous">
-                    
+                    <link rel="stylesheet" href="/css/styles.css">
                 
             
         
@@ -37,7 +35,7 @@
 			<header>
     <div class="main ">
         <a class="site-title "
-           href="https://ageldama.github.io/">아겔로그</a>
+           href="http://localhost:1313/">아겔로그</a>
     </div>
 
 
@@ -97,6 +95,37 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2025-11nov/blog-post-title-emojis/">🐌 블로그 디자인 수정 &#43; 제목 자동 emoji 붙여주기</a></h1>
+                                    <time>2025年11月30日
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+블로그 CSS을 또 수정하고, 레이아웃도 좀 더 고쳤다. 간단하게 가볍게
+보였으면 해서.</p>
+<p>
+그런데 그간 고민해오던 것들이 있음:</p>
+<ol>
+<li>(예전에) 귀찮아서 <code>new-ping.pl</code>-스크립트 같은거 짜놓고 자동
+생성한 포스팅 제목으로 그대로 포스팅한 &#34;<em>Ping …..</em>&#34;-같은 제목의
+포스팅들은 archives에서 봐도 뭐가 뭔지 구분이 안됨.</li>
+<li><code>h1</code>-같은 markdown/org-mode에서 export한 제목과
+각 포스팅의 제목(이것도 <code>h1</code>-같은 태그인)이 눈에 딱 들게 구분이
+되지 않았음.</li>
+</ol>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+archives에서 각 포스팅의 preview을 표시했다
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>조금 내용도 나오니까 찾아보기 더 수월해진거 같다. ㅎㅎ
+  그리고 막상 이렇게 전체 목록 / 시간에 따라, 내용을 조금이나마
+  보여주니까 일대기 형식이라 재밌네.</p>&hellip;
+						
+					</div>
+                                        
+				</section>
 				
 				<section class="list-item"><h1 class="title"><a href="/posts/2025-11nov/scripts-rofi-perl5-release/">😪 scripts-rofi-perl5 릴리즈</a></h1>
                                     <time>2025年11月22日
@@ -266,29 +295,6 @@ Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.</p>
                                         
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">▶️ [throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a></h1>
-                                    <time>2025年09月24日
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-코딩을 하다보면, 파일변경시에 자동으로 빌드, 서버재시작, 혹은
-테스트케이스를 실행 되도록 하면 꽤 편리할 수 있다.</p>
-<p>
-커먼리습 같은 경우엔 바로 실행중인 코드가 변경되는 방식이어서 신경
-쓸게 별로 없고, Rails 같은 웹프레임웍은 자동으로 재시작하거나 변경된
-코드를 다시 로딩해주기도 하고, PHP 계열도 웹브라우저를 refresh하면
-자동적으로 새 코드으로 실행하게 된다.</p>
-<p>
-다른 컴파일이 필요한 언어나, 파이썬, 펄 같은 언어들, 혹은 자동으로
-코드에 반영되는 언어/프레임웍을 사용하더라도, 원하는 태스크(예:
-테스트케이스 실행) 같은걸 걸어 놓으려면 커맨드라인에서 지정해두는게
-낫다.</p>&hellip;
-						
-					</div>
-                                        
-				</section>
-				
 				
 
 
@@ -313,19 +319,9 @@ Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.</p>
 
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765810154</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765813349</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
-
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 
 		</div>
 	</body>
