@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>2018, 2019년을 돌아보며 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765799773">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>2018, 2019년을 돌아보며 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765807633">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 
@@ -37,9 +37,7 @@
   <meta name="twitter:title" content="2018, 2019년을 돌아보며">
   <meta name="twitter:description" content="&#34;일의 기쁨과 슬픔&#34; 2018년은 정말 바쁘게 회사에 시간을 쏟으며 보낸거 같다. 그렇다고 개인적인 발전이나 성과를 얻을만한 일은 아니었다. 오히려 알던 것들을 소비하고 엔지니어링 이외의 분야에 많은 흥미로운 경험과 성장을 했던거 같다. 그리고 한국을 떠날때 싫었던 점들을 역시 그대로 느낄 수 밖에 없었던거 같다.
 그리고 2019년에는 한국에서 다시 시작했었던, 내겐 그다지 만족스럽지 못했던 회사생활을 정리했다. 정리하는데 반년 정도가 걸렸다. 나도 우유부단하게 괜한, 그리고 헛된 기대를 했었기 때문에 시간을 오래 끌었었는데, 문제를 경험하고 처음 받았던 인상과 결정이 맞았다.">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
-        
             
             
                 
@@ -89,125 +87,10 @@
 </header>
 
 <script src="/js/bundle.js"></script>
-<script src="/js/js-splash-2.0.min.js"></script>
-<script src="/js/darkmode-js.min.js"></script>
-<script>
-
- let dark_count = 0;
- let dark_hit = 5;
-
- function addDarkmodeWidget() {
-     var options = {
-         
-         
-         
-         time: '0.5s', 
-         mixColor: '#fff', 
-         
-         
-         backgroundColor: '#fffbeb',  
-         buttonColorDark: '#566666',  
-         buttonColorLight: '#566666', 
-         saveInCookies: true, 
-          
-         autoMatchOsTheme: true 
-     }
-
-     var darkmode = new Darkmode(options);
-     window.darkmode = darkmode;
-
-     $('.dark-mode-btn').click(function(){
-         dark_count ++;
-         if (dark_count === dark_hit) {
-             splashText('show me the money!💲');
-             moneymoneymoney();
-         } else {
-             if (dark_count % 2 === 0) {
-                 splashCount(dark_count, dark_hit);
-             }
-             darkmode.toggle();
-         }
-     });
-
-     $('.snow-mode-btn').click(function(){
-         if (!darkmode.isActivated()) {
-             darkmode.toggle(); 
-         }
-         letitsnow();
-         $('.snow-mode-btn').prop('disabled', true);
-     });
- }
-
-
- window.addEventListener('load', addDarkmodeWidget);
-
-
- function letitrain() {
-     $('body').addClass('acid-decay');
- }
-
-
- function splashCount(left, tot) {
-     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
-         use: true,
-         start: FancyAnimation.moveIn,
-         end: FancyAnimation.rubberBand
-     });
-     splash.fromText(`${left}/${tot}`,  10, {
-         color: '#00ff00',
-         'font-family': 'monospace',
-         'font-size': '20rem',
-     });
- }
-
- function splashText(txt) {
-     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
-         use: true,
-         start: FancyAnimation.moveIn,
-         end: FancyAnimation.rubberBand
-     });
-     splash.fromText(txt,  18*60*1000, {
-         color: '#ffd700',
-         'font-family': 'fantasy',
-         'font-size': '2rem',
-     });
- }
-
-</script>
-
-
 
 <div class="search">
     <div class="search-results"></div>
 </div>
-
-
-<template id="search-results-title">
-    <h2>검색어(search term): <span id="search-term"></span></h2>
-</template>
-
-
-<template id="search-results-no-results">
-    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
-</template>
-
-
-<template id="search-results-results-header">
-    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
-</template>
-
-
-<template id="search-result-template"><div class="search_summary">
-    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
-    <p><em class="search_snippet"></em></p>
-    <small>
-        <table>
-            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
-            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
-        </table>
-    </small>
-</div></template>
-
 
 
 
@@ -226,11 +109,6 @@
  }
  
 </script>
-
-
-<script src="/js/lodash.min.js"></script>
-<script src="/js/mark.min.js"></script>
-<script src="/js/search.js"></script>
 
 <main>
     <nav class="post-prevnext" aria-label="posts">
@@ -397,9 +275,8 @@
 </nav>
 
 </main>
-
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765799773</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765807633</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
@@ -412,6 +289,6 @@
         gtag('js', new Date());
         gtag('config', 'G-YSB7MGHZ4V');
     </script>
-<script> </script></div>
+</div>
     </body>
 </html>

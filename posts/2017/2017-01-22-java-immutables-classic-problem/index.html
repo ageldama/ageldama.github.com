@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Java Immutables와 친숙한 오래된 문제들 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765799773">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Java Immutables와 친숙한 오래된 문제들 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765807633">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="https://immutables.github.io/ 요즘 이걸 살짝 봤는데, 재미있었다.
 그런데 일단 깊이보거나 써보기 전에 드는 걱정은,
@@ -47,9 +47,7 @@ IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는�
   <meta name="twitter:description" content="https://immutables.github.io/ 요즘 이걸 살짝 봤는데, 재미있었다.
 그런데 일단 깊이보거나 써보기 전에 드는 걱정은,
 이거 기존의 몇몇 프레임웍이나 라이브러리들이랑은 친하게 지내기 어렵지 않을까. 왜냐하면, 대부분의 POJO에 연관된 생성단계에서, default constructor 와 setter-methods을 갖고, 값을 세팅하는 경우가 대부분인데, 예를들면, 대부분의 ORM 프레임웍들이나 POJO으로 JSON등을 Deserialization해서 직접 객체를 생성할 책임을 프레임웍이나 라이브러리가 가져가는 경우에 대부분. …그러면 결국 말짱황인거 같다.. 아무리 accessor 메서드들 boilerplate으로 생성하는거 막아주는게 좋다고 해도, 솔직히 그냥 한번 IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는게 더 낫겠다는 생각이든다.">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
-        
             
             
                 
@@ -99,125 +97,10 @@ IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는�
 </header>
 
 <script src="/js/bundle.js"></script>
-<script src="/js/js-splash-2.0.min.js"></script>
-<script src="/js/darkmode-js.min.js"></script>
-<script>
-
- let dark_count = 0;
- let dark_hit = 5;
-
- function addDarkmodeWidget() {
-     var options = {
-         
-         
-         
-         time: '0.5s', 
-         mixColor: '#fff', 
-         
-         
-         backgroundColor: '#fffbeb',  
-         buttonColorDark: '#566666',  
-         buttonColorLight: '#566666', 
-         saveInCookies: true, 
-          
-         autoMatchOsTheme: true 
-     }
-
-     var darkmode = new Darkmode(options);
-     window.darkmode = darkmode;
-
-     $('.dark-mode-btn').click(function(){
-         dark_count ++;
-         if (dark_count === dark_hit) {
-             splashText('show me the money!💲');
-             moneymoneymoney();
-         } else {
-             if (dark_count % 2 === 0) {
-                 splashCount(dark_count, dark_hit);
-             }
-             darkmode.toggle();
-         }
-     });
-
-     $('.snow-mode-btn').click(function(){
-         if (!darkmode.isActivated()) {
-             darkmode.toggle(); 
-         }
-         letitsnow();
-         $('.snow-mode-btn').prop('disabled', true);
-     });
- }
-
-
- window.addEventListener('load', addDarkmodeWidget);
-
-
- function letitrain() {
-     $('body').addClass('acid-decay');
- }
-
-
- function splashCount(left, tot) {
-     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
-         use: true,
-         start: FancyAnimation.moveIn,
-         end: FancyAnimation.rubberBand
-     });
-     splash.fromText(`${left}/${tot}`,  10, {
-         color: '#00ff00',
-         'font-family': 'monospace',
-         'font-size': '20rem',
-     });
- }
-
- function splashText(txt) {
-     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
-         use: true,
-         start: FancyAnimation.moveIn,
-         end: FancyAnimation.rubberBand
-     });
-     splash.fromText(txt,  18*60*1000, {
-         color: '#ffd700',
-         'font-family': 'fantasy',
-         'font-size': '2rem',
-     });
- }
-
-</script>
-
-
 
 <div class="search">
     <div class="search-results"></div>
 </div>
-
-
-<template id="search-results-title">
-    <h2>검색어(search term): <span id="search-term"></span></h2>
-</template>
-
-
-<template id="search-results-no-results">
-    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
-</template>
-
-
-<template id="search-results-results-header">
-    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
-</template>
-
-
-<template id="search-result-template"><div class="search_summary">
-    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
-    <p><em class="search_snippet"></em></p>
-    <small>
-        <table>
-            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
-            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
-        </table>
-    </small>
-</div></template>
-
 
 
 
@@ -236,11 +119,6 @@ IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는�
  }
  
 </script>
-
-
-<script src="/js/lodash.min.js"></script>
-<script src="/js/mark.min.js"></script>
-<script src="/js/search.js"></script>
 
 <main>
     <nav class="post-prevnext" aria-label="posts">
@@ -350,9 +228,8 @@ IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는�
 </nav>
 
 </main>
-
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765799773</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765807633</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
@@ -365,6 +242,6 @@ IDE에서 생성하고 평범하고 조금 멍청하게 만들어놓고 쓰는�
         gtag('js', new Date());
         gtag('config', 'G-YSB7MGHZ4V');
     </script>
-<script> </script></div>
+</div>
     </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CQuery &#43; LSP vs CMake-IDE &#43; RTags - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765799773">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CQuery &#43; LSP vs CMake-IDE &#43; RTags - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765807633">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="LSP &#43; CQuery을 써보려고 했는데, 결국 CMake-IDE &#43;
 RTags 조합으로
@@ -42,9 +42,7 @@ flycheck에 전용으로 연동되어 있는 점. company-lsp이 생각보다 �
   <meta name="twitter:description" content="LSP &#43; CQuery을 써보려고 했는데, 결국 CMake-IDE &#43; RTags 조합으로 원래대로 쓰게될거 같아. :
 _build/ 와 같이 CMake, Ninja, Makefile등의 파일들을 별도의 디렉토리로 만들어서 필드하고 싶은데, 제대로 지원을 못한다. 1. 그냥 프로젝트 소스코드랑 같이 generate하고 gcc등의 중간 파일이 모두 같이 남아서 지저분해져서 싫어함. 아직은 별로 내 마음에 꼭 들게 만들기는 어려울거 같아서. 그래도 인상적이었던 부분들:
 flycheck에 전용으로 연동되어 있는 점. company-lsp이 생각보다 훨씬 부드럽고 자동완성 잘되는거. 미래에는 그냥 LSP기반만 남을거 같아서, 이것도 “helm-rg의 모험&#34;처럼 아직은 완전히 전환은 못할거 같긴하다.">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
-        
             
             
                 
@@ -94,125 +92,10 @@ flycheck에 전용으로 연동되어 있는 점. company-lsp이 생각보다 �
 </header>
 
 <script src="/js/bundle.js"></script>
-<script src="/js/js-splash-2.0.min.js"></script>
-<script src="/js/darkmode-js.min.js"></script>
-<script>
-
- let dark_count = 0;
- let dark_hit = 5;
-
- function addDarkmodeWidget() {
-     var options = {
-         
-         
-         
-         time: '0.5s', 
-         mixColor: '#fff', 
-         
-         
-         backgroundColor: '#fffbeb',  
-         buttonColorDark: '#566666',  
-         buttonColorLight: '#566666', 
-         saveInCookies: true, 
-          
-         autoMatchOsTheme: true 
-     }
-
-     var darkmode = new Darkmode(options);
-     window.darkmode = darkmode;
-
-     $('.dark-mode-btn').click(function(){
-         dark_count ++;
-         if (dark_count === dark_hit) {
-             splashText('show me the money!💲');
-             moneymoneymoney();
-         } else {
-             if (dark_count % 2 === 0) {
-                 splashCount(dark_count, dark_hit);
-             }
-             darkmode.toggle();
-         }
-     });
-
-     $('.snow-mode-btn').click(function(){
-         if (!darkmode.isActivated()) {
-             darkmode.toggle(); 
-         }
-         letitsnow();
-         $('.snow-mode-btn').prop('disabled', true);
-     });
- }
-
-
- window.addEventListener('load', addDarkmodeWidget);
-
-
- function letitrain() {
-     $('body').addClass('acid-decay');
- }
-
-
- function splashCount(left, tot) {
-     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
-         use: true,
-         start: FancyAnimation.moveIn,
-         end: FancyAnimation.rubberBand
-     });
-     splash.fromText(`${left}/${tot}`,  10, {
-         color: '#00ff00',
-         'font-family': 'monospace',
-         'font-size': '20rem',
-     });
- }
-
- function splashText(txt) {
-     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
-         use: true,
-         start: FancyAnimation.moveIn,
-         end: FancyAnimation.rubberBand
-     });
-     splash.fromText(txt,  18*60*1000, {
-         color: '#ffd700',
-         'font-family': 'fantasy',
-         'font-size': '2rem',
-     });
- }
-
-</script>
-
-
 
 <div class="search">
     <div class="search-results"></div>
 </div>
-
-
-<template id="search-results-title">
-    <h2>검색어(search term): <span id="search-term"></span></h2>
-</template>
-
-
-<template id="search-results-no-results">
-    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
-</template>
-
-
-<template id="search-results-results-header">
-    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
-</template>
-
-
-<template id="search-result-template"><div class="search_summary">
-    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
-    <p><em class="search_snippet"></em></p>
-    <small>
-        <table>
-            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
-            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
-        </table>
-    </small>
-</div></template>
-
 
 
 
@@ -231,11 +114,6 @@ flycheck에 전용으로 연동되어 있는 점. company-lsp이 생각보다 �
  }
  
 </script>
-
-
-<script src="/js/lodash.min.js"></script>
-<script src="/js/mark.min.js"></script>
-<script src="/js/search.js"></script>
 
 <main>
     <nav class="post-prevnext" aria-label="posts">
@@ -323,9 +201,8 @@ RTags</a> 조합으로
 </nav>
 
 </main>
-
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765799773</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765807633</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
@@ -338,6 +215,6 @@ RTags</a> 조합으로
         gtag('js', new Date());
         gtag('config', 'G-YSB7MGHZ4V');
     </script>
-<script> </script></div>
+</div>
     </body>
 </html>

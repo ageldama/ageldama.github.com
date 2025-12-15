@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 23/May/2020 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765799773">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 23/May/2020 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765807633">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
 지난 2달여간 매일 같이 몰입해 매진한 작업의 성능 테스트를
@@ -35,9 +35,7 @@
   <meta name="twitter:description" content="지난 2달여간 매일 같이 몰입해 매진한 작업의 성능 테스트를 진행했다. 그리고 매 시점마다 테스트와 측정 결과에서 놀라던 것과 마찬가지 포인트에서 많은 관점이 변화한다. 아직도 많은 일을 더 해나가야겠지만 그래도 지금은 이 정도에서 우선은 만족스럽다.
 작년과 재작년, 그 이전에는 매 일터마다 배울 점들이 있었던 것 같다. 그리고 지난 포스팅에도 말했듯이 내 많은 관점들을 발전시켜준 좋은 사람들과 멋진 경험들을 했었던 것 같다.
 다만 올해 잠시 조인했었던 곳에서는 정반대의 경험이었었다. 많은, 이미 알고 있는 것들을 다시 확인했는데 그것들은 나 자신으로부터 배운 것들과 타산지석의 가르침들이었었다.">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
-        
             
             
                 
@@ -87,125 +85,10 @@
 </header>
 
 <script src="/js/bundle.js"></script>
-<script src="/js/js-splash-2.0.min.js"></script>
-<script src="/js/darkmode-js.min.js"></script>
-<script>
-
- let dark_count = 0;
- let dark_hit = 5;
-
- function addDarkmodeWidget() {
-     var options = {
-         
-         
-         
-         time: '0.5s', 
-         mixColor: '#fff', 
-         
-         
-         backgroundColor: '#fffbeb',  
-         buttonColorDark: '#566666',  
-         buttonColorLight: '#566666', 
-         saveInCookies: true, 
-          
-         autoMatchOsTheme: true 
-     }
-
-     var darkmode = new Darkmode(options);
-     window.darkmode = darkmode;
-
-     $('.dark-mode-btn').click(function(){
-         dark_count ++;
-         if (dark_count === dark_hit) {
-             splashText('show me the money!💲');
-             moneymoneymoney();
-         } else {
-             if (dark_count % 2 === 0) {
-                 splashCount(dark_count, dark_hit);
-             }
-             darkmode.toggle();
-         }
-     });
-
-     $('.snow-mode-btn').click(function(){
-         if (!darkmode.isActivated()) {
-             darkmode.toggle(); 
-         }
-         letitsnow();
-         $('.snow-mode-btn').prop('disabled', true);
-     });
- }
-
-
- window.addEventListener('load', addDarkmodeWidget);
-
-
- function letitrain() {
-     $('body').addClass('acid-decay');
- }
-
-
- function splashCount(left, tot) {
-     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
-         use: true,
-         start: FancyAnimation.moveIn,
-         end: FancyAnimation.rubberBand
-     });
-     splash.fromText(`${left}/${tot}`,  10, {
-         color: '#00ff00',
-         'font-family': 'monospace',
-         'font-size': '20rem',
-     });
- }
-
- function splashText(txt) {
-     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
-         use: true,
-         start: FancyAnimation.moveIn,
-         end: FancyAnimation.rubberBand
-     });
-     splash.fromText(txt,  18*60*1000, {
-         color: '#ffd700',
-         'font-family': 'fantasy',
-         'font-size': '2rem',
-     });
- }
-
-</script>
-
-
 
 <div class="search">
     <div class="search-results"></div>
 </div>
-
-
-<template id="search-results-title">
-    <h2>검색어(search term): <span id="search-term"></span></h2>
-</template>
-
-
-<template id="search-results-no-results">
-    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
-</template>
-
-
-<template id="search-results-results-header">
-    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
-</template>
-
-
-<template id="search-result-template"><div class="search_summary">
-    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
-    <p><em class="search_snippet"></em></p>
-    <small>
-        <table>
-            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
-            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
-        </table>
-    </small>
-</div></template>
-
 
 
 
@@ -224,11 +107,6 @@
  }
  
 </script>
-
-
-<script src="/js/lodash.min.js"></script>
-<script src="/js/mark.min.js"></script>
-<script src="/js/search.js"></script>
 
 <main>
     <nav class="post-prevnext" aria-label="posts">
@@ -314,9 +192,8 @@
 </nav>
 
 </main>
-
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765799773</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765807633</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
@@ -329,6 +206,6 @@
         gtag('js', new Date());
         gtag('config', 'G-YSB7MGHZ4V');
     </script>
-<script> </script></div>
+</div>
     </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 13/Oct/2019 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765799773">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 13/Oct/2019 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765807633">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="집중하는게 내게 더 좋겠다는 생각이든다.
 단시간에 어떤 일에 집중하는 일은 만족스럽다. 그런 시간단위의 집중이
@@ -36,9 +36,7 @@ Org파일 한 개나 메모지,
 단시간에 어떤 일에 집중하는 일은 만족스럽다. 그런 시간단위의 집중이 아니라 기간이라고 할만큼 며칠, 몇주에 걸쳐, 한정된 한두개의 주제에만 집중해서 생각하고 만들거나 글을 써가는게 필요하다.
 혼자 관심이 가거나 생각하는 주제가 떠오르면 Org파일 한 개나 메모지, 핸드폰에 적어놓는다. 그리고 내가 가진 정리하는 방식에 따라 조금씩 생각이 다듬어질때마다 저장매체를 바꿔가며 기록해나간다. 문득 그 Org 파일 을 열었는데, 너무 많은 내용들이, 그것도 폭넓은 다양한 주제들에 대해서 걸쳐있음을 봤다.
 다양한 주제에 관심이 있는건 어쩔 수 없겠지만 각 주제마다 내가 투사하는 시간과 노력이 너무 분산되는거 아닌가 생각해왔다.">
-<script src="https://ageldama.github.io/js/jquery-3.7.1.min.js"></script>
 
-        
             
             
                 
@@ -88,125 +86,10 @@ Org파일 한 개나 메모지,
 </header>
 
 <script src="/js/bundle.js"></script>
-<script src="/js/js-splash-2.0.min.js"></script>
-<script src="/js/darkmode-js.min.js"></script>
-<script>
-
- let dark_count = 0;
- let dark_hit = 5;
-
- function addDarkmodeWidget() {
-     var options = {
-         
-         
-         
-         time: '0.5s', 
-         mixColor: '#fff', 
-         
-         
-         backgroundColor: '#fffbeb',  
-         buttonColorDark: '#566666',  
-         buttonColorLight: '#566666', 
-         saveInCookies: true, 
-          
-         autoMatchOsTheme: true 
-     }
-
-     var darkmode = new Darkmode(options);
-     window.darkmode = darkmode;
-
-     $('.dark-mode-btn').click(function(){
-         dark_count ++;
-         if (dark_count === dark_hit) {
-             splashText('show me the money!💲');
-             moneymoneymoney();
-         } else {
-             if (dark_count % 2 === 0) {
-                 splashCount(dark_count, dark_hit);
-             }
-             darkmode.toggle();
-         }
-     });
-
-     $('.snow-mode-btn').click(function(){
-         if (!darkmode.isActivated()) {
-             darkmode.toggle(); 
-         }
-         letitsnow();
-         $('.snow-mode-btn').prop('disabled', true);
-     });
- }
-
-
- window.addEventListener('load', addDarkmodeWidget);
-
-
- function letitrain() {
-     $('body').addClass('acid-decay');
- }
-
-
- function splashCount(left, tot) {
-     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
-         use: true,
-         start: FancyAnimation.moveIn,
-         end: FancyAnimation.rubberBand
-     });
-     splash.fromText(`${left}/${tot}`,  10, {
-         color: '#00ff00',
-         'font-family': 'monospace',
-         'font-size': '20rem',
-     });
- }
-
- function splashText(txt) {
-     let splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
-         use: true,
-         start: FancyAnimation.moveIn,
-         end: FancyAnimation.rubberBand
-     });
-     splash.fromText(txt,  18*60*1000, {
-         color: '#ffd700',
-         'font-family': 'fantasy',
-         'font-size': '2rem',
-     });
- }
-
-</script>
-
-
 
 <div class="search">
     <div class="search-results"></div>
 </div>
-
-
-<template id="search-results-title">
-    <h2>검색어(search term): <span id="search-term"></span></h2>
-</template>
-
-
-<template id="search-results-no-results">
-    <h3><u>--- 검색결과가 없습니다. ---</u></h3>
-</template>
-
-
-<template id="search-results-results-header">
-    <h3>--- 검색결과: <span id="search-results-count"></span>건 ---</u></h3>
-</template>
-
-
-<template id="search-result-template"><div class="search_summary">
-    <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
-    <p><em class="search_snippet"></em></p>
-    <small>
-        <table>
-            <tr class="search_iftags"><td><strong>Tags</strong></td><td class="search_tags"></td></tr>
-            <tr class="search_ifcategories"><td><strong>Categories</strong></td><td class="search_categories"></td></tr>
-        </table>
-    </small>
-</div></template>
-
 
 
 
@@ -225,11 +108,6 @@ Org파일 한 개나 메모지,
  }
  
 </script>
-
-
-<script src="/js/lodash.min.js"></script>
-<script src="/js/mark.min.js"></script>
-<script src="/js/search.js"></script>
 
 <main>
     <nav class="post-prevnext" aria-label="posts">
@@ -307,9 +185,8 @@ Org파일 한 개나 메모지,
 </nav>
 
 </main>
-
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765799773</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765807633</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
@@ -322,6 +199,6 @@ Org파일 한 개나 메모지,
         gtag('js', new Date());
         gtag('config', 'G-YSB7MGHZ4V');
     </script>
-<script> </script></div>
+</div>
     </body>
 </html>
