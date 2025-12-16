@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765855066">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765856548">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -97,6 +97,45 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-10oct/lisp-asdf-subdir-finder/">🔝 &#34;커먼리습 ASDF 불러오기 편하게 하기&#34; 대모험</a></h1>
+                                    <time>2020년10월23일
+                                        </time>
+                                        <br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+ASDF와 system definition file 검색의 정석
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>이전에 <a href="/posts/2018-11nov/cl-asdf-custom-load-script/">ASDF을 이용하여 커먼리습 프로젝트의 의존성, 시스템을 로딩하기</a>
+  에 대해서 설명한 적이 있었다.</p>
+<p>
+  이전에 다룬 내용은 정석적으로 <code>$HOME/common-lisp</code> 디렉토리에 <code>.asd</code>
+  파일을 심볼릭링크를 걸고, <code>(asdf:load-system ..)</code> 을 시도하는
+  내용이었었다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Prototyping등 더 편안하게 혼자 코딩을 할 때는…
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>혼자 커먼리습 코딩을 하면서, 나는 더 간단하게 프로젝트를 시작하는
+  방법을 선호한다.</p>
+<p>
+  커먼리습이 파일 이름이나 경로에 대해서 의존하는 것이 아니고,
+  컴파일시점, 로딩시점에 순서에 따라 로딩해서 최종적으로 컴파일하여
+  적재한 결과 이미지를 더 중요하게 여기기 때문에, 그리고 그런 컴파일,
+  빌드, 로딩과 같은 모든 단계들 자체도 커먼리습 표현식 그자체로
+  동작하기 때문에 그냥 하나의 소스파일을 섹션별로 나눠서 작업하면
+  편리하다.</p>&hellip;
+						
+					</div>
+                                        <span class="permalink">
+					    <a href="/posts/2020-10oct/lisp-asdf-subdir-finder/" class="button-link">▶️ 읽으러 가기</a>
+                                        </span>
+				</section>
 				
 				<section class="list-item"><h1 class="title"><a href="/posts/2020-10oct/leet-code-1614-2nd/">🐖 CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
                                     <time>2020년10월21일
@@ -294,35 +333,6 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
                                         </span>
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2020-10oct/ping-16fri/">🤲 Ping 17/Oct/2020</a></h1>
-                                    <time>2020년10월17일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-웹프론트엔드 개발을 조금씩 해보고 있다. 처음에는 예전 방식으로만
-하려고 하다가 조금씩 겨우 써보던 webpack을 다시 가이드를 차근차근
-공부하고 동작하는 방식을 이해하도록 뜯어보고 돌려봤다.</p>
-<p>
-생각보다 단순하게, 그리고 확장성 있게 쓸만한 빌드도구였다.</p>
-<p>
-다만 문제는 설정이 복잡하고 이해하기 힘든 점보다는 빌드 시간이 너무
-느린 점이었다. (내게는)</p>
-<p>
-그래서 parcel bundler을 시도 했는데, 설정도 거의 필요 없이 바로
-동작하고 하는 점은 좋고, 성능도 정말 빨랐다.</p>
-<p>
-다만 Vim/Emacs으로 파일을 편집하고 저장할 때, <code>parcel watch</code> 대상인
-파일들을 종종 아예 dev-server을 재시작해야만 제대로 동작하는 상태로
-빠지는게 조금 짜증났다. 기본으로 webpack보다는 이런 자잘한 부분이 좀
-덜 다듬어진걸까 싶다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2020-10oct/ping-16fri/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
 				<nav class="posts-pagination" aria-label="Page navigation">
 
     
@@ -341,7 +351,7 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
 </nav>
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765855066</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765856548</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

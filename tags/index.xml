@@ -7,20 +7,83 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 15 Dec 2025 00:00:01 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Dec 2025 03:20:28 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
       <link>https://ageldama.github.io/tags/blog/</link>
-      <pubDate>Mon, 15 Dec 2025 00:00:01 +0000</pubDate>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Blogging</title>
       <link>https://ageldama.github.io/tags/blogging/</link>
-      <pubDate>Mon, 15 Dec 2025 00:00:01 +0000</pubDate>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/blogging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Css</title>
+      <link>https://ageldama.github.io/tags/css/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Esbuild</title>
+      <link>https://ageldama.github.io/tags/esbuild/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/esbuild/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Html</title>
+      <link>https://ageldama.github.io/tags/html/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://ageldama.github.io/tags/hugo/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Javascript</title>
+      <link>https://ageldama.github.io/tags/javascript/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Js</title>
+      <link>https://ageldama.github.io/tags/js/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Makefile</title>
+      <link>https://ageldama.github.io/tags/makefile/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/makefile/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sass</title>
+      <link>https://ageldama.github.io/tags/sass/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/sass/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scss</title>
+      <link>https://ageldama.github.io/tags/scss/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/scss/</guid>
       <description></description>
     </item>
     <item>
@@ -49,34 +112,6 @@
       <link>https://ageldama.github.io/tags/deno/</link>
       <pubDate>Mon, 15 Dec 2025 00:00:01 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/deno/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Esbuild</title>
-      <link>https://ageldama.github.io/tags/esbuild/</link>
-      <pubDate>Mon, 15 Dec 2025 00:00:01 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/esbuild/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hugo</title>
-      <link>https://ageldama.github.io/tags/hugo/</link>
-      <pubDate>Mon, 15 Dec 2025 00:00:01 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Javascript</title>
-      <link>https://ageldama.github.io/tags/javascript/</link>
-      <pubDate>Mon, 15 Dec 2025 00:00:01 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/javascript/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Makefile</title>
-      <link>https://ageldama.github.io/tags/makefile/</link>
-      <pubDate>Mon, 15 Dec 2025 00:00:01 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/makefile/</guid>
       <description></description>
     </item>
     <item>
@@ -371,13 +406,6 @@
       <link>https://ageldama.github.io/tags/vulnerability/</link>
       <pubDate>Sat, 06 Dec 2025 10:20:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/vulnerability/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Css</title>
-      <link>https://ageldama.github.io/tags/css/</link>
-      <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/css/</guid>
       <description></description>
     </item>
     <item>
@@ -987,13 +1015,6 @@
       <link>https://ageldama.github.io/tags/iphone/</link>
       <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/iphone/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Js</title>
-      <link>https://ageldama.github.io/tags/js/</link>
-      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/js/</guid>
       <description></description>
     </item>
     <item>
@@ -2331,13 +2352,6 @@
       <link>https://ageldama.github.io/tags/hotwired/</link>
       <pubDate>Wed, 29 Jun 2022 17:03:58 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/hotwired/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Html</title>
-      <link>https://ageldama.github.io/tags/html/</link>
-      <pubDate>Wed, 29 Jun 2022 17:03:58 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/html/</guid>
       <description></description>
     </item>
     <item>
