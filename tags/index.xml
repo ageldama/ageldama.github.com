@@ -10,6 +10,13 @@
     <lastBuildDate>Tue, 16 Dec 2025 03:20:28 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Bash</title>
+      <link>https://ageldama.github.io/tags/bash/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Blog</title>
       <link>https://ageldama.github.io/tags/blog/</link>
       <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
@@ -35,6 +42,13 @@
       <link>https://ageldama.github.io/tags/esbuild/</link>
       <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/esbuild/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gmake</title>
+      <link>https://ageldama.github.io/tags/gmake/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/gmake/</guid>
       <description></description>
     </item>
     <item>
@@ -73,6 +87,13 @@
       <description></description>
     </item>
     <item>
+      <title>Perl</title>
+      <link>https://ageldama.github.io/tags/perl/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/perl/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Sass</title>
       <link>https://ageldama.github.io/tags/sass/</link>
       <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
@@ -84,6 +105,13 @@
       <link>https://ageldama.github.io/tags/scss/</link>
       <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/scss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sh</title>
+      <link>https://ageldama.github.io/tags/sh/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/sh/</guid>
       <description></description>
     </item>
     <item>
@@ -441,13 +469,6 @@
       <link>https://ageldama.github.io/tags/launcher/</link>
       <pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/launcher/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Perl</title>
-      <link>https://ageldama.github.io/tags/perl/</link>
-      <pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/perl/</guid>
       <description></description>
     </item>
     <item>
