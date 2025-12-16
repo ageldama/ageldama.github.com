@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765856930">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765858992">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -98,6 +98,23 @@
 				
 				
 				
+				<section class="list-item"><h1 class="title"><a href="/posts/2018-04apr/2018-04apr-golang-windows-vscode/">🥂 Golang Windows에서 Vscode이랑 행복하게 쓰기</a></h1>
+                                    <time>2018년04월14일
+                                        </time>
+                                        <br><div class="description">
+						
+						<p><a href="https://golang.org/">Golang</a> 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아.
+그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 <a href="https://code.visualstudio.com/">VsCode</a> 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만&hellip;)</p>
+<p>여튼 그런데 윈도에서 기본적으로 C컴파일러 설치되어 있어야 제대로 굴러가서,
+<a href="https://sourceforge.net/projects/mingw-w64/">Mingw64</a> 설치하고, <code>$MINGW64/bin</code> 디렉토리 <code>$PATH</code>에 걸어주니 잘됨.</p>
+<p>VsCode에서 디버거도 잘 붙고 만족스럽다.</p>&hellip;
+						
+					</div>
+                                        <span class="permalink">
+					    <a href="/posts/2018-04apr/2018-04apr-golang-windows-vscode/" class="button-link">▶️ 읽으러 가기</a>
+                                        </span>
+				</section>
+				
 				<section class="list-item"><h1 class="title"><a href="/posts/2017/2017-10-22-blogging/">🐸 2017년 10월 22일, 블로깅 귀찮아</a></h1>
                                     <time>2017년10월22일
                                         </time>
@@ -189,53 +206,6 @@ asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운
                                         </span>
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2017/2017-02-25-sbcl-osx-multithread/">👐 SBCL을 OSX에서 실행할때 멀티쓰레딩 켜기.</a></h1>
-                                    <time>2017년02월25일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>SBCL은 멀티쓰레딩을 잘 지원하는 커먼리습 컴파일러이지만,
-공식사이트에서 제공하는 리눅스 바이너리가 아니라 OSX 바이너리는
-멀티쓰레딩이 꺼져서 컴파일되어있다.</p>
-<p><a href="http://www.sbcl.org/manual/#Threading">http://www.sbcl.org/manual/#Threading</a></p>
-<p>요건 자기 리습에서 <code>*features*</code> 을 평가해서, 리스트에 <code>:threading</code>,
-<code>:sb-thread</code> 같은 키워드를 포함하는지 확인해보면 알 수 있다.</p>
-<p>어쨌든 지원하지 않을 경우에, 컴파일을 다시 해야하는데, 우선
-준비물은 <a href="http://clisp.org/">GNU CLISP</a> 같은 여기저기서 잘굴러가고
-적당히 설치해서 부트스크래핑에 이용 가능한 커먼리습 컴파일러를 준비한다.</p>
-<p>다음 포스트를 참고해서 작업해봤다.:</p>
-<p><a href="http://haminhvuong-blog.tumblr.com/post/22109095116/compile-sbcl-with-multi-thread-enabled-on-os-x">http://haminhvuong-blog.tumblr.com/post/22109095116/compile-sbcl-with-multi-thread-enabled-on-os-x</a></p>
-<p>create <code>customize-target-features.lisp</code> with content</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
-</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
-</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
-</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">4</a>
-</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">5</a>
-</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6">6</a>
-</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7">7</a>
-</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8">8</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">features</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="k">flet</span> <span class="p">((</span><span class="nv">enable</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nb">pushnew</span> <span class="nv">x</span> <span class="nv">features</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="nv">disable</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nb">setf</span> <span class="nv">features</span> <span class="p">(</span><span class="nf">remove</span> <span class="nv">x</span> <span class="nv">features</span><span class="p">))))</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">;; Threading support, available only on x86/x86-64 Linux, x86Solaris</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">;; and x86 Mac OS X (experimental).</span>
-</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">enable</span> <span class="ss">:sb-thread</span><span class="p">)))</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>그리고 다음의 커맨드들로 빌드하고 설치 끝.</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2017/2017-02-25-sbcl-osx-multithread/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
 				<nav class="posts-pagination" aria-label="Page navigation">
 
     
@@ -254,7 +224,7 @@ asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운
 </nav>
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765856930</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765858992</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

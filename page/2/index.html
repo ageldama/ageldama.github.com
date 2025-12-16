@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765856929">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765858991">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -97,6 +97,48 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2025-12dec/pgrp-rhapsody/">🐮 process-tree 정리의 rhapsody</a></h1>
+                                    <time>2025년12월07일
+                                        </time>
+                                        <br><div class="description">
+						
+						<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+발단
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li>
+<p>상황배경:</p>
+<ol>
+<li>내 프로그램은 순박하게 <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>을 실행한다.</li>
+<li>실행된 yt-dlp은 또 내가 지정한대로, 실제 다운로더로서 <a href="https://aria2.github.io/">aria2c</a>을
+실행하고,</li>
+<li>이렇게 실행된 aria2c은 다시금 내가 지정한대로, 충실히, 자기자신을
+10개 정도의 동시프로세스으로 복제하여 병렬실행된다.</li>
+</ol>
+</li>
+<li>
+<p>…그런데…</p>
+<ol>
+<li>갑자기 Control-C(<code>SIGINT</code>)을 눌러 내 프로그램을 종료했다.</li>
+<li>😕 <span style="text-decoration: underline;">yt-dlp 프로세스와 그 하위 aria2c 프로세스 10여개는 종료되었을까?</span></li>
+</ol>
+</li>
+</ol>
+<p>
+  … yt-dlp, aria2c에 기대하는 behavior은: <span style="text-decoration: underline;">그렇다</span>-이다.</p>
+<p>
+  그런데 그렇지 않을 경우도 있을테고(순전히 각 애플리케이션의 처리에
+  따를테니까, 플랫폼(예: linux / freebsd)에 따라 그렇게 되지 않는
+  경우도 있다. 😑</p>&hellip;
+						
+					</div>
+                                        <span class="permalink">
+					    <a href="/posts/2025-12dec/pgrp-rhapsody/" class="button-link">▶️ 읽으러 가기</a>
+                                        </span>
+				</section>
 				
 				<section class="list-item"><h1 class="title"><a href="/posts/2025-12dec/reactjs&#43;nextjs-rce/">🌋 (주절주절) react.js / next.js RCE 보안문제와 아기 히틀러 딜레마</a></h1>
                                     <time>2025년12월06일
@@ -224,66 +266,6 @@ archives에서 각 포스팅의 preview을 표시했다
                                         </span>
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2025-11nov/my-elisp-requires/">🕯️ 내 emacs elisp &#34;requires&#34;</a></h1>
-                                    <time>2025년11월16일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.</p>
-<p>
-다음처럼 <code>init.el</code>-파일에서 로딩함: <a href="https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/samples/EXAMPLE-init.el">사용예시</a></p>
-<div class="src src-emacs-lisp">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
-</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
-</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
-</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
-</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
-</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">ag-requires</span>
-</span></span><span class="line"><span class="cl">   <span class="nb">:tag-:*feats</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">   <span class="nb">:compile</span>  <span class="c1">;; ... 바이트컴파일</span>
-</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-recentf</span>                  <span class="c1">; dpkg=+</span>
-</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-savehist</span>                 <span class="c1">; dpkg=+</span>
-</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-avy</span>                      <span class="c1">; dpkg=elpa-avy</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">   <span class="nb">:nocompile</span> <span class="c1">;; ... 여기부터는 바이트컴파일X</span>
-</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-rg</span>                       <span class="c1">; dpkg=elpa-rg</span>
-</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-c</span>                        <span class="c1">; dpkg=+</span>
-</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-perl5</span>                    <span class="c1">; dpkg=+</span>
-</span></span><span class="line"><span class="cl">   <span class="p">)</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<ol>
-<li>
-<p>자동으로 byte-compile해서 로딩속도 빨라지도록 매크로 짜놓았음:</p>
-<ul>
-<li><a href="https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95">https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95</a></li>
-</ul>
-</li>
-<li>예전에 짜놓은거, 버그 고치고 다시 빠르게 로딩되도록 잘 써먹어서
-기분 좋음.</li>
-</ol>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2025-11nov/my-elisp-requires/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
 				<nav class="posts-pagination" aria-label="Page navigation">
 
     
@@ -302,7 +284,7 @@ Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.</p>
 </nav>
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765856929</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765858992</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

@@ -1,12 +1,12 @@
 
 [
  {
-     "permalink": "https://ageldama.github.io/posts/2025-12dec/2025-12dec16--01-ping/","title": "👒 Hugo 블로그 디자인 고쳐나가면서 생각",
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/2025-12dec16--02-ping/","title": "😱 Emacs 일기: vi-mode은 그만 쓰고, windmove은 쓰기 시작",
      
-     "tags": ["blog", "blogging", "hugo", "css", "sass", "scss", "js", "javascript", "html", "sh", "bash", "gmake", "makefile", "esbuild", "perl"],
+     "tags": ["evil-mode", "vim", "vi", "emulation", "layer", "spacemacs", "doomemacs", "windmove", "ace-window", "emacs", "editor", "ansi-term", "keybinding"],
      
  "description": "",
- "contents": " 2024년엔 “CSS/JS에 의존하지 않는 블로그를 만들자”-였다가, 조금씩 뜯어고쳐 나갔다. 사용편의나 읽기 적당하도록 색상과 정렬정도를 고쳐나갔다.\n그러다가 2025년 올해엔 아예 Hugo theme을 새로 정리해서 다시 만들었다. 이전에 해오던 것들을 더 정제하고 구조를 만들어 나갔다.\n처음엔 다른 CSS프레임웍1 을 더 가져와 쓰려고 고민하다가, 그냥 이대로 적당한거 같아서, 가장 가벼운 상태에서 진행해왔다.\n생각보다 Responsive / Mobile 지원은 재밌었다.\n다만, 외양요소가 조금씩 변경될 때마다, 결국 회귀적인 검토과정이 필요한데, 이걸 Layout 체크, BrowserStack와 같은, 혹은 그런 빌드스크립트를 만들어서 스크린샷 비교 기능 같은걸 자동화 테스트하면 유리하겠단 생각. 물론 개인 정적사이트 블로깅에 그런건 오버킬이지. ㅎㅎ하지만 어차피 취미영역이기 때문에 뭘 어떻게 내가 즐겁고 편하게 한다면 가치가 있을것 같다.\n그리고 다른 일들도 마찬가지지만, 대부분은 자기가 뭘 쓰고 있고, 뭘 하려고 하는지를 잘 이해하고 알아차리는게 정말 중요한것 같다. 실망스러운 경우엔, 그걸 스스로 그러고 싶어서, 그래야 자기 기분이 충족되니까 오해하거나, 아니면 정말 이해의 범위와 깊이가 그래서 제한되는 경우도 종종 있을 것 같다. 하지만 실상을 잘 살펴보면, 더 적합하고 단순하고 효과적인 것들을 찾아내거나 재발견해야 했던거 같다. 그리고 그게 즐겁다.\nFootnotes 1 Bootstrap 5, Tailwind CSS, Bulma을 고려했었다.\n"},
+ "contents": " vi emulation-layer: evil-mode을 그만 쓰게됐다 이맥스는 거의 20년 넘게 써온거 같다. 물론 예전엔 지금보다 훨씬 더 제대로 이해하고 쓰진 못했었다.🥟 그리고 evil-mode-도 10년 넘게 써온거 같다.\n이맥스를 다시 메인으로 계속 써오면서, 처음엔 Spacemacs / doomemacs 같은 preconfigured된 것들을 적용해 쓰면서 익숙해져 갔던거 같다. (이미 Vi/Vim은 계속 써오고 있었으니까)\n그런데 계속해서 뭔가 키바인딩이 이상하다는 느낌을 받아온거 같긴하다. 그도 그럴것이, 좀 다른 major-mode마다 다른 키바인딩을 vi/vim스럽게 맞춰주는 evil-collection-으로 맞춰주며 동작하는데, 이게 항상 좀 일관성이 있기는 어려운 것 같았다.\n예를 들어, magit, eshell, sly/slime 특히 realgud 같은 모드들이랑은 evil-mode이 불편했었다.\n그러다가 문득 아예 evil-mode을 끄고 기본이맥스 키바인딩만으로, 그걸 조금 확장해서 쓰기 시작했는데, 오히려 가볍고 좋았다. 어차피 이맥스 키바인딩 자체는 이미 오랬동안 익숙해져 온 것이니까.\n가장 불편한 점은 normal-mode / insert-mode 구분이 없어서 언제든 무슨키가 입력되면 바로 버퍼가 편집된다는 근거없는 Vi/Vim중독증상이다. 🫠\n아마 앞으로도 계속 이렇게 쓸거 같다. 그래도 정말 vi/vim-keys이 필요하면 그때 toggle해서 evil-mode을 쓰거나, emacs에 내장된 viper-mode을 써도 될테니까…\nEmacs 기본키바인딩 + 조금씩 확장해서 쓰기: hydra, which-key evil-mode 🙈 + general.el1 ⭐ -으로 예전엔 다른 emacs-layers들처럼 쓰려고 하다가 내겐 더 불편했다.\n그래서 그냥 대부분은 이맥스 키바인딩에 만족하고, 또 계층으로 키바인딩을 나눌 때엔 defhydra-으로 정의해서 쓰고 있다. 이렇게 하는게 나는 더 편안하다.\ngeneral.el의 공식이미지(왼쪽) / hydra의 공식이미지(오른쪽) (이 이맥스 패키지들은 어째서 다 이모양일까 싶다.) 창선택/이동: ace-window + windmove도 사용 편하다 이맥스를 쓸 때에, 한 frame/tab 안에서, 여러 window으로 나눠서 코딩을 하거나 해왔는데, 이것도 꽤 불편하게 써오던 것 같다.\nevil-mode을 사용하면, Vim스럽게, Control-W h/j/k/l 같은걸로 윈도포커스전환이 쉬웠는데, 이게 없어져서 C-x o / ace-select-window 쓰니까 매번 창번호 눌러줘야 하고 좀 그랬다.\n그래서 좀 알아봐서, emacs 내장 windmove을 키바인딩해서 방향키조합으로 바로 움직일 수 있도록 했다. 좀 편해졌다.\nFootnotes 1 “leader”-key을 제공하니까… “장군님.el”이라고 프로젝트 설명에. 쿨럭.\n"},
  {
      "permalink": "https://ageldama.github.io/posts/","title": "▫️ Posts",
      
@@ -21,6 +21,13 @@
      
  "description": "",
  "contents": ""},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/2025-12dec16--01-ping/","title": "👒 Hugo 블로그 디자인 고쳐나가면서 생각",
+     
+     "tags": ["blog", "blogging", "hugo", "css", "sass", "scss", "js", "javascript", "html", "sh", "bash", "gmake", "makefile", "esbuild", "perl"],
+     
+ "description": "",
+ "contents": " 2024년엔 “CSS/JS에 의존하지 않는 블로그를 만들자”-였다가, 조금씩 뜯어고쳐 나갔다. 사용편의나 읽기 적당하도록 색상과 정렬정도를 고쳐나갔다.\n그러다가 2025년 올해엔 아예 Hugo theme을 새로 정리해서 다시 만들었다. 이전에 해오던 것들을 더 정제하고 구조를 만들어 나갔다.\n처음엔 다른 CSS프레임웍1 을 더 가져와 쓰려고 고민하다가, 그냥 이대로 적당한거 같아서, 가장 가벼운 상태에서 진행해왔다.\n생각보다 Responsive / Mobile 지원은 재밌었다.\n다만, 외양요소가 조금씩 변경될 때마다, 결국 회귀적인 검토과정이 필요한데, 이걸 Layout 체크, BrowserStack와 같은, 혹은 그런 빌드스크립트를 만들어서 스크린샷 비교 기능 같은걸 자동화 테스트하면 유리하겠단 생각. 물론 개인 정적사이트 블로깅에 그런건 오버킬이지. ㅎㅎ하지만 어차피 취미영역이기 때문에 뭘 어떻게 내가 즐겁고 편하게 한다면 가치가 있을것 같다.\n그리고 다른 일들도 마찬가지지만, 대부분은 자기가 뭘 쓰고 있고, 뭘 하려고 하는지를 잘 이해하고 알아차리는게 정말 중요한것 같다. 실망스러운 경우엔, 그걸 스스로 그러고 싶어서, 그래야 자기 기분이 충족되니까 오해하거나, 아니면 정말 이해의 범위와 깊이가 그래서 제한되는 경우도 종종 있을 것 같다. 하지만 실상을 잘 살펴보면, 더 적합하고 단순하고 효과적인 것들을 찾아내거나 재발견해야 했던거 같다. 그리고 그게 즐겁다.\nFootnotes 1 Bootstrap 5, Tailwind CSS, Bulma을 고려했었다.\n"},
  {
      "permalink": "https://ageldama.github.io/posts/2025-12dec/hugo+esbuild/","title": "☘️ esbuild js build for blog",
      
