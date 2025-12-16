@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765887518">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765888630">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -97,6 +97,45 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/">🏩 Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</a></h1>
+                                    <time>2020년08월27일
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+arch-desktop의 커널을 무심코 5.8으로 pacman -Syu 했다가 낭패였다.</p>
+<p>
+USB무선랜이 잡히지 않았다. 그래서 하는 수 없이, FB워크스테이션을
+쓰다가 또 라즈베리파이3에 FB에 달아놓은 realtek USB 무선랜을 붙이고
+유선을 통해 dnsmasq으로 연결해서 고쳐나갔다.</p>
+<p>
+정말 커널 5.8에서 빌드가 잘 되지는 않았다. 그나마
+<a href="https://github.com/aircrack-ng/rtl8812au">https://github.com/aircrack-ng/rtl8812au</a> 이 드라이버가 살렸다.</p>
+<div class="src src-text">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># lsusb
+</span></span><span class="line"><span class="cl">Bus 002 Device 009: ID 2357:0120 TP-Link Archer T2U PLUS [RTL8821AU]</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+그것도 DKMS으로 빌드하면 안되고 그냥 <code>make install</code> 해서 동작하게
+되었다. 다행이었다. </p>
+<p>
+그리고 나서 나중에도 로딩하도록 /etc/module-load
+<code>/etc/modules-load.d/rtlusb.conf</code> 에 <code>88XXau</code> 라인을 넣고 저장.</p>&hellip;
+						
+					</div>
+                                        <span class="permalink">
+					    <a href="/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/" class="button-link">▶️ 읽으러 가기</a>
+                                        </span>
+				</section>
 				
 				<section class="list-item"><h1 class="title"><a href="/posts/2020-08aug/ping-27thu/">➰ Ping 27/Aug/2020</a></h1>
                                     <time>2020년08월27일
@@ -198,40 +237,6 @@ the end of the belle époque?</p>&hellip;
                                         </span>
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2020-08aug/ping-14fri/">🤼 Ping 14/Aug/2020</a></h1>
-                                    <time>2020년08월14일
-                                        </time>
-                                        <br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-빌드도구의 경험과 Meson을 사용하기
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>
-  <a href="https://github.com/ageldama/meson-abc">Meson-ABC 갖고 놀아본 코드</a></p>
-<p>
-  아주 예전에 commercially 성공적이었었던 C++ 프로젝트를 홀로 기획, 설계, 개발했었었다.</p>
-<p>
-  처음에는 GNU Makefile으로 간단히 시작했었었다. 타겟 플랫폼이 뻔하게 윈도였기 때문이다.</p>
-<p>
-  그 이전에는 ANSI C으로 작성한 <a href="https://sourceforge.net/projects/sdlhan/">SDL 조합형 비트맵 출력 오픈소스</a>
-  라이브러리 같은 것들을 작업할 때는 그냥 GNU Autotools 을 쓰거나
-  했었었다.</p>
-<p>
-  하지만 그렇게 configure 하거나 할 부분도 없고 처음 혼자 시작하며
-  다른 신경 쓸 것도 무지하게 많았었던 프로젝트였고 더욱이 기간도
-  한정적이었었다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
-<p>
-  그리고 SCons 같은 것을 조금 쓰다가, 결국 더 간단히 Rake으로 빌드를
-  작성해 한동안 썼었다.</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2020-08aug/ping-14fri/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
 				<nav class="posts-pagination" aria-label="Page navigation">
 
     
@@ -240,17 +245,17 @@ the end of the belle époque?</p>&hellip;
     
 
     <span class="posts-pagination-indicator" >
-        📃 020-페이지  ( 전체=038 )
+        📃 020-페이지  ( 전체=039 )
     </span>
 
     
     <a href="/page/21/" class="button-link posts-pagination-btn posts-pagination-older" aria-label="Older">⏩예전</a>
-    <a href="/page/38/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
+    <a href="/page/39/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
     
 </nav>
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765887518</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765888630</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

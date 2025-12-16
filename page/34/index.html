@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765887518">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765888630">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -97,6 +97,43 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2018-10oct/rpi3-hifiberry-dacplus-config/">⚫ HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정</a></h1>
+                                    <time>2018년10월03일
+                                        </time>
+                                        <br><div class="description">
+						
+						<p><a href="https://www.hifiberry.com/">https://www.hifiberry.com/</a> 요거 Raspberry Pi 3에 세팅한 모험에 대한
+이야기.</p>
+<h1 id="wifi잡기">WIFI잡기</h1>
+<pre tabindex="0"><code># /etc/wpa_supplicant/wpa_supplicant.conf 
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+#update_config=1
+country=GB
+
+network={
+	ssid=&#34;iptime&#34;
+	psk=&#34;xxxxxxxxxx&#34;
+	key_mgmt=WPA-PSK
+}
+</code></pre><ol>
+<li><code>wpa_passphrase</code> 안쓰고 그냥 plaintext으로 써도 동작.</li>
+<li>내 공유기랑은 <code>country=GB</code> 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤.</li>
+<li>그리고 <code>ip link set wlan0 {up|down}</code> 정도로 wlan0 인터페이스를 up/down하면됨.</li>
+</ol>
+<h1 id="사운드-드라이버-설정">사운드 드라이버 설정</h1>
+<ol>
+<li>내장 사운드카드 드라이버는 <a href="https://ko.wikipedia.org/wiki/Modprobe">modprobe</a> blacklist에 추가해서 끄자.</li>
+<li><code>/boot/config.txt</code>에 HiFiBerry DAC+ 드라이버 오버레이를 지정해야함.</li>
+</ol>
+<h2 id="내장-사운드-드라이버-끄기">내장 사운드 드라이버 끄기</h2>
+<p>다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음.</p>&hellip;
+						
+					</div>
+                                        <span class="permalink">
+					    <a href="/posts/2018-10oct/rpi3-hifiberry-dacplus-config/" class="button-link">▶️ 읽으러 가기</a>
+                                        </span>
+				</section>
 				
 				<section class="list-item"><h1 class="title"><a href="/posts/2018-10oct/03wed-ping/">💣 Ping 03/10/2018</a></h1>
                                     <time>2018년10월03일
@@ -244,29 +281,6 @@ RTags</a> 조합으로
                                         </span>
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2018-09sep/22sat-ping/">😆 Ping 22/09/2018</a></h1>
-                                    <time>2018년09월22일
-                                        </time>
-                                        <br><div class="description">
-						
-						<h1 id="새-만년필--pilot-kaküno">새 만년필 : Pilot Kaküno!</h1>
-<p>tweet 1043371766318424064</p>
-<p>필기감은 같은 모델, 각 제품별로 조금씩 다른듯.  가격이 저렴해서 만년필
-취미를 권하고 싶은 3개를 사서 회사 다른팀이나 같은 연구소 사람들에게
-선물했다.</p>
-<h1 id="게임--둠2016-쉐도우-오브-더-툼레이더">게임 : 둠2016, 쉐도우 오브 더 툼레이더</h1>
-<p>가끔 시간이 날때, 예전에는 길을 못찾아서 많이 진행을 못했었던, <a href="https://en.wikipedia.org/wiki/Doom_(2016_video_game)">둠
-2016</a> 을 다시
-하고 있다. 지금은 꽤 많이 진행해서 <em>&ldquo;내가 바로 둠가이다. 10점 만점에
-12점인 사나이!&rdquo;</em> 모드로 플레이 할수있게 됐다.</p>
-<p><a href="https://en.wikipedia.org/wiki/Doom_Eternal">둠 이터널</a> 나오면 바로 지르게 될거 같아.</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2018-09sep/22sat-ping/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
 				<nav class="posts-pagination" aria-label="Page navigation">
 
     
@@ -275,17 +289,17 @@ RTags</a> 조합으로
     
 
     <span class="posts-pagination-indicator" >
-        📃 034-페이지  ( 전체=038 )
+        📃 034-페이지  ( 전체=039 )
     </span>
 
     
     <a href="/page/35/" class="button-link posts-pagination-btn posts-pagination-older" aria-label="Older">⏩예전</a>
-    <a href="/page/38/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
+    <a href="/page/39/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
     
 </nav>
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765887518</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765888630</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

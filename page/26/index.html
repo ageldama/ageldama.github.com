@@ -3,7 +3,7 @@
 	<head>
 	<meta name="generator" content="Hugo 0.152.2">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765887518">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765888630">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
@@ -97,6 +97,62 @@
 				<div class="site-description"></div>
 				
 				
+				
+				<section class="list-item"><h1 class="title"><a href="/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">📓 Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a></h1>
+                                    <time>2019년12월30일
+                                        </time>
+                                        <br><div class="description">
+						
+						<p>
+다음의 간단한 코드를 읽어보자.</p>
+<div class="src src-js">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;lexical&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">maker</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&#34;dynamic&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">assert</span><span class="p">(</span><span class="nx">maker</span><span class="p">()()</span> <span class="o">==</span> <span class="s2">&#34;???&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+<code>maker()()</code> 의 결과는 <code>&#39;dynamic&#39;</code> 이다.</p>
+<p>
+심지어, 맨 마지막에 있는 <code>{..}</code> 블록을 넘어가서도 <code>x</code> 의 값은 여전이
+<code>&#39;dynamic&#39;</code> 이다.</p>
+<p>
+자바스크립트에서 binding은 어딘가 이도 저도 아니게 심각하게 고장난
+느낌이다. 이 글에서 이야기할 lexical binding이나 dynamic binding에도
+속하지 않는 느낌이고, 이번에 새로 추가된 <code>let</code> 도 이해하기가 어려운게
+아니라 그냥 제대로 망가져 있는거 같다.</p>&hellip;
+						
+					</div>
+                                        <span class="permalink">
+					    <a href="/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/" class="button-link">▶️ 읽으러 가기</a>
+                                        </span>
+				</section>
 				
 				<section class="list-item"><h1 class="title"><a href="/posts/2019-12dec/direnv/">1️⃣ direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기</a></h1>
                                     <time>2019년12월29일
@@ -278,38 +334,6 @@ tweet 1206138361968070656 </p>
                                         </span>
 				</section>
 				
-				<section class="list-item"><h1 class="title"><a href="/posts/2019-12dec/org-spreadsheet-and-babel/">✳️ Org모드에서 스프레드시트 기능과 Babel 섞어쓰기</a></h1>
-                                    <time>2019년12월13일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-쩌는 <a href="https://seorenn.github.io/org-spreadsheet.html">Org-mode Spreadsheet 소개</a> 를 읽고 감명 받아서 따라해봅니다.</p>
-<p>
-다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리
-<code>defun</code> / <code>defmacro</code> 으로 정의해놓고 그걸 spreadsheet에서 불러 쓸 수
-있을지가 궁금했습니다.</p>
-<p>
-그래서 다음과 같이 해보면 가능할지를 실험:</p>
-<ol>
-<li>
-<p>Org-Babel으로 원하는 함수를 정의한다.</p>
-<ul>
-<li>그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다.</li>
-</ul>
-</li>
-<li>Spreadsheet에서 불러서 쓸 수 있는지 확인해본다.</li>
-</ol>
-<p>우선 <code>C-h a</code> 을 눌러 <code>vsum</code> 을 검색해보니, <code>defun calcFunc-vsum (&amp;rest
-vecs)</code> 으로 미리 선언되어 있는거 같았습니다. 이런 형태로 내가 정의하는
-함수도 구현해보면 될까 싶습니다.</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2019-12dec/org-spreadsheet-and-babel/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
 				<nav class="posts-pagination" aria-label="Page navigation">
 
     
@@ -318,17 +342,17 @@ vecs)</code> 으로 미리 선언되어 있는거 같았습니다. 이런 형태
     
 
     <span class="posts-pagination-indicator" >
-        📃 026-페이지  ( 전체=038 )
+        📃 026-페이지  ( 전체=039 )
     </span>
 
     
     <a href="/page/27/" class="button-link posts-pagination-btn posts-pagination-older" aria-label="Older">⏩예전</a>
-    <a href="/page/38/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
+    <a href="/page/39/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
     
 </nav>
 			</main>
 			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765887518</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765888630</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
