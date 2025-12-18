@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html><head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>process-tree 정리의 rhapsody - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765991396">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>process-tree 정리의 rhapsody - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766053297">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="
 
 발단
 
@@ -33,46 +33,24 @@
   그런데 그렇지 않을 경우도 있을테고(순전히 각 애플리케이션의 처리에
   따를테니까, 플랫폼(예: linux / freebsd)에 따라 그렇게 되지 않는
   경우도 있다. 😑" />
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2025-12dec/pgrp-rhapsody/">
-  <meta property="og:site_name" content="아겔로그">
-  <meta property="og:title" content="process-tree 정리의 rhapsody">
-  <meta property="og:description" content="발단 상황배경:
-내 프로그램은 순박하게 yt-dlp을 실행한다. 실행된 yt-dlp은 또 내가 지정한대로, 실제 다운로더로서 aria2c을 실행하고, 이렇게 실행된 aria2c은 다시금 내가 지정한대로, 충실히, 자기자신을 10개 정도의 동시프로세스으로 복제하여 병렬실행된다. …그런데…
-갑자기 Control-C(SIGINT)을 눌러 내 프로그램을 종료했다. 😕 yt-dlp 프로세스와 그 하위 aria2c 프로세스 10여개는 종료되었을까? … yt-dlp, aria2c에 기대하는 behavior은: 그렇다-이다.
-그런데 그렇지 않을 경우도 있을테고(순전히 각 애플리케이션의 처리에 따를테니까, 플랫폼(예: linux / freebsd)에 따라 그렇게 되지 않는 경우도 있다. 😑">
-  <meta property="og:locale" content="ko_kr">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-12-07T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-12-07T00:00:00+00:00">
-    <meta property="article:tag" content="Posix">
-    <meta property="article:tag" content="Unix">
-    <meta property="article:tag" content="Linux">
-    <meta property="article:tag" content="Kill">
-    <meta property="article:tag" content="Signal">
-    <meta property="article:tag" content="Pgrp">
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css"
+          integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
+    
+    
+    
+    
+    
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="process-tree 정리의 rhapsody">
-  <meta name="twitter:description" content="발단 상황배경:
-내 프로그램은 순박하게 yt-dlp을 실행한다. 실행된 yt-dlp은 또 내가 지정한대로, 실제 다운로더로서 aria2c을 실행하고, 이렇게 실행된 aria2c은 다시금 내가 지정한대로, 충실히, 자기자신을 10개 정도의 동시프로세스으로 복제하여 병렬실행된다. …그런데…
-갑자기 Control-C(SIGINT)을 눌러 내 프로그램을 종료했다. 😕 yt-dlp 프로세스와 그 하위 aria2c 프로세스 10여개는 종료되었을까? … yt-dlp, aria2c에 기대하는 behavior은: 그렇다-이다.
-그런데 그렇지 않을 경우도 있을테고(순전히 각 애플리케이션의 처리에 따를테니까, 플랫폼(예: linux / freebsd)에 따라 그렇게 되지 않는 경우도 있다. 😑">
+      <script src="/js/bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 
-            
-            
-                
-                    
-                        <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css" integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
-                    
-                
-            
-        
-
-        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-
-	
 </head>
 <body>
         <div class="container"><header>
@@ -83,36 +61,32 @@
     </div>
 
     <nav>
-        <div class="search-form">
-            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
 
-            <input id="search-query" name="search-query"
-                   type="text"
-                   class="search-query"
-                   tabindex="1"
-                   placeholder="🔎 검색 (search)"/>
-        </div>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
 
         
-            <a href="/archive/">🗂️ Archive</a>
+
         
-            <a href="/myself/">📨 Contact</a>
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
         
 
-            <button class="dark-mode-btn"
-                    aria-label="toggle dark-mode">🌓 dark?</button>
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">🌓 dark?</button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
 
-            <button class="snow-mode-btn"
-                    aria-label="toggle dark-mode">☃️ snow?</button>
-
+        
     </nav>
 </header>
-
-<script src="/js/bundle.js"></script>
-
-<div class="search">
-    <div class="search-results"></div>
-</div>
 
 
 
@@ -131,6 +105,11 @@
  }
  
 </script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
 
 <main>
     <nav class="post-prevnext" aria-label="posts">
@@ -739,19 +718,21 @@ if specified with <code>CREATE_NEW_CONSOLE</code>.</p>
 
 </main>
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765991396</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766053297</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
 </div>
     </body>
 </html>

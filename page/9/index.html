@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html>
-	<head>
+    <head>
 	<meta name="generator" content="Hugo 0.152.2">
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765991396">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta property="og:image" content=""/>
-	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
-	<meta property="og:url" content="https://ageldama.github.io/">
-  <meta property="og:site_name" content="아겔로그">
-  <meta property="og:title" content="아겔로그">
-  <meta property="og:locale" content="ko_kr">
-  <meta property="og:type" content="website">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766053297">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta property="og:image" content=""/>
+    <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css"
+          integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
+    
+    
+    
+    
+    
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="아겔로그">
+      <script src="/js/bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 
-            
-            
-                
-                    
-                        <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css" integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
-                    
-                
-            
-        
-
-        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-
-	
 </head>
 
-        <body>
-                <div class="container">
-			<header>
+    <body>
+        <div class="container">
+            <header>
     <div class="main ">
         <h1 class="site-title ">
             <a href="https://ageldama.github.io/">아겔로그</a>
@@ -42,37 +37,32 @@
     </div>
 
     <nav>
-        <div class="search-form">
-            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
 
-            <input id="search-query" name="search-query"
-                   type="text"
-                   class="search-query"
-                   tabindex="1"
-                   placeholder="🔎 검색 (search)"/>
-        </div>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
 
         
-            <a href="/archive/">🗂️ Archive</a>
+
         
-            <a href="/myself/">📨 Contact</a>
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
         
 
-            <button class="dark-mode-btn"
-                    aria-label="toggle dark-mode">🌓 dark?</button>
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">🌓 dark?</button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
 
-            <button class="snow-mode-btn"
-                    aria-label="toggle dark-mode">☃️ snow?</button>
-
+        
     </nav>
 </header>
-
-<script src="/js/bundle.js"></script>
-
-
-			<div class="search">
-    <div class="search-results"></div>
-</div>
 
 
 
@@ -92,18 +82,104 @@
  
 </script>
 
+<div class="search">
+    <div class="search-results"></div>
+</div>
 
-			<main class="list">
-				<div class="site-description"></div>
-				
-				
-				
-				<section class="list-item"><h1 class="title"><a href="/posts/2023-02feb/2023-02feb26--01-css/">⛲ Ping 26/02/2023 .01 : 디자인 css 가볍게 수정</a></h1>
-                                    <time>2023년02월26일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
+
+
+	    <main class="list">
+		<div class="site-description"></div>
+		
+		
+		
+		<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/cxx-defer/">🍯 C&#43;&#43;: Golang-ish `defer`-macro</a></h1>
+                    <time>2023년03월02일
+                        </time>
+                    <br><div class="description">
+			
+			<p>
+별거 없는데, 문득 심심해서 툭닥거려봤다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+원하는 것과 접근법
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li><a href="https://go.dev/blog/defer-panic-and-recover">https://go.dev/blog/defer-panic-and-recover</a></li>
+<li><a href="https://docs.rs/defer/latest/defer/fn.defer.html">https://docs.rs/defer/latest/defer/fn.defer.html</a></li>
+<li><a href="https://ziglang.org/documentation/master/#defer">https://ziglang.org/documentation/master/#defer</a></li>
+</ol>
+<p>
+  golang/zig에서처럼 <code class="verbatim">defer</code> 등록한 LIFO순서대로 호출되도록.</p>
+<p>
+  검색해보면, 대부분 RAII을 사용하거나 하는 것들이 보인다:</p>
+<ul>
+<li><a href="https://duckduckgo.com/?q=c%2B%2B+golang+defer">DDG: c++ golang defer</a></li>
+<li><a href="https://stackoverflow.com/questions/33050620/golang-style-defer-in-c">https://stackoverflow.com/questions/33050620/golang-style-defer-in-c</a></li>
+<li><a href="https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop">https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop</a></li>
+<li><a href="https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/">https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/</a></li>
+</ul>
+<p>
+  …그냥 <code class="verbatim">std::shared_ptr&lt;void&gt;</code> 을 이용하는 방식이 마음에
+  들었다. 그리고 조금 더 간단하게 사용하려고 매크로로 만들어 봤다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+<code class="verbatim">defer.inl</code> :
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div class="src src-c++">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">  <span class="cm">/* -*- mode: c++; -*- */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cp">#ifndef defer_INL
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define defer_INL 1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#define _Defer_CONCAT_IMPL( x, y ) x##y
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y )
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk)
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#endif </span><span class="cm">/*defer_INL*/</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  <a href="https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html"><code class="verbatim">__COUNTER__</code></a> 이용해서 매크로가 생성한 <code class="verbatim">std::shared_ptr&lt;..&gt;</code> 변수의
+  이름이 겹치지 않도록 해봤다. (…위에 검색한 링크들에도 사용하듯이)</p>&hellip;
+			
+		    </div>
+                    <span class="permalink">
+			<a href="/posts/2023-03mar/cxx-defer/" class="button-link">▶️ 읽으러 가기</a>
+                    </span>
+		</section>
+		
+		<section class="list-item"><h1 class="title"><a href="/posts/2023-02feb/2023-02feb26--01-css/">⛲ Ping 26/02/2023 .01 : 디자인 css 가볍게 수정</a></h1>
+                    <time>2023년02월26일
+                        </time>
+                    <br><div class="description">
+			
+			<p>
 아예 아무런 스타일도 주지 않고, 그냥 알아서 html/css만으로 잘 보이도록
 고쳤다. 웹폰트니 그런것도 그냥 껐고.</p>
 <p>
@@ -113,19 +189,19 @@
 <p>
 lynx, w3m 같은 <a href="https://en.wikipedia.org/wiki/Text-based_web_browser">텍스트 웹브라우져</a>에서 읽으나 그냥 무거운 웹브라우져으로
 읽으나 사람마다 알아서 잘 읽히도록 하는데에만 집중해봤다.</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2023-02feb/2023-02feb26--01-css/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
-				<section class="list-item"><h1 class="title"><a href="/posts/2023-02feb/2023-02feb19--02-ping/">💤 Ping 19/02/2023 .02 : 이름에 대한 추측 (2) HAL, IBM, JCL</a></h1>
-                                    <time>2023년02월19일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
+			
+		    </div>
+                    <span class="permalink">
+			<a href="/posts/2023-02feb/2023-02feb26--01-css/" class="button-link">▶️ 읽으러 가기</a>
+                    </span>
+		</section>
+		
+		<section class="list-item"><h1 class="title"><a href="/posts/2023-02feb/2023-02feb19--02-ping/">💤 Ping 19/02/2023 .02 : 이름에 대한 추측 (2) HAL, IBM, JCL</a></h1>
+                    <time>2023년02월19일
+                        </time>
+                    <br><div class="description">
+			
+			<p>
 (…지난번 <a href="../2023-02feb07--01-ping/">C/C++/D/Zig 이름에 대한 추측</a>
 에 이어서, 그냥 떠올라서)</p>
 <ol>
@@ -146,19 +222,19 @@ lynx, w3m 같은 <a href="https://en.wikipedia.org/wiki/Text-based_web_browser">
 </ol>
 <p>
 ㅎㅎ뭐 그냥 그렇다고.</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2023-02feb/2023-02feb19--02-ping/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
-				<section class="list-item"><h1 class="title"><a href="/posts/2023-02feb/2023-02feb19--01-ping/">🈲 Ping 19/02/2023 .01 : 어른이 되기</a></h1>
-                                    <time>2023년02월19일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
+			
+		    </div>
+                    <span class="permalink">
+			<a href="/posts/2023-02feb/2023-02feb19--02-ping/" class="button-link">▶️ 읽으러 가기</a>
+                    </span>
+		</section>
+		
+		<section class="list-item"><h1 class="title"><a href="/posts/2023-02feb/2023-02feb19--01-ping/">🈲 Ping 19/02/2023 .01 : 어른이 되기</a></h1>
+                    <time>2023년02월19일
+                        </time>
+                    <br><div class="description">
+			
+			<p>
 (최근 며칠 우울하고 내가 어른이기는 한가 싶은 자괴감에
 빠졌었다. 그래서인지 자기합리화를 위해 이런 글을 쓰고 있는거 같기도
 하다.)</p>
@@ -177,19 +253,19 @@ lynx, w3m 같은 <a href="https://en.wikipedia.org/wiki/Text-based_web_browser">
   물론 80, 90년대는 일본문화개방도 되지 않았었고 엄밀하게 말하자면
   불법은 아니었을테고, 더 나아가서 어린 국민들을 염려한 윗분들의 지시로
   수많은, 한국산 고전애니메이션이 본의 아니게 붐을 일으켰었다는거 같다.</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2023-02feb/2023-02feb19--01-ping/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
-				<section class="list-item"><h1 class="title"><a href="/posts/2023-02feb/2023-02feb07--01-ping/">🧑‍🍼 Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측</a></h1>
-                                    <time>2023년02월07일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
+			
+		    </div>
+                    <span class="permalink">
+			<a href="/posts/2023-02feb/2023-02feb19--01-ping/" class="button-link">▶️ 읽으러 가기</a>
+                    </span>
+		</section>
+		
+		<section class="list-item"><h1 class="title"><a href="/posts/2023-02feb/2023-02feb07--01-ping/">🧑‍🍼 Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측</a></h1>
+                    <time>2023년02월07일
+                        </time>
+                    <br><div class="description">
+			
+			<p>
 문득 떠오른 생각이라서, 그냥 추측.</p>
 <ol>
 <li>
@@ -213,40 +289,14 @@ BCPL이나 그런 역사에 대해 나도 조금은 아니까.</li>
 </li>
 <li>
 <p><strong><strong>D</strong></strong> : C에서 다음 단계으로 발전했으니, 이번엔 다섯배, 역시 로마숫자, 500.</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2023-02feb/2023-02feb07--01-ping/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
-				<section class="list-item"><h1 class="title"><a href="/posts/2023-02feb/2023-02feb04--01-ping/">🔋 Ping 04/02/2023 .01: 씨언어의 장자 zig, rust, golang, c&#43;&#43; ???</a></h1>
-                                    <time>2023년02월04일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-최근에 재미로 <a href="https://ziglang.org/">zig</a> 을 정말 재밌게 &#39;읽었다&#39;. 공부해보고 실제로 뭔가
-코딩을 많이 해보거나 한 것은 아니고, 대체 어떻게 동작하는 프로그램을
-이걸로 만들라고 하는건지 이해하고 싶었기 때문에 해봤다.</p>
-<p>
-zig으로 프로그램을 짜는게 궁금하던 부분은 haskell의 monad을 이용한
-방식, 혹은 apl이나 prolog으로 실제프로그램을 어떻게 만들 수 있을지
-패러다임부터 다른 언어를 공부하고 생각해보는 것과는 조금 다를수도
-있겠다. 어쨌든 그냥 imperative언어이니까.</p>
-<p>
-오히려, zig을 어떻게 써먹어야 할지 궁금하던 지점은, c++의
-스마트포인터와 move semantics등을 이해하는 것이나, rust의 borrowing
-checker, rc/arc등을 이해하는 것과 마찬가지인 것 같다.
-둘 다 이해하고 익숙해지면 그렇게 부담스럽지 않을거 같긴 하다.</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2023-02feb/2023-02feb04--01-ping/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
-				<nav class="posts-pagination" aria-label="Page navigation">
+			
+		    </div>
+                    <span class="permalink">
+			<a href="/posts/2023-02feb/2023-02feb07--01-ping/" class="button-link">▶️ 읽으러 가기</a>
+                    </span>
+		</section>
+		
+		<nav class="posts-pagination" aria-label="Page navigation">
 
     
     <a href="/" class="button-link posts-pagination-btn posts-pagination-last" aria-label="Last">최신⏮️</a>
@@ -262,22 +312,24 @@ checker, rc/arc등을 이해하는 것과 마찬가지인 것 같다.
     <a href="/page/39/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
     
 </nav>
-			</main>
-			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765991396</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+	    </main>
+	    <footer class="global-footer">
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766053297</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 
-		</div>
-	</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
+
+	</div>
+    </body>
 </html>

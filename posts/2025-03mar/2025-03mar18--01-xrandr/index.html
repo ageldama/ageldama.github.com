@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html><head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>xrandr 🖥️모니터 연결 자동전환 스크립트🐫 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765991396">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>xrandr 🖥️모니터 연결 자동전환 스크립트🐫 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766053297">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="
 요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.
 다 편한데, 🪟윈도나 icewm처럼 Windows&#43;P 누르면, 다음 모니터연결
 조합으로 전환되는게 부러웠다.
@@ -20,50 +20,24 @@ Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
 그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,
 예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별
 생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤" />
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/">
-  <meta property="og:site_name" content="아겔로그">
-  <meta property="og:title" content="xrandr 🖥️모니터 연결 자동전환 스크립트🐫">
-  <meta property="og:description" content="요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다. 다 편한데, 🪟윈도나 icewm처럼 Windows&#43;P 누르면, 다음 모니터연결 조합으로 전환되는게 부러웠다.
-매번 터미널 열고 xrandr 치거나, arandr 열어서 세팅하기 귀찮으니까. (물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)
-그래서 그냥 윈도의 Win&#43;P 키처럼 동작하도록 스크립트를 짜봤다.
-🐫 https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl
-Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
-그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데, 예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별 생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤">
-  <meta property="og:locale" content="ko_kr">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-03-18T13:30:16+00:00">
-    <meta property="article:modified_time" content="2025-03-18T13:30:16+00:00">
-    <meta property="article:tag" content="Xrandr">
-    <meta property="article:tag" content="I3wm">
-    <meta property="article:tag" content="Config">
-    <meta property="article:tag" content="Perl">
-    <meta property="article:tag" content="Xorg">
-    <meta property="article:tag" content="Display">
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css"
+          integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
+    
+    
+    
+    
+    
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="xrandr 🖥️모니터 연결 자동전환 스크립트🐫">
-  <meta name="twitter:description" content="요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다. 다 편한데, 🪟윈도나 icewm처럼 Windows&#43;P 누르면, 다음 모니터연결 조합으로 전환되는게 부러웠다.
-매번 터미널 열고 xrandr 치거나, arandr 열어서 세팅하기 귀찮으니까. (물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)
-그래서 그냥 윈도의 Win&#43;P 키처럼 동작하도록 스크립트를 짜봤다.
-🐫 https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl
-Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
-그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데, 예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별 생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤">
+      <script src="/js/bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 
-            
-            
-                
-                    
-                        <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css" integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
-                    
-                
-            
-        
-
-        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-
-	
 </head>
 <body>
         <div class="container"><header>
@@ -74,36 +48,32 @@ Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
     </div>
 
     <nav>
-        <div class="search-form">
-            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
 
-            <input id="search-query" name="search-query"
-                   type="text"
-                   class="search-query"
-                   tabindex="1"
-                   placeholder="🔎 검색 (search)"/>
-        </div>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
 
         
-            <a href="/archive/">🗂️ Archive</a>
+
         
-            <a href="/myself/">📨 Contact</a>
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
         
 
-            <button class="dark-mode-btn"
-                    aria-label="toggle dark-mode">🌓 dark?</button>
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">🌓 dark?</button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
 
-            <button class="snow-mode-btn"
-                    aria-label="toggle dark-mode">☃️ snow?</button>
-
+        
     </nav>
 </header>
-
-<script src="/js/bundle.js"></script>
-
-<div class="search">
-    <div class="search-results"></div>
-</div>
 
 
 
@@ -122,6 +92,11 @@ Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
  }
  
 </script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
 
 <main>
     <nav class="post-prevnext" aria-label="posts">
@@ -218,19 +193,21 @@ Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.</p
 
 </main>
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765991396</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766053297</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
 </div>
     </body>
 </html>

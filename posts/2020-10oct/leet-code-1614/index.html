@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html><head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34; - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765991396">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34; - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766053297">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="
 
 문제
 
@@ -67,40 +67,24 @@ SBCL에 맞춰 코드에 타입을 지정해줘봤다.
 
 
 " />
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2020-10oct/leet-code-1614/">
-  <meta property="og:site_name" content="아겔로그">
-  <meta property="og:title" content="CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;">
-  <meta property="og:description" content="문제 https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
-작성한 코드 1 2 3 4 5 6 7 8 (defun max-nested-parentheses (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (loop with n fixnum = 0 for ch across s when (member ch &#39;(#\( #\))) do (incf n (if (eql #\( ch) 1 -1)) maximizing n)) 코드 의도 우아한 코드보다는 공간복잡도가 O(1) 이고 싶었다. Edit SBCL에 맞춰 코드에 타입을 지정해줘봤다.
-결과 어셈블리 코드가 조금 짧아졌다.">
-  <meta property="og:locale" content="ko_kr">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2020-10-20T00:00:00+09:00">
-    <meta property="article:modified_time" content="2020-10-20T00:00:00+09:00">
-    <meta property="article:tag" content="Leet-Code">
-    <meta property="article:tag" content="Lisp">
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css"
+          integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
+    
+    
+    
+    
+    
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;">
-  <meta name="twitter:description" content="문제 https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
-작성한 코드 1 2 3 4 5 6 7 8 (defun max-nested-parentheses (s) (declare (optimize (speed 3) (safety 0)) (type simple-string s)) (loop with n fixnum = 0 for ch across s when (member ch &#39;(#\( #\))) do (incf n (if (eql #\( ch) 1 -1)) maximizing n)) 코드 의도 우아한 코드보다는 공간복잡도가 O(1) 이고 싶었다. Edit SBCL에 맞춰 코드에 타입을 지정해줘봤다.
-결과 어셈블리 코드가 조금 짧아졌다.">
+      <script src="/js/bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 
-            
-            
-                
-                    
-                        <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css" integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
-                    
-                
-            
-        
-
-        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-
-	
 </head>
 <body>
         <div class="container"><header>
@@ -111,36 +95,32 @@ SBCL에 맞춰 코드에 타입을 지정해줘봤다.
     </div>
 
     <nav>
-        <div class="search-form">
-            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
 
-            <input id="search-query" name="search-query"
-                   type="text"
-                   class="search-query"
-                   tabindex="1"
-                   placeholder="🔎 검색 (search)"/>
-        </div>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
 
         
-            <a href="/archive/">🗂️ Archive</a>
+
         
-            <a href="/myself/">📨 Contact</a>
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
         
 
-            <button class="dark-mode-btn"
-                    aria-label="toggle dark-mode">🌓 dark?</button>
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">🌓 dark?</button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
 
-            <button class="snow-mode-btn"
-                    aria-label="toggle dark-mode">☃️ snow?</button>
-
+        
     </nav>
 </header>
-
-<script src="/js/bundle.js"></script>
-
-<div class="search">
-    <div class="search-results"></div>
-</div>
 
 
 
@@ -159,6 +139,11 @@ SBCL에 맞춰 코드에 타입을 지정해줘봤다.
  }
  
 </script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
 
 <main>
     <nav class="post-prevnext" aria-label="posts">
@@ -304,19 +289,21 @@ SBCL에 맞춰 코드에 타입을 지정해줘봤다.
 
 </main>
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765991396</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766053297</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
 </div>
     </body>
 </html>

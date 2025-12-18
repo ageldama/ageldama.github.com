@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html><head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>&#34;모두를 위한 algebraic effects!&#34; ...정말루? - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765991396">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="뭐 대충 다음과 같은 글들:
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>&#34;모두를 위한 algebraic effects!&#34; ...정말루? - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766053297">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="뭐 대충 다음과 같은 글들:
 https://www.eff-lang.org/handlers-tutorial.pdf
 https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf
 &hellip;그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)
@@ -37,71 +37,24 @@ monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보�
 
 
 당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (&hellip;일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, &hellip;처럼)" />
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/">
-  <meta property="og:site_name" content="아겔로그">
-  <meta property="og:title" content="&#34;모두를 위한 algebraic effects!&#34; ...정말루?">
-  <meta property="og:description" content="뭐 대충 다음과 같은 글들:
-https://www.eff-lang.org/handlers-tutorial.pdf
-https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf
-…그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)
-https://hackage.haskell.org/package/fused-effects
-https://github.com/dry-rb/dry-effects
-https://github.com/digital-fabric/affect
-https://github.com/macabeus/js-proposal-algebraic-effects
-https://github.com/nythrox/effects.js
-https://www.janestreet.com/tech-talks/effective-programming/
-https://github.com/ocaml-multicore/effects-examples
-https://overreacted.io/algebraic-effects-for-the-rest-of-us/
-…음… 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.
-오히려 dry-rb, affect이 더 명확하기는 한거 같아.
-가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.
-분명히 장점을 볼 수 있을거 같은 개념 같다.
-왜냐하면,
-지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능. 그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용. (…그때 그때 Haskell do-notation등에 따라 분리해서 표현) 좋은점이라면 좋은점일수도 있겠지만. 그런데, aeffects을 이용한다면, 굳이 그렇게 복잡하게 나누지 않아도 괜찮고, monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여. 당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (…일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, …처럼)">
-  <meta property="og:locale" content="ko_kr">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-06-13T14:11:14+09:00">
-    <meta property="article:modified_time" content="2022-06-13T14:11:14+09:00">
-    <meta property="article:tag" content="Lisp">
-    <meta property="article:tag" content="Conditions">
-    <meta property="article:tag" content="Algebraic-Effects">
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css"
+          integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
+    
+    
+    
+    
+    
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="&#34;모두를 위한 algebraic effects!&#34; ...정말루?">
-  <meta name="twitter:description" content="뭐 대충 다음과 같은 글들:
-https://www.eff-lang.org/handlers-tutorial.pdf
-https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/algeff-tr-2016-v2.pdf
-…그리고 몇 개의 구현체, 포스팅들: (아직은 별루인거 같은데)
-https://hackage.haskell.org/package/fused-effects
-https://github.com/dry-rb/dry-effects
-https://github.com/digital-fabric/affect
-https://github.com/macabeus/js-proposal-algebraic-effects
-https://github.com/nythrox/effects.js
-https://www.janestreet.com/tech-talks/effective-programming/
-https://github.com/ocaml-multicore/effects-examples
-https://overreacted.io/algebraic-effects-for-the-rest-of-us/
-…음… 분명히 한국말으로 번역도 해놓았고, 심지어 js버젼으로 설명/예시도 있는데 나는 전혀 모르겠다 싶었음.
-오히려 dry-rb, affect이 더 명확하기는 한거 같아.
-가장 실용적으로 접근한 예는, ocaml-multicore에서 활용한 것들 같아 보인다.
-분명히 장점을 볼 수 있을거 같은 개념 같다.
-왜냐하면,
-지금의 monad을 이용한 효과와 사용처의 분리 방식을 생각해보면, 하나의 monad context에서는, 한가지 타입의 monad만을 표현가능. 그래서 여러개의 monad context을 위해 monad transformer 같은것들으로 stacking하여 사용. (…그때 그때 Haskell do-notation등에 따라 분리해서 표현) 좋은점이라면 좋은점일수도 있겠지만. 그런데, aeffects을 이용한다면, 굳이 그렇게 복잡하게 나누지 않아도 괜찮고, monad처럼 사용처에서 그 효과의 내용을 분리하기도 좋아 보여. 당연히 그렇기 때문에, 원래의 모나드에서 같는 장점을 그대로 잃지 않으면서, 더 평범하게 적어나가기 좋을거 같다. (…일반적인 imperative programming language에서 I/O/async/await, Maybe등이 동시에 나오거나, …처럼)">
+      <script src="/js/bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 
-            
-            
-                
-                    
-                        <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css" integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
-                    
-                
-            
-        
-
-        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-
-	
 </head>
 <body>
         <div class="container"><header>
@@ -112,36 +65,32 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
     </div>
 
     <nav>
-        <div class="search-form">
-            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
 
-            <input id="search-query" name="search-query"
-                   type="text"
-                   class="search-query"
-                   tabindex="1"
-                   placeholder="🔎 검색 (search)"/>
-        </div>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
 
         
-            <a href="/archive/">🗂️ Archive</a>
+
         
-            <a href="/myself/">📨 Contact</a>
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
         
 
-            <button class="dark-mode-btn"
-                    aria-label="toggle dark-mode">🌓 dark?</button>
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">🌓 dark?</button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
 
-            <button class="snow-mode-btn"
-                    aria-label="toggle dark-mode">☃️ snow?</button>
-
+        
     </nav>
 </header>
-
-<script src="/js/bundle.js"></script>
-
-<div class="search">
-    <div class="search-results"></div>
-</div>
 
 
 
@@ -160,6 +109,11 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
  }
  
 </script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
 
 <main>
     <nav class="post-prevnext" aria-label="posts">
@@ -378,19 +332,21 @@ https://overreacted.io/algebraic-effects-for-the-rest-of-us/
 
 </main>
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765991396</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766053297</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
 </div>
     </body>
 </html>

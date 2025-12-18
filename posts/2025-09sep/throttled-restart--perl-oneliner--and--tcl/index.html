@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html><head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765991396">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766053297">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="
 코딩을 하다보면, 파일변경시에 자동으로 빌드, 서버재시작, 혹은
 테스트케이스를 실행 되도록 하면 꽤 편리할 수 있다.
 
@@ -16,44 +16,24 @@
 코드에 반영되는 언어/프레임웍을 사용하더라도, 원하는 태스크(예:
 테스트케이스 실행) 같은걸 걸어 놓으려면 커맨드라인에서 지정해두는게
 낫다." />
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">
-  <meta property="og:site_name" content="아겔로그">
-  <meta property="og:title" content="[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백">
-  <meta property="og:description" content="코딩을 하다보면, 파일변경시에 자동으로 빌드, 서버재시작, 혹은 테스트케이스를 실행 되도록 하면 꽤 편리할 수 있다.
-커먼리습 같은 경우엔 바로 실행중인 코드가 변경되는 방식이어서 신경 쓸게 별로 없고, Rails 같은 웹프레임웍은 자동으로 재시작하거나 변경된 코드를 다시 로딩해주기도 하고, PHP 계열도 웹브라우저를 refresh하면 자동적으로 새 코드으로 실행하게 된다.
-다른 컴파일이 필요한 언어나, 파이썬, 펄 같은 언어들, 혹은 자동으로 코드에 반영되는 언어/프레임웍을 사용하더라도, 원하는 태스크(예: 테스트케이스 실행) 같은걸 걸어 놓으려면 커맨드라인에서 지정해두는게 낫다.">
-  <meta property="og:locale" content="ko_kr">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-09-24T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-09-24T00:00:00+00:00">
-    <meta property="article:tag" content="Fswatch">
-    <meta property="article:tag" content="Inotify-Tools">
-    <meta property="article:tag" content="Inotify">
-    <meta property="article:tag" content="Filesystem">
-    <meta property="article:tag" content="Fam">
-    <meta property="article:tag" content="Perl">
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css"
+          integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
+    
+    
+    
+    
+    
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백">
-  <meta name="twitter:description" content="코딩을 하다보면, 파일변경시에 자동으로 빌드, 서버재시작, 혹은 테스트케이스를 실행 되도록 하면 꽤 편리할 수 있다.
-커먼리습 같은 경우엔 바로 실행중인 코드가 변경되는 방식이어서 신경 쓸게 별로 없고, Rails 같은 웹프레임웍은 자동으로 재시작하거나 변경된 코드를 다시 로딩해주기도 하고, PHP 계열도 웹브라우저를 refresh하면 자동적으로 새 코드으로 실행하게 된다.
-다른 컴파일이 필요한 언어나, 파이썬, 펄 같은 언어들, 혹은 자동으로 코드에 반영되는 언어/프레임웍을 사용하더라도, 원하는 태스크(예: 테스트케이스 실행) 같은걸 걸어 놓으려면 커맨드라인에서 지정해두는게 낫다.">
+      <script src="/js/bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 
-            
-            
-                
-                    
-                        <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css" integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
-                    
-                
-            
-        
-
-        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-
-	
 </head>
 <body>
         <div class="container"><header>
@@ -64,36 +44,32 @@
     </div>
 
     <nav>
-        <div class="search-form">
-            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
 
-            <input id="search-query" name="search-query"
-                   type="text"
-                   class="search-query"
-                   tabindex="1"
-                   placeholder="🔎 검색 (search)"/>
-        </div>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
 
         
-            <a href="/archive/">🗂️ Archive</a>
+
         
-            <a href="/myself/">📨 Contact</a>
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
         
 
-            <button class="dark-mode-btn"
-                    aria-label="toggle dark-mode">🌓 dark?</button>
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">🌓 dark?</button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
 
-            <button class="snow-mode-btn"
-                    aria-label="toggle dark-mode">☃️ snow?</button>
-
+        
     </nav>
 </header>
-
-<script src="/js/bundle.js"></script>
-
-<div class="search">
-    <div class="search-results"></div>
-</div>
 
 
 
@@ -112,6 +88,11 @@
  }
  
 </script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
 
 <main>
     <nav class="post-prevnext" aria-label="posts">
@@ -520,19 +501,21 @@ Footnotes
 
 </main>
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765991396</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766053297</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
 </div>
     </body>
 </html>

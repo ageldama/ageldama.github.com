@@ -1,49 +1,31 @@
 <!DOCTYPE html>
 <html><head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Golang Windows에서 Vscode이랑 행복하게 쓰기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1765991395">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Golang 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아.
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Golang Windows에서 Vscode이랑 행복하게 쓰기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766053297">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Golang 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아.
 그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 VsCode 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만&hellip;)
 여튼 그런데 윈도에서 기본적으로 C컴파일러 설치되어 있어야 제대로 굴러가서,
 Mingw64 설치하고, $MINGW64/bin 디렉토리 $PATH에 걸어주니 잘됨.
 VsCode에서 디버거도 잘 붙고 만족스럽다." />
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://ageldama.github.io/posts/2018-04apr/2018-04apr-golang-windows-vscode/">
-  <meta property="og:site_name" content="아겔로그">
-  <meta property="og:title" content="Golang Windows에서 Vscode이랑 행복하게 쓰기">
-  <meta property="og:description" content="Golang 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아. 그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 VsCode 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만…)
-여튼 그런데 윈도에서 기본적으로 C컴파일러 설치되어 있어야 제대로 굴러가서, Mingw64 설치하고, $MINGW64/bin 디렉토리 $PATH에 걸어주니 잘됨.
-VsCode에서 디버거도 잘 붙고 만족스럽다.">
-  <meta property="og:locale" content="ko_kr">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2018-04-14T14:59:31+09:00">
-    <meta property="article:modified_time" content="2018-04-14T14:59:31+09:00">
-    <meta property="article:tag" content="Golang">
-    <meta property="article:tag" content="Windows">
-    <meta property="article:tag" content="Vscode">
-    <meta property="article:tag" content="Mingw">
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css"
+          integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
+    
+    
+    
+    
+    
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Golang Windows에서 Vscode이랑 행복하게 쓰기">
-  <meta name="twitter:description" content="Golang 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아. 그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 VsCode 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만…)
-여튼 그런데 윈도에서 기본적으로 C컴파일러 설치되어 있어야 제대로 굴러가서, Mingw64 설치하고, $MINGW64/bin 디렉토리 $PATH에 걸어주니 잘됨.
-VsCode에서 디버거도 잘 붙고 만족스럽다.">
+      <script src="/js/bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 
-            
-            
-                
-                    
-                        <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css" integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
-                    
-                
-            
-        
-
-        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-
-	
 </head>
 <body>
         <div class="container"><header>
@@ -54,36 +36,32 @@ VsCode에서 디버거도 잘 붙고 만족스럽다.">
     </div>
 
     <nav>
-        <div class="search-form">
-            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
 
-            <input id="search-query" name="search-query"
-                   type="text"
-                   class="search-query"
-                   tabindex="1"
-                   placeholder="🔎 검색 (search)"/>
-        </div>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
 
         
-            <a href="/archive/">🗂️ Archive</a>
+
         
-            <a href="/myself/">📨 Contact</a>
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
         
 
-            <button class="dark-mode-btn"
-                    aria-label="toggle dark-mode">🌓 dark?</button>
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">🌓 dark?</button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
 
-            <button class="snow-mode-btn"
-                    aria-label="toggle dark-mode">☃️ snow?</button>
-
+        
     </nav>
 </header>
-
-<script src="/js/bundle.js"></script>
-
-<div class="search">
-    <div class="search-results"></div>
-</div>
 
 
 
@@ -102,6 +80,11 @@ VsCode에서 디버거도 잘 붙고 만족스럽다.">
  }
  
 </script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
 
 <main>
     <nav class="post-prevnext" aria-label="posts">
@@ -180,19 +163,21 @@ VsCode에서 디버거도 잘 붙고 만족스럽다.">
 
 </main>
 <footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765991395</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766053297</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
 </div>
     </body>
 </html>

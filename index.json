@@ -1,12 +1,12 @@
 
 [
  {
-     "permalink": "https://ageldama.github.io/posts/2025-12dec/2025-12dec16--03-ping/","title": "🔤 hover 애니메이션 지정해봤다",
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/young40er-hugo-theme-1st-rel/","title": "👦 “영포티”(“young40er”) hugo theme 공개",
      
-     "tags": ["blog", "blogging", "sass", "css", "animation", "effect"],
+     "tags": ["webdev", "css", "sass", "js", "javascript", "hugo", "theme", "archie", "young40er", "release", "first"],
      
  "description": "",
- "contents": " 블로그에 점점 뭔가 덧붙여 나간다. 다행히 sass 컴파일러가 똑똑해서 배포용 css이 엄청커지진 않았다. ㅎㅎ\n(마우스🖱️를 올려보세요, 호랑나비🦋의 행운의 기운이 함께할겁니다.) …이제 좀 자제해야겠다.\n🎹 BGM: Love Bites (So Do I) / Halestorm\n"},
+ "contents": " 그간 심혈을 기울여 작업해온 테마를 공개하기로 결심했다. 힘든 결심이었지만, 나 또한 한사람의 ‘영포티’로서 大義를 위해 어쩔 수 없었다.\n👉 Github Repo.\n자랑스러운 스크린샷 모음 뿌듯하다. "},
  {
      "permalink": "https://ageldama.github.io/posts/","title": "▫️ Posts",
      
@@ -21,6 +21,13 @@
      
  "description": "",
  "contents": ""},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/2025-12dec16--03-ping/","title": "🔤 hover 애니메이션 지정해봤다",
+     
+     "tags": ["blog", "blogging", "sass", "css", "animation", "effect"],
+     
+ "description": "",
+ "contents": " 블로그에 점점 뭔가 덧붙여 나간다. 다행히 sass 컴파일러가 똑똑해서 배포용 css이 엄청커지진 않았다. ㅎㅎ\n(마우스🖱️를 올려보세요, 호랑나비🦋의 행운의 기운이 함께할겁니다.) …이제 좀 자제해야겠다.\n🎹 BGM: Love Bites (So Do I) / Halestorm\n"},
  {
      "permalink": "https://ageldama.github.io/posts/2025-12dec/2025-12dec16--02-ping/","title": "😱 Emacs 일기: vi-mode은 그만 쓰고, windmove은 쓰기 시작",
      

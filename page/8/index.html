@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html>
-	<head>
+    <head>
 	<meta name="generator" content="Hugo 0.152.2">
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1765991396">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta property="og:image" content=""/>
-	<link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
-	<meta property="og:url" content="https://ageldama.github.io/">
-  <meta property="og:site_name" content="아겔로그">
-  <meta property="og:title" content="아겔로그">
-  <meta property="og:locale" content="ko_kr">
-  <meta property="og:type" content="website">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766053297">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta property="og:image" content=""/>
+    <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css"
+          integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
+    
+    
+    
+    
+    
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="아겔로그">
+      <script src="/js/bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
 
-            
-            
-                
-                    
-                        <link rel="stylesheet" href="/css/styles.6555fb5aa9936120eb22d5ed7a5beb881c89cc386ad78236589cfd0b214dfb9e.css" integrity="sha256-ZVX7WqmTYSDrItXtelvriByJzDhq14I2WJz9CyFN&#43;54=" crossorigin="anonymous">
-                    
-                
-            
-        
-
-        <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
-
-	
 </head>
 
-        <body>
-                <div class="container">
-			<header>
+    <body>
+        <div class="container">
+            <header>
     <div class="main ">
         <h1 class="site-title ">
             <a href="https://ageldama.github.io/">아겔로그</a>
@@ -42,37 +37,32 @@
     </div>
 
     <nav>
-        <div class="search-form">
-            <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
 
-            <input id="search-query" name="search-query"
-                   type="text"
-                   class="search-query"
-                   tabindex="1"
-                   placeholder="🔎 검색 (search)"/>
-        </div>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
 
         
-            <a href="/archive/">🗂️ Archive</a>
+
         
-            <a href="/myself/">📨 Contact</a>
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
         
 
-            <button class="dark-mode-btn"
-                    aria-label="toggle dark-mode">🌓 dark?</button>
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">🌓 dark?</button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
 
-            <button class="snow-mode-btn"
-                    aria-label="toggle dark-mode">☃️ snow?</button>
-
+        
     </nav>
 </header>
-
-<script src="/js/bundle.js"></script>
-
-
-			<div class="search">
-    <div class="search-results"></div>
-</div>
 
 
 
@@ -92,18 +82,76 @@
  
 </script>
 
+<div class="search">
+    <div class="search-results"></div>
+</div>
 
-			<main class="list">
-				<div class="site-description"></div>
-				
-				
-				
-				<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/2023-03mar15--wired-desktop/">🐀 내 책상에서 유선랜 환경</a></h1>
-                                    <time>2023년03월15일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
+
+
+	    <main class="list">
+		<div class="site-description"></div>
+		
+		
+		
+		<section class="list-item"><h1 class="title"><a href="/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">🚖 Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</a></h1>
+                    <time>2023년11월05일
+                        </time>
+                    <br><div class="description">
+			
+			<p>
+나도 x11에서 wayland 기반으로 옮겨가고 있는데, 다른 것들은 대부분
+괜찮거나 포기.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+가볍고 좋은데, debian chromium에서 ibus으로 한글 입력이 안되어서
+알아봤다.</p>
+<hr>
+<div id="outline-container-headline-1" class="outline-3">
+<h3 id="headline-1">
+1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨.
+</h3>
+<div id="outline-text-headline-1" class="outline-text-3">
+<ul>
+<li>힌트 얻음: <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2058976">https://bugzilla.redhat.com/show_bug.cgi?id=2058976</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지?
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<div class="src src-shell">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  <span class="k">for</span> pid in  <span class="k">$(</span>pgrep chromium<span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">#echo $pid</span>
+</span></span><span class="line"><span class="cl">      grep -i gtk /proc/<span class="s2">&#34;</span><span class="nv">$pid</span><span class="s2">&#34;</span>/maps
+</span></span><span class="line"><span class="cl">  <span class="k">done</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+==&gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&gt; ibus
+연동안됨.</p>&hellip;
+			
+		    </div>
+                    <span class="permalink">
+			<a href="/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/" class="button-link">▶️ 읽으러 가기</a>
+                    </span>
+		</section>
+		
+		<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/2023-03mar15--wired-desktop/">🐀 내 책상에서 유선랜 환경</a></h1>
+                    <time>2023년03월15일
+                        </time>
+                    <br><div class="description">
+			
+			<p>
 개인환경을 조금 특이하게 사용하는데, 그 이유와 방식.</p>
 <div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
@@ -133,19 +181,19 @@ why: x11? (wayland 대신)
   게임패드/조이스틱을 편안하게 마우스/키보드으로 매핑해서 쓰는게 나는
   많은데 모두 x11만 지원하거나, 아직은 x11에서만 쓸만한 수준으로
   동작해서.</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2023-03mar/2023-03mar15--wired-desktop/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
-				<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/2023-03mar08--02-ping--news/">😣 News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes</a></h1>
-                                    <time>2023년03월08일
-                                        </time>
-                                        <br><div class="description">
-						
-						<div id="outline-container-headline-1" class="outline-2">
+			
+		    </div>
+                    <span class="permalink">
+			<a href="/posts/2023-03mar/2023-03mar15--wired-desktop/" class="button-link">▶️ 읽으러 가기</a>
+                    </span>
+		</section>
+		
+		<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/2023-03mar08--02-ping--news/">😣 News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes</a></h1>
+                    <time>2023년03월08일
+                        </time>
+                    <br><div class="description">
+			
+			<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 &#34;리액트가 날 인질으로 잡고 있어요&#34;
 </h2>
@@ -172,19 +220,19 @@ why: x11? (wayland 대신)
 </h2>
 <div id="outline-text-headline-2" class="outline-text-2">
 <p><a href="https://jes.al/2023/03/how-to-hire-engineering-talent-without-the-bs/">https://jes.al/2023/03/how-to-hire-engineering-talent-without-the-bs/</a></p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2023-03mar/2023-03mar08--02-ping--news/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
-				<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/2023-03mar08--01-ping/">⁉️ Ping 08/03/2023 .01 : 전자책읽기</a></h1>
-                                    <time>2023년03월08일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
+			
+		    </div>
+                    <span class="permalink">
+			<a href="/posts/2023-03mar/2023-03mar08--02-ping--news/" class="button-link">▶️ 읽으러 가기</a>
+                    </span>
+		</section>
+		
+		<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/2023-03mar08--01-ping/">⁉️ Ping 08/03/2023 .01 : 전자책읽기</a></h1>
+                    <time>2023년03월08일
+                        </time>
+                    <br><div class="description">
+			
+			<p>
 linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁들만 나열,
 별로 내용은 길게 늘여 쓰지 않으려고:</p>
 <ol>
@@ -201,19 +249,19 @@ linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁�
 </li>
 <li>
 <p>calibre 책파일 관리, 읽기 모두 만족스러움</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2023-03mar/2023-03mar08--01-ping/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
-				<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/perl-cal3/">🧧 `ncal -3` 직접 Perl으로 짜봤다</a></h1>
-                                    <time>2023년03월02일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
+			
+		    </div>
+                    <span class="permalink">
+			<a href="/posts/2023-03mar/2023-03mar08--01-ping/" class="button-link">▶️ 읽으러 가기</a>
+                    </span>
+		</section>
+		
+		<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/perl-cal3/">🧧 `ncal -3` 직접 Perl으로 짜봤다</a></h1>
+                    <time>2023년03월02일
+                        </time>
+                    <br><div class="description">
+			
+			<p>
 <code class="verbatim">ncal -3</code> 이 뭐냐하면:</p>
 <p>
 <a href="https://man7.org/linux/man-pages/man1/cal.1.html">https://man7.org/linux/man-pages/man1/cal.1.html</a></p>
@@ -240,95 +288,14 @@ linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁�
 <p>…더 해킹을 해서, <code class="verbatim">calendar(..)</code> 결과문자열을 적당히 파싱해서,
 작은 Text::Table으로 만들어서, 그것들으로 조합하고 했었어도 될거
 같아.</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2023-03mar/perl-cal3/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
-				<section class="list-item"><h1 class="title"><a href="/posts/2023-03mar/cxx-defer/">🍯 C&#43;&#43;: Golang-ish `defer`-macro</a></h1>
-                                    <time>2023년03월02일
-                                        </time>
-                                        <br><div class="description">
-						
-						<p>
-별거 없는데, 문득 심심해서 툭닥거려봤다.</p>
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-원하는 것과 접근법
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<ol>
-<li><a href="https://go.dev/blog/defer-panic-and-recover">https://go.dev/blog/defer-panic-and-recover</a></li>
-<li><a href="https://docs.rs/defer/latest/defer/fn.defer.html">https://docs.rs/defer/latest/defer/fn.defer.html</a></li>
-<li><a href="https://ziglang.org/documentation/master/#defer">https://ziglang.org/documentation/master/#defer</a></li>
-</ol>
-<p>
-  golang/zig에서처럼 <code class="verbatim">defer</code> 등록한 LIFO순서대로 호출되도록.</p>
-<p>
-  검색해보면, 대부분 RAII을 사용하거나 하는 것들이 보인다:</p>
-<ul>
-<li><a href="https://duckduckgo.com/?q=c%2B%2B+golang+defer">DDG: c++ golang defer</a></li>
-<li><a href="https://stackoverflow.com/questions/33050620/golang-style-defer-in-c">https://stackoverflow.com/questions/33050620/golang-style-defer-in-c</a></li>
-<li><a href="https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop">https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop</a></li>
-<li><a href="https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/">https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/</a></li>
-</ul>
-<p>
-  …그냥 <code class="verbatim">std::shared_ptr&lt;void&gt;</code> 을 이용하는 방식이 마음에
-  들었다. 그리고 조금 더 간단하게 사용하려고 매크로로 만들어 봤다.</p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-<code class="verbatim">defer.inl</code> :
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<div class="src src-c++">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
-</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
-</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
-</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
-</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
-</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">  <span class="cm">/* -*- mode: c++; -*- */</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="cp">#ifndef defer_INL
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define defer_INL 1
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl">  <span class="cp">#define _Defer_CONCAT_IMPL( x, y ) x##y
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y )
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl">  <span class="cp">#define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk)
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl">  <span class="cp">#endif </span><span class="cm">/*defer_INL*/</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-  <a href="https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html"><code class="verbatim">__COUNTER__</code></a> 이용해서 매크로가 생성한 <code class="verbatim">std::shared_ptr&lt;..&gt;</code> 변수의
-  이름이 겹치지 않도록 해봤다. (…위에 검색한 링크들에도 사용하듯이)</p>&hellip;
-						
-					</div>
-                                        <span class="permalink">
-					    <a href="/posts/2023-03mar/cxx-defer/" class="button-link">▶️ 읽으러 가기</a>
-                                        </span>
-				</section>
-				
-				<nav class="posts-pagination" aria-label="Page navigation">
+			
+		    </div>
+                    <span class="permalink">
+			<a href="/posts/2023-03mar/perl-cal3/" class="button-link">▶️ 읽으러 가기</a>
+                    </span>
+		</section>
+		
+		<nav class="posts-pagination" aria-label="Page navigation">
 
     
     <a href="/" class="button-link posts-pagination-btn posts-pagination-last" aria-label="Last">최신⏮️</a>
@@ -344,22 +311,24 @@ linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁�
     <a href="/page/39/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
     
 </nav>
-			</main>
-			<footer class="global-footer">
-      2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> <code>1765991396</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+	    </main>
+	    <footer class="global-footer">
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766053297</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YSB7MGHZ4V');
-    </script>
 
-		</div>
-	</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
+
+	</div>
+    </body>
 </html>
