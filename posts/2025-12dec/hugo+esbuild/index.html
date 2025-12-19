@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>esbuild js build for blog - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766161622">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>esbuild js build for blog - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766172536">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="
 그간 자바스크립트를 이 Hugo으로 생성하는 블로그에 사용하면서, 여기저기
@@ -33,8 +33,7 @@ github cdn의 bandwidth은 여전히 사용하는 것.
     
     
 
-      <script src="/js/bundle.js"></script>
-  <!-- link rel="stylesheet" type="text/css" href="/css/chroma.css" / -->
+    <script src="/js/bundle.js"></script>
 
 </head>
 <body>
@@ -126,7 +125,9 @@ github cdn의 bandwidth은 여전히 사용하는 것.
 </li>
 <li><a href="#headline-6">🎁 보너스: <code>Makefile</code>-와 <code>npx concurrently</code></a>
 </li>
-<li><a href="#headline-7">Footnotes</a>
+<li><a href="#headline-7">✏️ [EDIT] “하지만 hugo은 js.Build(esbuild)을 내장하고 있는걸요?!”</a>
+</li>
+<li><a href="#headline-8">Footnotes</a>
 </li>
 </ul>
 </nav>
@@ -348,6 +349,31 @@ server&#34;-이 이미 제공하고 있어서 있어도 무의미했다.</li>
 </div>
 <div id="outline-container-headline-7" class="outline-2">
 <h2 id="headline-7">
+✏️ [EDIT] “하지만 hugo은 js.Build(esbuild)을 내장하고 있는걸요?!”
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
+<p>[2025-12-20 Sat]</p>
+<ol>
+<li>
+<p>그렇게 쓸 수 있으면 좋은데 몇 가지가 내 “취향”에 맞지 않아서 그냥
+Makefile + esbuild + concurrently 방식이 더 편하다:</p>
+<ol>
+<li>무엇보다: 내가 <a href="https://github.com/ageldama/young40er-hugo-theme/">사용하는 theme</a>-에 적용하는 방식으로, 나는
+<code>config.toml</code>-에서 주입하는 방식을 쓰는데, 이걸 많이 바꾸지
+않는 이상은 매 페이지 생성 때마다 esbuild을 실행하려고 해서
+마음에 들지 않았다.</li>
+<li><code>node_modules</code> 의존성 및 내가 작성한 파일들 의존성을
+연결해주는데에 난 포기했다.</li>
+<li><code>js.Build</code>-을 위해 <code>Resource</code>-을 얻어야 하는데, 이건
+<code>assets/</code>-디렉토리에 위치해야함.</li>
+</ol>
+</li>
+<li>언젠가 나중에 원하면 바꿀지도 모르겠지만 일단은 이대로 쓰자.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
 Footnotes
 </h2>
 </div>
@@ -428,7 +454,7 @@ Footnotes
 
 </main>
 <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766161622</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766172536</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
