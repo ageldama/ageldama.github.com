@@ -3,7 +3,7 @@
     <head>
 	<meta name="generator" content="Hugo 0.152.2">
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766072233">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766161013">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta property="og:image" content=""/>
@@ -14,8 +14,8 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.802d0bcd7a780254096f17d32b2080cbffde21b43014712c394f125013789ea2.css"
-          integrity="sha256-gC0LzXp4AlQJbxfTKyCAy//eIbQwFHEsOU8SUBN4nqI=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.b828ab79e753e31b425c41e147420579f71837b3bb52f571527a223ad209536d.css"
+          integrity="sha256-uCireedT4xtCXEHhR0IFefcYN7O7UvVxUnoiOtIJU20=" crossorigin="anonymous">
     
     
     
@@ -23,7 +23,7 @@
     
 
       <script src="/js/bundle.js"></script>
-  <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+  <!-- link rel="stylesheet" type="text/css" href="/css/chroma.css" / -->
 
 </head>
 
@@ -92,6 +92,30 @@
 		<div class="site-description"></div>
 		
 		
+		
+		<section class="list-item"><h1 class="title"><a href="/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/">🚙 Hugo &#43; pagefind 붙여서 검색기능 추가했다</a></h1>
+                    <time>2025년03월16일
+                        </time>
+                    <br><div class="description">
+			
+			<p>
+<a href="https://pagefind.app/">https://pagefind.app/</a></p>
+<p>
+페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는
+pagefind을 붙여봤다.</p>
+<p>
+처음엔 좀 어색했는데, 커스터마이징을 별로 제공하지 않기는 했지만,
+그래도 이것저것 뜯어서 CSS도 마음에 들게 좀 수정하고, JS/DOM 이벤트도
+적당히 잡아서 마음에 들게 동작하게 고쳤다.</p>
+<p>
+별로라고 생각하던 부분들도 다 뜯어 고치고 하면서 더 블로그가 마음에
+들어진다. 🤠</p>&hellip;
+			
+		    </div>
+                    <span class="permalink">
+			<a href="/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/" class="button-link">▶️ 읽으러 가기</a>
+                    </span>
+		</section>
 		
 		<section class="list-item"><h1 class="title"><a href="/posts/2025-03mar/2025-03mar15--01-new-css/">😹 css, design 새단장 &#43; dark-mode</a></h1>
                     <time>2025년03월15일
@@ -228,65 +252,6 @@ emacs / flycheck + c/c++ 개발할 때에 단점이, 자동적으로 외부 3rd-
                     </span>
 		</section>
 		
-		<section class="list-item"><h1 class="title"><a href="/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/">🌉 FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정</a></h1>
-                    <time>2023년11월05일
-                        </time>
-                    <br><div class="description">
-			
-			<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-freebsd에서 samba 파일서버 세팅은 프비핸드북 참고
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p><a href="https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba">https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba</a></p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-symlink을 samba에 노출하기
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<p>
-<code>/usr/local/etc/smb4.conf</code> 파일에 다음을 추가:</p>
-<div class="src src-conf">
-<pre tabindex="0"><code class="language-conf" data-lang="conf">[global]
-...
-allow insecure wide links =	yes
-
-
-[share]
-...
-follow symlinks = yes
-wide links = yes
-unix extensions = no</code></pre>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
-mdns으로 samba 파일서버를 네트웍에 광고하기
-</h2>
-<div id="outline-text-headline-3" class="outline-text-2">
-<p>
-  보통은 avahi을 써왔는데, mdnsresponder이 더 가볍다고 해서 이렇게 세팅해봄.</p>
-<ol>
-<li><code>pkg install mDNSResponder</code></li>
-<li>
-<p><code>/etc/rc.conf</code> 에 추가:</p>
-<div class="src src-conf">
-<pre tabindex="0"><code class="language-conf" data-lang="conf">mdnsresponderposix_enable=&#34;YES&#34;
-mdnsresponderposix_flags=&#34;-f /usr/local/etc/mdnsresponderposix.conf&#34;</code></pre>
-</div>
-</li>
-<li>
-<p>호스트이름은 <code>freebsd-samsung</code> 으로 smb서비스를 노출.</p>&hellip;
-			
-		    </div>
-                    <span class="permalink">
-			<a href="/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/" class="button-link">▶️ 읽으러 가기</a>
-                    </span>
-		</section>
-		
 		<nav class="posts-pagination" aria-label="Page navigation">
 
     
@@ -305,7 +270,7 @@ mdnsresponderposix_flags=&#34;-f /usr/local/etc/mdnsresponderposix.conf&#34;</co
 </nav>
 	    </main>
 	    <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766072233</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766161013</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

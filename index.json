@@ -1,12 +1,12 @@
 
 [
  {
-     "permalink": "https://ageldama.github.io/posts/2025-12dec/young40er-hugo-theme-1st-rel/","title": "👦 “영포티”(“young40er”) hugo theme 공개",
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/prefers-color-scheme/","title": "🦹 darkmode.js... prefers-color-scheme",
      
-     "tags": ["webdev", "css", "sass", "js", "javascript", "hugo", "theme", "archie", "young40er", "release", "first"],
+     "tags": ["blog", "blogging", "webdev", "css", "sass", "js", "javascript", "darkmode.js", "chromastyle", "hugo"],
      
- "description": "모두가 염원해온 스윗영포티를 위한 위대한 테마가 탄생했다.",
- "contents": " 그간 심혈을 기울여 작업해온 테마를 공개하기로 결심했다. 힘든 결심이었지만, 나 또한 한사람의 ‘영포티’로서 大義를 위해 어쩔 수 없었다.\n👉 Github Repo.\n자랑스러운 스크린샷 모음 뿌듯하다. "},
+ "description": "사용하던 darkmode.js 방식을, CSS 방식으로 재작성했다.",
+ "contents": " (기존) darkmode.js 방식 👉 Darkmode.js 도입기 #1: 처음 구현 도입기 #2: darkmode.js 사용 장단점 ... 장점 ❤️ 적용이 쉽다 장점 ❤️ darkmode 색상을 지정할 필요 없다.\n(자동으로 inverse색상으로 표시) 장점 ❤️ 전환 애니메이션이 멋있다 단점 😥 css이외에 darkmode.js 초기화시에 배경색 전달해줘야 단점 😥 inverse 색상이 가끔 괴랄하다 단점 😥 페이지 로딩시 flash 현상이 생긴다 단점 😥 페이지 스크롤시 아직 덜 칠해진 부분이 보이기도 한다 처음에 도입은 쉽고 좋았는데,\n어쨌든 반투명레이어 + color-inverse-css-filter을 이용해서 구현한 방식인거 같아서 위에 나열한 스크롤시 아직 레이어가 덮지 않은 영역이 보인다거나,\n페이지로딩 이후에 js이 실행되어 레이어를 올릴지 말지를 행동을 취하는 방식이기 때문에… 처음엔 무조건 light-mode이 보이고 빠르게 dark-mode으로 전환하는 과정에서 flashing 현상이 생길 수 밖엔 없는 구조.\n새로운 방식을 설계 + 구현시작 평범하게 css 사용 @media (prefers-color-scheme: dark) 방식을 알아봄: 👉 [MDN] (at-rules) prefers-color-scheme\n생각보다 해야 할 작업이 좀 됨:\nCSS에서 색상표/팔레트를 하나 더 준비해야 함: 🌻light-mode / 🌚dark-mode 그말은: 기존 CSS의 색상값들을 더 정돈해서 변수화해야 함. 별도의 CSS class을 만들지 않고, 동적으로 var(...)-기능을 이용하여, 웹브라우저가 자동으로 CSS variables 선택하도록 만들엇다: 👉 [MDN] var() 1\n색상표/팔레트 + CSS클래스에 적용 SASS에서 다음처럼 일단 색상표를 만들어 나감:\n1 2 3 4 5 6 7 8 9 \\:root color-scheme: light dark --bg-color: #{$bg_beige} --text-color: #{$blackish_text} @media (prefers-color-scheme: dark) --bg-color: #{$monochrome_black} --text-color: #{$monochrome_lgrey} color-scheme: 👉 [MDN] color-scheme $bg_beige, $blackish_text 등의 색상값들은 그 위에서 SASS변수로 등록:\n1 2 $bg_beige: #fffbeb $blackish_text: #5c5537 사용은 이런 느낌으로 했다:\n1 2 3 body background-color: var(--bg-color) color: var(--text-color) [추가❌] light-dark() 👉 [MDN] light-dark() 이런 것도 이제 지원하기는 하던데. 쓰진 않음.\n최근에 추가되어 호환성이 아직인거 같아서.\n아마 장점은, var(...) 사용하려면, :root pseudo-class에 css 변수들 등록해 놓아야 하는데, 그럴 필요 없이 바로 light/dark-mode에 따른 컬러값 literal 적어줄 수 있을거 같다.\n그런데 그냥 어차피 색상표/팔레트 정리하기로 마음 먹었으니 안썼다. 🍣\nJS: 색상토글하기, 선택테마한 저장+로딩하기 👉 [SO] How do I detect dark mode using JavaScript? 👉 [SO] How to override css prefers-color-scheme setting 위 링크들 베껴서:\n다크모드 토글버튼\n+다음에 페이지 다시 로딩되면, 선택한 색상테마가 다시 불리도록 local-storage 저장하기. 페이지 로딩되면:\n이전에 선택되어 local-storage에 저장해놓은 색상테마으로 전환. 아니면 냅두기. (사용자 OS/브라우저 preferences가 그냥 먹도록) [Hack 🪓] Hugo Syntax Highligthing Hugo 블로그생성기의 chromastyles으로 코드 문법강조를 사용하고 있었는데, 이걸 색상모드별로 적당히 전환하고 싶었다.\n원래는:\nhugo gen chromastyle 명령으로 특정한 1개 테마의 스타일시트를 미리 생성하고, (그걸 적용해도 문제가 없는게) darkmode.js이 color-inverse해줬으니 그럴싸하게 보였었다. 그래서:\n원하는 스타일시트 2개(light/dark)을 골라서 둘 다 다른 CSS파일으로 생성하도록 빌드스크립트를 수정.\n… chroma style gallery 참고해서 원하는 스킴을 지정했다. … Hugo config.toml-에 “공식”-설정키는 markup.highlight/style-이었는데, “비공식”-설정키 lightStyle / darkStyle-을 추가하고, 원래의 “공식“설정키는 무시하기로 했다. color-mode 전환시에 매칭되는 CSS파일을 페이지에 로딩하도록 JS. ㅎㅎ 상당히 hacky하지만 잘 동작한다.\n1 2 3 4 # config.toml [markup.highlight] lightStyle=\u0026#39;solarized-light\u0026#39; darkStyle=\u0026#39;solarized-dark256\u0026#39; 1 2 3 4 5 6 7 8 9 # Makefile chromastyles: hugo gen chromastyles \\ --style=`cat config.toml | perl ./scripts/toml-get.pl markup highlight lightStyle` \\ \u0026gt; static/css/chroma.light.css hugo gen chromastyles \\ --style=`cat config.toml | perl ./scripts/toml-get.pl markup highlight darkStyle` \\ \u0026gt; static/css/chroma.dark.css …위에서 config.toml-파일의 특정 설정키를 읽어서 hugo gen chromastyles 명령에 먹여주는 Perl스크립트는:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 #!/usr/bin/env perl # # toml-get.pl # use strict; use warnings; use TOML; use Data::Diver qw(Dive); my $slurped = do { local $/; \u0026lt;STDIN\u0026gt; }; my ($t, $err) = TOML::from_toml($slurped); die $err if $err; print Dive($t, @ARGV); Data::Diver 사용해서 설정키 하위경로 접근을 커맨드라인에서 편하게 받도록 했다. …직접 스크립트를 고정해서 짜주거나 않아도 되어서 이것도 좋아하는 Hack🪓. 2\n그리고 마지막으로 JS쪽에서 테마에 따라 해당 문법강조 테마에 따른 CSS파일을 로딩해줬다. 👉 [SO] How to load in an external CSS file dynamically?\nWrap Up darkmode.js (기존) 새로운 방식 ❤️+1 적용이 쉽다. 😥-1 색상팔레트를 정의해야함. ❤️+1 darkmode 색상을 지정할 필요 없다. (자동으로 inverse색상으로 표시) ❤️+1 전환 애니메이션이 멋있다 😥-1 그런거없다.\n하지만 원하면 만들수도 있을거 같긴하다.\n(CSS animation and/or JS으로 전환시 효과) 😥-1 css이외에 darkmode.js 초기화시에 배경색 전달해줘야 ❤️+1 CSS만으로 끝. 깔끔. 😥-1 inverse 색상이 가끔 괴랄하다 ❤️+1 조절가능.\n이젠 CSS색상을 선택한 내 책임이다. 😥-1 페이지 로딩시 flash 현상이 생긴다 ❤️+1 거의 재현하기 어렵게 빨리 동작함. ㅎㅎ 😥-1 페이지 스크롤시 아직 덜 칠해진 부분이 보이기도 한다 ❤️+1 그럴가능성이 없음. 그리고 무엇보다, 재밌었다.\n땀의 가치 100%! 🧑‍🌾 Footnotes 1 모오던 웹브라우저 다이스키다요💖\n2 https://thethreevirtues.com/\n"},
  {
      "permalink": "https://ageldama.github.io/posts/","title": "▫️ Posts",
      
@@ -21,6 +21,13 @@
      
  "description": "",
  "contents": ""},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/young40er-hugo-theme-1st-rel/","title": "👦 “영포티”(“young40er”) hugo theme 공개",
+     
+     "tags": ["webdev", "css", "sass", "js", "javascript", "hugo", "theme", "archie", "young40er", "release", "first"],
+     
+ "description": "모두가 염원해온 스윗영포티를 위한 위대한 테마가 탄생했다.",
+ "contents": " 그간 심혈을 기울여 작업해온 테마를 공개하기로 결심했다. 힘든 결심이었지만, 나 또한 한사람의 ‘영포티’로서 大義를 위해 어쩔 수 없었다.\n👉 Github Repo.\n자랑스러운 스크린샷 모음 뿌듯하다. "},
  {
      "permalink": "https://ageldama.github.io/posts/2025-12dec/2025-12dec16--03-ping/","title": "🔤 hover 애니메이션 지정해봤다",
      

@@ -3,7 +3,7 @@
     <head>
 	<meta name="generator" content="Hugo 0.152.2">
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766072233">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766161013">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta property="og:image" content=""/>
@@ -14,8 +14,8 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.802d0bcd7a780254096f17d32b2080cbffde21b43014712c394f125013789ea2.css"
-          integrity="sha256-gC0LzXp4AlQJbxfTKyCAy//eIbQwFHEsOU8SUBN4nqI=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.b828ab79e753e31b425c41e147420579f71837b3bb52f571527a223ad209536d.css"
+          integrity="sha256-uCireedT4xtCXEHhR0IFefcYN7O7UvVxUnoiOtIJU20=" crossorigin="anonymous">
     
     
     
@@ -23,7 +23,7 @@
     
 
       <script src="/js/bundle.js"></script>
-  <link rel="stylesheet" type="text/css" href="/css/chroma.css" />
+  <!-- link rel="stylesheet" type="text/css" href="/css/chroma.css" / -->
 
 </head>
 
@@ -92,6 +92,27 @@
 		<div class="site-description"></div>
 		
 		
+		
+		<section class="list-item"><h1 class="title"><a href="/posts/2020-11nov/ping-05thu/">🚉 Ping 05/Nov/2020</a></h1>
+                    <time>2020년11월05일
+                        </time>
+                    <br><div class="description">
+			
+			<p>
+책을 몇 권 주문했다. 관심이 생긴 새로운 분야에 대한 책들이었는데
+흥미롭게도 그 중 두 권이 서로 완전히 다른 분야인데 역저자가
+같았다. 아마도 역자 소개에 나온 자신의 업무, 맡은 영역에서 필요하거나
+관심이 깊어서 번역한 것 같다. 재밌었다.</p>
+<p>
+그리고 갖고 있는 한국어로는 아직 나오지 않은 책을 세 권 정도 읽고
+싶어서 다시 펼쳤다. 예전에도 조금 읽었었던 책들인데 마음에 들었던
+구절들, 생각들이 다시 읽혀져 즐거웠다.</p>&hellip;
+			
+		    </div>
+                    <span class="permalink">
+			<a href="/posts/2020-11nov/ping-05thu/" class="button-link">▶️ 읽으러 가기</a>
+                    </span>
+		</section>
 		
 		<section class="list-item"><h1 class="title"><a href="/posts/2020-11nov/org-more-1st-rel/">📣 &#34;org-more.el&#34; released!</a></h1>
                     <time>2020년11월04일
@@ -264,59 +285,6 @@ Prototyping등 더 편안하게 혼자 코딩을 할 때는…
                     </span>
 		</section>
 		
-		<section class="list-item"><h1 class="title"><a href="/posts/2020-10oct/leet-code-1614-2nd/">🐖 CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a></h1>
-                    <time>2020년10월21일
-                        </time>
-                    <br><div class="description">
-			
-			<p>
-<a href="/posts/2020-10oct/leet-code-1614/">어제 작성한 LOOP매크로을 이용한 구현</a> 을 풀어서, 만약 LOOP매크로가
-없었더라면 어떻게 짰을지 작성해봤다.</p>
-<div class="src src-lisp">
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
-</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
-</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
-</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
-</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
-</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
-</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
-</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
-</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
-</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
-</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
-</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">max-nested-parentheses-raw</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">optimize</span> <span class="p">(</span><span class="nv">speed</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nv">safety</span> <span class="mi">0</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="k">type</span> <span class="kt">simple-string</span> <span class="nv">s</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">n</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">result</span> <span class="mi">0</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">type</span> <span class="kt">fixnum</span> <span class="nv">n</span> <span class="nv">result</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">dotimes</span> <span class="p">(</span><span class="nv">s--cur-idx</span> <span class="p">(</span><span class="nf">length</span> <span class="nv">s</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">ch</span> <span class="p">(</span><span class="nf">elt</span> <span class="nv">s</span> <span class="nv">s--cur-idx</span><span class="p">)))</span>
-</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nf">member</span> <span class="nv">ch</span> <span class="o">&#39;</span><span class="p">(</span><span class="sc">#\(</span> <span class="sc">#\)</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nb">incf</span> <span class="nv">n</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">eql</span> <span class="sc">#\(</span> <span class="nv">ch</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">-1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nb">setf</span> <span class="nv">result</span> <span class="p">(</span><span class="nf">max</span> <span class="nv">n</span> <span class="nv">result</span><span class="p">)))))</span>
-</span></span><span class="line"><span class="cl">    <span class="nv">result</span><span class="p">))</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-</div>
-<p>
-여전히 타입을 지정해서 자동으로 타입추론, 최적화 하도록 했다.</p>
-<p>
-그런데 여전히 <code>dotimes</code>, <code>when</code>, <code>incf</code>, <code>max</code> 같은 커먼리습
-HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이런 것들도
-다 풀어서 작성해도 되겠지만 별 의미는 없을 것 같아서.</p>&hellip;
-			
-		    </div>
-                    <span class="permalink">
-			<a href="/posts/2020-10oct/leet-code-1614-2nd/" class="button-link">▶️ 읽으러 가기</a>
-                    </span>
-		</section>
-		
 		<nav class="posts-pagination" aria-label="Page navigation">
 
     
@@ -335,7 +303,7 @@ HyperSpec에서 표준에 포함시킨 매크로 등을 사용했다. 물론 이
 </nav>
 	    </main>
 	    <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766072233</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766161013</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

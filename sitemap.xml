@@ -2,6 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ageldama.github.io/tags/blog/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/blogging/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/chromastyle/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/css/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/darkmode.js/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2025-12dec/prefers-color-scheme/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/hugo/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/javascript/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/js/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/categories/programming/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/sass/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/webdev/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2025-12-19T14:41:29+00:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/posts/2025-12dec/young40er-hugo-theme-1st-rel/</loc>
     <lastmod>2025-12-18T10:09:51+00:00</lastmod>
   </url><url>
@@ -11,58 +59,22 @@
     <loc>https://ageldama.github.io/categories/blogging/</loc>
     <lastmod>2025-12-18T10:09:51+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/categories/</loc>
-    <lastmod>2025-12-18T10:09:51+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/css/</loc>
-    <lastmod>2025-12-18T10:09:51+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/first/</loc>
-    <lastmod>2025-12-18T10:09:51+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/hugo/</loc>
-    <lastmod>2025-12-18T10:09:51+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/javascript/</loc>
-    <lastmod>2025-12-18T10:09:51+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/js/</loc>
-    <lastmod>2025-12-18T10:09:51+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
     <lastmod>2025-12-18T10:09:51+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/release/</loc>
     <lastmod>2025-12-18T10:09:51+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/sass/</loc>
-    <lastmod>2025-12-18T10:09:51+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
-    <lastmod>2025-12-18T10:09:51+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/theme/</loc>
     <lastmod>2025-12-18T10:09:51+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/webdev/</loc>
-    <lastmod>2025-12-18T10:09:51+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/young40er/</loc>
-    <lastmod>2025-12-18T10:09:51+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-12-18T10:09:51+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/animation/</loc>
     <lastmod>2025-12-16T12:21:02+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/categories/blog/</loc>
-    <lastmod>2025-12-16T12:21:02+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/blog/</loc>
-    <lastmod>2025-12-16T12:21:02+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/blogging/</loc>
     <lastmod>2025-12-16T12:21:02+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/effect/</loc>
@@ -165,9 +177,6 @@
     <lastmod>2025-12-15T00:00:01+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/npx/</loc>
-    <lastmod>2025-12-15T00:00:01+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/categories/programming/</loc>
     <lastmod>2025-12-15T00:00:01+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/90s/</loc>
