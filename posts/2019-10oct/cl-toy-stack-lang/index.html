@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766314786">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="일단 첫번째 버젼 다 만들었다.
+
+https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0
+
+그냥 장난으로 인터프리터도 아니라 그냥
+eval 이용한 간단한 파서도
+필요없이 lexer만으로 만들만한
+Forth
+비슷한 언어를 만듬.
+명령어도 실용적인 목적이 아닌만큼 그냥 문자열 장난 밖엔 없다.
+느낀점
+
+라이브러리 좋은거 갖다 잘쓰자
+
+uiop 같은거,
+feature-expression 삽질을 적게하거나 안해도됨. 더
+portable하고 잘 굴러가는.
+
+
+Test!
+3. 짜고 하나씩 진화시켜가면서 다시 돌리는 재미.
+Idiomatic하게 그리고 역시 Test!
+
+..처음엔 그냥 전역변수에 상태를 갖도록 만들고,
+그걸 dynamic binding으로 바꿔서 파라미터화하고,
+또 그걸 다시 상태를 캡슐화하는 클래스로 감싸고,
+처음엔 단순하게 리습스럽게 짜고 그걸 진화시키고,
+그리고 역시 다시 테스트.
+
+
+아는만큼 보인다
+
+setf 병렬로 하기, &#43;destructuring
+asdf:operate &#43; :build-op :
+SBCL/ECL
+등 리습컴파일러에 관계 없이 실행이미지 빌드 편안하게
+
+https://github.com/xach/buildapp 같은거 써볼까 하다가,
+처음엔 그냥 간단히 쉘스크립팅으로 시작.
+
+
+기타 등등
+
+
+
+&hellip;그리고 무엇보다 재밌었다. 그리고 뭐가됐든 그냥 짜보고 굴러가는
+형태로 계속해서 작은 프로그램을 많이 만들고 하면서 놀아야겠다고
+생각했다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
+          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
+
+        
+
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/ping-20sun/">⬅️ Ping 20/Oct/2019</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/ping-15tue/">➡️ Ping 15/Oct/2019</a>
+        
+    </span>
+</nav>
+
+
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#느낀점">느낀점</a></li>
+  </ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🧜‍♀️ cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</h1>
+	    <div class="meta">
+                <time datetime="2019-10-16" pubdate>
+                    2019년10월16일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p>일단 첫번째 버젼 다 만들었다.</p>
+<blockquote>
+<p><a href="https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0">https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0</a></p>
+</blockquote>
+<p>그냥 장난으로 인터프리터도 아니라 그냥
+<a href="http://clhs.lisp.se/Body/f_eval.htm">eval</a> 이용한 간단한 파서도
+필요없이 lexer만으로 만들만한
+<a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">Forth</a>
+비슷한 언어를 만듬.</p>
+<p>명령어도 실용적인 목적이 아닌만큼 그냥 문자열 장난 밖엔 없다.</p>
+<h1 id="느낀점">느낀점</h1>
+<ol>
+<li><strong>라이브러리 좋은거 갖다 잘쓰자</strong>
+<ul>
+<li><a href="http://quickdocs.org/uiop/">uiop</a> 같은거,</li>
+<li><a href="http://clhs.lisp.se/Body/24_aba.htm">feature-expression</a> 삽질을 적게하거나 안해도됨. 더
+portable하고 잘 굴러가는.</li>
+</ul>
+</li>
+<li><strong>Test!</strong>
+3. 짜고 하나씩 진화시켜가면서 다시 돌리는 재미.</li>
+<li><strong>Idiomatic하게</strong> 그리고 역시 Test!
+<ol>
+<li>..처음엔 그냥 전역변수에 상태를 갖도록 만들고,</li>
+<li>그걸 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_abaab.htm">dynamic binding</a>으로 바꿔서 파라미터화하고,</li>
+<li>또 그걸 다시 상태를 캡슐화하는 클래스로 감싸고,</li>
+<li>처음엔 단순하게 리습스럽게 짜고 그걸 진화시키고,</li>
+<li>그리고 역시 다시 테스트.</li>
+</ol>
+</li>
+<li><strong><em>아는만큼 보인다</em></strong>
+<ul>
+<li><code>setf</code> 병렬로 하기, +destructuring</li>
+<li><code>asdf:operate</code> + <code>:build-op</code> :
+<a href="http://www.sbcl.org/">SBCL</a>/<a href="https://common-lisp.net/project/ecl/">ECL</a>
+등 리습컴파일러에 관계 없이 실행이미지 빌드 편안하게
+<ul>
+<li><a href="https://github.com/xach/buildapp">https://github.com/xach/buildapp</a> 같은거 써볼까 하다가,
+처음엔 그냥 간단히 쉘스크립팅으로 시작.</li>
+</ul>
+</li>
+<li>기타 등등</li>
+</ul>
+</li>
+</ol>
+<p>&hellip;그리고 무엇보다 재밌었다. 그리고 뭐가됐든 그냥 짜보고 굴러가는
+형태로 계속해서 작은 프로그램을 많이 만들고 하면서 놀아야겠다고
+생각했다.</p>
+
+	</section>
+
+	<div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+                    
+		    <li style="display: inline">😺 <a href="/categories/programming">programming</a></li>
+                    
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/commonlisp">commonlisp</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/toy">toy</a></li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/ping-20sun/">⬅️ Ping 20/Oct/2019</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/ping-15tue/">➡️ Ping 15/Oct/2019</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766314786</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
+</div>
+    </body>
+</html>

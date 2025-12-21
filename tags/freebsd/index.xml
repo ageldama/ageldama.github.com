@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Freebsd on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/freebsd/</link>
+    <description>Recent content in Freebsd on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Mon, 15 Sep 2025 08:26:26 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/freebsd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>freebsd &#43; 고물랩탑 쓸만하다(재밌다!)</title>
+      <link>https://ageldama.github.io/posts/2025-09sep/freebsd-why/</link>
+      <pubDate>Mon, 15 Sep 2025 08:26:26 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-09sep/freebsd-why/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;시도하기 이전에는&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을&#xA;  서브랩탑으로 집책상에서 써왔었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  메모리도 4GB, 확장이 불가능하고. 배터리도 조금 부풀었고 충전도 잘 되지&#xA;  않는다. 거기에 외부전원어댑터를 붙이지 않으면 어째서인지 eDP이&#xA;  출력되지 않는다. ㅎㅎㅎ&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그래도 어쨌든 debian-stable 설치해놓고 samba 서버로 책상에서 쓰거나&#xA;  하기엔 적당했다. 딱히 동영상을 틀어 놓거나 하는 것도 포기해야 할&#xA;  정도로 빠르지도 않았다. 웹브라우징도 느렸다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;그러다가 freebsd 설치를 했다 (&lt;code&gt;14.3-RELEASE&lt;/code&gt; &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;)&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;원래도 freebsd이 gui이나 latency이 중요한 체감이 훨씬 가볍고 부드럽게&#xA;  느껴지는걸 알고 있었다. 그런데 이번에는 너무 &lt;span style=&#34;text-decoration: underline;&#34;&gt;극적으로 즐거웠다&lt;/span&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템)</title>
+      <link>https://ageldama.github.io/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/</link>
+      <pubDate>Mon, 15 Sep 2025 08:25:26 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/</guid>
+      <description>&lt;p&gt;&#xA;freebsd을 써오면서 좀 불만이었던게&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, usb으로 외장 hdd을 연결할 때&#xA;호환성 혹은 성능이 너무 느림.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 아예 빠른 유선랜을 연결해놓고 samba으로 파일을 백업/공유했었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;호환성은 &lt;a href=&#34;https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup&#34;&gt;linux luks&lt;/a&gt; 지원도 아쉽지만, 대부분의 외장하드 파일시스템을 잘&#xA;지원하지 못하는거 같았어서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데, 이번에 다시 시도하면서 그냥 얌전하게 &lt;a href=&#34;https://wiki.freebsd.org/FUSEFS&#34;&gt;fusefs&lt;/a&gt; + &lt;a href=&#34;https://www.freshports.org/sysutils/fusefs-exfat&#34;&gt;fusefs-exfat&lt;/a&gt;&#xA;사용하니 그럭저럭 괜찮은 성능이 나와서 이렇게 해야겠구나 생각.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;fusefs + ntfs 같은 port도 있는데, 이것도 빠를거 같지만, exfat이 더&#xA;구현이 빠를거 같다. (파일시스템 구조부터 훨씬 단순할테니까)&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Footnotes&#xA;&lt;/h2&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;footnotes&#34;&gt;&#xA;&lt;hr class=&#34;footnotes-separatator&#34;/&gt;&#xA;&lt;div class=&#34;footnote-definitions&#34;&gt;&#xA;&lt;div class=&#34;footnote-definition&#34;&gt;&#xA;&lt;sup id=&#34;footnote-1&#34;&gt;&lt;a href=&#34;#footnote-reference-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;&lt;div class=&#34;footnote-body&#34;&gt;&#xA;&lt;p&gt;물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지원 등등&#xA;hw driver지원이 항상 부족하지만.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ddakong v1.1 릴리즈: FreeBSD / kqueue</title>
+      <link>https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.1-release/</link>
+      <pubDate>Thu, 08 May 2025 19:17:25 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.1-release/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;릴리즈 v1.1&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  freebsd 지원: 빌드가능하도록 수정 + kqueue 이벤트처리 추가&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  (원래는 epoll/linux만 지원)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&amp;lt;&lt;a href=&#34;https://github.com/ageldama/term-ddakong/releases/tag/v1.1&#34;&gt;https://github.com/ageldama/term-ddakong/releases/tag/v1.1&lt;/a&gt;&amp;gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;darwin/osx, openbsd 등은 빌드+실행될거 같은데 확신은 못하겠믐.&lt;/li&gt;&#xA;&lt;li&gt;매 릴리즈마다 크로스컴파일해서 바이너리릴리즈해왔는데, 리눅스는&#xA;aarch64, armhf, i686, x86_64 자동화해놨는데, freebsd은 아직이라&#xA;이번엔 스킵.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;…오랬만에 freebsd 켜서 쓰는데, 반응속도감 역시 엄청좋다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정</title>
+      <link>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/</link>
+      <pubDate>Sun, 05 Nov 2023 05:40:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;freebsd에서 samba 파일서버 세팅은 프비핸드북 참고&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba&#34;&gt;https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;symlink을 samba에 노출하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;&lt;code&gt;/usr/local/etc/smb4.conf&lt;/code&gt; 파일에 다음을 추가:&lt;/p&gt;&#xA;&lt;div class=&#34;src src-conf&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;[global]&#xA;...&#xA;allow insecure wide links =&#x9;yes&#xA;&#xA;&#xA;[share]&#xA;...&#xA;follow symlinks = yes&#xA;wide links = yes&#xA;unix extensions = no&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-3&#34;&gt;&#xA;mdns으로 samba 파일서버를 네트웍에 광고하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  보통은 avahi을 써왔는데, mdnsresponder이 더 가볍다고 해서 이렇게 세팅해봄.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;pkg install mDNSResponder&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;code&gt;/etc/rc.conf&lt;/code&gt; 에 추가:&lt;/p&gt;&#xA;&lt;div class=&#34;src src-conf&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;mdnsresponderposix_enable=&amp;#34;YES&amp;#34;&#xA;mdnsresponderposix_flags=&amp;#34;-f /usr/local/etc/mdnsresponderposix.conf&amp;#34;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/div&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;호스트이름은 &lt;code&gt;freebsd-samsung&lt;/code&gt; 으로 smb서비스를 노출.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 13/Aug/2020</title>
+      <link>https://ageldama.github.io/posts/2020-08aug/ping-13thu/</link>
+      <pubDate>Thu, 13 Aug 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-08aug/ping-13thu/</guid>
+      <description>&lt;p&gt;&#xA;프비 워크스테이션을 만들어놓고 그렇게 좋은 사양은 절대 아닌 조용한&#xA;슬림PC에서, 또 가능한 마우스를 안 써도 좋게 세팅해놓고 편안하게&#xA;이맥스에서 작업을 해나간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;FM라디오의 가끔 지글거리는 잡음도 좋은 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;계속해서 신경을 쓰게 만들고 끊기고 광고가 나오고 또 클릭을 유도하고&#xA;멍청하게 징징거리는 것으로 돈으로 바꾸는 요즘의 수많은 다른 매체들보다&#xA;훨씬 나를 편안하게 만든다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다른 매체들도 비슷하지 않을까. SNS도 그런 것 같고 대부분의 앱, 심지어&#xA;운영체제도 그런 환경들과는 다른.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

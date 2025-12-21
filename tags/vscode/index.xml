@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vscode on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/vscode/</link>
+    <description>Recent content in Vscode on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sat, 14 Apr 2018 14:59:31 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang Windows에서 Vscode이랑 행복하게 쓰기</title>
+      <link>https://ageldama.github.io/posts/2018-04apr/2018-04apr-golang-windows-vscode/</link>
+      <pubDate>Sat, 14 Apr 2018 14:59:31 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2018-04apr/2018-04apr-golang-windows-vscode/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://golang.org/&#34;&gt;Golang&lt;/a&gt; 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아.&#xA;그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;VsCode&lt;/a&gt; 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만&amp;hellip;)&lt;/p&gt;&#xA;&lt;p&gt;여튼 그런데 윈도에서 기본적으로 C컴파일러 설치되어 있어야 제대로 굴러가서,&#xA;&lt;a href=&#34;https://sourceforge.net/projects/mingw-w64/&#34;&gt;Mingw64&lt;/a&gt; 설치하고, &lt;code&gt;$MINGW64/bin&lt;/code&gt; 디렉토리 &lt;code&gt;$PATH&lt;/code&gt;에 걸어주니 잘됨.&lt;/p&gt;&#xA;&lt;p&gt;VsCode에서 디버거도 잘 붙고 만족스럽다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

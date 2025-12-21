@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766314786">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="
+나도 x11에서 wayland 기반으로 옮겨가고 있는데, 다른 것들은 대부분
+괜찮거나 포기.1
+
+가볍고 좋은데, debian chromium에서 ibus으로 한글 입력이 안되어서
+알아봤다.
+
+
+
+1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨.
+
+
+
+힌트 얻음: https://bugzilla.redhat.com/show_bug.cgi?id=2058976
+
+
+
+
+
+2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지?
+
+
+
+
+
+1
+2
+3
+4
+
+
+  for pid in  $(pgrep chromium); do
+      #echo $pid
+      grep -i gtk /proc/&#34;$pid&#34;/maps
+  done
+
+
+
+
+==&gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&gt; ibus
+연동안됨." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
+          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
+
+        
+
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/">⬅️ FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-03mar/2023-03mar15--wired-desktop/">➡️ 내 책상에서 유선랜 환경</a>
+        
+    </span>
+</nav>
+
+
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨.</a>
+</li>
+<li><a href="#headline-2">2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지?</a>
+</li>
+<li><a href="#headline-3">3) 실행커맨드/스크립트 확인</a>
+</li>
+<li><a href="#headline-4">ㅎㅎㅎ</a>
+</li>
+<li><a href="#headline-5">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🚖 Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</h1>
+	    <div class="meta">
+                <time datetime="2023-11-05" pubdate>
+                    2023년11월05일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+나도 x11에서 wayland 기반으로 옮겨가고 있는데, 다른 것들은 대부분
+괜찮거나 포기.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+가볍고 좋은데, debian chromium에서 ibus으로 한글 입력이 안되어서
+알아봤다.</p>
+<hr>
+<div id="outline-container-headline-1" class="outline-3">
+<h3 id="headline-1">
+1) 문제 원인 :: gtk3 backend으로 chromium이 동작해서, ibus연동이 안됨.
+</h3>
+<div id="outline-text-headline-1" class="outline-text-3">
+<ul>
+<li>힌트 얻음: <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2058976">https://bugzilla.redhat.com/show_bug.cgi?id=2058976</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+2) 확인 :: 실행중인 chromium이 어떤 버젼의 gtk3/4와 연결되었는지?
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<div class="src src-shell">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  <span class="k">for</span> pid in  <span class="k">$(</span>pgrep chromium<span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">#echo $pid</span>
+</span></span><span class="line"><span class="cl">      grep -i gtk /proc/<span class="s2">&#34;</span><span class="nv">$pid</span><span class="s2">&#34;</span>/maps
+</span></span><span class="line"><span class="cl">  <span class="k">done</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+==&gt; 기본 bookworm/chromium 상태에서는 gtk3임을 확인. ~~&gt; ibus
+연동안됨.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+3) 실행커맨드/스크립트 확인
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<ol>
+<li><code>dpkg -L chromium-browser</code> 으로 desktop launcher 확인</li>
+<li><code>/usr/share/applications/chromium-browser.desktop</code> 확인</li>
+<li>
+<p><code>/usr/bin/chromium-browser</code> 스크립트 읽기</p>
+<ul>
+<li><code>$HOME/.chromium-browser.init</code> 에서 읽어들인,</li>
+<li><code>CHROMIUM_FLAGS</code> 플래그를 전달함을 확인.</li>
+</ul>
+</li>
+<li>
+<p>그렇게, <code>$HOME/.chromium-browser.init</code> 작성:</p>
+<div class="src src-shell">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  <span class="nb">export</span> <span class="nv">GTK_IM_MODULE</span><span class="o">=</span>ibus
+</span></span><span class="line"><span class="cl">  <span class="nb">export</span> <span class="nv">CHROMIUM_FLAGS</span><span class="o">=</span>--gtk-version<span class="o">=</span><span class="m">4</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<ul>
+<li><strong><strong>EDIT</strong></strong> : [2023-11-26] <code>GTK_IM_MODULE</code> 추가 및 <code>export</code> 으로 수정.</li>
+</ul>
+</li>
+<li>chromium 프로세스가 어떤 gtk3/4 연결되는지 확인 (<em>다시</em>)</li>
+<li><em>성공!</em></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+ㅎㅎㅎ
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<ol>
+<li>아직은 debian stable은 wayland이랑 붙이려면 약간은 hack이 필요.</li>
+<li>그럼에도, 확장포인트가 있도록 packaging되어 있어서 debian 좋음.</li>
+<li><a href="https://github.com/ageldama/configs/tree/master/dotfiles">https://github.com/ageldama/configs/tree/master/dotfiles</a> 에도
+추가해서 계속 재사용 가능하도록 정리도 끝.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>포기도 좀 했음. x2x을 사용해서 네트웍으로 입력장치를 공유하거나
+하는 것 정도.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section>
+
+	<div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+                    
+		    <li style="display: inline">😺 <a href="/categories/hack">hack</a></li>
+                    
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/debian">debian</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/bookworm">bookworm</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/chromium">chromium</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/wayland">wayland</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/ibus">ibus</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/gtk3">gtk3</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/gtk4">gtk4</a></li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/">⬅️ FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-03mar/2023-03mar15--wired-desktop/">➡️ 내 책상에서 유선랜 환경</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766314786</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
+</div>
+    </body>
+</html>

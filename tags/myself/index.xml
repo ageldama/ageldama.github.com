@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Myself on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/myself/</link>
+    <description>Recent content in Myself on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 11 Jul 2017 18:35:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/myself/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2017년 7월 11일, 요즘 나는</title>
+      <link>https://ageldama.github.io/posts/2017/2017-07-11-myself/</link>
+      <pubDate>Tue, 11 Jul 2017 18:35:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2017/2017-07-11-myself/</guid>
+      <description>&lt;p&gt;한국에 와서 다시 일을 다니고 있음. 백엔드 소프트웨어 엔지니어로 과거에&#xA;이미 다른 사람들이 만들어놓은걸 마음에 들지 않는 모양을 조금씩&#xA;고쳐가고 그럭저럭 출퇴근.&lt;/p&gt;&#xA;&lt;p&gt;장마도 오고 엄청나게 덥다. 묘하게 독일에서 똑같은 8시간 근무인데&#xA;한국에서는 출퇴근이 엄청나게 힘들다는 생각이 들었다. 그리고 실제로&#xA;집밖에서 생활하는 시간을 생각하면 하루 8시간 수면을 하기도 빠듯해서&#xA;정말 이상하구나 생각이든다. 거기에 독일에서 생활할때는 나혼자 생활해서&#xA;밥이며 청소 같은것들도 내가 혼자해야 했었던걸 생각해도 이상할 정도로&#xA;한국에서의 생활은 시간이 쪼들린다.&lt;/p&gt;&#xA;&lt;p&gt;여하튼 재미있는건 요즘엔 Python, Flask, SQLAlchemy으로 나름대로&#xA;재미있게 작업하고 나름대로 능률적으로 작업을 하고 TDD 잘 적용해서 문제&#xA;없게 편안하게 작업하는 방법들을 익힌거 같다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2017년 1월, 요즘 나는.</title>
+      <link>https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/</link>
+      <pubDate>Sun, 29 Jan 2017 12:15:00 +0100</pubDate>
+      <guid>https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/</guid>
+      <description>&lt;p&gt;요즘엔 그냥 독일 생활, 도르트문트에 조금씩 더 적응해서 사는게 편안해졌다.&lt;/p&gt;&#xA;&lt;p&gt;식기세척기, 세탁기, 커피머신, 팀사람들, 출퇴근길, 놀러가는 동네,&#xA;구경가는 전자제품상가.&lt;/p&gt;&#xA;&lt;p&gt;그냥 어느정도 이제는 독일어를 하나도 못하지만, 적어도 팀 사람들과는&#xA;정도 붙이고 재밌게 잘지내가고 있는거 같다.&lt;/p&gt;&#xA;&lt;p&gt;커피를 캡슐커피 기계가 있어서 적당히 입맛을 붙이고&#xA;마셔보고있다. 괜찮다. 토스트랑 꿀이랑 사다가 가볍게 먹고 해결하고&#xA;살고있다.&lt;/p&gt;&#xA;&lt;p&gt;비자도 4년짜리 블루카드도 됐고, 마음이 편안해졌다.&lt;/p&gt;&#xA;&lt;p&gt;책은&#xA;&lt;a href=&#34;http://book.daum.net/detail/book.do?bookid=KOR9791195677153&#34;&gt;&lt;em&gt;열한계단&lt;/em&gt;&lt;/a&gt; 을&#xA;읽고 많은 생각을 해봤다. &lt;em&gt;체체파리의 비법&lt;/em&gt;, &lt;em&gt;시녀이야기&lt;/em&gt;, 그리고 테드&#xA;챙의 &lt;em&gt;당신 인생의 이야기&lt;/em&gt; 을 읽어볼까 생각하고 있다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

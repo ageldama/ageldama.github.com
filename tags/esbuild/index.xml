@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Esbuild on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/esbuild/</link>
+    <description>Recent content in Esbuild on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 16 Dec 2025 03:20:28 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/esbuild/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 블로그 디자인 고쳐나가면서 생각</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/2025-12dec16--01-ping/</link>
+      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/2025-12dec16--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;2024년엔 &lt;em&gt;“CSS/JS에 의존하지 않는 블로그를 만들자”&lt;/em&gt;-였다가,&#xA;조금씩 뜯어고쳐 나갔다. 사용편의나 읽기 적당하도록 색상과 정렬정도를&#xA;고쳐나갔다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그러다가 2025년 올해엔 아예 Hugo theme을 새로 정리해서 다시 만들었다.&#xA;이전에 해오던 것들을 더 정제하고 구조를 만들어 나갔다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;처음엔 다른 CSS프레임웍&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 을 더 가져와 쓰려고 고민하다가, 그냥&#xA;이대로 적당한거 같아서, 가장 가벼운 상태에서 진행해왔다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;생각보다 Responsive / Mobile 지원은 재밌었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다만, 외양요소가 조금씩 변경될 때마다, 결국 회귀적인 검토과정이&#xA;필요한데, 이걸 Layout 체크, BrowserStack와 같은, 혹은 그런&#xA;빌드스크립트를 만들어서 스크린샷 비교 기능 같은걸 자동화 테스트하면&#xA;유리하겠단 생각. 물론 개인 정적사이트 블로깅에 그런건 오버킬이지.&#xA;ㅎㅎ하지만 어차피 취미영역이기 때문에 뭘 어떻게 내가 즐겁고 편하게&#xA;한다면 가치가 있을것 같다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>esbuild js build for blog</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/hugo&#43;esbuild/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:01 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/hugo&#43;esbuild/</guid>
+      <description>&lt;p&gt;&#xA;그간 자바스크립트를 이 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;으로 생성하는 블로그에 사용하면서, 여기저기&#xA;그냥 &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;-태그를 써왔었다. 한군데로 정리하기도 뭐하고,&#xA;자바스크립트를 쓰는 기능은 메인이 아니라고 생각해와서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;검색, darkmode만 자바스크립트를 사용하고 조금씩 붙여놓은 easter eggs도&#xA;사용하니까 조금씩 늘어난 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그냥 cdnjs 같은걸 써도 되겠지만, 그냥 패키지로 내려받아서 아예 내&#xA;블로그에 올리는게 남에 cdn bandwidth을 줄여주는 도리인 것 같았다…만&#xA;github cdn의 bandwidth은 여전히 사용하는 것.&#xA;&lt;span style=&#34;font-size:3rem;&#34;&gt;😜&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;여튼, 그렇다고 사용하는 의존성(예: jquery)의 크기를 줄여서 내보낸 것도&#xA;아니고 점점 의존성관계가 복잡해지는거 같아서 정리를 시작해봤다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

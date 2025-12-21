@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ddakong v0.0.8 릴리즈: 안정화 및 플러그인 시스템 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766314786">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="
+
+스크린샷:
+
+
+
+
+&lt; https://github.com/ageldama/term-ddakong &gt;
+
+&lt; https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8 &gt;
+
+
+
+
+릴리즈 v0.0.8
+
+
+안정화/문서화하고, 이제 플러그인 시스템을 도입해서 원하는대로
+hackable🪓🔥한 터미널용 입력기가 되었다.
+
+플러그인 작성해서:
+
+한글만이 아니라 다른 언어 입력기로 사용할 수도 있음.
+UTF-8 이외에 다른 인코딩으로 출력가능함. (예: EUC-KR, EUC-JP …)
+토글키(Control-H) 마음에 안들면 바꾸면 됨.
+등등등
+
+
+오늘 한 작업들은:
+
+안정화 많이 진행했다.
+코드 문서화 주석작성 다 했다.
+
+cross-platform build 자동화해서 릴리즈 때 편해졌다.
+
+armhf (raspberry pi 32bit), aarch64 (raspberry pi 64bit),
+i386 (32bit), x86_64 모두 릴리즈하고 있다.
+..혹시나 어디선가 i386 기계 터미널에서 한글을 입력하고 싶은
+사람이 있을거 같아서.
+
+
+
+
+" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
+          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
+
+        
+
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.0-release/">⬅️ ddakong v1.0 릴리즈: lua scripting 시스템</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-05may/term-ddakong-initial-release/">➡️ ddakong 한글입력기 릴리즈</a>
+        
+    </span>
+</nav>
+
+
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">스크린샷:</a>
+</li>
+<li><a href="#headline-2">릴리즈 v0.0.8</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">✝️ ddakong v0.0.8 릴리즈: 안정화 및 플러그인 시스템</h1>
+	    <div class="meta">
+                <time datetime="2025-05-03" pubdate>
+                    2025년05월03일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+스크린샷:
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><img src="/posts/2025-05may/KIMCHI-cropped.png" alt="/posts/2025-05may/KIMCHI-cropped.png" title="/posts/2025-05may/KIMCHI-cropped.png" /></p>
+<p>
+&lt; <a href="https://github.com/ageldama/term-ddakong">https://github.com/ageldama/term-ddakong</a> &gt;</p>
+<p>
+&lt; <a href="https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8">https://github.com/ageldama/term-ddakong/releases/tag/v0.0.8</a> &gt;</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+릴리즈 v0.0.8
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>안정화/문서화하고, 이제 플러그인 시스템을 도입해서 원하는대로
+hackable🪓🔥한 터미널용 입력기가 되었다.</p>
+<p>
+플러그인 작성해서:</p>
+<ol>
+<li>한글만이 아니라 다른 언어 입력기로 사용할 수도 있음.</li>
+<li>UTF-8 이외에 다른 인코딩으로 출력가능함. (예: EUC-KR, EUC-JP …)</li>
+<li>토글키(<code>Control-H</code>) 마음에 안들면 바꾸면 됨.</li>
+<li>등등등</li>
+</ol>
+<p>
+오늘 한 작업들은:</p>
+<ol>
+<li>안정화 많이 진행했다.</li>
+<li>코드 문서화 주석작성 다 했다.</li>
+<li>
+<p>cross-platform build 자동화해서 릴리즈 때 편해졌다.</p>
+<ul>
+<li>armhf (raspberry pi 32bit), aarch64 (raspberry pi 64bit),
+i386 (32bit), x86_64 모두 릴리즈하고 있다.</li>
+<li>..혹시나 어디선가 i386 기계 터미널에서 한글을 입력하고 싶은
+사람이 있을거 같아서.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+
+	</section>
+
+	<div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+                    
+		    <li style="display: inline">😺 <a href="/categories/linux">linux</a></li>
+                    
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/linux">linux</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/terminal">terminal</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/fbdev">fbdev</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/fbterm">fbterm</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/korean">korean</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/hangul">hangul</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/hangeul">hangeul</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/input">input</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/method">method</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/im">im</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/ime">ime</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/c99">c99</a></li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-05may/term-ddakong-v1.0-release/">⬅️ ddakong v1.0 릴리즈: lua scripting 시스템</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-05may/term-ddakong-initial-release/">➡️ ddakong 한글입력기 릴리즈</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766314786</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
+</div>
+    </body>
+</html>

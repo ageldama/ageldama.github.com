@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템) - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766314786">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="
+freebsd을 써오면서 좀 불만이었던게1, usb으로 외장 hdd을 연결할 때
+호환성 혹은 성능이 너무 느림.
+
+그래서 아예 빠른 유선랜을 연결해놓고 samba으로 파일을 백업/공유했었다.
+
+호환성은 linux luks 지원도 아쉽지만, 대부분의 외장하드 파일시스템을 잘
+지원하지 못하는거 같았어서.
+
+그런데, 이번에 다시 시도하면서 그냥 얌전하게 fusefs &#43; fusefs-exfat
+사용하니 그럭저럭 괜찮은 성능이 나와서 이렇게 해야겠구나 생각.
+
+fusefs &#43; ntfs 같은 port도 있는데, 이것도 빠를거 같지만, exfat이 더
+구현이 빠를거 같다. (파일시스템 구조부터 훨씬 단순할테니까)
+
+
+Footnotes
+
+
+
+
+
+
+1
+
+물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지원 등등
+hw driver지원이 항상 부족하지만." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
+          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
+
+        
+
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/freebsd-why/">⬅️ freebsd &#43; 고물랩탑 쓸만하다(재밌다!)</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/">➡️ 블로그 검색을 다시 짰다 (PageFind 제거)</a>
+        
+    </span>
+</nav>
+
+
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🔴 [작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템)</h1>
+	    <div class="meta">
+                <time datetime="2025-09-15" pubdate>
+                    2025년09월15일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+freebsd을 써오면서 좀 불만이었던게<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, usb으로 외장 hdd을 연결할 때
+호환성 혹은 성능이 너무 느림.</p>
+<p>
+그래서 아예 빠른 유선랜을 연결해놓고 samba으로 파일을 백업/공유했었다.</p>
+<p>
+호환성은 <a href="https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">linux luks</a> 지원도 아쉽지만, 대부분의 외장하드 파일시스템을 잘
+지원하지 못하는거 같았어서.</p>
+<p>
+그런데, 이번에 다시 시도하면서 그냥 얌전하게 <a href="https://wiki.freebsd.org/FUSEFS">fusefs</a> + <a href="https://www.freshports.org/sysutils/fusefs-exfat">fusefs-exfat</a>
+사용하니 그럭저럭 괜찮은 성능이 나와서 이렇게 해야겠구나 생각.</p>
+<p>
+fusefs + ntfs 같은 port도 있는데, 이것도 빠를거 같지만, exfat이 더
+구현이 빠를거 같다. (파일시스템 구조부터 훨씬 단순할테니까)</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지원 등등
+hw driver지원이 항상 부족하지만.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section>
+
+	<div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+                    
+		    <li style="display: inline">😺 <a href="/categories/freebsd">freebsd</a></li>
+                    
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/exfat">exfat</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/ntfs">ntfs</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/fusefs">fusefs</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/fuse">fuse</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/linux">linux</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/hdd">hdd</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/usb">usb</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/exthdd">exthdd</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/filesystem">filesystem</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/freebsd">freebsd</a></li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/freebsd-why/">⬅️ freebsd &#43; 고물랩탑 쓸만하다(재밌다!)</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/">➡️ 블로그 검색을 다시 짰다 (PageFind 제거)</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766314786</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
+</div>
+    </body>
+</html>

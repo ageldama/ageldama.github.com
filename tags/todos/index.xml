@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Todos on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/todos/</link>
+    <description>Recent content in Todos on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 23 Sep 2018 12:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/todos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>해보기 23/09/2018</title>
+      <link>https://ageldama.github.io/posts/2018-09sep/23sun-todos/</link>
+      <pubDate>Sun, 23 Sep 2018 12:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2018-09sep/23sun-todos/</guid>
+      <description>&lt;h1 id=&#34;lsp-갖고놀기&#34;&gt;LSP 갖고놀기&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Language Server Protocol : &lt;a href=&#34;https://langserver.org/&#34;&gt;https://langserver.org/&lt;/a&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ES6:&#xA;&lt;a href=&#34;https://github.com/sourcegraph/javascript-typescript-langserver&#34;&gt;https://github.com/sourcegraph/javascript-typescript-langserver&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;다른건 FlyCheck + Eslint으로 만족스러운데, 코드네비게이션만 좀.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;C/C++:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/cquery-project/cquery&#34;&gt;https://github.com/cquery-project/cquery&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/MaskRay/ccls&#34;&gt;https://github.com/MaskRay/ccls&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;es6-기능들-다시-한번-주욱-읽어보기&#34;&gt;ES6 기능들 다시 한번 주욱 읽어보기&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://es6-features.org/&#34;&gt;http://es6-features.org/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;딱히 뭣도 몰라서 한번 주욱 읽어보려고. 더 알고 싶지는 않다만&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;tweet 1039770698187563009&lt;/p&gt;&#xA;&lt;p&gt;&amp;hellip;이런 언어지만.&lt;/p&gt;&#xA;&lt;h1 id=&#34;대안으로서-reasonml&#34;&gt;대안으로서 ReasonML?&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://reasonml.github.io/&#34;&gt;https://reasonml.github.io/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ocaml/merlin&#34;&gt;https://github.com/ocaml/merlin&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;..예전에 좋아하던 OCaml 다시 실용적으로 써도 재밌을거 같기도하고.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;&#xA;&lt;hr&gt;&#xA;&lt;ol&gt;&#xA;&lt;li id=&#34;fn:1&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%99%98_%EC%9B%90%EC%B9%99&#34;&gt;https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%EC%BD%94%ED%94%84_%EC%B9%98%ED%99%98_%EC%9B%90%EC%B9%99&lt;/a&gt; 이거아님.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

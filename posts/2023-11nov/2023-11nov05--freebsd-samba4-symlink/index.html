@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766314786">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="
+
+freebsd에서 samba 파일서버 세팅은 프비핸드북 참고
+
+
+https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba
+
+
+
+
+symlink을 samba에 노출하기
+
+
+
+/usr/local/etc/smb4.conf 파일에 다음을 추가:
+
+[global]
+...
+allow insecure wide links =	yes
+
+
+[share]
+...
+follow symlinks = yes
+wide links = yes
+unix extensions = no
+
+
+
+
+
+mdns으로 samba 파일서버를 네트웍에 광고하기
+
+
+
+  보통은 avahi을 써왔는데, mdnsresponder이 더 가볍다고 해서 이렇게 세팅해봄.
+
+pkg install mDNSResponder
+
+/etc/rc.conf 에 추가:
+
+mdnsresponderposix_enable=&#34;YES&#34;
+mdnsresponderposix_flags=&#34;-f /usr/local/etc/mdnsresponderposix.conf&#34;
+
+
+
+호스트이름은 freebsd-samsung 으로 smb서비스를 노출." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
+          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"/>
+  </div>
+
+        
+
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
+<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2024-03mar/2024-03mar23--01-ping/">⬅️ 공각기동대, 1995</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">➡️ Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</a>
+        
+    </span>
+</nav>
+
+
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">freebsd에서 samba 파일서버 세팅은 프비핸드북 참고</a>
+</li>
+<li><a href="#headline-2">symlink을 samba에 노출하기</a>
+</li>
+<li><a href="#headline-3">mdns으로 samba 파일서버를 네트웍에 광고하기</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🌉 FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정</h1>
+	    <div class="meta">
+                <time datetime="2023-11-05" pubdate>
+                    2023년11월05일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+freebsd에서 samba 파일서버 세팅은 프비핸드북 참고
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><a href="https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba">https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba</a></p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+symlink을 samba에 노출하기
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>
+<code>/usr/local/etc/smb4.conf</code> 파일에 다음을 추가:</p>
+<div class="src src-conf">
+<pre tabindex="0"><code class="language-conf" data-lang="conf">[global]
+...
+allow insecure wide links =	yes
+
+
+[share]
+...
+follow symlinks = yes
+wide links = yes
+unix extensions = no</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+mdns으로 samba 파일서버를 네트웍에 광고하기
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>
+  보통은 avahi을 써왔는데, mdnsresponder이 더 가볍다고 해서 이렇게 세팅해봄.</p>
+<ol>
+<li><code>pkg install mDNSResponder</code></li>
+<li>
+<p><code>/etc/rc.conf</code> 에 추가:</p>
+<div class="src src-conf">
+<pre tabindex="0"><code class="language-conf" data-lang="conf">mdnsresponderposix_enable=&#34;YES&#34;
+mdnsresponderposix_flags=&#34;-f /usr/local/etc/mdnsresponderposix.conf&#34;</code></pre>
+</div>
+</li>
+<li>
+<p>호스트이름은 <code>freebsd-samsung</code> 으로 smb서비스를 노출.</p>
+<ul>
+<li>
+<p><code>/usr/local/etc/mdnsresponderposix.conf</code> 작성:</p>
+<div class="src src-conf">
+<pre tabindex="0"><code class="language-conf" data-lang="conf">  freebsd-samsung
+  _smb._tcp
+  445</code></pre>
+</div>
+</li>
+</ul>
+</li>
+<li><code>service mdnsresponderposix start</code></li>
+</ol>
+</div>
+</div>
+
+	</section>
+
+	<div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+                    
+		    <li style="display: inline">😺 <a href="/categories/hack">hack</a></li>
+                    
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/freebsd">freebsd</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/symlink">symlink</a></li>
+		    
+		    <li style="display: inline">🏷️ <a href="/tags/samba4">samba4</a></li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2024-03mar/2024-03mar23--01-ping/">⬅️ 공각기동대, 1995</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">➡️ Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766314786</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
+</div>
+    </body>
+</html>
