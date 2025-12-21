@@ -1,13 +1,6 @@
 
 [
  {
-     "permalink": "https://ageldama.github.io/posts/2025-12dec/2025-12dec19--01-ping/","title": "🛸 Ping 19/12/2025 .01.",
-     
-     "tags": ["ping", "youtube", "music", "song", "viktortsoi", "kino", "2025", "peterzeihan", "呑虛"],
-     
- "description": "",
- "contents": " 2025년도 거의 다 지나가고 있다. 을씨년스럽다는 을사년(乙巳年).\n올해도, 그리고 한층 더 가소롭게 화려해보였지만, 쓸쓸한 그 알맹이의 거리였다. 참 이상하지. K문화니 뭐니 하지만 그안에서 살아가는 사람들은.\n언제나 그래왔지만, 유난히 다들 더 커보이려, 또는 자신이 아닌 위대해 보이는 무언갈 끌어다가 그 껍질이라도 뒤집어 쓰려고 드는, 불안과 두려움에 그러는 것을 더 숨기지 못하게 만드는 모습들.\n두렵게도, 천천히, 혹은 예상보다 훨씬 더 빠르게 말해진 미래가 훌쩍 뉴스가 되어 있었었다.\n"},
- {
      "permalink": "https://ageldama.github.io/posts/","title": "▫️ Posts",
      
      "tags": [],
@@ -15,12 +8,26 @@
  "description": "",
  "contents": ""},
  {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/the-html-hell-page/","title": "😽 The HTML Hell Page",
+     
+     "tags": ["webdev", "css", "html", "hell", "hellish", "design", "hello", "humor"],
+     
+ "description": "킹받는 웹페이지 디자인의 몯느것, 혈압을 위해 읽지않는걸추천",
+ "contents": " 👉 요기에서 “영감”을 받아서: https://www.catb.org/~esr/html-hell.html\n💡 깜빡이 / blinking text 💫BLINKING!!! 반짝반 \u0026nbsp;\u0026nbsp;짝작은 별 ! 🈙 불필요한 애니메이션 / gratuitous animation 휘이잉이이이잉이이이잉ㅇ🚁~~~~~~~~~~~~~~~~~ 🏃 marquee-s 🏃‍♂️Ruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuun Forest Ruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuun 🏃‍♂️ 🔥 불타는 배경 / garish backgrounds 🔥 FIRE WALK WITH ME... 👨🏿‍🚒☕🍩🪵 🤡 견딜 수 없는 텍스트/배경색 조합 / unreadable text/background combinations “웃자고 한 말에 뭘 그렇게 정색하세요?” 🖌 필기체/붓글씨체 제목 / brushscript headings 🗗 \u0026#34;이 사이트는 …에 최적화되어 있습니다\u0026#34; / \u0026#34;Best viewed with…\u0026#34; 🙊 “최적의 감상을 위해 브라우저 창크기를 32187379317913x2419873978139781391564181489으로 조절하세요.” 지시문 / “resize your browser to…” instructions 🐳 거대한 고정된 크기의 table / large fixed-size tables 합계 23,179,813,791 KRW 🍟 불필요한 border-spacing / unnecessary border spacing 합계 23,179,813,791 KRW 🤪 무의미한 \u0026lt;small\u0026gt; / \u0026lt;font size=...\u0026gt; 사용 / Pointless use of \u0026lt;small\u0026gt; or \u0026lt;font size=\u0026gt; 💦 자바스크립트으로 자기위안의 행위 / masturbation with Javascript ... 아 이것만은 만들 수 업읍니다... 이미 세상에 너무 많은 예제가 있으니 직접 찾아보세요. ☕ 불필요한 자바의 사용 / unnecessary use of Java 이제 자바애플릿을 실행할 수 있는 웹브라우저가 없을테니, 스샷으로 대체합니다. 💥 “팝업창” / pop-up windows ...일주일간 열지 ㅇ낳기. (원본 이미지: https://m.blog.naver.com/dasol825/220672901113 고맙습니다. 🙇)\n😔 image-map으로만 구현된 메뉴 / menus made entirely from image maps 아숩게도 2020년데엔 더이상 사용하지 않는 아름다운 기술이라, 생략. 🎷 묻지도 따지지도 않고 재생시작 / sound and video that launches without prompting 안타깝게도 2025년 현대의 웹브라우저는 자동플레이를 막아놓앗습니다. 😔\n부디 아래 비디오를 클릭하여 플레이 해주시기 바랍니다. 🥹🙏\n(원본 비디오\u0026amp;스크립트: https://davidepastore.github.io/gandalf-sax-guy/ 고맙습니다. 🙇)\n🔍 픽셀단위로 글꼴크기를 지정한 CSS / CSS that sets fixed-size fonts dimensioned in pixels ‘em‘, ‘rem‘ 단위로 지정하는게 맞다는거 같음.\nCSS that changes the hotlink colors 형형색색 …사실 링크 눌렀을 때 색상변화를 의미하는거 같은데, 이정도만 하고 참겠음.\n배경/글자색 한쪽만 강제해놓기 / Forcing one of background and text colour, but not both. 내가 보이나요? 🥸 나도 보이나요? 🥳 🎘 배경MIDI, 플래시, 쇽웨이브, 등등의 끔찍한 혼종 / background MIDI, Flash, Shockwave, and other abominations 이것도 더이상 쓰이지 않아서 슬픔 😔\n"},
+ {
      "permalink": "https://ageldama.github.io/","title": "💡 아겔로그",
      
      "tags": [],
      
  "description": "",
  "contents": ""},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/2025-12dec19--01-ping/","title": "🛸 Ping 19/12/2025 .01.",
+     
+     "tags": ["ping", "youtube", "music", "song", "viktortsoi", "kino", "2025", "peterzeihan", "呑虛"],
+     
+ "description": "",
+ "contents": " 2025년도 거의 다 지나가고 있다. 을씨년스럽다는 을사년(乙巳年).\n올해도, 그리고 한층 더 가소롭게 화려해보였지만, 쓸쓸한 그 알맹이의 거리였다. 참 이상하지. K문화니 뭐니 하지만 그안에서 살아가는 사람들은.\n언제나 그래왔지만, 유난히 다들 더 커보이려, 또는 자신이 아닌 위대해 보이는 무언갈 끌어다가 그 껍질이라도 뒤집어 쓰려고 드는, 불안과 두려움에 그러는 것을 더 숨기지 못하게 만드는 모습들.\n두렵게도, 천천히, 혹은 예상보다 훨씬 더 빠르게 말해진 미래가 훌쩍 뉴스가 되어 있었었다.\n"},
  {
      "permalink": "https://ageldama.github.io/posts/2025-12dec/prefers-color-scheme/","title": "🦹 darkmode.js... prefers-color-scheme",
      
