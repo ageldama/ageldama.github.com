@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Threading - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766337592">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Threading - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766588840">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="" />
     <meta property="og:image" content=""/>
     <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/tags/threading/index.xml" title="아겔로그" />
@@ -12,8 +13,8 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.c02b85b663fc995522fbd97efebc7591548a8e78688b9d95b3568cca9d374360.css"
-          integrity="sha256-wCuFtmP8mVUi&#43;9l&#43;/rx1kVSKjnhoi52Vs1aMyp03Q2A=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.50559785d18fe4479ec23d6e59af04305b2d8bb05321e0471ee07b46fe4de529.css"
+          integrity="sha256-UFWXhdGP5Eeewj1uWa8EMFsti7BTIeBHHuB7Rv5N5Sk=" crossorigin="anonymous">
     
     
     
@@ -27,7 +28,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container"><header>
     <div class="main ">
         <h1 class="site-title ">
@@ -44,11 +47,14 @@
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -56,8 +62,12 @@
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -87,11 +97,22 @@
 
 
 
+<section class="section is-fullheight sec-toc">
+    <span class="toc-link"><a href="/series">Series📚(1개)</a></span>
+    
+    <span class="toc-link"><a href="/tags">Tags🏷️(612개)</a></span>
+
+    
+
+</section>
+
+
 <hr class="archive-ruler">
 
 
 <h1>Tag🏷️
-    "<em>threading</em>" (3건)</h1>
+    "<em>threading</em>" (3건)
+</h1>
 
 
 <ol class="posts"><li class="post">
@@ -157,7 +178,7 @@
 <hr class="archive-ruler">
 
 <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766337592</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766588840</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

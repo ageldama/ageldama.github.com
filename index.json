@@ -1,6 +1,13 @@
 
 [
  {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/no-categories+taxonomy-revamp/","title": "🐅 categories안녕👋 taxonomies 정렬 추가",
+     
+     "tags": ["blog", "blogging", "programming", "css", "javascript", "js", "hugo"],
+     
+ "description": "",
+ "contents": " 👉 새로운 묶음법: “📚시리즈(Series)” …추가하고 “😺카테고리(Categories)”,은 별로 쓸모가 없었구나 생각이 들어서 제외시켰다.\n이제 “📚시리즈(Series)” / “🏷️태그(Tags)” , 2개의 Taxonomy만 사용하여 블로깅을 해나가려고.\n아예 /categories-관련 페이지는 아예 생성하지 않기로. 표시도 않기로. 대신 tags을 정렬해서 보여주기로:\n참조빈도가 높은 태그부터 정렬해서 보여주면, 그게 사실 \u0026#34;카테고리\u0026#34;의 의도였던 \u0026#34;대분류\u0026#34;-처럼 쓰일 수 있으니까. /tags , /series 페이지에서 기본은 참조횟수로 역순정렬해서 보여주고, 추가적으로,\n이름 abc순서, 최근 갱신일, …의 추가 정렬기준에 따라 직접 재정렬해서 찾기 수월하게 바꿨다. …ascending/descending 순서으로 정렬도 구현해줬다. 뭔가 삽질에 완벽하게 깔끔한 구현은 아니지만, 적당히 htmx hx-boost으로 다시 만든 블로그 이동방식과 잘 어울리는거 같아서.\n이제 모든 포스팅 뒤적거리면서 태그를 붙이는 작업을 나중에 하면 마무리겠지. 🪓\n"},
+ {
      "permalink": "https://ageldama.github.io/posts/","title": "▫️ Posts",
      
      "tags": [],
@@ -8,19 +15,47 @@
  "description": "",
  "contents": ""},
  {
-     "permalink": "https://ageldama.github.io/posts/2025-12dec/the-html-hell-page/","title": "😽 The HTML Hell Page",
-     
-     "tags": ["webdev", "css", "html", "hell", "hellish", "design", "hello", "humor"],
-     
- "description": "킹받는 웹페이지 디자인의 몯느것, 혈압을 위해 읽지않는걸추천",
- "contents": " 👉 요기에서 “영감”을 받아서: https://www.catb.org/~esr/html-hell.html\n하나씩 짜보니까:\n생각보다 더이상 인류가 접근할 수 없는 로스트테크놀로지들이 많아져서 안타까웠다. (예; 강제팝업창, Java Applet, Shockwave, Flash 등등등) 서양 웹디자인 기준으로 원본글이 작성되어져 있어서, 주옥 같은 한국의 현재진행형 흠좀무 웹/앱 디자인들은 정리하지 못했다. 누군가 용사가 나타나 정리해줘도 좋을 것 같다. 🗡️🛡️🩏 💡 깜빡이 / blinking text 💫BLINKING!!! 반짝반 \u0026nbsp;\u0026nbsp;짝작은 별 ! 🈙 불필요한 애니메이션 / gratuitous animation 휘이잉이이이잉이이이잉ㅇ🚁~~~~~~~~~~~~~~~~~ 🏃 marquee-s 🏃‍♂️Ruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuun Forest Ruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuun 🏃‍♂️ 🔥 불타는 배경 / garish backgrounds 🔥 FIRE WALK WITH ME... 👨🏿‍🚒☕🍩🪵 🤡 견딜 수 없는 텍스트/배경색 조합 / unreadable text/background combinations “웃자고 한 말에 뭘 그렇게 정색하세요?” 🖌 필기체/붓글씨체 제목 / brushscript headings 🗗 \u0026#34;이 사이트는 …에 최적화되어 있습니다\u0026#34; / \u0026#34;Best viewed with…\u0026#34; 🙊 “최적의 감상을 위해 브라우저 창크기를 32187379317913x2419873978139781391564181489으로 조절하세요.” 지시문 / “resize your browser to…” instructions 🐳 거대한 고정된 크기의 table / large fixed-size tables 합계 23,179,813,791 KRW 🍟 불필요한 border-spacing / unnecessary border spacing 합계 23,179,813,791 KRW 🤪 무의미한 \u0026lt;small\u0026gt; / \u0026lt;font size=...\u0026gt; 사용 / Pointless use of \u0026lt;small\u0026gt; or \u0026lt;font size=\u0026gt; 💦 자바스크립트으로 자기위안의 행위 / masturbation with Javascript ... 아 이것만은 만들 수 업읍니다... 이미 세상에 너무 많은 예제가 있으니 직접 찾아보세요. ☕ 불필요한 자바의 사용 / unnecessary use of Java 이제 자바애플릿을 실행할 수 있는 웹브라우저가 없을테니, 스샷으로 대체합니다. 💥 “팝업창” / pop-up windows ...일주일간 열지 ㅇ낳기. (원본 이미지: https://m.blog.naver.com/dasol825/220672901113 고맙습니다. 🙇)\n😔 image-map으로만 구현된 메뉴 / menus made entirely from image maps 아숩게도 2020년데엔 더이상 사용하지 않는 아름다운 기술이라, 생략. 🎷 묻지도 따지지도 않고 재생시작 / sound and video that launches without prompting 안타깝게도 2025년 현대의 웹브라우저는 자동플레이를 막아놓앗습니다. 😔\n부디 아래 비디오를 클릭하여 플레이 해주시기 바랍니다. 🥹🙏\n(원본 비디오\u0026amp;스크립트: https://davidepastore.github.io/gandalf-sax-guy/ 고맙습니다. 🙇)\n🔍 픽셀단위로 글꼴크기를 지정한 CSS / CSS that sets fixed-size fonts dimensioned in pixels ‘em‘, ‘rem‘ 단위로 지정하는게 맞다는거 같음.\nCSS that changes the hotlink colors 형형색색 …사실 링크 눌렀을 때 색상변화를 의미하는거 같은데, 이정도만 하고 참겠음.\n배경/글자색 한쪽만 강제해놓기 / Forcing one of background and text colour, but not both. 내가 보이나요? 🥸 나도 보이나요? 🥳 🎘 배경MIDI, 플래시, 쇽웨이브, 등등의 끔찍한 혼종 / background MIDI, Flash, Shockwave, and other abominations 이것도 더이상 쓰이지 않아서 슬픔 😔\n"},
- {
      "permalink": "https://ageldama.github.io/","title": "💡 아겔로그",
      
      "tags": [],
      
  "description": "",
  "contents": ""},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/blog-htmx-transition-anims/","title": "🧂 블로그 + [htmx transition animation, loading indicator]",
+     
+     "tags": ["htmx", "morphjs", "blog", "blogging", "webdev", "css", "loading-indicator", "animation", "effects", "progress-bar"],
+     
+ "description": "",
+ "contents": " htmx hx-boost-을 적용하기 시작하면서(이 시리즈 전 포스팅 참고 👉 htmx 마법으로 링크성능 빠르게 + dark-mode 깜빡임 제거 ) 효과를 넣는게 가능해졌음.\nhtmx loading indicator 적용.\nhttps://dev.to/amal/global-progress-bar-for-htmx-50fa htmx view transitions animation 적용.\nhttps://htmx.org/examples/animations/#settling …좀 무던하게 적용해보려 뚝딱 🛠️\n"},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/","title": "🧙‍♀️ 새로운 묶음법: “📚시리즈(Series)”",
+     
+     "tags": ["blog", "blogging", "hugo", "taxonomy", "categories", "category", "tag", "tags", "series"],
+     
+ "description": "",
+ "contents": " 기존에는 “😺카테고리(Categories)”, “🏷️태그(Tags)”만 설정해서 써왔었는데, 어느샌가, 일대기 형식으로 계속 묶어나가야 분류가 수월한 글들이 쌓여갔다: (예) dark-mode 지원하기\n그래서 새로운 “시리즈” taxonomy 추가하고, 페이지템플릿들 조금 고쳐서 지원 시작.\n음… 과거에 쌓은 글들을 좀 시리즈로 이렇게 더 묶어야 할까 고민도 들고,\n무엇보다, 그간 아무 생각없이 남들 다 그렇게 하니까, “카테고리”를 추가해서 써오던 것이 좀 후회스럽다. 사실은 저거 그냥 “태그”랑 다를게 없는데 싶기도 하다. 굳이 차이를 갖자면 “대분류”정도로서, 이맥스 글이나 프로그래밍 글끼리 묶기 수월한 점 + 그리고 태그목록보다는 훨씬 가짓수가 젂으니까 찾아보기 좋다는 점 정도?\n…그러니까 냅두자. ㅋㅋㅋ고민은 시작했지만 변명을 찾아버렸다.\n앞으로 시리즈 성격의 글을 쓰고 묶어 나가도 재밌긴 하겠다.\n"},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/graceful-degradation+progressive-enhancement+elegant-degradation/","title": "🌬️ ‘graceful degradation’, ‘progressive enhancement’",
+     
+     "tags": ["progressive-enhancement", "graceful-degradation", "TIL"],
+     
+ "description": "",
+ "contents": " 하나씩 정리해보자.\n이하의 정리는 “웹개발”, “웹페이지” 유지보수 관점/도메인의 시점에서, 다른 도메인(예=전자제품)에서의 정의와 완전히 일치하지는 않을거 같다.\n위키백과나 다른 블로그에서 소개한 글들은 전자제품, 전자통신 등의 관점, 개념, 용어 중심으로 풀어 설명했기 때문에 웹개발의 관점에선 잘 모르겠었어서. (원저자분들 죄송합니다. 🙇)\n즉, 이하에 소개할 링크에서 W3C의 정의에 따라 이해해보려고 함.\n“progressive enhancement” -or- “graceful degradation”? W3C Wiki Graceful degradation versus progressive enhancement 기계인간 John Grib 우아한 성능 저하 (graceful degradation) 조금 뭔지 모를 영어가 많이 나와서 혼란스럽다.\n“Graceful Degradation” ‘기능’ 구현의 대상이 현대적인 웹브라우저를 대상으로 구현. 그리고 그 구현대상인 현대 웹브라우저를 기준으로 ‘사용자경험’이 최적이 되도록 설계/구현. 반면, 구형 웹브라우저에서는 약간의 사용자경험이 떨어질 수는 있는. 하지만, 그럼에도 구형 웹브라우저에서도 기능적인 측면에서는 여전히 기본적인 기능이 잘 동작해야 함. 즉, 최적의/최대한의 사용자경험을 제공하는 것을 우선목표로 하고, 그 다음에 그걸 수행하지 못하는 환경을 배려하는 설계-구현을 더하는 방식. 즉, 가능하면 최신의 기능이나 지원을 잘 활용하여 설계-구현하되, 그게 지원되지 않는 환경에서도 적당히 쓸 수 있도록 하는 방식.\n(예: 👉 /posts/2025-12dec/htmx-hx-boost+dark-mode/ )\n“Progressive Enhancement” (반대로) 기초적인 사용자경험을 우선목표로 시작하는 방식. 그리고 거기에 추가적인 지원이 가능한 환경을 위해, 더 나은 사용자경험을 지원하는 설계-구현이 자동적으로 덧붙여질 수 있도록 하는 방식. 즉, ‘최대공약수’, ‘하한선’, ‘lower limit’에 맞춰서 설계-구현의 주요목표를 설정하는 방식. “우로 가나 모로 가나 그게 그거 아냐?” 최종결과물이 비슷하게 나온다면 그래 보일 수 있음. 😅\n하지만, 접근방식의 차이이기 때문에 그 과정과 선택하는 시점의 이유는 명확히 다른거 같다.\n이건 그냥 W3C 페이지에서 복붙하겠음:\ngraceful degradation을 고려할 때: 리거시에 대한 낮은 가시성/접근성 또는 개선을 위한 시간/자원의 부족:\nYou retrofit an old product and you don’t have the time, access or insight to change or replace it. You just don’t have time to finish a product with full progressive enhancement\n(often a sign of bad planning or running out of budget). 😥 혹은 변경에 따른 위험도가 너무 큼\nThe product you have is an edge case, for example very high traffic sites where every millisecond of performance means a difference of millions of dollars. Your product by definition is so dependent on scripting that it makes more sense to maintain a “basic” version rather than enhancing one (Maps, email clients, feed readers). progressive enhancement은: 적용가능하다면, 사용자와 개발자 양자를 모두 행복하게 할 가능성이 높다고.. 잘 isolated + high-cohesive + low-coupled 모듈의 정의와 유사함을 알 수 있음.\nRegardless of environment and ability you deliver a product that works. When a new browser comes out or a browser extension becomes widely adopted you can enhance to yet another level without having to touch the original solution — graceful degradation would require you to alter the original solution. When a new browser comes out or a browser extension becomes widely adopted you can enhance to yet another level without having to touch the original solution — graceful degradation would require you to alter the original solution. If you need to add new features, you can do so after checking if they are supported at a certain stage, or you can add it to the most basic level of functionality and make it better in more sophisticated environments. In any case, the maintenance happens at the same spot and not in two different places. Keeping a progressively enhanced product up-to-date is much less work than maintaining two versions. "},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost+dark-mode/","title": "‼️ htmx 마법으로 링크성능 빠르게 + dark-mode 깜빡임 제거",
+     
+     "tags": ["htmx", "spa", "morphjs", "progressive-enhancement", "dark-mode", "blog", "blogging", "webdev", "css", "graceful-degradation"],
+     
+ "description": "",
+ "contents": " 지난번 dark-mode 방식을 새로 만든 이후로, 눈에 띄는 단점이었던 페이지이동시 flash현상을 없애고, 또한 매 페이지 이동을 엄청나게 가볍게 만들었다.\n지난 포스팅: 🦹 darkmode.js… prefers-color-scheme …위 포스팅에서 “Wrap Up”-표를 확인해 보면:\ndarkmode.js (기존) 새로운 방식 ...생략... 😥-1 페이지 로딩시 flash 현상이 생긴다 😥-1 브라우저캐시에 없는 페이지를 로딩할 때에 발생할 수 있음. (OS/브라우저 prefs와 local-storage에 저장된 color-mode이 서로 다른 경우) ...darkmode.js보단 가볍게 사라짐. ...생략... …와 같이 된 부분을 다음과 같이 바꾼 것:\n여전히 처음 브라우저에서 방문할 때엔 OS/웹브라우저에 의한 color-scheme preferences에 따라 깜빡임이 발생할 가능성은 있음. 하지만 블로그 안에서 링크를 이동할 경우엔 발생하지 않게 방식을 변경했다. 🐻 그리고 블로그에서 페이지링크를 여는 성능도 훨씬 쾌적해졌다. 🎐 방식 🛠️ htmx의 hx-boost=\u0026#34;true\u0026#34;-만 적용했다. 끝 🚩\n모든 \u0026lt;a href\u0026gt;-링크 이동은 이제 자동으로, 이동한 페이지전체를 다시 로딩하지 않고, ajax으로 로딩하여 필요부분만 다시 렌더링한다. [참고] hx-boost [htmx.org] hx-boost “Why hx-boost is actually the most important feature of htmx” 어떻게 더 빠른가?🧩 hx-boost 이하에 적용된 링크들은 자동적으로, (htmx에 의해) 가로채진다. 가로챈 링크는 ajax request을 보내서 페이지의 내용을 얻음. 얻은 페이지의 내용은 페이지의 부분부분을 갱신한다. (“partial swap”) 웹브라우저의 URL을 History API을 이용하여 변경해준다.\n마치 링크를 이동했을 때처럼. Back버튼도 제대로 동작할 수 있도록. …이런 설명만 읽어서는… 오히려 htmx.js/ajax이 동작하는건데도 웹브라우저가 URL이동하는 것보다 어떻게 빠를까 싶은데:\n동일하게 이미 로딩되어 있는 CSS, JS등을 다시 로딩하거나 초기화하지 않음. 그리고 그와 관련된 Assets (fonts, 등등등)도 그대로 두니까. …결과적으로 훨씬 빠르고, 체감도 가볍게 렌더링된다.\n(마치 SPA 자바스크립트 애플리케이션의 화면 전환과 같이)\n실제로 Developer Inspector을 열어놓고 링크를 눌러보면, 네트웍 트래픽이 오가는 것을 볼 수 있거나(현재 페이지에서 추가적으로), 처음 열때의 페이지context을 그대로 유지한다는걸 관찰할 수 있다. (링크를 누를 때마다 새로운 page context으로 refresh되는 것이 아닌)\n“graceful degradation”: js을 지원하지 않는 웹브라우저도 괜찮을까? 😸 그렇다.\n어차피 ‘hx-boost’-이 영향을 주지 못한다면, 기존 링크들은 원래의 링크가 그랬듯이, 그냥 페이지이동을 하듯이 동작을 그대로 할테니까. ㅎㅎ\n물론, flashing현상이나, 약간 더 무거운 페이지로딩이 뒤따르겠지만. ㅎㅎ\n용어 ‘graceful degradation’\n👉 /posts/2025-12dec/graceful-degradation+progressive-enhancement+elegant-degradation/ "},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/the-html-hell-page/","title": "😽 The HTML Hell Page",
+     
+     "tags": ["webdev", "css", "html", "hell", "hellish", "design", "hello", "humor"],
+     
+ "description": "킹받는 웹페이지 디자인의 몯느것, 혈압을 위해 읽지않는걸추천",
+ "contents": " 👉 요기에서 “영감”을 받아서: https://www.catb.org/~esr/html-hell.html\n하나씩 짜보니까:\n생각보다 더이상 인류가 접근할 수 없는 로스트테크놀로지들이 많아져서 안타까웠다. (예; 강제팝업창, Java Applet, Shockwave, Flash 등등등) 서양 웹디자인 기준으로 원본글이 작성되어져 있어서, 주옥 같은 한국의 현재진행형 흠좀무 웹/앱 디자인들은 정리하지 못했다. 누군가 용사가 나타나 정리해줘도 좋을 것 같다. 🗡️🛡️🩏 💡 깜빡이 / blinking text 💫BLINKING!!! 반짝반 \u0026nbsp;\u0026nbsp;짝작은 별 ! 🈙 불필요한 애니메이션 / gratuitous animation 휘이잉이이이잉이이이잉ㅇ🚁~~~~~~~~~~~~~~~~~ 🏃 marquee-s 🏃‍♂️Ruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuun Forest Ruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuun 🏃‍♂️ 🔥 불타는 배경 / garish backgrounds 🔥 FIRE WALK WITH ME... 👨🏿‍🚒☕🍩🪵 🤡 견딜 수 없는 텍스트/배경색 조합 / unreadable text/background combinations “웃자고 한 말에 뭘 그렇게 정색하세요?” 🖌 필기체/붓글씨체 제목 / brushscript headings 🗗 \u0026#34;이 사이트는 …에 최적화되어 있습니다\u0026#34; / \u0026#34;Best viewed with…\u0026#34; 🙊 “최적의 감상을 위해 브라우저 창크기를 32187379317913x2419873978139781391564181489으로 조절하세요.” 지시문 / “resize your browser to…” instructions 🐳 거대한 고정된 크기의 table / large fixed-size tables 합계 23,179,813,791 KRW 🍟 불필요한 border-spacing / unnecessary border spacing 합계 23,179,813,791 KRW 🤪 무의미한 \u0026lt;small\u0026gt; / \u0026lt;font size=...\u0026gt; 사용 / Pointless use of \u0026lt;small\u0026gt; or \u0026lt;font size=\u0026gt; 💦 자바스크립트으로 자기위안의 행위 / masturbation with Javascript ... 아 이것만은 만들 수 업읍니다... 이미 세상에 너무 많은 예제가 있으니 직접 찾아보세요. ☕ 불필요한 자바의 사용 / unnecessary use of Java 이제 자바애플릿을 실행할 수 있는 웹브라우저가 없을테니, 스샷으로 대체합니다. 💥 “팝업창” / pop-up windows ...일주일간 열지 ㅇ낳기. (원본 이미지: https://m.blog.naver.com/dasol825/220672901113 고맙습니다. 🙇)\n😔 image-map으로만 구현된 메뉴 / menus made entirely from image maps 아숩게도 2020년데엔 더이상 사용하지 않는 아름다운 기술이라, 생략. 🎷 묻지도 따지지도 않고 재생시작 / sound and video that launches without prompting 안타깝게도 2025년 현대의 웹브라우저는 자동플레이를 막아놓앗습니다. 😔\n부디 아래 비디오를 클릭하여 플레이 해주시기 바랍니다. 🥹🙏\n(원본 비디오\u0026amp;스크립트: https://davidepastore.github.io/gandalf-sax-guy/ 고맙습니다. 🙇)\n🔍 픽셀단위로 글꼴크기를 지정한 CSS / CSS that sets fixed-size fonts dimensioned in pixels ‘em‘, ‘rem‘ 단위로 지정하는게 맞다는거 같음.\nCSS that changes the hotlink colors 형형색색 …사실 링크 눌렀을 때 색상변화를 의미하는거 같은데, 이정도만 하고 참겠음.\n배경/글자색 한쪽만 강제해놓기 / Forcing one of background and text colour, but not both. 내가 보이나요? 🥸 나도 보이나요? 🥳 🎘 배경MIDI, 플래시, 쇽웨이브, 등등의 끔찍한 혼종 / background MIDI, Flash, Shockwave, and other abominations 이것도 더이상 쓰이지 않아서 슬픔 😔\n"},
  {
      "permalink": "https://ageldama.github.io/posts/2025-12dec/2025-12dec19--01-ping/","title": "🛸 Ping 19/12/2025 .01.",
      

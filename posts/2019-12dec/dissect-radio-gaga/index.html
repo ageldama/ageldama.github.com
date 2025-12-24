@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>radio-recorder 프로젝트 설명 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766337591">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>radio-recorder 프로젝트 설명 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766588840">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="
 2년전쯤에 한국 라디오를 혼자 듣고 싶었었다. 하지만 시차가 많이 나는
 지역에 살았었다. (8시간 정도 느림)
@@ -38,8 +39,8 @@ cron 서버
     
     
     
-    <link rel="stylesheet" href="/css/styles.c02b85b663fc995522fbd97efebc7591548a8e78688b9d95b3568cca9d374360.css"
-          integrity="sha256-wCuFtmP8mVUi&#43;9l&#43;/rx1kVSKjnhoi52Vs1aMyp03Q2A=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.50559785d18fe4479ec23d6e59af04305b2d8bb05321e0471ee07b46fe4de529.css"
+          integrity="sha256-UFWXhdGP5Eeewj1uWa8EMFsti7BTIeBHHuB7Rv5N5Sk=" crossorigin="anonymous">
     
     
     
@@ -53,7 +54,9 @@ cron 서버
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container"><header>
     <div class="main ">
         <h1 class="site-title ">
@@ -70,11 +73,14 @@ cron 서버
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -82,8 +88,12 @@ cron 서버
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -414,30 +424,47 @@ IO::Async와 같이 확장이 가능한걸 보면 마음이 편안하다.</li>
 </div>
 </div>
 
-	</section>
-
-	<div class="post-tags">
+	</section><div class="post-tags">
 	    
 	    
 	    <nav class="nav tags">
 		<ul class="tags">
-                    
-		    <li style="display: inline">😺 <a href="/categories/programming">programming</a></li>
-                    
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/radio-gaga">radio-gaga</a></li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/radio">radio</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/postgresql/">postgresql</a>
+                        <sup>2</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/recording">recording</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/mplayer/">mplayer</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/perl5">perl5</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sqitch/">sqitch</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/sqitch">sqitch</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/perl5/">perl5</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/postgresql">postgresql</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/recording/">recording</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/mplayer">mplayer</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/radio/">radio</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/radio-gaga/">radio-gaga</a>
+                        <sup>1</sup>
+                    </li>
 		    
 		</ul>
 	    </nav>
@@ -447,7 +474,7 @@ IO::Async와 같이 확장이 가능한걸 보면 마음이 편안하다.</li>
     </article>
 
     <hr class="archive-ruler">
-    
+
     <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
         
@@ -464,7 +491,7 @@ IO::Async와 같이 확장이 가능한걸 보면 마음이 편안하다.</li>
 
 </main>
 <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766337591</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766588840</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

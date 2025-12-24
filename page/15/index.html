@@ -3,8 +3,9 @@
     <head>
 	<meta name="generator" content="Hugo 0.152.2">
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766337591">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766588840">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="" />
     <meta property="og:image" content=""/>
     <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
@@ -14,8 +15,8 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.c02b85b663fc995522fbd97efebc7591548a8e78688b9d95b3568cca9d374360.css"
-          integrity="sha256-wCuFtmP8mVUi&#43;9l&#43;/rx1kVSKjnhoi52Vs1aMyp03Q2A=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.50559785d18fe4479ec23d6e59af04305b2d8bb05321e0471ee07b46fe4de529.css"
+          integrity="sha256-UFWXhdGP5Eeewj1uWa8EMFsti7BTIeBHHuB7Rv5N5Sk=" crossorigin="anonymous">
     
     
     
@@ -30,7 +31,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
 
-    <body>
+    <body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container">
             <header>
     <div class="main ">
@@ -48,11 +51,14 @@
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -60,8 +66,12 @@
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -97,12 +107,130 @@
 		
 
                 <hr class="archive-ruler"><h1>
-                    👨‍🦯‍➡️
+                    🧔
                     페이지 #015
                 </h1>
 
                 <ul class="article__list">
                     
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2019-12-11" pubdate>
+        2019-12-11
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/the-web-and-the-free-world/">
+    🧤 원하는 웹브라우져, 웹환경, 그리고 익숙하지만 싫은 어떤 신앙체계
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         지금의 웹환경은 너무 과도한 치장, 보이는 이미지 중심이어서 딱 한가지 측면을 제외하고 모든 면에서 정말 끔찍하다는 생각이 들었다. 하긴 그러니 많은 사람들이 열심히 쓰는걸지도...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2019-12-11" pubdate>
+        2019-12-11
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/dissect-radio-gaga/">
+    🦟 radio-recorder 프로젝트 설명
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         2년전쯤에 한국 라디오를 혼자 듣고 싶었었다. 하지만 시차가 많이 나는 지역에 살았었다. (8시간 정도 느림)
+그래서 한국 인터넷 라디오를 녹음해서 개인적으로 들을 수 있다면 좋...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2019-12-11" pubdate>
+        2019-12-11
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/foo/">
+    🧁 Org 파일으로 Hugo 포스팅 테스트
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         적당히 잘 동작하는거 같으니 앞으로는 그냥 혼란스러운 Markdown 대신에 그냥 Org 파일으로 블로깅 하며 될거 같다. 행벜.
+예전 버젼 Hugo에서는 지원을 제대로 못하던거...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2019-12-09" pubdate>
+        2019-12-09
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/cl-state-machine-1st-release/">
+    🗳️ First release of cl-state-machine
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+        Made a small state machine library/DSL in/for CommonLisp....
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2019-12-06" pubdate>
+        2019-12-06
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/tips-ecl-clisp/">
+    👩‍🦽 커먼리습 설정하기, ASDF 시스템 코드를 받기
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+        1. ASDF을 최신 버젼으로 설정한다 (이부분에서 많이 고생했는데) SBCL와 다르게 CLISP, ECL 은 최신 버젼의 ASDF을 내장한걸 패키징해놓지 않았다.
+대부분은 문제가...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
                     
                     <li>
                         <span class="meta">
@@ -223,129 +351,6 @@
                     </li>
                     
 		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2019-10-20" pubdate>
-        2019-10-20
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2019-10oct/ping-20sun/">
-    🚜 Ping 20/Oct/2019
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-        장거리 드라이브 고속도로를 내려와서 국도에 들어서서 우회전 신호대기에서 창문을 내리자마자 깨달은게 공기가 말도 안되게 좋았다.
-가보고 싶었던 곳들을 돌아다니고 정말 많은게 변했구나...
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2019-10-16" pubdate>
-        2019-10-16
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2019-10oct/cl-toy-stack-lang/">
-    🧜‍♀️ cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-        일단 첫번째 버젼 다 만들었다.
-https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0
-그냥 장난으로 인터프리터도 아...
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2019-10-15" pubdate>
-        2019-10-15
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2019-10oct/ping-15tue/">
-    👩‍🦯 Ping 15/Oct/2019
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-        커먼리습으로 간단한 스택기반 장난감 프로그래밍언어를 만들고있다.
-https://github.com/ageldama/cl-toy-stack-lang
-튜링컴플릿이나 그런거 관심도 없고...
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2019-10-14" pubdate>
-        2019-10-14
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2019-10oct/ping-14mon/">
-    🚜 Ping 14/Oct/2019
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-        어제 오늘 요즘에 들어서 생각을 겨우 하기 시작한 고민을 사람들이 트윗하더라.
-tweet 1183311320822607872
-..이번에 직장을 그만두고1 새로운 직장을 열심히 알아...
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2019-10-13" pubdate>
-        2019-10-13
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2019-10oct/ping-13sun/">
-    🌫️ Ping 13/Oct/2019
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-        집중하는게 내게 더 좋겠다는 생각이든다.
-단시간에 어떤 일에 집중하는 일은 만족스럽다. 그런 시간단위의 집중이 아니라 기간이라고 할만큼 며칠, 몇주에 걸쳐, 한정된 한두개의 주제에...
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
                 </ul>
 
                 <hr class="archive-ruler">
@@ -368,7 +373,7 @@ tweet 1183311320822607872
 </nav>
 	    </main>
 	    <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766337591</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766588840</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

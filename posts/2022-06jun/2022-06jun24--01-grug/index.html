@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>The Grug Brained Developer - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766337592">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>The Grug Brained Developer - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766588840">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="감동적인 글이다ㅋ:
 https://grugbrain.dev/
 문법도 완전 grug스럽게 작성해서 반가운 글이었다.
@@ -18,8 +19,8 @@ msa, reactjs, ejb, osgi. 공감하는 생각들.
     
     
     
-    <link rel="stylesheet" href="/css/styles.c02b85b663fc995522fbd97efebc7591548a8e78688b9d95b3568cca9d374360.css"
-          integrity="sha256-wCuFtmP8mVUi&#43;9l&#43;/rx1kVSKjnhoi52Vs1aMyp03Q2A=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.50559785d18fe4479ec23d6e59af04305b2d8bb05321e0471ee07b46fe4de529.css"
+          integrity="sha256-UFWXhdGP5Eeewj1uWa8EMFsti7BTIeBHHuB7Rv5N5Sk=" crossorigin="anonymous">
     
     
     
@@ -33,7 +34,9 @@ msa, reactjs, ejb, osgi. 공감하는 생각들.
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container"><header>
     <div class="main ">
         <h1 class="site-title ">
@@ -50,11 +53,14 @@ msa, reactjs, ejb, osgi. 공감하는 생각들.
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -62,8 +68,12 @@ msa, reactjs, ejb, osgi. 공감하는 생각들.
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -135,24 +145,32 @@ msa, reactjs, ejb, osgi. 공감하는 생각들.
 <p>msa, reactjs, ejb, osgi. 공감하는 생각들.</p>
 <p>&hellip; black think juice 맛있다.</p>
 
-	</section>
-
-	<div class="post-tags">
+	</section><div class="post-tags">
 	    
 	    
 	    <nav class="nav tags">
 		<ul class="tags">
-                    
-		    <li style="display: inline">😺 <a href="/categories/life">life</a></li>
-                    
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/ping">ping</a></li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/sw-engineering">sw-engineering</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>92</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/fold">fold</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/grug/">grug</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/grug">grug</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/fold/">fold</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sw-engineering/">sw-engineering</a>
+                        <sup>1</sup>
+                    </li>
 		    
 		</ul>
 	    </nav>
@@ -162,7 +180,7 @@ msa, reactjs, ejb, osgi. 공감하는 생각들.
     </article>
 
     <hr class="archive-ruler">
-    
+
     <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
         
@@ -179,7 +197,7 @@ msa, reactjs, ejb, osgi. 공감하는 생각들.
 
 </main>
 <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766337592</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766588840</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

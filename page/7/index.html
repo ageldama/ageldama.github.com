@@ -3,8 +3,9 @@
     <head>
 	<meta name="generator" content="Hugo 0.152.2">
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766337591">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766588840">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="" />
     <meta property="og:image" content=""/>
     <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
@@ -14,8 +15,8 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.c02b85b663fc995522fbd97efebc7591548a8e78688b9d95b3568cca9d374360.css"
-          integrity="sha256-wCuFtmP8mVUi&#43;9l&#43;/rx1kVSKjnhoi52Vs1aMyp03Q2A=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.50559785d18fe4479ec23d6e59af04305b2d8bb05321e0471ee07b46fe4de529.css"
+          integrity="sha256-UFWXhdGP5Eeewj1uWa8EMFsti7BTIeBHHuB7Rv5N5Sk=" crossorigin="anonymous">
     
     
     
@@ -30,7 +31,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
 
-    <body>
+    <body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container">
             <header>
     <div class="main ">
@@ -48,11 +51,14 @@
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -60,8 +66,12 @@
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -97,12 +107,133 @@
 		
 
                 <hr class="archive-ruler"><h1>
-                    🕙
+                    🧶
                     페이지 #007
                 </h1>
 
                 <ul class="article__list">
                     
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2022-06-19" pubdate>
+        2022-06-19
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/">
+    🎪 &#34;Software disenchantment&#34;
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+        https://tonsky.me/blog/disenchantment/
+재밌게 읽었다. 계속 생각해오던, 이전 포스팅에서도 이야기한 생각들.
+&ldquo;&hellip;의 진보도 항...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2022-06-17" pubdate>
+        2022-06-17
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2022-06jun/2022-06jun17--01-ping/">
+    🔮 Ping 17/06/2022 .01
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+        &ldquo;Code bloat has become astronomical&rdquo;...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2022-06-15" pubdate>
+        2022-06-15
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2022-06jun/2022-06jun15--01-ping/">
+    🔮 Ping 15/06/2022 .01
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+        비 내리는 화요일. &#x2614;
+jinja2 template include + cache? + file-time 재밌는걸 찾았다.
+jinja2을 사용하면서, 하위 include...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2022-06-13" pubdate>
+        2022-06-13
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2022-06jun/algebraic-effects-for-everyone/">
+    🥯 &#34;모두를 위한 algebraic effects!&#34; ...정말루?
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+        뭐 대충 다음과 같은 글들:
+https://www.eff-lang.org/handlers-tutorial.pdf...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2022-06-13" pubdate>
+        2022-06-13
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2022-06jun/2022-06jun13--01-ping/">
+    🧑‍🦯 Ping 13/06/2022 .01
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+        기운 없는 날&hellip; 쉬어야겠다.
+
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
                     
                     <li>
                         <span class="meta">
@@ -222,125 +353,6 @@ dynamic...
                     </li>
                     
 		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2022-06-06" pubdate>
-        2022-06-06
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2022-jekyll/2022-06-06--01-hotwired-fun/">
-    🔒 Hotwired 재밌다.
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-        Hotwired 재밌다.
-Stimulus, Turbo + Rails 7 갖고 이것저것 패턴별로 생각해보고 만드는게 즐겁네.
-딱, 이렇게 문제 그자체를 이해하고 설계해놓은 것들은 익...
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2021-06-19" pubdate>
-        2021-06-19
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2021-06jun/ping-19sat/">
-    🐱 Ping 19/Jun/2021
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-         그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고, github repositories도 대부분은 private으로 변경해놓고 지냈었다.
-하지만 그래도 coding과 글...
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2020-11-29" pubdate>
-        2020-11-29
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2020-11nov/ping-29sun/">
-    👝 Ping 29/Nov/2020
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-         2020년이 지나간다. 금새 또 봄이 올텐데 기대된다.
-
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2020-11-23" pubdate>
-        2020-11-23
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2020-11nov/ping-23tue/">
-    🙋‍♀️ Ping 23/Nov/2020
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-         logitech k480 bluetooth keyboard https://www.logitech.com/ko-kr/product/multi-device-keyboard-k480...
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2020-11-13" pubdate>
-        2020-11-13
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2020-11nov/ping-13fri/">
-    🥜 Ping 13/Nov/2020
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-         금새 겨울이 오고 있구나. 
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
                 </ul>
 
                 <hr class="archive-ruler">
@@ -363,7 +375,7 @@ Stimulus, Turbo + Rails 7 갖고 이것저것 패턴별로 생각해보고 만�
 </nav>
 	    </main>
 	    <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766337591</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766588840</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

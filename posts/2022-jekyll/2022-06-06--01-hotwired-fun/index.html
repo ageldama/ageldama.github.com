@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Hotwired 재밌다. - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766337592">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Hotwired 재밌다. - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766588840">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="Hotwired 재밌다.
 Stimulus, Turbo &#43; Rails 7 갖고 이것저것 패턴별로 생각해보고 만드는게 즐겁네.
 딱, 이렇게 문제 그자체를 이해하고 설계해놓은 것들은 익히고 사용하는게 너무 즐겁다.
@@ -16,8 +17,8 @@ rails도 그랬었고, &hellip;처음 볼때에는 뭐 이렇게 단순해? 싶�
     
     
     
-    <link rel="stylesheet" href="/css/styles.c02b85b663fc995522fbd97efebc7591548a8e78688b9d95b3568cca9d374360.css"
-          integrity="sha256-wCuFtmP8mVUi&#43;9l&#43;/rx1kVSKjnhoi52Vs1aMyp03Q2A=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.50559785d18fe4479ec23d6e59af04305b2d8bb05321e0471ee07b46fe4de529.css"
+          integrity="sha256-UFWXhdGP5Eeewj1uWa8EMFsti7BTIeBHHuB7Rv5N5Sk=" crossorigin="anonymous">
     
     
     
@@ -31,7 +32,9 @@ rails도 그랬었고, &hellip;처음 볼때에는 뭐 이렇게 단순해? 싶�
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container"><header>
     <div class="main ">
         <h1 class="site-title ">
@@ -48,11 +51,14 @@ rails도 그랬었고, &hellip;처음 볼때에는 뭐 이렇게 단순해? 싶�
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -60,8 +66,12 @@ rails도 그랬었고, &hellip;처음 볼때에는 뭐 이렇게 단순해? 싶�
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -131,9 +141,7 @@ rails도 그랬었고, &hellip;처음 볼때에는 뭐 이렇게 단순해? 싶�
 <p>너무 거창하거나, 실제로는 그 문제를 깊이 생각해서 푼게 아니라, 너무 범용적이고 범우주적인 해법(예: 상태관리, 컴포넌트 모델)만으로 퉁치려는것보다는. &hellip;이제 그런것들에 혹하거나 끌리지 않게 되었다.</p>
 <p>그리고 또 한편으로는, 모든 해법은 단순하고 우아해야만 한다고 믿고 싶어서 믿는 fanboy가 되고 싶지도 않고.</p>
 
-	</section>
-
-	<div class="post-tags">
+	</section><div class="post-tags">
 	    
 	    
 	    
@@ -141,7 +149,7 @@ rails도 그랬었고, &hellip;처음 볼때에는 뭐 이렇게 단순해? 싶�
     </article>
 
     <hr class="archive-ruler">
-    
+
     <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
         
@@ -158,7 +166,7 @@ rails도 그랬었고, &hellip;처음 볼때에는 뭐 이렇게 단순해? 싶�
 
 </main>
 <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766337592</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766588840</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

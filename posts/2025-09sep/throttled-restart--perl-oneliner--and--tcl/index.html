@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766337592">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766588840">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="
 코딩을 하다보면, 파일변경시에 자동으로 빌드, 서버재시작, 혹은
 테스트케이스를 실행 되도록 하면 꽤 편리할 수 있다.
@@ -23,8 +24,8 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.c02b85b663fc995522fbd97efebc7591548a8e78688b9d95b3568cca9d374360.css"
-          integrity="sha256-wCuFtmP8mVUi&#43;9l&#43;/rx1kVSKjnhoi52Vs1aMyp03Q2A=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.50559785d18fe4479ec23d6e59af04305b2d8bb05321e0471ee07b46fe4de529.css"
+          integrity="sha256-UFWXhdGP5Eeewj1uWa8EMFsti7BTIeBHHuB7Rv5N5Sk=" crossorigin="anonymous">
     
     
     
@@ -38,7 +39,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container"><header>
     <div class="main ">
         <h1 class="site-title ">
@@ -55,11 +58,14 @@
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -67,8 +73,12 @@
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -413,78 +423,167 @@ Footnotes
 </div>
 </div>
 
-	</section>
-
-	<div class="post-tags">
+	</section><div class="post-tags">
 	    
 	    
 	    <nav class="nav tags">
 		<ul class="tags">
-                    
-		    <li style="display: inline">😺 <a href="/categories/programming">programming</a></li>
-                    
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/fswatch">fswatch</a></li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/inotify-tools">inotify-tools</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lisp/">lisp</a>
+                        <sup>18</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/inotify">inotify</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webdev/">webdev</a>
+                        <sup>9</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/filesystem">filesystem</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/perl/">perl</a>
+                        <sup>8</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/fam">fam</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/threading/">threading</a>
+                        <sup>3</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/perl">perl</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/asyncio/">asyncio</a>
+                        <sup>3</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/oneliner">oneliner</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/tcl/">tcl</a>
+                        <sup>3</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/shell">shell</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gil/">gil</a>
+                        <sup>2</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/xargs">xargs</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/shell/">shell</a>
+                        <sup>2</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/tcl">tcl</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/filesystem/">filesystem</a>
+                        <sup>2</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/tcllib">tcllib</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/async-await/">async-await</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/webdev">webdev</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/function-coloring/">function-coloring</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/restarting">restarting</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/callback-hell/">callback-hell</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/server">server</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/apply/">apply</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/process">process</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lambda/">lambda</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/command">command</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/closure/">closure</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/throttled-restart.tcl">throttled-restart.tcl</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/eias/">eias</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/throttle">throttle</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/metaprogramming/">metaprogramming</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/throttling">throttling</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/throttling/">throttling</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/lisp">lisp</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/throttle/">throttle</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/metaprogramming">metaprogramming</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/throttled-restart.tcl/">throttled-restart.tcl</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/eias">eias</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/command/">command</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/closure">closure</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/process/">process</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/lambda">lambda</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/server/">server</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/apply">apply</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/restarting/">restarting</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/asyncio">asyncio</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/tcllib/">tcllib</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/gil">gil</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/xargs/">xargs</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/threading">threading</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/oneliner/">oneliner</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/callback-hell">callback-hell</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/fam/">fam</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/function-coloring">function-coloring</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/inotify/">inotify</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/async-await">async-await</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/inotify-tools/">inotify-tools</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/fswatch/">fswatch</a>
+                        <sup>1</sup>
+                    </li>
 		    
 		</ul>
 	    </nav>
@@ -494,7 +593,7 @@ Footnotes
     </article>
 
     <hr class="archive-ruler">
-    
+
     <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
         
@@ -511,7 +610,7 @@ Footnotes
 
 </main>
 <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766337592</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766588840</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

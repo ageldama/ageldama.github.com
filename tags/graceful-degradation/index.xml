@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graceful-Degradation on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/graceful-degradation/</link>
+    <description>Recent content in Graceful-Degradation on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 23 Dec 2025 14:34:23 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/graceful-degradation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>‘graceful degradation’, ‘progressive enhancement’</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/graceful-degradation&#43;progressive-enhancement&#43;elegant-degradation/</link>
+      <pubDate>Tue, 23 Dec 2025 14:34:23 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/graceful-degradation&#43;progressive-enhancement&#43;elegant-degradation/</guid>
+      <description>&lt;p&gt;&#xA;  하나씩 정리해보자.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  이하의 정리는 “웹개발”, “웹페이지” 유지보수 관점/도메인의 시점에서,&#xA;  다른 도메인(예=전자제품)에서의 정의와 완전히 일치하지는 않을거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  위키백과나 다른 블로그에서 소개한 글들은 전자제품, 전자통신 등의&#xA;  관점, 개념, 용어 중심으로 풀어 설명했기 때문에 웹개발의 관점에선 잘&#xA;  모르겠었어서. (원저자분들 죄송합니다. 🙇)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  즉, 이하에 소개할 링크에서 W3C의 정의에 따라 이해해보려고 함.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;“progressive enhancement” -or- “graceful degradation”?&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;W3C Wiki &lt;a href=&#34;https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement&#34;&gt;Graceful degradation versus progressive enhancement&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;기계인간 John Grib &lt;a href=&#34;https://johngrib.github.io/wiki/jargon/graceful-degradation/&#34;&gt;우아한 성능 저하 (graceful degradation)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;  조금 뭔지 모를 영어가 많이 나와서 혼란스럽다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>htmx 마법으로 링크성능 빠르게 &#43; dark-mode 깜빡임 제거</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost&#43;dark-mode/</link>
+      <pubDate>Tue, 23 Dec 2025 14:33:23 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost&#43;dark-mode/</guid>
+      <description>&lt;p&gt;&#xA;지난번 dark-mode 방식을 새로 만든 이후로,  눈에 띄는 단점이었던&#xA;페이지이동시 flash현상을 없애고, 또한 매 페이지 이동을 엄청나게 가볍게&#xA;만들었다.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;지난 포스팅: &lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/prefers-color-scheme/&#34;&gt;🦹 darkmode.js… prefers-color-scheme&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;…위 포스팅에서 “Wrap Up”-표를 확인해 보면:&lt;/p&gt;&#xA;&lt;style&gt;&#xA;&#xA;table.table {&#xA;    border-collapse: collapse;&#xA;}&#xA;&#xA;.table th {&#xA;    border: 1px solid #ccc;&#xA;    text-weight: bold;&#xA;    text-align: center;&#xA;}&#xA;&#xA;.table td {&#xA;    border: 1px solid #ccc;&#xA;}&#xA;&lt;/style&gt;&#xA;&#xA;&lt;table class=&#34;table&#34; width=&#34;&#34;&gt;&#xA;    &lt;thead&gt;&#xA;        &lt;tr&gt;&#xA;            &lt;th&gt;darkmode.js (기존)&lt;/th&gt;&#xA;            &lt;th&gt;새로운 방식&lt;/th&gt;&#xA;        &lt;/tr&gt;&#xA;    &lt;/thead&gt;&#xA;&#xA;    &lt;tbody&gt;&#xA;        &lt;tr&gt;&#xA;            &lt;td colspan=&#34;2&#34;&gt;...생략...&lt;/td&gt;&#xA;        &lt;/tr&gt;&#xA;&#xA;        &lt;tr&gt;&#xA;            &lt;td&gt;&#xA;                &lt;b&gt;😥-1&lt;/b&gt;&#xA;                페이지 로딩시 flash 현상이 생긴다&#xA;            &lt;/td&gt;&#xA;            &lt;td&gt;&#xA;                &lt;b&gt;😥-1&lt;/b&gt;&#xA;                &lt;br&gt;&#xA;                브라우저캐시에 없는 페이지를 로딩할 때에 발생할 수 있음.&#xA;                &lt;br&gt;&#xA;                (OS/브라우저 prefs와 local-storage에 저장된 color-mode이 서로 다른 경우)&#xA;                &lt;br&gt;&#xA;                ...darkmode.js보단 가볍게 사라짐.&#xA;            &lt;/td&gt;&#xA;        &lt;/tr&gt;&#xA;&#xA;        &lt;tr&gt;&#xA;            &lt;td colspan=&#34;2&#34;&gt;...생략...&lt;/td&gt;&#xA;        &lt;/tr&gt;&#xA;    &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&#xA;  …와 같이 된 부분을 다음과 같이 바꾼 것:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

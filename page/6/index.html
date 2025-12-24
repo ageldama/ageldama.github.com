@@ -3,8 +3,9 @@
     <head>
 	<meta name="generator" content="Hugo 0.152.2">
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766337591">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766588840">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="" />
     <meta property="og:image" content=""/>
     <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
@@ -14,8 +15,8 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.c02b85b663fc995522fbd97efebc7591548a8e78688b9d95b3568cca9d374360.css"
-          integrity="sha256-wCuFtmP8mVUi&#43;9l&#43;/rx1kVSKjnhoi52Vs1aMyp03Q2A=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.50559785d18fe4479ec23d6e59af04305b2d8bb05321e0471ee07b46fe4de529.css"
+          integrity="sha256-UFWXhdGP5Eeewj1uWa8EMFsti7BTIeBHHuB7Rv5N5Sk=" crossorigin="anonymous">
     
     
     
@@ -30,7 +31,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
 
-    <body>
+    <body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container">
             <header>
     <div class="main ">
@@ -48,11 +51,14 @@
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -60,8 +66,12 @@
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -97,12 +107,133 @@
 		
 
                 <hr class="archive-ruler"><h1>
-                    🐵
+                    ⌨️
                     페이지 #006
                 </h1>
 
                 <ul class="article__list">
                     
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2023-02-19" pubdate>
+        2023-02-19
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2023-02feb/2023-02feb19--02-ping/">
+    💤 Ping 19/02/2023 .02 : 이름에 대한 추측 (2) HAL, IBM, JCL
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         (…지난번 C/C++/D/Zig 이름에 대한 추측 에 이어서, 그냥 떠올라서)
+HAL 9000 –&gt; IBM
+ASCII방식, 혹은 그냥 알파벳에서 한글자씩 앞으로 땡기면,...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2023-02-19" pubdate>
+        2023-02-19
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2023-02feb/2023-02feb19--01-ping/">
+    🈲 Ping 19/02/2023 .01 : 어른이 되기
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         (최근 며칠 우울하고 내가 어른이기는 한가 싶은 자괴감에 빠졌었다. 그래서인지 자기합리화를 위해 이런 글을 쓰고 있는거 같기도 하다.)
+나의 옛날 이야기 80년대의 기억에는, 참...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2023-02-07" pubdate>
+        2023-02-07
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2023-02feb/2023-02feb07--01-ping/">
+    🧑‍🍼 Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         문득 떠오른 생각이라서, 그냥 추측.
+C : 로마숫자(roman numeral) 으로 100.
+처음부터 의도한 숫자가 100이 아니었을거란건 나도 알거 같아. BCPL이나 그런...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2023-02-04" pubdate>
+        2023-02-04
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2023-02feb/2023-02feb04--01-ping/">
+    🔋 Ping 04/02/2023 .01: 씨언어의 장자 zig, rust, golang, c&#43;&#43; ???
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         최근에 재미로 zig 을 정말 재밌게 &#39;읽었다&#39;. 공부해보고 실제로 뭔가 코딩을 많이 해보거나 한 것은 아니고, 대체 어떻게 동작하는 프로그램을 이걸로 만들라고 하...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2023-02-03" pubdate>
+        2023-02-03
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2023-02feb/2023-02feb03--01-ping/">
+    🈵 Ping 03/02/2023 .01: 블로그 디자인 수정
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+        블로그를 내려놓았다가, 다시 글을 쓰고 생각들을 어느 정도는 공개를 하고 지내고 싶어져서 다시 열었다.
+사용하던 테마를 수정해서 쓰기로 하고, CSS을 여기저기서 복붙해서 적용해보...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
                     
                     <li>
                         <span class="meta">
@@ -228,127 +359,6 @@ https://grugbrain.dev/
                     </li>
                     
 		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2022-06-19" pubdate>
-        2022-06-19
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2022-06jun/2022-06jun19--01-sw-disenchantment/">
-    🎪 &#34;Software disenchantment&#34;
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-        https://tonsky.me/blog/disenchantment/
-재밌게 읽었다. 계속 생각해오던, 이전 포스팅에서도 이야기한 생각들.
-&ldquo;&hellip;의 진보도 항...
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2022-06-17" pubdate>
-        2022-06-17
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2022-06jun/2022-06jun17--01-ping/">
-    🔮 Ping 17/06/2022 .01
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-        &ldquo;Code bloat has become astronomical&rdquo;...
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2022-06-15" pubdate>
-        2022-06-15
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2022-06jun/2022-06jun15--01-ping/">
-    🔮 Ping 15/06/2022 .01
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-        비 내리는 화요일. &#x2614;
-jinja2 template include + cache? + file-time 재밌는걸 찾았다.
-jinja2을 사용하면서, 하위 include...
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2022-06-13" pubdate>
-        2022-06-13
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2022-06jun/algebraic-effects-for-everyone/">
-    🥯 &#34;모두를 위한 algebraic effects!&#34; ...정말루?
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-        뭐 대충 다음과 같은 글들:
-https://www.eff-lang.org/handlers-tutorial.pdf...
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-    <time datetime="2022-06-13" pubdate>
-        2022-06-13
-    </time>
-</span>
-
-                        <a class="article-link" href="/posts/2022-06jun/2022-06jun13--01-ping/">
-    🧑‍🦯 Ping 13/06/2022 .01
-</a>
-
-                        <div class="preview">
-    
-    <span class="preview-content">
-        기운 없는 날&hellip; 쉬어야겠다.
-
-    </span>
-    
-</div>
-
-                    </li>
-                    
-		    
                 </ul>
 
                 <hr class="archive-ruler">
@@ -371,7 +381,7 @@ https://www.eff-lang.org/handlers-tutorial.pdf...
 </nav>
 	    </main>
 	    <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766337591</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766588840</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 

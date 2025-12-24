@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Series - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766588840">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="" />
+    <meta property="og:image" content=""/>
+    <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/series/index.xml" title="아겔로그" />
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.50559785d18fe4479ec23d6e59af04305b2d8bb05321e0471ee07b46fe4de529.css"
+          integrity="sha256-UFWXhdGP5Eeewj1uWa8EMFsti7BTIeBHHuB7Rv5N5Sk=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
+
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+
+<section class="section is-fullheight sec-toc">
+    <span class="toc-link"><a href="/series">Series📚(1개)</a></span>
+    
+    <span class="toc-link"><a href="/tags">Tags🏷️(612개)</a></span>
+
+    
+
+</section>
+
+
+<hr class="archive-ruler">
+
+
+
+<h1 class="page-title">
+    
+    Series📚(1)
+</h1><script>
+
+ 
+
+ function sortListByData(elList, elControl, descDataKey, valDataKey, valDataTypeKey) {
+     const cmpFns = {
+         lexical: function(desc, a, b){
+             let res = String(a).localeCompare(String(b));
+             if(desc) res *= -1;
+             return res;
+         },
+
+         numeric: function(desc, a_, b_){
+             const a = Number(a_);
+             const b = Number(b_);
+             let res = 0;
+             if(a<b) res = -1;
+             else if(a>b) res = 1;
+             if (desc)  res *= -1;
+             return res;
+         },
+     };
+
+     
+     const desc = 'true' === String(elControl.dataset[descDataKey]);
+     const cmpFn = cmpFns[elControl.dataset[valDataTypeKey]];
+
+     Array.from(elList.getElementsByTagName("LI"))
+          .sort((a, b) => cmpFn(desc, a.dataset[valDataKey], b.dataset[valDataKey]))
+          .forEach(li => elList.appendChild(li));
+ }
+
+ function doSortTerms(){
+     const elList = document.querySelector('ul.terms');
+     const elControl = document.querySelector('.sort-terms-control');
+     const by = String(elControl.dataset['sortBy']);
+     sortListByData(elList, elControl, 'descOrder', by, by + 'Type');
+     applyToSortOrderIndicator(elControl);
+ }
+
+ function sortTermsBy(by){
+     const el = document.querySelector('.sort-terms-control');
+     const origSortBy = String(el.dataset['sortBy']);
+     el.dataset['sortBy'] = by;
+     if (origSortBy === String(by)){
+         toggleDesc();
+     }
+     doSortTerms();
+ }
+
+ function toggleDesc(){
+     const el = document.querySelector('.sort-terms-control');
+     if(String(el.dataset['descOrder']) === 'true'){
+         el.dataset['descOrder'] = 'false';
+     }else{
+         el.dataset['descOrder'] = 'true';
+     }
+ }
+
+ function applyToSortOrderIndicator(elControl){
+     
+     document.querySelectorAll('.sort-order-indicator').forEach(i => i.style.display='none');
+
+     
+     const kebabize = str => {
+         return str.split('').map((letter, idx) => {
+             return letter.toUpperCase() === letter
+                  ? `${idx !== 0 ? '-' : ''}${letter.toLowerCase()}`
+                  : letter;
+         }).join('');
+     }
+
+     const sortBy = kebabize(String(elControl.dataset['sortBy']));
+     const desc = String(elControl.dataset['descOrder']) === 'true';
+     const selector = ".sort-terms-btn.by-" + sortBy + " > .sort-order-indicator." + (desc ? "desc" : "asc");
+
+     document.querySelectorAll(selector).forEach(el => el.style.display = 'inline');
+ }
+
+
+</script>
+
+
+<span class="sort-terms-control"
+      data-desc-order="true"
+      data-sort-by="count"
+      data-term-type="lexical"
+      data-count-type="numeric"
+      data-last-modified-type="numeric" >
+    <button type="button" class="sort-terms-btn by-term" onclick="sortTermsBy('term')">
+        by-name
+        <span class="sort-order-indicator asc">🔼</span>
+        <span class="sort-order-indicator desc">🔽</span>
+    </button>
+
+    <button type="button" class="sort-terms-btn by-count" onclick="sortTermsBy('count')">
+        by-count
+        <span class="sort-order-indicator asc">🔼</span>
+        <span class="sort-order-indicator desc" style="display:inline;">🔽</span>
+    </button>
+
+    <button type="button" class="sort-terms-btn by-last-modified" onclick="sortTermsBy('lastModified')">
+        by-last-modified
+        <span class="sort-order-indicator asc">🔼</span>
+        <span class="sort-order-indicator desc">🔽</span>
+    </button>
+</span>
+
+
+<section class="section is-fullheight terms">
+    <ul class="series terms">
+ 	
+        <li class="tagbutton"
+            data-term="dark-mode으로의-여행"
+            data-count="5"
+            data-last-modified="1766515281" >
+	    <a href=/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/ title="All pages with series <i>dark-mode으로의-여행</i>">
+                📚 dark-mode으로의-여행
+            </a>
+            <sup>5</sup>
+            <br>
+            <span class="meta" style="margin-left: 1rem;">
+                <time datetime="" pubdate>
+                    2025-12-23
+                </time>
+            </span>
+        </li>
+        
+    </ul>
+</section>
+
+<hr class="archive-ruler">
+
+<footer class="global-footer">
+    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766588840</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YSB7MGHZ4V');
+</script>
+
+
+
+</div>
+    </body>
+</html>

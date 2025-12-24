@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Taxonomy on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/taxonomy/</link>
+    <description>Recent content in Taxonomy on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 23 Dec 2025 16:06:28 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/taxonomy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>새로운 묶음법: “📚시리즈(Series)”</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/</link>
+      <pubDate>Tue, 23 Dec 2025 16:06:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/</guid>
+      <description>&lt;p&gt;&#xA;기존에는 “😺카테고리(Categories)”, “🏷️태그(Tags)”만 설정해서&#xA;써왔었는데, 어느샌가, 일대기 형식으로 계속 묶어나가야 분류가 수월한&#xA;글들이 쌓여갔다: (예) &lt;a href=&#34;https://ageldama.github.io/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/&#34;&gt;dark-mode 지원하기&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 새로운 “시리즈” taxonomy 추가하고, 페이지템플릿들 조금 고쳐서&#xA;지원 시작.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;음… 과거에 쌓은 글들을 좀 시리즈로 이렇게 더 묶어야 할까 고민도&#xA;들고,&lt;/p&gt;&#xA;&lt;p&gt;&#xA;무엇보다, 그간 아무 생각없이 남들 다 그렇게 하니까, “카테고리”를&#xA;추가해서 써오던 것이 좀 후회스럽다. 사실은 저거 그냥 “태그”랑 다를게&#xA;없는데 싶기도 하다. 굳이 차이를 갖자면 “대분류”정도로서, 이맥스 글이나&#xA;프로그래밍 글끼리 묶기 수월한 점 + 그리고 태그목록보다는 훨씬 가짓수가&#xA;젂으니까 찾아보기 좋다는 점 정도?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

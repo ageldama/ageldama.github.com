@@ -7,8 +7,43 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sun, 21 Dec 2025 15:34:31 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Dec 2025 14:58:24 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>categories안녕👋 taxonomies 정렬 추가</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/no-categories&#43;taxonomy-revamp/</link>
+      <pubDate>Wed, 24 Dec 2025 14:58:24 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/no-categories&#43;taxonomy-revamp/</guid>
+      <description>&lt;p&gt;&#xA;👉 &lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/&#34;&gt;새로운 묶음법: “📚시리즈(Series)”&lt;/a&gt; …추가하고&#xA;“😺카테고리(Categories)”,은 별로 쓸모가 없었구나 생각이 들어서&#xA;제외시켰다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이제 “📚시리즈(Series)” / “🏷️태그(Tags)” , 2개의 &lt;a href=&#34;https://gohugo.io/content-management/taxonomies/&#34;&gt;Taxonomy&lt;/a&gt;만 사용하여&#xA;블로깅을 해나가려고.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;아예 &lt;code&gt;/categories&lt;/code&gt;-관련 페이지는 아예 생성하지 않기로.&lt;/li&gt;&#xA;&lt;li&gt;표시도 않기로.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;대신 tags을 정렬해서 보여주기로:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;참조빈도가 높은 태그부터 정렬해서 보여주면, 그게 사실&#xA;&amp;#34;카테고리&amp;#34;의 의도였던 &amp;#34;&lt;em&gt;대분류&lt;/em&gt;&amp;#34;-처럼 쓰일 수 있으니까.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://ageldama.github.io/tags&#34;&gt;/tags&lt;/a&gt; , &lt;a href=&#34;https://ageldama.github.io/series&#34;&gt;/series&lt;/a&gt; 페이지에서 기본은 참조횟수로 역순정렬해서 보여주고, 추가적으로,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;이름 abc순서,&lt;/li&gt;&#xA;&lt;li&gt;최근 갱신일,&lt;/li&gt;&#xA;&lt;li&gt;…의 추가 정렬기준에 따라 직접 재정렬해서 찾기 수월하게 바꿨다.&lt;/li&gt;&#xA;&lt;li&gt;…ascending/descending 순서으로 정렬도 구현해줬다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;뭔가 삽질에 완벽하게 깔끔한 구현은 아니지만, 적당히 htmx hx-boost으로&#xA;다시 만든 블로그 이동방식과 잘 어울리는거 같아서.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>블로그 &#43; [htmx transition animation, loading indicator]</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/blog-htmx-transition-anims/</link>
+      <pubDate>Tue, 23 Dec 2025 18:41:21 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/blog-htmx-transition-anims/</guid>
+      <description>&lt;p&gt;&#xA;htmx &lt;code&gt;hx-boost&lt;/code&gt;-을 적용하기 시작하면서(이 시리즈 전 포스팅 참고 👉&#xA;&lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost+dark-mode/&#34;&gt;htmx 마법으로 링크성능 빠르게 + dark-mode 깜빡임 제거&lt;/a&gt; ) 효과를 넣는게 가능해졌음.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;htmx loading indicator 적용.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://dev.to/amal/global-progress-bar-for-htmx-50fa&#34;&gt;https://dev.to/amal/global-progress-bar-for-htmx-50fa&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;htmx view transitions animation 적용.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://htmx.org/examples/animations/#settling&#34;&gt;https://htmx.org/examples/animations/#settling&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;…좀 무던하게 적용해보려 뚝딱 🛠️&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>새로운 묶음법: “📚시리즈(Series)”</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/</link>
+      <pubDate>Tue, 23 Dec 2025 16:06:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/</guid>
+      <description>&lt;p&gt;&#xA;기존에는 “😺카테고리(Categories)”, “🏷️태그(Tags)”만 설정해서&#xA;써왔었는데, 어느샌가, 일대기 형식으로 계속 묶어나가야 분류가 수월한&#xA;글들이 쌓여갔다: (예) &lt;a href=&#34;https://ageldama.github.io/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/&#34;&gt;dark-mode 지원하기&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 새로운 “시리즈” taxonomy 추가하고, 페이지템플릿들 조금 고쳐서&#xA;지원 시작.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;음… 과거에 쌓은 글들을 좀 시리즈로 이렇게 더 묶어야 할까 고민도&#xA;들고,&lt;/p&gt;&#xA;&lt;p&gt;&#xA;무엇보다, 그간 아무 생각없이 남들 다 그렇게 하니까, “카테고리”를&#xA;추가해서 써오던 것이 좀 후회스럽다. 사실은 저거 그냥 “태그”랑 다를게&#xA;없는데 싶기도 하다. 굳이 차이를 갖자면 “대분류”정도로서, 이맥스 글이나&#xA;프로그래밍 글끼리 묶기 수월한 점 + 그리고 태그목록보다는 훨씬 가짓수가&#xA;젂으니까 찾아보기 좋다는 점 정도?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>‘graceful degradation’, ‘progressive enhancement’</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/graceful-degradation&#43;progressive-enhancement&#43;elegant-degradation/</link>
+      <pubDate>Tue, 23 Dec 2025 14:34:23 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/graceful-degradation&#43;progressive-enhancement&#43;elegant-degradation/</guid>
+      <description>&lt;p&gt;&#xA;  하나씩 정리해보자.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  이하의 정리는 “웹개발”, “웹페이지” 유지보수 관점/도메인의 시점에서,&#xA;  다른 도메인(예=전자제품)에서의 정의와 완전히 일치하지는 않을거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  위키백과나 다른 블로그에서 소개한 글들은 전자제품, 전자통신 등의&#xA;  관점, 개념, 용어 중심으로 풀어 설명했기 때문에 웹개발의 관점에선 잘&#xA;  모르겠었어서. (원저자분들 죄송합니다. 🙇)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  즉, 이하에 소개할 링크에서 W3C의 정의에 따라 이해해보려고 함.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;“progressive enhancement” -or- “graceful degradation”?&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;W3C Wiki &lt;a href=&#34;https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement&#34;&gt;Graceful degradation versus progressive enhancement&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;기계인간 John Grib &lt;a href=&#34;https://johngrib.github.io/wiki/jargon/graceful-degradation/&#34;&gt;우아한 성능 저하 (graceful degradation)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;  조금 뭔지 모를 영어가 많이 나와서 혼란스럽다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>htmx 마법으로 링크성능 빠르게 &#43; dark-mode 깜빡임 제거</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost&#43;dark-mode/</link>
+      <pubDate>Tue, 23 Dec 2025 14:33:23 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost&#43;dark-mode/</guid>
+      <description>&lt;p&gt;&#xA;지난번 dark-mode 방식을 새로 만든 이후로,  눈에 띄는 단점이었던&#xA;페이지이동시 flash현상을 없애고, 또한 매 페이지 이동을 엄청나게 가볍게&#xA;만들었다.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;지난 포스팅: &lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/prefers-color-scheme/&#34;&gt;🦹 darkmode.js… prefers-color-scheme&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;…위 포스팅에서 “Wrap Up”-표를 확인해 보면:&lt;/p&gt;&#xA;&lt;style&gt;&#xA;&#xA;table.table {&#xA;    border-collapse: collapse;&#xA;}&#xA;&#xA;.table th {&#xA;    border: 1px solid #ccc;&#xA;    text-weight: bold;&#xA;    text-align: center;&#xA;}&#xA;&#xA;.table td {&#xA;    border: 1px solid #ccc;&#xA;}&#xA;&lt;/style&gt;&#xA;&#xA;&lt;table class=&#34;table&#34; width=&#34;&#34;&gt;&#xA;    &lt;thead&gt;&#xA;        &lt;tr&gt;&#xA;            &lt;th&gt;darkmode.js (기존)&lt;/th&gt;&#xA;            &lt;th&gt;새로운 방식&lt;/th&gt;&#xA;        &lt;/tr&gt;&#xA;    &lt;/thead&gt;&#xA;&#xA;    &lt;tbody&gt;&#xA;        &lt;tr&gt;&#xA;            &lt;td colspan=&#34;2&#34;&gt;...생략...&lt;/td&gt;&#xA;        &lt;/tr&gt;&#xA;&#xA;        &lt;tr&gt;&#xA;            &lt;td&gt;&#xA;                &lt;b&gt;😥-1&lt;/b&gt;&#xA;                페이지 로딩시 flash 현상이 생긴다&#xA;            &lt;/td&gt;&#xA;            &lt;td&gt;&#xA;                &lt;b&gt;😥-1&lt;/b&gt;&#xA;                &lt;br&gt;&#xA;                브라우저캐시에 없는 페이지를 로딩할 때에 발생할 수 있음.&#xA;                &lt;br&gt;&#xA;                (OS/브라우저 prefs와 local-storage에 저장된 color-mode이 서로 다른 경우)&#xA;                &lt;br&gt;&#xA;                ...darkmode.js보단 가볍게 사라짐.&#xA;            &lt;/td&gt;&#xA;        &lt;/tr&gt;&#xA;&#xA;        &lt;tr&gt;&#xA;            &lt;td colspan=&#34;2&#34;&gt;...생략...&lt;/td&gt;&#xA;        &lt;/tr&gt;&#xA;    &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&#xA;  …와 같이 된 부분을 다음과 같이 바꾼 것:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The HTML Hell Page</title>
       <link>https://ageldama.github.io/posts/2025-12dec/the-html-hell-page/</link>
