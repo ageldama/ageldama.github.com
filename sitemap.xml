@@ -3,15 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ageldama.github.io/tags/blog/</loc>
-    <lastmod>2025-12-24T14:58:24+00:00</lastmod>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/blogging/</loc>
-    <lastmod>2025-12-24T14:58:24+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/posts/2025-12dec/no-categories&#43;taxonomy-revamp/</loc>
-    <lastmod>2025-12-24T14:58:24+00:00</lastmod>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/css/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/defer/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/domcontentloaded/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2025-12dec/script-defer-ftw/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/htmx/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/hx-boost/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/onload/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/ready/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/script-defer/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/webdev/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2025-12dec/no-categories&#43;taxonomy-revamp/</loc>
     <lastmod>2025-12-24T14:58:24+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/hugo/</loc>
@@ -23,28 +65,13 @@
     <loc>https://ageldama.github.io/tags/js/</loc>
     <lastmod>2025-12-24T14:58:24+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2025-12-24T14:58:24+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/programming/</loc>
-    <lastmod>2025-12-24T14:58:24+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
-    <lastmod>2025-12-24T14:58:24+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-12-24T14:58:24+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/animation/</loc>
     <lastmod>2025-12-23T18:41:21+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/</loc>
-    <lastmod>2025-12-23T18:41:21+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/effects/</loc>
-    <lastmod>2025-12-23T18:41:21+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/htmx/</loc>
     <lastmod>2025-12-23T18:41:21+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/loading-indicator/</loc>
@@ -54,12 +81,6 @@
     <lastmod>2025-12-23T18:41:21+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/progress-bar/</loc>
-    <lastmod>2025-12-23T18:41:21+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/series/</loc>
-    <lastmod>2025-12-23T18:41:21+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/webdev/</loc>
     <lastmod>2025-12-23T18:41:21+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2025-12dec/blog-htmx-transition-anims/</loc>
@@ -1230,9 +1251,6 @@
     <lastmod>2023-03-02T17:50:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2023-03mar/cxx-defer/</loc>
-    <lastmod>2023-03-02T16:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/defer/</loc>
     <lastmod>2023-03-02T16:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/golang/</loc>

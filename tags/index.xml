@@ -7,27 +7,83 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 24 Dec 2025 14:58:24 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Dec 2025 05:47:08 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
       <link>https://ageldama.github.io/tags/blog/</link>
-      <pubDate>Wed, 24 Dec 2025 14:58:24 +0000</pubDate>
+      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Blogging</title>
       <link>https://ageldama.github.io/tags/blogging/</link>
-      <pubDate>Wed, 24 Dec 2025 14:58:24 +0000</pubDate>
+      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/blogging/</guid>
       <description></description>
     </item>
     <item>
       <title>Css</title>
       <link>https://ageldama.github.io/tags/css/</link>
-      <pubDate>Wed, 24 Dec 2025 14:58:24 +0000</pubDate>
+      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Defer</title>
+      <link>https://ageldama.github.io/tags/defer/</link>
+      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/defer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Domcontentloaded</title>
+      <link>https://ageldama.github.io/tags/domcontentloaded/</link>
+      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/domcontentloaded/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Htmx</title>
+      <link>https://ageldama.github.io/tags/htmx/</link>
+      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/htmx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hx-Boost</title>
+      <link>https://ageldama.github.io/tags/hx-boost/</link>
+      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/hx-boost/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Onload</title>
+      <link>https://ageldama.github.io/tags/onload/</link>
+      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/onload/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ready</title>
+      <link>https://ageldama.github.io/tags/ready/</link>
+      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ready/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Script-Defer</title>
+      <link>https://ageldama.github.io/tags/script-defer/</link>
+      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/script-defer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webdev</title>
+      <link>https://ageldama.github.io/tags/webdev/</link>
+      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/webdev/</guid>
       <description></description>
     </item>
     <item>
@@ -73,13 +129,6 @@
       <description></description>
     </item>
     <item>
-      <title>Htmx</title>
-      <link>https://ageldama.github.io/tags/htmx/</link>
-      <pubDate>Tue, 23 Dec 2025 18:41:21 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/htmx/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Loading-Indicator</title>
       <link>https://ageldama.github.io/tags/loading-indicator/</link>
       <pubDate>Tue, 23 Dec 2025 18:41:21 +0000</pubDate>
@@ -98,13 +147,6 @@
       <link>https://ageldama.github.io/tags/progress-bar/</link>
       <pubDate>Tue, 23 Dec 2025 18:41:21 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/progress-bar/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Webdev</title>
-      <link>https://ageldama.github.io/tags/webdev/</link>
-      <pubDate>Tue, 23 Dec 2025 18:41:21 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/webdev/</guid>
       <description></description>
     </item>
     <item>
@@ -2499,13 +2541,6 @@
       <link>https://ageldama.github.io/tags/term/</link>
       <pubDate>Thu, 02 Mar 2023 17:50:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/term/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Defer</title>
-      <link>https://ageldama.github.io/tags/defer/</link>
-      <pubDate>Thu, 02 Mar 2023 16:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/defer/</guid>
       <description></description>
     </item>
     <item>

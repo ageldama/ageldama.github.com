@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hx-Boost on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/hx-boost/</link>
+    <description>Recent content in Hx-Boost on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Thu, 25 Dec 2025 05:47:08 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/hx-boost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>global hx-boost &#43; &lt;script defer&gt;</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/script-defer-ftw/</link>
+      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/script-defer-ftw/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;지금까지의 스토리🧚🔮🧌&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/blog-htmx-transition-anims/&#34;&gt;블로그 + [htmx transition animation, loading indicator&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/no-categories+taxonomy-revamp/&#34;&gt;categories안녕👋 taxonomies 정렬 추가&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;  htmx hx-boost을 사용하여, 블로그내의 링크이동을 빠르고 가볍게&#xA;  만들었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그런데, 페이지가 로딩된 다음 자동으로 실행될 자바스크립트를&#xA;  지정하기 어려워졌다. 사례로 위 (2)-을 구현하는데에 현재 선택된&#xA;  정렬기준을 표시해주는 JS이 페이지 로딩 때에 자동으로 실행됐으면&#xA;  했는데 그게 좀 어려웠다…&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;hx-boost와 &lt;code&gt;onload&lt;/code&gt; 🦻&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;페이지가 로딩됐을때, JS이 실행되도록 하는 방법은 여러 가지가 있…:&#xA;  &lt;code&gt;onload&lt;/code&gt;, &lt;code&gt;ready&lt;/code&gt;, &lt;code&gt;DOMContentLoaded&lt;/code&gt; 모두 조금씩 다른데 여기서는&#xA;  소개하지 않겠다. 인터넷에 충분히 많은 좋은 설명이 있으니까.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
