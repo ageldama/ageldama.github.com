@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Thu, 27 Aug 2020 00:00:01 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2020 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 10/Oct/2020</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/ping-10sat/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-10oct/ping-10sat/</guid>
+      <description>&lt;p&gt;&#xA;오래 써오던 맥북에어의 WIFI이 성능이 계속 안 좋아졌었던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;모델명을 알아보니, 2012년 형이었다. 정말 오래 썼구나. &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;어차피 MacOS을 여러 가지 이유로 좋아하지 않아서 그냥&#xA;아치리눅스&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;를 설치하고 그대로 쓰고 있다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;최근에는 아예 WIFI을 USB-LAN으로 연결해주는 RPi을 만들어 쓰고&#xA;있었다. 물론 내장WIFI은 너무 느려서 &lt;code&gt;nmcli r wifi off&lt;/code&gt; 을 기본으로&#xA;아예 S/W Disable시켜놓고 살았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;어쩌다 계기가 있어서, USB-LAN연결용 RPi을 챙기지 못한 외부에서 어쩔 수&#xA;없이 쓰려고 시도해보니, 아예 조금 내장WIFI을 쓰면 조금 동작하다가&#xA;시스템이 뻗어버린다. …아예 맛이 갔나보다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Linux 5.8와 TP-Link Archer T2U Plus (RTL8821AU)</title>
       <link>https://ageldama.github.io/posts/2020-08aug/linux-5.8-and-tp-link-archer-t2u-plus-rtl8821au/</link>

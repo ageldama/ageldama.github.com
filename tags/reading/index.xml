@@ -7,14 +7,35 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 08 Mar 2023 06:15:08 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 08/03/2023 .01 : 전자책읽기</title>
+      <link>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--01-ping/</link>
+      <pubDate>Wed, 08 Mar 2023 06:15:08 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁들만 나열,&#xA;별로 내용은 길게 늘여 쓰지 않으려고:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;linux, 그중에서도 가벼운 하드웨어와 단순하게 잘 동작하는 배포판.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;여러가지 불필요한 군더더기 없고, 패키지들이 조금 오래된&#xA;버젼이어도, 안정적으로만 동작하면 상관 없음.&lt;/li&gt;&#xA;&lt;li&gt;그래서, debian stable -or- testing 쓰면 속이 편함.&lt;/li&gt;&#xA;&lt;li&gt;하드웨어는 raspberry pi 3/4 둘 다 좋았다. &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;…특히 전력소모도 거의 없고, 딱 모니터 연결해 놓고 팬소음 거의&#xA;없이 쾌적하게 책을 읽기 좋다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;calibre 책파일 관리, 읽기 모두 만족스러움&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Ping 05/Nov/2020</title>
       <link>https://ageldama.github.io/posts/2020-11nov/ping-05thu/</link>
       <pubDate>Thu, 05 Nov 2020 00:00:00 +0900</pubDate>
       <guid>https://ageldama.github.io/posts/2020-11nov/ping-05thu/</guid>
       <description>&lt;p&gt;&#xA;책을 몇 권 주문했다. 관심이 생긴 새로운 분야에 대한 책들이었는데&#xA;흥미롭게도 그 중 두 권이 서로 완전히 다른 분야인데 역저자가&#xA;같았다. 아마도 역자 소개에 나온 자신의 업무, 맡은 영역에서 필요하거나&#xA;관심이 깊어서 번역한 것 같다. 재밌었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 갖고 있는 한국어로는 아직 나오지 않은 책을 세 권 정도 읽고&#xA;싶어서 다시 펼쳤다. 예전에도 조금 읽었었던 책들인데 마음에 들었던&#xA;구절들, 생각들이 다시 읽혀져 즐거웠다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 19/Jul/2020</title>
+      <link>https://ageldama.github.io/posts/2020-07jul/ping-19sun/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-07jul/ping-19sun/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;쉬는 날.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;그간 4개월 정도 집중해온 작업이 어느 정도 궤도에 올라갔다. 앞으로도&#xA;  더 많은 작업을 해야겠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  하지만 일요일이고, 오늘 하루는 조금 마무리 작업을 해놓고 휴식을 할까&#xA;  마음 먹었다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;1Q84, 하루키 소설 영문판 읽기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;군생활을 할 때 시간을 쪼개서 영문판 책들을 많이 읽었었다. 진중문고와&#xA;  그밖에 휴가를 다녀온 사람들이 놓고간, 세월이 흘러가며 쌓여있는&#xA;  아무도 읽지 않는 좋은 책들을 많이 읽었었던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그중에는 아직도 다시 읽고 싶은 책들과 좋아하는 작가와 철학자들이&#xA;  많이 생겼었던 것 같다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 17/03/2019</title>
+      <link>https://ageldama.github.io/posts/2019-03mar/2019-03mar17-ping/</link>
+      <pubDate>Sun, 17 Mar 2019 07:38:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-03mar/2019-03mar17-ping/</guid>
+      <description>&lt;h1 id=&#34;emacsc-개발환경-스크린캐스트&#34;&gt;Emacs/C++ 개발환경 스크린캐스트&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://ageldama.github.io/posts/2019-02feb/counsel-ivy+cpp-ide/&#34;&gt;이전 포스팅&lt;/a&gt; 에서 만들었던&#xA;설정을 스크린캐스트로 찍어서 공유해봤다.&lt;/p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/YOaAqpdz9ts?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;h1 id=&#34;let-over-lambda-읽기&#34;&gt;&amp;ldquo;Let Over Lambda&amp;rdquo; 읽기&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://letoverlambda.com/&#34;&gt;Let Over Lambda&lt;/a&gt;을 읽기&#xA;시작했다. 커먼리습 매크로, 클로져에 대한 이야기를 더 깊이 있게&#xA;설명하고, 그런 기능들이 어떻게 리습이랑 리습이 아닌 &lt;a href=&#34;http://paulgraham.com/avg.html&#34;&gt;&amp;ldquo;Blub&#xA;language&amp;rdquo;&lt;/a&gt;이라고 말하고있는 대부분의&#xA;언어들과의 차이인지를 설명한다.&lt;/p&gt;&#xA;&lt;p&gt;리습의 매크로나 closure을 통해서, 그간 내가 프로그래밍언어 설계를 할때&#xA;포함해야하고, 컴파일러가 지원하도록 손수 만들어놓아야 한다고 믿던&#xA;것들이 얼마나 쉽게 구현되는지를 보며 충격을 받는다. 재밌고 신선하다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Tue, 23 Dec 2025 16:06:28 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Dec 2025 14:58:24 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/taxonomy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>categories안녕👋 taxonomies 정렬 추가</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/no-categories&#43;taxonomy-revamp/</link>
+      <pubDate>Wed, 24 Dec 2025 14:58:24 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/no-categories&#43;taxonomy-revamp/</guid>
+      <description>&lt;p&gt;&#xA;👉 &lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/&#34;&gt;새로운 묶음법: “📚시리즈(Series)”&lt;/a&gt; …추가하고&#xA;“😺카테고리(Categories)”,은 별로 쓸모가 없었구나 생각이 들어서&#xA;제외시켰다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이제 “📚시리즈(Series)” / “🏷️태그(Tags)” , 2개의 &lt;a href=&#34;https://gohugo.io/content-management/taxonomies/&#34;&gt;Taxonomy&lt;/a&gt;만 사용하여&#xA;블로깅을 해나가려고.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;아예 &lt;code&gt;/categories&lt;/code&gt;-관련 페이지는 아예 생성하지 않기로.&lt;/li&gt;&#xA;&lt;li&gt;표시도 않기로.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;대신 tags을 정렬해서 보여주기로:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;참조빈도가 높은 태그부터 정렬해서 보여주면, 그게 사실&#xA;&amp;#34;카테고리&amp;#34;의 의도였던 &amp;#34;&lt;em&gt;대분류&lt;/em&gt;&amp;#34;-처럼 쓰일 수 있으니까.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://ageldama.github.io/tags&#34;&gt;/tags&lt;/a&gt; , &lt;a href=&#34;https://ageldama.github.io/series&#34;&gt;/series&lt;/a&gt; 페이지에서 기본은 참조횟수로 역순정렬해서 보여주고, 추가적으로,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;이름 abc순서,&lt;/li&gt;&#xA;&lt;li&gt;최근 갱신일,&lt;/li&gt;&#xA;&lt;li&gt;…의 추가 정렬기준에 따라 직접 재정렬해서 찾기 수월하게 바꿨다.&lt;/li&gt;&#xA;&lt;li&gt;…ascending/descending 순서으로 정렬도 구현해줬다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;뭔가 삽질에 완벽하게 깔끔한 구현은 아니지만, 적당히 htmx hx-boost으로&#xA;다시 만든 블로그 이동방식과 잘 어울리는거 같아서.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>새로운 묶음법: “📚시리즈(Series)”</title>
       <link>https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/</link>

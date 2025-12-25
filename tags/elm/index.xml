@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elm on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/elm/</link>
+    <description>Recent content in Elm on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sat, 17 Oct 2020 00:00:01 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/elm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping (2nd) 17/Oct/2020</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/ping-17sat-2nd/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-10oct/ping-17sat-2nd/</guid>
+      <description>&lt;p&gt;&#xA;  올해 초 &lt;a href=&#34;https://github.com/ageldama/cl-state-machine&#34;&gt;cl-state-machine 라이브러리&lt;/a&gt;를 만들어 공개한 이후로&#xA;  커먼리습을 쓰지는 않았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  다른 직업상 쓰는 언어들만을 쓰고 오픈소스와 개인적으로 만들고 싶은&#xA;  프로젝트를 위해서 쓰는 언어인 커먼리습은 미뤄두었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  다시 커먼리습을 해야겠다고 생각이 들었다. 개인적으로 만들고 싶은&#xA;  프로젝트도 있고, 그 프로젝트를 위해서 프론트엔드를 만드는데 React와&#xA;  Vue을 써보고 이해하고 있어도 쓰고 싶지는 않기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  사실 커먼리습은 그렇게 문법이 예쁘지도, 멋진 React와 같은 멋진&#xA;  프레임웍이나 최신의 유행하는 라이브러리들을 모두 갖고 있지도 않다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;a href=&#34;https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec&#34;&gt;HyperSpec&lt;/a&gt;을 읽다 보면 아주 쉽게 정의되어 있는 키워드들이 일관성이&#xA;  있지도, 지금 시대의 관점에서 보기에 익숙한 현대적인 용어들을&#xA;  사용해서 이름을 지어놓지도 않았다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 17/Oct/2020</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/ping-16fri/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-10oct/ping-16fri/</guid>
+      <description>&lt;p&gt;&#xA;웹프론트엔드 개발을 조금씩 해보고 있다. 처음에는 예전 방식으로만&#xA;하려고 하다가 조금씩 겨우 써보던 webpack을 다시 가이드를 차근차근&#xA;공부하고 동작하는 방식을 이해하도록 뜯어보고 돌려봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;생각보다 단순하게, 그리고 확장성 있게 쓸만한 빌드도구였다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다만 문제는 설정이 복잡하고 이해하기 힘든 점보다는 빌드 시간이 너무&#xA;느린 점이었다. (내게는)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 parcel bundler을 시도 했는데, 설정도 거의 필요 없이 바로&#xA;동작하고 하는 점은 좋고, 성능도 정말 빨랐다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다만 Vim/Emacs으로 파일을 편집하고 저장할 때, &lt;code&gt;parcel watch&lt;/code&gt; 대상인&#xA;파일들을 종종 아예 dev-server을 재시작해야만 제대로 동작하는 상태로&#xA;빠지는게 조금 짜증났다. 기본으로 webpack보다는 이런 자잘한 부분이 좀&#xA;덜 다듬어진걸까 싶다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

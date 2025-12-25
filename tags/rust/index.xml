@@ -7,14 +7,28 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 08 Mar 2023 06:32:05 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Sep 2025 10:10:04 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>블로그 검색을 다시 짰다 (PageFind 제거)</title>
+      <link>https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/</link>
+      <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://pagefind.app/&#34;&gt;pagefind&lt;/a&gt;이 freebsd 환경에서 동작하지 않아서, 그냥 다시 짰다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;fuse.js을 사용하는 예제 등이 있었지만&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, 그럴거면 그냥 ajax으로&#xA;얻은 &lt;code&gt;index.json&lt;/code&gt;-을 직접 검색해도 될거 같아서 그냥 javascript 작성&#xA;오랬만에.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 ui등도 내 취향에 맞게 간단하게 만들어서 만족스럽다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;pagefind처럼 검색어에 따라 필요한 만큼만 http get하는게 아니라 조금&#xA;아쉽지만, 전체 &lt;code&gt;index.json&lt;/code&gt;-fetch해도 500kb 안쪽인거 같아서 괜찮지&#xA;않을까 싶음. (거기에 브라우저캐슁도 먹으니까)&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Footnotes&#xA;&lt;/h2&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;footnotes&#34;&gt;&#xA;&lt;hr class=&#34;footnotes-separatator&#34;/&gt;&#xA;&lt;div class=&#34;footnote-definitions&#34;&gt;&#xA;&lt;div class=&#34;footnote-definition&#34;&gt;&#xA;&lt;sup id=&#34;footnote-1&#34;&gt;&lt;a href=&#34;#footnote-reference-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;&lt;div class=&#34;footnote-body&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://findstar.pe.kr/2021/07/10/fuse-search-on-hugo/&#34;&gt;https://findstar.pe.kr/2021/07/10/fuse-search-on-hugo/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes</title>
       <link>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/</link>
       <pubDate>Wed, 08 Mar 2023 06:32:05 +0000</pubDate>
       <guid>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;&amp;#34;리액트가 날 인질으로 잡고 있어요&amp;#34;&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://emnudge.dev/blog/react-hostage&#34;&gt;https://emnudge.dev/blog/react-hostage&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  …말해 뭘할까 싶은데. :see_no_evil:&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  포스팅 자체는 react, hooks 같은 것들의 complexity에 대한&#xA;  이야기이지만.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  오히려 흥미롭게 생각하는 것은, 과거 한국에서 &amp;#39;퍼블리셔&amp;#39;라고 하던&#xA;  사람들이 어떻게 되었는가 생각해보며, 함께 지금의 &amp;#39;프론트엔드&#xA;  개발자&amp;#39;, 혹은 &amp;#39;앱 개발자&amp;#39;, &amp;#39;리액트 개발자&amp;#39;, &amp;#39;자바스크립트&#xA;  개발자&amp;#39;들이 앞으로 어떻게 될지 상상해본다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  대부분의 현재의 저런 테크/키워드들은 완전히 사라질거 같고, 그렇다면&#xA;  다른 직종으로 우회하거나, 변화된 상황에 맞춰가겠지 싶다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;&amp;#34;헛소리/bullshit 없이 엔지니어링 재능이 있는 사람을 고용하기&amp;#34;&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://jes.al/2023/03/how-to-hire-engineering-talent-without-the-bs/&#34;&gt;https://jes.al/2023/03/how-to-hire-engineering-talent-without-the-bs/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 19/Jun/2021</title>
+      <link>https://ageldama.github.io/posts/2021-06jun/ping-19sat/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2021-06jun/ping-19sat/</guid>
+      <description>&lt;p&gt;&#xA;그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,&#xA;github repositories도 대부분은 private으로 변경해놓고 지냈었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;하지만 그래도 coding과 글쓰기는 계속 하고 있었었고, 글을 조금씩이라도 공개할까 싶어 다시 문을 연다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것,&#xA;또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.&#xA;이제는 너무 이맥스 + evil 설정 등에 익숙해져서 vim을 오히려 더 설정해서 쓰고 싶은 생각도 들지 않는다.&#xA;..하지만 다른 이들에게 이맥스를 쓰라고 권하기는 머뭇거려진다. 어릴 때부터 이맥스를 사용했고 그렇게 습관으로 하나씩 하나씩 이맥스 컨벤션과 모드들에 익숙해져서 시간이 오래 걸렸었던 것 같으니까.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

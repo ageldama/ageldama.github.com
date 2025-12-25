@@ -7,8 +7,22 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 13 Nov 2019 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 10 Dec 2025 06:46:13 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(주절주절) Factor와 Io</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/factor-and-io/</link>
+      <pubDate>Wed, 10 Dec 2025 06:46:13 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/factor-and-io/</guid>
+      <description>&lt;p&gt;&#xA;Factor와 Io 모두 예전에 덕질하던 프로그래밍언어.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이번엔 추억놀음이나 포스팅해보려고.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Factor&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://factorcode.org/&#34;&gt;https://factorcode.org/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Factor_(programming_language)&#34;&gt;https://en.wikipedia.org/wiki/Factor_(programming_language)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;팩터는 Functional, Concatenative programming언어인데, Forth와 같은&#xA;방식의 평가규칙을 가졌지만, Semantics은 Smalltalk이나 Lisp 같이&#xA;고수준의 추상화를 작성하기 적절했었다. 그리고 Native compilation +&#xA;Image-based 시스템이어서 커먼리습이랑 비슷하게 사용도 가능해서&#xA;좋았었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;오랬만에 &amp;#34;ego searching&amp;#34; 해봤다 😶‍🌫️ :&lt;/p&gt;&#xA;&lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/factor-ageldama-googling.png&#34; width=&#34;600px&#34;&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2025-12dec/factor-ageldama-googling.png&#34; alt=&#34;/posts/2025-12dec/factor-ageldama-googling.png&#34;/&gt;&lt;/a&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html&#34;&gt;https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html&lt;/a&gt;&#xA;같은 문서를 어떻게 요악해서 AI이 보여주는지 잘 모르겠다, 신기할 정도다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&amp;#34;Hallucination 🫥&amp;#34;도 좀 있긴하다. 다른 부분은 다 맞는거 같은데(ㅋㅋ),&#xA;윈도 빌드를 제공하거나 했다는 언급은, 내가 그랬었나 싶다. ㅎㅎ&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰</title>
+      <link>https://ageldama.github.io/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/</guid>
+      <description>&lt;p&gt;&#xA;최근의 파이썬은 아주 오랬동안 multicore/parallelism을 지원하기 위해&#xA;걸림돌이었던 GIL에서 자유로워진 &amp;#34;no-GIL&amp;#34; 옵션이 베타 단계.&#xA;(&amp;#34;free GIL&amp;#34; 혹은 &amp;#34;free threading&amp;#34;이라고도 부르는듯) &lt;a href=&#34;https://blog.jetbrains.com/ko/pycharm/2025/08/faster-python-unlocking-the-python-global-interpreter-lock/&#34;&gt;https://blog.jetbrains.com/ko/pycharm/2025/08/faster-python-unlocking-the-python-global-interpreter-lock/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&amp;#34;no-GIL&amp;#34;이 분명히 중요한 변화이겠지만, 내겐 Python 3.14에&#xA;&lt;a href=&#34;https://docs.python.org/3/library/concurrent.interpreters.html&#34;&gt;concurrent.interpreters&lt;/a&gt; 추가된 것이 더 흥미롭다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이게 과연 Parallelism을 지원하기 위한 방식일까 하고 바로 알아차라기는&#xA;어렵지만 조금 생각해보면:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;새로운 프로세스를 만들지는 않는다 (&lt;code&gt;multiprocessing&lt;/code&gt; 모듈)&lt;/li&gt;&#xA;&lt;li&gt;직접 같은 GIL을 공유하는 스레드를 만들지도 않는다 (&lt;code&gt;threading&lt;/code&gt; 모듈)&lt;/li&gt;&#xA;&lt;li&gt;하지만, 같은 프로세스 안에서 다른 GIL을 사용하는, 파이썬&#xA;인터프리터를 만들고,&lt;/li&gt;&#xA;&lt;li&gt;다른 인터프리터와 적당한 정도로 IPC이 가능하고 (Queue 정도)&lt;/li&gt;&#xA;&lt;li&gt;다른 인터프리터가 실행했으면 하는 파이썬 코드를 전달 가능.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;별거 아닌거 같지만 얻을 수 있는 이점은:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>(소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</title>
       <link>https://ageldama.github.io/posts/2019-11nov/why-sharpsign-in-method-path/</link>

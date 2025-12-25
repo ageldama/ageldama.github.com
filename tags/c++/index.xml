@@ -38,6 +38,13 @@
       <description>&lt;p&gt;&#xA;문득 떠오른 생각이라서, 그냥 추측.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;strong&gt;C&lt;/strong&gt;&lt;/strong&gt; : &lt;em&gt;로마숫자(roman numeral)&lt;/em&gt; 으로 100.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;처음부터 의도한 숫자가 100이 아니었을거란건 나도 알거 같아.&#xA;BCPL이나 그런 역사에 대해 나도 조금은 아니까.&lt;/li&gt;&#xA;&lt;li&gt;그런데 그 이후에 따르는 언어들이 그런 패턴을 만든거 같아서 재미로&#xA;쓰는 글.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;strong&gt;C++&lt;/strong&gt;&lt;/strong&gt; : 위의 로마숫자이란 생각과 &lt;em&gt;C언어의 &lt;code&gt;x++&lt;/code&gt; 연산&lt;/em&gt; 으로 생각해보면,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;즉시 평가할 때에는 C == 100, 그냥 C와 같아 보임.&lt;/li&gt;&#xA;&lt;li&gt;그런데 저장된 값은 +1, == 101.&lt;/li&gt;&#xA;&lt;li&gt;…어쨌든 그냥 볼 때엔, 씨언어와 거의 같아 보이지만, 그래도 좀&#xA;더 성장했다고. 그리고 겸손하게 오직 +1.&lt;/li&gt;&#xA;&lt;li&gt;(그냥 겸손하다고 될 문제인가 싶다… C++ 좋아하지만 ㅎㅎ)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;strong&gt;D&lt;/strong&gt;&lt;/strong&gt; : C에서 다음 단계으로 발전했으니, 이번엔 다섯배, 역시 로마숫자, 500.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Ping 19/Jun/2021</title>
+      <link>https://ageldama.github.io/posts/2021-06jun/ping-19sat/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2021-06jun/ping-19sat/</guid>
+      <description>&lt;p&gt;&#xA;그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,&#xA;github repositories도 대부분은 private으로 변경해놓고 지냈었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;하지만 그래도 coding과 글쓰기는 계속 하고 있었었고, 글을 조금씩이라도 공개할까 싶어 다시 문을 연다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것,&#xA;또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.&#xA;이제는 너무 이맥스 + evil 설정 등에 익숙해져서 vim을 오히려 더 설정해서 쓰고 싶은 생각도 들지 않는다.&#xA;..하지만 다른 이들에게 이맥스를 쓰라고 권하기는 머뭇거려진다. 어릴 때부터 이맥스를 사용했고 그렇게 습관으로 하나씩 하나씩 이맥스 컨벤션과 모드들에 익숙해져서 시간이 오래 걸렸었던 것 같으니까.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Python에 대한 내 관점</title>
       <link>https://ageldama.github.io/posts/2020-09sep/perspective-on-python/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
@@ -50,6 +57,13 @@
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
       <guid>https://ageldama.github.io/posts/2020-08aug/ping-14fri/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;빌드도구의 경험과 Meson을 사용하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  &lt;a href=&#34;https://github.com/ageldama/meson-abc&#34;&gt;Meson-ABC 갖고 놀아본 코드&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  아주 예전에 commercially 성공적이었었던 C++ 프로젝트를 홀로 기획, 설계, 개발했었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  처음에는 GNU Makefile으로 간단히 시작했었었다. 타겟 플랫폼이 뻔하게 윈도였기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그 이전에는 ANSI C으로 작성한 &lt;a href=&#34;https://sourceforge.net/projects/sdlhan/&#34;&gt;SDL 조합형 비트맵 출력 오픈소스&lt;/a&gt;&#xA;  라이브러리 같은 것들을 작업할 때는 그냥 GNU Autotools 을 쓰거나&#xA;  했었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  하지만 그렇게 configure 하거나 할 부분도 없고 처음 혼자 시작하며&#xA;  다른 신경 쓸 것도 무지하게 많았었던 프로젝트였고 더욱이 기간도&#xA;  한정적이었었다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 SCons 같은 것을 조금 쓰다가, 결국 더 간단히 Rake으로 빌드를&#xA;  작성해 한동안 썼었다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>코드 편집기에 대한 생각</title>
+      <link>https://ageldama.github.io/posts/2020-05may/editors/</link>
+      <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-05may/editors/</guid>
+      <description>&lt;p&gt;&#xA;코드 편집기를 어떻게 써왔었는지 잠깐 생각해봤다:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;DOS시절: MS-DOS Editor.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GW-BASIC 시절에는 정말&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/MS-DOS_Editor&#34;&gt;https://en.wikipedia.org/wiki/MS-DOS_Editor&lt;/a&gt; 을 열심히 썼었던 것&#xA;같다.&lt;/li&gt;&#xA;&lt;li&gt;그리고 그 다음엔 &lt;a href=&#34;https://en.wikipedia.org/wiki/PowerBASIC#PowerBASIC_for_DOS_(PBDos)&#34;&gt;PowerBASIC for DOS&lt;/a&gt; 열심히 썼었다. QuickBASIC&#xA;같은 바이트코드으로 컴파일해서 .exe 파일에 인터프리터와&#xA;바이트코드를 embedding 하는 VB의 P-code 같은 가짜 컴파일 방식&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;이&#xA;아니라 정말 네이티브 코드로 컴파일해주고, 인라인 어셈블리와&#xA;메모리 조작이 가능한 베이직 컴파일러, IDE여서 좋은 환경이었던&#xA;것 같다.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;터보C 2.0 편집기. PowerBASIC이랑 유사해서 익숙하게 쓸 수 있었던&#xA;것 같다. 파워베이직도 그렇지만, 의외로 도스시절의 이런 IDE들이&#xA;F1 - Help 메뉴에서 항목별로 문서 정리가 잘 되어 있어서 읽으면서&#xA;즐거웠었던 것 같다. (초등학생~중학생이어서 영어를 잘 이해하지는&#xA;못했지만)&lt;/p&gt;</description>
     </item>
     <item>
       <title>direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기</title>

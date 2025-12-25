@@ -80,6 +80,13 @@
       <description>&lt;p&gt;블로그를 내려놓았다가, 다시 글을 쓰고 생각들을 어느 정도는 공개를 하고&#xA;지내고 싶어져서 다시 열었다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/athul/archie&#34;&gt;사용하던 테마&lt;/a&gt;를 수정해서 쓰기로&#xA;하고, CSS을 여기저기서 복붙해서 적용해보고, &lt;a href=&#34;https://galmuri.quiple.dev/&#34;&gt;갈무리&#xA;웹폰트&lt;/a&gt;도 적용해서, 오히려 원본 테마보다&#xA;더 가볍게 적당히 만들어봤다.&lt;/p&gt;&#xA;&lt;p&gt;색상도, 외양과 기능 디자인 모두 어느 정도 내 취향에 맞게 꾸며 봤다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Ping 11/06/2022</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun11-ping/</link>
+      <pubDate>Sat, 11 Jun 2022 03:10:36 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun11-ping/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h1 id=&#34;jekyll--hugo&#34;&gt;Jekyll &amp;ndash;&amp;gt; Hugo&lt;/h1&gt;&#xA;&lt;p&gt;&amp;hellip;Jekyll에서, 결국 다시 가볍고 그냥 잘 동작하는 Hugo으로 블로그 변경.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;생각&#34;&gt;생각&lt;/h1&gt;&#xA;&lt;p&gt;남들이 뭐래도 별 관심 없이.&#xA;실은 그냥 포장지와 리본장식만 변해가는거고,&lt;/p&gt;&#xA;&lt;p&gt;반면.&#xA;그 포장지, 리본장식과 그 의미와 가치를 제대로 분간해내지 못하니까.&lt;/p&gt;&#xA;&lt;p&gt;도구를 도구로 보면 안되고, 도구가 나를 쓴다는것을 이해해야 하는데.&#xA;그래서 도구를 이용해 자유로워질거라 착각하면, 도구에 얽메여 끌려만 가면&amp;hellip;,&#xA;그런데 도구에 이용당해 복종할수록 자유로워진다면 &amp;hellip;이겠지.&lt;/p&gt;&#xA;&lt;p&gt;끌려가며, 내가 생각치 않은곳에 끌려와 진짜 성장을 얻기도 하는 이도 있고,&#xA;끌려가며 원치 않는 방향으로 가며 그게 성장이라고 허울로 하기도 하는 이도 있고.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Org 파일으로 Hugo 포스팅 테스트</title>
       <link>https://ageldama.github.io/posts/2019-12dec/foo/</link>
       <pubDate>Wed, 11 Dec 2019 00:00:00 +0900</pubDate>

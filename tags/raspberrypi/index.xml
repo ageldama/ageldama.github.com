@@ -7,8 +7,43 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 03 Oct 2018 20:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 02 May 2025 10:06:00 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ddakong 한글입력기 릴리즈</title>
+      <link>https://ageldama.github.io/posts/2025-05may/term-ddakong-initial-release/</link>
+      <pubDate>Fri, 02 May 2025 10:06:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-05may/term-ddakong-initial-release/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;&lt;a href=&#34;https://github.com/ageldama/term-ddakong&#34;&gt;https://github.com/ageldama/term-ddakong&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;일단 내가 fbterm에서 가볍게 한글쓰고 싶어서 만듦.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;ansi c99만으로 가볍게 작성했다. 다른 라이브러리 의존않고.&#xA;만족스럽다. 빌드하니까 25 KB 정도 나오네. 만족.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;더 했으면 하는 일들은:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;lua -or- dlopen 등으로 다른 입력기 지원하기 (예: 3벌식)&lt;/li&gt;&#xA;&lt;li&gt;utf-8 이외의 인코딩 지원하기&lt;/li&gt;&#xA;&lt;li&gt;raspberry pi 32/64 바이너리 릴리즈 (armhf, arm64)&lt;/li&gt;&#xA;&lt;li&gt;소스코드 조금 포매팅, 주석작성, 문서화&lt;/li&gt;&#xA;&lt;li&gt;빌드개선 : 사용하는 함수 등 체크하기 강화 (예: &lt;code&gt;epoll&lt;/code&gt; …어차피&#xA;거의 다 있지만.)&lt;/li&gt;&#xA;&lt;li&gt;스크린샷? ㅎㅎ&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>내 책상에서 유선랜 환경</title>
+      <link>https://ageldama.github.io/posts/2023-03mar/2023-03mar15--wired-desktop/</link>
+      <pubDate>Wed, 15 Mar 2023 15:37:14 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2023-03mar/2023-03mar15--wired-desktop/</guid>
+      <description>&lt;p&gt;&#xA;개인환경을 조금 특이하게 사용하는데, 그 이유와 방식.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;why: 유선랜? (무선랜 대신)&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;키보드/마우스 입력이 가장 부드럽게 전달되어서 유선으로 연결해서&#xA;  사용한다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  x2x으로 연결하거나, ssh-x11-forwarding으로 다른 컴퓨터에서 실행하는&#xA;  프로그램을 디스플레이와 입력장치만 현재 자리에서 그대로 사용할 때에&#xA;  네트웍 연결속도가 딜레이가 적어야 쾌적해서. &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;why: x11? (wayland 대신)&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;요즘 리눅스/bsd 데스크탑 기본설치하면 wayland으로 세팅하는 경우도&#xA;  많은데, 네트웍을 통해서 ssh-x11-forwarding &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;  사용하거나 x2x 사용하기는 아직 부족한거 같아서, 나는 그냥 x11&#xA;  사용함.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  거기에 &lt;a href=&#34;https://github.com/jordansissel/xdotool&#34;&gt;xdotool&lt;/a&gt; 같은 gui-automation/scripting이나 &lt;a href=&#34;https://github.com/rvaiya/warpd&#34;&gt;warpd&lt;/a&gt; 같은 키보드를&#xA;  마우스으로 편안하게 쓰도록 해주는 xtest이나, &lt;a href=&#34;https://qjoypad.sourceforge.net/&#34;&gt;qjoypad&lt;/a&gt; 처럼 &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&#xA;  게임패드/조이스틱을 편안하게 마우스/키보드으로 매핑해서 쓰는게 나는&#xA;  많은데 모두 x11만 지원하거나, 아직은 x11에서만 쓸만한 수준으로&#xA;  동작해서.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 17/06/2022 .01</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/</link>
+      <pubDate>Fri, 17 Jun 2022 02:50:41 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/</guid>
+      <description>&lt;h1 id=&#34;code-bloat-has-become-astronomical&#34;&gt;&amp;ldquo;Code bloat has become astronomical&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/&#34;&gt;https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;극공감. 그렇다고 의존성 포함하면 몇 기가나 되는 것들이, 하는 일을 보면 안습.&#xA;&amp;hellip;그렇다고 그런 방법들만을 고르는 안목이 엄청나게 힙한것도, 스스로에게 이익이 되는것도 아니고.&lt;/p&gt;&#xA;&lt;p&gt;데스크탑에 작은 서브모니터 연결해놓은 rpi3b+이 rpi4보다 빠르지는 않을지 몰라도, micro-sd 버벅거림이랑&#xA;발열 때문에 버벅거리는건 훨씬 적다.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;rpi4은 빠르니까!&amp;ldquo;이라면서 나름대로 데탑/랩탑에서 쓰는 설정 그대로, openbox+lxpanel 정도 올려서 쓰고 있고,&#xA;rpi3b+은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있을까 싶기도 하지만. &amp;hellip;어차피 둘 다 엄청 가벼울거 같은데도.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 19/Jun/2021</title>
+      <link>https://ageldama.github.io/posts/2021-06jun/ping-19sat/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2021-06jun/ping-19sat/</guid>
+      <description>&lt;p&gt;&#xA;그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,&#xA;github repositories도 대부분은 private으로 변경해놓고 지냈었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;하지만 그래도 coding과 글쓰기는 계속 하고 있었었고, 글을 조금씩이라도 공개할까 싶어 다시 문을 연다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것,&#xA;또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.&#xA;이제는 너무 이맥스 + evil 설정 등에 익숙해져서 vim을 오히려 더 설정해서 쓰고 싶은 생각도 들지 않는다.&#xA;..하지만 다른 이들에게 이맥스를 쓰라고 권하기는 머뭇거려진다. 어릴 때부터 이맥스를 사용했고 그렇게 습관으로 하나씩 하나씩 이맥스 컨벤션과 모드들에 익숙해져서 시간이 오래 걸렸었던 것 같으니까.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 10/Oct/2020</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/ping-10sat/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-10oct/ping-10sat/</guid>
+      <description>&lt;p&gt;&#xA;오래 써오던 맥북에어의 WIFI이 성능이 계속 안 좋아졌었던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;모델명을 알아보니, 2012년 형이었다. 정말 오래 썼구나. &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;어차피 MacOS을 여러 가지 이유로 좋아하지 않아서 그냥&#xA;아치리눅스&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;를 설치하고 그대로 쓰고 있다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;최근에는 아예 WIFI을 USB-LAN으로 연결해주는 RPi을 만들어 쓰고&#xA;있었다. 물론 내장WIFI은 너무 느려서 &lt;code&gt;nmcli r wifi off&lt;/code&gt; 을 기본으로&#xA;아예 S/W Disable시켜놓고 살았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;어쩌다 계기가 있어서, USB-LAN연결용 RPi을 챙기지 못한 외부에서 어쩔 수&#xA;없이 쓰려고 시도해보니, 아예 조금 내장WIFI을 쓰면 조금 동작하다가&#xA;시스템이 뻗어버린다. …아예 맛이 갔나보다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정</title>
       <link>https://ageldama.github.io/posts/2018-10oct/rpi3-hifiberry-dacplus-config/</link>

@@ -7,8 +7,22 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sun, 23 Feb 2020 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jun 2022 02:50:41 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 17/06/2022 .01</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/</link>
+      <pubDate>Fri, 17 Jun 2022 02:50:41 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/</guid>
+      <description>&lt;h1 id=&#34;code-bloat-has-become-astronomical&#34;&gt;&amp;ldquo;Code bloat has become astronomical&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/&#34;&gt;https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;극공감. 그렇다고 의존성 포함하면 몇 기가나 되는 것들이, 하는 일을 보면 안습.&#xA;&amp;hellip;그렇다고 그런 방법들만을 고르는 안목이 엄청나게 힙한것도, 스스로에게 이익이 되는것도 아니고.&lt;/p&gt;&#xA;&lt;p&gt;데스크탑에 작은 서브모니터 연결해놓은 rpi3b+이 rpi4보다 빠르지는 않을지 몰라도, micro-sd 버벅거림이랑&#xA;발열 때문에 버벅거리는건 훨씬 적다.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;rpi4은 빠르니까!&amp;ldquo;이라면서 나름대로 데탑/랩탑에서 쓰는 설정 그대로, openbox+lxpanel 정도 올려서 쓰고 있고,&#xA;rpi3b+은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있을까 싶기도 하지만. &amp;hellip;어차피 둘 다 엄청 가벼울거 같은데도.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 10/Oct/2020</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/ping-10sat/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-10oct/ping-10sat/</guid>
+      <description>&lt;p&gt;&#xA;오래 써오던 맥북에어의 WIFI이 성능이 계속 안 좋아졌었던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;모델명을 알아보니, 2012년 형이었다. 정말 오래 썼구나. &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;어차피 MacOS을 여러 가지 이유로 좋아하지 않아서 그냥&#xA;아치리눅스&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;를 설치하고 그대로 쓰고 있다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;최근에는 아예 WIFI을 USB-LAN으로 연결해주는 RPi을 만들어 쓰고&#xA;있었다. 물론 내장WIFI은 너무 느려서 &lt;code&gt;nmcli r wifi off&lt;/code&gt; 을 기본으로&#xA;아예 S/W Disable시켜놓고 살았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;어쩌다 계기가 있어서, USB-LAN연결용 RPi을 챙기지 못한 외부에서 어쩔 수&#xA;없이 쓰려고 시도해보니, 아예 조금 내장WIFI을 쓰면 조금 동작하다가&#xA;시스템이 뻗어버린다. …아예 맛이 갔나보다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Grub2, Archlinux ISO으로 만능 USB 메모리스틱 만들기</title>
       <link>https://ageldama.github.io/posts/2020-02feb/make-grub2-usb/</link>

@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 02 Jan 2017 04:35:00 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2020 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 17/Jul/2020</title>
+      <link>https://ageldama.github.io/posts/2020-07jul/ping-17fri/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-07jul/ping-17fri/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;GitHub &amp;#34;Arctic Code Vault Contributor&amp;#34;이 되었다.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;[[file:/posts/images/2020-07jul/gh-arctic-code-vault-contributor.png&#xA;]]&lt;/p&gt;&#xA;&lt;p&gt;&#xA;우연히 기여한 몇몇 프로젝트들이 보관되기로 결정됐나보다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;2020년의 코딩.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://ageldama.github.io/posts/images/2020-07jul/gh-ageldama-2020jul.png&#34; alt=&#34;/posts/images/2020-07jul/gh-ageldama-2020jul.png&#34; title=&#34;/posts/images/2020-07jul/gh-ageldama-2020jul.png&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;중간에 비는 부분들이 있지만. ㅎㅎ 공개한 오픈소스 저장소도 2~3개이고,&#xA;가장 많은 비중을 차지하는 것은 비공개로 진행하고 있는 저장소 1개.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;기간으로 봐도 3~4개월이 되어간다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://ageldama.github.io/posts/images/2020-07jul/pytest-pylint-mypy.png&#34; alt=&#34;/posts/images/2020-07jul/pytest-pylint-mypy.png&#34; title=&#34;/posts/images/2020-07jul/pytest-pylint-mypy.png&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;검증 가능하게 꼼꼼히 만들면서 성취감이 크다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>Github.io 블로그 TraviCI으로 빌드해서 배포하기</title>
       <link>https://ageldama.github.io/posts/2017/2017-01-02-travis-ci-jekyll-gh/</link>
