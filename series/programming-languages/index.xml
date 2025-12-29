@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 10 Dec 2025 06:46:13 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Dec 2025 11:41:49 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/series/programming-languages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ruby is an acceptable LISP (Reloaded!)</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/ruby-is-an-acceptable-lisp-reloaded/</link>
+      <pubDate>Fri, 26 Dec 2025 11:41:49 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/ruby-is-an-acceptable-lisp-reloaded/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://news.ycombinator.com/item?id=12470715&#34;&gt;HN: Why Ruby is an acceptable Lisp (2005) (randomhacks.net)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;commonlisp sly/slime 세션의 interactive development처럼 흉내내기.&#xA;(제목의 “reloaded”-은 말장난)&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;commonlisp sly/slime?&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;커먼리습을 위한 emacs mode. 흥미로운 점은 실행중인 리습코드가 이미&#xA;  루프를 돌아가고 있더라도, 다른 스레드의 swank&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;에서 코드를&#xA;  변경+컴파일해서 로딩하면, 실행중인 루프에 바로 반영된다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  이게 뭐가 편한가 싶은데, 만약 다른 언어였다면:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;코드를 수정.&lt;/li&gt;&#xA;&lt;li&gt;(OPTIONAL) 동작하고 있던 프로그램을 종료&lt;/li&gt;&#xA;&lt;li&gt;(OPTIONAL) 새 코드를 컴파일하거나,&lt;/li&gt;&#xA;&lt;li&gt;어쨌든 다시 처음부터 프로그램을 시작.&lt;/li&gt;&#xA;&lt;li&gt;… #1부터 반복.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;  물론, “watcher”-같은걸 붙여놓고 자동으로 파일이 변경되면 tests을&#xA;  다시 실행하거나, 프로그램을 재시작하도록 하는게&#xA;  ‘development’-mode에선 일반적이다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>(주절주절) Factor와 Io</title>
       <link>https://ageldama.github.io/posts/2025-12dec/factor-and-io/</link>
@@ -57,6 +64,13 @@
       <pubDate>Sat, 04 Feb 2023 16:46:54 +0000</pubDate>
       <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb04--01-ping/</guid>
       <description>&lt;p&gt;&#xA;최근에 재미로 &lt;a href=&#34;https://ziglang.org/&#34;&gt;zig&lt;/a&gt; 을 정말 재밌게 &amp;#39;읽었다&amp;#39;. 공부해보고 실제로 뭔가&#xA;코딩을 많이 해보거나 한 것은 아니고, 대체 어떻게 동작하는 프로그램을&#xA;이걸로 만들라고 하는건지 이해하고 싶었기 때문에 해봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;zig으로 프로그램을 짜는게 궁금하던 부분은 haskell의 monad을 이용한&#xA;방식, 혹은 apl이나 prolog으로 실제프로그램을 어떻게 만들 수 있을지&#xA;패러다임부터 다른 언어를 공부하고 생각해보는 것과는 조금 다를수도&#xA;있겠다. 어쨌든 그냥 imperative언어이니까.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;오히려, zig을 어떻게 써먹어야 할지 궁금하던 지점은, c++의&#xA;스마트포인터와 move semantics등을 이해하는 것이나, rust의 borrowing&#xA;checker, rc/arc등을 이해하는 것과 마찬가지인 것 같다.&#xA;둘 다 이해하고 익숙해지면 그렇게 부담스럽지 않을거 같긴 하다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 07/07/2022 .01</title>
+      <link>https://ageldama.github.io/posts/2022-07jul/2022-07jul07--01-ping/</link>
+      <pubDate>Thu, 07 Jul 2022 09:07:45 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2022-07jul/2022-07jul07--01-ping/</guid>
+      <description>&lt;p&gt;벌써 7월. 2022년이 정말 빠르게 흘러간거 같기도 하고.&#xA;힘든 일들이 내게는 안팎으로 많은 해이기도 하다.&lt;/p&gt;&#xA;&lt;p&gt;몇년전부터 누군가 ㅇㅇㅇ을 dd야 하냐 말아야 하냐라는 질문에, 그저 뜬금&#xA;없는 이야기를 해줬었다. 이해를 했었는지, 아니면 그 나중에라도 그것들이&#xA;현실에 영향을 미치기 시작하면서 의미를 파악했었을런지는 잘 모르겠다.&#xA;어쩌면 아마 그런 이야기를 해줬던것도 잘 기억하지 못할것 같긴하다.&lt;/p&gt;&#xA;&lt;p&gt;&amp;hellip;그리고 그런 모든 생각들이, 당시에는 너무 현실과 동떨어진 이야기로만&#xA;들릴 생각들이 하나씩 너무 당장의 일들이 되어 버렸는데, &amp;hellip;내 생각이&#xA;맞아 떨어졌다는 기쁜 마음도 들지만, 한편으로는 너무 불안한 oo이기도&#xA;하다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>&#34;모두를 위한 algebraic effects!&#34; ...정말루?</title>
