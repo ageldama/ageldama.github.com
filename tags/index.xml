@@ -7,8 +7,36 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Tue, 30 Dec 2025 11:15:25 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Jan 2026 05:31:53 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blogging</title>
+      <link>https://ageldama.github.io/tags/blogging/</link>
+      <pubDate>Tue, 06 Jan 2026 05:31:53 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/blogging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Css</title>
+      <link>https://ageldama.github.io/tags/css/</link>
+      <pubDate>Tue, 06 Jan 2026 05:31:53 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ping</title>
+      <link>https://ageldama.github.io/tags/ping/</link>
+      <pubDate>Tue, 06 Jan 2026 05:31:53 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ping/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webdev</title>
+      <link>https://ageldama.github.io/tags/webdev/</link>
+      <pubDate>Tue, 06 Jan 2026 05:31:53 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/webdev/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Book</title>
       <link>https://ageldama.github.io/tags/book/</link>
@@ -119,13 +147,6 @@
       <link>https://ageldama.github.io/tags/perl/</link>
       <pubDate>Sun, 28 Dec 2025 14:41:18 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/perl/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ping</title>
-      <link>https://ageldama.github.io/tags/ping/</link>
-      <pubDate>Sun, 28 Dec 2025 14:41:18 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ping/</guid>
       <description></description>
     </item>
     <item>
@@ -381,20 +402,6 @@
       <description></description>
     </item>
     <item>
-      <title>Blogging</title>
-      <link>https://ageldama.github.io/tags/blogging/</link>
-      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/blogging/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Css</title>
-      <link>https://ageldama.github.io/tags/css/</link>
-      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/css/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Defer</title>
       <link>https://ageldama.github.io/tags/defer/</link>
       <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
@@ -441,13 +448,6 @@
       <link>https://ageldama.github.io/tags/script-defer/</link>
       <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/script-defer/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Webdev</title>
-      <link>https://ageldama.github.io/tags/webdev/</link>
-      <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/webdev/</guid>
       <description></description>
     </item>
     <item>

@@ -1,12 +1,12 @@
 
 [
  {
-     "permalink": "https://ageldama.github.io/posts/2025-12dec/go-away-python/","title": "🎍 “Go away, Python!” / Go으로 스크립트짜기",
+     "permalink": "https://ageldama.github.io/posts/2026-01jan/2026-01jan06--01-ping/","title": "🐦‍🔥 2026년 시작",
      
-     "tags": ["programming", "golang", "python", "scripting", "script", "sh", "shebang", "book", "books", "reading"],
+     "tags": ["ping", "webdev", "blogging", "css"],
      
- "description": "",
- "contents": " 💠 (원본글) Go away, Python!\nshebang으로 go언어으로 스크립트 짜기 1 2 3 4 5 6 7 8 //usr/bin/env go run \u0026#34;$0\u0026#34; \u0026#34;$@\u0026#34;; exit package main import \u0026#34;fmt\u0026#34; func main() { fmt.Println(\u0026#34;Hello world\u0026#34;) } …원본글은 //usr/local/go/bin/go run \u0026#34;$0\u0026#34; \u0026#34;$@\u0026#34;; exit-였지만 좀 바꿔봤다. 그리고 바꾼쪽이 나는 더 마음에 든다.\nshebang은 아니지만, shebang처럼 동작 https://en.wikipedia.org/wiki/Shebang_(Unix)\n…~sh~-이 //...-부분을 shebang처럼 처리하게 된다는데 재밌다. ㅎㅎ (‘원본글’에서 자세히 설명)\n그리고 이런 라이브러리도 이미 있어왔지: bitfield/script https://github.com/bitfield/script\n유닉스 쉘의 pipe, redirection은 물론이고 기본적인 유틸들까지 구현해놓았네. ㅎㅎ\n📕 The Power of Go: Tools 책은 나중에 읽어봐야겠다.\n나름 괜찮은 아이디어 처음 실행할때 컴파일이 살짝 돌아가서 느려 보이는걸 제외하고(그 이후엔 컴파일한 코드로 실행하니 느끼지 못하지만), 오히려 다른 스크립팅언어들보다 이게 더 나은거 아닌가 생각.\n솔직히 다른 언어들이라고 그렇게 안전하다거나 편리한지 이젠 잘 모르겠다. 오히려 다른 언어들이 타입시스템이니 멀티코어니 각자의 방식으로 애쓰는데, 오히려 Go언어는 이미 그런지 오래되지 않았나 싶다.\n"},
+ "description": "새로운 해 2026년🐎, 블로깅도 계속",
+ "contents": " 연말동안 내려놓았던 블로그를 다시 열었다. 디자인을 좀 바꿔볼까 하다가 일단은 ㅎㅎ내버려두려고.\n영화, 책, 게임이나 프로그래밍 같은 그간의 취미들도 계속해서 올려볼까 함.\n"},
  {
      "permalink": "https://ageldama.github.io/posts/","title": "▫️ Posts",
      
@@ -21,6 +21,13 @@
      
  "description": "",
  "contents": ""},
+ {
+     "permalink": "https://ageldama.github.io/posts/2025-12dec/go-away-python/","title": "🎍 “Go away, Python!” / Go으로 스크립트짜기",
+     
+     "tags": ["programming", "golang", "python", "scripting", "script", "sh", "shebang", "book", "books", "reading"],
+     
+ "description": "",
+ "contents": " 💠 (원본글) Go away, Python!\nshebang으로 go언어으로 스크립트 짜기 1 2 3 4 5 6 7 8 //usr/bin/env go run \u0026#34;$0\u0026#34; \u0026#34;$@\u0026#34;; exit package main import \u0026#34;fmt\u0026#34; func main() { fmt.Println(\u0026#34;Hello world\u0026#34;) } …원본글은 //usr/local/go/bin/go run \u0026#34;$0\u0026#34; \u0026#34;$@\u0026#34;; exit-였지만 좀 바꿔봤다. 그리고 바꾼쪽이 나는 더 마음에 든다.\nshebang은 아니지만, shebang처럼 동작 https://en.wikipedia.org/wiki/Shebang_(Unix)\n…~sh~-이 //...-부분을 shebang처럼 처리하게 된다는데 재밌다. ㅎㅎ (‘원본글’에서 자세히 설명)\n그리고 이런 라이브러리도 이미 있어왔지: bitfield/script https://github.com/bitfield/script\n유닉스 쉘의 pipe, redirection은 물론이고 기본적인 유틸들까지 구현해놓았네. ㅎㅎ\n📕 The Power of Go: Tools 책은 나중에 읽어봐야겠다.\n나름 괜찮은 아이디어 처음 실행할때 컴파일이 살짝 돌아가서 느려 보이는걸 제외하고(그 이후엔 컴파일한 코드로 실행하니 느끼지 못하지만), 오히려 다른 스크립팅언어들보다 이게 더 나은거 아닌가 생각.\n솔직히 다른 언어들이라고 그렇게 안전하다거나 편리한지 이젠 잘 모르겠다. 오히려 다른 언어들이 타입시스템이니 멀티코어니 각자의 방식으로 애쓰는데, 오히려 Go언어는 이미 그런지 오래되지 않았나 싶다.\n"},
  {
      "permalink": "https://ageldama.github.io/posts/2025-12dec/2025-12dec28--01-ping/","title": "🥴 youtube 가볍게 보기/듣기",
      

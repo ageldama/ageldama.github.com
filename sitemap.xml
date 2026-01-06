@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ageldama.github.io/posts/2026-01jan/2026-01jan06--01-ping/</loc>
+    <lastmod>2026-01-06T05:31:53+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/blogging/</loc>
+    <lastmod>2026-01-06T05:31:53+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/css/</loc>
+    <lastmod>2026-01-06T05:31:53+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/ping/</loc>
+    <lastmod>2026-01-06T05:31:53+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2026-01-06T05:31:53+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/</loc>
+    <lastmod>2026-01-06T05:31:53+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2026-01-06T05:31:53+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/webdev/</loc>
+    <lastmod>2026-01-06T05:31:53+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2026-01-06T05:31:53+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/</loc>
+    <lastmod>2026-01-06T05:31:53+00:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/posts/2025-12dec/go-away-python/</loc>
     <lastmod>2025-12-30T11:15:25+00:00</lastmod>
   </url><url>
@@ -12,9 +42,6 @@
     <lastmod>2025-12-30T11:15:25+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/golang/</loc>
-    <lastmod>2025-12-30T11:15:25+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
     <lastmod>2025-12-30T11:15:25+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/programming/</loc>
@@ -35,19 +62,10 @@
     <loc>https://ageldama.github.io/tags/scripting/</loc>
     <lastmod>2025-12-30T11:15:25+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/series/</loc>
-    <lastmod>2025-12-30T11:15:25+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/sh/</loc>
     <lastmod>2025-12-30T11:15:25+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/shebang/</loc>
-    <lastmod>2025-12-30T11:15:25+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
-    <lastmod>2025-12-30T11:15:25+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2025-12-30T11:15:25+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/gtk/</loc>
@@ -66,9 +84,6 @@
     <lastmod>2025-12-28T14:41:18+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/perl/</loc>
-    <lastmod>2025-12-28T14:41:18+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/ping/</loc>
     <lastmod>2025-12-28T14:41:18+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/pipe-viewer/</loc>
@@ -191,12 +206,6 @@
     <loc>https://ageldama.github.io/tags/blog/</loc>
     <lastmod>2025-12-25T05:47:08+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/blogging/</loc>
-    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/css/</loc>
-    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/</loc>
     <lastmod>2025-12-25T05:47:08+00:00</lastmod>
   </url><url>
@@ -222,12 +231,6 @@
     <lastmod>2025-12-25T05:47:08+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/script-defer/</loc>
-    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/webdev/</loc>
-    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/</loc>
     <lastmod>2025-12-25T05:47:08+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2025-12dec/no-categories&#43;taxonomy-revamp/</loc>
