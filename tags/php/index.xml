@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/php/</link>
+    <description>Recent content in Php on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sat, 17 Oct 2020 00:00:01 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping (2nd) 17/Oct/2020</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/ping-17sat-2nd/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-10oct/ping-17sat-2nd/</guid>
+      <description>&lt;p&gt;&#xA;  올해 초 &lt;a href=&#34;https://github.com/ageldama/cl-state-machine&#34;&gt;cl-state-machine 라이브러리&lt;/a&gt;를 만들어 공개한 이후로&#xA;  커먼리습을 쓰지는 않았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  다른 직업상 쓰는 언어들만을 쓰고 오픈소스와 개인적으로 만들고 싶은&#xA;  프로젝트를 위해서 쓰는 언어인 커먼리습은 미뤄두었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  다시 커먼리습을 해야겠다고 생각이 들었다. 개인적으로 만들고 싶은&#xA;  프로젝트도 있고, 그 프로젝트를 위해서 프론트엔드를 만드는데 React와&#xA;  Vue을 써보고 이해하고 있어도 쓰고 싶지는 않기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  사실 커먼리습은 그렇게 문법이 예쁘지도, 멋진 React와 같은 멋진&#xA;  프레임웍이나 최신의 유행하는 라이브러리들을 모두 갖고 있지도 않다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;a href=&#34;https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec&#34;&gt;HyperSpec&lt;/a&gt;을 읽다 보면 아주 쉽게 정의되어 있는 키워드들이 일관성이&#xA;  있지도, 지금 시대의 관점에서 보기에 익숙한 현대적인 용어들을&#xA;  사용해서 이름을 지어놓지도 않았다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>코드 편집기에 대한 생각</title>
+      <link>https://ageldama.github.io/posts/2020-05may/editors/</link>
+      <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-05may/editors/</guid>
+      <description>&lt;p&gt;&#xA;코드 편집기를 어떻게 써왔었는지 잠깐 생각해봤다:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;DOS시절: MS-DOS Editor.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GW-BASIC 시절에는 정말&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/MS-DOS_Editor&#34;&gt;https://en.wikipedia.org/wiki/MS-DOS_Editor&lt;/a&gt; 을 열심히 썼었던 것&#xA;같다.&lt;/li&gt;&#xA;&lt;li&gt;그리고 그 다음엔 &lt;a href=&#34;https://en.wikipedia.org/wiki/PowerBASIC#PowerBASIC_for_DOS_(PBDos)&#34;&gt;PowerBASIC for DOS&lt;/a&gt; 열심히 썼었다. QuickBASIC&#xA;같은 바이트코드으로 컴파일해서 .exe 파일에 인터프리터와&#xA;바이트코드를 embedding 하는 VB의 P-code 같은 가짜 컴파일 방식&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;이&#xA;아니라 정말 네이티브 코드로 컴파일해주고, 인라인 어셈블리와&#xA;메모리 조작이 가능한 베이직 컴파일러, IDE여서 좋은 환경이었던&#xA;것 같다.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;터보C 2.0 편집기. PowerBASIC이랑 유사해서 익숙하게 쓸 수 있었던&#xA;것 같다. 파워베이직도 그렇지만, 의외로 도스시절의 이런 IDE들이&#xA;F1 - Help 메뉴에서 항목별로 문서 정리가 잘 되어 있어서 읽으면서&#xA;즐거웠었던 것 같다. (초등학생~중학생이어서 영어를 잘 이해하지는&#xA;못했지만)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

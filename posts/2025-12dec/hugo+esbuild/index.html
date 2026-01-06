@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>esbuild js build for blog - 아겔로그</title><meta name="hugo-gen-timestamp" content="1767677426">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+그간 자바스크립트를 이 Hugo으로 생성하는 블로그에 사용하면서, 여기저기
+그냥 &lt;script&gt;-태그를 써왔었다. 한군데로 정리하기도 뭐하고,
+자바스크립트를 쓰는 기능은 메인이 아니라고 생각해와서.
+
+검색, darkmode만 자바스크립트를 사용하고 조금씩 붙여놓은 easter eggs도
+사용하니까 조금씩 늘어난 것 같다.
+
+그냥 cdnjs 같은걸 써도 되겠지만, 그냥 패키지로 내려받아서 아예 내
+블로그에 올리는게 남에 cdn bandwidth을 줄여주는 도리인 것 같았다…만
+github cdn의 bandwidth은 여전히 사용하는 것.
+😜
+
+여튼, 그렇다고 사용하는 의존성(예: jquery)의 크기를 줄여서 내보낸 것도
+아니고 점점 의존성관계가 복잡해지는거 같아서 정리를 시작해봤다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.30fcfadf8ec61f30477067ae0c35acd2e4317dd65be5998bffac7940f91f87a6.css"
+          integrity="sha256-MPz6347GHzBHcGeuDDWs0uQxfdZb5ZmL/6x5QPkfh6Y=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/2025-12dec16--01-ping/">⬅️ Hugo 블로그 디자인 고쳐나가면서 생각</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy/">➡️ Hands of Necromancy와 영포티의 추억벤또 🍱</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">(아참!) CSS은 Hugo / SCSS 컴파일으로 관리하고 있다</a>
+</li>
+<li><a href="#headline-2">🥡 첫 시도: <code>deno bundle</code></a>
+</li>
+<li><a href="#headline-3">😰 실패: npm + vite</a>
+</li>
+<li><a href="#headline-4">‍🔥 재시도: <code>deno run npm:esbuild</code></a>
+</li>
+<li><a href="#headline-5">🐦‍🔥 최종판: npm + esbuild</a>
+</li>
+<li><a href="#headline-6">🎁 보너스: <code>Makefile</code>-와 <code>npx concurrently</code></a>
+</li>
+<li><a href="#headline-7">✏️ [EDIT] “하지만 hugo은 js.Build(esbuild)을 내장하고 있는걸요?!”</a>
+</li>
+<li><a href="#headline-8">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">☘️ esbuild js build for blog</h1>
+	    <div class="meta">
+                <time datetime="2025-12-15" pubdate>
+                    2025년12월15일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+그간 자바스크립트를 이 <a href="https://gohugo.io/">Hugo</a>으로 생성하는 블로그에 사용하면서, 여기저기
+그냥 <code>&lt;script&gt;</code>-태그를 써왔었다. 한군데로 정리하기도 뭐하고,
+자바스크립트를 쓰는 기능은 메인이 아니라고 생각해와서.</p>
+<p>
+검색, darkmode만 자바스크립트를 사용하고 조금씩 붙여놓은 easter eggs도
+사용하니까 조금씩 늘어난 것 같다.</p>
+<p>
+그냥 cdnjs 같은걸 써도 되겠지만, 그냥 패키지로 내려받아서 아예 내
+블로그에 올리는게 남에 cdn bandwidth을 줄여주는 도리인 것 같았다…만
+github cdn의 bandwidth은 여전히 사용하는 것.
+<span style="font-size:3rem;">😜</span></p>
+<p>
+여튼, 그렇다고 사용하는 의존성(예: jquery)의 크기를 줄여서 내보낸 것도
+아니고 점점 의존성관계가 복잡해지는거 같아서 정리를 시작해봤다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+(아참!) CSS은 Hugo / SCSS 컴파일으로 관리하고 있다
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>즉, 다른 일반적인 웹앱 프로젝트와 달리 별도의 이미지 에셋이나
+  CSS관련 빌드를 신경 쓸 필요가 없다는 뜻. 이하의 내용들도 그걸 염두에
+  두고 고려했다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+🥡 첫 시도: <code>deno bundle</code>
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>최초 시도는 그냥 <code>deno bundle</code>-기능을 사용하는 것: 👉
+  <a href="https://docs.deno.com/runtime/reference/bundling/">https://docs.deno.com/runtime/reference/bundling/</a></p>
+<ol>
+<li>[장점👍] 그냥 mise 같은걸로 deno만 설치하고 바로 적용가능.</li>
+<li>
+<p>[장점👍] watcher-mode 지원한다.</p>
+<ul>
+<li>입력파일, 의존성이 변경되면 자동으로 rebuild해줘서 개발할 때
+편리하다.</li>
+</ul>
+</li>
+<li>
+<p>[장점👍] 적당히 빠르다 + minification도 잘 지원한다.</p>
+<ul>
+<li>찾아보니까, tree-shaking도 해주고 할건 다 하는 느낌이었다.</li>
+<li>minified : 570KB =&gt; 280KB 정도로 줄여줌.</li>
+</ul>
+</li>
+<li>
+<p>[단점👎] 하나의 output만 지원가능.</p>
+<ul>
+<li>…어차피 하나의 <code>bundle.js</code>-만 생성하는데 사용하고 있지만😅</li>
+</ul>
+</li>
+</ol>
+<p>
+  장점으로는, 확실히 로딩자체가 더 가벼워진 느낌적 느낌이 들어서 쾌적했다.</p>
+<p>
+  그러나 문득 이걸로 만족해도 되겠는가 하는 강박이 들었다.</p>
+<figure>
+    <img src="/posts/2025-12dec/OCD_Cycle.svg" width="200" alt="苦">
+    <figcaption>Dukkha!</figcaption>
+</figure>
+<p>
+  그래서 요즘 누구나🐕🐮 사용한다는 Vite을 시도해봤다.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+😰 실패: npm + vite
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>다른 웹애플리케이션 프로젝트에선 개인적으로나 일터에서 조금씩
+  써왔지만, 막상 적용하고 나니까… 후회스러웠다.</p>
+<p>
+  (장점은 적지 않겠다: 어차피 지원할거 다 지원하니까)</p>
+<p>
+  단점은:</p>
+<ol>
+<li>
+<p>의도하지 않은 html/image 에셋들도 번들링한다고 난리였다.</p>
+<ul>
+<li>오히려 그러지 않도록 뜯어 말리는 설정이 너무 컸다. ㅋㅋㅋ</li>
+</ul>
+</li>
+<li>node.js <code>package.json</code> <code>type=module|cjs</code>  광란의 블루스가 다시
+살아났다.</li>
+<li>어차피 live-reload 같은 &#34;vite server&#34;-에서 기대하는 기능들, &#34;hugo
+server&#34;-이 이미 제공하고 있어서 있어도 무의미했다.</li>
+</ol>
+<figure>
+    <img src="/posts/2025-12dec/ptsd-chihuahua.jpeg" width="" alt="traum!">
+    <figcaption>XXXXXX, XXXXXX never change...</figcaption>
+</figure>
+<p>
+  굳이 내 개인블로깅을 하는데, vite 같은 누구나 쓰지만, 남들이
+  쓴다니까 옆사람이 써서 나도 써야 하는… 그 기술이 꼭 그자체로
+  나쁜건 아니지만, 그런 상황과 순환은… 굳이 …괜찮았다. 🙂‍↔️<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+‍🔥 재시도: <code>deno run npm:esbuild</code>
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>그래서 그냥 deno에서 esbuild 실행하는걸로 바꿈: …하지만, deno
+  import와 <code>node_modules/</code>-에 위치하기를 기대하는 esbuild와의 차이로
+  제대로 동작하지 않았다. 😥</p>
+<p>
+  그래서 그냥 npx/npm으로 재시도.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+🐦‍🔥 최종판: npm + esbuild
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<ol>
+<li>
+<p>[장점👍] 빠르다</p>
+<ul>
+<li>esbuild 자체가 가벼워서 좋은거 같다.</li>
+<li>다른 parcel, vite보다 가벼울거 같다.</li>
+</ul>
+</li>
+<li>[장점👍] 다수 입력=&gt;출력 설정 쉽다.</li>
+<li>[장점👍] deno-bundle보다 용량도 준거 같다: 280KB =&gt; 200KB</li>
+<li>[단점👎] 모르겠다.</li>
+</ol>
+<div class="src src-makefile">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl">  <span class="c1"># Makefile</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  NPX ?<span class="o">=</span>npx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  ESBUILD_ADDOPTS ?<span class="o">=</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  bundle-js:
+</span></span><span class="line"><span class="cl">  	-<span class="k">$(</span>MKDIR<span class="k">)</span> -pv ./static/js
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  	<span class="k">$(</span>NPX<span class="k">)</span> esbuild --bundle --minify --target<span class="o">=</span>chrome58,firefox57,safari11,edge16 <span class="k">$(</span>ESBUILD_ADDOPTS<span class="k">)</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  		./js/bundle.mjs --outfile<span class="o">=</span>./static/js/bundle.js
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  <a href="https://esbuild.github.io/getting-started/#bundling-for-the-browser">https://esbuild.github.io/getting-started/#bundling-for-the-browser</a>
+  참고해서 베껴왔다.</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+🎁 보너스: <code>Makefile</code>-와 <code>npx concurrently</code>
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>그리고 추가적으로 <code>Makefile</code>-에서 hugo 서버를 시작할 때에, 동시에
+  &#34;esbuild watcher&#34;-도 <a href="https://www.npmjs.com/package/concurrently">concurrently</a>-을 이용해서 실행하도록
+  추가했다.</p>
+<div class="src src-makefile">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl">  <span class="c1"># Makefile</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># ...생략</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  watch-bundle-js:
+</span></span><span class="line"><span class="cl">  	<span class="nv">ESBUILD_ADDOPTS</span><span class="o">=</span>--watch <span class="k">$(</span>MAKE<span class="k">)</span> bundle-js
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  serve:
+</span></span><span class="line"><span class="cl">  	<span class="k">$(</span>NPX<span class="k">)</span> concurrently <span class="s1">&#39;hugo server&#39;</span> <span class="s2">&#34;</span><span class="k">$(</span>MAKE<span class="k">)</span><span class="s2"> watch-bundle-js&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+✏️ [EDIT] “하지만 hugo은 js.Build(esbuild)을 내장하고 있는걸요?!”
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
+<p>[2025-12-20 Sat]</p>
+<ol>
+<li>
+<p>그렇게 쓸 수 있으면 좋은데 몇 가지가 내 “취향”에 맞지 않아서 그냥
+Makefile + esbuild + concurrently 방식이 더 편하다:</p>
+<ol>
+<li>무엇보다: 내가 <a href="https://github.com/ageldama/young40er-hugo-theme/">사용하는 theme</a>-에 적용하는 방식으로, 나는
+<code>config.toml</code>-에서 주입하는 방식을 쓰는데, 이걸 많이 바꾸지
+않는 이상은 매 페이지 생성 때마다 esbuild을 실행하려고 해서
+마음에 들지 않았다.</li>
+<li><code>node_modules</code> 의존성 및 내가 작성한 파일들 의존성을
+연결해주는데에 난 포기했다.</li>
+<li><code>js.Build</code>-을 위해 <code>Resource</code>-을 얻어야 하는데, 이건
+<code>assets/</code>-디렉토리에 위치해야함.</li>
+</ol>
+</li>
+<li>언젠가 나중에 원하면 바꿀지도 모르겠지만 일단은 이대로 쓰자.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>(그리고 더 골때린건 그걸 써야한다고 옹호하는 emotionally
+  attached한 사람은, 아는 node.js/typescript 잘한다는
+  형이/웹사이트가/어디어디서 그렇다고 &#34;카더라&#34;라고 해서… XXX/YYY이
+  나빠잉,한다고 카더라 해서…라는게 이유인 경우라면… 더 안습)</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">
+                        📚 <a href="/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/">아겔로그변천사</a>
+                        <sup>26</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blog/">blog</a>
+                        <sup>20</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blogging/">blogging</a>
+                        <sup>20</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/javascript/">javascript</a>
+                        <sup>18</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hugo/">hugo</a>
+                        <sup>12</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/npm/">npm</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/makefile/">makefile</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/deno/">deno</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/esbuild/">esbuild</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/npx/">npx</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/concurrently/">concurrently</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cjs/">cjs</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/mjs/">mjs</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/bundling/">bundling</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/2025-12dec16--01-ping/">⬅️ Hugo 블로그 디자인 고쳐나가면서 생각</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy/">➡️ Hands of Necromancy와 영포티의 추억벤또 🍱</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1767677426</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

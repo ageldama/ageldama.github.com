@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Build on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/build/</link>
+    <description>Recent content in Build on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/build/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 14/Aug/2020</title>
+      <link>https://ageldama.github.io/posts/2020-08aug/ping-14fri/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-08aug/ping-14fri/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;빌드도구의 경험과 Meson을 사용하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  &lt;a href=&#34;https://github.com/ageldama/meson-abc&#34;&gt;Meson-ABC 갖고 놀아본 코드&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  아주 예전에 commercially 성공적이었었던 C++ 프로젝트를 홀로 기획, 설계, 개발했었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  처음에는 GNU Makefile으로 간단히 시작했었었다. 타겟 플랫폼이 뻔하게 윈도였기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그 이전에는 ANSI C으로 작성한 &lt;a href=&#34;https://sourceforge.net/projects/sdlhan/&#34;&gt;SDL 조합형 비트맵 출력 오픈소스&lt;/a&gt;&#xA;  라이브러리 같은 것들을 작업할 때는 그냥 GNU Autotools 을 쓰거나&#xA;  했었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  하지만 그렇게 configure 하거나 할 부분도 없고 처음 혼자 시작하며&#xA;  다른 신경 쓸 것도 무지하게 많았었던 프로젝트였고 더욱이 기간도&#xA;  한정적이었었다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 SCons 같은 것을 조금 쓰다가, 결국 더 간단히 Rake으로 빌드를&#xA;  작성해 한동안 썼었다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>moonshot.el 최초 릴리즈</title>
+      <link>https://ageldama.github.io/posts/2019-12dec/moonshot-1st-rel/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-12dec/moonshot-1st-rel/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://github.com/ageldama/moonshot&#34;&gt;moonshot.el&lt;/a&gt; 을 만들어서 공개했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이맥스를 써오면서 불편하다고 생각한걸 간단히 하고 싶었었다:&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;불편함들&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-3&#34;&gt;&#xA;&lt;h3 id=&#34;headline-2&#34;&gt;&#xA;빌드 디렉토리&#xA;&lt;/h3&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-3&#34;&gt;&#xA;&lt;p&gt;&#xA;   Projectile을 사용하니까 프로젝트 디렉토리는 관리가 쉬운데, 빌드&#xA;   디렉토리는 관리가 어려웠다.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;아예 Projectile이 추론하는 디렉토리 바깥에 빌드 디렉토리는&#xA;위치하는 경우도 있으니까.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;예) GNU Autotools &lt;code&gt;configure&lt;/code&gt; 이나 CMake으로 작업할 때,&#xA;소스트리 바깥에 빌드 디렉토리를 걸어놓아서 정리를 깔끔하게 할&#xA;수 있으니까.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;그런데 이 &amp;#39;빌드 디렉토리&amp;#39;가 중요한게,&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;말그대로 컴파일한 &lt;code&gt;.o&lt;/code&gt; 파일이나 최종 결과 실행파일 등이&#xA;여기에 쌓이니까&lt;/li&gt;&#xA;&lt;li&gt;디버깅, 테스트를 위해서 실행파일을 실행하거나,&lt;/li&gt;&#xA;&lt;li&gt;심지어 &lt;code&gt;make&lt;/code&gt; 이나 &lt;code&gt;ninja&lt;/code&gt; 같은 빌드 커맨드를 실행하기&#xA;위해서도 빌드 디렉토리를 지정하거나 이동해서 실행해야 하니까&#xA;귀찮다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-3&#34;&gt;&#xA;&lt;h3 id=&#34;headline-3&#34;&gt;&#xA;compilation-mode, realgud: 실행 파일 찾아서 실행하기, 디버깅하기&#xA;&lt;/h3&gt;&#xA;&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-3&#34;&gt;&#xA;&lt;p&gt;&#xA;   예전에 만들어 써오던 &lt;a href=&#34;https://github.com/ageldama/configs/blob/a24f4606cd95a41c9d3140dac7c0c298883ae72a/emacs/c-c%252B%252B-gtags%252Brtags.el#L193&#34;&gt;이맥스를 위한 C/C++ 설정&lt;/a&gt; 처럼,&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

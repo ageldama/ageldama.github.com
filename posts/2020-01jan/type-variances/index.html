@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Covariant, Contravariant, Invariant등 Type Variances 이해하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1767677425">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+거의 그대로 베껴온 원본 글
+
+
+계약서로서의 타입
+
+
+타입을 생각할 때, &lt;계약서&gt;로 생각하는 것이 편하다.
+
+  왜냐하면, 전달한 값이 그 타입의 범위 안에서 전달 받은 쪽에서
+  취급이 제한된다는 보장이 있어야 안전한 코드를 컴파일러는 생성해줄 수
+  있다. (혹은 그렇게 안전한지 체크를 해준다.)
+
+
+
+
+Subtype, 일반화(Generalization), 특화(Specialization)
+
+
+타입을 말할 때, 나는 보통 객체지향언어에서의 클래스의 상속 관계를
+  떠올린다. 꼭 그렇지는 않겠지만, 이 글에서도 그렇게 설명을 해보겠다.
+
+  이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고
+  가정하겠다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.30fcfadf8ec61f30477067ae0c35acd2e4317dd65be5998bffac7940f91f87a6.css"
+          integrity="sha256-MPz6347GHzBHcGeuDDWs0uQxfdZb5ZmL/6x5QPkfh6Y=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-01jan/100days-of/">⬅️ 100일의 기록</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-01jan/esup-emacs-init-speed/">➡️ Emacs 시작 시간 빠르게 만들기</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">계약서로서의 타입</a>
+</li>
+<li><a href="#headline-2">Subtype, 일반화(Generalization), 특화(Specialization)</a>
+</li>
+<li><a href="#headline-3">Covariant</a>
+</li>
+<li><a href="#headline-4">Invariant</a>
+</li>
+<li><a href="#headline-5">Contravariant</a>
+</li>
+<li><a href="#headline-6">함수 타입의 파라미터는 Contravariant, 되돌림 값은 Covariant</a>
+</li>
+<li><a href="#headline-7">Subtype의 관계</a>
+</li>
+<li><a href="#headline-8">언어마다 다를 수 있다</a>
+</li>
+<li><a href="#headline-9">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">⏪ Covariant, Contravariant, Invariant등 Type Variances 이해하기</h1>
+	    <div class="meta">
+                <time datetime="2020-01-03" pubdate>
+                    2020년01월03일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+<a href="https://blog.daftcode.pl/covariance-contravariance-and-invariance-the-ultimate-python-guide-8fabc0c24278">거의 그대로 베껴온 원본 글</a></p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+계약서로서의 타입
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>타입을 생각할 때, &lt;계약서&gt;로 생각하는 것이 편하다.</p>
+<p>
+  왜냐하면, 전달한 값이 그 타입의 범위 안에서 전달 받은 쪽에서
+  취급이 제한된다는 보장이 있어야 안전한 코드를 컴파일러는 생성해줄 수
+  있다. (혹은 그렇게 안전한지 체크를 해준다.)</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Subtype, 일반화(Generalization), 특화(Specialization)
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>타입을 말할 때, 나는 보통 객체지향언어에서의 클래스의 상속 관계를
+  떠올린다. 꼭 그렇지는 않겠지만, 이 글에서도 그렇게 설명을 해보겠다.</p>
+<p>
+  이 글에서는 계속 다음 3개의 타입이 있고, 다음과 같은 관계라고
+  가정하겠다.</p>
+<div class="src src-python">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">Bird</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">Human</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span> <span class="k">pass</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  <code>Animal</code> 타입이 있고, 그를 직접 상속하는 <code>Bird</code>, <code>Human</code> 타입이
+  있다. (클래스와 타입을 섞어서 이야기하겠다.)</p>
+<p>
+  그리고 각각 클래스의 내용이 여기서는 아무 것도 없는 3개의 단지 그냥
+  이름이 다른 클래스지만, 상속한 클래스, 혹은 하위 클래스,는 상위
+  클래스보다 더 특정한 방식으로 기능이나 특성을
+  &#39;특화(Specialize)&#39;했다고 할 수 있다.</p>
+<p>
+  그리고 반대로, 부모 타입은 자식 타입보다 더
+  일반적(Generalized)이라고 이야기 할 수 있다.</p>
+<p>
+  그리고 이런 상속 관계를 단순하게, Subtype이라고 말하겠다. (이것도
+  역시 꼭 같은 것은 아니지만) 그리고 반대로 부모 타입은 Supertype이다.</p>
+<p>
+  표기는, <code>Bird &lt;: Animal</code>, <code>Human &lt;: Animal</code> 와 같이
+  표기하겠다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+Covariant
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>Covariant은 너무 당연해보인다. 대부분의 상황에서 <code>Bird</code>, <code>Human</code> 은
+  <code>Animal</code> 으로 치환되어도 상관이 없다. 즉, 이 둘은 <code>Animal</code> 의
+  Subtype이고, <code>Animal</code> 이 필요한 자리에 이들이 와도 상관이 없다면,
+  이를 &#34;<code>Animal</code> 으로부터 Covariant&#34;이라고 말하겠다.</p>
+<p>
+  예를 들면, 다음과 같은 리스트를 보자:</p>
+<div class="src src-python">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">animals</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="n">Animal</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">Human</span><span class="p">(),</span> <span class="n">Bird</span><span class="p">(),</span> <span class="n">Animal</span><span class="p">()]</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  허용된다.</p>
+<p>
+  다시 말하자면, 이 리스트에 있는 모든 값/객체는 <code>Animal</code> 인 것처럼
+  취급 받아도 안전하고, 그렇게 취급할테니까 괜찮다. 모든 요소가 가장
+  낮은 수준의 특화 수준에 맞춰서 취급되면 안전하다.</p>
+<p>
+  또, 재밌는 점은 다음과 같이 어떤 타입 변수로 지정된 새로운 리스트
+  타입끼리 Covariant이 적용되어 Subtype이다.</p>
+<div class="src src-python">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="n">animals</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="n">Animal</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#..일때,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">birds</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="n">Bird</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">Bird</span><span class="p">()]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">animals</span> <span class="o">=</span> <span class="n">birds</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  항상은 아니지만 Covariant은 거의 기본으로 대부분에 적용되고<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>,
+  이해하기에도 직관적이다.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+Invariant
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>Invariant은 더 단순하다. 지정한 타입만 가능할 때다.</p>
+<p>
+  Covariant이나 Contravariant(아직 소개 안했지만)와 같이 타입
+  상하관계에 따라서 유추하지 않고, 오직 그 타입만을 지정한다.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+Contravariant
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>Covariant은 &#34;그 타입과 하위 타입만 허용&#34;이라면, Contravariant은
+  반대다. &#34;그 타입과 그 상위 타입만 허용&#34;이다.</p>
+<p>
+  Covariant에 비해서 Contravariant은 어떤 상황에 적용해야 하는지
+  직관적으로 알기 어렵다.사실 이 포스팅을 작성하는 이유다.</p>
+<p>
+  하지만, Covariant와 마찬가지로 계약으로서의 타입, 코드의 안정성을
+  담보해주는 타입으로서 생각하면 이해하기 수월하다.</p>
+<div class="src src-python">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="c1"># 다음과 같은 타입의 함수들이 있다:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">live</span><span class="p">(</span><span class="n">anAnimal</span><span class="p">:</span> <span class="n">Animal</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">sing</span><span class="p">(</span><span class="n">aBird</span><span class="p">:</span> <span class="n">Bird</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">love</span><span class="p">(</span><span class="n">aHuman</span><span class="p">:</span> <span class="n">Human</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 그럴 때:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">f1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Bird</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">sing</span>    <span class="c1"># OKAY</span>
+</span></span><span class="line"><span class="cl">  <span class="n">f2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Bird</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">live</span>    <span class="c1"># OKAY: Contravariant</span>
+</span></span><span class="line"><span class="cl">  <span class="n">f3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Animal</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">love</span>  <span class="c1"># FAIL</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  Covariant을 생각하고 보면, 완전히 반대다.</p>
+<p>
+  <code>f1</code> 은 당연히 이해가 쉽다. 하지만 <code>f2</code> 은 이상하다. 설명해보겠다.</p>
+<p>
+  <code>f2</code> 의 타입은 &#34;<code>Bird</code> 값을 받는 함수&#34;를 의미한다. 하지만, <code>live</code> 은
+  <code>Bird</code> 의 상위타입인 <code>Animal</code> 을 허용하는 함수다. 그리고 이게
+  괜찮은가? 괜찮다.</p>
+<p>
+  왜냐하면, 말했듯이 타입을 계약으로 보면 이해가 쉽다. <code>f2</code> 값을
+  호출할 때, 전달하는 값은 아마 <code>Bird</code> 일 것이다. 그렇다면, 그렇게
+  전달 받은 값을 받는 함수는 <code>Bird</code> 타입이거나 그보다 더 일반화된 그
+  상위타입만을 기대하고, 그 범위만큼만 접근/사용하는게 안전하기
+  때문이다.</p>
+<p>
+  만약 <code>Bird</code> 타입보다 더 특화된, 예를 들어 <code>Blackbird</code> 같은
+  <code>Bird</code> 의 하위타입을 기대하고 그 함수가 동작한다면 안전하지 않을
+  것이다. 왜냐하면 <code>f2</code> 에 전달될 타입은 <code>Blackbird</code> 같은 특화된
+  타입이 아니라 그냥 <code>Bird</code> 일테니까.</p>
+<p>
+  Contravariant은 값을 받는 측을 고려해서 타입을 지정하기 때문에, 그
+  범위를 줄인다. Covariant와 반대이다.</p>
+<p>
+  <code>f3</code> 의 경우는, 만약 함수 타입의 인자에 대해서 Covariant으로
+  취급한다면 맞는 얘기겠지만, 여기서는 타입체커가 틀리다고
+  알려준다.<sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup></p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+함수 타입의 파라미터는 Contravariant, 되돌림 값은 Covariant
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>Contravariant의 적용 예시로, 함수 타입을 들었다. 하지만, 더
+  정확하게는 함수에 전달하는 파라미터 타입은 Contravariant이다.</p>
+<p>
+  (적어도 MyPy에서는) 함수의 되돌림 값에 대해서는 Covariant이다.</p>
+<p>
+  즉, 다음과 같다.</p>
+<div class="src src-python">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">makeAnimal</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Animal</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">Animal</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">makeBird</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Bird</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">Bird</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">anAnimal</span><span class="p">:</span> <span class="n">Animal</span> <span class="o">=</span> <span class="n">makeBird</span><span class="p">()</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  간단하다.</p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+Subtype의 관계
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
+<p>Covariant, Contravariant은 어떤 Generic type의 타입변수 위치에 어떤
+  타입이 올지도 결정하지만, 그 Generic type이 또 어떤 타입으로
+  지정되었을 때, 어떻게 Subtype 관계를 만드는지도 결정한다. (이미
+  Covariant 설명 때 말했듯이)</p>
+<p>
+  즉, 위의 예제들에서,</p>
+<ol>
+<li><code>typing.List[Bird] &lt;: typing.List[Animal]</code> 이고, (Covariant)</li>
+<li><code>typing.Callable[[Animal], None] &lt;: typing.Callable[[Bird], None]</code> 이다 (Contravariant)</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+언어마다 다를 수 있다
+</h2>
+<div id="outline-text-headline-8" class="outline-text-2">
+<p>그런데, 꼭 함수 타입의 파라미터는 Contravariant이고, 되돌림 값의
+  타입은 Covariant이지는 않다.</p>
+<p>
+  언어나 타입체커마다 다르게 유추할 수도 있고, 가끔은 아예 내가 직접
+  지정해서 그렇게 동작하도록 해줘야 하는 경우도 있다. (Java, Scala등)</p>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-2">
+<h2 id="headline-9">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p><a href="https://en.wikipedia.org/wiki/Subtyping">https://en.wikipedia.org/wiki/Subtyping</a></p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p>타입체커, 컴파일러가 기본적으로 이렇게 유추하는 경우가 많다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-3"><a href="#footnote-reference-3">3</a></sup>
+<div class="footnote-body">
+<p>MyPy 파이썬 타입체커.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">
+                        📚 <a href="/series/programming-languages/">programming-languages</a>
+                        <sup>24</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/variances/">variances</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/invariant/">invariant</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/contravariant/">contravariant</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/covariant/">covariant</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/higher-order-type/">higher-order-type</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/type-system/">type-system</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/type/">type</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-01jan/100days-of/">⬅️ 100일의 기록</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-01jan/esup-emacs-init-speed/">➡️ Emacs 시작 시간 빠르게 만들기</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1767677425</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sha1 on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/sha1/</link>
+    <description>Recent content in Sha1 on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 30 Nov 2025 10:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/sha1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>블로그 디자인 수정 &#43; 제목 자동 emoji 붙여주기</title>
+      <link>https://ageldama.github.io/posts/2025-11nov/blog-post-title-emojis/</link>
+      <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-11nov/blog-post-title-emojis/</guid>
+      <description>&lt;p&gt;&#xA;블로그 CSS을 또 수정하고, 레이아웃도 좀 더 고쳤다. 간단하게 가볍게&#xA;보였으면 해서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데 그간 고민해오던 것들이 있음:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;(예전에) 귀찮아서 &lt;code&gt;new-ping.pl&lt;/code&gt;-스크립트 같은거 짜놓고 자동&#xA;생성한 포스팅 제목으로 그대로 포스팅한 &amp;#34;&lt;em&gt;Ping …..&lt;/em&gt;&amp;#34;-같은 제목의&#xA;포스팅들은 archives에서 봐도 뭐가 뭔지 구분이 안됨.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;h1&lt;/code&gt;-같은 markdown/org-mode에서 export한 제목과&#xA;각 포스팅의 제목(이것도 &lt;code&gt;h1&lt;/code&gt;-같은 태그인)이 눈에 딱 들게 구분이&#xA;되지 않았음.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;archives에서 각 포스팅의 preview을 표시했다&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;조금 내용도 나오니까 찾아보기 더 수월해진거 같다. ㅎㅎ&#xA;  그리고 막상 이렇게 전체 목록 / 시간에 따라, 내용을 조금이나마&#xA;  보여주니까 일대기 형식이라 재밌네.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

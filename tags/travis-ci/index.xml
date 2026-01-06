@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Travis-Ci on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/travis-ci/</link>
+    <description>Recent content in Travis-Ci on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Mon, 02 Jan 2017 04:35:00 +0100</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/travis-ci/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github.io 블로그 TraviCI으로 빌드해서 배포하기</title>
+      <link>https://ageldama.github.io/posts/2017/2017-01-02-travis-ci-jekyll-gh/</link>
+      <pubDate>Mon, 02 Jan 2017 04:35:00 +0100</pubDate>
+      <guid>https://ageldama.github.io/posts/2017/2017-01-02-travis-ci-jekyll-gh/</guid>
+      <description>&lt;p&gt;.. &lt;em&gt;&lt;a href=&#34;https://ageldama.github.io/github/jekyll/2017/01/01/github-jekyll.html&#34;&gt;여기&lt;/a&gt;&lt;/em&gt; 에 불만을 적었듯이,&#xA;여러가지로 그냥은 만족하기 어려운 부분이 있었다.&lt;/p&gt;&#xA;&lt;p&gt;그런데, Travis-CI을 통해서 빌드해서 배포한다는 분이&#xA;계셨다. &lt;a href=&#34;https://twitter.com/Realignist/status/815554589889994752&#34;&gt;https://twitter.com/Realignist/status/815554589889994752&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;..난 생각 못해본 방법. ㅎㅎ &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;그래서 도전.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;우선 Jekyll 소스용 저장소로 분리하고,&lt;/li&gt;&#xA;&lt;li&gt;배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/felixrieseberg/travis-jekyll-git&#34;&gt;https://github.com/felixrieseberg/travis-jekyll-git&lt;/a&gt; 여기 참고해서 삽질.&lt;/li&gt;&#xA;&lt;li&gt;결과물은 &lt;a href=&#34;https://github.com/ageldama/ageldama-gh-jekyll&#34;&gt;https://github.com/ageldama/ageldama-gh-jekyll&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;..진행하면서 처음에 좀 짜증났던거,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;Gemfile&lt;/code&gt; 에 설치할 의존성들 지정하고, &lt;code&gt;bundle update&lt;/code&gt;.&#xA;&lt;ol&gt;&#xA;&lt;li&gt;그리고 그것만으로는 안되고, &lt;code&gt;.travis.yml&lt;/code&gt; 파일에 gem설치를&#xA;지정해야했다. &lt;a href=&#34;https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5&#34;&gt;https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Travis-CI 작업의 세팅에서 &lt;code&gt;git_target&lt;/code&gt; 환경변수에 URL지정할때&amp;hellip;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;github.com/ageldama/ageldama-gh-jekyll.git&lt;/code&gt; 처럼 &lt;code&gt;https://&lt;/code&gt; 스킴 부분 빼고,&lt;/li&gt;&#xA;&lt;li&gt;또 뒤에 &lt;code&gt;.git&lt;/code&gt; 깜빡하면 당연히 git-push 안됨. ㅋ&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;&#xA;&lt;hr&gt;&#xA;&lt;ol&gt;&#xA;&lt;li id=&#34;fn:1&#34;&gt;&#xA;&lt;p&gt;솔직히 내가 뭘 제대로 하겠습니까.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

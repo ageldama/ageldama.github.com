@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>darkmode.js... prefers-color-scheme - 아겔로그</title><meta name="hugo-gen-timestamp" content="1767677426">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="사용하던 darkmode.js 방식을, CSS 방식으로 재작성했다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.30fcfadf8ec61f30477067ae0c35acd2e4317dd65be5998bffac7940f91f87a6.css"
+          integrity="sha256-MPz6347GHzBHcGeuDDWs0uQxfdZb5ZmL/6x5QPkfh6Y=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/2025-12dec19--01-ping/">⬅️ Ping 19/12/2025 .01.</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/young40er-hugo-theme-1st-rel/">➡️ “영포티”(“young40er”) hugo theme 공개</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">(기존) darkmode.js 방식</a>
+</li>
+<li><a href="#headline-2">새로운 방식을 설계 + 구현시작</a>
+<ul>
+<li><a href="#headline-3">색상표/팔레트 + CSS클래스에 적용</a>
+</li>
+<li><a href="#headline-4">[추가❌] light-dark()</a>
+</li>
+<li><a href="#headline-5">JS: 색상토글하기, 선택테마한 저장+로딩하기</a>
+</li>
+<li><a href="#headline-6">[Hack 🪓] Hugo Syntax Highligthing</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-7">Wrap Up</a>
+</li>
+<li><a href="#headline-8">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🦹 darkmode.js... prefers-color-scheme</h1>
+	    <div class="meta">
+                <time datetime="2025-12-19" pubdate>
+                    2025년12월19일
+                </time>
+                </div>
+        </div>
+
+        
+        <div class="description">
+	    <span class="short-description">
+                사용하던 darkmode.js 방식을, CSS 방식으로 재작성했다.
+            </span>
+        </div>
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+(기존) darkmode.js 방식
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li><a href="https://darkmodejs.learn.uno/">👉 Darkmode.js</a></li>
+<li>도입기 #1: <a href="/posts/2025-03mar/2025-03mar15--01-new-css/">처음 구현</a></li>
+<li>도입기 #2: <a href="/posts/2025-03mar/2025-03mar20--01--darkmode-js/">darkmode.js 사용</a></li>
+</ol>
+<style>
+
+table.table {
+    border-collapse: collapse;
+}
+
+.table th {
+    border: 1px solid #ccc;
+    text-weight: bold;
+    text-align: center;
+}
+
+.table td {
+    border: 1px solid #ccc;
+}
+</style>
+
+<table class="table" width="">
+    <thead>
+        <tr>
+            <th>장단점</th>
+            <th>...</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td align="center"><b>장점 ❤️</b></td>
+            <td>적용이 쉽다</td>
+        </tr>
+
+        <tr>
+            <td align="center"><b>장점 ❤️</b></td>
+            <td>darkmode 색상을 지정할 필요 없다.<br>(자동으로 inverse색상으로 표시)</td>
+        </tr>
+
+        <tr>
+            <td align="center"><b>장점 ❤️</b></td>
+            <td>전환 애니메이션이 멋있다</td>
+        </tr>
+
+        <tr>
+            <td align="center"><b>단점 😥</b></td>
+            <td>css이외에 darkmode.js 초기화시에 배경색 전달해줘야</td>
+        </tr>
+
+        <tr>
+            <td align="center"><b>단점 😥</b></td>
+            <td>inverse 색상이 가끔 괴랄하다</td>
+        </tr>
+
+        <tr>
+            <td align="center"><b>단점 😥</b></td>
+            <td>페이지 로딩시 flash 현상이 생긴다</td>
+        </tr>
+
+        <tr>
+            <td align="center"><b>단점 😥</b></td>
+            <td>페이지 스크롤시 아직 덜 칠해진 부분이 보이기도 한다</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+  처음에 도입은 쉽고 좋았는데,</p>
+<p>
+  어쨌든 반투명레이어 +
+  color-inverse-css-filter을 이용해서 구현한 방식인거 같아서 위에
+  나열한 스크롤시 아직 레이어가 덮지 않은 영역이 보인다거나,</p>
+<p>
+  페이지로딩 이후에 js이 실행되어 레이어를 올릴지 말지를 행동을 취하는
+  방식이기 때문에… 처음엔 무조건 light-mode이 보이고 빠르게
+  dark-mode으로 전환하는 과정에서 flashing 현상이 생길 수 밖엔 없는
+  구조.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+새로운 방식을 설계 + 구현시작
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>평범하게 css 사용 <code>@media (prefers-color-scheme: dark)</code> 방식을
+  알아봄: 👉 <a href="https://developer.mozilla.org/ko/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme">[MDN] (at-rules) prefers-color-scheme</a></p>
+<p>
+  생각보다 해야 할 작업이 좀 됨:</p>
+<ul>
+<li><strong>CSS에서 색상표/팔레트를 하나 더 준비해야 함</strong>: 🌻light-mode / 🌚dark-mode</li>
+<li>그말은: 기존 CSS의 색상값들을 더 정돈해서 변수화해야 함.</li>
+</ul>
+<p>
+  별도의 CSS class을 만들지 않고, 동적으로 <code>var(...)</code>-기능을 이용하여,
+  웹브라우저가 자동으로 CSS variables 선택하도록 만들엇다: 👉 <a href="https://developer.mozilla.org/ko/docs/Web/CSS/Reference/Values/var">[MDN]
+  var()</a> <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+색상표/팔레트 + CSS클래스에 적용
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<p>SASS에서 다음처럼 일단 색상표를 만들어 나감:</p>
+<div class="src src-sass">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9">9</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sass" data-lang="sass"><span class="line"><span class="cl">  <span class="err">\</span><span class="nd">:root</span>
+</span></span><span class="line"><span class="cl"><span class="err">      </span><span class="na">color-scheme</span><span class="o">:</span> <span class="n">light</span> <span class="n">dark</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">      </span><span class="na">--bg-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$bg_beige</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">      </span><span class="na">--text-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$blackish_text</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">      </span><span class="na">@media</span><span class="err"> </span><span class="na">(prefers-color-scheme</span><span class="o">:</span> <span class="n">dark</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">        </span><span class="na">--bg-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$monochrome_black</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">        </span><span class="na">--text-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$monochrome_lgrey</span><span class="si">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<ol>
+<li><code>color-scheme:</code> 👉 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color-scheme">[MDN] color-scheme</a></li>
+<li>
+<p><code>$bg_beige</code>, <code>$blackish_text</code> 등의 색상값들은 그 위에서
+SASS변수로 등록:</p>
+<div class="src src-sass">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sass" data-lang="sass"><span class="line"><span class="cl"><span class="err">  </span><span class="na">$bg_beige</span><span class="o">:</span> <span class="mh">#fffbeb</span>
+</span></span><span class="line"><span class="cl"><span class="err">  </span><span class="na">$blackish_text</span><span class="o">:</span> <span class="mh">#5c5537</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</li>
+</ol>
+<p>
+  사용은 이런 느낌으로 했다:</p>
+<div class="src src-sass">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sass" data-lang="sass"><span class="line"><span class="cl">  <span class="nt">body</span>
+</span></span><span class="line"><span class="cl"><span class="err">    </span><span class="na">background-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bg-color</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">    </span><span class="na">color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="no">text</span><span class="o">-</span><span class="no">color</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+[추가❌] light-dark()
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p>👉 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark">[MDN] light-dark()</a> 이런 것도 이제 지원하기는 하던데. 쓰진 않음.</p>
+<p>
+   최근에 추가되어 호환성이 아직인거 같아서.</p>
+<p>
+   아마 장점은, <code>var(...)</code> 사용하려면, <code>:root</code> pseudo-class에 css 변수들
+   등록해 놓아야 하는데, 그럴 필요 없이 바로 light/dark-mode에 따른
+   컬러값 literal 적어줄 수 있을거 같다.</p>
+<p>
+   그런데 그냥 어차피 색상표/팔레트 정리하기로 마음 먹었으니 안썼다.
+   🍣</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+JS: 색상토글하기, 선택테마한 저장+로딩하기
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<ol>
+<li>👉 <a href="https://stackoverflow.com/questions/56393880/how-do-i-detect-dark-mode-using-javascript">[SO] How do I detect dark mode using JavaScript?</a></li>
+<li>👉 <a href="https://stackoverflow.com/questions/56300132/how-to-override-css-prefers-color-scheme-setting">[SO] How to override css prefers-color-scheme setting</a></li>
+</ol>
+<p>
+   위 링크들 베껴서:</p>
+<ol>
+<li>
+<p>다크모드 토글버튼</p>
+<ol>
+<li>+다음에 페이지 다시 로딩되면, 선택한 색상테마가 다시 불리도록
+local-storage 저장하기.</li>
+</ol>
+</li>
+<li>
+<p>페이지 로딩되면:</p>
+<ol>
+<li>이전에 선택되어 local-storage에 저장해놓은 색상테마으로 전환.</li>
+<li>아니면 냅두기. (사용자 OS/브라우저 preferences가 그냥 먹도록)</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-3">
+<h3 id="headline-6">
+[Hack 🪓] Hugo Syntax Highligthing
+</h3>
+<div id="outline-text-headline-6" class="outline-text-3">
+<p>Hugo 블로그생성기의 chromastyles으로 코드 문법강조를 사용하고
+   있었는데, 이걸 색상모드별로 적당히 전환하고 싶었다.</p>
+<p>
+   원래는:</p>
+<ol>
+<li><code>hugo gen chromastyle</code> 명령으로 특정한 1개 테마의 스타일시트를
+미리 생성하고,</li>
+<li>(그걸 적용해도 문제가 없는게) darkmode.js이
+color-inverse해줬으니 그럴싸하게 보였었다.</li>
+</ol>
+<p>
+   그래서:</p>
+<ol>
+<li>
+<p>원하는 스타일시트 2개(light/dark)을 골라서 둘 다 다른
+CSS파일으로 생성하도록 빌드스크립트를 수정.</p>
+<ol>
+<li>… <a href="https://xyproto.github.io/splash/docs/all.html">chroma style gallery</a> 참고해서 원하는 스킴을 지정했다.</li>
+<li>… Hugo <code>config.toml</code>-에 “공식”-설정키는
+<code>markup.highlight/style</code>-이었는데, “비공식”-설정키
+<code>lightStyle</code> / <code>darkStyle</code>-을 추가하고, 원래의 “공식“설정키는
+무시하기로 했다.</li>
+</ol>
+</li>
+<li>color-mode 전환시에 매칭되는 CSS파일을 페이지에 로딩하도록 JS.</li>
+</ol>
+<p>
+   ㅎㅎ 상당히 hacky하지만 잘 동작한다.</p>
+<div class="src src-toml">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl">  <span class="c"># config.toml</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">lightStyle</span><span class="p">=</span><span class="s1">&#39;solarized-light&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">darkStyle</span><span class="p">=</span><span class="s1">&#39;solarized-dark256&#39;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<div class="src src-makefile">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9">9</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl">  <span class="c1"># Makefile</span>
+</span></span><span class="line"><span class="cl">  chromastyles:
+</span></span><span class="line"><span class="cl">  	hugo gen chromastyles <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  		--style<span class="o">=</span><span class="sb">`</span>cat config.toml <span class="p">|</span> perl ./scripts/toml-get.pl markup highlight lightStyle<span class="sb">`</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  		&gt; static/css/chroma.light.css
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  	hugo gen chromastyles <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  		--style<span class="o">=</span><span class="sb">`</span>cat config.toml <span class="p">|</span> perl ./scripts/toml-get.pl markup highlight darkStyle<span class="sb">`</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  		&gt; static/css/chroma.dark.css
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+   …위에서 <code>config.toml</code>-파일의 특정 설정키를 읽어서 <code>hugo gen
+   chromastyles</code> 명령에 먹여주는 Perl스크립트는:</p>
+<div class="src src-perl">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl">  <span class="c1">#!/usr/bin/env perl</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">#</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># toml-get.pl</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">#</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">use</span> <span class="nn">strict</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">use</span> <span class="nn">warnings</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">use</span> <span class="nn">TOML</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">use</span> <span class="nn">Data::Diver</span> <span class="sx">qw(Dive)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">my</span> <span class="nv">$slurped</span> <span class="o">=</span> <span class="k">do</span> <span class="p">{</span> <span class="nb">local</span> <span class="vg">$/</span><span class="p">;</span> <span class="sr">&lt;STDIN&gt;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="k">my</span> <span class="p">(</span><span class="nv">$t</span><span class="p">,</span> <span class="nv">$err</span><span class="p">)</span> <span class="o">=</span> <span class="nn">TOML::</span><span class="n">from_toml</span><span class="p">(</span><span class="nv">$slurped</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">die</span> <span class="nv">$err</span> <span class="k">if</span> <span class="nv">$err</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">print</span> <span class="n">Dive</span><span class="p">(</span><span class="nv">$t</span><span class="p">,</span> <span class="nv">@ARGV</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+   <a href="https://metacpan.org/pod/Data::Diver">Data::Diver</a> 사용해서 설정키 하위경로 접근을 커맨드라인에서 편하게
+   받도록 했다. …직접 스크립트를 고정해서 짜주거나 않아도 되어서
+   이것도 좋아하는 Hack🪓. <sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
+<p>
+   그리고 마지막으로 JS쪽에서 테마에 따라 해당 문법강조 테마에 따른
+   CSS파일을 로딩해줬다. 👉 <a href="https://stackoverflow.com/questions/2099517/how-to-load-in-an-external-css-file-dynamically">[SO] How to load in an external CSS file
+   dynamically?</a></p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+Wrap Up
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
+<style>
+
+table.table {
+    border-collapse: collapse;
+}
+
+.table th {
+    border: 1px solid #ccc;
+    text-weight: bold;
+    text-align: center;
+}
+
+.table td {
+    border: 1px solid #ccc;
+}
+</style>
+
+<table class="table" width="">
+    <thead>
+        <tr>
+            <th>darkmode.js (기존)</th>
+            <th>새로운 방식</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>
+                <b>❤️+1</b>
+                <br>
+                적용이 쉽다.
+            </td>
+
+            <td rowspan="2">
+                <b>😥-2</b>
+                <br>
+                색상팔레트를 정의해야함.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>❤️+1</b>
+                <br>
+                darkmode 색상을 지정할 필요 없다.
+                <br>
+                (자동으로 inverse색상으로 표시)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>❤️+1</b>
+                <br>
+                전환 애니메이션이 멋있다
+            </td>
+
+            <td>
+                <b>😥-1</b>
+                <br>
+                그런거없다.<br>
+                하지만 원하면 만들수도 있을거 같긴하다.<br>
+                (CSS animation and/or JS으로 전환시 효과)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>😥-1</b>
+                <br>
+                css이외에 darkmode.js 초기화시에 배경색 전달해줘야
+            </td>
+            <td>
+                <b>❤️+1</b>
+                <br>
+                CSS만으로 끝. 깔끔.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>😥-1</b>
+                <br>
+                inverse 색상이 가끔 괴랄하다
+            </td>
+            <td>
+                <b>❤️+1</b>
+                <br>
+                조절가능.<br>이젠 CSS색상을 선택한 내 책임이다.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>😥-1</b>
+                페이지 로딩시 flash 현상이 생긴다
+            </td>
+            <td>
+                <b>😥-1</b>
+                <br>
+                브라우저캐시에 없는 페이지를 로딩할 때에 발생할 수 있음.
+                <br>
+                (OS/브라우저 prefs와 local-storage에 저장된 color-mode이 서로 다른 경우)
+                <br>
+                ...darkmode.js보단 가볍게 사라짐.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>😥-1</b>
+                <br>
+                페이지 스크롤시 아직 덜 칠해진 부분이 보이기도 한다
+            </td>
+            <td>
+                <b>❤️+1</b>
+                <br>
+                그럴가능성이 없음.
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+  그리고 무엇보다, 재밌었다.</p>
+<figure>
+  <img src="/posts/2025-12dec/Farmer_meme_with_apostrophe.jpg"
+       width="100%" alt="it ain’t much but it’s honest work">
+  <figcaption>땀의 가치 100%! 🧑‍🌾</figcaption>
+</figure>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>모오던 웹브라우저 다이스키다요💖</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p><a href="https://thethreevirtues.com/">https://thethreevirtues.com/</a></p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">
+                        📚 <a href="/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/">아겔로그변천사</a>
+                        <sup>26</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        📚 <a href="/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/">dark-mode으로의-여행</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webdev/">webdev</a>
+                        <sup>25</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blogging/">blogging</a>
+                        <sup>20</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blog/">blog</a>
+                        <sup>20</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/javascript/">javascript</a>
+                        <sup>18</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/css/">css</a>
+                        <sup>17</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/js/">js</a>
+                        <sup>15</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hugo/">hugo</a>
+                        <sup>12</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sass/">sass</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/darkmode.js/">darkmode.js</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/chromastyle/">chromastyle</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/2025-12dec19--01-ping/">⬅️ Ping 19/12/2025 .01.</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/young40er-hugo-theme-1st-rel/">➡️ “영포티”(“young40er”) hugo theme 공개</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1767677426</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

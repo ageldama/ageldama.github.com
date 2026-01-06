@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>(Common Lisp의 어두운 면) Equality - 아겔로그</title><meta name="hugo-gen-timestamp" content="1767677425">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까
+리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로
+생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을
+리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.
+뭐 커먼리습의 CLHS - HyperSpec을 읽다보면 비슷한데 아주 약간씩
+미묘하게 달라서 지원하는 것들이 있다:
+
+let
+
+Special Operator LET, LET*
+Special Operator FLET, LABELS, MACROLET
+
+
+map
+
+Function MAP
+Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON
+Function MAP-INTO
+
+
+prog
+
+Macro PROG1, PROG2
+Special Operator PROGN
+Macro PROG, PROG*
+Special Operator PROGV
+
+
+&hellip;그밖에도 좀 더 있을듯?
+
+이렇게 나열해 놓으면 꽤 무서워 보이지만, 막상 차이를 이해하면 별로
+복잡하지도 않아서 나중엔 더 편안해진다. (정말로)" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.30fcfadf8ec61f30477067ae0c35acd2e4317dd65be5998bffac7940f91f87a6.css"
+          integrity="sha256-MPz6347GHzBHcGeuDDWs0uQxfdZb5ZmL/6x5QPkfh6Y=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/tips-ecl-clisp/">⬅️ 커먼리습 설정하기, ASDF 시스템 코드를 받기</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-11nov/why-sharpsign-in-method-path/">➡️ (소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-같은-값-비교-연산-숫자-심볼-같은-객체를-참조하는지-eq">1. 같은 값 비교 연산: 숫자, 심볼, 같은 객체를 참조하는지: <code>EQ</code></a></li>
+    <li><a href="#2-한-걸음-더-eql">2. “한 걸음 더”: <code>EQL</code></a></li>
+    <li><a href="#3-약간-더-구조가-있어도-지원-equal">3. 약간 더 구조가 있어도 지원: <code>EQUAL</code></a></li>
+    <li><a href="#4-완전체-equalp">4. 완전체?: <code>EQUALP</code></a></li>
+    <li><a href="#5-문자-문자열">5. 문자, 문자열</a></li>
+    <li><a href="#6-하지만-나는-더-특별하고-싶다-equals">6. 하지만 나는 더 특별하고 싶다: <code>EQUALS</code></a></li>
+    <li><a href="#7-그냥-항상-equals이나-equalp-쓰면-되는거-아닌가">7. 그냥 항상 <code>EQUALS</code>이나 <code>EQUALP</code> 쓰면 되는거 아닌가?</a></li>
+    <li><a href="#맺음말">맺음말</a></li>
+  </ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🥝 (Common Lisp의 어두운 면) Equality</h1>
+	    <div class="meta">
+                <time datetime="2019-11-16" pubdate>
+                    2019년11월16일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p>오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까
+리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로
+생각했다. 그리고 놀랍게도 이 글의 끝에 가서는 다시 이런 리습의 결점을
+리습의 위대함으로 승화시키는 단계까지 끌어가 보도록 하려고함.</p>
+<p>뭐 커먼리습의 <a href="http://clhs.lisp.se/Front/index.htm">CLHS - HyperSpec</a>을 읽다보면 비슷한데 아주 약간씩
+미묘하게 달라서 지원하는 것들이 있다:</p>
+<ul>
+<li><code>let</code>
+<ul>
+<li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">Special Operator LET, LET*</a></li>
+<li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">Special Operator FLET, LABELS, MACROLET</a></li>
+</ul>
+</li>
+<li><code>map</code>
+<ul>
+<li><a href="http://clhs.lisp.se/Body/f_map.htm">Function MAP</a></li>
+<li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm">Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON</a></li>
+<li><a href="http://clhs.lisp.se/Body/f_map_in.htm#map-into">Function MAP-INTO</a></li>
+</ul>
+</li>
+<li><code>prog</code>
+<ul>
+<li><a href="http://clhs.lisp.se/Body/m_prog1c.htm">Macro PROG1, PROG2</a></li>
+<li><a href="http://clhs.lisp.se/Body/s_progn.htm#progn">Special Operator PROGN</a></li>
+<li><a href="http://clhs.lisp.se/Body/m_prog_.htm#progST">Macro PROG, PROG*</a></li>
+<li><a href="http://clhs.lisp.se/Body/s_progv.htm#progv">Special Operator PROGV</a></li>
+</ul>
+</li>
+<li>&hellip;그밖에도 좀 더 있을듯?</li>
+</ul>
+<p>이렇게 나열해 놓으면 꽤 무서워 보이지만, 막상 차이를 이해하면 별로
+복잡하지도 않아서 나중엔 더 편안해진다. (정말로)</p>
+<p>이 글에서는 위에 나열한 것들의 차이를 정리하지 않겠다. 그냥 예시로만
+보여봤다. 이번에는 값의 동치관계에 대해서만 집중하겠다.</p>
+<hr>
+<h1 id="1-같은-값-비교-연산-숫자-심볼-같은-객체를-참조하는지-eq">1. 같은 값 비교 연산: 숫자, 심볼, 같은 객체를 참조하는지: <code>EQ</code></h1>
+<p>오늘의 주제는 바로 &lsquo;같은 값 비교 연산&rsquo;이다. 혹은 동치관계연산자(同値關
+係&hellip;, Equality operators).</p>
+<p>가장 간단한 <code>=</code>, <code>/=</code> 부터 시작해볼까:</p>
+<ul>
+<li><a href="http://clhs.lisp.se/Body/f_eq_sle.htm#EQ">Function =, /=, &lt;, &gt;, &lt;=, &gt;=</a>
+<ul>
+<li>..숫자값, 그러니까 <a href="http://clhs.lisp.se/Body/t_number.htm">System Class
+NUMBER</a> 의 하위타입들만
+적용됨.</li>
+</ul>
+</li>
+</ul>
+<p>왜 <code>NUMBER</code> 타입에 대해서만 한정지어 말했냐하면:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">=</span> <span class="ss">:foo</span> <span class="ss">:foo</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; Debugger entered on #&lt;TYPE-ERROR expected-type: NUMBER datum: :FOO&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>..처럼 Lisp에서 가장 Primitive한 값 타입의 하나인 심볼에 대해서도
+완강히 지원하지 않으시기 때문이다.</p>
+<p>오.. 마이 ㅂㅋㄱ&hellip; 그럴거 같애서 이제 조금 더 길이가 긴 연산자가 필요해진다.</p>
+<ul>
+<li><a href="http://clhs.lisp.se/Body/f_eq.htm#eq">Function EQ</a>
+<ol>
+<li>숫자는 물론 심볼도 비교 할 수 있다.</li>
+<li>이는 숫자, 심볼 비교에서 두 값이 완전히 같은 객체, 즉 참조가
+같다는 원리를 이용한 것이다.</li>
+</ol>
+</li>
+</ul>
+<p>테스트해볼까:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span><span class="lnt" id="hl-1-2"><a class="lnlinks" href="#hl-1-2">2</a>
+</span><span class="lnt" id="hl-1-3"><a class="lnlinks" href="#hl-1-3">3</a>
+</span><span class="lnt" id="hl-1-4"><a class="lnlinks" href="#hl-1-4">4</a>
+</span><span class="lnt" id="hl-1-5"><a class="lnlinks" href="#hl-1-5">5</a>
+</span><span class="lnt" id="hl-1-6"><a class="lnlinks" href="#hl-1-6">6</a>
+</span><span class="lnt" id="hl-1-7"><a class="lnlinks" href="#hl-1-7">7</a>
+</span><span class="lnt" id="hl-1-8"><a class="lnlinks" href="#hl-1-8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eq</span> <span class="p">(</span><span class="nf">+</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eq</span> <span class="ss">:foo</span> <span class="ss">:FOO</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eq</span> <span class="ss">&#39;bar</span> <span class="ss">&#39;BaR</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>적당하다. 하지만:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1"> 1</a>
+</span><span class="lnt" id="hl-2-2"><a class="lnlinks" href="#hl-2-2"> 2</a>
+</span><span class="lnt" id="hl-2-3"><a class="lnlinks" href="#hl-2-3"> 3</a>
+</span><span class="lnt" id="hl-2-4"><a class="lnlinks" href="#hl-2-4"> 4</a>
+</span><span class="lnt" id="hl-2-5"><a class="lnlinks" href="#hl-2-5"> 5</a>
+</span><span class="lnt" id="hl-2-6"><a class="lnlinks" href="#hl-2-6"> 6</a>
+</span><span class="lnt" id="hl-2-7"><a class="lnlinks" href="#hl-2-7"> 7</a>
+</span><span class="lnt" id="hl-2-8"><a class="lnlinks" href="#hl-2-8"> 8</a>
+</span><span class="lnt" id="hl-2-9"><a class="lnlinks" href="#hl-2-9"> 9</a>
+</span><span class="lnt" id="hl-2-10"><a class="lnlinks" href="#hl-2-10">10</a>
+</span><span class="lnt" id="hl-2-11"><a class="lnlinks" href="#hl-2-11">11</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eq</span> <span class="sc">#\a</span> <span class="sc">#\a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eq</span> <span class="sc">#\a</span> <span class="sc">#\A</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eq</span> <span class="s">&#34;foo&#34;</span> <span class="s">&#34;foo&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eq</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">a</span> <span class="nv">b</span><span class="p">)</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">a</span> <span class="nv">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>그렇다. <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_ch.htm">System Class
+CHARACTER</a>인
+<code>#\a</code> 도 대소문자 구분이 생기자마자 이 연산자로는 같지 않다.</p>
+<p>문자의 대소문자 이야기는 잠깐 접어놓고, 나머지 문자열, 리스트에
+대해서도 이런 결과를 얻은 이유를 설명하자면: <code>EQ</code>은 정의 그대로,
+&ldquo;메모리 상에서 같은 값의 참조인지&quot;만 판단하기 때문이다.</p>
+<p><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_symbol.htm#symbol">심볼</a>과
+<a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_kwd.htm#keyword">키워드
+심볼</a>은
+같은 값이 여러개 생기지 않고 항상 유일하게 하나만을 공유한다는걸
+보장하니까 당연히 <code>EQ</code>으로 비교가 쉽다.</p>
+<p>그리고 숫자의 경우에도 마찬가지일거 같다.  숫자의 경우 추측을 해보면,
+이것도 심볼과 마찬가지로 메모리 상에서 레퍼런스에 담긴 값이 같은
+값일거 같다. 왜냐하면, 숫자 값은 그 자체로 레퍼런스 값 그 자체로
+저장되어 있을거라고 생각한다. (예: <a href="https://en.wikipedia.org/wiki/Tagged_pointer">Tagged
+Pointer</a>) 그리고 이런
+tagged pointer의 아이디어가 처음 생긴 것도 리습이고, 그런 전통에 따라
+현재는 분리되어 저장하더라도 <code>EQ</code>에서 그런 것처럼 동작하게 만들어
+놓았으리라.</p>
+<p>그래서 단순히 참조포인터에 저장하기 어려운 복합적인 구조를 갖는
+<a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_comple.htm">복소수
+값</a>은
+NUMBER타입임에도 <code>EQ</code>으로 같은지 알 수 없다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-1"><a class="lnlinks" href="#hl-3-1">1</a>
+</span><span class="lnt" id="hl-3-2"><a class="lnlinks" href="#hl-3-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eq</span> <span class="m">#c</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="m">#c</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>다만, 문자열이나 리스트, cons의 경우에는 같은 값을 갖는 다른 메모리
+위치이라면 <code>EQ</code>은 다른 값이라고 말한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-4-1"><a class="lnlinks" href="#hl-4-1">1</a>
+</span><span class="lnt" id="hl-4-2"><a class="lnlinks" href="#hl-4-2">2</a>
+</span><span class="lnt" id="hl-4-3"><a class="lnlinks" href="#hl-4-3">3</a>
+</span><span class="lnt" id="hl-4-4"><a class="lnlinks" href="#hl-4-4">4</a>
+</span><span class="lnt" id="hl-4-5"><a class="lnlinks" href="#hl-4-5">5</a>
+</span><span class="lnt" id="hl-4-6"><a class="lnlinks" href="#hl-4-6">6</a>
+</span><span class="lnt" id="hl-4-7"><a class="lnlinks" href="#hl-4-7">7</a>
+</span><span class="lnt" id="hl-4-8"><a class="lnlinks" href="#hl-4-8">8</a>
+</span><span class="lnt" id="hl-4-9"><a class="lnlinks" href="#hl-4-9">9</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">a</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">a</span> <span class="nv">b</span> <span class="nv">c</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nv">b</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">a</span> <span class="nv">b</span> <span class="nv">c</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">   <span class="p">(</span><span class="nf">values</span> <span class="ss">:same-ref?</span> <span class="p">(</span><span class="nf">eq</span> <span class="nv">a</span> <span class="nv">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">           <span class="ss">:equal-val?</span> <span class="p">(</span><span class="nf">eq</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;   :SAME-REF?</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;     T</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;   :EQUAL-VAL?</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;     NIL</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>이런 값들에 대해서는 순서를 갖고 하나씩 어떻게 비교해야할지 이야기 해나가겠다.</p>
+<hr>
+<h1 id="2-한-걸음-더-eql">2. &ldquo;한 걸음 더&rdquo;: <code>EQL</code></h1>
+<p><code>EQ</code>보다 한 글자 더 길어진 <a href="http://clhs.lisp.se/Body/f_eql.htm">Function EQL</a>.</p>
+<ol>
+<li><code>EQ</code>의 모든 비교를 동일하게 수행.
+1. 같은 참조인지를 체크: 심볼, 키워드, 모든 값에 대해서.
+1. 숫자에 대해서도, 같은 타입, 같은 크기의 값인지를 비교.</li>
+<li>거기에 더해서, CHARACTER도 비교를 할 수 있지만,
+1. 대소문자를 구분한다.</li>
+</ol>
+<p>확인해보자.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-5-1"><a class="lnlinks" href="#hl-5-1"> 1</a>
+</span><span class="lnt" id="hl-5-2"><a class="lnlinks" href="#hl-5-2"> 2</a>
+</span><span class="lnt" id="hl-5-3"><a class="lnlinks" href="#hl-5-3"> 3</a>
+</span><span class="lnt" id="hl-5-4"><a class="lnlinks" href="#hl-5-4"> 4</a>
+</span><span class="lnt" id="hl-5-5"><a class="lnlinks" href="#hl-5-5"> 5</a>
+</span><span class="lnt" id="hl-5-6"><a class="lnlinks" href="#hl-5-6"> 6</a>
+</span><span class="lnt" id="hl-5-7"><a class="lnlinks" href="#hl-5-7"> 7</a>
+</span><span class="lnt" id="hl-5-8"><a class="lnlinks" href="#hl-5-8"> 8</a>
+</span><span class="lnt" id="hl-5-9"><a class="lnlinks" href="#hl-5-9"> 9</a>
+</span><span class="lnt" id="hl-5-10"><a class="lnlinks" href="#hl-5-10">10</a>
+</span><span class="lnt" id="hl-5-11"><a class="lnlinks" href="#hl-5-11">11</a>
+</span><span class="lnt" id="hl-5-12"><a class="lnlinks" href="#hl-5-12">12</a>
+</span><span class="lnt" id="hl-5-13"><a class="lnlinks" href="#hl-5-13">13</a>
+</span><span class="lnt" id="hl-5-14"><a class="lnlinks" href="#hl-5-14">14</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eql</span> <span class="sc">#\a</span> <span class="sc">#\A</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eql</span> <span class="sc">#\a</span> <span class="sc">#\a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eq</span> <span class="m">#c</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="m">#c</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eql</span> <span class="m">#c</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="m">#c</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eql</span> <span class="m">#c</span><span class="p">(</span><span class="mi">1</span> <span class="mf">2.0</span><span class="p">)</span> <span class="m">#c</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>EQ</code> 보다는 조금 더 비교가 가능함을 확인했다. 같은 크기를 갖는 <code>#c(1 2)</code>의 서로 다른 복소수 참조에 대해서 비교를 잘 해낸다.</p>
+<p>그러나 여전히 cons, list, string등 조금이라도 복합적인 값은 비교를 하지 못한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-6-1"><a class="lnlinks" href="#hl-6-1">1</a>
+</span><span class="lnt" id="hl-6-2"><a class="lnlinks" href="#hl-6-2">2</a>
+</span><span class="lnt" id="hl-6-3"><a class="lnlinks" href="#hl-6-3">3</a>
+</span><span class="lnt" id="hl-6-4"><a class="lnlinks" href="#hl-6-4">4</a>
+</span><span class="lnt" id="hl-6-5"><a class="lnlinks" href="#hl-6-5">5</a>
+</span><span class="lnt" id="hl-6-6"><a class="lnlinks" href="#hl-6-6">6</a>
+</span><span class="lnt" id="hl-6-7"><a class="lnlinks" href="#hl-6-7">7</a>
+</span><span class="lnt" id="hl-6-8"><a class="lnlinks" href="#hl-6-8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eql</span> <span class="s">&#34;foo&#34;</span> <span class="s">&#34;foo&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eql</span> <span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span> <span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">eql</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">a</span> <span class="o">.</span> <span class="nv">b</span><span class="p">)</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">a</span> <span class="o">.</span> <span class="nv">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h1 id="3-약간-더-구조가-있어도-지원-equal">3. 약간 더 구조가 있어도 지원: <code>EQUAL</code></h1>
+<p>이제서야 스펠링을 그대로 타이핑하는 연산자다. 그리고 그만큼 <code>=</code> -&gt;
+<code>EQ</code> -&gt; <code>EQL</code> -&gt; <code>EQUAL</code> 순서로 길어져서인지 꽤 원하는대로 비교를
+해준다.</p>
+<p><a href="http://clhs.lisp.se/Body/f_equal.htm#equal">Function EQUAL</a></p>
+<p><em>대부분</em> 잘 비교해준다. 숫자, 심볼, 키워드, 문자열, 리스트,
+cons, pathname.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-7-1"><a class="lnlinks" href="#hl-7-1"> 1</a>
+</span><span class="lnt" id="hl-7-2"><a class="lnlinks" href="#hl-7-2"> 2</a>
+</span><span class="lnt" id="hl-7-3"><a class="lnlinks" href="#hl-7-3"> 3</a>
+</span><span class="lnt" id="hl-7-4"><a class="lnlinks" href="#hl-7-4"> 4</a>
+</span><span class="lnt" id="hl-7-5"><a class="lnlinks" href="#hl-7-5"> 5</a>
+</span><span class="lnt" id="hl-7-6"><a class="lnlinks" href="#hl-7-6"> 6</a>
+</span><span class="lnt" id="hl-7-7"><a class="lnlinks" href="#hl-7-7"> 7</a>
+</span><span class="lnt" id="hl-7-8"><a class="lnlinks" href="#hl-7-8"> 8</a>
+</span><span class="lnt" id="hl-7-9"><a class="lnlinks" href="#hl-7-9"> 9</a>
+</span><span class="lnt" id="hl-7-10"><a class="lnlinks" href="#hl-7-10">10</a>
+</span><span class="lnt" id="hl-7-11"><a class="lnlinks" href="#hl-7-11">11</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">equal</span> <span class="s">&#34;foo&#34;</span> <span class="s">&#34;foo&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">equal</span> <span class="s">&#34;foo&#34;</span> <span class="s">&#34;FOO&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">equal</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">a</span> <span class="nv">b</span> <span class="nv">c</span><span class="p">)</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">a</span> <span class="nv">b</span> <span class="nv">c</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">equal</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">a</span> <span class="o">.</span> <span class="nv">b</span><span class="p">)</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">a</span> <span class="o">.</span> <span class="nv">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>&hellip;그런데 여전히 struct, CLOS object, array, hash table 값들은 비교를
+못한다. 반대로 말해서 비교 가능한 값들은 cons을 기반으로 이루어졌거나
+비교적 선형적인 문자열만이라고 볼 수 있다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-8-1"><a class="lnlinks" href="#hl-8-1"> 1</a>
+</span><span class="lnt" id="hl-8-2"><a class="lnlinks" href="#hl-8-2"> 2</a>
+</span><span class="lnt" id="hl-8-3"><a class="lnlinks" href="#hl-8-3"> 3</a>
+</span><span class="lnt" id="hl-8-4"><a class="lnlinks" href="#hl-8-4"> 4</a>
+</span><span class="lnt" id="hl-8-5"><a class="lnlinks" href="#hl-8-5"> 5</a>
+</span><span class="lnt" id="hl-8-6"><a class="lnlinks" href="#hl-8-6"> 6</a>
+</span><span class="lnt" id="hl-8-7"><a class="lnlinks" href="#hl-8-7"> 7</a>
+</span><span class="lnt" id="hl-8-8"><a class="lnlinks" href="#hl-8-8"> 8</a>
+</span><span class="lnt" id="hl-8-9"><a class="lnlinks" href="#hl-8-9"> 9</a>
+</span><span class="lnt" id="hl-8-10"><a class="lnlinks" href="#hl-8-10">10</a>
+</span><span class="lnt" id="hl-8-11"><a class="lnlinks" href="#hl-8-11">11</a>
+</span><span class="lnt" id="hl-8-12"><a class="lnlinks" href="#hl-8-12">12</a>
+</span><span class="lnt" id="hl-8-13"><a class="lnlinks" href="#hl-8-13">13</a>
+</span><span class="lnt" id="hl-8-14"><a class="lnlinks" href="#hl-8-14">14</a>
+</span><span class="lnt" id="hl-8-15"><a class="lnlinks" href="#hl-8-15">15</a>
+</span><span class="lnt" id="hl-8-16"><a class="lnlinks" href="#hl-8-16">16</a>
+</span><span class="lnt" id="hl-8-17"><a class="lnlinks" href="#hl-8-17">17</a>
+</span><span class="lnt" id="hl-8-18"><a class="lnlinks" href="#hl-8-18">18</a>
+</span><span class="lnt" id="hl-8-19"><a class="lnlinks" href="#hl-8-19">19</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="c1">;;; Array</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">equal</span> <span class="o">#(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span> <span class="o">#(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">;;; Hash Table</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">a</span> <span class="p">(</span><span class="nv">alexandria:alist-hash-table</span> <span class="o">&#39;</span><span class="p">((</span><span class="nv">apple</span> <span class="o">.</span> <span class="nv">red</span><span class="p">)</span> <span class="p">(</span><span class="nv">yellow</span> <span class="o">.</span> <span class="nv">banana</span><span class="p">))))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nv">b</span> <span class="p">(</span><span class="nv">alexandria:alist-hash-table</span> <span class="o">&#39;</span><span class="p">((</span><span class="nv">apple</span> <span class="o">.</span> <span class="nv">red</span><span class="p">)</span> <span class="p">(</span><span class="nv">yellow</span> <span class="o">.</span> <span class="nv">banana</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">equal</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">;;; Struct</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defstruct</span> <span class="nv">point-2d</span> <span class="nv">x</span> <span class="nv">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">a</span> <span class="p">(</span><span class="nv">make-point-2d</span> <span class="ss">:x</span> <span class="mi">1</span> <span class="ss">:y</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nv">b</span> <span class="p">(</span><span class="nv">make-point-2d</span> <span class="ss">:x</span> <span class="mi">1</span> <span class="ss">:y</span> <span class="mi">2</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">   <span class="p">(</span><span class="nf">equal</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">;;; NOTE: CLOS Object은 어차피 Struct와 Slot을 처리하는 방식이 같을테니 생략.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>(참고: 예제의 작성 편의를 위해 <a href="https://common-lisp.net/project/alexandria/draft/alexandria.html#Hash-Tables">Alexandria</a> 라이브러리를 사용해서 Alist을 hash table으로 바로 표현했다.)</p>
+<hr>
+<h1 id="4-완전체-equalp">4. 완전체?: <code>EQUALP</code></h1>
+<p>그래서 <a href="http://clhs.lisp.se/Body/f_equalp.htm#equalp">Function EQUALP</a> 까지 커먼리습에는 지원한다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-9-1"><a class="lnlinks" href="#hl-9-1"> 1</a>
+</span><span class="lnt" id="hl-9-2"><a class="lnlinks" href="#hl-9-2"> 2</a>
+</span><span class="lnt" id="hl-9-3"><a class="lnlinks" href="#hl-9-3"> 3</a>
+</span><span class="lnt" id="hl-9-4"><a class="lnlinks" href="#hl-9-4"> 4</a>
+</span><span class="lnt" id="hl-9-5"><a class="lnlinks" href="#hl-9-5"> 5</a>
+</span><span class="lnt" id="hl-9-6"><a class="lnlinks" href="#hl-9-6"> 6</a>
+</span><span class="lnt" id="hl-9-7"><a class="lnlinks" href="#hl-9-7"> 7</a>
+</span><span class="lnt" id="hl-9-8"><a class="lnlinks" href="#hl-9-8"> 8</a>
+</span><span class="lnt" id="hl-9-9"><a class="lnlinks" href="#hl-9-9"> 9</a>
+</span><span class="lnt" id="hl-9-10"><a class="lnlinks" href="#hl-9-10">10</a>
+</span><span class="lnt" id="hl-9-11"><a class="lnlinks" href="#hl-9-11">11</a>
+</span><span class="lnt" id="hl-9-12"><a class="lnlinks" href="#hl-9-12">12</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">equalp</span> <span class="o">#(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span> <span class="o">#(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">a</span> <span class="p">(</span><span class="nv">alexandria:alist-hash-table</span> <span class="o">&#39;</span><span class="p">((</span><span class="nv">apple</span> <span class="o">.</span> <span class="nv">red</span><span class="p">)</span> <span class="p">(</span><span class="nv">yellow</span> <span class="o">.</span> <span class="nv">banana</span><span class="p">))))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nv">b</span> <span class="p">(</span><span class="nv">alexandria:alist-hash-table</span> <span class="o">&#39;</span><span class="p">((</span><span class="nv">apple</span> <span class="o">.</span> <span class="nv">red</span><span class="p">)</span> <span class="p">(</span><span class="nv">yellow</span> <span class="o">.</span> <span class="nv">banana</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">equalp</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">a</span> <span class="p">(</span><span class="nv">make-point-2d</span> <span class="ss">:x</span> <span class="mi">1</span> <span class="ss">:y</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nv">b</span> <span class="p">(</span><span class="nv">make-point-2d</span> <span class="ss">:x</span> <span class="mi">1</span> <span class="ss">:y</span> <span class="mi">2</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">equalp</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>이제는 모두 다 평범한 기대대로 비교한다.</p>
+<hr>
+<h1 id="5-문자-문자열">5. 문자, 문자열</h1>
+<ul>
+<li>문자값(Character)
+<ul>
+<li><a href="http://clhs.lisp.se/Body/f_chareq.htm#charEQ">Function CHAR=, CHAR/=, .., CHAR-EQUAL, CHAR-NOT-EQUAL, ..</a></li>
+</ul>
+</li>
+<li>문자열(String)
+<ul>
+<li><a href="http://clhs.lisp.se/Body/f_stgeq_.htm#string-equal">Function STRING=, STRING/=, .., STRING-EQUAL, STRING-NOT-EQUAL, ..</a></li>
+</ul>
+</li>
+</ul>
+<p>설명하지 않겠다.</p>
+<p>다만, <code>-=</code>-suffix인쪽은 (더 짧으니까) 대소문자 구분을 하고, 더 긴
+이름이 대소문자를 무시하고 비교해준다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-10-1"><a class="lnlinks" href="#hl-10-1">1</a>
+</span><span class="lnt" id="hl-10-2"><a class="lnlinks" href="#hl-10-2">2</a>
+</span><span class="lnt" id="hl-10-3"><a class="lnlinks" href="#hl-10-3">3</a>
+</span><span class="lnt" id="hl-10-4"><a class="lnlinks" href="#hl-10-4">4</a>
+</span><span class="lnt" id="hl-10-5"><a class="lnlinks" href="#hl-10-5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">string=</span> <span class="s">&#34;abc&#34;</span> <span class="s">&#34;ABC&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">string-equal</span> <span class="s">&#34;abc&#34;</span> <span class="s">&#34;ABC&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h1 id="6-하지만-나는-더-특별하고-싶다-equals">6. 하지만 나는 더 특별하고 싶다: <code>EQUALS</code></h1>
+<p><code>EQUALP</code>면 이름도 길어질만큼 충분히 길어진거 같고, 왠만한 경우를 다
+비교하는거 같은데 굳이 왜 <code>EQUALS</code>은 뭐고 이런게 필요한가?</p>
+<p>하지만 이런게 필요할 때가 있긴 하다 &ndash;&gt; <a href="https://common-lisp.net/project/cdr/document/8/cleqcmp.html">Generic Equality and Comparison for Common Lisp</a></p>
+<p>다른 프로그래밍 언어를 경험해봤다면 한번 정도는 봤었을 다음과 같은걸 하기 위해서:</p>
+<ol>
+<li>Python: <code>__eq__</code></li>
+<li>Java: <code>equals()</code></li>
+</ol>
+<p>그렇다. 기본적으로 CLOS 객체를 만들거나, Struct을 정의해도 커먼리습은
+모든 슬롯(slots)와 타입을 비교해서 같은지를 자동으로 비교해주는
+<code>EQUALP</code>을 제공해서 보통은 파이썬이나 자바처럼 이런 메서드를 일일이
+작성할 필요가 없다.</p>
+<p>하지만 내 struct이나 CLOS객체에 특정 슬롯을 비교에서 제외하고 싶다면,
+정말정말 유니크한 특별한 비교 연산을 지정해서 구현하고 싶다면
+<code>EQUALS</code>을 쓴다.</p>
+<p><code>EQUALS</code>은 Quicklisp으로 간단히 불러올 수 있다. <code>(ql:quickload :equals)</code></p>
+<p>그리고 Inspector으로 <code>#'EQUALS:EQUALS</code>을 살펴보면 다음과 같이 설명한다:</p>
+<ul>
+<li>Name: <code>EQUALS:EQUALS</code></li>
+<li>Arguments: <code>(EQUALS::X EQUALS::Y &amp;REST EQUALS::KEYS &amp;KEY EQUALS::RECURSIVE &amp;ALLOW-OTHER-KEYS)</code></li>
+<li>Documentation:</li>
+</ul>
+<blockquote>
+<p>The EQUALS generic functions defines methods to test for &rsquo;equality&rsquo;
+of two objects a and b. When two objects a and b are EQUALS under an
+appropriate and context-dependent notion of &rsquo;equality&rsquo;, then the function
+returns T as result; otherwise EQUALS returns NIL as result.</p>
+<p>If the argument recursive is T, then EQUALS may recurse down the &lsquo;structure&rsquo;
+of a and b. The description of each known method contains the relevant
+information about its recursive dependent behavior.</p>
+</blockquote>
+<p>특별한 파라미터 없이 그냥 2개의 X, Y을 받고, <code>:RECURSIVE T</code> 정도의 키
+파라미터만 지정이 가능한 generic function이다.</p>
+<p>generic function이기 때문에, 내가 원하는 클래스, struct등에 대해서
+type specialize해서 구현하면 된다.</p>
+<p>기본적으로 hash table, CLOS object, struct, string, array, character,
+cons, number에 대해서 모두 기본 구현한 메서드들을 제공한다.</p>
+<p>하지만 hash table에 대해서는 어차피 specialization이 필요 없을테니 그냥 <code>EQUALP</code>을 쓸 것을 권한다.</p>
+<p>CLOS object, struct에 대해서는 어차피 기본 구현 내용이 <code>EQ</code>을 이용한
+완전히 같은 참조인지를 보는 것이기 때문에 <code>EQUALP</code>을 쓰길 권한다.</p>
+<p>아니라면 다음과 같이 간단한 메서드 구현을 통해 해결한다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-11-1"><a class="lnlinks" href="#hl-11-1"> 1</a>
+</span><span class="lnt" id="hl-11-2"><a class="lnlinks" href="#hl-11-2"> 2</a>
+</span><span class="lnt" id="hl-11-3"><a class="lnlinks" href="#hl-11-3"> 3</a>
+</span><span class="lnt" id="hl-11-4"><a class="lnlinks" href="#hl-11-4"> 4</a>
+</span><span class="lnt" id="hl-11-5"><a class="lnlinks" href="#hl-11-5"> 5</a>
+</span><span class="lnt" id="hl-11-6"><a class="lnlinks" href="#hl-11-6"> 6</a>
+</span><span class="lnt" id="hl-11-7"><a class="lnlinks" href="#hl-11-7"> 7</a>
+</span><span class="lnt" id="hl-11-8"><a class="lnlinks" href="#hl-11-8"> 8</a>
+</span><span class="lnt" id="hl-11-9"><a class="lnlinks" href="#hl-11-9"> 9</a>
+</span><span class="lnt" id="hl-11-10"><a class="lnlinks" href="#hl-11-10">10</a>
+</span><span class="lnt" id="hl-11-11"><a class="lnlinks" href="#hl-11-11">11</a>
+</span><span class="lnt" id="hl-11-12"><a class="lnlinks" href="#hl-11-12">12</a>
+</span><span class="lnt" id="hl-11-13"><a class="lnlinks" href="#hl-11-13">13</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defmethod</span> <span class="nv">equals:equals</span> <span class="p">((</span><span class="nv">x</span> <span class="nv">point-2d</span><span class="p">)</span> <span class="p">(</span><span class="nv">y</span> <span class="nv">point-2d</span><span class="p">)</span> <span class="k">&amp;rest</span> <span class="nv">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">ignore</span> <span class="nv">args</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">equalp</span> <span class="nv">x</span> <span class="nv">y</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">a</span> <span class="p">(</span><span class="nv">make-point-2d</span> <span class="ss">:x</span> <span class="mi">1</span> <span class="ss">:y</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nv">b</span> <span class="p">(</span><span class="nv">make-point-2d</span> <span class="ss">:x</span> <span class="mi">1</span> <span class="ss">:y</span> <span class="mi">2</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">equals:equals</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; T</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">a</span> <span class="p">(</span><span class="nv">make-point-2d</span> <span class="ss">:x</span> <span class="mi">1</span> <span class="ss">:y</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nv">b</span> <span class="p">(</span><span class="nv">make-point-2d</span> <span class="ss">:x</span> <span class="mi">2</span> <span class="ss">:y</span> <span class="mi">2</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">equals:equals</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">; =&gt; NIL</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>혹은 아예 Java, Python에서 이를 직접 구현하듯이 할수도 있다:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-12-1"><a class="lnlinks" href="#hl-12-1"> 1</a>
+</span><span class="lnt" id="hl-12-2"><a class="lnlinks" href="#hl-12-2"> 2</a>
+</span><span class="lnt" id="hl-12-3"><a class="lnlinks" href="#hl-12-3"> 3</a>
+</span><span class="lnt" id="hl-12-4"><a class="lnlinks" href="#hl-12-4"> 4</a>
+</span><span class="lnt" id="hl-12-5"><a class="lnlinks" href="#hl-12-5"> 5</a>
+</span><span class="lnt" id="hl-12-6"><a class="lnlinks" href="#hl-12-6"> 6</a>
+</span><span class="lnt" id="hl-12-7"><a class="lnlinks" href="#hl-12-7"> 7</a>
+</span><span class="lnt" id="hl-12-8"><a class="lnlinks" href="#hl-12-8"> 8</a>
+</span><span class="lnt" id="hl-12-9"><a class="lnlinks" href="#hl-12-9"> 9</a>
+</span><span class="lnt" id="hl-12-10"><a class="lnlinks" href="#hl-12-10">10</a>
+</span><span class="lnt" id="hl-12-11"><a class="lnlinks" href="#hl-12-11">11</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defclass</span> <span class="nv">person</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">((</span><span class="nv">name</span> <span class="ss">:initarg</span> <span class="ss">:name</span> <span class="ss">:accessor</span> <span class="nv">person-name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="p">(</span><span class="nv">age</span> <span class="ss">:initarg</span> <span class="ss">:age</span> <span class="ss">:accessor</span> <span class="nv">person-age</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setf</span> <span class="nv">jhyun</span> <span class="p">(</span><span class="nf">make-instance</span> <span class="ss">&#39;person</span> <span class="ss">:name</span> <span class="s">&#34;jhyun&#34;</span> <span class="ss">:age</span> <span class="mi">17</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">old-jhyun</span> <span class="p">(</span><span class="nf">make-instance</span> <span class="ss">&#39;person</span> <span class="ss">:name</span> <span class="s">&#34;jhyun&#34;</span> <span class="ss">:age</span> <span class="mi">1700</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">stranger</span> <span class="p">(</span><span class="nf">make-instance</span> <span class="ss">&#39;person</span> <span class="ss">:name</span> <span class="s">&#34;stranger&#34;</span> <span class="ss">:age</span> <span class="ss">&#39;???</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defmethod</span> <span class="nv">equals:equals</span> <span class="p">((</span><span class="nv">x</span> <span class="nv">person</span><span class="p">)</span> <span class="p">(</span><span class="nv">y</span> <span class="nv">person</span><span class="p">)</span> <span class="k">&amp;rest</span> <span class="nv">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">ignore</span> <span class="nv">args</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">equalp</span> <span class="p">(</span><span class="nv">person-name</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nv">person-name</span> <span class="nv">y</span><span class="p">)))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>위의 예제에서 <code>name</code> 슬롯만을 동치비교할 때 사용하도록
+구현해봤다. 다른 언어들의 구현과 달리 x, y 끼리의 타입 비교, nullity
+check 같은건 어차피 <code>defmethod</code>의 type specifier에서 모두 걸러지니까
+신경쓰지 않았다.</p>
+<p>꽤 불만스럽게 지금까지 이야기를 끌고 왔는데, 이 방식이 장점도 많다는걸 생각해본다.</p>
+<ol>
+<li>불필요하게 specialized equality checker을 매번 작성하지 않아도 대부분은 잘 동작한다.
+<ol>
+<li>(Java에 Eclipse/IntelliJ 같은 IDE은 물론 Common-Lang, Guava은
+물론 Java SE의 API에도 이걸 해결하기 위한 Helpers, Utils,
+Generators이 항상 넘치는거에 비하면 훨씬 좋은 상황이다.)</li>
+</ol>
+</li>
+<li>그리고 <code>defmethod</code>에서 이미 타입 매칭이나 그런걸 다 해결해놓았고,
+<code>nil</code> 같은 값도 타입이 있어서(<code>NULL</code>타입) 여기에 걸리니까
+동치비교 메서드의 구현이 안전하고 간단하다.</li>
+</ol>
+<p>커먼리습에서 이 주제에 대해서는 거의 모든 내용을 이 글에서 정리한거 같다.</p>
+<hr>
+<h1 id="7-그냥-항상-equals이나-equalp-쓰면-되는거-아닌가">7. 그냥 항상 <code>EQUALS</code>이나 <code>EQUALP</code> 쓰면 되는거 아닌가?</h1>
+<p>그럴지도 모르겠다. 하지만 그럴 필요가 없는 경우에 굳이 복잡하고 더
+느린 연산을 적용할 필요가 없을 때도 많을거 같다. 그리고 그런 이유로
+이렇게 세세하게 분류해서 커먼리습은 여러 레벨으로 등치비교를 제공한다.</p>
+<p>내가 어떤 함수를 정의할 때 타입을 명확하게 지정했는지에 따라서 어떤
+연산을 사용할지 명확하게 결정하기 쉽고 성능도 훨씬 차이가 날거라고
+생각한다. 값의 타입을 실행시간에 알아내거나 타입에 따라서 generic
+function에서 매칭하는 method을 찾아서 dispatch하는건 아무래도 아주
+약간은 더 느릴테니까.</p>
+<p>커먼리습의 <a href="http://clhs.lisp.se/Body/f_find_.htm">find 계열 함수</a>와
+같이 predicate을 인자로 받아서 시퀀스 등에 적용하는 경우도 그렇고,
+<a href="http://clhs.lisp.se/Body/f_mk_has.htm">make-hash-table</a>처럼 아예
+자료구조를 만드는데도 각 요소를 어떻게 비교할지 predicate을 지정하기를
+요구할 때가 많다.</p>
+<p>그때 그때 어떤 값을 다루는지를 잘 결정해서 <code>=</code>에서부터 <code>equals</code>까지의
+넓은 선택 범위 안에서 고르는게 유리하다고 생각한다. 그리고 이들이 잘
+효율적으로 컴파일 시간에 문제를 미리 예측할 수 있도록 이 값들을 다루는
+코드나 정의에서 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/04_bc.htm">type
+specifiers</a>을
+잘 지정해서 컴파일러가 체크하도록 유도를 잘하는 것도 커먼리습이
+다이나믹 타입시스템임에도 컴파일러가 똑똑하게 코드를 타입에 따라
+체크하고 최적화를 해줄 수 있으므로 중요하다.</p>
+<hr>
+<h1 id="맺음말">맺음말</h1>
+<blockquote>
+<p>&ldquo;the greatest single programming language ever designed&rdquo;</p>
+<p>&ldquo;지금까지 설계된 단일 프로그래밍 언어 중 가장 위대한 언어&rdquo;</p>
+<p>&ndash; Alan Kay, on Lisp</p>
+</blockquote>
+<p>&hellip;<a href="https://en.wikipedia.org/wiki/Alan_Kay">Alan Kay</a>께서는
+Smalltalk을 통해 IDE, GUI, 마우스 등을 발명, 도입하셨습니다&hellip;</p>
+<blockquote>
+<p>&ldquo;Life is a tragedy when seen in close-up, but a comedy in long-shot&rdquo;</p>
+<p>&ldquo;삶은 가까이 보면 비극이지만, 멀리서 보면 희극이다&rdquo;</p>
+<p>&ndash; Charlie Chaplin, 챨리 채플린</p>
+</blockquote>
+<p>&hellip;그러게요.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>이름의 끝에 <code>-p</code>-suffix은, predicate이라는걸
+나타내는 컨벤션 전통. 요즘엔 <code>-?</code>을 붙이는 경우도 있는데,
+커먼리습의 CLHS 시절에는 <code>-p</code>-suffix이 더 일반적인거 같다. (예:
+<code>zerop</code>, <code>evenp</code>, <code>oddp</code>; 반례: <code>null</code>), 참고:
+<a href="https://www.cliki.net/Naming+conventions">https://www.cliki.net/Naming+conventions</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">
+                        📚 <a href="/series/programming-languages/">programming-languages</a>
+                        <sup>24</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>51</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lisp/">lisp</a>
+                        <sup>23</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/commonlisp/">commonlisp</a>
+                        <sup>20</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/common-lisp/">common-lisp</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/the-dark-side-of-common-lisp/">the-dark-side-of-common-lisp</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/samesame/">samesame</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/same/">same</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/equality/">equality</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/tips-ecl-clisp/">⬅️ 커먼리습 설정하기, ASDF 시스템 코드를 받기</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-11nov/why-sharpsign-in-method-path/">➡️ (소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1767677425</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proj-A on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/proj-a/</link>
+    <description>Recent content in Proj-A on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/proj-a/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 30/Aug/2020</title>
+      <link>https://ageldama.github.io/posts/2020-08aug/ping-30sun/</link>
+      <pubDate>Sun, 30 Aug 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-08aug/ping-30sun/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;프로젝트 마무리&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;문서도 초안을 다 썼고, 마무리 중.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  분산 커밋로그에 저장하고 읽는 것들을 aync. io을 이용해서 실행되도록&#xA;  하고 있다. 처음엔 그냥 C라이브러리 기반으로 된 blocking 버젼으로&#xA;  만족스러울 정도로 빠른 커밋로그라 그럭저럭 괜찮았는데 한개의 실제&#xA;  사이클인 것처럼 줄일 수 있어서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  또 그냥 failure을 처리하는 부분을 바꾸고, 전체 애플리케이션을&#xA;  특정시점에 더 실제 실행시점처럼 흉내내서 동작하도록 만들 수 있게&#xA;  했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  마무리도 마지막 검증이랑 마쳐가고 있고. 8월도 마무리&#xA;  되어간다. 시간이 빠르다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;&lt;strong&gt;EDIT&lt;/strong&gt; 모두 완료!&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;클라이언트 애플리케이션, 문서, 만족스러운 검증 등등 원하는 것들을 다&#xA;  완료했다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 27/Aug/2020</title>
+      <link>https://ageldama.github.io/posts/2020-08aug/ping-27thu/</link>
+      <pubDate>Thu, 27 Aug 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-08aug/ping-27thu/</guid>
+      <description>&lt;p&gt;&#xA;그간 진행해오던 프로젝트는 성능에 대해서 premature optimization을&#xA;고려해서 만들기 보다는 architectural한 면에 비중을 갖고 가능성을&#xA;염두에두고 선택을 해오며 만들었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그럼에도 꽤 괜찮은 성능이었었고, 이제는 첫번째 버젼의 완성과 문서&#xA;작성도 완료한 시점이어서 앞으로 성능을 높일 방안을 고민해보고 실험을&#xA;몇개 수행해서 방법 결정해봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;(현재 사용하는 방법과 새로이 사용할 방안의 이름은 모두 변경했다.)&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;기존 성능 측정은:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;X event-writer&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;commit을 한번에 하지 않고, 매 이벤트마다 수행해서&#xA;느림. (현재는 변경되었음)&lt;/li&gt;&#xA;&lt;li&gt;약 11,196-microseconds (11-ms)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;X journal-writer&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 24/Aug/2020</title>
+      <link>https://ageldama.github.io/posts/2020-08aug/ping-24mon/</link>
+      <pubDate>Mon, 24 Aug 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-08aug/ping-24mon/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;&amp;#34;프로젝트&amp;#34;&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;진행해온 프로젝트의 문서를 작성 중.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  문서를 작성하면서 더 보충/보강할 내용들이 튀어나온다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  이 또한 사실 즐겁다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;게임하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;Doom64 리메이크를 클리어했다. 마지막 레벨에서는 도저히 깰 수 없어서&#xA;  그냥 마지막 한 마리를 잡기 위해서 치트를 켜서 아쉽다. 하지만 그&#xA;  마지막 보스 이전에 타이드는 그냥 제정신으로 다 죽여서 재밌었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  다음 게임은 퀘이크 시리즈를 다시 플레이할까 생각 중. 폴아웃4,&#xA;  스카이림을 다시 로드해서 플레이를 하며 그 세계에서 시간을 보내도&#xA;  좋겠지만 조금은 다른 게임을 하고 싶어서.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping (2nd) 14/Aug/2020</title>
+      <link>https://ageldama.github.io/posts/2020-08aug/ping2-14fri/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-08aug/ping2-14fri/</guid>
+      <description>&lt;p&gt;&#xA;ㅎㅎ좋다. 이제 문서와 추가적인 작은 도구 몇 개를 더 만드는 것만 남았구나.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

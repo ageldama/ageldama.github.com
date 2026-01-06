@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lxpanel on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/lxpanel/</link>
+    <description>Recent content in Lxpanel on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Fri, 17 Jun 2022 02:50:41 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/lxpanel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 17/06/2022 .01</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/</link>
+      <pubDate>Fri, 17 Jun 2022 02:50:41 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/</guid>
+      <description>&lt;h1 id=&#34;code-bloat-has-become-astronomical&#34;&gt;&amp;ldquo;Code bloat has become astronomical&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/&#34;&gt;https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;극공감. 그렇다고 의존성 포함하면 몇 기가나 되는 것들이, 하는 일을 보면 안습.&#xA;&amp;hellip;그렇다고 그런 방법들만을 고르는 안목이 엄청나게 힙한것도, 스스로에게 이익이 되는것도 아니고.&lt;/p&gt;&#xA;&lt;p&gt;데스크탑에 작은 서브모니터 연결해놓은 rpi3b+이 rpi4보다 빠르지는 않을지 몰라도, micro-sd 버벅거림이랑&#xA;발열 때문에 버벅거리는건 훨씬 적다.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;rpi4은 빠르니까!&amp;ldquo;이라면서 나름대로 데탑/랩탑에서 쓰는 설정 그대로, openbox+lxpanel 정도 올려서 쓰고 있고,&#xA;rpi3b+은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있을까 싶기도 하지만. &amp;hellip;어차피 둘 다 엄청 가벼울거 같은데도.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

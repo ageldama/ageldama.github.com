@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping (2nd) 17/Oct/2020 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1767677425">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+  올해 초 cl-state-machine 라이브러리를 만들어 공개한 이후로
+  커먼리습을 쓰지는 않았다.
+
+  다른 직업상 쓰는 언어들만을 쓰고 오픈소스와 개인적으로 만들고 싶은
+  프로젝트를 위해서 쓰는 언어인 커먼리습은 미뤄두었었다.
+
+  다시 커먼리습을 해야겠다고 생각이 들었다. 개인적으로 만들고 싶은
+  프로젝트도 있고, 그 프로젝트를 위해서 프론트엔드를 만드는데 React와
+  Vue을 써보고 이해하고 있어도 쓰고 싶지는 않기 때문이다.
+
+  사실 커먼리습은 그렇게 문법이 예쁘지도, 멋진 React와 같은 멋진
+  프레임웍이나 최신의 유행하는 라이브러리들을 모두 갖고 있지도 않다.
+
+  HyperSpec을 읽다 보면 아주 쉽게 정의되어 있는 키워드들이 일관성이
+  있지도, 지금 시대의 관점에서 보기에 익숙한 현대적인 용어들을
+  사용해서 이름을 지어놓지도 않았다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.30fcfadf8ec61f30477067ae0c35acd2e4317dd65be5998bffac7940f91f87a6.css"
+          integrity="sha256-MPz6347GHzBHcGeuDDWs0uQxfdZb5ZmL/6x5QPkfh6Y=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-19mon/">⬅️ Ping 19/Oct/2020</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-16fri/">➡️ Ping 17/Oct/2020</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🍃 Ping (2nd) 17/Oct/2020</h1>
+	    <div class="meta">
+                <time datetime="2020-10-17" pubdate>
+                    2020년10월17일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+  올해 초 <a href="https://github.com/ageldama/cl-state-machine">cl-state-machine 라이브러리</a>를 만들어 공개한 이후로
+  커먼리습을 쓰지는 않았다.</p>
+<p>
+  다른 직업상 쓰는 언어들만을 쓰고 오픈소스와 개인적으로 만들고 싶은
+  프로젝트를 위해서 쓰는 언어인 커먼리습은 미뤄두었었다.</p>
+<p>
+  다시 커먼리습을 해야겠다고 생각이 들었다. 개인적으로 만들고 싶은
+  프로젝트도 있고, 그 프로젝트를 위해서 프론트엔드를 만드는데 React와
+  Vue을 써보고 이해하고 있어도 쓰고 싶지는 않기 때문이다.</p>
+<p>
+  사실 커먼리습은 그렇게 문법이 예쁘지도, 멋진 React와 같은 멋진
+  프레임웍이나 최신의 유행하는 라이브러리들을 모두 갖고 있지도 않다.</p>
+<p>
+  <a href="https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec">HyperSpec</a>을 읽다 보면 아주 쉽게 정의되어 있는 키워드들이 일관성이
+  있지도, 지금 시대의 관점에서 보기에 익숙한 현대적인 용어들을
+  사용해서 이름을 지어놓지도 않았다.</p>
+<p>
+  더군다가 그를 사용해서 무언가를 작성하다 보면 금새 hairy한 언어라는
+  것을 깨닫는다.</p>
+<p>
+  심지어 Clojure이나 Racket, Scheme 같은 언어들처럼 정돈되고 간결한
+  문법, 내장 함수 이름도 아니고, 심지어 많은 부분 하이퍼스펙에서
+  정의한 함수들을 재조합해서 흔한 유틸리티 함수 등을 다시 만들어내야
+  하는 경우도 많다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+  Clojure, Racket, Guile Scheme 혹은 심지어 프론트엔드 개발을 하는
+  데에, 심지어 ClojureScript, ReasonML을 쓰고 싶지는 않다. 거기에
+  TypeScript, ECMAScript등을 직접 사용하는 것도 괴롭다는 것을 일
+  관계로 했었던 과거 프로젝트를 떠올려 봐도 그렇게 생산적이지도,
+  안전하지도 않다는 것을 잘 알게 되었다.</p>
+<p>
+  심지어 커먼리습으로 프론트엔드 개발을 하는 데에는 <a href="https://gitlab.common-lisp.net/parenscript/parenscript">parenscript</a> 같은
+  커먼리습-&gt;자바스크립트 생성 라이브러리가 이미 존재한다.</p>
+<p>
+  그냥 자바스크립트를 생성해내는 부분부터 다시 만들고 있다. 원하는
+  것을 가장 잘 반영할 수 있기 때문일 것이다.</p>
+<p>
+  parenscript, ClojureScript, ReasonML, 심지어 Elm이나 TypeScript 같은
+  transpiler 접근이 너무 무겁고 결국 webdev을 하기 위해서 이해해야
+  하는 지식을 어쨌든 요구하기 때문에 별다른 매력이 없다고 생각한다.</p>
+<p>
+  그리고 Racket의 경우에도 ClojureScript와 같은 것이나 parenscript
+  같은 접근이 이미 있다.</p>
+<p>
+  그런데 내가 생각할 때, 그런 프로젝트들은 오히려 (나는 너무 멍청해서)
+  자연스럽게 쓰기 어려웠다. 왜냐하면, 원하는 결과 자바스크립트는
+  단순한데, 그를 위해서 조금만 그렇게 조립된, 마치 Clojure, Racket이나
+  커먼리습을 짜듯이 작성하면 자동으로 자바스크립트으로 변환해주는 것이
+  오히려 더 혼란스럽기 때문이다.</p>
+<p>
+  내가 바라는 것은 커먼리습 코드로 컴파일 시점에 만들어지기를 바라는
+  자바스크립트를 생성해내는 코드를 짜고, 어떤 부분이 컴파일 시점에
+  어떻게 동작하고, 그 결과로 자바스크립트로 emit할 부분이 무엇인지
+  명확하게 이해하고 확인할 수 있는 것이 더 생산적일 것 같다.</p>
+<p>
+  실제로 ClojureScript이나 Racket의 그것은 아예 기존의 Clojure,
+  Racket의 문법과 어휘(<code>let</code> 같은 리습 특유의) 그대로 작성하면 그걸
+  JS으로 transpile해주는데, 이런 접근법이 내겐 가장 안 좋아 보인다.</p>
+<p>
+  프론트엔드 개발을 하는데 커먼리습을 쓰는 이유는 JS을 직접 작성하는
+  것은 내겐 너무 재미 없고 또 그런 것들을 편안하게 만들어주는
+  &#39;JS프로그램을 생성하는 프로그램&#39;을 만들 수 있기 때문이다.</p>
+<p>
+  프론트엔드 JS을 직접 작성하는 것이 사람이 실수를 하건 말건, 마치
+  예전 가장 바닥의 어셈블리어로 DOS애플리케이션을 작성하던 시절과
+  비슷해 보이기 때문이다.<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup> …혹은 현재의 사람들이 그렇게도 쉽게
+  비웃는 PHP와 같아 보인다.<sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup></p>
+<p>
+  ReasonML<sup class="footnote-reference"><a id="footnote-reference-4" href="#footnote-4">4</a></sup>, Elm도 마찬가지다. 흥미롭고 많은 부분 간결해졌고 JS을
+  직접 쓰며 빠질 함정들을 메워놓았고, 심지어 내가 원하는 매크로 기능도
+  지원을 하지만 커먼리습의 <a href="http://clhs.lisp.se/Body/m_defmac.htm">defmacro</a>만큼 내겐 직관적이지 않다. 하지만
+  ReasonML, Elm에서 보이는 데이터타입의 정리나 패턴매칭 등은 탐난다.</p>
+<p>
+  결국 Scheme을 쓰면서도 내게 아쉬웠던 부분은 &#39;그냥 커먼리습이
+  아니어서&#39;였었던 것 같다. 그냥 적당히 잘 동작하는 컴파일러와 컴파일 시점,
+  매크로 확장 시점, 실행시점 모두 내가 정의한대로 확장이 가능하고
+  그렇기 위해서 live image안에서 코딩을 하면서 가장 편안하다.</p>
+<p>
+  Scheme의 우아한 <a href="https://docs.racket-lang.org/guide/pattern-macros.html">define-syntax-rule</a> 같은 것들이 좋지만, 그래도 그냥
+  defmacro의 단순함과 라이브 이미지에서 개발하는 점은 커먼리습이 더
+  편안하기 때문이다. 그리고 스킴이나 라켓을 지양하는 이유는,
+  전형적으로 &#39;표준위원회&#39;의 pitfall에 빠져서<sup class="footnote-reference"><a id="footnote-reference-5" href="#footnote-5">5</a></sup>, 오히려 커뮤니티가 너무
+  작고 많게 fragmented되어 있고, 그래서 라켓이나 GNU Guile 정도를
+  제외하고 뭘 쓸 수 있을지 고민되는데다가, 후자는 심지어 제대로 된
+  빌드시스템, 패키지관리자도 기대하기 어렵다.<sup class="footnote-reference"><a id="footnote-reference-6" href="#footnote-6">6</a></sup></p>
+<p>
+  더 나아가서 타입스크립트 정도를 보면 나는 더 정신이
+  아득해진다. 타입체킹이 컴파일 시점에 있기는 하지만 적당한 정도로
+  한계를 갖는 타입시스템, 흔히 현재 대부분의 개발자들이 납득할 정도인
+  타입시스템이어서 그렇게 유효한 체크가 일어나는지는 모르겠다.<sup class="footnote-reference"><a id="footnote-reference-7" href="#footnote-7">7</a></sup>
+  그리고 그 정도로 타입체킹이 중요하다면 차라리 다른 언어, ReasonML
+  같은 경우가 더 안전하고 나은 접근일 것 같다. 실은 이미 JS에 익숙한
+  이들은 TS으로 transition이 쉬우리라 생각하는 것을 이용해서 마케팅에
+  성공한 예일 뿐인 것 같다. 그리고 그런 쉬운만큼 JS의 pitfall들도
+  대부분 그대로 이어 받을 것이라고 생각한다.</p>
+<p>
+  ClojureScript와 같은 리습을 그대로 JS으로 매핑해 컴파일 하는 방식은
+  물론, JS 프론트엔드 프레임웍들도 그런 JS의 이상한 점을 그대로
+  확장해가며 괴로운 모습이다. 내가 볼 때는 인간승리에 가까운 방식으로
+  프레임웍들을 구현하고 있는 것 같다.</p>
+<p>
+  다시 잘 생각해보자. JS이 어셈블리어와 같은 수준인 상황인데, 그
+  어셈블리어를 그대로 쓰거나 조금 확장한 문법(ES20xy은 물론 JSX,
+  Vue등의)의 Transpiler을 쓰는 것은 괜찮은 접근일지 말이다. 내 생각엔
+  그렇지는 않을 것 같다. 여전히 그 어셈블리어의 이상한 점을 가져와
+  그대로 표현이 일어날거고 다시 그런 oddities은 그 패턴을 더 큰
+  파장으로, 그리고 아주 유사한 형태를 가진채 번져나갈 것이다.</p>
+<p>
+  실제로 React의 Redux을 보고 있으면 정신이 아득해진다. Mobx으로
+  조금은 나아진 것 같다. 그리고 Vue의 모든 부분들도 어쨌든
+  자바스크립트의 문법을 그대로 사용하고 있고, 그 디자인에 영향을
+  그대로 갖기 때문이다.</p>
+<p>
+  상태관리 패턴을 만들기 위해서, 혹은 값과 바인딩되어 자동으로
+  DOM객체를 변형하게 만들기 위해서 곡예에 가까운 테크닉을 동원하여
+  JS프레임웍들을 구현된다. 상태관리 패턴을 배울 때에 <code>x = 42</code> 와 같은
+  너무도 당연한 JS문장 대신에 <code>setState(...)</code> 을 쓰거나, <code>Proxy</code>
+  등등과 같은 것은 물론 Transpiler을 통해 신비롭게 동작하는 바인딩을
+  보고 있으면 무언가 이상한 느낌이다. 하지만 JS의 문법을 확장할 수도,
+  문법이 리습처럼 균일하지도, 확장 가능하지도 않기 때문임을
+  생각해본다.</p>
+<p>
+  더욱이 발전해서, VDOM 같은 것을 보면, VDOM으로 인해서 생기는
+  추가적인 문제들, force re-render이나 VDOM diffing이 제대로 이뤄지지
+  않아서 너무 무거워지는 화면 등등을 더 고려해야 되게 된다.</p>
+<p>
+  이렇게 말을 하고 보니 세상 혼자 잘난 것 같아 보일 것 같아
+  걱정이다. 하지만 나도 React이나 Vue이 가장 현실적으로 웹프론트엔드
+  개발을 하는데 가장 좋은 대안이고 생산적이고 멋지다고 생각하고, 나도
+  사용을 하며 고마웠었고, 그리고 아마 앞으로도 계속 쓰게 될 것이다.</p>
+<p>
+  나는 지금 내가 어떻게 프론트엔드 개발을 하고 싶은지, 기존의
+  접근법들에서 이상하다고 느끼고 다르게 해보고 싶은 이유가 무엇인지를
+  따져보고 있는 중일 뿐이다. 그것도 상업적인 프로젝트으로 팀활동으로서
+  프로젝트를 한다면 더욱이 리액트나 뷰, 타입스크립트 같은 평범한 기술
+  스택을 쓰는 것을 선호할 것이다.</p>
+<p>
+  그냥 내가 쓰고 싶은 방법, 개인적인 무언가를 만들 때 쓰고 싶은
+  것으로서 만들고 있는 것은, 그냥 결국 JS VM, DOM이 어떻게 동작하는지
+  잘 이해하고 있고, 그를 잘 조절할 수 있고, 그를 위해서 별다른
+  VDOM이나 추가적인 문법이나 패턴을 너무 많이 익히지 않고 표현할
+  방법을 원하는 것 같다. 적어도 내게 가장 추가적인 추상화-학습 비용을
+  요구하지 않고 마치 바닐라JS을 코딩한 것 같은 가벼운 결과물을
+  원한다. 거기에 표현력은 리습과 매크로를 이용해 조절할 수 있을테니까.</p>
+<p>
+  예전에는 나이가 조금 있는 엔지니어가 말했었다. &#34;프로그래밍언어는 다
+  똑같다&#34; 그리고 그에 대해 새로운 테크스택을 선호하는 엔지니어는
+  말했다. &#34;프로그래밍언어별로 생산성과 특성이 다르다는 것을 무시할 수
+  없다&#34;.</p>
+<p>
+  둘 다 맞기도 하지만, 실제로는 그 말들이 담아내야 할 내용을 잘
+  포착하지 못한 상태로 말해진 것 같다.</p>
+<p>
+  프로그래밍언어가 다 똑같기 때문에 비주얼베이직6을 쓰며 연상배열도
+  없어서 끔찍하게 코딩을 하는 사람을 보기도 했고, 그리고 현재에는
+  끝없이 쏟아지는 새로운 언어와 추가적인 스펙들을 사람들이 열심히
+  공부해가는데 그 내용은 어딘가 저걸 공부해서 얻기 보다 다른 것을
+  공부해서 저걸 결정한 사람이 무슨 생각이었는지 이해하면 쉬울텐데 싶은
+  것들이 너무 많다.<sup class="footnote-reference"><a id="footnote-reference-8" href="#footnote-8">8</a></sup> …그렇게 따라잡기 어려운 경주를 해간다.</p>
+<p>
+  결국 대상하는 실행기계가 어떻게 동작하는지 잘 이해하고 그를 위한
+  입력 프로그램을 만드는 것을 만들고 싶은 것 뿐이다. 그리고 그
+  생성기는 간단하고 당연한 결과를 뱉어냈으면 한다. 그 어셈블리 위에
+  지어진 또 다른 무언가, 더 이해하기 어려워진 무언가를 그냥 익히고
+  그것과 씨름하는 것은 개인의 재미를 위해 하고 있는 내 프로젝트에서는
+  사양하는 것이다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>물론 직접 모든 함수들을 작성하지 않고 alexandria, uiop,
+trivial-* 같은 그런 부족한 부분을 채워주는 라이브러리들이 있다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p><a href="https://github.com/denysdovhan/wtfjs">https://github.com/denysdovhan/wtfjs</a> …모아 놓으면 이렇게나
+가득이라서.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-3"><a href="#footnote-reference-3">3</a></sup>
+<div class="footnote-body">
+<p>역시
+<a href="https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/">https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/</a> 이렇게
+친절하게 정리되어 있다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-4"><a href="#footnote-reference-4">4</a></sup>
+<div class="footnote-body">
+<p>현재는 아마 BuckleScript으로 리브랜딩 중인 것 같다. </p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-5"><a href="#footnote-reference-5">5</a></sup>
+<div class="footnote-body">
+<p>그런 방법, 특히 권위를 가진 위원회가 모든 것을 &#39;민주적인&#39;
+방법으로 결정해주면 모든 문제가 사라질거라 믿기는 어렵다. 이슈의
+복잡함을 이해하지 못하거나 그런 사유를 하고 싶지 않아서 단순하게
+권위에 생각을 포기하고 맡겨버린 것 같은. 하지만 실제로는 그 표준이
+제정되기까지 시간이 너무 걸리거나 구현체가 제각각 표준을 다른 수준으로
+구현해버린 경우가 스킴 컴파일러인 것 같다. 그나마 JS의 경우에는 그런
+위원회의 스펙을 Babel 같은 트랜스파일러를 통해서 성공적으로 반영하고
+있는 경우지만.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-6"><a href="#footnote-reference-6">6</a></sup>
+<div class="footnote-body">
+<p>빌드에 GNU AutoTools을 쓴다.. GNU 프로젝트니까? ㅎㅎ 거기에
+guildhall 같은 패키지관리자가 있지만… 차라리 Guix이 더 현실적인
+대안으로 보일 정도로 정체되어 있다. </p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-7"><a href="#footnote-reference-7">7</a></sup>
+<div class="footnote-body">
+<p><a href="https://github.com/clojure/core.typed">https://github.com/clojure/core.typed</a> /
+<a href="https://docs.racket-lang.org/reference/contracts.html">https://docs.racket-lang.org/reference/contracts.html</a> 같은 정도로 타입
+정보에 정말로 코드가 안전하게 동작하기 위해서 필요한 property을 지정이
+가능하지 않은 것 같다. </p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-8"><a href="#footnote-reference-8">8</a></sup>
+<div class="footnote-body">
+<p>예를 들어, Brendan Eich은 뼛속까지 lisper인 것 같다. 다른
+네이밍을 보면 JS개발자들은 &#39;JS스러움&#39;이 따로 있다고 말하고 싶은 것
+같지만, 실제로 추가되는 키워드나 그 기능을 보면 리습의 그것이랑 뭐가
+다른지, 차라리 리습을 잘 알고 있다면 너무 당연한 것들이었었다. 예를
+들어, <code>function*</code> 같은 네이밍을 보면 리습 커뮤니티에서 너무 자주
+쓰이는 표기법이다(
+<a href="https://stackoverflow.com/questions/5082850/whats-the-convention-for-using-an-asterisk-at-the-end-of-a-function-name-in-clo">https://stackoverflow.com/questions/5082850/whats-the-convention-for-using-an-asterisk-at-the-end-of-a-function-name-in-clo</a>
+) 그리고 <code>Symbol</code> 같은 최근 JS에 추가된 내용을 봐도 그냥 리습에서
+심볼에 대해 이해하고 있다면, interning 같은 것들을 이해한다면 너무
+당연해 보인다.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>98</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>51</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webdev/">webdev</a>
+                        <sup>25</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lisp/">lisp</a>
+                        <sup>23</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/commonlisp/">commonlisp</a>
+                        <sup>20</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/common-lisp/">common-lisp</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/opensource/">opensource</a>
+                        <sup>10</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/reactjs/">reactjs</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/macro/">macro</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/typescript/">typescript</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/clojure/">clojure</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/scheme/">scheme</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/guile/">guile</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/php/">php</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/elm/">elm</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/vuejs/">vuejs</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/vdom/">vdom</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/transpiler/">transpiler</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ecmascript/">ecmascript</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/reasonml/">reasonml</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/clojurescript/">clojurescript</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/racket/">racket</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/parenscript/">parenscript</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hyperspec/">hyperspec</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-19mon/">⬅️ Ping 19/Oct/2020</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-16fri/">➡️ Ping 17/Oct/2020</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1767677425</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

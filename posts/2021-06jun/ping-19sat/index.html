@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 19/Jun/2021 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1767677425">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,
+github repositories도 대부분은 private으로 변경해놓고 지냈었다.
+
+하지만 그래도 coding과 글쓰기는 계속 하고 있었었고, 글을 조금씩이라도 공개할까 싶어 다시 문을 연다.
+
+그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,
+
+Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것,
+또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.
+
+그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.
+이제는 너무 이맥스 &#43; evil 설정 등에 익숙해져서 vim을 오히려 더 설정해서 쓰고 싶은 생각도 들지 않는다.
+..하지만 다른 이들에게 이맥스를 쓰라고 권하기는 머뭇거려진다. 어릴 때부터 이맥스를 사용했고 그렇게 습관으로 하나씩 하나씩 이맥스 컨벤션과 모드들에 익숙해져서 시간이 오래 걸렸었던 것 같으니까." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.30fcfadf8ec61f30477067ae0c35acd2e4317dd65be5998bffac7940f91f87a6.css"
+          integrity="sha256-MPz6347GHzBHcGeuDDWs0uQxfdZb5ZmL/6x5QPkfh6Y=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-jekyll/2022-06-06--01-hotwired-fun/">⬅️ Hotwired 재밌다.</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-11nov/ping-29sun/">➡️ Ping 29/Nov/2020</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">C++, Python 3, Go, Node.js, Rust</a>
+</li>
+<li><a href="#headline-2">Raspberry Pi 4, Void Linux, OpenSUSE USB-HDD, Btrfs</a>
+</li>
+<li><a href="#headline-3">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🐱 Ping 19/Jun/2021</h1>
+	    <div class="meta">
+                <time datetime="2021-06-19" pubdate>
+                    2021년06월19일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,
+github repositories도 대부분은 private으로 변경해놓고 지냈었다.</p>
+<p>
+하지만 그래도 coding과 글쓰기는 계속 하고 있었었고, 글을 조금씩이라도 공개할까 싶어 다시 문을 연다.</p>
+<p>
+그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,</p>
+<p>
+Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것,
+또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.</p>
+<p>
+그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.
+이제는 너무 이맥스 + evil 설정 등에 익숙해져서 vim을 오히려 더 설정해서 쓰고 싶은 생각도 들지 않는다.
+..하지만 다른 이들에게 이맥스를 쓰라고 권하기는 머뭇거려진다. 어릴 때부터 이맥스를 사용했고 그렇게 습관으로 하나씩 하나씩 이맥스 컨벤션과 모드들에 익숙해져서 시간이 오래 걸렸었던 것 같으니까.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+C++, Python 3, Go, Node.js, Rust
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>Python 3, Async I/O은, 작년 한 해 동안은 개인적으로 열심히 사용하며 지냈다.</p>
+<p>
+  파이썬에서 좋아하게 되었던 라이브러리는, Pytest였었는데, 적당히 Pytest + unittest.mock와도 묶어서 테스트를 짜기도 즐거웠고, 파이썬답게 많은 Kafka, SQL 연결 라이브러리들이 이미 잘 Async I/O용으로 갖추어져 있었어서 좋았다.</p>
+<p>
+  직접 만들어 쓰는 TCP서버를 위해, 백그라운드에서 동작해야 하는 작업, clockwork등의 기능을 모두 파이썬 multiprocessing/threading을 쓰지 않고, 그냥 event I/O loop에 등록해서 구현했다. 성능에도 만족스러웠고, async/await/generator와 파이썬의 context manager을 직접 적용할 수 있어서 여러 부분 재밌게, 수월하게 작성할 수 있었었다.</p>
+<p>
+  그리고 그 이후 최근에는 Node.js, TypeScript은 실용적으로 사용하고 지냈었다.
+  일터에서 쓸 일도 조금 있었었고, 개인적으로 만들어 쓰는 것에도 재밌게 잘 썼었다. 파이썬과는 또 다른 형태로 재밌고 실용적인 것이 node.js인 것 같은데, 거기에 타입스크립트도 재밌게 공부하고 쓸만한 것 같았다.</p>
+<p>
+  (C++11 이전) C++을 사용한 제품을 만들고 관리를 했었는데, 즐거운 경험이었었다. 다들 C++을 싫어하지만.</p>
+<p>
+  Rust을 익히고 공부하면서, 재밌는 점은, 오히려 Modern C++을 더 친숙하게 이해하게 된 점일 것 같아.
+  Modern C++의 메모리 관리를 위한 패턴 등이 그대로 러스트에서 컴파일러와 표준 모듈을 사용하며 익힐 수 밖엔 없으니까.</p>
+<p>
+  또, Tokio을 사용하면서, Async/Await을 편안하게 구현해줘서 좋다.
+  과거의 Go언어를 사용하며, Goroutine, Channel을 사용하고, &#34;sync&#34; 모듈을 사용하여 동시성 패턴을 구현할 때만큼, 혹은 더 편안한 것 같다. Go언어의 그것들이 kit에 가까웠고, 동시성패턴들을 구현하기 적합하고 단순하게 잘 해낼 수 있게 도와줬었다면, Tokio, std::sync::*의 Rust의 것들은 잘 이해하고 있다면 강력하게 사용하기 좋은 것에 가깝기 때문.</p>
+<p>
+  C++의 Boost.Asio을 사용하면, Boost.Context, Boost.Coroutine을 이용해 의외로 경량스레딩, async/await을 나름대로 사용할 수 있게 되었을 때 즐거웠던 것과 비슷한다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Raspberry Pi 4, Void Linux, OpenSUSE USB-HDD, Btrfs
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>메인데스크탑과 랩탑, 사이드킥 본체 모두 Btrfs으로 ext4에서 convert. 만족스러운 성능인 것 같아.</p>
+<p>
+  사이드킥은 FreeBSD을 오래 설치해놓고 사용해왔었는데, 랩탑과 함께 void linux으로 재설치. 만족스럽다. 가볍고 원하는 방식으로 동작하는 것이 마음에 든다.</p>
+<p>
+  메인데스크탑은 몇 년째 archlinux 설치해 놓은 것이 문제 없이 잘 굴러간다. 가끔 너무 패키지 릴리즈 속도가 빠라서, 새로운 패키지 설치를 위해서 먼저 pacman -Syu을 해줘야 하는 것 빼고는 만족스럽다.</p>
+<p>
+  archlinux, void linux 모두 가벼운 것, 롤링 패키징 방식 등 서로 비슷한 점이 많아서 내가 좋아하는 것 같다.</p>
+<p>
+  하지만, 완전히 다른 안정적인 방식으로 동작해서 마음에 드는 배포판이 더 생겼다.
+  사이드킥 이외에 raspberry pi 4을 메모리가 조금 큰 버젼으로 구매해서 세팅하며 놀았다.</p>
+<p>
+  책상 한 켠에 저소음 보조 컴퓨터로 쓰려고.
+  void linux, archlinux 모두 뭔가 설치하고 설정하기는 좋은데, 뭔가 아쉬웠다. rpi4용 드라이버 패키징이나 그런 것들이, 가장 괜찮은 배포판은 opensuse이란 점을 알게 되었다. 그리고 가장 설치하기도 편안했고.</p>
+<p>
+  특히 비디오 드라이버는 opensuse은 신경 쓸 점이 없이 바로 잘 동작해서 태어나서 처음 opensuse 계열을 잘 쓰고 있다. 그리고 앞으로도 정착해서 계속 쓸 것 같아.</p>
+<p>
+  debian은 testing만 이미지를 지원하고 있었고, ubuntu은 설치도 잘 되고 드라이버 지원도 좋은데, 우분투라서 너무 끔찍하게 무거워서 지웠다. 그리고 fedora도 시도를 해봤는데 패키징도 좋고 잘 설정되었지만, 역시 rpi4에서 돌리기에는 이상하게도 opensuse에 비해서 많이 느려서 포기.</p>
+<p>
+  그리고 micro sd에 설치해서 사용하는 방식이 아니라, rpi eeprom firmware을 업데이트하고, 설정을 변경해서 usb hdd에 설치하고, 아예 부팅부터 모두 usb hdd에서 동작하도록 설정해놓아서, rpi4 + micro sd 특유의 툭툭 멈췄다가 계속되는 성능 답답함을 없앴다. 그리고 역시 btrfs으로 세팅했는데 괜찮은 성능.</p>
+<p>
+  하지만 rpi4 aarch64에 메모리도 충분해도, 더 낮은 사양의 인텔, amd cpu보다는 아직은 느린 것 같아.
+  그냥 저냥 보조용으로만 쓰기에는 좋은 정도. 그렇게 엄청나게 버벅거리지는 않고.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>Boost.Asio은 정말 다양한 방식으로 동시성 패턴을 조성할 수 있는데, (Boost.Asio자체적으로 제공하는 방식만으로도), 여기서 언급한 것은 spawn/yield방식. </p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">
+                        📚 <a href="/series/programming-languages/">programming-languages</a>
+                        <sup>24</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>98</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>51</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emacs/">emacs</a>
+                        <sup>23</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/freebsd/">freebsd</a>
+                        <sup>11</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/c&#43;&#43;/">c&#43;&#43;</a>
+                        <sup>11</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/golang/">golang</a>
+                        <sup>8</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/python/">python</a>
+                        <sup>8</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/raspberrypi/">raspberrypi</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/nodejs/">nodejs</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/raspberry-pi/">raspberry-pi</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/rpi/">rpi</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/asyncio/">asyncio</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/vim/">vim</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/typescript/">typescript</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/threading/">threading</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/rust/">rust</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cxx/">cxx</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/void-linux/">void-linux</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/multiprocessing/">multiprocessing</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/server/">server</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/pytest/">pytest</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/opensuse/">opensuse</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/btrfs/">btrfs</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/asio/">asio</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/boost/">boost</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/channel/">channel</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/goroutine/">goroutine</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/tokio/">tokio</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/context-manager/">context-manager</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/tcp/">tcp</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/kafka/">kafka</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/unittest.mock/">unittest.mock</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-jekyll/2022-06-06--01-hotwired-fun/">⬅️ Hotwired 재밌다.</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-11nov/ping-29sun/">➡️ Ping 29/Nov/2020</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1767677425</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

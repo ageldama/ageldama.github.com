@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 07/02/2019 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1767677425">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="Golang 사랑
+회사일로 Golang을 다시 잡고 쓰게됐다.
+예전에도 잠깐 썼었는데1, 이번엔 그냥 더 오래 진지하게 필요에
+의해서 쓰게됐다.
+지금 일터에서도 필요에 의해서 작은 프로그램을 작성하고 할 일이
+있어서 쓰다가 아예 서비스 코드에 적용을 하려 일하고있다.
+많은걸 더 깊이 생각하고 익히는 좋은 계기로 꾸준하게 사용하고 있고,
+만족스럽다. 대부분의 경우에. 그리고 Emacs와 연동도 좋고 언어 자체의
+설계나 그런점들도 너무 좋은거 같다.
+GC이 있는 언어를 최근에는 꺼리다가 다시 사용하니까 좋은것 같아. 그냥
+문법적은 모호함이 없고 단순함, 머리에 쉽게 기억할만한 규칙들, 혹은
+아예 어떤 규칙도 기억할 필요가 없도록 만들거나 하는게 얼마나 설계에
+좋은지 깨닫는다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.30fcfadf8ec61f30477067ae0c35acd2e4317dd65be5998bffac7940f91f87a6.css"
+          integrity="sha256-MPz6347GHzBHcGeuDDWs0uQxfdZb5ZmL/6x5QPkfh6Y=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">⬅️ NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/2019-02feb07thu-gosched-fun/">➡️ Golang Goroutine, Channel, I/O 그리고 Scheduler 이해해보기</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#golang-사랑">Golang 사랑</a></li>
+    <li><a href="#이맥스-helm에서-ivycounsel으로">이맥스, Helm에서 Ivy+Counsel으로</a></li>
+    <li><a href="#새로-알게된-모르는것들">새로 알게된 모르는것들</a></li>
+  </ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🦍 Ping 07/02/2019</h1>
+	    <div class="meta">
+                <time datetime="2019-02-07" pubdate>
+                    2019년02월07일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <h1 id="golang-사랑">Golang 사랑</h1>
+<p>회사일로 Golang을 다시 잡고 쓰게됐다.</p>
+<p>예전에도 잠깐 썼었는데<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, 이번엔 그냥 더 오래 진지하게 필요에
+의해서 쓰게됐다.</p>
+<p>지금 일터에서도 필요에 의해서 작은 프로그램을 작성하고 할 일이
+있어서 쓰다가 아예 서비스 코드에 적용을 하려 일하고있다.</p>
+<p>많은걸 더 깊이 생각하고 익히는 좋은 계기로 꾸준하게 사용하고 있고,
+만족스럽다. 대부분의 경우에. 그리고 Emacs와 연동도 좋고 언어 자체의
+설계나 그런점들도 너무 좋은거 같다.</p>
+<p>GC이 있는 언어를 최근에는 꺼리다가 다시 사용하니까 좋은것 같아. 그냥
+문법적은 모호함이 없고 단순함, 머리에 쉽게 기억할만한 규칙들, 혹은
+아예 어떤 규칙도 기억할 필요가 없도록 만들거나 하는게 얼마나 설계에
+좋은지 깨닫는다.</p>
+<p>진지한 커다란 애플리케이션에서 작은 커맨드라인 도구까지 그냥 만들기
+참 좋은 언어인거 같다.</p>
+<p>단순히 코딩을 하고 실행하고, 테스트케이스를 돌려보고, 그런 각
+싸이클이 너무 복잡하거나 느리지 않고 밸런스가 정말 잘 맞는 언어와
+툴링인거 같아서 사랑스럽다.</p>
+<p>최근에는 유일하게 Go언어에서 싫어하던 <code>$GOPATH</code>도
+<a href="https://github.com/golang/go/wiki/Modules">go111-module</a>으로
+해결되고 하는거 같아서 더 좋아졌다.</p>
+<p>Perl, C++, Golang, 커먼리습 같은 언어들이 점점 더 좋아지는거
+같다. 공통점은 딱히 Functional하지도, 그런걸 병적으로 추구하지도
+않으면서 잘 동작하고, 그렇게 예쁜 코드를 짤 수 있도록 해주지도
+않지만, 정말 잘 동작하고 튼튼하고 그래서 가장 생산적인거 같아서.</p>
+<h1 id="이맥스-helm에서-ivycounsel으로">이맥스, Helm에서 Ivy+Counsel으로</h1>
+<p>오랬동안 개인 이맥스 설정을
+<a href="https://github.com/emacs-helm/helm">Helm</a>을 중심으로 설정해놓고 잘
+쓰다가, 이번에 <a href="https://github.com/abo-abo/swiper">Counsel/Ivy</a> 기반으로 모두 바꿨다.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>좋은점들만 적어보면,</p>
+<ol>
+<li>Helm에서 Swoop등의 내용을 Occur형태의 버퍼로 저장할때, 지원여부가
+검색에 따라 잘 안될때가 더 많았었는데, Ivy에서는 무조건 된다.
+<ul>
+<li><code>ivy-occur</code> 기능이 무조건 동작이라 정말 편하다.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></li>
+</ul>
+</li>
+<li><code>ivy-occur</code>에서 또 wgrep으로 바로 수정도 편안하다.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></li>
+<li>가볍다. 그리고 별거 아니지만 훨씬 탄탄한 느낌이다. (에러 없이 동작하고, 설정도 깔끔하고)</li>
+<li><a href="https://github.com/BurntSushi/ripgrep">Ripgrep</a>이랑 out-of-box으로 연동되어서 편하다.<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></li>
+</ol>
+<p>그냥 만족하고 오랬동안 쓸만한거 같아. 거기에 <code>find-file</code>이나
+<code>swiper</code>등에서 regexp으로 입력이 되거나, fuzzy-matching이 되거나
+하는것들도 내가 익숙한쪽으로 설정이 다 가능해서 편안하다.<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></p>
+<h1 id="새로-알게된-모르는것들">새로 알게된 모르는것들</h1>
+<p>그냥 그간 내가 잘 안다고 생각했지만, 사실은 잘 모르는것들에 대해서 생각하기 시작했다.</p>
+<p>예를 들어, SQLite3이라던가 하는걸 이용해서 커맨드라인에서 활용하기,
+GNU Parallel, Awk, Perl, <a href="https://stedolan.github.io/jq/">jq</a> 등의
+도구들을 잘 활용하는것들을 얼마나 게으르게 익혀왔었던가 생각해본다.</p>
+<p>문서도 충분히 많고<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>, 충분히 커맨드라인이나 스크립팅으로 할 수 있는
+일들이 강력하게 많은데, 그런것들을 읽거나 깊이 생각하고 중요하게
+여기지도 않았었던거 같다.</p>
+<p>결과적으로 내가 매일의 무언가 작업을 할때마다 힘들고 더 안좋은 방법을
+선택하게 되는것도 내 탓이었었던거 같다.</p>
+<p>그냥 조금만 그런것들이 그냥 멍청한 과거의 유산이 아니라, 내 오늘과
+내일을 더 편안하고 낫게 만들어줄 방법이라는걸 생각하고 대했더라면
+후회스러웠다.</p>
+<blockquote>
+<p>도구에 집착하는 사람이 도구의 노예인가, 아니면 도구에 집착하지도
+않아서 도구를 제대로 쓰지도 못하고, 도구를 활용하지 못한채 힘들게
+지내거나, 도구를 어떻게 쓸까 전전긍긍하는쪽들이 도구의 노예인가?</p>
+</blockquote>
+<p>진짜 도구를 <em>다루는</em> 일은 그걸 직면하고 잘 익히고 그 가치를 잘
+이해하고 사용하는쪽인것 같다.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://github.com/pazuzu-io/pazuzu">https://github.com/pazuzu-io/pazuzu</a> 잘란도 온보딩 마지막에
+회사내 프로젝트 인큐베이터에서 Golang으로 작업할일이 있었었다.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>새로운 설정 파일=<a href="https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2019">https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2019</a>
+/ 예전 설정파일=<a href="https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018">https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://oremacs.com/swiper/#saving-the-current-completion-session-to-a-buffer">https://oremacs.com/swiper/#saving-the-current-completion-session-to-a-buffer</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://github.com/mhayashi1120/Emacs-wgrep">https://github.com/mhayashi1120/Emacs-wgrep</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>Helm은 다른 플러그인을 더 깔거나 해야 했고, 그나마도
+<a href="https://github.com/bbatsov/projectile">Projectile</a>등이랑 또
+궁합이 막 안맞는거 같고 그래서 힘들었었다.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>앞으로 이맥스에 내가 사용하는 프로그래밍 언어나 기본 키 바인딩,
+창-버퍼 조작 방법, 파일 검색이나 프로젝트 검색 같은 워크플로우
+같은것들을 정리해서 포스팅하고 공유할까 생각중.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>대부분의 시스템에 Bash이나 jq, GNU Parallel, Awk 같은것들의
+Manpage이나 Info문서들이 기본적으로 설치되어있을텐데.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>98</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>51</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/perl/">perl</a>
+                        <sup>14</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/golang/">golang</a>
+                        <sup>8</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/awk/">awk</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sqlite/">sqlite</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sqlite3/">sqlite3</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/jq/">jq</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ivy/">ivy</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/counsel/">counsel</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gnu-parallel/">gnu-parallel</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/occur/">occur</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/swoop%EB%93%B1%EC%9D%98/">swoop등의</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/helm/">helm</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ripgrep/">ripgrep</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">⬅️ NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/2019-02feb07thu-gosched-fun/">➡️ Golang Goroutine, Channel, I/O 그리고 Scheduler 이해해보기</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1767677425</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

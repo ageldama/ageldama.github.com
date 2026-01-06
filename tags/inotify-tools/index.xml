@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inotify-Tools on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/inotify-tools/</link>
+    <description>Recent content in Inotify-Tools on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Wed, 24 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/inotify-tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</title>
+      <link>https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/</link>
+      <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/</guid>
+      <description>&lt;p&gt;&#xA;코딩을 하다보면, 파일변경시에 자동으로 빌드, 서버재시작, 혹은&#xA;테스트케이스를 실행 되도록 하면 꽤 편리할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;커먼리습 같은 경우엔 바로 실행중인 코드가 변경되는 방식이어서 신경&#xA;쓸게 별로 없고, Rails 같은 웹프레임웍은 자동으로 재시작하거나 변경된&#xA;코드를 다시 로딩해주기도 하고, PHP 계열도 웹브라우저를 refresh하면&#xA;자동적으로 새 코드으로 실행하게 된다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다른 컴파일이 필요한 언어나, 파이썬, 펄 같은 언어들, 혹은 자동으로&#xA;코드에 반영되는 언어/프레임웍을 사용하더라도, 원하는 태스크(예:&#xA;테스트케이스 실행) 같은걸 걸어 놓으려면 커맨드라인에서 지정해두는게&#xA;낫다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

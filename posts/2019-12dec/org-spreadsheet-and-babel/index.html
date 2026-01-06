@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Org모드에서 스프레드시트 기능과 Babel 섞어쓰기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1767677425">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+쩌는 Org-mode Spreadsheet 소개 를 읽고 감명 받아서 따라해봅니다.
+
+다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리
+defun / defmacro 으로 정의해놓고 그걸 spreadsheet에서 불러 쓸 수
+있을지가 궁금했습니다.
+
+그래서 다음과 같이 해보면 가능할지를 실험:
+
+
+Org-Babel으로 원하는 함수를 정의한다.
+
+그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다.
+
+
+Spreadsheet에서 불러서 쓸 수 있는지 확인해본다.
+
+우선 C-h a 을 눌러 vsum 을 검색해보니, defun calcFunc-vsum (&amp;rest
+vecs) 으로 미리 선언되어 있는거 같았습니다. 이런 형태로 내가 정의하는
+함수도 구현해보면 될까 싶습니다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.30fcfadf8ec61f30477067ae0c35acd2e4317dd65be5998bffac7940f91f87a6.css"
+          integrity="sha256-MPz6347GHzBHcGeuDDWs0uQxfdZb5ZmL/6x5QPkfh6Y=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/hololog-perl-cli-1st-rel/">⬅️ Hololog Perl/CLI 버젼</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/the-web-and-the-free-world/">➡️ 원하는 웹브라우져, 웹환경, 그리고 익숙하지만 싫은 어떤 신앙체계</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">간단한 함수 2개를 정의해볼게요: <code>str-reverse</code>, <code>str-palindrome?</code></a>
+</li>
+<li><a href="#headline-2">그래서 정의한 함수를 적용해볼 테이블입니다:</a>
+</li>
+<li><a href="#headline-3">느낀점</a>
+</li>
+<li><a href="#headline-4">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">✳️ Org모드에서 스프레드시트 기능과 Babel 섞어쓰기</h1>
+	    <div class="meta">
+                <time datetime="2019-12-13" pubdate>
+                    2019년12월13일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+쩌는 <a href="https://seorenn.github.io/org-spreadsheet.html">Org-mode Spreadsheet 소개</a> 를 읽고 감명 받아서 따라해봅니다.</p>
+<p>
+다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리
+<code>defun</code> / <code>defmacro</code> 으로 정의해놓고 그걸 spreadsheet에서 불러 쓸 수
+있을지가 궁금했습니다.</p>
+<p>
+그래서 다음과 같이 해보면 가능할지를 실험:</p>
+<ol>
+<li>
+<p>Org-Babel으로 원하는 함수를 정의한다.</p>
+<ul>
+<li>그리고 Org 파일이 로딩될 때 평가하도록 속성을 지정해놓는다.</li>
+</ul>
+</li>
+<li>Spreadsheet에서 불러서 쓸 수 있는지 확인해본다.</li>
+</ol>
+<p>우선 <code>C-h a</code> 을 눌러 <code>vsum</code> 을 검색해보니, <code>defun calcFunc-vsum (&amp;rest
+vecs)</code> 으로 미리 선언되어 있는거 같았습니다. 이런 형태로 내가 정의하는
+함수도 구현해보면 될까 싶습니다.</p>
+<p>
+이제부터 작성하는 내용은 HTML으로 렌더링된 내용과 실제로 제가 작성한
+Org 파일의 소스에만 드러나는 내용이 다를 수 있으니</p>
+<p>
+<a href="https://raw.githubusercontent.com/ageldama/ageldama-github-io-hugo/master/content/posts/2019-12dec/org-spreadsheet-and-babel.org">https://raw.githubusercontent.com/ageldama/ageldama-github-io-hugo/master/content/posts/2019-12dec/org-spreadsheet-and-babel.org</a></p>
+<p>
+여기를 참고하며 비교해 읽으시면 좋을거 같습니다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+간단한 함수 2개를 정의해볼게요: <code>str-reverse</code>, <code>str-palindrome?</code>
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+<a href="https://orgmode.org/worg/org-contrib/babel/">Org-Babel</a>으로 정의를 하고 테스트를 해보겠습니다.</p>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">str-reverse</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">reverse</span> <span class="nv">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;Well, </span><span class="ss">`str-reverse&#39;</span><span class="s"> has defined.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;; ~C-c C-c~ to run this snippet</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<pre class="example">
+Well, ‘str-reverse’ has defined.
+</pre>
+<p>–&gt; 이렇게 <code>#+CALL: str-reverse()</code> 호출해도, 결과로 치환되어 표시됨을
+위에서 확인 가능합니다.</p>
+<p>
+그리고 이 파일의 헤더에</p>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="err">#</span><span class="nv">+COMMENT:</span> <span class="nv">-*-</span> <span class="nv">eval:</span> <span class="p">(</span><span class="nb">let</span> <span class="p">()</span> <span class="p">(</span><span class="nv">org-babel-goto-named-src-block</span> <span class="s">&#34;str-reverse&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nv">org-babel-execute-src-block</span><span class="p">))</span><span class="c1">; -*-</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+..와 같이 지정해놓아서, 이맥스에서 이 파일을 열려고 하면, 이맥스는 지정한 코드
+블록을 실행할 것인지를 확인할 것입니다. (그냥 무조건 실행하면 바이러스
+같은걸 Org 파일만으로 얼마든지 만들 수 있을테니까요.)</p>
+<p>
+여기
+<a href="https://www.reddit.com/r/emacs/comments/64jhlt/autoexecuting_code_in_org_mode/">https://www.reddit.com/r/emacs/comments/64jhlt/autoexecuting_code_in_org_mode/</a>
+에 나온 방법을 사용했고, 다른 방법으로도 이렇게 Org 파일을 이맥스에서
+여는 것만으로도 Org-Babel 블록을 평가하도록 하는게 가능한가 봅니다.</p>
+<p>
+그리고, <code>defun str-reverse (s)</code> 이 잘 동작하나 테스트 해볼게요:</p>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">list</span> <span class="p">(</span><span class="nv">str-reverse</span> <span class="s">&#34;foobar&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">str-reverse</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">str-reverse</span> <span class="s">&#34;abc&#34;</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<table>
+<tbody>
+<tr>
+<td>raboof</td>
+<td class="align-right"></td>
+<td>cba</td>
+</tr>
+</tbody>
+</table>
+<p>
+..적당한거 같습니다.</p>
+<p>
+이번엔 <code>defun str-palindrome? (s)</code> 을 만들어 봅시다. 그리고 이번에는
+testcase을 table으로 만들어 입력에 적용해보겠습니다.</p>
+<table>
+<tbody>
+<tr>
+<td>abc</td>
+<td class="align-right"></td>
+<td>abcba</td>
+<td>madam</td>
+<td>zoom</td>
+<td>anna</td>
+</tr>
+</tbody>
+</table>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">str-palindrome?</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">string-equal</span> <span class="p">(</span><span class="nv">str-reverse</span> <span class="nv">s</span><span class="p">)</span> <span class="nv">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">mapcar</span> <span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">i</span><span class="p">)</span> <span class="p">(</span><span class="nf">mapcar</span> <span class="nf">#&#39;</span><span class="nv">str-palindrome?</span> <span class="nv">i</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">          <span class="nv">inputs</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<table>
+<tbody>
+<tr>
+<td>nil</td>
+<td>t</td>
+<td>t</td>
+<td>t</td>
+<td>nil</td>
+<td>t</td>
+</tr>
+</tbody>
+</table>
+<p>
+.. 빈 문자열, <code class="verbatim">abcba</code>, <code class="verbatim">madam</code>, <code class="verbatim">anna</code> 은 palindrome이 맞으니 잘
+동작하는거 같네요.</p>
+<p>
+이렇게 하기 위해서는
+<a href="https://orgmode.org/worg/org-contrib/babel/intro.html#arguments-to-source-code-blocks">https://orgmode.org/worg/org-contrib/babel/intro.html#arguments-to-source-code-blocks</a>
+ 여기를 참고했습니다.</p>
+<ol>
+<li>테이블에 이름을 할당하고: <code>#+tblname: foobar</code></li>
+<li><code>#+BEGIN_SRC</code> 에 변수로 바인딩해주고: <code>#+BEGIN_SRC emacs-lisp
+:var varname=inputs</code></li>
+<li>코드 안에서 <code>varname</code> 을 리스트로 접근해 사용.</li>
+</ol>
+<p>
+이외에도 R, Python등 실행한 결과로 생성된 파일을 참조해서 inline
+image으로 표시할 수도 있는거 같으니 정말 유용할거 같습니다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+그래서 정의한 함수를 적용해볼 테이블입니다:
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>
+여러개의 Org-Babel 블록을 헤더에 추가하기 귀찮으니 <code>str-reverse</code> 만
+시험해봅니다:</p>
+<table>
+<thead>
+<tr>
+<th>String</th>
+<th>Reverse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abc</td>
+<td>cba</td>
+</tr>
+<tr>
+<td>foobar</td>
+<td>raboof</td>
+</tr>
+<tr>
+<td>madam</td>
+<td>madam</td>
+</tr>
+</tbody>
+</table>
+<p>
+쨔잔!<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+뭔가 잘 된거 같아 기쁩니다.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+느낀점
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<ol>
+<li>
+<p>Org 모드에 있는 수많은 기능을 다 알고 매일마다 쓸 필요는 없겠지만,</p>
+<ul>
+<li>그래도 뭐가 있는지 한번 살펴보고, 이해하고 그때 그때 필요할 때
+적용해 쓰는 습관은 나를 위해 좋을거 같다.</li>
+</ul>
+</li>
+<li>특히 다이어그램을 그리거나, 코드를 실행한 결과를 삽입하거나, 표를
+그리거나 등등에 유용할만한 기능인데 활용을 안해오고 살아서 나
+자신이 게으른거 같은 기분.</li>
+<li>이맥스 세상은 역시 리습과 유닉스로 이루어져있다.</li>
+<li>
+<p>죽여주는 문서로 새로운 것을 배우는 것은 언제나 즐겁다.</p>
+<ul>
+<li>혹은 안다고 생각해왔지만 잘 이해 못하던 것을 조금이나마 이해가
+깊어지는 경험.</li>
+<li>고맙습니다. <a href="https://seorenn.github.io/">https://seorenn.github.io/</a></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p><a href="https://orgmode.org/worg/org-tutorials/org-spreadsheet-intro.html#org02b5488">Org as a spreadsheet system: a short introduction의 Interactively edit formulas 섹션 참고</a>, <code>C-c =</code> 눌러서 elisp식 입력.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lisp/">lisp</a>
+                        <sup>23</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emacs/">emacs</a>
+                        <sup>23</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/elisp/">elisp</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/org/">org</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/babel/">babel</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/tips/">tips</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/spreadsheet/">spreadsheet</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/hololog-perl-cli-1st-rel/">⬅️ Hololog Perl/CLI 버젼</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/the-web-and-the-free-world/">➡️ 원하는 웹브라우져, 웹환경, 그리고 익숙하지만 싫은 어떤 신앙체계</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1767677425</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

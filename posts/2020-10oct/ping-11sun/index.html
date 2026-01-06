@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 11/Oct/2020 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1767677425">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+
+어째서 더 잘 그럴 수 있을까
+
+
+무엇인가를 만드는 일은 사실 두 가지 단계로 발전하는 것 같다.
+
+  단지 목적한 그것만을 만드는 일과, 또는 그것을 반복적으로 생산하고 또
+  더 나은 방법으로 추상화하여 내는 도구를 만들어내는 일으로 구분할 수
+  있는 것 같다.
+
+  직관적으로 생각했을 때에는, 목적이 명확하다면 당연히 그것 자체를
+  만드는 일을 이미 존재하는 도구들을 통해서 표현하고 만들면 그만인 것
+  같다.
+
+  그리고 더 나아가서 결과물을 그냥 직접 만드는 것이 아니라, 그 결과물을
+  만들기 위한 도구까지 같이 만들거나, 그 결과물이 그를 만들기 위해
+  고안된 도구를 통해서 만드는 경우가 비교할 수 없이 생산적이고 그 결과물
+  또한 훨씬 매끄럽고 완성도가 높은 경우가 오히려 보통인 것 같다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.30fcfadf8ec61f30477067ae0c35acd2e4317dd65be5998bffac7940f91f87a6.css"
+          integrity="sha256-MPz6347GHzBHcGeuDDWs0uQxfdZb5ZmL/6x5QPkfh6Y=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-15thu-2nd/">⬅️ Ping (2nd) 15/Oct/2020</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-10sat/">➡️ Ping 10/Oct/2020</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">어째서 더 잘 그럴 수 있을까</a>
+</li>
+<li><a href="#headline-2">프레임웍, 프로그래밍언어… 그리고 모델링</a>
+</li>
+<li><a href="#headline-3">모델링과 이해, 그리고 반복</a>
+</li>
+<li><a href="#headline-4">반대 시작점으로부터의 관점에서의 모델</a>
+</li>
+<li><a href="#headline-5">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">👨‍🦱 Ping 11/Oct/2020</h1>
+	    <div class="meta">
+                <time datetime="2020-10-11" pubdate>
+                    2020년10월11일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+어째서 더 잘 그럴 수 있을까
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>무엇인가를 만드는 일은 사실 두 가지 단계로 발전하는 것 같다.</p>
+<p>
+  단지 목적한 그것만을 만드는 일과, 또는 그것을 반복적으로 생산하고 또
+  더 나은 방법으로 추상화하여 내는 도구를 만들어내는 일으로 구분할 수
+  있는 것 같다.</p>
+<p>
+  직관적으로 생각했을 때에는, 목적이 명확하다면 당연히 그것 자체를
+  만드는 일을 이미 존재하는 도구들을 통해서 표현하고 만들면 그만인 것
+  같다.</p>
+<p>
+  그리고 더 나아가서 결과물을 그냥 직접 만드는 것이 아니라, 그 결과물을
+  만들기 위한 도구까지 같이 만들거나, 그 결과물이 그를 만들기 위해
+  고안된 도구를 통해서 만드는 경우가 비교할 수 없이 생산적이고 그 결과물
+  또한 훨씬 매끄럽고 완성도가 높은 경우가 오히려 보통인 것 같다.</p>
+<p>
+  예를 들어, 훌륭한 웹프레임웍이나 프론트엔드 프레임웍을 자신이, 자신의
+  회사에서 만드는 제품에 쓰기 위해 만든 경우들을 종종 본다. 그리고 그런
+  경우에는 그 결과 제품도 훌륭하고 그를 위해 만들어낸 프레임웍도 수 많은
+  사람들에 의해서 사용되는 경우를 자주 본다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+  왜 그럴까.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+프레임웍, 프로그래밍언어… 그리고 모델링
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>&#39;프레임웍&#39;의 예를 언급하는 순간에 납득할 수 있을만한 이유를
+  떠올렸을지도 모르겠다. 당연한 이야기이다. 그렇게 해야할 일들과 목적을
+  이루는 방법을 정제하고 일반화하여 도구로 만들어 낼 수 있고, 그럴
+  노력을 떠올리고 해낼 수 있는 이라면, 이미 뭘해도 잘 해낼 수 있지
+  않았을까. 당연하다.</p>
+<p>
+  그렇다면 다시 말해 본다면, 그렇게 생각과 방법을 정리하고 일반화 하는
+  사고를 할 수 있다면, 굳이 도구를 만드는 과정이 없다고 하더라도, 그런
+  생각을 그대로 좋은 결과물 그 자체를 만드는데에만 투사하면 좋은
+  결과물이 나올까? …내 생각엔 아마도 그럴 것 같다.</p>
+<p>
+  내 생각엔 좋은 프로그램, 코드, 아키텍쳐는 내 생각엔 사용하는 언어,
+  라이브러리, 프레임웍이 제공하는 어휘와 idioms만이 아니라 자신이 만드는
+  주제를 잘 이해하고 그에 맞춰서 적절하게, 사용하는 도구들에 따라
+  idiomatic한 방법으로 그 자체를 어느 정도 확장하여 그런 생각들을
+  담아낸다.</p>
+<p>
+  이러한 &#39;확장&#39;은 많은 연습이 필요하고, 잘못 행하기도 쉽다. 과도하거나
+  idiomatic하지 않은 방법으로 자신의 생각에 맞추려고 사용해 말도 안되는
+  번잡한 추상화를 해서 아무도 이해하지 못하고, 이해하더라도 사용하는
+  DB의 기본적인 성능 최적화 기법을 전혀 활용하지 못하고 아주 간단한
+  쿼리를 작성하는데에 수십줄의 특별한 ORM을 통해서만 가능하다거나<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>,
+  굳이 그럴 필요가 없는 언어를 쓰고 있는 데에도 익숙한 모양 그대로를
+  위해 클래스를 기반한 구조 같은 것을 꼭 짜려고 하거나 하는 것<sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup>,
+  혹은 더 나쁘게 적절하지 않은 추상화를, 그것도 그 추상화 자체가 모든
+  케이스를 반영하기 위해서 계속해서 예외케이스를 추가해가며 더 이상은
+  확장이 가능한 것일지 의심스러울 정도로 모두 정리가 되지 않은 경우
+  등등이다.</p>
+<p>
+  그런 구조와 코드를 짜려고 들 때에, 자신이 뭘 하고 싶은지 고집을
+  내려놓고 틀렸음을 인정하지 못할 때에, idiomatic하게 맞춰서 다시 배우고
+  생각해야 함을 인정하기 싫을 때에, 그런 이들은 자신이 들고 있는 도구를
+  탓한다. 혹은 그러면서도 온갖 비난을 하면서 그런 프랑켄슈타인 같은
+  결과를 짜고 그게 그 도구의 한계라고 이야기한다. …하지만 실제로는 그
+  도구를 그 사람은 쓴적도 없는 것이다. 다만 그 자신만이 고안한, 그
+  자신의 부족한 이해에 맞춰서 제3의 또 다른 무언가를 만들어내 썼었던
+  것이었을 뿐이다.</p>
+<p>
+  그리고 그 반대도 존재한다. 그 반대는 어떤 프로그램을 읽고 이해한다는
+  일이, 혹은 작성한다는 일이, 단지 그 프로그래밍언어, 혹은 어떤
+  프레임웍을 이해하는 일이 전부라고 한정지어 생각하고 있는 이들이
+  일으킨다.</p>
+<p>
+  무엇을 하려는, 어떤 분야에 적용된 프로그램인지, 그 프로그램에서 어떻게
+  어휘와 생각들을 패턴화 해놓았는지는 고민하지 않는다. 단지 추가적인
+  추상화 단계가 있으니, 자신이 알고 있는 프로그래밍언어, 프레임웍보다
+  많은 도메인과 관련한 이해의 노력과 지식을 필요로 하게 되니 그것이
+  잘못되었다고 주장하는 경우이다.</p>
+<p>
+  하지만 실제로 그렇게 그 프로그래밍언어와 프레임웍의 것들을 그대로
+  사용하여 작성된 코드는 실제로는 기계어로 작성된 프로그램과 읽는 사람의
+  입장에서는 사실상 다를 것이 없다. 어떠한 개념화, 추상화도 없이 그저
+  기능하도록 주욱 나열된 명령어와 데이터 표현의 나열일
+  뿐일테니까. 그리고 GUI이나 앱을 만드는 경우에 그런 프로그램을 짜는
+  경우를 많이 본다. 어쨌든 화면은 출력되고 사용자가 쓸 수는
+  있겠지만… 글쎄… Visual Basic 6을 쓸 때에, 그런 도무지 이해할 수
+  없게 작성된, 모든 버튼이 <code>Button_001</code> … <code>Button_049</code> 같은 이름으로
+  되어 있는 코드으로 이루어진 프로젝트들이 그 좋은 예일 것 같다.</p>
+<p>
+  추상화와 개념의 정리 같은 것들이 이루어지지 않은 프로그램은 그렇게
+  보이고, 자신이 하는 일이 그런 것들만을 이용해서 단지 기계부호화 하는
+  것이라고 착각하는 이들은 특정한 단계의 이들에게서, 그 단계에서 더
+  성장하지 못하고 있는 이들에게서 유독 많이 보인다.</p>
+<p>
+  그리고 오히려 이미 언급했듯이, 이런 이들은 어떤 제대로 된 프로젝트의
+  코드를 보여줘도 이해하지 못하고 오히려 역성을 낼 것이다. 자신이
+  생각하는 수준으로 그 프로그래밍언어 그대로와 프레임웍 그대로 만을
+  사용해서 <code>Button_019</code> 등으로 가득찬 코드를 자신이 바란다는 듯이 말을
+  하고 있다는 것을 이해하지도 못한채 불평을 해댄다. 왜냐하면 그는
+  프로그램의 코드가 그 프로그램이 만들려는 생각을 모델링한 것이라는 것을
+  부정하고 그 모델을 이해하고 싶어하지 않고 있기 때문이다. 그런 모델이
+  코드에 반영되지 않은 코드란 말 그대로 기계 부호화하여 저런
+  <code>Button_019</code> 등으로 가득한 코드를 그 자신이 말하는 바에 따르면 바라는
+  것이라는 것도 이해하지 못하기 때문에 그런 불평을 해대는 것이다.</p>
+<p>
+  모든 프로그램은 그 프로그램이 목적하는 바에 따라서, 어느 정도 수준으로
+  모델링되어 코드로 변환된다. 예로 든 VB6 코드는 그것을 작성한 사람이 그
+  모델이 무엇인지 명확하게 정리하고 이해하지 못했음에도, 어떤 버튼을
+  누르면 어떤 일이 일어날지만 계속해서 덕지덕지 붙여갔을 것이다. 어쨌든
+  그것들이 모이면 전체적으로, 결과적으로 무언가 일이 일어나기는 할테니까
+  암묵적인 모델이 존재한다고 할 수 있다. …다만 만든 사람의
+  머릿속에서는 그런게 명확하지 못했을 뿐이다.</p>
+<p>
+  어떤 프로그래밍언어, 프레임웍을 쓰건 그 목적하는 만들고 싶은 모델을
+  사용하는 매개를 적절히 활용하여 가능한한 그대로 표현한다면 가장
+  좋을지도 모르겠다.<sup class="footnote-reference"><a id="footnote-reference-4" href="#footnote-4">4</a></sup> 그리고 그런 모델과 실제 프로그램의
+  impedance이 작을 수록 예상하지 못한 버그나 코드가 시간이 지남에 따라서
+  괴상해지는 방향으로만 변경/확장되어 가는 추상화 구조도 적어질 것이다.</p>
+<p>
+  그렇다. 사람들은 코딩을 할 때 단순히 기계부호를 입력하는 것이 아니라,
+  기계부호를 통해서 자신이 생각하는, 머릿 속에 있는, 혹은 그 머릿 속에
+  팀원들과 공유한 생각 속의 모델을 그린 설계 문서에 그려진 모델을 코드로
+  표현해나가는 것이다.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+모델링과 이해, 그리고 반복
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>어떤 이들은 자신이 특정한 GUI프로그램(앱이든 데스크탑
+  애플리케이션이든)이나 게시판이나 회원가입, 로그인 같은
+  애플리케이션을 작성하는데 그런 과정이 필요하지 않다고 주장할지도
+  모르겠다. 어떠한 사전설계나 정리 없이 그냥 프레임웍에서 제공하는
+  기능들을 그대로 사용하면 그것으로 결과물이 나온다고 말이다. 하지만
+  실제로는 그런 주장을 할 때 자신이 어떻게 해내는지 자신을 잘 관찰하고
+  이해하지 못한 것일 것이다. 왜냐하면 그런 애플리케이션의 모델에
+  대해서 익숙하고 무의식적으로 고정된 구조를 갖고 그를 만들어내고 있을
+  뿐인 것이다. 그렇기 때문에 추상화 단계를 고려하지 않고 그냥 재료들을
+  그대로 노출하며 표현이 가능한 것일 뿐이다.</p>
+<p>
+  그 모델은 결국 그를 생각해내는 사람의 이해의 정도, 깊이에 따라 얼마나
+  세밀하거나 매끄럽게 적용 가능한 형태로 추상화 되는지가 달라질 것이다.</p>
+<p>
+  그리고 그러한 이해의 깊이는 단순히 첫 번째에 &#39;알았다&#39;라는 것이 아니라,
+  실제로는 시간을 갖고 반복적으로 실험, 관찰하고 생각하면서 더 깊은
+  단계로 발전해나간다. 그 첫 번째에 &#39;알았다&#39;의 순간은 실은 잘 몰랐었던
+  것들을 더 명확하게 이해해 나가고 왜 그랬었는지, 왜 그래야 하는지
+  등등을 납득해나간다.</p>
+<p>
+  그렇다면, 그 모델을 정리해 만들어내는 것은 자신이 만들 것에 대한
+  이해의 깊이에 달려 있는 것이라면 어떻게 하는 것이 좋을까. …아마
+  반복적으로 그것을 다시 만들거나, 혹은 점진적으로 처음 만든 것을
+  계속해서 개선하며 고쳐나가야 하면서 상호작용을 일으켜야 할 것이다.</p>
+<p>
+  그 말은, 다시 말하면, 생각 속에 있는 모델이 실제로 만들어낸 프로그램에
+  영향을 주고, 다시 그 프로그램을 살펴보고 생각하면서 그 모델에 다시
+  반영이 일어나고, 그 반영에 따라 발전한 모델을 다시금 프로그램에
+  녹여내야 한다는 의미이다. 그런 반복적인 행위를 통해서 개선하는 것이
+  가장 납득할만한 접근일 것 같다.</p>
+<p>
+  그렇다면 어떻게 반복적인 일을 해내야 할까. 그 반복적인 행위를 얼마나
+  쉽고 납득할만하게 경제적으로, 시간적으로나 노력의 측면에서나,
+  해내는지가 그 반복을 생산적인 결과로 바꾸는데에 중요할 것 같다.<sup class="footnote-reference"><a id="footnote-reference-5" href="#footnote-5">5</a></sup></p>
+<p>
+  원래의 질문으로 돌아가서, 프레임웍을 만드는 이들은 한 단계 더 자신이
+  무슨 일을 하는지를 추상화하기 위해서 생각을 해야 했을 것이다. 그래야만
+  재사용이 용이한 형태로 프레임웍으로 정리를 해낼 수 있었을테니까
+  말이다. 물론 그런 정도의 작업을 해내는 이라면 경험과 이해가 더 깊을
+  것이었을 것이다. 이미 시작하는 시점에.</p>
+<p>
+  하지만 그런 프레임웍을 만드는 것만이 전부는 아닌 것 같다.</p>
+<p>
+  흔히 프레임웍을 말하면 떠올리는 것은 기술적 영역에서 프레임웍을
+  연상한다. 예를 들어, 웹프레임웍이나 프론트엔드 프레임웍. …그러한
+  프레임웍들은 그런 일들, 웹API 엔드포인트를 노출해내거나 화면을 그리고
+  사용자와 반응할 수 있게 만들고 재사용 가능하게 만들거나 하는 영역을
+  일반화/추상화를 해낸 것이다.</p>
+<p>
+  하지만 자신이 만들고 있는 프로그램은 그것만이 필요한 것이 아닐 때가
+  많다. 그 프로그램이 특정한 도메인의 지식을 필요로하고 그에 맞춰서
+  동작해야 한다거나, 특정하게 정리된 컴퓨터과학의 유한상태기계나
+  범용문제풀이기<sup class="footnote-reference"><a id="footnote-reference-6" href="#footnote-6">6</a></sup>이나 기호 공간에서 back-tracking을 이용하여 추론을
+  해내거나 하는 등등의 기법과 구조를 사용해야 한다면 그에 맞는
+  프레임웍을 고안해 사용해야 할 것이다.</p>
+<p>
+  그리고 그런 프로그램마다 다를 프레임웍은 정말로 웹프레임웍처럼
+  오픈소스 등을 그대로 가져다 쓸 수 있는 경우도 있고, 혹은 도메인 모델로
+  정리하여 객체구조로 정리해 써야 하는 경우도 있고 다양한 방식으로
+  프로그램에 녹아 들어간다.</p>
+<p>
+  결국 자신의 프로그램을 얼마나 높은 이해의 수준에서 바라볼 수 있게
+  되는가에 따라서 표현이 정교하고 완성도가 결정되는 것 같다.</p>
+<p>
+  그럼에도 내가 설명한 방법에도 한계를 느끼게 되는 경우가 종종
+  있다. 사용하는 프로그래밍언어이나 프레임웍의 표현의 한계나 제한으로
+  인해서 모델에는 명확하게 존재하지만 프로그램 코드와 그 구조에는
+  묵시적으로만 나타나는 경우들이 생기게 된다. 그리고 이들은 그 코드를
+  컴파일하여 최종 프로그램으로 만드는 컴파일러와 프레임웍은 이해하지
+  못하는 것으로 암묵적으로 숨겨져 존재하므로 더 세밀하게 검증되어야
+  하고, 적절하게 그렇지 못한 경우에는 버그의 가능성이 되기도 한다.</p>
+<p>
+  예를 들어서, 슬프게도 프로그래머들만이 납득할만한 예겠지만, C/C++
+  코드를 작성할 때에, 작성자는 어느샌가 메모리 관리 모델을 머릿 속에
+  갖게 되고 그에 따라서 코드를 작성한다. 하지만 C/C++의 표현의 한계는 그
+  메모리 관리 모델에 대해서 이해하지 못하는 컴파일러이고, 그렇기 때문에
+  컴파일 하는 시점에 그 메모리 관리 모델에 어긋나게 작성된 코드를 그냥
+  통과시켜주고 결국 실행시점에 메모리에러나 보안문제를 일으킬 수 있는
+  코드를 만들 수 있도록, 버그를 체크해주지 못하고 허용해준다.</p>
+<p>
+  물론 최근의 Rust와 같은 프로그래밍언어는 그러한 메모리 관리 모델을
+  명시적으로 코드에 표현할 수 있게 하였고, 그런 체크를 컴파일러가
+  해준다. 그래서 그런 메모리 버그가 가능하지 않게 되었다.<sup class="footnote-reference"><a id="footnote-reference-7" href="#footnote-7">7</a></sup></p>
+<p>
+  결국, 코드에 명백하게 그대로 드러나지는 않았지만, 코드 부분의 서로의
+  관계 등을 이해한 다음에 그런 메모리 관리 모델이 적절한지 이해할 수
+  있을 것이다. 그리고 그런 코드를 제대로 잘 동작하도록 작성하려면 그런
+  모델을 머릿 속에 갖고 이해한 상태에서 작성이 가능할 것이다.</p>
+<p>
+  다른 프로그래밍언어들도 마찬가지다. 메모리 관리 모델 같은 것만이
+  아니라 프로그래밍언어별로 이해를 필요로 하는 색다른 Paradigm과 같은
+  것들을 머릿속에 모델으로 정리하여 갖고 있지 못하다면 제대로 그 언어에
+  어울리는 코드를, 효율적인 방법으로 작성하지 못한다.</p>
+<p>
+  내가 만약 마이크로소프트 엑셀과 같은 스프레드시트를 작성하고 있다고
+  하더라도, 화면에 나타나는 각 셀Cell와 같은 요소들이 모두 그대로 코드에
+  대응하여 드러날지는 의문이다. 물론 그렇게 추상화를 해놓았다면 명백하게
+  드러나겠지만 실제로는 그 코드들의 뭉치가 잘 작성되어 조합되고
+  실행되었을 때에야 비로서 실체를 갖춘 엑셀과 비슷한 화면을 접하게 될
+  것이다.</p>
+<p>
+  머릿속에 있는 모델을 코드로 옮기는 일은, 그 코드에 명백하게 드러날 수
+  있지만, 더 복잡한 대상을 모델링한 경우일수록 코드만을 액면적으로
+  보았을 때 잘 드러나지 않거나, 아예 시간의 흐름을 갖고 실행시켜 보았을
+  때에야 비로서 확인이 가능해지기도 한다.</p>
+<p>
+  바로 그렇기 때문에 내가 생각한 모델을 거의 그대로 표현하고 그것을 다시
+  코드로 전환해주는 도구가 필요해진다. 왜냐하면 말했듯이 이미 존재하는
+  프로그래밍언어, 프레임웍은 대부분 일반적인, 그리고 그래서 너무나
+  일반적인 모든 상황을 포괄하고 싶어했기 때문에 특정한 상황의 모델을
+  표현하기 너무 번거롭거나 그렇기 때문에 잘 드러내지 못할 정도로
+  일반화되어 있기 때문이다.</p>
+<p>
+  웹프레임웍은 웹API, 엔드포인트를 만드는데에 초점을 맞췄기 때문에 그
+  비즈니스로직을 표현 하는데에는 잘 드러내지 못한다. C/C++은 일반적인
+  프로그래밍언어이기 때문에 메모리 관리 모델을 명백하게 드러내지
+  못한다.<sup class="footnote-reference"><a id="footnote-reference-8" href="#footnote-8">8</a></sup></p>
+<p>
+  그래서 오히려 자신의 도구를 직접 고안하고 만들 수 있는 단계는 그
+  자신이 무엇을 하고 있는지 잘 이해하고 있을 것이고, 또 반대로 그 이해를
+  가속하고 깊이를 더할 반복을 잘 해낼 수 있도록 돕기도 할 것이기 때문일
+  것이다.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+반대 시작점으로부터의 관점에서의 모델
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>글의 이전 부분에서는 큰 단계에서, 상위 수준에서의 단계에서 모델을
+  이야기했다. 프로그램의 목적에 따른 모델을 이야기했다.</p>
+<p>
+  짧게 그 반대의 방향으로 동작하는 모델에 대해서도 이야기를 하고
+  싶다. (사실은 이전의 이야기에서 예로 든 웹프레임웍이나 C/C++의
+  메모리 관리 모델도 이에 해당하기도 한다.)</p>
+<p>
+  이전의 이야기는 마치 이미 존재하는 부품들을 잘 묶어서 더 큰 부품을
+  만들어 추상화하는 방향의 모델링에 대해서 이야기한 것 같다.</p>
+<p>
+  하지만 그 반대로 그 부품을 쪼개어서 다시 이해한 경험과 그로 얻은
+  생각도 이야기를 하고 싶다.</p>
+<p>
+  아주 예전에 <a href="https://en.wikipedia.org/wiki/High_Level_Assembly">HLA</a> 이란 어셈블리언어를 사용했었던 적이 있다. 그때에
+  나는 C/C++와 펄/파이썬, 혹은 델파이를 이용하여 프로그램을 작성하던
+  때였었다. (2000년도 전후)</p>
+<p>
+  그런데 HLA을 익히고 간단한 MS윈도용 데스크탑 애플리케이션을 작성하기
+  시작하면서 많은 생각이 변했었다.</p>
+<p>
+  어셈블리언어이기 때문에 많은 부분 CPU구조에 깊이 연관되어 있고 다른
+  플랫폼에서 절대 다시 빌드하여 재사용할 수 없는 코드이기는
+  했다. 하지만 그럼에도 매크로 엔진과 적당한 제어구조 매크로,
+  라이브러리 등이 갖추어져 있어서 아주 간단하게, 심지어 때로는
+  C/C++으로 직접 Windows API을 이용하여 코딩한 애플리케이션만큼
+  간결하고 그 구조를 파악하기 명료하게 코드를 작성할 수 있었었다.</p>
+<p>
+  당연한 이야기이지만 C/C++, Delphi을 컴파일한다면 얻을 코드를 직접
+  뜯어서 해석하거나 하는 방법으로 이해한듯이 명확하게 이해할 수
+  있었었다. 내가 작성한 코드가 실제로는 어떻게 기계에게 전달될
+  것인지를.</p>
+<p>
+  그간 Delphi이나 C/C++을 통해서 잘 감추어진 MFC와 같은 프레임웍을
+  쓰고 또 C/C++에서 제공하는 <code>class</code> 와 같은 언어-construct들이 어떻게
+  무엇을 감추고 추상화 주었는지를 다시 생각해보는 계기가 되었었다.</p>
+<p>
+  그리고 그런 이해를 기반으로 다시 해체의 방향이 아니라, 역으로 조합의
+  방향으로 어떻게 생각해야 할지를 깨달았었던 것 같다. 해체하여 원하는
+  것을 어떻게 얻는지를 알게 되었으니, 반대로 어떤 수준의 원자들 모으고
+  그들을 조합하여 어떻게 결과물을 도출할 수 있을지를 생각하기
+  시작했다.</p>
+<p>
+  이전에 이야기한 프레임웍 제작자들도 마찬가지일 것이다. 그들은 어떤
+  원자들을 이용하여 원하는 방법으로 표현하고 그들을 어떻게 조합해
+  쓸지를 고민하고 알게 된 것이다. 당연히 강력하게 자신의 생각을 잘
+  표현할 수 있을 수 밖에 없다.</p>
+<p>
+  그런 해체와 조합의 과정이 어떤 자유를 줄 수 있는지를 느끼고 그때
+  정말 큰 상쾌함을 느낄 수 있었었다.</p>
+<p>
+  그렇다고 오늘날 어울리지 않을 HLA을 공부하지는 않았으면 좋겠다.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>물론 현실적인 제약, 시간과 예산의 한계로 그렇게까지 해낼 수
+없는게 대부분의 프로젝트들임을 잘 알고 있다. 그런 경우를 제외하고
+생각했으면 좋겠다. 하지만 그럼에도 정말로 당장 내 앞에 놓여 있는
+과제가 그렇게 수행해야만 하는지는 매순간 다시 잘 판단해볼만하다고
+여전히 여지는 남겨두고 싶다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p>RDBMS을 쓸 때에 적용이 가능한 아주 기초적인 인덱스와 JOIN 같은
+것들을 제대로 활용하지 못할 정도로 너무나 normalization이 심하게 되어
+있어서였었다. 사실 이렇게 데이터구조를 설계한 사람은 자신이 하는 일이
+RDBMS에 적절하지 않고 다른 GraphDB이나 Embedding이 가능한 Document
+DB을 써야 했을거란 것을 이해하려고 들지 않았었던 것 같다. 그리고 그런
+데이터모델은 사실 그 자신도 인지하지 못했겠지만 <a href="https://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule">&#39;그린스펀의 열번째
+규칙&#39;</a>에 따라 그만의 커먼리습을 만들고 있었던 것 같다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-3"><a href="#footnote-reference-3">3</a></sup>
+<div class="footnote-body">
+<p>예를 들어, <a href="https://en.wikipedia.org/wiki/Prototype-based_programming">Prototype based OO</a> 을 이용하고, Functional하게
+짜는게 기본인 언어를 쓰고 있음에도, 익숙한 클래스 기반과 xUnit 같은
+테스트케이스를 클래스별로 나누고 싶다는 생각에 굳이 괴상하게, 그리고
+산만하고 잘 동작하지도 않는 Java-alike하게 짜는 경우, 또 거기에 익숙한
+Dependency Injection 구조를 functional한 방법으로 해결할 수 있는
+상황임에도 자바의 그것들과 유사하게 만들려고 애를 쓰는 경우를 본 적이
+있다. 그랬을 때의 그 결과는 이 글의 본문에서 계속 이야기 할 것이다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-4"><a href="#footnote-reference-4">4</a></sup>
+<div class="footnote-body">
+<p>그 모델이 납득 가능하고, 설명을 해주는 추가적인 설명이나
+자료들이 있다면 그를 이해한 다음에 코드를 보기만 한다면 이해할 수
+있을테니까.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-5"><a href="#footnote-reference-5">5</a></sup>
+<div class="footnote-body">
+<p>그런 반복은 이미 많은 이들이 쉽게 간과하는, 그렇게
+exciting해보이지는 않는 주제들을 얼마나 잘 이해하고 활용하는지에 따라
+달렸다. 새로운 프로그래밍언어나 화려한 이름의 프레임웍이 아니라, 그런
+이들이 보기에 무시가 가능하고 아주 지루해보이는 키워드들일
+것이다. 하지만 이 &#39;모델&#39;에 대한 생각을 이해하지 못했기 때문일 것이고,
+이해를 했다면 어떤 것을 더 하고 싶어질지가 달라질 것 같다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-6"><a href="#footnote-reference-6">6</a></sup>
+<div class="footnote-body">
+<p>실은 GPS(general problem solver)은 쓸 일이 없겠지만.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-7"><a href="#footnote-reference-7">7</a></sup>
+<div class="footnote-body">
+<p>그리고 더 최근에는 C++ 컴파일러들도 그런 메모리 관리 모델을
+체크하여 컴파일러가 알려주기 시작했다. 하지만 Rust에 비하면 한정적인
+상황에 대해서이고, 그들도 STL와 같은 &#39;패턴화된&#39; 표현을 따를 때에, 즉
+그 명시적으로 메모리 관리 모델을 표현하는 경우에 잘 체크를 해주는 것에
+한정적이다. 다시 말해서, 그런 모델을 명시적으로 표현할 방법이 중요했던
+것이다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-8"><a href="#footnote-reference-8">8</a></sup>
+<div class="footnote-body">
+<p>거짓말이다. 실은 그 프로그래밍언어 설계 자체가 알아서 자유롭게
+하도록 열어놓았기 때문일 것이다. 단지 위에서 예로 들었기 때문에 그냥
+언급했다.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>98</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>51</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/mastery/">mastery</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/framework/">framework</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-15thu-2nd/">⬅️ Ping (2nd) 15/Oct/2020</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-10sat/">➡️ Ping 10/Oct/2020</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1767677425</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

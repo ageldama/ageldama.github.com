@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>코드 편집기에 대한 생각 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1767677425">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+코드 편집기를 어떻게 써왔었는지 잠깐 생각해봤다:
+
+
+DOS시절: MS-DOS Editor.
+
+GW-BASIC 시절에는 정말
+https://en.wikipedia.org/wiki/MS-DOS_Editor 을 열심히 썼었던 것
+같다.
+그리고 그 다음엔 PowerBASIC for DOS 열심히 썼었다. QuickBASIC
+같은 바이트코드으로 컴파일해서 .exe 파일에 인터프리터와
+바이트코드를 embedding 하는 VB의 P-code 같은 가짜 컴파일 방식1이
+아니라 정말 네이티브 코드로 컴파일해주고, 인라인 어셈블리와
+메모리 조작이 가능한 베이직 컴파일러, IDE여서 좋은 환경이었던
+것 같다.
+
+터보C 2.0 편집기. PowerBASIC이랑 유사해서 익숙하게 쓸 수 있었던
+것 같다. 파워베이직도 그렇지만, 의외로 도스시절의 이런 IDE들이
+F1 - Help 메뉴에서 항목별로 문서 정리가 잘 되어 있어서 읽으면서
+즐거웠었던 것 같다. (초등학생~중학생이어서 영어를 잘 이해하지는
+못했지만)" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.30fcfadf8ec61f30477067ae0c35acd2e4317dd65be5998bffac7940f91f87a6.css"
+          integrity="sha256-MPz6347GHzBHcGeuDDWs0uQxfdZb5ZmL/6x5QPkfh6Y=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+    <script src="/js/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-06jun/ping-06sat/">⬅️ Ping 06/Jun/2020</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-05may/ping-28thu/">➡️ Ping 28/May/2020</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">요즘엔</a>
+</li>
+<li><a href="#headline-2">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">⏯️ 코드 편집기에 대한 생각</h1>
+	    <div class="meta">
+                <time datetime="2020-05-28" pubdate>
+                    2020년05월28일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+코드 편집기를 어떻게 써왔었는지 잠깐 생각해봤다:</p>
+<ol>
+<li>
+<p>DOS시절: MS-DOS Editor.</p>
+<ul>
+<li>GW-BASIC 시절에는 정말
+<a href="https://en.wikipedia.org/wiki/MS-DOS_Editor">https://en.wikipedia.org/wiki/MS-DOS_Editor</a> 을 열심히 썼었던 것
+같다.</li>
+<li>그리고 그 다음엔 <a href="https://en.wikipedia.org/wiki/PowerBASIC#PowerBASIC_for_DOS_(PBDos)">PowerBASIC for DOS</a> 열심히 썼었다. QuickBASIC
+같은 바이트코드으로 컴파일해서 .exe 파일에 인터프리터와
+바이트코드를 embedding 하는 VB의 P-code 같은 가짜 컴파일 방식<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>이
+아니라 정말 네이티브 코드로 컴파일해주고, 인라인 어셈블리와
+메모리 조작이 가능한 베이직 컴파일러, IDE여서 좋은 환경이었던
+것 같다.</li>
+<li>
+<p>터보C 2.0 편집기. PowerBASIC이랑 유사해서 익숙하게 쓸 수 있었던
+것 같다. 파워베이직도 그렇지만, 의외로 도스시절의 이런 IDE들이
+F1 - Help 메뉴에서 항목별로 문서 정리가 잘 되어 있어서 읽으면서
+즐거웠었던 것 같다. (초등학생~중학생이어서 영어를 잘 이해하지는
+못했지만)</p>
+<ul>
+<li>BGI 같은 특유의 그래픽 라이브러리 등을 재밌게 갖고 놀기
+좋았었다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>리눅스 처음 입문 시절.</p>
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/JED_(text_editor)">JED</a> 을 열심히 썼었다. 도스의 EDIT이나 터보씨 유사한 UI이고 도움말
+등을 통해서 필요한 키를 익히기 충분했었던 것 같다.</p>
+<ul>
+<li>지금도 다시 쓰라면 쓸 수 있을 것 같다. 크게 부족한 점이 없는
+것 같다.</li>
+</ul>
+</li>
+<li>Vi/Vim : 그냥 어디에나 깔려있고 해서 그냥 적당히 배워서
+고통스럽게 썼었던 것 같다.</li>
+<li>Emacs : 제대로 내게 맞춰서 설정하는 방법 등은 모르고 그냥
+썼었던 것 같다. 당시에는 큰 용량인 텍스트 파일도 잘 열 수 있고
+view-mode이나 bookmark 등의 기능이 큰 텍스트 파일을 읽는데
+좋아서, 또 X윈도에서 한글을 깔끔하게 잘 처리해줘서 텍본 소설을
+읽는데 오래 썼었던 것 같다.</li>
+</ul>
+</li>
+<li>
+<p>혼자 코딩하는 학생시절 ~ 쥬니어 개발자. (군입대 전)</p>
+<ul>
+<li>Visual C++ 6 : 딱히 엄청나게 좋지도, 그런데 묘하게 나쁜 구석도
+딱히 없는 편집기였었다. 그리고 이런 편집기가 IDE에 붙어 있는게
+좋다고 생각한다.</li>
+<li>Delphi 5 : 의외로 코딩을 많이 하는데 썼던 환경인 것
+같다. VC++6와 마찬가지로 오랬동안 코딩을 하는데 나쁘지 않은
+환경이었던 것 같다.</li>
+<li>Emacs : 웹프로그래밍, 파이썬, 루비, 펄, PHP4을 익힐 때 많이
+썼었던 것 같다. 재밌었다. 여전히 설정을 제대로 할 줄 몰랐었던
+것 같다.</li>
+<li>UltraEdit : PHP4 알바를 하고 하면서 동료가 쓰고 있어서 같이
+썼었던 것 같다. 당시에 FTP을 통해서 파일을 편집하거나 수직 편집
+등이 가능해서 열심히 썼었던 것 같다.</li>
+</ul>
+</li>
+<li>
+<p>군 제대후 ~ 현재.</p>
+<ul>
+<li>Eclipse JDT : 자바, Adobe Flex 때문에 많이 썼었다. 점점
+메모리를 차지하는게 많아지고, Maven plugin 등이 안정적이지
+않아서 직접 가볍게 세팅해서 사용했었었다.</li>
+<li>Vim : Adobe FlexBuilder이 Eclipse 기반인데 너무 끔찍하게 느려서
+그냥 Apache Ant 빌드 파일을 만들고, Vim으로 Adobe Flex 코딩을
+하면서 빌드를 따로하며 썼었던 것 같다. 이외에 업무상 필요한
+C++이나 Java 코딩도 계속해서 Vim으로 했다. 처음에는 최소한의
+내게 적당한 설정만 적용하다가 점점 정교한 설정을 해나갔었던 것
+같다.</li>
+<li>Notepad++ : 어느샌가 윈도 환경에서 작업할 일이 있을 때, C++/Lua
+등을 작업할 일이 있을 때, 윈도용 GVim이 마음에 안 들 때
+사용했었었다. 의외로 깔끔하고 가볍고, (아무런 설정 없이) 그냥
+만족스럽게 동작해서 많이 사용했었다. 특히 내 컴퓨터가 아니라
+급하게 코드를 보거나 해야할 파견이나 트러블슈팅을 위해 파일을
+열어봐야 했었던 시절에 많이 사용했다. 오픈소스여서 설치하는데
+부담도 없었으니까.</li>
+<li>IntelliJ : 자바를 더 많이, 복잡한 것들을 짜게 되면서
+이클립스JDT에서 넘어와 사용했다. 꽤 깔끔하고 키보드만으로
+자유롭게 쓰기 좋았다. 특히 자바를 많이 쓰는 회사에서 일할 때는
+너무 편안했다.</li>
+<li>
+<p>Emacs : 진지하게 설정해서 사용. 이후 Perl, Python, Node.js,
+CommonLisp, Java, Go, C++ 작업을 할 때 계속 사용한 것 같다. 그
+이후로 계속해서 기본 환경으로 사용하고 있다. evil-mode을
+이용해서 반복적인 타이핑이 필요할 때 Vi처럼 사용하고, 내가
+원하는 작업 방식을 위해서 Ripgrep연동, Projectile,
+editable-grep, multiple-cursors 등등 필요한 모든 기능들이 내게
+맞춰져서 설정을 만들어놓았다. 그리고 앞으로도 계속 사용할 것
+같다. 코딩 이외에 일기를 쓰거나 생각을 정리 하는데에도 사용해서
+그냥 거의 계속 사용한다.</p>
+<ul>
+<li>UI 측면에서도 단축키를 기본적인 것 이외에는 대부분은 자동으로
+그 다음 단계를 제시해주도록 만들어놓아서 크게 학습이 필요
+없었다.</li>
+<li>undo-tree이나 kill-ring 같은 것들도 다른 편집기에서는
+찾아보기 어렵게 편안해서 이젠 오히려 Vim을 사용하면 어색하고
+답답하다.</li>
+<li>Hydra, general.el 같은 것들을 사용해서 원하는 기능들을 내게
+맞춰서 모아놓아서 편안하다.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+요즘엔
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+결국 이맥스에 정착한지 10여년 정도 되는 것 같다. 그러면서도 계속
+인텔리J, Vim을 같이 사용해왔었었다. Vim은 여전히 익숙하고 설정을 계속
+갱신하고 있지만, 요즘엔 종종 오랬동안 써야 하는 코딩 세션에서는
+이맥스보다 역시 불편해졌다는 느낌을 받는다. 이맥스는 아예 evil-mode도
+그렇고 대부분의 상황에서 완전히 익숙한데 비해서 Vi/Vim은 점점
+제한적이라는 것을 느껴간다.</p>
+<p>
+최근에는 재미로, <a href="https://micro-editor.github.io/">Micro Editor</a> 을 익혀보려고 했는데, 재밌기는 했지만
+몸에 베인 Vim이나 이맥스의 키들이랑 너무 엊갈려서 쓸 수 없었다.</p>
+<p>
+이맥스는 사람들의 생각이랑 다르게 emacslisp을 조금 익숙하게 다루기
+시작한다면 그냥 쓸만한 편집기 같다. 어차피 편집기를 어느 정도 세팅하기
+시작하면, 이맥스의 키코드를 외우거나 할 필요도 없어지고 그냥 다음
+단계에 어떤 키가 무슨 역할을 하는지 알려주는 패키지도 많고, 그런
+패키지를 이용해서 spacemacs, doomemacs 같은 배포판도 있어서. (무거워서
+나는 별로 좋아하지 않지만)</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p><a href="https://en.wikipedia.org/wiki/Microsoft_P-Code">https://en.wikipedia.org/wiki/Microsoft_P-Code</a></p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">
+                        📚 <a href="/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/">추억두더쥐</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/c&#43;&#43;/">c&#43;&#43;</a>
+                        <sup>11</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lua/">lua</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/vim/">vim</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cxx/">cxx</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/vi/">vi</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/editor/">editor</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/general.el/">general.el</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hydra/">hydra</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/flex3/">flex3</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/php/">php</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/micro-editor/">micro-editor</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/kill-ring/">kill-ring</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/undo-tree.el/">undo-tree.el</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/idea/">idea</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/intellij/">intellij</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gvim/">gvim</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/notepad&#43;&#43;/">notepad&#43;&#43;</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/maven/">maven</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/eclipse-jdt/">eclipse-jdt</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/eclipse/">eclipse</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/php4/">php4</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ultra-edit/">ultra-edit</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/delphi/">delphi</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/visual-c&#43;&#43;/">visual-c&#43;&#43;</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/vc6/">vc6</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/view-mode.el/">view-mode.el</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/turbo-c/">turbo-c</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/edit.com/">edit.com</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/jed/">jed</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/quickbasic/">quickbasic</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/vb6/">vb6</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/visual-basic/">visual-basic</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/pcode/">pcode</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/p-code/">p-code</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/borland/">borland</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/bgi/">bgi</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/power-basic/">power-basic</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/turbo-basic/">turbo-basic</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/powerbasic/">powerbasic</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ms-dos/">ms-dos</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/msdos/">msdos</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/basic/">basic</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gw-basic/">gw-basic</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/tools/">tools</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/text-editor/">text-editor</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-06jun/ping-06sat/">⬅️ Ping 06/Jun/2020</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-05may/ping-28thu/">➡️ Ping 28/May/2020</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1767677425</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

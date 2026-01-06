@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spa on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/spa/</link>
+    <description>Recent content in Spa on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 23 Dec 2025 14:33:23 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/spa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>htmx 마법으로 링크성능 빠르게 &#43; dark-mode 깜빡임 제거</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost&#43;dark-mode/</link>
+      <pubDate>Tue, 23 Dec 2025 14:33:23 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost&#43;dark-mode/</guid>
+      <description>&lt;p&gt;&#xA;지난번 dark-mode 방식을 새로 만든 이후로,  눈에 띄는 단점이었던&#xA;페이지이동시 flash현상을 없애고, 또한 매 페이지 이동을 엄청나게 가볍게&#xA;만들었다.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;지난 포스팅: &lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/prefers-color-scheme/&#34;&gt;🦹 darkmode.js… prefers-color-scheme&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;…위 포스팅에서 “Wrap Up”-표를 확인해 보면:&lt;/p&gt;&#xA;&lt;style&gt;&#xA;&#xA;table.table {&#xA;    border-collapse: collapse;&#xA;}&#xA;&#xA;.table th {&#xA;    border: 1px solid #ccc;&#xA;    text-weight: bold;&#xA;    text-align: center;&#xA;}&#xA;&#xA;.table td {&#xA;    border: 1px solid #ccc;&#xA;}&#xA;&lt;/style&gt;&#xA;&#xA;&lt;table class=&#34;table&#34; width=&#34;&#34;&gt;&#xA;    &lt;thead&gt;&#xA;        &lt;tr&gt;&#xA;            &lt;th&gt;darkmode.js (기존)&lt;/th&gt;&#xA;            &lt;th&gt;새로운 방식&lt;/th&gt;&#xA;        &lt;/tr&gt;&#xA;    &lt;/thead&gt;&#xA;&#xA;    &lt;tbody&gt;&#xA;        &lt;tr&gt;&#xA;            &lt;td colspan=&#34;2&#34;&gt;...생략...&lt;/td&gt;&#xA;        &lt;/tr&gt;&#xA;&#xA;        &lt;tr&gt;&#xA;            &lt;td&gt;&#xA;                &lt;b&gt;😥-1&lt;/b&gt;&#xA;                페이지 로딩시 flash 현상이 생긴다&#xA;            &lt;/td&gt;&#xA;            &lt;td&gt;&#xA;                &lt;b&gt;😥-1&lt;/b&gt;&#xA;                &lt;br&gt;&#xA;                브라우저캐시에 없는 페이지를 로딩할 때에 발생할 수 있음.&#xA;                &lt;br&gt;&#xA;                (OS/브라우저 prefs와 local-storage에 저장된 color-mode이 서로 다른 경우)&#xA;                &lt;br&gt;&#xA;                ...darkmode.js보단 가볍게 사라짐.&#xA;            &lt;/td&gt;&#xA;        &lt;/tr&gt;&#xA;&#xA;        &lt;tr&gt;&#xA;            &lt;td colspan=&#34;2&#34;&gt;...생략...&lt;/td&gt;&#xA;        &lt;/tr&gt;&#xA;    &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&#xA;  …와 같이 된 부분을 다음과 같이 바꾼 것:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
