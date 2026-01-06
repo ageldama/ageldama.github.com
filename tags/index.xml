@@ -7,8 +7,253 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Tue, 06 Jan 2026 05:31:53 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Jan 2026 05:37:59 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anyevent</title>
+      <link>https://ageldama.github.io/tags/anyevent/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/anyevent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apache</title>
+      <link>https://ageldama.github.io/tags/apache/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/apache/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Asgi</title>
+      <link>https://ageldama.github.io/tags/asgi/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/asgi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Async</title>
+      <link>https://ageldama.github.io/tags/async/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/async/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cgi</title>
+      <link>https://ageldama.github.io/tags/cgi/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/cgi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CGI.pm</title>
+      <link>https://ageldama.github.io/tags/cgi.pm/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/cgi.pm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cgilib</title>
+      <link>https://ageldama.github.io/tags/cgilib/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/cgilib/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Clos</title>
+      <link>https://ageldama.github.io/tags/clos/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/clos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dbm</title>
+      <link>https://ageldama.github.io/tags/dbm/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/dbm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Future</title>
+      <link>https://ageldama.github.io/tags/future/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/future/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Http</title>
+      <link>https://ageldama.github.io/tags/http/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/http/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Httpd</title>
+      <link>https://ageldama.github.io/tags/httpd/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/httpd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lisp</title>
+      <link>https://ageldama.github.io/tags/lisp/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/lisp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mojolicious</title>
+      <link>https://ageldama.github.io/tags/mojolicious/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/mojolicious/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Moo</title>
+      <link>https://ageldama.github.io/tags/moo/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/moo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Moose</title>
+      <link>https://ageldama.github.io/tags/moose/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/moose/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mop</title>
+      <link>https://ageldama.github.io/tags/mop/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/mop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mouse</title>
+      <link>https://ageldama.github.io/tags/mouse/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/mouse/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mysql</title>
+      <link>https://ageldama.github.io/tags/mysql/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oop</title>
+      <link>https://ageldama.github.io/tags/oop/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/oop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Perl</title>
+      <link>https://ageldama.github.io/tags/perl/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/perl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Perl6</title>
+      <link>https://ageldama.github.io/tags/perl6/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/perl6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Plack</title>
+      <link>https://ageldama.github.io/tags/plack/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/plack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Poe</title>
+      <link>https://ageldama.github.io/tags/poe/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/poe/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Promise</title>
+      <link>https://ageldama.github.io/tags/promise/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/promise/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Psgi</title>
+      <link>https://ageldama.github.io/tags/psgi/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/psgi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://ageldama.github.io/tags/python/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rakulang</title>
+      <link>https://ageldama.github.io/tags/rakulang/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/rakulang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ruby</title>
+      <link>https://ageldama.github.io/tags/ruby/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ruby/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Smalltalk</title>
+      <link>https://ageldama.github.io/tags/smalltalk/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/smalltalk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sse</title>
+      <link>https://ageldama.github.io/tags/sse/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/sse/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Template-Toolkit</title>
+      <link>https://ageldama.github.io/tags/template-toolkit/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/template-toolkit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web-Hosting</title>
+      <link>https://ageldama.github.io/tags/web-hosting/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/web-hosting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webdev</title>
+      <link>https://ageldama.github.io/tags/webdev/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/webdev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Websocket</title>
+      <link>https://ageldama.github.io/tags/websocket/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/websocket/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Blogging</title>
       <link>https://ageldama.github.io/tags/blogging/</link>
@@ -28,13 +273,6 @@
       <link>https://ageldama.github.io/tags/ping/</link>
       <pubDate>Tue, 06 Jan 2026 05:31:53 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/ping/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Webdev</title>
-      <link>https://ageldama.github.io/tags/webdev/</link>
-      <pubDate>Tue, 06 Jan 2026 05:31:53 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/webdev/</guid>
       <description></description>
     </item>
     <item>
@@ -63,13 +301,6 @@
       <link>https://ageldama.github.io/tags/programming/</link>
       <pubDate>Tue, 30 Dec 2025 11:15:25 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/programming/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>https://ageldama.github.io/tags/python/</link>
-      <pubDate>Tue, 30 Dec 2025 11:15:25 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/python/</guid>
       <description></description>
     </item>
     <item>
@@ -140,13 +371,6 @@
       <link>https://ageldama.github.io/tags/music/</link>
       <pubDate>Sun, 28 Dec 2025 14:41:18 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/music/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Perl</title>
-      <link>https://ageldama.github.io/tags/perl/</link>
-      <pubDate>Sun, 28 Dec 2025 14:41:18 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/perl/</guid>
       <description></description>
     </item>
     <item>
@@ -311,13 +535,6 @@
       <description></description>
     </item>
     <item>
-      <title>Lisp</title>
-      <link>https://ageldama.github.io/tags/lisp/</link>
-      <pubDate>Fri, 26 Dec 2025 11:41:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/lisp/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Rails</title>
       <link>https://ageldama.github.io/tags/rails/</link>
       <pubDate>Fri, 26 Dec 2025 11:41:49 +0000</pubDate>
@@ -332,24 +549,10 @@
       <description></description>
     </item>
     <item>
-      <title>Ruby</title>
-      <link>https://ageldama.github.io/tags/ruby/</link>
-      <pubDate>Fri, 26 Dec 2025 11:41:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ruby/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Rubygems</title>
       <link>https://ageldama.github.io/tags/rubygems/</link>
       <pubDate>Fri, 26 Dec 2025 11:41:49 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/rubygems/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Smalltalk</title>
-      <link>https://ageldama.github.io/tags/smalltalk/</link>
-      <pubDate>Fri, 26 Dec 2025 11:41:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/smalltalk/</guid>
       <description></description>
     </item>
     <item>
@@ -4693,13 +4896,6 @@
       <description></description>
     </item>
     <item>
-      <title>Mop</title>
-      <link>https://ageldama.github.io/tags/mop/</link>
-      <pubDate>Fri, 23 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/mop/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Album</title>
       <link>https://ageldama.github.io/tags/album/</link>
       <pubDate>Mon, 19 Oct 2020 00:00:00 +0900</pubDate>
@@ -4833,13 +5029,6 @@
       <description></description>
     </item>
     <item>
-      <title>Clos</title>
-      <link>https://ageldama.github.io/tags/clos/</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/clos/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Dataclass</title>
       <link>https://ageldama.github.io/tags/dataclass/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0900</pubDate>
@@ -4956,13 +5145,6 @@
       <link>https://ageldama.github.io/tags/language-construct/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
       <guid>https://ageldama.github.io/tags/language-construct/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Oop</title>
-      <link>https://ageldama.github.io/tags/oop/</link>
-      <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/oop/</guid>
       <description></description>
     </item>
     <item>
@@ -5953,13 +6135,6 @@
       <description></description>
     </item>
     <item>
-      <title>Mouse</title>
-      <link>https://ageldama.github.io/tags/mouse/</link>
-      <pubDate>Fri, 25 Oct 2019 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/mouse/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Trackball</title>
       <link>https://ageldama.github.io/tags/trackball/</link>
       <pubDate>Fri, 25 Oct 2019 00:00:00 +0900</pubDate>
@@ -6384,13 +6559,6 @@
       <link>https://ageldama.github.io/tags/myself/</link>
       <pubDate>Tue, 11 Jul 2017 18:35:00 +0900</pubDate>
       <guid>https://ageldama.github.io/tags/myself/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Async</title>
-      <link>https://ageldama.github.io/tags/async/</link>
-      <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/async/</guid>
       <description></description>
     </item>
     <item>
