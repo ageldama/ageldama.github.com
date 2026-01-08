@@ -7,13 +7,20 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Tue, 06 Jan 2026 05:37:59 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Programming-Languages</title>
       <link>https://ageldama.github.io/series/programming-languages/</link>
-      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/series/programming-languages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>추억두더쥐</title>
+      <link>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</guid>
       <description></description>
     </item>
     <item>
@@ -28,13 +35,6 @@
       <link>https://ageldama.github.io/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/</link>
       <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
       <guid>https://ageldama.github.io/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>추억두더쥐</title>
-      <link>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</link>
-      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</guid>
       <description></description>
     </item>
     <item>
