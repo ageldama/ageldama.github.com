@@ -10,6 +10,20 @@
     <lastBuildDate>Sun, 18 Jan 2026 10:28:10 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Foo-Fighters</title>
+      <link>https://ageldama.github.io/tags/foo-fighters/</link>
+      <pubDate>Sun, 18 Jan 2026 10:28:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/foo-fighters/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Music</title>
+      <link>https://ageldama.github.io/tags/music/</link>
+      <pubDate>Sun, 18 Jan 2026 10:28:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/music/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Ping</title>
       <link>https://ageldama.github.io/tags/ping/</link>
       <pubDate>Sun, 18 Jan 2026 10:28:10 +0000</pubDate>
@@ -210,6 +224,13 @@
       <link>https://ageldama.github.io/tags/openstep/</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/openstep/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ost</title>
+      <link>https://ageldama.github.io/tags/ost/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ost/</guid>
       <description></description>
     </item>
     <item>
@@ -707,13 +728,6 @@
       <link>https://ageldama.github.io/tags/mpv/</link>
       <pubDate>Sun, 28 Dec 2025 14:41:18 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/mpv/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Music</title>
-      <link>https://ageldama.github.io/tags/music/</link>
-      <pubDate>Sun, 28 Dec 2025 14:41:18 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/music/</guid>
       <description></description>
     </item>
     <item>
