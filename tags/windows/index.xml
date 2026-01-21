@@ -7,8 +7,22 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Tue, 18 Mar 2025 13:30:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Jan 2026 03:00:09 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>메모리패딩과 Heisenbug 추억담</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/mem-padding-for-aka-security-solutions/</link>
+      <pubDate>Wed, 21 Jan 2026 03:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/mem-padding-for-aka-security-solutions/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;추억을 돌아보며&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;아마 이 기억은 2010년 전후였던거 같다. 당시 나는 작은 회사에&#xA;  소속이었는데, 회사가 작을 때에 다같이 SI에 파견되었을 때에, 내가 S/W&#xA;  솔루션 제품을 설계/개발한 것을 납품하며, 그 솔루션과 함께 SI구축을&#xA;  하는 프로젝트들을 수주 받는 회사였었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  원래는 그 SI프로젝트에서 ActiveX 정도를 몇 개 개발하고 덮었어도 될&#xA;  것을, 솔루션화하고 납품처에 따라 쉽게 적용할 수 있도록 설계/개발을&#xA;  사실상 나 혼자 했었었다. 자세한 기술적 사항을 모두 설명하지는&#xA;  않겠지만, Windows API, C++, Lua, HTTP/1.0, JSON을 잘 조합해서 필요한&#xA;  것을 만들어냈다. 지금 돌아봐도 훌륭한 창조력이었던거 같다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>타입스크립트는 새로운 델파이이지 않을까</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/typescript-is-the-new-delphi/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/typescript-is-the-new-delphi/</guid>
+      <description>&lt;p&gt;&#xA;타입스크립트, C#, &lt;a href=&#34;https://en.wikipedia.org/wiki/Visual_J%2B%2B&#34;&gt;J++&lt;/a&gt;, 델파이, 터보파스칼… 이 프로그래밍언어들의&#xA;공통점, 모두 같은 사람이 설계했다는 점이다:&lt;/p&gt;&#xA;&lt;p&gt;&#xA;👉 &lt;a href=&#34;https://en.wikipedia.org/wiki/Anders_Hejlsberg&#34;&gt;https://en.wikipedia.org/wiki/Anders_Hejlsberg&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이 포스팅에서는 이분과 관련된 추억놀음을 정리해 보려고 함. 결론이 있을&#xA;수 있겠고, 나 개인의 의견을 늘어놓지는 않아도 될 것 같다. 어차피 내&#xA;관점이 녹아 있을 수 밖에 없는 주관적으로 해석하고 나열하는&#xA;역사일테니까.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;DOS, 터보파스칼, 볼랜드의 시대 💾&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  &lt;figure&gt;&lt;a href=&#34;https://www.dosdays.co.uk/topics/Software/borland_turbo_pascal.php&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-01jan/typescript-is-the-new-delphi/turbo-pascal.png&#34;&#xA;      alt=&#34;터보파스칼 스크린샷들&#34; width=&#34;700&#34;&gt;&lt;/a&gt;&lt;figcaption&gt;&#xA;        &lt;p&gt;터보파스칼 스크린샷들&lt;/p&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  1990년대, 당시에 프로그래밍을 한다고 하면, 대부분은 GW-BASIC,&#xA;  QBASIC, QuickBasic이거나, 아니면 당시의 ‘볼랜드’社의 Turbo-C,&#xA;  Turbo-Pascal이 보통이지 않았을까 한다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>xrandr 🖥️모니터 연결 자동전환 스크립트🐫</title>
       <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/</link>

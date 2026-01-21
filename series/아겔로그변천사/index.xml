@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Thu, 25 Dec 2025 05:47:08 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Jan 2026 05:31:53 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2026년 시작</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/2026-01jan06--01-ping/</link>
+      <pubDate>Tue, 06 Jan 2026 05:31:53 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/2026-01jan06--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;연말동안 내려놓았던 블로그를 다시 열었다. 디자인을 좀 바꿔볼까 하다가&#xA;일단은 ㅎㅎ내버려두려고.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;영화, 책, 게임이나 프로그래밍 같은 그간의 취미들도 계속해서 올려볼까&#xA;함.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>global hx-boost &#43; &lt;script defer&gt;</title>
       <link>https://ageldama.github.io/posts/2025-12dec/script-defer-ftw/</link>
