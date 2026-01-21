@@ -7,8 +7,141 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 21 Jan 2026 03:00:09 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Jan 2026 03:05:09 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Acid</title>
+      <link>https://ageldama.github.io/tags/acid/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/acid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backend</title>
+      <link>https://ageldama.github.io/tags/backend/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/backend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Base</title>
+      <link>https://ageldama.github.io/tags/base/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/base/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Book</title>
+      <link>https://ageldama.github.io/tags/book/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/book/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cap</title>
+      <link>https://ageldama.github.io/tags/cap/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/cap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Columnar</title>
+      <link>https://ageldama.github.io/tags/columnar/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/columnar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Consitent-Hashing</title>
+      <link>https://ageldama.github.io/tags/consitent-hashing/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/consitent-hashing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>https://ageldama.github.io/tags/database/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dbms</title>
+      <link>https://ageldama.github.io/tags/dbms/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/dbms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ddia</title>
+      <link>https://ageldama.github.io/tags/ddia/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ddia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed-System</title>
+      <link>https://ageldama.github.io/tags/distributed-system/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/distributed-system/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nosql</title>
+      <link>https://ageldama.github.io/tags/nosql/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/nosql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oreilly</title>
+      <link>https://ageldama.github.io/tags/oreilly/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/oreilly/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reading</title>
+      <link>https://ageldama.github.io/tags/reading/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/reading/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rebalancing</title>
+      <link>https://ageldama.github.io/tags/rebalancing/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/rebalancing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Replication</title>
+      <link>https://ageldama.github.io/tags/replication/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/replication/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rpc</title>
+      <link>https://ageldama.github.io/tags/rpc/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/rpc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sharding</title>
+      <link>https://ageldama.github.io/tags/sharding/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/sharding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sql</title>
+      <link>https://ageldama.github.io/tags/sql/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/sql/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Activex</title>
       <link>https://ageldama.github.io/tags/activex/</link>
@@ -745,13 +878,6 @@
       <description></description>
     </item>
     <item>
-      <title>Book</title>
-      <link>https://ageldama.github.io/tags/book/</link>
-      <pubDate>Tue, 30 Dec 2025 11:15:25 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/book/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Books</title>
       <link>https://ageldama.github.io/tags/books/</link>
       <pubDate>Tue, 30 Dec 2025 11:15:25 +0000</pubDate>
@@ -770,13 +896,6 @@
       <link>https://ageldama.github.io/tags/programming/</link>
       <pubDate>Tue, 30 Dec 2025 11:15:25 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/programming/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Reading</title>
-      <link>https://ageldama.github.io/tags/reading/</link>
-      <pubDate>Tue, 30 Dec 2025 11:15:25 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/reading/</guid>
       <description></description>
     </item>
     <item>
