@@ -16,5 +16,12 @@
       <guid>https://ageldama.github.io/posts/2026-01jan/mem-padding-for-aka-security-solutions/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;추억을 돌아보며&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;아마 이 기억은 2010년 전후였던거 같다. 당시 나는 작은 회사에&#xA;  소속이었는데, 회사가 작을 때에 다같이 SI에 파견되었을 때에, 내가 S/W&#xA;  솔루션 제품을 설계/개발한 것을 납품하며, 그 솔루션과 함께 SI구축을&#xA;  하는 프로젝트들을 수주 받는 회사였었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  원래는 그 SI프로젝트에서 ActiveX 정도를 몇 개 개발하고 덮었어도 될&#xA;  것을, 솔루션화하고 납품처에 따라 쉽게 적용할 수 있도록 설계/개발을&#xA;  사실상 나 혼자 했었었다. 자세한 기술적 사항을 모두 설명하지는&#xA;  않겠지만, Windows API, C++, Lua, HTTP/1.0, JSON을 잘 조합해서 필요한&#xA;  것을 만들어냈다. 지금 돌아봐도 훌륭한 창조력이었던거 같다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Ping 11/Oct/2020</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/ping-11sun/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-10oct/ping-11sun/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;어째서 더 잘 그럴 수 있을까&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;무엇인가를 만드는 일은 사실 두 가지 단계로 발전하는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  단지 목적한 그것만을 만드는 일과, 또는 그것을 반복적으로 생산하고 또&#xA;  더 나은 방법으로 추상화하여 내는 도구를 만들어내는 일으로 구분할 수&#xA;  있는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  직관적으로 생각했을 때에는, 목적이 명확하다면 당연히 그것 자체를&#xA;  만드는 일을 이미 존재하는 도구들을 통해서 표현하고 만들면 그만인 것&#xA;  같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 더 나아가서 결과물을 그냥 직접 만드는 것이 아니라, 그 결과물을&#xA;  만들기 위한 도구까지 같이 만들거나, 그 결과물이 그를 만들기 위해&#xA;  고안된 도구를 통해서 만드는 경우가 비교할 수 없이 생산적이고 그 결과물&#xA;  또한 훨씬 매끄럽고 완성도가 높은 경우가 오히려 보통인 것 같다.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

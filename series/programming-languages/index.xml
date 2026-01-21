@@ -108,6 +108,13 @@
       <description>&lt;p&gt;&#xA;그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,&#xA;github repositories도 대부분은 private으로 변경해놓고 지냈었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;하지만 그래도 coding과 글쓰기는 계속 하고 있었었고, 글을 조금씩이라도 공개할까 싶어 다시 문을 연다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것,&#xA;또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.&#xA;이제는 너무 이맥스 + evil 설정 등에 익숙해져서 vim을 오히려 더 설정해서 쓰고 싶은 생각도 들지 않는다.&#xA;..하지만 다른 이들에게 이맥스를 쓰라고 권하기는 머뭇거려진다. 어릴 때부터 이맥스를 사용했고 그렇게 습관으로 하나씩 하나씩 이맥스 컨벤션과 모드들에 익숙해져서 시간이 오래 걸렸었던 것 같으니까.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Ping 11/Oct/2020</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/ping-11sun/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-10oct/ping-11sun/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;어째서 더 잘 그럴 수 있을까&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;무엇인가를 만드는 일은 사실 두 가지 단계로 발전하는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  단지 목적한 그것만을 만드는 일과, 또는 그것을 반복적으로 생산하고 또&#xA;  더 나은 방법으로 추상화하여 내는 도구를 만들어내는 일으로 구분할 수&#xA;  있는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  직관적으로 생각했을 때에는, 목적이 명확하다면 당연히 그것 자체를&#xA;  만드는 일을 이미 존재하는 도구들을 통해서 표현하고 만들면 그만인 것&#xA;  같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 더 나아가서 결과물을 그냥 직접 만드는 것이 아니라, 그 결과물을&#xA;  만들기 위한 도구까지 같이 만들거나, 그 결과물이 그를 만들기 위해&#xA;  고안된 도구를 통해서 만드는 경우가 비교할 수 없이 생산적이고 그 결과물&#xA;  또한 훨씬 매끄럽고 완성도가 높은 경우가 오히려 보통인 것 같다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Python에 대한 내 관점</title>
       <link>https://ageldama.github.io/posts/2020-09sep/perspective-on-python/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
