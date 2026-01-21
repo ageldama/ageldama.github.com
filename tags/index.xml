@@ -7,8 +7,85 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 21 Jan 2026 03:05:09 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Jan 2026 04:00:09 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Activex</title>
+      <link>https://ageldama.github.io/tags/activex/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/activex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bytecode</title>
+      <link>https://ageldama.github.io/tags/bytecode/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/bytecode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Com</title>
+      <link>https://ageldama.github.io/tags/com/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/com/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ocx</title>
+      <link>https://ageldama.github.io/tags/ocx/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ocx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pcode</title>
+      <link>https://ageldama.github.io/tags/pcode/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/pcode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reversing</title>
+      <link>https://ageldama.github.io/tags/reversing/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/reversing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vb6</title>
+      <link>https://ageldama.github.io/tags/vb6/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/vb6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Visual-Basic</title>
+      <link>https://ageldama.github.io/tags/visual-basic/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/visual-basic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vm</title>
+      <link>https://ageldama.github.io/tags/vm/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/vm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Win32</title>
+      <link>https://ageldama.github.io/tags/win32/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/win32/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://ageldama.github.io/tags/windows/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Acid</title>
       <link>https://ageldama.github.io/tags/acid/</link>
@@ -143,20 +220,6 @@
       <description></description>
     </item>
     <item>
-      <title>Activex</title>
-      <link>https://ageldama.github.io/tags/activex/</link>
-      <pubDate>Wed, 21 Jan 2026 03:00:09 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/activex/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Com</title>
-      <link>https://ageldama.github.io/tags/com/</link>
-      <pubDate>Wed, 21 Jan 2026 03:00:09 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/com/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Debugger</title>
       <link>https://ageldama.github.io/tags/debugger/</link>
       <pubDate>Wed, 21 Jan 2026 03:00:09 +0000</pubDate>
@@ -220,13 +283,6 @@
       <description></description>
     </item>
     <item>
-      <title>Reversing</title>
-      <link>https://ageldama.github.io/tags/reversing/</link>
-      <pubDate>Wed, 21 Jan 2026 03:00:09 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/reversing/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Security</title>
       <link>https://ageldama.github.io/tags/security/</link>
       <pubDate>Wed, 21 Jan 2026 03:00:09 +0000</pubDate>
@@ -245,20 +301,6 @@
       <link>https://ageldama.github.io/tags/solution/</link>
       <pubDate>Wed, 21 Jan 2026 03:00:09 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/solution/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Win32</title>
-      <link>https://ageldama.github.io/tags/win32/</link>
-      <pubDate>Wed, 21 Jan 2026 03:00:09 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/win32/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Windows</title>
-      <link>https://ageldama.github.io/tags/windows/</link>
-      <pubDate>Wed, 21 Jan 2026 03:00:09 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/windows/</guid>
       <description></description>
     </item>
     <item>
@@ -315,13 +357,6 @@
       <link>https://ageldama.github.io/tags/borland/</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/borland/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Bytecode</title>
-      <link>https://ageldama.github.io/tags/bytecode/</link>
-      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/bytecode/</guid>
       <description></description>
     </item>
     <item>
@@ -5071,13 +5106,6 @@
       <description></description>
     </item>
     <item>
-      <title>Vm</title>
-      <link>https://ageldama.github.io/tags/vm/</link>
-      <pubDate>Sun, 12 Jun 2022 13:45:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/vm/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Engineering</title>
       <link>https://ageldama.github.io/tags/engineering/</link>
       <pubDate>Sun, 12 Jun 2022 04:37:12 +0000</pubDate>
@@ -6044,13 +6072,6 @@
       <description></description>
     </item>
     <item>
-      <title>Pcode</title>
-      <link>https://ageldama.github.io/tags/pcode/</link>
-      <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/pcode/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Php4</title>
       <link>https://ageldama.github.io/tags/php4/</link>
       <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
@@ -6114,13 +6135,6 @@
       <description></description>
     </item>
     <item>
-      <title>Vb6</title>
-      <link>https://ageldama.github.io/tags/vb6/</link>
-      <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/vb6/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Vc6</title>
       <link>https://ageldama.github.io/tags/vc6/</link>
       <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
@@ -6132,13 +6146,6 @@
       <link>https://ageldama.github.io/tags/view-mode.el/</link>
       <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
       <guid>https://ageldama.github.io/tags/view-mode.el/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Visual-Basic</title>
-      <link>https://ageldama.github.io/tags/visual-basic/</link>
-      <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/visual-basic/</guid>
       <description></description>
     </item>
     <item>
