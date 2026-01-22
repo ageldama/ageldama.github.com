@@ -2,31 +2,184 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ageldama.github.io/tags/foo-fighters/</loc>
-    <lastmod>2026-01-18T10:28:10+00:00</lastmod>
+    <loc>https://ageldama.github.io/series/aimee-mann/</loc>
+    <lastmod>2026-01-22T12:30:21+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/series/midnight-radio/</loc>
+    <lastmod>2026-01-22T12:30:21+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/ping/</loc>
+    <lastmod>2026-01-22T12:30:21+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2026-01jan/2026-01jan22--01-ping/</loc>
+    <lastmod>2026-01-22T12:30:21+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2026-01-22T12:30:21+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/script-kiddie-life/</loc>
+    <lastmod>2026-01-22T12:30:21+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/</loc>
+    <lastmod>2026-01-22T12:30:21+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2026-01-22T12:30:21+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/wise-up/</loc>
+    <lastmod>2026-01-22T12:30:21+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/%EB%A7%88%EC%99%95__%EC%9E%98_%EC%9E%88%EC%A7%80/</loc>
+    <lastmod>2026-01-22T12:30:21+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2026-01-22T12:30:21+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/activex/</loc>
+    <lastmod>2026-01-21T04:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/bytecode/</loc>
+    <lastmod>2026-01-21T04:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/com/</loc>
+    <lastmod>2026-01-21T04:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/ocx/</loc>
+    <lastmod>2026-01-21T04:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/pcode/</loc>
+    <lastmod>2026-01-21T04:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/reversing/</loc>
+    <lastmod>2026-01-21T04:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/vb6/</loc>
+    <lastmod>2026-01-21T04:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/visual-basic/</loc>
+    <lastmod>2026-01-21T04:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/vm/</loc>
+    <lastmod>2026-01-21T04:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/win32/</loc>
+    <lastmod>2026-01-21T04:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/windows/</loc>
+    <lastmod>2026-01-21T04:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2026-01jan/vb6-pcode-for-activex/</loc>
+    <lastmod>2026-01-21T04:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/acid/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/backend/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/base/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/book/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/cap/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/columnar/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/consitent-hashing/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/database/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/dbms/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/ddia/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/distributed-system/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/nosql/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/oreilly/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/reading/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/rebalancing/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/replication/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/rpc/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/sharding/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/sql/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/%EC%B1%85/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2026-01jan/book-designing-data-intensive-applications/</loc>
+    <lastmod>2026-01-21T03:05:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/debugger/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/debugging-mode/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/gcc/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/gdb/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/heisenbug/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/lua/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/memory/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/mingw/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/product/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/security/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/segfault/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/solution/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2026-01jan/mem-padding-for-aka-security-solutions/</loc>
+    <lastmod>2026-01-21T03:00:09+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/foo-fighters/</loc>
     <lastmod>2026-01-18T10:28:10+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/music/</loc>
     <lastmod>2026-01-18T10:28:10+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/ping/</loc>
-    <lastmod>2026-01-18T10:28:10+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/posts/2026-01jan/2026-01jan18--01-ping/</loc>
-    <lastmod>2026-01-18T10:28:10+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2026-01-18T10:28:10+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/series/</loc>
-    <lastmod>2026-01-18T10:28:10+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
-    <lastmod>2026-01-18T10:28:10+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2026-01-18T10:28:10+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/.net/</loc>
@@ -44,13 +197,7 @@
     <loc>https://ageldama.github.io/tags/borland/</loc>
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/bytecode/</loc>
-    <lastmod>2026-01-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/c%23/</loc>
-    <lastmod>2026-01-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/debugger/</loc>
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/delphi/</loc>
@@ -171,9 +318,6 @@
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/webobjects/</loc>
-    <lastmod>2026-01-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/windows/</loc>
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/wsl/</loc>
@@ -311,9 +455,6 @@
     <loc>https://ageldama.github.io/posts/2025-12dec/go-away-python/</loc>
     <lastmod>2025-12-30T11:15:25+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/book/</loc>
-    <lastmod>2025-12-30T11:15:25+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/books/</loc>
     <lastmod>2025-12-30T11:15:25+00:00</lastmod>
   </url><url>
@@ -321,9 +462,6 @@
     <lastmod>2025-12-30T11:15:25+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/programming/</loc>
-    <lastmod>2025-12-30T11:15:25+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/reading/</loc>
     <lastmod>2025-12-30T11:15:25+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/script/</loc>
@@ -938,9 +1076,6 @@
     <loc>https://ageldama.github.io/tags/language/</loc>
     <lastmod>2025-12-10T06:46:13+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/lua/</loc>
-    <lastmod>2025-12-10T06:46:13+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/metaprogramming/</loc>
     <lastmod>2025-12-10T06:46:13+00:00</lastmod>
   </url><url>
@@ -1095,9 +1230,6 @@
     <lastmod>2025-12-06T10:20:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/script-fu/</loc>
-    <lastmod>2025-12-06T10:20:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/security/</loc>
     <lastmod>2025-12-06T10:20:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/siod/</loc>
@@ -1283,6 +1415,9 @@
     <loc>https://ageldama.github.io/tags/disassemble/</loc>
     <lastmod>2025-11-10T06:35:45+00:00</lastmod>
   </url><url>
+    <loc>https://ageldama.github.io/tags/disassembly/</loc>
+    <lastmod>2025-11-10T06:35:45+00:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/tags/runtime/</loc>
     <lastmod>2025-11-10T06:35:45+00:00</lastmod>
   </url><url>
@@ -1401,9 +1536,6 @@
     <lastmod>2025-09-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2025-09sep/netscape-30yrs-jwz/</loc>
-    <lastmod>2025-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/activex/</loc>
     <lastmod>2025-09-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/antitrust/</loc>
@@ -1851,9 +1983,6 @@
     <lastmod>2024-05-06T07:51:13+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/g&#43;&#43;/</loc>
-    <lastmod>2024-05-06T07:51:13+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/gcc/</loc>
     <lastmod>2024-05-06T07:51:13+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/xmake/</loc>
@@ -2351,9 +2480,6 @@
     <loc>https://ageldama.github.io/tags/redis/</loc>
     <lastmod>2022-06-12T13:45:00+09:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/vm/</loc>
-    <lastmod>2022-06-12T13:45:00+09:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/posts/2022-06jun/06jun12sun--01-some-engr-tough-sells/</loc>
     <lastmod>2022-06-12T04:37:12+00:00</lastmod>
   </url><url>
@@ -2633,7 +2759,16 @@
     <loc>https://ageldama.github.io/posts/2020-10oct/ping-15thu-2nd/</loc>
     <lastmod>2020-10-15T00:00:01+09:00</lastmod>
   </url><url>
+    <loc>https://ageldama.github.io/tags/asm/</loc>
+    <lastmod>2020-10-11T00:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/assembler/</loc>
+    <lastmod>2020-10-11T00:00:00+09:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/tags/framework/</loc>
+    <lastmod>2020-10-11T00:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/hla/</loc>
     <lastmod>2020-10-11T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/mastery/</loc>
@@ -2924,9 +3059,6 @@
     <loc>https://ageldama.github.io/tags/p-code/</loc>
     <lastmod>2020-05-28T00:00:01+09:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/pcode/</loc>
-    <lastmod>2020-05-28T00:00:01+09:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/php4/</loc>
     <lastmod>2020-05-28T00:00:01+09:00</lastmod>
   </url><url>
@@ -2954,16 +3086,10 @@
     <loc>https://ageldama.github.io/tags/undo-tree.el/</loc>
     <lastmod>2020-05-28T00:00:01+09:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/vb6/</loc>
-    <lastmod>2020-05-28T00:00:01+09:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/vc6/</loc>
     <lastmod>2020-05-28T00:00:01+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/view-mode.el/</loc>
-    <lastmod>2020-05-28T00:00:01+09:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/visual-basic/</loc>
     <lastmod>2020-05-28T00:00:01+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2020-05may/editors/</loc>
@@ -3528,9 +3654,6 @@
     <lastmod>2018-05-08T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2018-04apr/2018-04apr-golang-windows-vscode/</loc>
-    <lastmod>2018-04-14T14:59:31+09:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/mingw/</loc>
     <lastmod>2018-04-14T14:59:31+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2017/2017-10-22-blogging/</loc>

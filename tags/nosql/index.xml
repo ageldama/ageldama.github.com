@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nosql on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/nosql/</link>
+    <description>Recent content in Nosql on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Wed, 21 Jan 2026 03:05:09 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/nosql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>책 “Designing Data-Intensive Applications&#34;</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/book-designing-data-intensive-applications/</link>
+      <pubDate>Wed, 21 Jan 2026 03:05:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/book-designing-data-intensive-applications/</guid>
+      <description>&lt;p&gt;&#xA;&lt;figure&gt;&lt;a href=&#34;https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://m.media-amazon.com/images/I/91YfNb49PLL._SL1500_.jpg&#34; width=&#34;300&#34;&gt;&lt;/a&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;책의 목차나 내용을 정리하며 나가지는 않겠다. 읽을 관심이 있을만한&#xA;사람들은 분산시스템, 데이터처리 시스템에 대한 내용만이 아니라, 현대의&#xA;백엔드 시스템에 대해서, 그리고 이와 관련한 dbms, 혹은 zookeeper 등은&#xA;물론 grpc, columnar storage 등등에 대한 내용을 이해하고 싶다면&#xA;읽을만한 책인거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Distributed_computing&#34;&gt;분산시스템&lt;/a&gt;-에 대한 이해를 얻기 좋은 책이다. 현대에 넘쳐나는&#xA;문맥을 이해하기 어려울 정도로 많은 키워드들이 왜 필요한지, 어떤 문제를&#xA;각각 어떻게 접근하는지 넓은 지형을 살펴볼 수 있고, 각 분산시스템,&#xA;데이터시스템의 문제에 대해 깊이 있게 설명해준다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
