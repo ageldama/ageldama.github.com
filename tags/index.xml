@@ -10,6 +10,20 @@
     <lastBuildDate>Sun, 25 Jan 2026 16:21:25 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>4chan</title>
+      <link>https://ageldama.github.io/tags/4chan/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/4chan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Altavista</title>
+      <link>https://ageldama.github.io/tags/altavista/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/altavista/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Blog</title>
       <link>https://ageldama.github.io/tags/blog/</link>
       <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
@@ -31,6 +45,55 @@
       <description></description>
     </item>
     <item>
+      <title>Dead-Internet-Theory</title>
+      <link>https://ageldama.github.io/tags/dead-internet-theory/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/dead-internet-theory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Doom-Scrolling</title>
+      <link>https://ageldama.github.io/tags/doom-scrolling/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/doom-scrolling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Easter-Egg</title>
+      <link>https://ageldama.github.io/tags/easter-egg/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/easter-egg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Geocities</title>
+      <link>https://ageldama.github.io/tags/geocities/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/geocities/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google</title>
+      <link>https://ageldama.github.io/tags/google/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/google/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mastodon</title>
+      <link>https://ageldama.github.io/tags/mastodon/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/mastodon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neocities</title>
+      <link>https://ageldama.github.io/tags/neocities/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/neocities/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Ping</title>
       <link>https://ageldama.github.io/tags/ping/</link>
       <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
@@ -45,6 +108,13 @@
       <description></description>
     </item>
     <item>
+      <title>Reddit</title>
+      <link>https://ageldama.github.io/tags/reddit/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/reddit/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Roads</title>
       <link>https://ageldama.github.io/tags/roads/</link>
       <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
@@ -52,10 +122,45 @@
       <description></description>
     </item>
     <item>
+      <title>Small-Web</title>
+      <link>https://ageldama.github.io/tags/small-web/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/small-web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sns</title>
+      <link>https://ageldama.github.io/tags/sns/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/sns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Twitter</title>
+      <link>https://ageldama.github.io/tags/twitter/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/twitter/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Writing</title>
       <link>https://ageldama.github.io/tags/writing/</link>
       <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/writing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>X.com</title>
+      <link>https://ageldama.github.io/tags/x.com/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/x.com/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Youtube</title>
+      <link>https://ageldama.github.io/tags/youtube/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/youtube/</guid>
       <description></description>
     </item>
     <item>
@@ -1102,13 +1207,6 @@
       <description></description>
     </item>
     <item>
-      <title>Youtube</title>
-      <link>https://ageldama.github.io/tags/youtube/</link>
-      <pubDate>Sun, 28 Dec 2025 14:41:18 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/youtube/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Ai</title>
       <link>https://ageldama.github.io/tags/ai/</link>
       <pubDate>Sat, 27 Dec 2025 06:36:26 +0000</pubDate>
@@ -1134,13 +1232,6 @@
       <link>https://ageldama.github.io/tags/consumerism/</link>
       <pubDate>Sat, 27 Dec 2025 06:36:26 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/consumerism/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Google</title>
-      <link>https://ageldama.github.io/tags/google/</link>
-      <pubDate>Sat, 27 Dec 2025 06:36:26 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/google/</guid>
       <description></description>
     </item>
     <item>
