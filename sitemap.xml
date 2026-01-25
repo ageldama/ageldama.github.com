@@ -2,34 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ageldama.github.io/posts/2026-01jan/2026-01jan25--02-ping/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/blog/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/blogging/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/daily/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/midnight-radio/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/ping/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/portishead/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/roads/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/writing/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</loc>
+    <lastmod>2026-01-25T16:21:25+00:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/posts/2026-01jan/2026-01jan25--01-ping/</loc>
     <lastmod>2026-01-25T16:06:24+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/2000/</loc>
     <lastmod>2026-01-25T16:06:24+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/series/midnight-radio/</loc>
-    <lastmod>2026-01-25T16:06:24+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/ping/</loc>
-    <lastmod>2026-01-25T16:06:24+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2026-01-25T16:06:24+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/series/</loc>
-    <lastmod>2026-01-25T16:06:24+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/sheena-ringo/</loc>
-    <lastmod>2026-01-25T16:06:24+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
-    <lastmod>2026-01-25T16:06:24+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
-    <lastmod>2026-01-25T16:06:24+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</loc>
     <lastmod>2026-01-25T16:06:24+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/aimee-mann/</loc>
@@ -452,9 +473,6 @@
     <loc>https://ageldama.github.io/posts/2026-01jan/2026-01jan06--01-ping/</loc>
     <lastmod>2026-01-06T05:31:53+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/blogging/</loc>
-    <lastmod>2026-01-06T05:31:53+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/css/</loc>
     <lastmod>2026-01-06T05:31:53+00:00</lastmod>
   </url><url>
@@ -604,9 +622,6 @@
   </url><url>
     <loc>https://ageldama.github.io/tags/%EB%AC%B4%EB%9D%BC%EC%B9%B4%EB%AF%B8-%ED%95%98%EB%A3%A8%ED%82%A4/</loc>
     <lastmod>2025-12-26T07:36:17+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/blog/</loc>
-    <lastmod>2025-12-25T05:47:08+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/</loc>
     <lastmod>2025-12-25T05:47:08+00:00</lastmod>
