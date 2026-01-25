@@ -7,13 +7,20 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Thu, 22 Jan 2026 12:30:21 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Jan 2026 16:06:24 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Midnight-Radio</title>
       <link>https://ageldama.github.io/series/midnight-radio/</link>
-      <pubDate>Thu, 22 Jan 2026 12:30:21 +0000</pubDate>
+      <pubDate>Sun, 25 Jan 2026 16:06:24 +0000</pubDate>
       <guid>https://ageldama.github.io/series/midnight-radio/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>추억두더쥐</title>
+      <link>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</link>
+      <pubDate>Sun, 25 Jan 2026 16:06:24 +0000</pubDate>
+      <guid>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</guid>
       <description></description>
     </item>
     <item>
@@ -35,13 +42,6 @@
       <link>https://ageldama.github.io/series/programming-languages/</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/series/programming-languages/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>추억두더쥐</title>
-      <link>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</link>
-      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</guid>
       <description></description>
     </item>
     <item>
