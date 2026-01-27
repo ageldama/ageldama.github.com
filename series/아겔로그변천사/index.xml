@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Tue, 06 Jan 2026 05:31:53 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jan 2026 04:19:57 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo builtin sass/esbuild 으로 전환</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/hugo-builtin-sass-esbuild/</link>
+      <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/hugo-builtin-sass-esbuild/</guid>
+      <description>&lt;p&gt;&#xA;(배경: 이 블로그는 sass=hugo내장, esbuild=npm을 통해서 빌드하고&#xA;있었음. 참고 👉 &lt;a href=&#34;http://localhost:1313/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/&#34;&gt;아겔로그변천사&lt;/a&gt; )&lt;/p&gt;&#xA;&lt;p&gt;&#xA;어쩌다 만들게 된 hugo 사이트에서는 javascript build도 hugo builtin으로&#xA;바꿔봤다. 잘 동작했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;…그래서 이 블로그도 그냥 모두 hugo 내장으로 변경. 적당히 잘 굴러가서&#xA;마음에 든다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;구성이 더 단순해졌다. hugo 최고💌&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://gohugo.io/functions/js/build/&#34;&gt;Hugo: js.Build&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://gohugo.io/functions/css/sass/&#34;&gt;Hugo: css.Sass&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;PostCSS, Tailwind.css도 지원하는데 딱히 끌리진 않음. (아직은)&#xA;sass자체가 좀 이상하게 동작하고 하기는 하지만.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>2026년 시작</title>
       <link>https://ageldama.github.io/posts/2026-01jan/2026-01jan06--01-ping/</link>

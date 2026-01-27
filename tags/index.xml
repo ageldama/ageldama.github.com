@@ -7,8 +7,71 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 26 Jan 2026 17:42:31 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jan 2026 04:19:57 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Css</title>
+      <link>https://ageldama.github.io/tags/css/</link>
+      <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Esbuild</title>
+      <link>https://ageldama.github.io/tags/esbuild/</link>
+      <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/esbuild/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://ageldama.github.io/tags/hugo/</link>
+      <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Js</title>
+      <link>https://ageldama.github.io/tags/js/</link>
+      <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ping</title>
+      <link>https://ageldama.github.io/tags/ping/</link>
+      <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ping/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://ageldama.github.io/tags/programming/</link>
+      <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sass</title>
+      <link>https://ageldama.github.io/tags/sass/</link>
+      <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/sass/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scss</title>
+      <link>https://ageldama.github.io/tags/scss/</link>
+      <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/scss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webdev</title>
+      <link>https://ageldama.github.io/tags/webdev/</link>
+      <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/webdev/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Halestorm</title>
       <link>https://ageldama.github.io/tags/halestorm/</link>
@@ -28,13 +91,6 @@
       <link>https://ageldama.github.io/tags/paul-rodgers/</link>
       <pubDate>Mon, 26 Jan 2026 17:42:31 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/paul-rodgers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ping</title>
-      <link>https://ageldama.github.io/tags/ping/</link>
-      <pubDate>Mon, 26 Jan 2026 17:42:31 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ping/</guid>
       <description></description>
     </item>
     <item>
@@ -969,13 +1025,6 @@
       <description></description>
     </item>
     <item>
-      <title>Webdev</title>
-      <link>https://ageldama.github.io/tags/webdev/</link>
-      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/webdev/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Webobjects</title>
       <link>https://ageldama.github.io/tags/webobjects/</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
@@ -1242,13 +1291,6 @@
       <description></description>
     </item>
     <item>
-      <title>Css</title>
-      <link>https://ageldama.github.io/tags/css/</link>
-      <pubDate>Tue, 06 Jan 2026 05:31:53 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/css/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Books</title>
       <link>https://ageldama.github.io/tags/books/</link>
       <pubDate>Tue, 30 Dec 2025 11:15:25 +0000</pubDate>
@@ -1260,13 +1302,6 @@
       <link>https://ageldama.github.io/tags/golang/</link>
       <pubDate>Tue, 30 Dec 2025 11:15:25 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programming</title>
-      <link>https://ageldama.github.io/tags/programming/</link>
-      <pubDate>Tue, 30 Dec 2025 11:15:25 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/programming/</guid>
       <description></description>
     </item>
     <item>
@@ -1582,20 +1617,6 @@
       <link>https://ageldama.github.io/tags/script-defer/</link>
       <pubDate>Thu, 25 Dec 2025 05:47:08 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/script-defer/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hugo</title>
-      <link>https://ageldama.github.io/tags/hugo/</link>
-      <pubDate>Wed, 24 Dec 2025 14:58:24 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Js</title>
-      <link>https://ageldama.github.io/tags/js/</link>
-      <pubDate>Wed, 24 Dec 2025 14:58:24 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/js/</guid>
       <description></description>
     </item>
     <item>
@@ -1977,13 +1998,6 @@
       <description></description>
     </item>
     <item>
-      <title>Sass</title>
-      <link>https://ageldama.github.io/tags/sass/</link>
-      <pubDate>Fri, 19 Dec 2025 14:41:29 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/sass/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Archie</title>
       <link>https://ageldama.github.io/tags/archie/</link>
       <pubDate>Thu, 18 Dec 2025 10:09:51 +0000</pubDate>
@@ -2159,13 +2173,6 @@
       <description></description>
     </item>
     <item>
-      <title>Esbuild</title>
-      <link>https://ageldama.github.io/tags/esbuild/</link>
-      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/esbuild/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Gmake</title>
       <link>https://ageldama.github.io/tags/gmake/</link>
       <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
@@ -2177,13 +2184,6 @@
       <link>https://ageldama.github.io/tags/makefile/</link>
       <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/makefile/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Scss</title>
-      <link>https://ageldama.github.io/tags/scss/</link>
-      <pubDate>Tue, 16 Dec 2025 03:20:28 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/scss/</guid>
       <description></description>
     </item>
     <item>
