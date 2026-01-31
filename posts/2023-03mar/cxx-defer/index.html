@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>C&#43;&#43;: Golang-ish `defer`-macro - 아겔로그</title><meta name="hugo-gen-timestamp" content="1769489233">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>C&#43;&#43;: Golang-ish `defer`-macro - 아겔로그</title><meta name="hugo-gen-timestamp" content="1769852902">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="view-transition" content="same-origin">
     <meta name="description" content="
@@ -272,15 +272,15 @@ defer.inl :
 <pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">  <span class="cm">/* -*- mode: c++; -*- */</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="cp">#ifndef defer_INL
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define defer_INL 1
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">  <span class="cp">#define defer_INL 1
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="cp">#define _Defer_CONCAT_IMPL( x, y ) x##y
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y )
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">  <span class="cp">#define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y )
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="cp">#define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk)
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="cp">#endif </span><span class="cm">/*defer_INL*/</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
@@ -328,13 +328,13 @@ defer.inl :
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">  <span class="cp">#if 0</span><span class="c">
 </span></span></span><span class="line"><span class="cl"><span class="c">  g++ -v -pedantic -Wall -Wextra -Wpedantic -Wconversion -std=c++11 -O0 -g -fsanitize=address &#34;$0&#34; -o &#34;$0&#34;.exe &amp;&amp; ./&#34;$0&#34;.exe ; exit
-</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="cp">  #endif
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl"><span class="cp">  #endif
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#include</span> <span class="cpf">&lt;cstdlib&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;cstdlib&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&#34;defer.inl&#34;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="p">{</span>
@@ -497,7 +497,7 @@ destructor호출해주고 하니까.</p>
 
 </main>
 <footer class="global-footer">
-    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1769489233</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1769852902</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
