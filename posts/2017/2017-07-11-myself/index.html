@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>2017년 7월 11일, 요즘 나는 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766297335">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>2017년 7월 11일, 요즘 나는 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1770448395">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="한국에 와서 다시 일을 다니고 있음. 백엔드 소프트웨어 엔지니어로 과거에
 이미 다른 사람들이 만들어놓은걸 마음에 들지 않는 모양을 조금씩
 고쳐가고 그럭저럭 출퇴근.
@@ -22,22 +23,33 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
-          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.d22f08bce458e2da0445890ea96880ba4141da9b9aca6d1aba24f8f8cdc0c381.css"
+          integrity="sha256-0i8IvORY4toERYkOqWiAukFB2puaym0auiT4&#43;M3Aw4E=" crossorigin="anonymous">
     
     
     
     
     
 
-    <script src="/js/bundle.js"></script>
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container"><header>
     <div class="main ">
         <h1 class="site-title ">
@@ -48,17 +60,19 @@
     <nav>
         
           <div class="search-form">
-      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
+      <span class="search-loading-indicator" style="display: none;"></span>
       <input id="search-query" name="search-query"
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -66,8 +80,12 @@
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -111,7 +129,9 @@
     </span>
 </nav>
 
-
+    
+    <hr class="archive-ruler">
+    
     <nav id="TableOfContents"></nav>
 
     <article>
@@ -149,20 +169,22 @@
 정리하면서 블로깅을 해나가야겠다.</p>
 <p>..그리고 오늘은 정말 덥다.</p>
 
-	</section>
-
-	<div class="post-tags">
+	</section><div class="post-tags">
 	    
 	    
 	    <nav class="nav tags">
 		<ul class="tags">
-                    
-		    <li style="display: inline">😺 <a href="/categories/myself">myself</a></li>
-                    
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/myself">myself</a></li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/2017">2017</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/2017/">2017</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/myself/">myself</a>
+                        <sup>2</sup>
+                    </li>
 		    
 		</ul>
 	    </nav>
@@ -170,6 +192,12 @@
 	    
 	</div>
     </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "👨‍👧";}
+    </style>
 
     <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
@@ -187,17 +215,17 @@
 
 </main>
 <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766297335</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1770448395</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YSB7MGHZ4V');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
 </script>
 
 

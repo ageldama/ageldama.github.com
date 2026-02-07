@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>categories안녕👋 taxonomies 정렬 추가 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1770448397">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+👉 새로운 묶음법: “📚시리즈(Series)” …추가하고
+“😺카테고리(Categories)”,은 별로 쓸모가 없었구나 생각이 들어서
+제외시켰다.
+
+이제 “📚시리즈(Series)” / “🏷️태그(Tags)” , 2개의 Taxonomy만 사용하여
+블로깅을 해나가려고.
+
+아예 /categories-관련 페이지는 아예 생성하지 않기로.
+표시도 않기로.
+
+대신 tags을 정렬해서 보여주기로:
+
+참조빈도가 높은 태그부터 정렬해서 보여주면, 그게 사실
+&#34;카테고리&#34;의 의도였던 &#34;대분류&#34;-처럼 쓰일 수 있으니까.
+
+
+
+/tags , /series 페이지에서 기본은 참조횟수로 역순정렬해서 보여주고, 추가적으로,
+
+이름 abc순서,
+최근 갱신일,
+…의 추가 정렬기준에 따라 직접 재정렬해서 찾기 수월하게 바꿨다.
+…ascending/descending 순서으로 정렬도 구현해줬다.
+
+
+
+
+뭔가 삽질에 완벽하게 깔끔한 구현은 아니지만, 적당히 htmx hx-boost으로
+다시 만든 블로그 이동방식과 잘 어울리는거 같아서." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.d22f08bce458e2da0445890ea96880ba4141da9b9aca6d1aba24f8f8cdc0c381.css"
+          integrity="sha256-0i8IvORY4toERYkOqWiAukFB2puaym0auiT4&#43;M3Aw4E=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/script-defer-ftw/">⬅️ global hx-boost &#43; &lt;script defer&gt;</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/blog-htmx-transition-anims/">➡️ 블로그 &#43; [htmx transition animation, loading indicator]</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    
+
+    <article>
+	<div class="title"><h1 class="title">🐅 categories안녕👋 taxonomies 정렬 추가</h1>
+	    <div class="meta">
+                <time datetime="2025-12-24" pubdate>
+                    2025년12월24일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p>
+👉 <a href="/posts/2025-12dec/new-taxonomy--series/">새로운 묶음법: “📚시리즈(Series)”</a> …추가하고
+“😺카테고리(Categories)”,은 별로 쓸모가 없었구나 생각이 들어서
+제외시켰다.</p>
+<p>
+이제 “📚시리즈(Series)” / “🏷️태그(Tags)” , 2개의 <a href="https://gohugo.io/content-management/taxonomies/">Taxonomy</a>만 사용하여
+블로깅을 해나가려고.</p>
+<ol>
+<li>아예 <code>/categories</code>-관련 페이지는 아예 생성하지 않기로.</li>
+<li>표시도 않기로.</li>
+<li>
+<p>대신 tags을 정렬해서 보여주기로:</p>
+<ol>
+<li>참조빈도가 높은 태그부터 정렬해서 보여주면, 그게 사실
+&#34;카테고리&#34;의 의도였던 &#34;<em>대분류</em>&#34;-처럼 쓰일 수 있으니까.</li>
+</ol>
+</li>
+<li>
+<p><a href="/tags">/tags</a> , <a href="/series">/series</a> 페이지에서 기본은 참조횟수로 역순정렬해서 보여주고, 추가적으로,</p>
+<ol>
+<li>이름 abc순서,</li>
+<li>최근 갱신일,</li>
+<li>…의 추가 정렬기준에 따라 직접 재정렬해서 찾기 수월하게 바꿨다.</li>
+<li>…ascending/descending 순서으로 정렬도 구현해줬다.</li>
+</ol>
+</li>
+</ol>
+<p>
+뭔가 삽질에 완벽하게 깔끔한 구현은 아니지만, 적당히 htmx hx-boost으로
+다시 만든 블로그 이동방식과 잘 어울리는거 같아서.</p>
+<p>
+이제 모든 포스팅 뒤적거리면서 태그를 붙이는 작업을 나중에 하면
+마무리겠지. 🪓</p>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">🐻<a href="/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/">아겔로그변천사</a>
+                        <sup>28</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>52</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blogging/">blogging</a>
+                        <sup>22</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blog/">blog</a>
+                        <sup>21</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/javascript/">javascript</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/css/">css</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/js/">js</a>
+                        <sup>16</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hugo/">hugo</a>
+                        <sup>13</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/taxonomies/">taxonomies</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/taxonomy/">taxonomy</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sort/">sort</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🐅";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/script-defer-ftw/">⬅️ global hx-boost &#43; &lt;script defer&gt;</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/blog-htmx-transition-anims/">➡️ 블로그 &#43; [htmx transition animation, loading indicator]</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1770448397</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

@@ -7,8 +7,22 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 06 Dec 2025 10:20:00 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/guile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(주절주절) react.js / next.js RCE 보안문제와 아기 히틀러 딜레마</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/reactjs&#43;nextjs-rce/</link>
+      <pubDate>Sat, 06 Dec 2025 10:20:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/reactjs&#43;nextjs-rce/</guid>
+      <description>&lt;p&gt;&#xA;2~3일 전부터 해외 커뮤니티에서는 크게 이슈가 됐고, 한국 뉴스피드 등은&#xA;이제 좀 올라오는거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://news.ycombinator.com/item?id=46136026&#34;&gt;HN: RCE Vulnerability in React and Next.js (github.com/vercel)&lt;/a&gt;&#xA;댓글을 보면 충격적이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;예전 log4j RCE보다 내 생각엔 위험할 것 같다. …왜냐하면 누구나 아무&#xA;생각 없이 그냥 써왔을거고, 그러려고 선택한 스택일테니까. 🥟&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;img src=&#34;https://ageldama.github.io/posts/2025-12dec/toxic-js.jpeg&#34; alt=&#34;/posts/2025-12dec/toxic-js.jpeg&#34; title=&#34;/posts/2025-12dec/toxic-js.jpeg&#34; width=&#34;300px&#34; style=&#34;border:solid 1px grey;&#34;/&gt;&#xA;&lt;p&gt;&#xA;공교롭게도, &lt;a href=&#34;https://news.ycombinator.com/item?id=46146406&#34;&gt;HN: 30 years ago today &amp;#34;Netscape and Sun announce JavaScript&amp;#34; (archive.org)&lt;/a&gt; …였다고 한다. 🎂&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 문득 또 다른 거의 30여년 전의 어떤 논쟁, 세상을 뒤바꾼 논쟁이&#xA;떠올랐다:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping (2nd) 17/Oct/2020</title>
+      <link>https://ageldama.github.io/posts/2020-10oct/ping-17sat-2nd/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-10oct/ping-17sat-2nd/</guid>
+      <description>&lt;p&gt;&#xA;  올해 초 &lt;a href=&#34;https://github.com/ageldama/cl-state-machine&#34;&gt;cl-state-machine 라이브러리&lt;/a&gt;를 만들어 공개한 이후로&#xA;  커먼리습을 쓰지는 않았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  다른 직업상 쓰는 언어들만을 쓰고 오픈소스와 개인적으로 만들고 싶은&#xA;  프로젝트를 위해서 쓰는 언어인 커먼리습은 미뤄두었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  다시 커먼리습을 해야겠다고 생각이 들었다. 개인적으로 만들고 싶은&#xA;  프로젝트도 있고, 그 프로젝트를 위해서 프론트엔드를 만드는데 React와&#xA;  Vue을 써보고 이해하고 있어도 쓰고 싶지는 않기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  사실 커먼리습은 그렇게 문법이 예쁘지도, 멋진 React와 같은 멋진&#xA;  프레임웍이나 최신의 유행하는 라이브러리들을 모두 갖고 있지도 않다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;a href=&#34;https://en.wikipedia.org/wiki/Common_Lisp_HyperSpec&#34;&gt;HyperSpec&lt;/a&gt;을 읽다 보면 아주 쉽게 정의되어 있는 키워드들이 일관성이&#xA;  있지도, 지금 시대의 관점에서 보기에 익숙한 현대적인 용어들을&#xA;  사용해서 이름을 지어놓지도 않았다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</title>
       <link>https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/</link>

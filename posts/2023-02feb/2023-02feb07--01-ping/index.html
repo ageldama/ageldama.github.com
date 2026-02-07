@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766297336">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1770448396">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="
 문득 떠오른 생각이라서, 그냥 추측.
 
@@ -34,22 +35,33 @@ D : C에서 다음 단계으로 발전했으니, 이번엔 다섯배, 역시 로
     
     
     
-    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
-          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.d22f08bce458e2da0445890ea96880ba4141da9b9aca6d1aba24f8f8cdc0c381.css"
+          integrity="sha256-0i8IvORY4toERYkOqWiAukFB2puaym0auiT4&#43;M3Aw4E=" crossorigin="anonymous">
     
     
     
     
     
 
-    <script src="/js/bundle.js"></script>
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container"><header>
     <div class="main ">
         <h1 class="site-title ">
@@ -60,17 +72,19 @@ D : C에서 다음 단계으로 발전했으니, 이번엔 다섯배, 역시 로
     <nav>
         
           <div class="search-form">
-      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
+      <span class="search-loading-indicator" style="display: none;"></span>
       <input id="search-query" name="search-query"
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -78,8 +92,12 @@ D : C에서 다음 단계으로 발전했으니, 이번엔 다섯배, 역시 로
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -123,7 +141,9 @@ D : C에서 다음 단계으로 발전했으니, 이번엔 다섯배, 역시 로
     </span>
 </nav>
 
-
+    
+    <hr class="archive-ruler">
+    
     
 
     <article>
@@ -201,34 +221,61 @@ BCPL이나 그런 역사에 대해 나도 조금은 아니까.</li>
 <p>이건 March…</p>
 </blockquote>
 
-	</section>
-
-	<div class="post-tags">
+	</section><div class="post-tags">
 	    
 	    
 	    <nav class="nav tags">
 		<ul class="tags">
-                    
-		    <li style="display: inline">😺 <a href="/categories/life">life</a></li>
-                    
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/ping">ping</a></li>
+		    <li class="tagbutton-inline">👅<a href="/series/programming-languages/">programming-languages</a>
+                        <sup>27</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/zig">zig</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>110</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/d-lang">d-lang</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/c&#43;&#43;/">c&#43;&#43;</a>
+                        <sup>11</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/c-lang">c-lang</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/zig/">zig</a>
+                        <sup>4</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/naming">naming</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/naming/">naming</a>
+                        <sup>2</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/roman">roman</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/german/">german</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/numeral">numeral</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/numeral/">numeral</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/german">german</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/roman/">roman</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/c-lang/">c-lang</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/d-lang/">d-lang</a>
+                        <sup>1</sup>
+                    </li>
 		    
 		</ul>
 	    </nav>
@@ -236,6 +283,12 @@ BCPL이나 그런 역사에 대해 나도 조금은 아니까.</li>
 	    
 	</div>
     </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🧑‍🍼";}
+    </style>
 
     <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
@@ -253,17 +306,17 @@ BCPL이나 그런 역사에 대해 나도 조금은 아니까.</li>
 
 </main>
 <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766297336</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1770448396</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YSB7MGHZ4V');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
 </script>
 
 

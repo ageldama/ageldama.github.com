@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>The HTML Hell Page - 아겔로그</title><meta name="hugo-gen-timestamp" content="1770448397">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="킹받는 웹페이지 디자인의 몯느것, 혈압을 위해 읽지않는걸추천" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.d22f08bce458e2da0445890ea96880ba4141da9b9aca6d1aba24f8f8cdc0c381.css"
+          integrity="sha256-0i8IvORY4toERYkOqWiAukFB2puaym0auiT4&#43;M3Aw4E=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost&#43;dark-mode/">⬅️ htmx 마법으로 링크성능 빠르게 &#43; dark-mode 깜빡임 제거</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/2025-12dec19--01-ping/">➡️ Ping 19/12/2025 .01.</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">💡 깜빡이 / blinking text</a>
+</li>
+<li><a href="#headline-2">🈙 불필요한 애니메이션 / gratuitous animation</a>
+</li>
+<li><a href="#headline-3">🏃 <code>marquee</code>-s</a>
+</li>
+<li><a href="#headline-4">🔥 불타는 배경 / garish backgrounds</a>
+</li>
+<li><a href="#headline-5">🤡 견딜 수 없는 텍스트/배경색 조합 / unreadable text/background combinations</a>
+</li>
+<li><a href="#headline-6">🖌 <span style='font-family: "PocheonMakgeolli";'>필기체/붓글씨체 제목 / brushscript headings</span></a>
+</li>
+<li><a href="#headline-7">🗗 &#34;이 사이트는 …에 최적화되어 있습니다&#34; / &#34;Best viewed with…&#34;</a>
+</li>
+<li><a href="#headline-8">🙊 “최적의 감상을 위해 브라우저 창크기를 32187379317913x2419873978139781391564181489으로 조절하세요.” 지시문 / “resize your browser to…” instructions</a>
+</li>
+<li><a href="#headline-9">🐳 거대한 고정된 크기의 <code>table</code> / large fixed-size tables</a>
+</li>
+<li><a href="#headline-10">🍟 불필요한 border-spacing / unnecessary border spacing</a>
+</li>
+<li><a href="#headline-11">🤪 무의미한 <small>&lt;small&gt;</small> / <font size=190>&lt;font size=...&gt;</font> 사용 / Pointless use of &lt;small&gt; or &lt;font size=&gt;</a>
+</li>
+<li><a href="#headline-12">💦 자바스크립트으로 자기위안의 행위 / masturbation with Javascript</a>
+</li>
+<li><a href="#headline-13">☕ 불필요한 자바의 사용 / unnecessary use of Java</a>
+</li>
+<li><a href="#headline-14">💥 “팝업창” / pop-up windows</a>
+</li>
+<li><a href="#headline-15">😔 image-map으로만 구현된 메뉴 / menus made entirely from image maps</a>
+</li>
+<li><a href="#headline-16">🎷 묻지도 따지지도 않고 재생시작 / sound and video that launches without prompting</a>
+</li>
+<li><a href="#headline-17">🔍 픽셀단위로 글꼴크기를 지정한 CSS / CSS that sets fixed-size fonts dimensioned in pixels</a>
+</li>
+<li><a href="#headline-18">CSS that changes the hotlink colors</a>
+</li>
+<li><a href="#headline-19">배경/글자색 한쪽만 강제해놓기 / Forcing one of background and text colour, but not both.</a>
+</li>
+<li><a href="#headline-20">🎘 배경MIDI, 플래시, 쇽웨이브, 등등의 끔찍한 혼종 / background MIDI, Flash, Shockwave, and other abominations</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">😽 The HTML Hell Page</h1>
+	    <div class="meta">
+                <time datetime="2025-12-21" pubdate>
+                    2025년12월21일
+                </time>
+                </div>
+        </div>
+
+        
+        <div class="description">
+	    <span class="short-description">
+                킹받는 웹페이지 디자인의 몯느것, 혈압을 위해 읽지않는걸추천
+            </span>
+        </div>
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+👉 요기에서 “영감”을 받아서: <a href="https://www.catb.org/~esr/html-hell.html">https://www.catb.org/~esr/html-hell.html</a></p>
+<p>
+하나씩 짜보니까:</p>
+<ol>
+<li>생각보다 더이상 인류가 접근할 수 없는 로스트테크놀로지들이 많아져서
+안타까웠다. (예; 강제팝업창, Java Applet, Shockwave, Flash 등등등)</li>
+<li>서양 웹디자인 기준으로 원본글이 작성되어져 있어서, 주옥 같은 한국의
+현재진행형 흠좀무 웹/앱 디자인들은 정리하지 못했다. 누군가 용사가
+나타나 정리해줘도 좋을 것 같다. 🗡️🛡️🩏</li>
+</ol>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+💡 깜빡이 / blinking text
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<style>
+/* Define the animation */
+@keyframes blink-effect {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Apply the animation to a class */
+.blinking-text {
+    /* Name of the animation, duration, iteration count */
+    animation: blink-effect 1s step-end infinite;
+    font-size: 24px;
+    color: red;
+}
+</style>
+<h1 class="blinking-text">💫BLINKING!!! 반짝반  &nbsp;&nbsp;짝작은 별  !</h1>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+🈙 불필요한 애니메이션 / gratuitous animation
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<style>
+.wheel {
+/* Basic styling for visibility (adjust as needed) */
+width: 100%;
+/*height: 100%;*/
+border: 4px solid black;
+border-radius: 50%; /* Makes the div a circle */
+display: flex;
+justify-content: center;
+align-items: center;
+
+/* Animation Properties */
+animation-name: spin; /* Links to the @keyframes rule named 'spin' */
+animation-duration: 5s; /* Duration of one full rotation */
+animation-iteration-count: infinite; /* Repeats the animation endlessly */
+animation-timing-function: linear; /* Ensures consistent speed (no easing) */
+}
+
+/* Defines the animation's flow */
+@keyframes spin {
+0% {
+transform: rotate(0deg); /* Start at 0 degrees */
+}
+100% {
+transform: rotate(360deg); /* End at 360 degrees (one full circle) */
+}
+}
+</style>
+<h3 class="wheel">휘이잉이이이잉이이이잉ㅇ🚁~~~~~~~~~~~~~~~~~</h3>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+🏃 <code>marquee</code>-s
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<h3 style="color: #00ff00" >
+    <marquee>🏃‍♂️Ruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuun Forest
+        Ruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuun 🏃‍♂️
+    </marquee>
+</h3>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+🔥 불타는 배경 / garish backgrounds
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<style>
+.fire-walk-with-me {
+    color: purple;
+    font-size: 3rem;
+    text-decoration: underline;
+    height: 150px;
+    text-align: center;
+    vertical-align: middle;
+    background-image: url("/posts/2025-12dec/the-html-hell-page/eternal-flame.gif");
+}
+</style>
+<div class="fire-walk-with-me">
+    🔥 FIRE WALK WITH ME... 👨🏿‍🚒☕🍩🪵
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+🤡 견딜 수 없는 텍스트/배경색 조합 / unreadable text/background combinations
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<style>
+.annoying {
+    background-color: cyan;
+    color: yellow;
+    font-size: 3rem;
+    text-align: center;
+}
+</style>
+<div class="annoying">
+“웃자고 한 말에 뭘 그렇게 정색하세요?”
+</div>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+🖌 <span style='font-family: "PocheonMakgeolli";'>필기체/붓글씨체 제목 / brushscript headings</span>
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<style>
+@font-face  {
+  font-family: 'PocheonMakgeolli';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Makgeolli.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
+  }
+</style>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+🗗 &#34;이 사이트는 …에 최적화되어 있습니다&#34; / &#34;Best viewed with…&#34;
+</h2>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+🙊 “최적의 감상을 위해 브라우저 창크기를 32187379317913x2419873978139781391564181489으로 조절하세요.” 지시문 / “resize your browser to…” instructions
+</h2>
+</div>
+<div id="outline-container-headline-9" class="outline-2">
+<h2 id="headline-9">
+🐳 거대한 고정된 크기의 <code>table</code> / large fixed-size tables
+</h2>
+<div id="outline-text-headline-9" class="outline-text-2">
+<table border="3" height="4000px" width="3000px">
+    <tbody>
+        <tr>
+            <td>
+                합계
+            </td>
+            <td>
+                23,179,813,791 KRW
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-2">
+<h2 id="headline-10">
+🍟 불필요한 border-spacing / unnecessary border spacing
+</h2>
+<div id="outline-text-headline-10" class="outline-text-2">
+<table border="3">
+    <tbody>
+        <tr>
+            <td style="border-top: solid 30px black; border-right: dotted 17px red;">
+                합계
+            </td>
+            <td>
+                23,179,813,791 KRW
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-headline-11" class="outline-2">
+<h2 id="headline-11">
+🤪 무의미한 <small>&lt;small&gt;</small> / <font size=190>&lt;font size=...&gt;</font> 사용 / Pointless use of &lt;small&gt; or &lt;font size=&gt;
+</h2>
+</div>
+<div id="outline-container-headline-12" class="outline-2">
+<h2 id="headline-12">
+💦 자바스크립트으로 자기위안의 행위 / masturbation with Javascript
+</h2>
+<div id="outline-text-headline-12" class="outline-text-2">
+<figure>
+    <img src="/posts/2025-12dec/the-html-hell-page/Electron_Software_Framework_Logo.png" width="150" alt="Ele*tronjs!">
+    <img src="/posts/2025-12dec/the-html-hell-page/reactjs_logo_icon_170805.png" width="250" alt="Re*ctjs!">
+    <figcaption>  ... 아 이것만은 만들 수 업읍니다... 이미 세상에 너무 많은 예제가
+있으니 직접 찾아보세요.
+    </figcaption>
+</figure>
+</div>
+</div>
+<div id="outline-container-headline-13" class="outline-2">
+<h2 id="headline-13">
+☕ 불필요한 자바의 사용 / unnecessary use of Java
+</h2>
+<div id="outline-text-headline-13" class="outline-text-2">
+<figure>
+  <img src="/posts/2025-12dec/the-html-hell-page/applet.gif" width="300" alt="자바애플릿!">
+  <img src="/posts/2025-12dec/the-html-hell-page/Duke_(Java_mascot)_waving.svg.png" width="100" alt="Duke!">
+  <figcaption>이제 자바애플릿을 실행할 수 있는 웹브라우저가 없을테니, 스샷으로 대체합니다.</figcaption>
+</figure>
+</div>
+</div>
+<div id="outline-container-headline-14" class="outline-2">
+<h2 id="headline-14">
+💥 “팝업창” / pop-up windows
+</h2>
+<div id="outline-text-headline-14" class="outline-text-2">
+<figure>
+    <img src="/posts/2025-12dec/the-html-hell-page/popup.png" width="350" alt="일주일간 열지않기!">
+    <figcaption>...일주일간 열지 ㅇ낳기.</figcaption>
+</figure>
+<p>
+  (원본 이미지: <a href="https://m.blog.naver.com/dasol825/220672901113">https://m.blog.naver.com/dasol825/220672901113</a> 고맙습니다. 🙇)</p>
+</div>
+</div>
+<div id="outline-container-headline-15" class="outline-2">
+<h2 id="headline-15">
+😔 image-map으로만 구현된 메뉴 / menus made entirely from image maps
+</h2>
+<div id="outline-text-headline-15" class="outline-text-2">
+<ul>
+<li>아숩게도 2020년데엔 더이상 사용하지 않는 아름다운 기술이라, 생략.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-16" class="outline-2">
+<h2 id="headline-16">
+🎷 묻지도 따지지도 않고 재생시작 / sound and video that launches without prompting
+</h2>
+<div id="outline-text-headline-16" class="outline-text-2">
+<p>안타깝게도 2025년 현대의 웹브라우저는 자동플레이를 막아놓앗습니다.
+  😔</p>
+<p>
+  부디 아래 비디오를 클릭하여 플레이 해주시기 바랍니다. 🥹🙏</p>
+<div id="video-container"></div>
+
+<script>
+let timer = 60 * 1000; // 1 minute
+function addVideo() {
+    var videlem = document.createElement("video");
+    videlem.width = 320;
+    videlem.height = 240;
+    videlem.controls = true;
+    videlem.autoplay = true;
+    videlem.loop = true;
+    /// ... some setup like poster image, size, position etc. goes here...
+    /// now, add sources:
+    var sourceMP4 = document.createElement("source"); 
+    sourceMP4.type = "video/mp4";
+    sourceMP4.src = "/posts/2025-12dec/the-html-hell-page/gandalf-sax-guy.mp4";
+    videlem.appendChild(sourceMP4);
+
+    // Add to the parent element
+    document.getElementById("video-container").appendChild(videlem);
+}
+
+function startTimeout() {
+    setTimeout(function() {
+	addVideo();
+	timer = timer - (timer / 10);
+	writeTimer();
+	startTimeout();
+    }, timer);
+}
+
+function writeTimer() {
+    document.getElementById("timer").innerHTML = timer;
+}
+
+startTimeout();
+addVideo();
+writeTimer();
+</script>
+<p>
+  (원본 비디오&amp;스크립트: <a href="https://davidepastore.github.io/gandalf-sax-guy/">https://davidepastore.github.io/gandalf-sax-guy/</a> 고맙습니다. 🙇)</p>
+</div>
+</div>
+<div id="outline-container-headline-17" class="outline-2">
+<h2 id="headline-17">
+🔍 픽셀단위로 글꼴크기를 지정한 CSS / CSS that sets fixed-size fonts dimensioned in pixels
+</h2>
+<div id="outline-text-headline-17" class="outline-text-2">
+<p>‘em‘, ‘rem‘ 단위로 지정하는게 맞다는거 같음.</p>
+<p>
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xwtdhWltSIg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+      </div>
+</p>
+</div>
+</div>
+<div id="outline-container-headline-18" class="outline-2">
+<h2 id="headline-18">
+CSS that changes the hotlink colors
+</h2>
+<div id="outline-text-headline-18" class="outline-text-2">
+<style>
+.multi-color-link {
+    font-size: 5rem;
+    /* Required for the gradient effect to work */
+    background: linear-gradient(to right, red, orange, gold, green, blue);
+    -webkit-background-clip: text; /* Clips the gradient to the shape of the text */
+    background-clip: text;
+    color: transparent; /* Makes the text color transparent so the background shows through */
+    text-decoration: none; /* Optional: removes the default underline */
+    font-weight: bold; /* Optional: makes text thicker for better gradient visibility */
+}
+
+/* Optional: add a solid color for the underline */
+.multi-color-link:hover {
+    text-decoration: underline;
+    text-decoration-color: red; /* Customize the underline color on hover */
+}
+
+</style>
+
+<a href="#" class="multi-color-link">형형색색</a>
+<p>
+  …사실 링크 눌렀을 때 색상변화를 의미하는거 같은데, 이정도만 하고
+  참겠음.</p>
+</div>
+</div>
+<div id="outline-container-headline-19" class="outline-2">
+<h2 id="headline-19">
+배경/글자색 한쪽만 강제해놓기 / Forcing one of background and text colour, but not both.
+</h2>
+<div id="outline-text-headline-19" class="outline-text-2">
+<style>
+.only-text-color {
+    font-size: 5rem;
+    color: white;
+}
+
+.only-bg-color {
+    font-size: 5rem;
+    background-color: white;
+}
+</style>
+
+<div class="only-text-color">내가 보이나요? 🥸</div>
+<div class="only-bg-color">나도 보이나요? 🥳</div>
+</div>
+</div>
+<div id="outline-container-headline-20" class="outline-2">
+<h2 id="headline-20">
+🎘 배경MIDI, 플래시, 쇽웨이브, 등등의 끔찍한 혼종 / background MIDI, Flash, Shockwave, and other abominations
+</h2>
+<div id="outline-text-headline-20" class="outline-text-2">
+<p>이것도 더이상 쓰이지 않아서 슬픔 😔</p>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webdev/">webdev</a>
+                        <sup>29</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/javascript/">javascript</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/css/">css</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/js/">js</a>
+                        <sup>16</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/reactjs/">reactjs</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/java/">java</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/90s/">90s</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/html/">html</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/toy/">toy</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/design/">design</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/audio/">audio</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blink/">blink</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/marquee/">marquee</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/electronjs/">electronjs</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/applet/">applet</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/popup/">popup</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/2000s/">2000s</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/imagemap/">imagemap</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sax/">sax</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gandalf/">gandalf</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/abonimation/">abonimation</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/shockwave/">shockwave</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/flash/">flash</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/midi/">midi</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/video/">video</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/madness/">madness</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/crazy/">crazy</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/fun/">fun</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/humor/">humor</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hello/">hello</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hellish/">hellish</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hell/">hell</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "😽";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost&#43;dark-mode/">⬅️ htmx 마법으로 링크성능 빠르게 &#43; dark-mode 깜빡임 제거</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/2025-12dec19--01-ping/">➡️ Ping 19/12/2025 .01.</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1770448397</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta name="generator" content="Hugo 0.150.1">
+	<meta name="generator" content="Hugo 0.154.5">
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766297336">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1770448396">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="" />
     <meta property="og:image" content=""/>
     <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
@@ -14,15 +15,24 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
-          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.d22f08bce458e2da0445890ea96880ba4141da9b9aca6d1aba24f8f8cdc0c381.css"
+          integrity="sha256-0i8IvORY4toERYkOqWiAukFB2puaym0auiT4&#43;M3Aw4E=" crossorigin="anonymous">
     
     
     
     
     
 
-    <script src="/js/bundle.js"></script>
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +40,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
 
-    <body>
+    <body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container">
             <header>
     <div class="main ">
@@ -42,17 +54,19 @@
     <nav>
         
           <div class="search-form">
-      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
+      <span class="search-loading-indicator" style="display: none;"></span>
       <input id="search-query" name="search-query"
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -60,8 +74,12 @@
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -97,7 +115,7 @@
 		
 
                 <hr class="archive-ruler"><h1>
-                    🧃
+                    🍤
                     페이지 #018
                 </h1>
 
@@ -106,203 +124,251 @@
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-09-23" pubdate>
-                                2018-09-23
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-09sep/cquery-vs-cmake-ide/">
-                            ⏺️ CQuery &#43; LSP vs CMake-IDE &#43; RTags
-                        </a>
+    <time datetime="2019-12-09" pubdate>
+        2019-12-09
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/cl-state-machine-1st-release/">
+    🗳️ First release of cl-state-machine
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                LSP + CQuery을 써보려고 했는데, 결국 CMake-IDE + RTags 조합으로 원래대로 쓰게될거 같아. :
-_build/ 와 같이 CMake, Ninja,...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+        Made a small state machine library/DSL in/for CommonLisp....
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-09-23" pubdate>
-                                2018-09-23
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-09sep/23sun-todos/">
-                            🏫 해보기 23/09/2018
-                        </a>
+    <time datetime="2019-12-06" pubdate>
+        2019-12-06
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/tips-ecl-clisp/">
+    👩‍🦽 커먼리습 설정하기, ASDF 시스템 코드를 받기
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                LSP 갖고놀기 Language Server Protocol : https://langserver.org/1
-ES6:...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+        1. ASDF을 최신 버젼으로 설정한다 (이부분에서 많이 고생했는데) SBCL와 다르게 CLISP, ECL 은 최신 버젼의 ASDF을 내장한걸 패키징해놓지 않았다.
+대부분은 문제가...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-09-23" pubdate>
-                                2018-09-23
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-09sep/23sun-ping/">
-                            🥟 Ping 23/09/2018
-                        </a>
+    <time datetime="2019-11-16" pubdate>
+        2019-11-16
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-11nov/the-dark-side-of-cl-equality/">
+    🥝 (Common Lisp의 어두운 면) Equality
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                영화: &lt;멀홀랜드 드라이브&gt; 씁쓸. 그리고 영화 다보고 해석들 읽고 다시 생각하고 장면들에서 느끼던 이상함점들이 왜 그랬었구나 맞춰보니 더 씁쓸. 1
-그리고 살면서 사랑...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+        오늘은 커먼리습의 어두운 면을 이야기 해볼까. 보통 나는 리습 팬보이니까 리습에 대해 불리한 이야기는 잘 쓰지 않는거 같아서 한번 써보기로 생각했다. 그리고 놀랍게도 이 글의 끝에...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-09-22" pubdate>
-                                2018-09-22
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-09sep/22sat-ping/">
-                            😆 Ping 22/09/2018
-                        </a>
+    <time datetime="2019-11-13" pubdate>
+        2019-11-13
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-11nov/why-sharpsign-in-method-path/">
+    🚍 (소프트웨어 고고학) 어째서 `String#replaceAll`처럼 메서드 경로의 구분자로 `#`을 쓸까?
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                새 만년필 : Pilot Kaküno! tweet 1043371766318424064
-필기감은 같은 모델, 각 제품별로 조금씩 다른듯....
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+        오늘 아침 다음은 오늘 아침 트위터의 타임라인에서 내가 스쳐본 한 스크린샷의 일부이다:
+1
+&hellip;뭐에 느낌을 받았냐하면, 바로 저 String#replace(..) 이라는...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-09-16" pubdate>
-                                2018-09-16
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-09sep/lamy2000-monami-ink/">
-                            👩‍👩‍👧‍👧 Lamy 2000 &#43; 모나미 병잉크
-                        </a>
+    <time datetime="2019-11-01" pubdate>
+        2019-11-01
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-11nov/ping-01fri/">
+    🏰 Ping 01/Nov/2019
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                라미2000 사고, 모나미 병잉크 처음으로 사서 충전을 겨우했다. 카트리지방식만 계속 써오다가 처음에는 엄청 어떻게 피스톤 방식으로 충전하나 설명서를 봐도 잘 모르겠고,...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+        그 이전의 시간 한국으로 돌아와 1년 반 정도 한 회사에 다니다가, 정리하고 나와서 시간을 보내고 있다.
+관점, 사고방식, 일하는 방식 등등 대화가 통하기도 어려운 상황이었고, 그...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-09-15" pubdate>
-                                2018-09-15
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-09sep/2018-09sep15sat-my-choices-linux/">
-                            🥃 어째서 아치리눅스를 쓰며 데스크탑환경을 안쓰는지
-                        </a>
+    <time datetime="2019-10-25" pubdate>
+        2019-10-25
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-10oct/exg-pro-trackball-pgupdn/">
+    🦱 ELECOM EX-G Pro Trackball 잉여 버튼을 Page Up/Down으로 쓰기
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                나는 데스크탑 환경을 사용 안한지 꽤 오래된것 같아.
-예전엔 이런식이었던거 같아:
-왠만하면, 그냥 세팅하는데 시간낭비하지말고 그냥 제공되는 Gnome, KDE 같이 예쁜거 쓰자....
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+        컴퓨터를 많이 쓰니까 다른 부분보다 손목이 먼저 망가져서, 손목을 조금만 큰 각도로 꺾으면 아프다. ㅠ.ㅠ.. 예전에도 그랬었는데1
+마우스 안쓰고, 트랙볼 쓰기2 키보드 넘패드 부...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-09-15" pubdate>
-                                2018-09-15
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-09sep/2018-09sep15sat-ping/">
-                            🍐 Ping 15/09/2018
-                        </a>
+    <time datetime="2019-10-21" pubdate>
+        2019-10-21
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-10oct/blog-font/">
+    🦋 블로그 폰트 적용
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                새 만년필 : LAMY 2000, 해피해킹, 기계식 키보드 새 만년필을 샀는데, 조금 저렴한 폴리카보네이트 버젼의 LAMY 2000을 샀다. 기존에 LAMY Lx, 사파리는 행복하...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+        그냥 CDN에서 내려받는 공개된 Noto 폰트를 적용했다. 깔끔하다.1
+어제는 네오둥근모 적용해서 완전 귀엽고 내 취향이기는했는데, 그렇게 두면 안될것 같아서 좀 평범한 폰트로 바...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-07-28" pubdate>
-                                2018-07-28
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/">
-                            👇 NeoVim, Evil-mode and Emacs의 모험
-                        </a>
+    <time datetime="2019-10-20" pubdate>
+        2019-10-20
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-10oct/ping-20sun/">
+    🚜 Ping 20/Oct/2019
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                &ldquo;내적모순&rdquo; 이맥스에서 Evil을 쓰면서 몇가지 짜증나는게 있어왔다.
-Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 키바인딩을 실시간...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+        장거리 드라이브 고속도로를 내려와서 국도에 들어서서 우회전 신호대기에서 창문을 내리자마자 깨달은게 공기가 말도 안되게 좋았다.
+가보고 싶었던 곳들을 돌아다니고 정말 많은게 변했구나...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-05-08" pubdate>
-                                2018-05-08
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/">
-                            🫰 Emacs &#43; CMake-IDE Screencast
-                        </a>
+    <time datetime="2019-10-16" pubdate>
+        2019-10-16
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-10oct/cl-toy-stack-lang/">
+    🧜‍♀️ cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 이건 무엇인가 Emacs Configurations: https://github.com/ageldama/configs/tree/master/emacs/cmake-ide...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+        일단 첫번째 버젼 다 만들었다.
+https://github.com/ageldama/cl-toy-stack-lang/releases/tag/v0.1.0
+그냥 장난으로 인터프리터도 아...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-04-14" pubdate>
-                                2018-04-14
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-04apr/2018-04apr-golang-windows-vscode/">
-                            🥂 Golang Windows에서 Vscode이랑 행복하게 쓰기
-                        </a>
+    <time datetime="2019-10-15" pubdate>
+        2019-10-15
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-10oct/ping-15tue/">
+    👩‍🦯 Ping 15/Oct/2019
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                Golang 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아. 그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 VsCode 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+        커먼리습으로 간단한 스택기반 장난감 프로그래밍언어를 만들고있다.
+https://github.com/ageldama/cl-toy-stack-lang
+튜링컴플릿이나 그런거 관심도 없고...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                 </ul>
 
                 <hr class="archive-ruler">
+
+                <style>
+                 :root {--bg-big-emoji: "🍤";}
+                </style>
 
 		<nav class="posts-pagination" aria-label="Page navigation">
 
@@ -312,27 +378,27 @@ Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 �
     
 
     <span class="posts-pagination-indicator" >
-        📃 18 / 20
+        📃 18 / 23
     </span>
 
     
     <a href="/page/19/" class="button-link posts-pagination-btn posts-pagination-older" aria-label="Older">⏩예전</a>
-    <a href="/page/20/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
+    <a href="/page/23/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
     
 </nav>
 	    </main>
 	    <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766297336</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1770448396</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YSB7MGHZ4V');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
 </script>
 
 

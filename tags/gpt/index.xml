@@ -7,8 +7,22 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Fri, 19 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Feb 2026 06:47:23 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/gpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 07/02/2026 .01 👁️</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/</link>
+      <pubDate>Sat, 07 Feb 2026 06:47:23 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;어느샌가 뉴스의 대부분의 큰 화제가 컴퓨터와 인터넷 없이는 할 이야기가&#xA;적어질 정도였던거 같다. 이렇게 모든 일들이 연결될 일일까 싶을 정도로.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;불과 20여년전만 해도 그저 신기한, 현실과는 동떨어진 이야기로, 그저 먼&#xA;미래의 이야기로 이야기되던 발전이, 어느새 지금 당장의 일들이 되어&#xA;버렸고 그게 일어나고, 잠시뒤의 과거로 뉴스가 되어 버린다. (물론&#xA;20여년은 엄청 긴 시간이다. ㅎㅎ)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;해킹이나 보안과 관련된 이슈, 그리고 그에 따른 정부와 거대기업간의&#xA;알력다툼들이 일어났고, 또 진행중이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;단순히 숫자, 데이터, 혹은 바이트 덩어리일 뿐인 것이 잘못 기입되어&#xA;순식간에 부자가 되었다가 또 환불은 어떻게 됐는지, 그리고 실은 조작이&#xA;아닌지 하는 흥미로운 가쉽들도 많이 떠돈다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rob “Commander” Pike의 AI극딜</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/2025-12dec27--01-ping/</link>
+      <pubDate>Sat, 27 Dec 2025 06:36:26 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/2025-12dec27--01-ping/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;“제가 마지막으로 이렇게 화가 난게 언제인지도 모르겠습니다”&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  &lt;figure&gt;&lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/rob-pike-goes-n.png&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2025-12dec/rob-pike-goes-n.png&#34; width=&#34;450px&#34;&gt;&lt;/a&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;HN 댓글: &lt;a href=&#34;https://news.ycombinator.com/item?id=46392115&#34;&gt;https://news.ycombinator.com/item?id=46392115&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;lobste.rs 댓글: &lt;a href=&#34;https://lobste.rs/s/n4kxdf/rob_pike_goes_nuclear_over_genai&#34;&gt;https://lobste.rs/s/n4kxdf/rob_pike_goes_nuclear_over_genai&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  AI스팸봇에 메일을 받고, 또 자기가 세상에 기여한 것들에 대해서&#xA;  칭찬하는 “스팸”을 받고 화낼만 하신거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  Rob “Commander” Pike은 우리가 아는 Golang의 설계자/‘개발자’, UTF-8&#xA;  인코딩의 발명자&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs&#34;&gt;Plan 9&lt;/a&gt;-의 개발 등으로 유명한 분.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  저분이 계셨었던 구글 또한 그런 반대하신다는 경향에 일조하고 있지&#xA;  않느냐는 지적은 하고 싶지 않다. 오히려 저런 생각을 진심으로 갖고&#xA;  계시다면, 그래도 구글이 그런 방향으로만 흘러가지는 않도록,&#xA;  겉모습만이라도 조금은 더 낫도록, 흔히 말해지는 그래도 위선이라도&#xA;  노력하게 만드는데에 일조하셨길 기대할뿐이다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>(주절주절) jwz의 netscape navigator 2.0 출시 30주년, 내 기억들, 그리고 오늘</title>
       <link>https://ageldama.github.io/posts/2025-09sep/netscape-30yrs-jwz/</link>

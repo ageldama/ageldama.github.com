@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta name="generator" content="Hugo 0.150.1">
+	<meta name="generator" content="Hugo 0.154.5">
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766297336">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1770448396">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="" />
     <meta property="og:image" content=""/>
     <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
@@ -14,15 +15,24 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
-          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.d22f08bce458e2da0445890ea96880ba4141da9b9aca6d1aba24f8f8cdc0c381.css"
+          integrity="sha256-0i8IvORY4toERYkOqWiAukFB2puaym0auiT4&#43;M3Aw4E=" crossorigin="anonymous">
     
     
     
     
     
 
-    <script src="/js/bundle.js"></script>
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +40,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
 
-    <body>
+    <body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container">
             <header>
     <div class="main ">
@@ -42,17 +54,19 @@
     <nav>
         
           <div class="search-form">
-      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
+      <span class="search-loading-indicator" style="display: none;"></span>
       <input id="search-query" name="search-query"
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -60,8 +74,12 @@
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -97,7 +115,7 @@
 		
 
                 <hr class="archive-ruler"><h1>
-                    📧
+                    🔃
                     페이지 #017
                 </h1>
 
@@ -106,208 +124,248 @@
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2019-02-07" pubdate>
-                                2019-02-07
-                            </time>
-                        </span><a class="article-link" href="/posts/2019-02feb/2019-02feb07thu-gosched-fun/">
-                            🟡 Golang Goroutine, Channel, I/O 그리고 Scheduler 이해해보기
-                        </a>
+    <time datetime="2020-01-03" pubdate>
+        2020-01-03
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2020-01jan/real-communication-skills/">
+    🚨 &lt;소프트스킬&gt;, &lt;커뮤니케이션 스킬&gt;은 어떻게 한국 사회에서 괴물을 만드는지
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                Go언어를 요즘에 진지하게 생각하고 계속해서 자료를 찾아보며 익히고 있다.
-가장 흥미있는 부분은 Goroutine scheduler 구현과 I/O시스템을 어떻게 만들었을까인데, 아...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         우선 이야기를 시작하기 전에 일러두고 싶다. 내게 &lt;소프트스킬&gt;1은 매우 재밌게, 유용하게 읽은 책이었다. (2016년에)
+이 이야기는 사실 커뮤니케이션스킬, 소프트스...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-11-03" pubdate>
-                                2018-11-03
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-11nov/cl-asdf-custom-load-script/">
-                            🧡 ASDF으로 간단한 의존성 연결과 로딩하기
-                        </a>
+    <time datetime="2019-12-30" pubdate>
+        2019-12-30
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">
+    📓 Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                System? 이런게 왜 필요하지? require있잖아 대부분의 유명한 프로그래밍언어들이 커먼리습의 System 에 대응하는 기능이 명확하게 없으니까,...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         다음의 간단한 코드를 읽어보자.
+1 2 3 4 5 6 7 8 9 10 11 12 var x = &#34;lexical&#34;; function maker() { return...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-11-03" pubdate>
-                                2018-11-03
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-11nov/03sat-ping/">
-                            🩻 Ping 03/11/2018
-                        </a>
+    <time datetime="2019-12-29" pubdate>
+        2019-12-29
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/direnv/">
+    1️⃣ direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                작위를 수여받았다 받아본 생일선물 중에 가장 귀여운거였다.
-tweet 1058052532839231488
-씨디리핑, 음악듣기 지난달부터 갖고 있던 씨디, 듣고 싶던 앨범들 다시 모...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-10-20" pubdate>
-                                2018-10-20
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-10oct/20sat-ping/">
-                            🧐 Ping 20/10/2018
-                        </a>
+    <time datetime="2019-12-29" pubdate>
+        2019-12-29
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/moonshot-1st-rel/">
+    👢 moonshot.el 최초 릴리즈
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                날씨가 너무 좋은 가을.
-tweet 1053557185534251008
-만년필 만년필용 가죽 파우치를 찾았다. 들고 다니기 조금 더 편안해진거 같아.
-tweet...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         moonshot.el 을 만들어서 공개했다.
+이맥스를 써오면서 불편하다고 생각한걸 간단히 하고 싶었었다:
+불편함들 빌드 디렉토리 Projectile을 사용하니까 프로젝트 디렉토리...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-10-10" pubdate>
-                                2018-10-10
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-10oct/10wed-thought/">
-                            🧇 생각 10/10/2018
-                        </a>
+    <time datetime="2019-12-21" pubdate>
+        2019-12-21
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/look-back-2018-2019/">
+    👃 2018, 2019년을 돌아보며
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                연구소에서 종종 휴식시간에 PS4 게임을 하면서 지낸다....
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         &#34;일의 기쁨과 슬픔&#34; 2018년은 정말 바쁘게 회사에 시간을 쏟으며 보낸거 같다. 그렇다고 개인적인 발전이나 성과를 얻을만한 일은 아니었다. 오히려 알던 것들을 소...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-10-10" pubdate>
-                                2018-10-10
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-10oct/10wed-steamplay-on-linux/">
-                            👜 SteamPlay On Linux
-                        </a>
+    <time datetime="2019-12-17" pubdate>
+        2019-12-17
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/hololog-perl-cli-1st-rel/">
+    🐖 Hololog Perl/CLI 버젼
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                집에 있는 데스크탑에서 윈도10 그냥 사서 설치하고,...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         https://github.com/ageldama/hololog-perl-cli
+한줄씩 메모를 하는걸 좋아하고, 그냥 데스크탑에서 PDF을 읽거나 웹페이지를 읽으면서 어딘가에 생...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-10-06" pubdate>
-                                2018-10-06
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-10oct/06sat-cd-ripping/">
-                            👇 CD Ripping!
-                        </a>
+    <time datetime="2019-12-13" pubdate>
+        2019-12-13
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/org-spreadsheet-and-babel/">
+    ✳️ Org모드에서 스프레드시트 기능과 Babel 섞어쓰기
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                요즘에 HiFiBerry DAC+으로 라디오, 음악을 들으며 귀가 즐거워서..
-갖고 있는 씨디가 별로 없는데, 이유는.
-음악을 듣는걸 게을리했었고, 딱히 음반으로 들었던건, 테잎 ...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         쩌는 Org-mode Spreadsheet 소개 를 읽고 감명 받아서 따라해봅니다.
+다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리 defun /...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-10-05" pubdate>
-                                2018-10-05
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-10oct/05fri-ping/">
-                            👰‍♀️ Ping 05/10/2018
-                        </a>
+    <time datetime="2019-12-11" pubdate>
+        2019-12-11
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/the-web-and-the-free-world/">
+    🧤 원하는 웹브라우져, 웹환경, 그리고 익숙하지만 싫은 어떤 신앙체계
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                Lamy2000 사용하면서 tweet 1048150207110688768
-tweet 1048059130429100033
-잉크는 Lamy 잉크를 사서 쓰자. 다른 잉크보다 훨씬 번짐...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         지금의 웹환경은 너무 과도한 치장, 보이는 이미지 중심이어서 딱 한가지 측면을 제외하고 모든 면에서 정말 끔찍하다는 생각이 들었다. 하긴 그러니 많은 사람들이 열심히 쓰는걸지도...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-10-03" pubdate>
-                                2018-10-03
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-10oct/rpi3-hifiberry-dacplus-config/">
-                            ⚫ HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정
-                        </a>
+    <time datetime="2019-12-11" pubdate>
+        2019-12-11
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/dissect-radio-gaga/">
+    🦟 radio-recorder 프로젝트 설명
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                https://www.hifiberry.com/ 요거 Raspberry Pi 3에 세팅한 모험에 대한 이야기.
-WIFI잡기 #...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         2년전쯤에 한국 라디오를 혼자 듣고 싶었었다. 하지만 시차가 많이 나는 지역에 살았었다. (8시간 정도 느림)
+그래서 한국 인터넷 라디오를 녹음해서 개인적으로 들을 수 있다면 좋...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2018-10-03" pubdate>
-                                2018-10-03
-                            </time>
-                        </span><a class="article-link" href="/posts/2018-10oct/03wed-ping/">
-                            💣 Ping 03/10/2018
-                        </a>
+    <time datetime="2019-12-11" pubdate>
+        2019-12-11
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2019-12dec/foo/">
+    🧁 Org 파일으로 Hugo 포스팅 테스트
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                HiFiBerry + Raspberry Pi 3 tweet 1047432827866767360
-요것임....
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         적당히 잘 동작하는거 같으니 앞으로는 그냥 혼란스러운 Markdown 대신에 그냥 Org 파일으로 블로깅 하며 될거 같다. 행벜.
+예전 버젼 Hugo에서는 지원을 제대로 못하던거...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                 </ul>
 
                 <hr class="archive-ruler">
+
+                <style>
+                 :root {--bg-big-emoji: "🔃";}
+                </style>
 
 		<nav class="posts-pagination" aria-label="Page navigation">
 
@@ -317,27 +375,27 @@ WIFI잡기 #...
     
 
     <span class="posts-pagination-indicator" >
-        📃 17 / 20
+        📃 17 / 23
     </span>
 
     
     <a href="/page/18/" class="button-link posts-pagination-btn posts-pagination-older" aria-label="Older">⏩예전</a>
-    <a href="/page/20/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
+    <a href="/page/23/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
     
 </nav>
 	    </main>
 	    <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766297336</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1770448396</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YSB7MGHZ4V');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
 </script>
 
 

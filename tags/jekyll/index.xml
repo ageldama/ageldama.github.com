@@ -7,14 +7,21 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 02 Jan 2017 05:15:00 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jun 2022 03:10:36 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 11/06/2022</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun11-ping/</link>
+      <pubDate>Sat, 11 Jun 2022 03:10:36 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun11-ping/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h1 id=&#34;jekyll--hugo&#34;&gt;Jekyll &amp;ndash;&amp;gt; Hugo&lt;/h1&gt;&#xA;&lt;p&gt;&amp;hellip;Jekyll에서, 결국 다시 가볍고 그냥 잘 동작하는 Hugo으로 블로그 변경.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;생각&#34;&gt;생각&lt;/h1&gt;&#xA;&lt;p&gt;남들이 뭐래도 별 관심 없이.&#xA;실은 그냥 포장지와 리본장식만 변해가는거고,&lt;/p&gt;&#xA;&lt;p&gt;반면.&#xA;그 포장지, 리본장식과 그 의미와 가치를 제대로 분간해내지 못하니까.&lt;/p&gt;&#xA;&lt;p&gt;도구를 도구로 보면 안되고, 도구가 나를 쓴다는것을 이해해야 하는데.&#xA;그래서 도구를 이용해 자유로워질거라 착각하면, 도구에 얽메여 끌려만 가면&amp;hellip;,&#xA;그런데 도구에 이용당해 복종할수록 자유로워진다면 &amp;hellip;이겠지.&lt;/p&gt;&#xA;&lt;p&gt;끌려가며, 내가 생각치 않은곳에 끌려와 진짜 성장을 얻기도 하는 이도 있고,&#xA;끌려가며 원치 않는 방향으로 가며 그게 성장이라고 허울로 하기도 하는 이도 있고.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Jekyll &#43; Rouge 소스코드 하일라이팅 테스트</title>
       <link>https://ageldama.github.io/posts/2017/2017-01-02-source-hilite-testing/</link>
       <pubDate>Mon, 02 Jan 2017 05:15:00 +0100</pubDate>
       <guid>https://ageldama.github.io/posts/2017/2017-01-02-source-hilite-testing/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://rouge.jneen.net/&#34;&gt;Rouge&lt;/a&gt; 이거 적용해보기.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/ageldama/hello-adder-cl-asdf/blob/master/src/adders.lisp&#34;&gt;https://github.com/ageldama/hello-adder-cl-asdf/blob/master/src/adders.lisp&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-common_lisp&#34; data-lang=&#34;common_lisp&#34;&gt;;;; Actual Implementations here.&#xA;(in-package :hello-adder)&#xA;&#xA;(defun make-adder (n)&#xA;  (lambda (x) (+ n x)))&#xA;&#xA;(defun 1+er ()&#xA;  (make-adder 1))&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/ageldama/ageldama-gh-jekyll/commit/334ead4b31b305b82e85ae2c6a6e0a219ecc9e66&#34;&gt;https://github.com/ageldama/ageldama-gh-jekyll/commit/334ead4b31b305b82e85ae2c6a6e0a219ecc9e66&lt;/a&gt; 이렇게&#xA;작업해봤음.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://rouge.jneen.net/&#34;&gt;Rouge&lt;/a&gt; 이거 적용해보기.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/ageldama/hello-adder-cl-asdf/blob/master/src/adders.lisp&#34;&gt;https://github.com/ageldama/hello-adder-cl-asdf/blob/master/src/adders.lisp&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-common_lisp&#34; data-lang=&#34;common_lisp&#34;&gt;;;; Actual Implementations here.&#xA;(in-package :hello-adder)&#xA;&#xA;(defun make-adder (n)&#xA;  (lambda (x) (+ n x)))&#xA;&#xA;(defun 1+er ()&#xA;  (make-adder 1))&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/ageldama/ageldama-gh-jekyll/commit/334ead4b31b305b82e85ae2c6a6e0a219ecc9e66&#34;&gt;https://github.com/ageldama/ageldama-gh-jekyll/commit/334ead4b31b305b82e85ae2c6a6e0a219ecc9e66&lt;/a&gt; 이렇게&#xA;작업해봤음.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Github.io 블로그 TraviCI으로 빌드해서 배포하기</title>

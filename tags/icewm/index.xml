@@ -16,5 +16,19 @@
       <guid>https://ageldama.github.io/posts/2025-09sep/freebsd-why/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;시도하기 이전에는&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을&#xA;  서브랩탑으로 집책상에서 써왔었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  메모리도 4GB, 확장이 불가능하고. 배터리도 조금 부풀었고 충전도 잘 되지&#xA;  않는다. 거기에 외부전원어댑터를 붙이지 않으면 어째서인지 eDP이&#xA;  출력되지 않는다. ㅎㅎㅎ&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그래도 어쨌든 debian-stable 설치해놓고 samba 서버로 책상에서 쓰거나&#xA;  하기엔 적당했다. 딱히 동영상을 틀어 놓거나 하는 것도 포기해야 할&#xA;  정도로 빠르지도 않았다. 웹브라우징도 느렸다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;그러다가 freebsd 설치를 했다 (&lt;code&gt;14.3-RELEASE&lt;/code&gt; &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;)&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;원래도 freebsd이 gui이나 latency이 중요한 체감이 훨씬 가볍고 부드럽게&#xA;  느껴지는걸 알고 있었다. 그런데 이번에는 너무 &lt;span style=&#34;text-decoration: underline;&#34;&gt;극적으로 즐거웠다&lt;/span&gt;.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>xrandr 🖥️모니터 연결 자동전환 스크립트🐫</title>
+      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/</link>
+      <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/</guid>
+      <description>&lt;p&gt;&#xA;요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.&#xA;다 편한데, 🪟윈도나 icewm처럼 &lt;code&gt;Windows+P&lt;/code&gt; 누르면, 다음 모니터연결&#xA;조합으로 전환되는게 부러웠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;매번 터미널 열고 &lt;code&gt;xrandr&lt;/code&gt; 치거나, &lt;a href=&#34;https://christian.amsuess.com/tools/arandr/&#34;&gt;arandr&lt;/a&gt; 열어서 세팅하기 귀찮으니까.&#xA;(물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 그냥 윈도의 &lt;code&gt;Win+P&lt;/code&gt; 키처럼 동작하도록 스크립트를 짜봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;🐫 &lt;a href=&#34;https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl&#34;&gt;https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,&#xA;예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별&#xA;생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 17/06/2022 .01</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/</link>
+      <pubDate>Fri, 17 Jun 2022 02:50:41 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/</guid>
+      <description>&lt;h1 id=&#34;code-bloat-has-become-astronomical&#34;&gt;&amp;ldquo;Code bloat has become astronomical&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/&#34;&gt;https://www.positech.co.uk/cliffsblog/2022/06/05/code-bloat-has-become-astronomical/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;극공감. 그렇다고 의존성 포함하면 몇 기가나 되는 것들이, 하는 일을 보면 안습.&#xA;&amp;hellip;그렇다고 그런 방법들만을 고르는 안목이 엄청나게 힙한것도, 스스로에게 이익이 되는것도 아니고.&lt;/p&gt;&#xA;&lt;p&gt;데스크탑에 작은 서브모니터 연결해놓은 rpi3b+이 rpi4보다 빠르지는 않을지 몰라도, micro-sd 버벅거림이랑&#xA;발열 때문에 버벅거리는건 훨씬 적다.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;rpi4은 빠르니까!&amp;ldquo;이라면서 나름대로 데탑/랩탑에서 쓰는 설정 그대로, openbox+lxpanel 정도 올려서 쓰고 있고,&#xA;rpi3b+은 icewm 세팅하고 추가로 뭔가를 더 해놓지 않은 탓이 있을까 싶기도 하지만. &amp;hellip;어차피 둘 다 엄청 가벼울거 같은데도.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

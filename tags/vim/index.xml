@@ -17,11 +17,25 @@
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;vi emulation-layer: evil-mode을 그만 쓰게됐다&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;이맥스는 거의 20년 넘게 써온거 같다. 물론 예전엔 지금보다 훨씬 더&#xA;  제대로 이해하고 쓰진 못했었다.🥟 그리고 &lt;a href=&#34;https://github.com/emacs-evil/evil&#34;&gt;evil-mode&lt;/a&gt;-도 10년 넘게&#xA;  써온거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  이맥스를 다시 메인으로 계속 써오면서, 처음엔 &lt;a href=&#34;https://www.spacemacs.org/&#34;&gt;Spacemacs&lt;/a&gt; /&#xA;  &lt;a href=&#34;https://github.com/doomemacs/doomemacs&#34;&gt;doomemacs&lt;/a&gt; 같은 preconfigured된 것들을 적용해 쓰면서 익숙해져 갔던거&#xA;  같다. (이미 Vi/Vim은 계속 써오고 있었으니까)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그런데 계속해서 뭔가 키바인딩이 이상하다는 느낌을 받아온거 같긴하다.&#xA;  그도 그럴것이, 좀 다른 major-mode마다 다른 키바인딩을 vi/vim스럽게 맞춰주는&#xA;  &lt;a href=&#34;https://github.com/emacs-evil/evil-collection&#34;&gt;evil-collection&lt;/a&gt;-으로 맞춰주며 동작하는데, 이게 항상 좀 일관성이&#xA;  있기는 어려운 것 같았다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Ping 19/Jun/2021</title>
+      <link>https://ageldama.github.io/posts/2021-06jun/ping-19sat/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2021-06jun/ping-19sat/</guid>
+      <description>&lt;p&gt;&#xA;그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,&#xA;github repositories도 대부분은 private으로 변경해놓고 지냈었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;하지만 그래도 coding과 글쓰기는 계속 하고 있었었고, 글을 조금씩이라도 공개할까 싶어 다시 문을 연다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것,&#xA;또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.&#xA;이제는 너무 이맥스 + evil 설정 등에 익숙해져서 vim을 오히려 더 설정해서 쓰고 싶은 생각도 들지 않는다.&#xA;..하지만 다른 이들에게 이맥스를 쓰라고 권하기는 머뭇거려진다. 어릴 때부터 이맥스를 사용했고 그렇게 습관으로 하나씩 하나씩 이맥스 컨벤션과 모드들에 익숙해져서 시간이 오래 걸렸었던 것 같으니까.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Ping 01/Aug/2020</title>
       <link>https://ageldama.github.io/posts/2020-08aug/ping-01sat/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0900</pubDate>
       <guid>https://ageldama.github.io/posts/2020-08aug/ping-01sat/</guid>
       <description>&lt;p&gt;&#xA;오랬만에 내 환경을 더 다듬었다.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Emacs, Evil, General.el.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;매일 이맥스에서 코딩을 하면서 조금은 Vim보다 키바인딩이 편집에&#xA;    불리한 것 같았었다. 그렇다고 Vim을 쓰고 싶지는 않았다. 검색이나&#xA;    다중편집 같은 이맥스만의 기능을 Vim에서 흉내내는 것은 별로 마음에&#xA;    차지 않는 정도이고 또 화면 flickering도 이맥스 GUI을 쓸 때보다&#xA;    터미널 Vim은 심해서 난 피곤해.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;    그래서 Evil-mode을 종종 썼는데 문제는 내가 만들어놓은 general.el&#xA;    키바인딩들이 Evil을 고려하지 않고 만들어서 evil모드를 toggle하며&#xA;    써야했었었다. 특히 내 이맥스 모드에서의 키바인딩의 prefix이&#xA;    C-z인데, evil-mode에서는 emacs mode으로 전환을 위해서 사용.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>코드 편집기에 대한 생각</title>
+      <link>https://ageldama.github.io/posts/2020-05may/editors/</link>
+      <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-05may/editors/</guid>
+      <description>&lt;p&gt;&#xA;코드 편집기를 어떻게 써왔었는지 잠깐 생각해봤다:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;DOS시절: MS-DOS Editor.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GW-BASIC 시절에는 정말&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/MS-DOS_Editor&#34;&gt;https://en.wikipedia.org/wiki/MS-DOS_Editor&lt;/a&gt; 을 열심히 썼었던 것&#xA;같다.&lt;/li&gt;&#xA;&lt;li&gt;그리고 그 다음엔 &lt;a href=&#34;https://en.wikipedia.org/wiki/PowerBASIC#PowerBASIC_for_DOS_(PBDos)&#34;&gt;PowerBASIC for DOS&lt;/a&gt; 열심히 썼었다. QuickBASIC&#xA;같은 바이트코드으로 컴파일해서 .exe 파일에 인터프리터와&#xA;바이트코드를 embedding 하는 VB의 P-code 같은 가짜 컴파일 방식&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;이&#xA;아니라 정말 네이티브 코드로 컴파일해주고, 인라인 어셈블리와&#xA;메모리 조작이 가능한 베이직 컴파일러, IDE여서 좋은 환경이었던&#xA;것 같다.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;터보C 2.0 편집기. PowerBASIC이랑 유사해서 익숙하게 쓸 수 있었던&#xA;것 같다. 파워베이직도 그렇지만, 의외로 도스시절의 이런 IDE들이&#xA;F1 - Help 메뉴에서 항목별로 문서 정리가 잘 되어 있어서 읽으면서&#xA;즐거웠었던 것 같다. (초등학생~중학생이어서 영어를 잘 이해하지는&#xA;못했지만)&lt;/p&gt;</description>
     </item>
     <item>
       <title>NeoVim, Evil-mode and Emacs의 모험</title>

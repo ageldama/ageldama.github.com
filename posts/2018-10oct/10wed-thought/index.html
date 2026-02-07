@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>생각 10/10/2018 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766297336">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>생각 10/10/2018 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1770448395">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="연구소에서 종종 휴식시간에 PS4 게임을 하면서 지낸다. 그냥 별로 게임을
 위해서 너무 많은 시간을 보내는걸 원래도 좋아하진 않았지만 독일에 살며
 취미로 다시 시작한 이후로 재미를 붙이고 하고 있었다.
@@ -23,22 +24,33 @@ Carmack 이야기도 종종
     
     
     
-    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
-          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.d22f08bce458e2da0445890ea96880ba4141da9b9aca6d1aba24f8f8cdc0c381.css"
+          integrity="sha256-0i8IvORY4toERYkOqWiAukFB2puaym0auiT4&#43;M3Aw4E=" crossorigin="anonymous">
     
     
     
     
     
 
-    <script src="/js/bundle.js"></script>
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container"><header>
     <div class="main ">
         <h1 class="site-title ">
@@ -49,17 +61,19 @@ Carmack 이야기도 종종
     <nav>
         
           <div class="search-form">
-      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
+      <span class="search-loading-indicator" style="display: none;"></span>
       <input id="search-query" name="search-query"
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -67,8 +81,12 @@ Carmack 이야기도 종종
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -112,7 +130,9 @@ Carmack 이야기도 종종
     </span>
 </nav>
 
-
+    
+    <hr class="archive-ruler">
+    
     <nav id="TableOfContents">
   <ul>
     <li><a href="#차이를-알아야-하는-이유">차이를 알아야 하는 이유</a></li>
@@ -149,21 +169,26 @@ Carmack</a> 이야기도 종종
 <p>공감이 가장 가는 부분들은</p>
 <blockquote>
 <p>&hellip;there are clearly better and worse ways of doing things but it’s
-frustratingly difficult to quantify.</p></blockquote>
+frustratingly difficult to quantify.</p>
+</blockquote>
 <blockquote>
 <p>&hellip;these are all conventions that help software engineering in the
 large when you’re dealing with mistakes that people make. But
-they’re not fundamental about what the computer’s doing.</p></blockquote>
+they’re not fundamental about what the computer’s doing.</p>
+</blockquote>
 <blockquote>
-<p>&hellip;programmers are making mistakes all the time and constantly.</p></blockquote>
+<p>&hellip;programmers are making mistakes all the time and constantly.</p>
+</blockquote>
 <blockquote>
 <p>&hellip;I would like to be able to enable even more restrictive subsets
 of languages and restrict programmers even more because we make
-mistakes constantly.</p></blockquote>
+mistakes constantly.</p>
+</blockquote>
 <p>사실 다음처럼 말하면서 폼을 잡거나 꼰대를 부리기도 좋고, 사실 맞는
 얘기겠지만 해본 사람들은 이게 어떤 차이를 갖는지 알게된다.</p>
 <blockquote>
-<p>&ldquo;프로그래밍언어 거 그거 어차피 다 똑같은거야. if-else있고 루프되고&rdquo;<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p></blockquote>
+<p>&ldquo;프로그래밍언어 거 그거 어차피 다 똑같은거야. if-else있고 루프되고&rdquo;<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+</blockquote>
 <p>&hellip;말이야 맞는거 같지만, 차이가 있다는걸 우리는 알고있다. :-)</p>
 <h1 id="차이를-알아야-하는-이유">차이를 알아야 하는 이유</h1>
 <p>일터에서의 어떤 논의에서 종종 _말 짜맞추기_를 하고 있는 경우를
@@ -216,20 +241,41 @@ mistakes constantly.</p></blockquote>
 </ol>
 </div>
 
-	</section>
-
-	<div class="post-tags">
+	</section><div class="post-tags">
 	    
 	    
 	    <nav class="nav tags">
 		<ul class="tags">
-                    
-		    <li style="display: inline">😺 <a href="/categories/life">life</a></li>
-                    
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/ping">ping</a></li>
+		    <li class="tagbutton-inline">👅<a href="/series/programming-languages/">programming-languages</a>
+                        <sup>27</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/thought">thought</a></li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>110</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>52</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/doom/">doom</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/john-carmack/">john-carmack</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/thought/">thought</a>
+                        <sup>1</sup>
+                    </li>
 		    
 		</ul>
 	    </nav>
@@ -237,6 +283,12 @@ mistakes constantly.</p></blockquote>
 	    
 	</div>
     </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🧇";}
+    </style>
 
     <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
@@ -254,17 +306,17 @@ mistakes constantly.</p></blockquote>
 
 </main>
 <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766297336</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1770448395</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YSB7MGHZ4V');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
 </script>
 
 

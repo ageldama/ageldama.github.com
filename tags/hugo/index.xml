@@ -7,8 +7,29 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Fri, 19 Dec 2025 14:41:29 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jan 2026 04:19:57 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo builtin sass/esbuild 으로 전환</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/hugo-builtin-sass-esbuild/</link>
+      <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/hugo-builtin-sass-esbuild/</guid>
+      <description>&lt;p&gt;&#xA;(배경: 이 블로그는 sass=hugo내장, esbuild=npm을 통해서 빌드하고&#xA;있었음. 참고 👉 &lt;a href=&#34;http://localhost:1313/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/&#34;&gt;아겔로그변천사&lt;/a&gt; )&lt;/p&gt;&#xA;&lt;p&gt;&#xA;어쩌다 만들게 된 hugo 사이트에서는 javascript build도 hugo builtin으로&#xA;바꿔봤다. 잘 동작했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;…그래서 이 블로그도 그냥 모두 hugo 내장으로 변경. 적당히 잘 굴러가서&#xA;마음에 든다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;구성이 더 단순해졌다. hugo 최고💌&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://gohugo.io/functions/js/build/&#34;&gt;Hugo: js.Build&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://gohugo.io/functions/css/sass/&#34;&gt;Hugo: css.Sass&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;PostCSS, Tailwind.css도 지원하는데 딱히 끌리진 않음. (아직은)&#xA;sass자체가 좀 이상하게 동작하고 하기는 하지만.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>categories안녕👋 taxonomies 정렬 추가</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/no-categories&#43;taxonomy-revamp/</link>
+      <pubDate>Wed, 24 Dec 2025 14:58:24 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/no-categories&#43;taxonomy-revamp/</guid>
+      <description>&lt;p&gt;&#xA;👉 &lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/&#34;&gt;새로운 묶음법: “📚시리즈(Series)”&lt;/a&gt; …추가하고&#xA;“😺카테고리(Categories)”,은 별로 쓸모가 없었구나 생각이 들어서&#xA;제외시켰다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이제 “📚시리즈(Series)” / “🏷️태그(Tags)” , 2개의 &lt;a href=&#34;https://gohugo.io/content-management/taxonomies/&#34;&gt;Taxonomy&lt;/a&gt;만 사용하여&#xA;블로깅을 해나가려고.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;아예 &lt;code&gt;/categories&lt;/code&gt;-관련 페이지는 아예 생성하지 않기로.&lt;/li&gt;&#xA;&lt;li&gt;표시도 않기로.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;대신 tags을 정렬해서 보여주기로:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;참조빈도가 높은 태그부터 정렬해서 보여주면, 그게 사실&#xA;&amp;#34;카테고리&amp;#34;의 의도였던 &amp;#34;&lt;em&gt;대분류&lt;/em&gt;&amp;#34;-처럼 쓰일 수 있으니까.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://ageldama.github.io/tags&#34;&gt;/tags&lt;/a&gt; , &lt;a href=&#34;https://ageldama.github.io/series&#34;&gt;/series&lt;/a&gt; 페이지에서 기본은 참조횟수로 역순정렬해서 보여주고, 추가적으로,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;이름 abc순서,&lt;/li&gt;&#xA;&lt;li&gt;최근 갱신일,&lt;/li&gt;&#xA;&lt;li&gt;…의 추가 정렬기준에 따라 직접 재정렬해서 찾기 수월하게 바꿨다.&lt;/li&gt;&#xA;&lt;li&gt;…ascending/descending 순서으로 정렬도 구현해줬다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;뭔가 삽질에 완벽하게 깔끔한 구현은 아니지만, 적당히 htmx hx-boost으로&#xA;다시 만든 블로그 이동방식과 잘 어울리는거 같아서.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>새로운 묶음법: “📚시리즈(Series)”</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/</link>
+      <pubDate>Tue, 23 Dec 2025 16:06:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/</guid>
+      <description>&lt;p&gt;&#xA;기존에는 “😺카테고리(Categories)”, “🏷️태그(Tags)”만 설정해서&#xA;써왔었는데, 어느샌가, 일대기 형식으로 계속 묶어나가야 분류가 수월한&#xA;글들이 쌓여갔다: (예) &lt;a href=&#34;https://ageldama.github.io/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/&#34;&gt;dark-mode 지원하기&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 새로운 “시리즈” taxonomy 추가하고, 페이지템플릿들 조금 고쳐서&#xA;지원 시작.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;음… 과거에 쌓은 글들을 좀 시리즈로 이렇게 더 묶어야 할까 고민도&#xA;들고,&lt;/p&gt;&#xA;&lt;p&gt;&#xA;무엇보다, 그간 아무 생각없이 남들 다 그렇게 하니까, “카테고리”를&#xA;추가해서 써오던 것이 좀 후회스럽다. 사실은 저거 그냥 “태그”랑 다를게&#xA;없는데 싶기도 하다. 굳이 차이를 갖자면 “대분류”정도로서, 이맥스 글이나&#xA;프로그래밍 글끼리 묶기 수월한 점 + 그리고 태그목록보다는 훨씬 가짓수가&#xA;젂으니까 찾아보기 좋다는 점 정도?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>darkmode.js... prefers-color-scheme</title>
       <link>https://ageldama.github.io/posts/2025-12dec/prefers-color-scheme/</link>
@@ -64,6 +85,13 @@
       <pubDate>Fri, 03 Feb 2023 18:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/posts/2023-02feb/2023-02feb03--01-ping/</guid>
       <description>&lt;p&gt;블로그를 내려놓았다가, 다시 글을 쓰고 생각들을 어느 정도는 공개를 하고&#xA;지내고 싶어져서 다시 열었다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/athul/archie&#34;&gt;사용하던 테마&lt;/a&gt;를 수정해서 쓰기로&#xA;하고, CSS을 여기저기서 복붙해서 적용해보고, &lt;a href=&#34;https://galmuri.quiple.dev/&#34;&gt;갈무리&#xA;웹폰트&lt;/a&gt;도 적용해서, 오히려 원본 테마보다&#xA;더 가볍게 적당히 만들어봤다.&lt;/p&gt;&#xA;&lt;p&gt;색상도, 외양과 기능 디자인 모두 어느 정도 내 취향에 맞게 꾸며 봤다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 11/06/2022</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun11-ping/</link>
+      <pubDate>Sat, 11 Jun 2022 03:10:36 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun11-ping/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h1 id=&#34;jekyll--hugo&#34;&gt;Jekyll &amp;ndash;&amp;gt; Hugo&lt;/h1&gt;&#xA;&lt;p&gt;&amp;hellip;Jekyll에서, 결국 다시 가볍고 그냥 잘 동작하는 Hugo으로 블로그 변경.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;생각&#34;&gt;생각&lt;/h1&gt;&#xA;&lt;p&gt;남들이 뭐래도 별 관심 없이.&#xA;실은 그냥 포장지와 리본장식만 변해가는거고,&lt;/p&gt;&#xA;&lt;p&gt;반면.&#xA;그 포장지, 리본장식과 그 의미와 가치를 제대로 분간해내지 못하니까.&lt;/p&gt;&#xA;&lt;p&gt;도구를 도구로 보면 안되고, 도구가 나를 쓴다는것을 이해해야 하는데.&#xA;그래서 도구를 이용해 자유로워질거라 착각하면, 도구에 얽메여 끌려만 가면&amp;hellip;,&#xA;그런데 도구에 이용당해 복종할수록 자유로워진다면 &amp;hellip;이겠지.&lt;/p&gt;&#xA;&lt;p&gt;끌려가며, 내가 생각치 않은곳에 끌려와 진짜 성장을 얻기도 하는 이도 있고,&#xA;끌려가며 원치 않는 방향으로 가며 그게 성장이라고 허울로 하기도 하는 이도 있고.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Org 파일으로 Hugo 포스팅 테스트</title>

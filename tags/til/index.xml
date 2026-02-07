@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 10 Nov 2025 06:35:45 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Dec 2025 14:34:23 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/til/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>‘graceful degradation’, ‘progressive enhancement’</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/graceful-degradation&#43;progressive-enhancement&#43;elegant-degradation/</link>
+      <pubDate>Tue, 23 Dec 2025 14:34:23 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/graceful-degradation&#43;progressive-enhancement&#43;elegant-degradation/</guid>
+      <description>&lt;p&gt;&#xA;  하나씩 정리해보자.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  이하의 정리는 “웹개발”, “웹페이지” 유지보수 관점/도메인의 시점에서,&#xA;  다른 도메인(예=전자제품)에서의 정의와 완전히 일치하지는 않을거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  위키백과나 다른 블로그에서 소개한 글들은 전자제품, 전자통신 등의&#xA;  관점, 개념, 용어 중심으로 풀어 설명했기 때문에 웹개발의 관점에선 잘&#xA;  모르겠었어서. (원저자분들 죄송합니다. 🙇)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  즉, 이하에 소개할 링크에서 W3C의 정의에 따라 이해해보려고 함.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;“progressive enhancement” -or- “graceful degradation”?&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;W3C Wiki &lt;a href=&#34;https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement&#34;&gt;Graceful degradation versus progressive enhancement&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;기계인간 John Grib &lt;a href=&#34;https://johngrib.github.io/wiki/jargon/graceful-degradation/&#34;&gt;우아한 성능 저하 (graceful degradation)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;  조금 뭔지 모를 영어가 많이 나와서 혼란스럽다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>[TIL] common-lisp defmacro와 forward-declaration</title>
       <link>https://ageldama.github.io/posts/2025-11nov/cl-defmacro-fwd-declaration/</link>

@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 15 Sep 2025 08:26:26 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/freebsd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>process-tree 정리의 rhapsody</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/pgrp-rhapsody/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/pgrp-rhapsody/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;발단&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;상황배경:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;내 프로그램은 순박하게 &lt;a href=&#34;https://github.com/yt-dlp/yt-dlp&#34;&gt;yt-dlp&lt;/a&gt;을 실행한다.&lt;/li&gt;&#xA;&lt;li&gt;실행된 yt-dlp은 또 내가 지정한대로, 실제 다운로더로서 &lt;a href=&#34;https://aria2.github.io/&#34;&gt;aria2c&lt;/a&gt;을&#xA;실행하고,&lt;/li&gt;&#xA;&lt;li&gt;이렇게 실행된 aria2c은 다시금 내가 지정한대로, 충실히, 자기자신을&#xA;10개 정도의 동시프로세스으로 복제하여 병렬실행된다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;…그런데…&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;갑자기 Control-C(&lt;code&gt;SIGINT&lt;/code&gt;)을 눌러 내 프로그램을 종료했다.&lt;/li&gt;&#xA;&lt;li&gt;😕 &lt;span style=&#34;text-decoration: underline;&#34;&gt;yt-dlp 프로세스와 그 하위 aria2c 프로세스 10여개는 종료되었을까?&lt;/span&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;  … yt-dlp, aria2c에 기대하는 behavior은: &lt;span style=&#34;text-decoration: underline;&#34;&gt;그렇다&lt;/span&gt;-이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그런데 그렇지 않을 경우도 있을테고(순전히 각 애플리케이션의 처리에&#xA;  따를테니까, 플랫폼(예: linux / freebsd)에 따라 그렇게 되지 않는&#xA;  경우도 있다. 😑&lt;/p&gt;</description>
+    </item>
     <item>
       <title>freebsd &#43; 고물랩탑 쓸만하다(재밌다!)</title>
       <link>https://ageldama.github.io/posts/2025-09sep/freebsd-why/</link>
@@ -22,6 +29,13 @@
       <pubDate>Mon, 15 Sep 2025 08:25:26 +0000</pubDate>
       <guid>https://ageldama.github.io/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/</guid>
       <description>&lt;p&gt;&#xA;freebsd을 써오면서 좀 불만이었던게&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, usb으로 외장 hdd을 연결할 때&#xA;호환성 혹은 성능이 너무 느림.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 아예 빠른 유선랜을 연결해놓고 samba으로 파일을 백업/공유했었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;호환성은 &lt;a href=&#34;https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup&#34;&gt;linux luks&lt;/a&gt; 지원도 아쉽지만, 대부분의 외장하드 파일시스템을 잘&#xA;지원하지 못하는거 같았어서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데, 이번에 다시 시도하면서 그냥 얌전하게 &lt;a href=&#34;https://wiki.freebsd.org/FUSEFS&#34;&gt;fusefs&lt;/a&gt; + &lt;a href=&#34;https://www.freshports.org/sysutils/fusefs-exfat&#34;&gt;fusefs-exfat&lt;/a&gt;&#xA;사용하니 그럭저럭 괜찮은 성능이 나와서 이렇게 해야겠구나 생각.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;fusefs + ntfs 같은 port도 있는데, 이것도 빠를거 같지만, exfat이 더&#xA;구현이 빠를거 같다. (파일시스템 구조부터 훨씬 단순할테니까)&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Footnotes&#xA;&lt;/h2&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;footnotes&#34;&gt;&#xA;&lt;hr class=&#34;footnotes-separatator&#34;/&gt;&#xA;&lt;div class=&#34;footnote-definitions&#34;&gt;&#xA;&lt;div class=&#34;footnote-definition&#34;&gt;&#xA;&lt;sup id=&#34;footnote-1&#34;&gt;&lt;a href=&#34;#footnote-reference-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;&lt;div class=&#34;footnote-body&#34;&gt;&#xA;&lt;p&gt;물론 이런 불만 말고도 freebsd은 wifi칩, bluetooth, gpu지원 등등&#xA;hw driver지원이 항상 부족하지만.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>블로그 검색을 다시 짰다 (PageFind 제거)</title>
+      <link>https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/</link>
+      <pubDate>Sat, 13 Sep 2025 10:10:04 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-09sep/no-pagefind-anymore/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://pagefind.app/&#34;&gt;pagefind&lt;/a&gt;이 freebsd 환경에서 동작하지 않아서, 그냥 다시 짰다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;fuse.js을 사용하는 예제 등이 있었지만&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, 그럴거면 그냥 ajax으로&#xA;얻은 &lt;code&gt;index.json&lt;/code&gt;-을 직접 검색해도 될거 같아서 그냥 javascript 작성&#xA;오랬만에.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 ui등도 내 취향에 맞게 간단하게 만들어서 만족스럽다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;pagefind처럼 검색어에 따라 필요한 만큼만 http get하는게 아니라 조금&#xA;아쉽지만, 전체 &lt;code&gt;index.json&lt;/code&gt;-fetch해도 500kb 안쪽인거 같아서 괜찮지&#xA;않을까 싶음. (거기에 브라우저캐슁도 먹으니까)&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Footnotes&#xA;&lt;/h2&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;footnotes&#34;&gt;&#xA;&lt;hr class=&#34;footnotes-separatator&#34;/&gt;&#xA;&lt;div class=&#34;footnote-definitions&#34;&gt;&#xA;&lt;div class=&#34;footnote-definition&#34;&gt;&#xA;&lt;sup id=&#34;footnote-1&#34;&gt;&lt;a href=&#34;#footnote-reference-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;&lt;div class=&#34;footnote-body&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://findstar.pe.kr/2021/07/10/fuse-search-on-hugo/&#34;&gt;https://findstar.pe.kr/2021/07/10/fuse-search-on-hugo/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>ddakong v1.1 릴리즈: FreeBSD / kqueue</title>
@@ -38,11 +52,39 @@
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;freebsd에서 samba 파일서버 세팅은 프비핸드북 참고&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba&#34;&gt;https://docs.freebsd.org/en/books/handbook/network-servers/#network-samba&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;symlink을 samba에 노출하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;&lt;code&gt;/usr/local/etc/smb4.conf&lt;/code&gt; 파일에 다음을 추가:&lt;/p&gt;&#xA;&lt;div class=&#34;src src-conf&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;[global]&#xA;...&#xA;allow insecure wide links =&#x9;yes&#xA;&#xA;&#xA;[share]&#xA;...&#xA;follow symlinks = yes&#xA;wide links = yes&#xA;unix extensions = no&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-3&#34;&gt;&#xA;mdns으로 samba 파일서버를 네트웍에 광고하기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  보통은 avahi을 써왔는데, mdnsresponder이 더 가볍다고 해서 이렇게 세팅해봄.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;pkg install mDNSResponder&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;code&gt;/etc/rc.conf&lt;/code&gt; 에 추가:&lt;/p&gt;&#xA;&lt;div class=&#34;src src-conf&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;mdnsresponderposix_enable=&amp;#34;YES&amp;#34;&#xA;mdnsresponderposix_flags=&amp;#34;-f /usr/local/etc/mdnsresponderposix.conf&amp;#34;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/div&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;호스트이름은 &lt;code&gt;freebsd-samsung&lt;/code&gt; 으로 smb서비스를 노출.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Ping 19/Jun/2021</title>
+      <link>https://ageldama.github.io/posts/2021-06jun/ping-19sat/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2021-06jun/ping-19sat/</guid>
+      <description>&lt;p&gt;&#xA;그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고,&#xA;github repositories도 대부분은 private으로 변경해놓고 지냈었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;하지만 그래도 coding과 글쓰기는 계속 하고 있었었고, 글을 조금씩이라도 공개할까 싶어 다시 문을 연다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그간 변한 것이 있다면, 적어도 공부와 코딩 그리고 컴퓨팅에 대해서만,&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Rust을 하고 지낸다는 점, 그리고 새로운 네트웍 프로토콜에 관심을 갖고 살고 있는 것,&#xA;또 라즈베리파이4와 좋아하는 배포판들이 더 생겼다는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 여전히 emacs을 즐겁게 잘 사용하고 있고, 오히려 더 vim을 간간히 쓰는 것은 덜 쓰게 된 것 같아.&#xA;이제는 너무 이맥스 + evil 설정 등에 익숙해져서 vim을 오히려 더 설정해서 쓰고 싶은 생각도 들지 않는다.&#xA;..하지만 다른 이들에게 이맥스를 쓰라고 권하기는 머뭇거려진다. 어릴 때부터 이맥스를 사용했고 그렇게 습관으로 하나씩 하나씩 이맥스 컨벤션과 모드들에 익숙해져서 시간이 오래 걸렸었던 것 같으니까.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Ping 13/Aug/2020</title>
       <link>https://ageldama.github.io/posts/2020-08aug/ping-13thu/</link>
       <pubDate>Thu, 13 Aug 2020 00:00:00 +0900</pubDate>
       <guid>https://ageldama.github.io/posts/2020-08aug/ping-13thu/</guid>
       <description>&lt;p&gt;&#xA;프비 워크스테이션을 만들어놓고 그렇게 좋은 사양은 절대 아닌 조용한&#xA;슬림PC에서, 또 가능한 마우스를 안 써도 좋게 세팅해놓고 편안하게&#xA;이맥스에서 작업을 해나간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;FM라디오의 가끔 지글거리는 잡음도 좋은 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;계속해서 신경을 쓰게 만들고 끊기고 광고가 나오고 또 클릭을 유도하고&#xA;멍청하게 징징거리는 것으로 돈으로 바꾸는 요즘의 수많은 다른 매체들보다&#xA;훨씬 나를 편안하게 만든다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;다른 매체들도 비슷하지 않을까. SNS도 그런 것 같고 대부분의 앱, 심지어&#xA;운영체제도 그런 환경들과는 다른.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 16/Jun/2020</title>
+      <link>https://ageldama.github.io/posts/2020-06jun/ping-16tue/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-06jun/ping-16tue/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;FreeBSD을 조금 오래된 컴퓨터에 계속 사용하기.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;매일 업무를 보는데에 메인 피씨, 랩탑은 여전히 아치리눅스를 잘 쓰고&#xA;  있다. 그리고 조금 사양이 부족한 사이드킥 피씨 본체에는 FreeBSD을&#xA;  여전히 설치해놓고 쓰고 있다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  처음 생각보다 훨씬 더 많이 활용하게 되는 것 같다. 그리고 훨씬&#xA;  가볍게, 안정적이고 강력한 느낌이다. 물론 오히려 리눅스가 더&#xA;  빠르다거나 안정적인 부분들을 금새 발견할 수 있다. 그리고 리눅스와&#xA;  동일하게 쓰려고 들지 않는게 더 속편한 부분도 많다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  예를 들어, 당연히 Steam 같은 것은 기대를 안한다. 그리고 의외로&#xA;  USB스택은 리눅스에 비해서 종종 실망스럽고, 다양한 파일시스템 지원도&#xA;  그렇다. FUSE을 통해서 리눅스처럼 다양한 파일시스템을 지원하지만&#xA;  그렇게 안심하고 쓸만한 것은 아닌 것 같다. (몇 개의 경험을 해보고&#xA;  나니)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 22/Feb/2020</title>
+      <link>https://ageldama.github.io/posts/2020-02feb/ping-22sat/</link>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-02feb/ping-22sat/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;내가 책상을 쓰는 방법, 고물 컴퓨터를 고쳐 쓰기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;오래된 피씨 본체를 얻었다. 슬림한 케이스의 삼성 컴퓨터.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  윈도7 설치된 것도 꽤 가볍고 빠르게 정리되어 있었다. 그냥 FreeBSD을&#xA;  처음에는 설치하려고 하다가, 결국 애플리케이션이나 그냥 적당히 잘&#xA;  돌아가는, 이맥스 정보만 잘 동작하는 기계면 될 것 같아서 아치리눅스를&#xA;  설치.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  만족스럽다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  데스크탑 원래 사용하던 것도 그렇게 엄청나게 좋은 것은 아니지만&#xA;  만족스러운 사용인데, 문제는 책상 가운데에 모니터랑 키보드를 놓고&#xA;  쓰면 책을 읽을 자리가 없어져서 항상 키보드 등을 한 켠으로&#xA;  밀어놓는다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping  26/02/2019</title>
+      <link>https://ageldama.github.io/posts/2019-02feb/2019-02feb26-ping/</link>
+      <pubDate>Tue, 26 Feb 2019 00:10:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-02feb/2019-02feb26-ping/</guid>
+      <description>&lt;h1 id=&#34;게임-발더스게이트ee-원숭이섬의-비밀-se--steamplay-등등&#34;&gt;게임: 발더스게이트EE, &amp;lsquo;원숭이섬의 비밀&amp;rsquo; SE + SteamPlay, 등등&lt;/h1&gt;&#xA;&lt;p&gt;아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced Edition들&#xA;올라와있었다.  발더스게이트1, 2 모두. 시간이 될때마다 조금씩 플레이&#xA;중.&lt;/p&gt;&#xA;&lt;p&gt;새로 UI이나 그래픽 요소들 등등 리마스터 한건지 훨씬 좋아진거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://store.steampowered.com/app/32360/The_Secret_of_Monkey_Island_Special_Edition/&#34;&gt;원숭이섬의 비밀: Special&#xA;Edition&lt;/a&gt;&#xA;이것도 시간날때&#xA;플레이. &lt;a href=&#34;https://www.scummvm.org/&#34;&gt;ScummVM&lt;/a&gt; 으로 옛날 그래픽으로 다시&#xA;해도 좋겠지만, 오히려 애니메이션이나 그래픽 다시 그린게 나는 더 마음에&#xA;들어서 이쪽이 좋은거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://store.steampowered.com/app/336140/Unavowed/&#34;&gt;Unavowed&lt;/a&gt;. 이런류의&#xA;어드벤쳐 꾸준히 만드는 &amp;ldquo;WadjetEyeGames&amp;quot;이 내 취향에 잘 맞는걸 계속&#xA;만들고 있는거 같아서 기뻤다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

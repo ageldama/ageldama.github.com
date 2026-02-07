@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta name="generator" content="Hugo 0.150.1">
+	<meta name="generator" content="Hugo 0.154.5">
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766297335">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1770448395">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="" />
     <meta property="og:image" content=""/>
     <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
@@ -14,15 +15,24 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
-          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.d22f08bce458e2da0445890ea96880ba4141da9b9aca6d1aba24f8f8cdc0c381.css"
+          integrity="sha256-0i8IvORY4toERYkOqWiAukFB2puaym0auiT4&#43;M3Aw4E=" crossorigin="anonymous">
     
     
     
     
     
 
-    <script src="/js/bundle.js"></script>
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +40,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
 
-    <body>
+    <body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container">
             <header>
     <div class="main ">
@@ -42,17 +54,19 @@
     <nav>
         
           <div class="search-form">
-      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
+      <span class="search-loading-indicator" style="display: none;"></span>
       <input id="search-query" name="search-query"
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -60,8 +74,12 @@
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -97,7 +115,7 @@
 		
 
                 <hr class="archive-ruler"><h1>
-                    ♉
+                    🔹
                     페이지 #003
                 </h1>
 
@@ -106,206 +124,247 @@
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2025-09-15" pubdate>
-                                2025-09-15
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-09sep/freebsd-why/">
-                            🍆 freebsd &#43; 고물랩탑 쓸만하다(재밌다!)
-                        </a>
+    <time datetime="2025-12-27" pubdate>
+        2025-12-27
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/2025-12dec27--01-ping/">
+    ⛹️ Rob “Commander” Pike의 AI극딜
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 시도하기 이전에는 좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을 서브랩탑으로 집책상에서 써왔었다.
-메모리도 4GB, 확장이 불가능하고. 배터리도 ...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         “제가 마지막으로 이렇게 화가 난게 언제인지도 모르겠습니다” HN 댓글: https://news.ycombinator.com/item?id=46392115 lobste.rs 댓글...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2025-09-15" pubdate>
-                                2025-09-15
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-09sep/freebsd-exfat-faster-usb-exthdd/">
-                            🔴 [작은 팁] freebsd 외장hdd 빠르게 쓰기 (exfat 파일시스템)
-                        </a>
+    <time datetime="2025-12-26" pubdate>
+        2025-12-26
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/ruby-is-an-acceptable-lisp-reloaded/">
+    🔋 Ruby is an acceptable LISP (Reloaded!)
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 freebsd을 써오면서 좀 불만이었던게1, usb으로 외장 hdd을 연결할 때 호환성 혹은 성능이 너무 느림.
-그래서 아예 빠른 유선랜을 연결해놓고 samba으로 파일을 백업/...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         HN: Why Ruby is an acceptable Lisp (2005) (randomhacks.net)
+commonlisp sly/slime 세션의 interactive...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2025-09-13" pubdate>
-                                2025-09-13
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-09sep/no-pagefind-anymore/">
-                            🩰 블로그 검색을 다시 짰다 (PageFind 제거)
-                        </a>
+    <time datetime="2025-12-26" pubdate>
+        2025-12-26
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/haruki-manga-stories--super-frog/">
+    🗃️ 무라카미 하루키 “Manga Stories 1” 그래픽노블
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 pagefind이 freebsd 환경에서 동작하지 않아서, 그냥 다시 짰다.
-fuse.js을 사용하는 예제 등이 있었지만1, 그럴거면 그냥 ajax으로 얻은 index.json-...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         goodreads 리뷰
+책표지
+재밌게 읽었다. 이미 출판된 하루키의 단편들을 다시 그래픽노블 형식으로 출판한 책. 아마 2권도 마저 읽고, 3권도 구해서 읽을거 같다. 그리고 여...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2025-05-08" pubdate>
-                                2025-05-08
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-05may/term-ddakong-v1.1-release/">
-                            🩳 ddakong v1.1 릴리즈: FreeBSD / kqueue
-                        </a>
+    <time datetime="2025-12-25" pubdate>
+        2025-12-25
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/script-defer-ftw/">
+    🕛 global hx-boost &#43; &lt;script defer&gt;
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 릴리즈 v1.1 freebsd 지원: 빌드가능하도록 수정 + kqueue 이벤트처리 추가
-(원래는 epoll/linux만 지원)...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         지금까지의 스토리🧚🔮🧌 블로그 + [htmx transition animation, loading indicator categories안녕👋 taxonomies 정렬 추가...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2025-05-07" pubdate>
-                                2025-05-07
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-05may/term-ddakong-v1.0-release/">
-                            🌹 ddakong v1.0 릴리즈: lua scripting 시스템
-                        </a>
+    <time datetime="2025-12-24" pubdate>
+        2025-12-24
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/no-categories&#43;taxonomy-revamp/">
+    🐅 categories안녕👋 taxonomies 정렬 추가
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 릴리즈 v1.0 ANSI C/DLL 플러그인만이 아니라, Lua scripting plugin 만들어서, 그냥 루아스크립팅만으로 플러그인 같은 확장이 가능해졌다....
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         👉 새로운 묶음법: “📚시리즈(Series)” …추가하고 “😺카테고리(Categories)”,은 별로 쓸모가 없었구나 생각이 들어서 제외시켰다.
+이제 “📚시리즈(Series)”...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2025-05-03" pubdate>
-                                2025-05-03
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-05may/term-ddakong-v0.0.8-release/">
-                            ✝️ ddakong v0.0.8 릴리즈: 안정화 및 플러그인 시스템
-                        </a>
+    <time datetime="2025-12-23" pubdate>
+        2025-12-23
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/blog-htmx-transition-anims/">
+    🧂 블로그 &#43; [htmx transition animation, loading indicator]
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 스크린샷: &lt; https://github.com/ageldama/term-ddakong &gt;
-&lt;...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         htmx hx-boost-을 적용하기 시작하면서(이 시리즈 전 포스팅 참고 👉 htmx 마법으로 링크성능 빠르게 + dark-mode 깜빡임 제거 ) 효과를 넣는게 가능해졌음....
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2025-05-02" pubdate>
-                                2025-05-02
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-05may/term-ddakong-initial-release/">
-                            👶 ddakong 한글입력기 릴리즈
-                        </a>
+    <time datetime="2025-12-23" pubdate>
+        2025-12-23
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/new-taxonomy--series/">
+    🧙‍♀️ 새로운 묶음법: “📚시리즈(Series)”
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 https://github.com/ageldama/term-ddakong 일단 내가 fbterm에서 가볍게 한글쓰고 싶어서 만듦.
-ansi c99만으로 가볍게 작성했다. 다른 라...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         기존에는 “😺카테고리(Categories)”, “🏷️태그(Tags)”만 설정해서 써왔었는데, 어느샌가, 일대기 형식으로 계속 묶어나가야 분류가 수월한 글들이 쌓여갔다: (예)...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2025-04-09" pubdate>
-                                2025-04-09
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-04apr/2025-04apr09--01-i3-bindsyms-rofi-dmenu/">
-                            🧬 i3 키바인딩을 rofi으로 확인하고 실행하기
-                        </a>
+    <time datetime="2025-12-23" pubdate>
+        2025-12-23
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/graceful-degradation&#43;progressive-enhancement&#43;elegant-degradation/">
+    🌬️ ‘graceful degradation’, ‘progressive enhancement’
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 i3wm 써서 매일 리눅스 사용.
-키보드만 써서 사용하는건 좋은데, 키바인딩이 늘어나서 맨날 i3 키바인딩 까먹음.
-그래서 만들어봤다:
-현재 i3 config에 등록된 키바인딩 ...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         하나씩 정리해보자.
+이하의 정리는 “웹개발”, “웹페이지” 유지보수 관점/도메인의 시점에서, 다른 도메인(예=전자제품)에서의 정의와 완전히 일치하지는 않을거 같다.
+위키백과나 다...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2025-04-02" pubdate>
-                                2025-04-02
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-04apr/2025-04apr02--01-antix-linux/">
-                            7️⃣ 가볍고 빠른 antiX Linux &#43; runit, koreader 그리고 bloatware
-                        </a>
+    <time datetime="2025-12-23" pubdate>
+        2025-12-23
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/htmx-hx-boost&#43;dark-mode/">
+    ‼️ htmx 마법으로 링크성능 빠르게 &#43; dark-mode 깜빡임 제거
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 antiX linux 오래된 랩탑으로 fedora 그냥 아무 생각없이 대충 쓰는데 좀 버벅. 어차피 메인드라이버도 아니고 그냥 그러려니 하고 살다가,...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         지난번 dark-mode 방식을 새로 만든 이후로, 눈에 띄는 단점이었던 페이지이동시 flash현상을 없애고, 또한 매 페이지 이동을 엄청나게 가볍게 만들었다.
+지난 포스팅: 🦹...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2025-03-20" pubdate>
-                                2025-03-20
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-03mar/2025-03mar20--01--darkmode-js/">
-                            👞 darkmode.js으로 변경
-                        </a>
+    <time datetime="2025-12-21" pubdate>
+        2025-12-21
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/the-html-hell-page/">
+    😽 The HTML Hell Page
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 직접 짠 css/js에서 darkmode.js으로 변경했다. css에서 보색관계를 고려하는 것도 좀 귀찮고 해서.
-변경도 예쁘게 애니메이션 나오고, system...
-                            </span>
-                            
-                        </div>
+    
+    <span class="short-description">
+        킹받는 웹페이지 디자인의 몯느것, 혈압을 위해 읽지않는걸추천
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                 </ul>
 
                 <hr class="archive-ruler">
+
+                <style>
+                 :root {--bg-big-emoji: "🔹";}
+                </style>
 
 		<nav class="posts-pagination" aria-label="Page navigation">
 
@@ -315,27 +374,27 @@ ansi c99만으로 가볍게 작성했다. 다른 라...
     
 
     <span class="posts-pagination-indicator" >
-        📃 3 / 20
+        📃 3 / 23
     </span>
 
     
     <a href="/page/4/" class="button-link posts-pagination-btn posts-pagination-older" aria-label="Older">⏩예전</a>
-    <a href="/page/20/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
+    <a href="/page/23/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
     
 </nav>
 	    </main>
 	    <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766297335</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1770448395</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YSB7MGHZ4V');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
 </script>
 
 

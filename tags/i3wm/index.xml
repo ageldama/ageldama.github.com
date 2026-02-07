@@ -24,11 +24,18 @@
       <description>&lt;p&gt;&#xA;요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.&#xA;다 편한데, 🪟윈도나 icewm처럼 &lt;code&gt;Windows+P&lt;/code&gt; 누르면, 다음 모니터연결&#xA;조합으로 전환되는게 부러웠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;매번 터미널 열고 &lt;code&gt;xrandr&lt;/code&gt; 치거나, &lt;a href=&#34;https://christian.amsuess.com/tools/arandr/&#34;&gt;arandr&lt;/a&gt; 열어서 세팅하기 귀찮으니까.&#xA;(물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 그냥 윈도의 &lt;code&gt;Win+P&lt;/code&gt; 키처럼 동작하도록 스크립트를 짜봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;🐫 &lt;a href=&#34;https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl&#34;&gt;https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,&#xA;예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별&#xA;생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Ping  26/02/2019</title>
+      <link>https://ageldama.github.io/posts/2019-02feb/2019-02feb26-ping/</link>
+      <pubDate>Tue, 26 Feb 2019 00:10:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-02feb/2019-02feb26-ping/</guid>
+      <description>&lt;h1 id=&#34;게임-발더스게이트ee-원숭이섬의-비밀-se--steamplay-등등&#34;&gt;게임: 발더스게이트EE, &amp;lsquo;원숭이섬의 비밀&amp;rsquo; SE + SteamPlay, 등등&lt;/h1&gt;&#xA;&lt;p&gt;아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced Edition들&#xA;올라와있었다.  발더스게이트1, 2 모두. 시간이 될때마다 조금씩 플레이&#xA;중.&lt;/p&gt;&#xA;&lt;p&gt;새로 UI이나 그래픽 요소들 등등 리마스터 한건지 훨씬 좋아진거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://store.steampowered.com/app/32360/The_Secret_of_Monkey_Island_Special_Edition/&#34;&gt;원숭이섬의 비밀: Special&#xA;Edition&lt;/a&gt;&#xA;이것도 시간날때&#xA;플레이. &lt;a href=&#34;https://www.scummvm.org/&#34;&gt;ScummVM&lt;/a&gt; 으로 옛날 그래픽으로 다시&#xA;해도 좋겠지만, 오히려 애니메이션이나 그래픽 다시 그린게 나는 더 마음에&#xA;들어서 이쪽이 좋은거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://store.steampowered.com/app/336140/Unavowed/&#34;&gt;Unavowed&lt;/a&gt;. 이런류의&#xA;어드벤쳐 꾸준히 만드는 &amp;ldquo;WadjetEyeGames&amp;quot;이 내 취향에 잘 맞는걸 계속&#xA;만들고 있는거 같아서 기뻤다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>어째서 아치리눅스를 쓰며 데스크탑환경을 안쓰는지</title>
       <link>https://ageldama.github.io/posts/2018-09sep/2018-09sep15sat-my-choices-linux/</link>
       <pubDate>Sat, 15 Sep 2018 16:20:00 +0900</pubDate>
       <guid>https://ageldama.github.io/posts/2018-09sep/2018-09sep15sat-my-choices-linux/</guid>
-      <description>&lt;p&gt;나는 데스크탑 환경을 사용 안한지 꽤 오래된것 같아.&lt;/p&gt;&#xA;&lt;p&gt;예전엔 이런식이었던거 같아:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;왠만하면, 그냥 세팅하는데 시간낭비하지말고 그냥 제공되는 Gnome, KDE&#xA;같이 예쁜거 쓰자.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&amp;hellip;였었는데, 어느날 ASUS 넷북에 낮은 CPU파워으로 리눅스를 설정하고,&#xA;이런 &amp;ldquo;가벼운 데스크탑 환경&amp;quot;을 직접 꾸며서 사용하면서, 오히려 맥북보다&#xA;더 편하고 계속 쓰고 싶게 만들고, 내가 더 빠져서 사랑하며 사용하는걸 본&#xA;이후로 집과 직장의 데스크탑도 모두 바꾸게됐다.&lt;/p&gt;&#xA;&lt;p&gt;그리고 가장 마우스 사용으로부터 오는 잡다한 스트레스나 그런것들도 없고&#xA;가장 내게 익숙하고 편안한 환경을 만들어서 행복하게 쓸수있는거 같아.&lt;/p&gt;</description>
+      <description>&lt;p&gt;나는 데스크탑 환경을 사용 안한지 꽤 오래된것 같아.&lt;/p&gt;&#xA;&lt;p&gt;예전엔 이런식이었던거 같아:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;왠만하면, 그냥 세팅하는데 시간낭비하지말고 그냥 제공되는 Gnome, KDE&#xA;같이 예쁜거 쓰자.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&amp;hellip;였었는데, 어느날 ASUS 넷북에 낮은 CPU파워으로 리눅스를 설정하고,&#xA;이런 &amp;ldquo;가벼운 데스크탑 환경&amp;quot;을 직접 꾸며서 사용하면서, 오히려 맥북보다&#xA;더 편하고 계속 쓰고 싶게 만들고, 내가 더 빠져서 사랑하며 사용하는걸 본&#xA;이후로 집과 직장의 데스크탑도 모두 바꾸게됐다.&lt;/p&gt;&#xA;&lt;p&gt;그리고 가장 마우스 사용으로부터 오는 잡다한 스트레스나 그런것들도 없고&#xA;가장 내게 익숙하고 편안한 환경을 만들어서 행복하게 쓸수있는거 같아.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta name="generator" content="Hugo 0.150.1">
+	<meta name="generator" content="Hugo 0.154.5">
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1766297335">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>아겔로그 | Home </title><meta name="hugo-gen-timestamp" content="1770448395">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="" />
     <meta property="og:image" content=""/>
     <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/index.xml" title="아겔로그" />
@@ -14,15 +15,24 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
-          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.d22f08bce458e2da0445890ea96880ba4141da9b9aca6d1aba24f8f8cdc0c381.css"
+          integrity="sha256-0i8IvORY4toERYkOqWiAukFB2puaym0auiT4&#43;M3Aw4E=" crossorigin="anonymous">
     
     
     
     
     
 
-    <script src="/js/bundle.js"></script>
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +40,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
 
-    <body>
+    <body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container">
             <header>
     <div class="main ">
@@ -42,17 +54,19 @@
     <nav>
         
           <div class="search-form">
-      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
+      <span class="search-loading-indicator" style="display: none;"></span>
       <input id="search-query" name="search-query"
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -60,8 +74,12 @@
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -97,7 +115,7 @@
 		
 
                 <hr class="archive-ruler"><h1>
-                    🧧
+                    😮‍💨
                     페이지 #004
                 </h1>
 
@@ -106,211 +124,247 @@
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2025-03-18" pubdate>
-                                2025-03-18
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-03mar/2025-03mar18--01-xrandr/">
-                            🎃 xrandr 🖥️모니터 연결 자동전환 스크립트🐫
-                        </a>
-                        <div class="preview">
-                            
-                            <span class="preview-content">
-                                 요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다. 다 편한데, 🪟윈도나 icewm처럼 Windows+P 누르면, 다음 모니터연결 조합으로 전환되는게 부러웠다.
-매...
-                            </span>
-                            
-                        </div>
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-                            <time datetime="2025-03-16" pubdate>
-                                2025-03-16
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/">
-                            🚙 Hugo &#43; pagefind 붙여서 검색기능 추가했다
-                        </a>
-                        <div class="preview">
-                            
-                            <span class="preview-content">
-                                 https://pagefind.app/
-페이지 생성시에 인덱싱하고 그걸로 웹브라우저내에서 js으로 검색하는 pagefind을 붙여봤다.
-처음엔 좀 어색했는데,...
-                            </span>
-                            
-                        </div>
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-                            <time datetime="2025-03-15" pubdate>
-                                2025-03-15
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-03mar/2025-03mar15--01-new-css/">
-                            😹 css, design 새단장 &#43; dark-mode
-                        </a>
-                        <div class="preview">
-                            
-                            <span class="preview-content">
-                                 css 더 단순하게 만들고, 디자인들도 그냥 내 마음에 들게 뜯어 고침. 다크모드도 작업해서 만들어 넣고.
-css 애니메이션도 작업해 넣었다가, gpu 너무 쓰는거 같아서 그냥 ...
-                            </span>
-                            
-                        </div>
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-                            <time datetime="2025-03-12" pubdate>
-                                2025-03-12
-                            </time>
-                        </span><a class="article-link" href="/posts/2025-03mar/2025-03mar12--01-data-prog/">
-                            💻 data-driven programming &amp; data-driven design &amp; data-oriented programming ???
-                        </a>
-                        <div class="preview">
-                            
-                            <span class="preview-content">
-                                 비슷한 용어들. 내가 이해한 정리들은 1:
-data-driven programming 데이터처리를 중심으로 하는 프로그래밍언어나 도구, 스타일.
-예를 들어, awk, perl은 ...
-                            </span>
-                            
-                        </div>
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-                            <time datetime="2024-05-06" pubdate>
-                                2024-05-06
-                            </time>
-                        </span><a class="article-link" href="/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/">
-                            🍴 xmake, compile_commands.json, flycheck
-                        </a>
-                        <div class="preview">
-                            
-                            <span class="preview-content">
-                                 cmake/warp등을 써보면서 c/c++ 개발할 때에 빌드도구 갖고 놀다가, 이번에 마음을 열고 xmake을 익혀봄.
-마음에 든다. 가볍고 빠르고 좋다.
-ccache등도 바로 ...
-                            </span>
-                            
-                        </div>
-                    </li>
-                    
-		    
-                    
-                    <li>
-                        <span class="meta">
-                            <time datetime="2024-03-23" pubdate>
-                                2024-03-23
-                            </time>
-                        </span><a class="article-link" href="/posts/2024-03mar/2024-03mar23--01-ping/">
-                            🧑‍🔬 공각기동대, 1995
-                        </a>
-                        <div class="preview">
-                            
-                            <span class="preview-content">
-                                 가끔 다시 본다. 그리고 마지막 장면을 보면서 덕력이 폭발하면서 종종 그런 생각에 빠짐.
-저런 시나리오를 쓴 사람은 어떤 기분이었을까 완전 쩐다.
+    <time datetime="2025-12-19" pubdate>
+        2025-12-19
+    </time>
+</span>
 
-                            </span>
-                            
-                        </div>
+                        <a class="article-link" href="/posts/2025-12dec/2025-12dec19--01-ping/">
+    🛸 Ping 19/12/2025 .01.
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         2025년도 거의 다 지나가고 있다. 을씨년스럽다는 을사년(乙巳年).
+올해도, 그리고 한층 더 가소롭게 화려해보였지만, 쓸쓸한 그 알맹이의 거리였다. 참 이상하지. K문화니 뭐니...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2023-11-05" pubdate>
-                                2023-11-05
-                            </time>
-                        </span><a class="article-link" href="/posts/2023-11nov/2023-11nov05--freebsd-samba4-symlink/">
-                            🌉 FreeBSD &#43; Samba 4.16 &#43; Symbolic Links 설정
-                        </a>
+    <time datetime="2025-12-19" pubdate>
+        2025-12-19
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/prefers-color-scheme/">
+    🦹 darkmode.js... prefers-color-scheme
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 freebsd에서 samba...
-                            </span>
-                            
-                        </div>
+    
+    <span class="short-description">
+        사용하던 darkmode.js 방식을, CSS 방식으로 재작성했다.
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2023-11-05" pubdate>
-                                2023-11-05
-                            </time>
-                        </span><a class="article-link" href="/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">
-                            🚖 Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기
-                        </a>
+    <time datetime="2025-12-18" pubdate>
+        2025-12-18
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/young40er-hugo-theme-1st-rel/">
+    👦 “영포티”(“young40er”) hugo theme 공개
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 나도 x11에서 wayland 기반으로 옮겨가고 있는데, 다른 것들은 대부분 괜찮거나 포기.1
-가볍고 좋은데, debian chromium에서 ibus으로 한글 입력이 안되어서 ...
-                            </span>
-                            
-                        </div>
+    
+    <span class="short-description">
+        모두가 염원해온 스윗영포티를 위한 위대한 테마가 탄생했다.
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2023-03-15" pubdate>
-                                2023-03-15
-                            </time>
-                        </span><a class="article-link" href="/posts/2023-03mar/2023-03mar15--wired-desktop/">
-                            🐀 내 책상에서 유선랜 환경
-                        </a>
+    <time datetime="2025-12-16" pubdate>
+        2025-12-16
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/2025-12dec16--03-ping/">
+    🔤 hover 애니메이션 지정해봤다
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 개인환경을 조금 특이하게 사용하는데, 그 이유와 방식.
-why: 유선랜? (무선랜 대신) 키보드/마우스 입력이 가장 부드럽게 전달되어서 유선으로 연결해서 사용한다.
-x2x으로 연...
-                            </span>
-                            
-                        </div>
+    
+    <span class="short-description">
+        역시 애니메이션이 있는편이 보기 즐겁다.
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                     
                     <li>
                         <span class="meta">
-                            <time datetime="2023-03-08" pubdate>
-                                2023-03-08
-                            </time>
-                        </span><a class="article-link" href="/posts/2023-03mar/2023-03mar08--02-ping--news/">
-                            😣 News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes
-                        </a>
+    <time datetime="2025-12-16" pubdate>
+        2025-12-16
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/2025-12dec16--02-ping/">
+    😱 Emacs 일기: vi-mode은 그만 쓰고, windmove은 쓰기 시작
+</a>
+
                         <div class="preview">
-                            
-                            <span class="preview-content">
-                                 &#34;리액트가 날 인질으로 잡고 있어요&#34; https://emnudge.dev/blog/react-hostage
-…말해 뭘할까 싶은데. :see_no_evil:
-포스팅 ...
-                            </span>
-                            
-                        </div>
+    
+    <span class="preview-content">
+         vi emulation-layer: evil-mode을 그만 쓰게됐다 이맥스는 거의 20년 넘게 써온거 같다. 물론 예전엔 지금보다 훨씬 더 제대로 이해하고 쓰진 못했었다.🥟 그...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2025-12-16" pubdate>
+        2025-12-16
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/2025-12dec16--01-ping/">
+    👒 Hugo 블로그 디자인 고쳐나가면서 생각
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         2024년엔 “CSS/JS에 의존하지 않는 블로그를 만들자”-였다가, 조금씩 뜯어고쳐 나갔다. 사용편의나 읽기 적당하도록 색상과 정렬정도를 고쳐나갔다.
+그러다가 2025년 올해엔...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2025-12-15" pubdate>
+        2025-12-15
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/hugo&#43;esbuild/">
+    ☘️ esbuild js build for blog
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         그간 자바스크립트를 이 Hugo으로 생성하는 블로그에 사용하면서, 여기저기 그냥 &lt;script&gt;-태그를 써왔었다. 한군데로 정리하기도 뭐하고, 자바스크립트를 쓰는 기능...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2025-12-15" pubdate>
+        2025-12-15
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/hands-of-necromancy/">
+    😵 Hands of Necromancy와 영포티의 추억벤또 🍱
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         👉 Steam 페이지: Hands of Necromancy
+예전에 사놓았다가 최근에 다시 플레이.
+사양, 지원 GTX 1050+ 이상은 되어야 잘 동작할거 같다....
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2025-12-10" pubdate>
+        2025-12-10
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/factor-and-io/">
+    🚥 (주절주절) Factor와 Io
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         Factor와 Io 모두 예전에 덕질하던 프로그래밍언어.
+이번엔 추억놀음이나 포스팅해보려고.
+Factor https://factorcode.org/...
+    </span>
+    
+</div>
+
+                    </li>
+                    
+		    
+                    
+                    <li>
+                        <span class="meta">
+    <time datetime="2025-12-07" pubdate>
+        2025-12-07
+    </time>
+</span>
+
+                        <a class="article-link" href="/posts/2025-12dec/pgrp-rhapsody/">
+    🐮 process-tree 정리의 rhapsody
+</a>
+
+                        <div class="preview">
+    
+    <span class="preview-content">
+         발단 상황배경:
+내 프로그램은 순박하게 yt-dlp을 실행한다. 실행된 yt-dlp은 또 내가 지정한대로, 실제 다운로더로서 aria2c을 실행하고, 이렇게 실행된 aria2c은...
+    </span>
+    
+</div>
+
                     </li>
                     
 		    
                 </ul>
 
                 <hr class="archive-ruler">
+
+                <style>
+                 :root {--bg-big-emoji: "😮‍💨";}
+                </style>
 
 		<nav class="posts-pagination" aria-label="Page navigation">
 
@@ -320,27 +374,27 @@ x2x으로 연...
     
 
     <span class="posts-pagination-indicator" >
-        📃 4 / 20
+        📃 4 / 23
     </span>
 
     
     <a href="/page/5/" class="button-link posts-pagination-btn posts-pagination-older" aria-label="Older">⏩예전</a>
-    <a href="/page/20/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
+    <a href="/page/23/" class="button-link posts-pagination-btn posts-pagination-first" aria-label="First">⏭️맨처음</a>
     
 </nav>
 	    </main>
 	    <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766297335</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1770448395</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YSB7MGHZ4V');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
 </script>
 
 

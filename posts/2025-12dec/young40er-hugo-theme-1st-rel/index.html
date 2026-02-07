@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>“영포티”(“young40er”) hugo theme 공개 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766297336">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>“영포티”(“young40er”) hugo theme 공개 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1770448397">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="모두가 염원해온 스윗영포티를 위한 위대한 테마가 탄생했다." />
     <meta property="og:image" content=""/>
     
@@ -11,22 +12,33 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
-          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.d22f08bce458e2da0445890ea96880ba4141da9b9aca6d1aba24f8f8cdc0c381.css"
+          integrity="sha256-0i8IvORY4toERYkOqWiAukFB2puaym0auiT4&#43;M3Aw4E=" crossorigin="anonymous">
     
     
     
     
     
 
-    <script src="/js/bundle.js"></script>
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container"><header>
     <div class="main ">
         <h1 class="site-title ">
@@ -37,17 +49,19 @@
     <nav>
         
           <div class="search-form">
-      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
+      <span class="search-loading-indicator" style="display: none;"></span>
       <input id="search-query" name="search-query"
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -55,8 +69,12 @@
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -100,7 +118,9 @@
     </span>
 </nav>
 
-
+    
+    <hr class="archive-ruler">
+    
     <nav id="TableOfContents">
 <ul>
 <li><a href="#headline-1">자랑스러운 스크린샷 모음</a>
@@ -159,38 +179,75 @@ box-shadow: 3px 3px lightgrey;
 </div>
 </div>
 
-	</section>
-
-	<div class="post-tags">
+	</section><div class="post-tags">
 	    
 	    
 	    <nav class="nav tags">
 		<ul class="tags">
-                    
-		    <li style="display: inline">😺 <a href="/categories/blogging">blogging</a></li>
-                    
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/webdev">webdev</a></li>
+		    <li class="tagbutton-inline">🐻<a href="/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/">아겔로그변천사</a>
+                        <sup>28</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/css">css</a></li>
+		    <li class="tagbutton-inline">🌚<a href="/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/">dark-mode으로의-여행</a>
+                        <sup>7</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/sass">sass</a></li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/js">js</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webdev/">webdev</a>
+                        <sup>29</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/javascript">javascript</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/javascript/">javascript</a>
+                        <sup>19</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/hugo">hugo</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/css/">css</a>
+                        <sup>19</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/theme">theme</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/js/">js</a>
+                        <sup>16</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/archie">archie</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hugo/">hugo</a>
+                        <sup>13</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/young40er">young40er</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sass/">sass</a>
+                        <sup>5</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/release">release</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/theme/">theme</a>
+                        <sup>2</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/first">first</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/first/">first</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/release/">release</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/young40er/">young40er</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/archie/">archie</a>
+                        <sup>1</sup>
+                    </li>
 		    
 		</ul>
 	    </nav>
@@ -198,6 +255,12 @@ box-shadow: 3px 3px lightgrey;
 	    
 	</div>
     </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "👦";}
+    </style>
 
     <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
@@ -215,17 +278,17 @@ box-shadow: 3px 3px lightgrey;
 
 </main>
 <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766297336</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1770448397</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YSB7MGHZ4V');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
 </script>
 
 

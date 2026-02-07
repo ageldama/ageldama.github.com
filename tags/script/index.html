@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Script - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766297336">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Script - 아겔로그</title><meta name="hugo-gen-timestamp" content="1770448399">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="" />
     <meta property="og:image" content=""/>
     <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/tags/script/index.xml" title="아겔로그" />
@@ -12,22 +13,33 @@
     
     
     
-    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
-          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.d22f08bce458e2da0445890ea96880ba4141da9b9aca6d1aba24f8f8cdc0c381.css"
+          integrity="sha256-0i8IvORY4toERYkOqWiAukFB2puaym0auiT4&#43;M3Aw4E=" crossorigin="anonymous">
     
     
     
     
     
 
-    <script src="/js/bundle.js"></script>
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container"><header>
     <div class="main ">
         <h1 class="site-title ">
@@ -38,17 +50,19 @@
     <nav>
         
           <div class="search-form">
-      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
+      <span class="search-loading-indicator" style="display: none;"></span>
       <input id="search-query" name="search-query"
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -56,8 +70,12 @@
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -87,39 +105,165 @@
 
 
 
-<h1>📔 Entries "<em>script</em>" (1건)</h1>
+<section class="section is-fullheight sec-toc">
+    <span class="toc-link"><a href="/series">Series📚(8개)</a></span>
+    
+    <span class="toc-link"><a href="/tags">Tags🏷️(1080개)</a></span>
+
+    
+
+</section>
+
+
+<hr class="archive-ruler">
+<h1>Tag🏷️
+    “<em>script</em>„ (6건)
+</h1>
 
 
 <ol class="posts"><li class="post">
-        
         <span class="meta">
-            <time datetime="2025-11-22" pubdate>
-                2025-11-22
-            </time>
-        </span>
-	<a href="/posts/2025-11nov/scripts-rofi-perl5-release/" class="article-link" >scripts-rofi-perl5 릴리즈</a>
-        <br>
+    <time datetime="2025-12-30" pubdate>
+        2025-12-30
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2025-12dec/go-away-python/">
+    🎍 “Go away, Python!” / Go으로 스크립트짜기
+</a>
+
         <div class="preview">
-            
-            <span class="preview-content">
-                 https://github.com/ageldama/scripts-rofi-perl5
+    
+    <span class="preview-content">
+         💠 (원본글) Go away, Python!
+shebang으로 go언어으로 스크립트 짜기 1 2 3 4 5 6 7 8 //usr/bin/env go run &#34;$0&#34;...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2025-12-28" pubdate>
+        2025-12-28
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2025-12dec/2025-12dec28--01-ping/">
+    🥴 youtube 가볍게 보기/듣기
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         터미널 버전 스크린샷
+터미널에서 유튜브를 보거나, 음악을 틀어 놓는 용도로 원래는 mps-youtube/yewtube을 쓰다가 옮겼는데, trizen/pipe-viewer 써봤는...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2025-11-22" pubdate>
+        2025-11-22
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2025-11nov/scripts-rofi-perl5-release/">
+    😪 scripts-rofi-perl5 릴리즈
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         https://github.com/ageldama/scripts-rofi-perl5
 스크립트 많이 작성해서 자동화해서 쓰는데, 터미널 열거나 하기 귀찮고, 모두 한 디렉토리에 넣...
-            </span>
-            
-        </div>
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2025-04-09" pubdate>
+        2025-04-09
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2025-04apr/2025-04apr09--01-i3-bindsyms-rofi-dmenu/">
+    🧬 i3 키바인딩을 rofi으로 확인하고 실행하기
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         i3wm 써서 매일 리눅스 사용.
+키보드만 써서 사용하는건 좋은데, 키바인딩이 늘어나서 맨날 i3 키바인딩 까먹음.
+그래서 만들어봤다:
+현재 i3 config에 등록된 키바인딩...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2025-03-18" pubdate>
+        2025-03-18
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2025-03mar/2025-03mar18--01-xrandr/">
+    🎃 xrandr 🖥️모니터 연결 자동전환 스크립트🐫
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다. 다 편한데, 🪟윈도나 icewm처럼 Windows+P 누르면, 다음 모니터연결 조합으로 전환되는게 부러웠다.
+매...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2023-03-02" pubdate>
+        2023-03-02
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2023-03mar/perl-cal3/">
+    🧧 `ncal -3` 직접 Perl으로 짜봤다
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         ncal -3 이 뭐냐하면:
+https://man7.org/linux/man-pages/man1/cal.1.html
+…뭐 이런건데, 개인적으로 저전력 글쓰기 전용머신에서 사용하는...
+    </span>
+    
+</div>
+
     </li></ol>
+
+<hr class="archive-ruler">
+
+<style>
+ :root {--bg-big-emoji: "🏷️";}
+</style>
+
 <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766297336</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1770448399</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YSB7MGHZ4V');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
 </script>
 
 

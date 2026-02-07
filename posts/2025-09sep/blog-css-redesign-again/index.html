@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>블로그 css 조금 더 수정 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1766297336">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>블로그 css 조금 더 수정 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1770448396">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
     <meta name="description" content="
 너무 흰색 배경에 눈이 짠한거 같아서 바꿔봤다.
 
@@ -25,22 +26,33 @@ hugo theme을 정리해서 공개/공유해도 좋겠다는 생각을 하는데�
     
     
     
-    <link rel="stylesheet" href="/css/styles.814992da405d867dd5ac20d9c1cf3d101b36b287da39262917112a647b48dfca.css"
-          integrity="sha256-gUmS2kBdhn3VrCDZwc89EBs2sofaOSYpFxEqZHtI38o=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.d22f08bce458e2da0445890ea96880ba4141da9b9aca6d1aba24f8f8cdc0c381.css"
+          integrity="sha256-0i8IvORY4toERYkOqWiAukFB2puaym0auiT4&#43;M3Aw4E=" crossorigin="anonymous">
     
     
     
     
     
 
-    <script src="/js/bundle.js"></script>
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
         <div class="container"><header>
     <div class="main ">
         <h1 class="site-title ">
@@ -51,17 +63,19 @@ hugo theme을 정리해서 공개/공유해도 좋겠다는 생각을 하는데�
     <nav>
         
           <div class="search-form">
-      <span class="search-loading-indicator" style="display: none;">&lt;&lt; 💾 검색 중 (searching) &gt;&gt;</span>
-
+      <span class="search-loading-indicator" style="display: none;"></span>
       <input id="search-query" name="search-query"
           type="text"
           class="search-query"
           tabindex="1"
-          placeholder="🔎 검색 (search)"/>
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
   </div>
 
         
 
+        
+        <a href="/series/">📚 Series</a>
         
         <a href="/archive/">🗂️ Archive</a>
         
@@ -69,8 +83,12 @@ hugo theme을 정리해서 공개/공유해도 좋겠다는 생각을 하는데�
         
 
         
-        <button class="dark-mode-btn" aria-label="toggle dark-mode">color: </button>
-<button class="snow-mode-btn" aria-label="toggle dark-mode">☃️ snow?</button>
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
 
         
     </nav>
@@ -114,7 +132,9 @@ hugo theme을 정리해서 공개/공유해도 좋겠다는 생각을 하는데�
     </span>
 </nav>
 
-
+    
+    <hr class="archive-ruler">
+    
     
 
     <article>
@@ -147,42 +167,86 @@ darkmode 켜면 되기야 하겠지만.</p>
 hugo theme을 정리해서 공개/공유해도 좋겠다는 생각을 하는데…
 너무 정리가 않되어 있어서. 다음으로 미뤄야겠다.</p>
 
-	</section>
-
-	<div class="post-tags">
+	</section><div class="post-tags">
 	    
 	    
 	    <nav class="nav tags">
 		<ul class="tags">
-                    
-		    <li style="display: inline">😺 <a href="/categories/blog">blog</a></li>
-                    
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/blog">blog</a></li>
+		    <li class="tagbutton-inline">🐻<a href="/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/">아겔로그변천사</a>
+                        <sup>28</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/blogging">blogging</a></li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/css">css</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webdev/">webdev</a>
+                        <sup>29</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/css3">css3</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blogging/">blogging</a>
+                        <sup>22</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/sunview">sunview</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blog/">blog</a>
+                        <sup>21</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/solaris">solaris</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/css/">css</a>
+                        <sup>19</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/90s">90s</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/90s/">90s</a>
+                        <sup>5</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/gui">gui</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gui/">gui</a>
+                        <sup>2</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/sparc">sparc</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/motif/">motif</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/sun">sun</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cde/">cde</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/sunos">sunos</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sunos/">sunos</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/cde">cde</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sun/">sun</a>
+                        <sup>1</sup>
+                    </li>
 		    
-		    <li style="display: inline">🏷️ <a href="/tags/motif">motif</a></li>
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sparc/">sparc</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/solaris/">solaris</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sunview/">sunview</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/css3/">css3</a>
+                        <sup>1</sup>
+                    </li>
 		    
 		</ul>
 	    </nav>
@@ -190,6 +254,12 @@ hugo theme을 정리해서 공개/공유해도 좋겠다는 생각을 하는데�
 	    
 	</div>
     </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🚍";}
+    </style>
 
     <nav class="post-prevnext" aria-label="posts">
     <span class="post-prevnext-side">
@@ -207,17 +277,17 @@ hugo theme을 정리해서 공개/공유해도 좋겠다는 생각을 하는데�
 
 </main>
 <footer class="global-footer">
-    2025  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1766297336</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1770448396</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
 </footer>
 
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YSB7MGHZ4V');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
 </script>
 
 

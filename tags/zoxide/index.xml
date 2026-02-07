@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zoxide on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/zoxide/</link>
+    <description>Recent content in Zoxide on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Wed, 29 Jun 2022 15:08:22 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/zoxide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux/unix 팁 29/06/2022 .01</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/</link>
+      <pubDate>Wed, 29 Jun 2022 15:08:22 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun29--01-ping/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;p&gt;리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.&lt;/p&gt;&#xA;&lt;p&gt;그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.&lt;/p&gt;&#xA;&lt;h1 id=&#34;zoxide-으로-chdir-간단하게&#34;&gt;zoxide 으로 chdir 간단하게&lt;/h1&gt;&#xA;&lt;p&gt;최근/디렉토리 이동한 히스토리에 따라서 (&amp;ldquo;frecent&amp;rdquo;) 이동하기:&lt;/p&gt;&#xA;&lt;p&gt;fzf+zsh의 &lt;code&gt;Control-R&lt;/code&gt;도 좋고&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;,&lt;/p&gt;&#xA;&lt;p&gt;oh-my-zsh 내장인 &lt;code&gt;plugins=(z)&lt;/code&gt;도 좋지만&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&amp;hellip;나는 가능하면 &lt;a href=&#34;https://github.com/ajeetdsouza/zoxide&#34;&gt;zoxide&lt;/a&gt;이 가장 가볍고 좋은거 같다.&lt;/p&gt;&#xA;&lt;p&gt;설치하고 나서,&#xA;&lt;code&gt;eval &amp;quot;$(zoxide init zsh)&amp;quot;&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;그리고, &lt;code&gt;z SOME-DIR&lt;/code&gt;, &lt;code&gt;zi&lt;/code&gt; 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ&lt;/p&gt;&#xA;&lt;h1 id=&#34;ssh으로-키보드마우스-안-붙이고&#34;&gt;ssh으로 키보드/마우스 안 붙이고&lt;/h1&gt;&#xA;&lt;p&gt;책상위에 여러대의 컴퓨터를 놓고 사용하는데, 용도에 따라서, 모두 마우스/키보드를 붙여 놓기 싫다.&#xA;뭐 kvm switch 같은거 사서 써도 되겠지만, 그보다는 어떤 컴퓨터는 모니터만 붙여 놓고 쓰고 등등 같이 사용해서&#xA;그런 방식은 잘 내 책상에서는 잘 맞지 않아서.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
