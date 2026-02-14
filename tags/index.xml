@@ -7,8 +7,85 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sat, 14 Feb 2026 06:37:57 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Feb 2026 07:12:10 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emoji</title>
+      <link>https://ageldama.github.io/tags/emoji/</link>
+      <pubDate>Sat, 14 Feb 2026 07:12:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/emoji/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://ageldama.github.io/tags/go/</link>
+      <pubDate>Sat, 14 Feb 2026 07:12:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gohugo</title>
+      <link>https://ageldama.github.io/tags/gohugo/</link>
+      <pubDate>Sat, 14 Feb 2026 07:12:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/gohugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Html-Template</title>
+      <link>https://ageldama.github.io/tags/html-template/</link>
+      <pubDate>Sat, 14 Feb 2026 07:12:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/html-template/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://ageldama.github.io/tags/hugo/</link>
+      <pubDate>Sat, 14 Feb 2026 07:12:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Loop</title>
+      <link>https://ageldama.github.io/tags/loop/</link>
+      <pubDate>Sat, 14 Feb 2026 07:12:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/loop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shortcode</title>
+      <link>https://ageldama.github.io/tags/shortcode/</link>
+      <pubDate>Sat, 14 Feb 2026 07:12:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/shortcode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Template</title>
+      <link>https://ageldama.github.io/tags/template/</link>
+      <pubDate>Sat, 14 Feb 2026 07:12:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/template/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Text-Template</title>
+      <link>https://ageldama.github.io/tags/text-template/</link>
+      <pubDate>Sat, 14 Feb 2026 07:12:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/text-template/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Title</title>
+      <link>https://ageldama.github.io/tags/title/</link>
+      <pubDate>Sat, 14 Feb 2026 07:12:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/title/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webdev</title>
+      <link>https://ageldama.github.io/tags/webdev/</link>
+      <pubDate>Sat, 14 Feb 2026 07:12:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/webdev/</guid>
+      <description></description>
+    </item>
     <item>
       <title>.Dir-Locals.el</title>
       <link>https://ageldama.github.io/tags/.dir-locals.el/</link>
@@ -59,13 +136,6 @@
       <description></description>
     </item>
     <item>
-      <title>Go</title>
-      <link>https://ageldama.github.io/tags/go/</link>
-      <pubDate>Sat, 14 Feb 2026 06:37:57 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Go-Template</title>
       <link>https://ageldama.github.io/tags/go-template/</link>
       <pubDate>Sat, 14 Feb 2026 06:37:57 +0000</pubDate>
@@ -77,13 +147,6 @@
       <link>https://ageldama.github.io/tags/golang/</link>
       <pubDate>Sat, 14 Feb 2026 06:37:57 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hugo</title>
-      <link>https://ageldama.github.io/tags/hugo/</link>
-      <pubDate>Sat, 14 Feb 2026 06:37:57 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
@@ -427,13 +490,6 @@
       <link>https://ageldama.github.io/tags/scss/</link>
       <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/scss/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Webdev</title>
-      <link>https://ageldama.github.io/tags/webdev/</link>
-      <pubDate>Tue, 27 Jan 2026 04:19:57 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/webdev/</guid>
       <description></description>
     </item>
     <item>
@@ -3188,13 +3244,6 @@
       <description></description>
     </item>
     <item>
-      <title>Emoji</title>
-      <link>https://ageldama.github.io/tags/emoji/</link>
-      <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/emoji/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Hash</title>
       <link>https://ageldama.github.io/tags/hash/</link>
       <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
@@ -3227,13 +3276,6 @@
       <link>https://ageldama.github.io/tags/sha1/</link>
       <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/sha1/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Template</title>
-      <link>https://ageldama.github.io/tags/template/</link>
-      <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/template/</guid>
       <description></description>
     </item>
     <item>

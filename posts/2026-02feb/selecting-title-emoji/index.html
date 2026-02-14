@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>원하는 emoji으로 선택되는 제목을 고르기 [0.798129] - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771054633">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="자동 title-emoji 선택을 원하는 emoji으로 고르도록 만들어봤다" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn disabled" role="button" aria-disabled="true" href=""></a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-02feb/emacs-web-mode-dir-locals.el/">➡️ emacs / web-mode engine 선택</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">지금까지의 스토리</a>
+</li>
+<li><a href="#headline-2">원하는 것</a>
+</li>
+<li><a href="#headline-3">시도, 아쉬운 점, 그래도</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🏹 원하는 emoji으로 선택되는 제목을 고르기 [0.798129]</h1>
+	    <div class="meta">
+                <time datetime="2026-02-14" pubdate>
+                    2026년02월14일
+                </time>
+                </div>
+        </div>
+
+        
+        <div class="description">
+	    <span class="short-description">
+                자동 title-emoji 선택을 원하는 emoji으로 고르도록 만들어봤다
+            </span>
+        </div>
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+지금까지의 스토리
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li><a href="/posts/2025-11nov/blog-post-title-emojis/">🐌 블로그 디자인 수정 + 제목 자동 emoji 붙여주기</a></li>
+<li>그런데, 위 포스팅에서 밝혔듯이, 단순히 hashing 함수에 의해서
+자동으로 이모지를 선택하는 것이니까, 의도를 담은 emoji을 선택하기는
+어려움.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+원하는 것
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<ul>
+<li>포스팅 제목은 (거의) 그대로 두고, 원하는 emoji을 선택하도록 하고 싶다.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+시도, 아쉬운 점, 그래도
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>포스팅 제목에 추가적인 문자열 추가하며 원하는 emoji이 나올 때까지
+  루핑하는 <a href="https://gohugo.io/content-management/shortcodes/">shortcode</a>-을 짰다. (…이전에 이미 문자열에 따라 이모지
+  출력하는 partial은 짜놓은걸 호출)</p>
+<p>
+  그래서 다음처럼 호출되도록 했다: <code>findemojititle str=&#34;TITLE&#34; target=&#34;🏹&#34;</code>
+  (…hugo template / shortcode 문법으로 호출했다)</p>
+<p>
+  호출하면, <code>TITLE</code>-문자열에 계속 일정한 임의문자열을 시도하면서
+  <code>target=</code>-으로 지정된 이모지를 찾을 때까지 시도한다.</p>
+<p>
+  그런데:
+  <a href="https://discourse.gohugo.io/t/while-loop-in-a-gohugo-template/47653/5">Hugo template은 While-loop등</a>-을 지원하지 않는다. 그리고 <code>goto</code>-도
+  지원 않음. 둘 중 하나만 있으면, 원하는 것을 얻을때까지 계속해서
+  시도할 수 있겠지만, 그렇지 못하니, 그냥 큰 수를 지정해놓고 그 횟수
+  동안만 시도할 수 있었다.</p>
+<p>
+  대부분은, 루프를 실행하는 동안 원하는 값을 찾을 수 있었다만 항상은
+  아니었다. pseudo-random 함수를 써서 찾으니, 얼마나 반복하면 기대할
+  수 있을지 자신이 없다. ㅎㅎ 일단은 그래도 적당히 굴러가니 당분간은
+  사용해보려고.</p>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">🐻<a href="/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/">아겔로그변천사</a>
+                        <sup>29</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webdev/">webdev</a>
+                        <sup>30</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hugo/">hugo</a>
+                        <sup>15</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/template/">template</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emoji/">emoji</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/go/">go</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/shortcode/">shortcode</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/title/">title</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/loop/">loop</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/html-template/">html-template</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/text-template/">text-template</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gohugo/">gohugo</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🏹";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn disabled" role="button" aria-disabled="true" href=""></a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-02feb/emacs-web-mode-dir-locals.el/">➡️ emacs / web-mode engine 선택</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771054633</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>
