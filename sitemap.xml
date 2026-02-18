@@ -2,6 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ageldama.github.io/tags/ai/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/architecture/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/code/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/coding/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/gpt/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/llm/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/ping/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/programmer/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/programming/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/script-kiddie-life/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/series/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/software/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/tags/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
+    <loc>https://ageldama.github.io/</loc>
+    <lastmod>2026-02-18T06:43:46+00:00</lastmod>
+  </url><url>
     <loc>https://ageldama.github.io/tags/emoji/</loc>
     <lastmod>2026-02-14T07:12:10+00:00</lastmod>
   </url><url>
@@ -20,16 +68,7 @@
     <loc>https://ageldama.github.io/tags/loop/</loc>
     <lastmod>2026-02-14T07:12:10+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/posts/</loc>
-    <lastmod>2026-02-14T07:12:10+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/series/</loc>
-    <lastmod>2026-02-14T07:12:10+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/shortcode/</loc>
-    <lastmod>2026-02-14T07:12:10+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/</loc>
     <lastmod>2026-02-14T07:12:10+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/template/</loc>
@@ -42,9 +81,6 @@
     <lastmod>2026-02-14T07:12:10+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/webdev/</loc>
-    <lastmod>2026-02-14T07:12:10+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/</loc>
     <lastmod>2026-02-14T07:12:10+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/</loc>
@@ -113,16 +149,7 @@
     <loc>https://ageldama.github.io/tags/paul-graham/</loc>
     <lastmod>2026-02-10T09:29:06+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/ping/</loc>
-    <lastmod>2026-02-10T09:29:06+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/scheme/</loc>
-    <lastmod>2026-02-10T09:29:06+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/series/script-kiddie-life/</loc>
-    <lastmod>2026-02-10T09:29:06+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/software/</loc>
     <lastmod>2026-02-10T09:29:06+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/startup/</loc>
@@ -142,9 +169,6 @@
   </url><url>
     <loc>https://ageldama.github.io/series/%EC%B1%85/</loc>
     <lastmod>2026-02-10T09:29:06+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/ai/</loc>
-    <lastmod>2026-02-07T06:47:23+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/alan-parsons-project/</loc>
     <lastmod>2026-02-07T06:47:23+00:00</lastmod>
@@ -167,9 +191,6 @@
     <loc>https://ageldama.github.io/tags/eye-in-the-sky/</loc>
     <lastmod>2026-02-07T06:47:23+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/gpt/</loc>
-    <lastmod>2026-02-07T06:47:23+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/hacking/</loc>
     <lastmod>2026-02-07T06:47:23+00:00</lastmod>
   </url><url>
@@ -179,16 +200,10 @@
     <loc>https://ageldama.github.io/tags/karma/</loc>
     <lastmod>2026-02-07T06:47:23+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/llm/</loc>
-    <lastmod>2026-02-07T06:47:23+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/series/midnight-radio/</loc>
     <lastmod>2026-02-07T06:47:23+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/</loc>
-    <lastmod>2026-02-07T06:47:23+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/programmer/</loc>
     <lastmod>2026-02-07T06:47:23+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/saas/</loc>
@@ -246,9 +261,6 @@
     <lastmod>2026-01-27T04:19:57+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/js/</loc>
-    <lastmod>2026-01-27T04:19:57+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/programming/</loc>
     <lastmod>2026-01-27T04:19:57+00:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/sass/</loc>
@@ -2204,9 +2216,6 @@
     <loc>https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/</loc>
     <lastmod>2025-03-15T12:25:01+00:00</lastmod>
   </url><url>
-    <loc>https://ageldama.github.io/tags/architecture/</loc>
-    <lastmod>2025-03-12T10:40:27+00:00</lastmod>
-  </url><url>
     <loc>https://ageldama.github.io/tags/awk/</loc>
     <lastmod>2025-03-12T10:40:27+00:00</lastmod>
   </url><url>
@@ -2749,9 +2758,6 @@
   </url><url>
     <loc>https://ageldama.github.io/posts/2022-06jun/2022-06jun13--01-ping/</loc>
     <lastmod>2022-06-13T05:10:14+00:00</lastmod>
-  </url><url>
-    <loc>https://ageldama.github.io/tags/code/</loc>
-    <lastmod>2022-06-12T13:45:00+09:00</lastmod>
   </url><url>
     <loc>https://ageldama.github.io/tags/jq/</loc>
     <lastmod>2022-06-12T13:45:00+09:00</lastmod>

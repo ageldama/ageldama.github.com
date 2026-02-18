@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sat, 07 Feb 2026 06:47:23 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Feb 2026 06:43:46 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/programmer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>생성형AI에 진짜로 문제인 AI Hallucination은</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</link>
+      <pubDate>Wed, 18 Feb 2026 06:43:46 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;요즘엔 SW/IT업계에 일자리가 많이 없어지는 것, 구독형, SaaS 기업의&#xA;주가가 떨어지고 투자가 사라지는 것에 대한 우려가 많다. 그리고 나도&#xA;영향을 받는 사람으로서 걱정이 없진 못하다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데 사실 절대다수의 구독형서비스(…실은 그냥 모바일앱이나 데스크탑&#xA;앱이 좀 있는 웹서비스)/SaaS이 그렇게 존재할 사업이었던게 모순이&#xA;맞았던거 같다. 오히려 자동화 된 데이터모델과 그의 CRUD + 약간의 로직이&#xA;들어간 것을 각자가 해결해도 될 일이었던게 맞다. 도메인에 특화되어&#xA;있다고 하는 기업이든 특정 기술을 쓴다고 하는 기업이든… 그 도메인의&#xA;전문가라고 해야 할까 싶기도 하거니와, 말그대로 특정 기술을 “갖다 쓰는&#xA;것” 사용자인 곳일 뿐이기도 하고. …결국 적당한 뻥튀기를 다들 하니까&#xA;그게 이상한지 모르고 다같이 하며 장사를, 혹은 투자금을 쓰는 일을&#xA;했던거지 싶다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Ping 07/02/2026 .01 👁️</title>
       <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/</link>
