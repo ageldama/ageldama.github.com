@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Github.io 블로그 TraviCI으로 빌드해서 배포하기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480571">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content=".. 여기 에 불만을 적었듯이,
+여러가지로 그냥은 만족하기 어려운 부분이 있었다.
+그런데, Travis-CI을 통해서 빌드해서 배포한다는 분이
+계셨다. https://twitter.com/Realignist/status/815554589889994752
+..난 생각 못해본 방법. ㅎㅎ 1
+그래서 도전.
+
+우선 Jekyll 소스용 저장소로 분리하고,
+배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다.
+https://github.com/felixrieseberg/travis-jekyll-git 여기 참고해서 삽질.
+결과물은 https://github.com/ageldama/ageldama-gh-jekyll
+
+..진행하면서 처음에 좀 짜증났던거,
+
+Gemfile 에 설치할 의존성들 지정하고, bundle update.
+
+그리고 그것만으로는 안되고, .travis.yml 파일에 gem설치를
+지정해야했다. https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5
+
+
+Travis-CI 작업의 세팅에서 git_target 환경변수에 URL지정할때&hellip;
+
+github.com/ageldama/ageldama-gh-jekyll.git 처럼 https:// 스킴 부분 빼고,
+또 뒤에 .git 깜빡하면 당연히 git-push 안됨. ㅋ
+
+
+
+
+
+
+
+
+솔직히 내가 뭘 제대로 하겠습니까.&#160;&#x21a9;&#xfe0e;" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-02-source-hilite-testing/">⬅️ Jekyll &#43; Rouge 소스코드 하일라이팅 테스트</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-01-github-jekyll/">➡️ Github.io의 Jekyll 버젼이랑 차이?</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents"></nav>
+
+    <article>
+	<div class="title"><h1 class="title">🍄‍🟫 Github.io 블로그 TraviCI으로 빌드해서 배포하기</h1>
+	    <div class="meta">
+                <time datetime="2017-01-02" pubdate>
+                    2017년01월02일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p>.. <em><a href="/github/jekyll/2017/01/01/github-jekyll.html">여기</a></em> 에 불만을 적었듯이,
+여러가지로 그냥은 만족하기 어려운 부분이 있었다.</p>
+<p>그런데, Travis-CI을 통해서 빌드해서 배포한다는 분이
+계셨다. <a href="https://twitter.com/Realignist/status/815554589889994752">https://twitter.com/Realignist/status/815554589889994752</a></p>
+<p>..난 생각 못해본 방법. ㅎㅎ <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>그래서 도전.</p>
+<ol>
+<li>우선 Jekyll 소스용 저장소로 분리하고,</li>
+<li>배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다.</li>
+<li><a href="https://github.com/felixrieseberg/travis-jekyll-git">https://github.com/felixrieseberg/travis-jekyll-git</a> 여기 참고해서 삽질.</li>
+<li>결과물은 <a href="https://github.com/ageldama/ageldama-gh-jekyll">https://github.com/ageldama/ageldama-gh-jekyll</a></li>
+</ol>
+<p>..진행하면서 처음에 좀 짜증났던거,</p>
+<ol>
+<li><code>Gemfile</code> 에 설치할 의존성들 지정하고, <code>bundle update</code>.
+<ol>
+<li>그리고 그것만으로는 안되고, <code>.travis.yml</code> 파일에 gem설치를
+지정해야했다. <a href="https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5">https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5</a></li>
+</ol>
+</li>
+<li>Travis-CI 작업의 세팅에서 <code>git_target</code> 환경변수에 URL지정할때&hellip;
+<ol>
+<li><code>github.com/ageldama/ageldama-gh-jekyll.git</code> 처럼 <code>https://</code> 스킴 부분 빼고,</li>
+<li>또 뒤에 <code>.git</code> 깜빡하면 당연히 git-push 안됨. ㅋ</li>
+</ol>
+</li>
+</ol>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>솔직히 내가 뭘 제대로 하겠습니까.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">🐻<a href="/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/">아겔로그변천사</a>
+                        <sup>29</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blogging/">blogging</a>
+                        <sup>22</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blog/">blog</a>
+                        <sup>21</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/jekyll/">jekyll</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/github/">github</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/travis-ci/">travis-ci</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🍄‍🟫";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-02-source-hilite-testing/">⬅️ Jekyll &#43; Rouge 소스코드 하일라이팅 테스트</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-01-github-jekyll/">➡️ Github.io의 Jekyll 버젼이랑 차이?</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480571</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

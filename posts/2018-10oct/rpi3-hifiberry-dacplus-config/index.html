@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480571">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="https://www.hifiberry.com/ 요거 Raspberry Pi 3에 세팅한 모험에 대한
+이야기.
+WIFI잡기
+# /etc/wpa_supplicant/wpa_supplicant.conf 
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+#update_config=1
+country=GB
+
+network={
+	ssid=&#34;iptime&#34;
+	psk=&#34;xxxxxxxxxx&#34;
+	key_mgmt=WPA-PSK
+}
+
+wpa_passphrase 안쓰고 그냥 plaintext으로 써도 동작.
+내 공유기랑은 country=GB 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤.
+그리고 ip link set wlan0 {up|down} 정도로 wlan0 인터페이스를 up/down하면됨.
+
+사운드 드라이버 설정
+
+내장 사운드카드 드라이버는 modprobe blacklist에 추가해서 끄자.
+/boot/config.txt에 HiFiBerry DAC&#43; 드라이버 오버레이를 지정해야함.
+
+내장 사운드 드라이버 끄기
+다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-10oct/05fri-ping/">⬅️ Ping 05/10/2018</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-10oct/03wed-ping/">➡️ Ping 03/10/2018</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#wifi잡기">WIFI잡기</a></li>
+    <li><a href="#사운드-드라이버-설정">사운드 드라이버 설정</a>
+      <ul>
+        <li><a href="#내장-사운드-드라이버-끄기">내장 사운드 드라이버 끄기</a></li>
+        <li><a href="#hifiberry-dac-드라이버-오버레이">HiFiBerry+ DAC 드라이버 오버레이</a></li>
+        <li><a href="#alsa-설정">ALSA 설정</a></li>
+      </ul>
+    </li>
+    <li><a href="#팁-중요한-명령들">팁: 중요한 명령들</a></li>
+    <li><a href="#후기">후기</a></li>
+  </ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">⚫ HiFiBerry DAC&#43; &#43; Raspberry Pi 3 설정</h1>
+	    <div class="meta">
+                <time datetime="2018-10-03" pubdate>
+                    2018년10월03일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p><a href="https://www.hifiberry.com/">https://www.hifiberry.com/</a> 요거 Raspberry Pi 3에 세팅한 모험에 대한
+이야기.</p>
+<h1 id="wifi잡기">WIFI잡기</h1>
+<pre tabindex="0"><code># /etc/wpa_supplicant/wpa_supplicant.conf 
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+#update_config=1
+country=GB
+
+network={
+	ssid=&#34;iptime&#34;
+	psk=&#34;xxxxxxxxxx&#34;
+	key_mgmt=WPA-PSK
+}
+</code></pre><ol>
+<li><code>wpa_passphrase</code> 안쓰고 그냥 plaintext으로 써도 동작.</li>
+<li>내 공유기랑은 <code>country=GB</code> 이 아니라, KR, US 등으로 되어 있으면 안되어서 해멤.</li>
+<li>그리고 <code>ip link set wlan0 {up|down}</code> 정도로 wlan0 인터페이스를 up/down하면됨.</li>
+</ol>
+<h1 id="사운드-드라이버-설정">사운드 드라이버 설정</h1>
+<ol>
+<li>내장 사운드카드 드라이버는 <a href="https://ko.wikipedia.org/wiki/Modprobe">modprobe</a> blacklist에 추가해서 끄자.</li>
+<li><code>/boot/config.txt</code>에 HiFiBerry DAC+ 드라이버 오버레이를 지정해야함.</li>
+</ol>
+<h2 id="내장-사운드-드라이버-끄기">내장 사운드 드라이버 끄기</h2>
+<p>다음처럼 modprobe blacklist에 추가해서 로딩 못하게 막음.</p>
+<pre tabindex="0"><code>$ cat /etc/modprobe.d/snd.conf 
+blacklist snd_bcm2835
+</code></pre><h2 id="hifiberry-dac-드라이버-오버레이">HiFiBerry+ DAC 드라이버 오버레이</h2>
+<p><code>/boot/config.txt</code> 파일에 다음과 같이 끝 부분에 추가:</p>
+<pre tabindex="0"><code>dtparam=i2s=on
+dtoverlay=hifiberry-dacplus
+</code></pre><ol>
+<li>조금 헤맸던 부분은 <code>hifiberry-dacplus</code>을 그냥 <code>hifiberry</code> 으로
+지정해서 다른 모델을 위한 오버레이를 로딩해서 동작을 안했었음.</li>
+<li>드라이버가 정상적으로 로딩되면, 부팅할때나 사운드 출력시 DAC
+보드에 LED이 들어오니까 참고.</li>
+</ol>
+<h2 id="alsa-설정">ALSA 설정</h2>
+<p><code>/etc/asound.conf</code>:</p>
+<pre tabindex="0"><code>pcm.hifiberry {
+	type softvol
+	slave.pcm &#34;plughw:0&#34;
+	control.name &#34;Master&#34;
+	control.card 0
+}
+pcm.!default {
+	type plug
+	slave.pcm &#34;hifiberry&#34;
+}
+</code></pre><p>위와 같이 대충 세팅해줘야 사운드 볼륨 믹서를 사용가능.</p>
+<h1 id="팁-중요한-명령들">팁: 중요한 명령들</h1>
+<ol>
+<li><code>aplay -l</code> : 현재 설정된 사운드카드 목록을 확인할 수 있음.</li>
+<li><code>amixer cset numid=3 2</code> : 이거 내장 사운드카드의 출력을 HDMI이
+아니라, Builtin Headphone Jack으로 출력하도록.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></li>
+</ol>
+<h1 id="후기">후기</h1>
+<ol>
+<li>사운드도 마음에 들고,</li>
+<li>나는 그냥 SSH 터미널용 음악재상 애플리케이션들만으로 좋은데<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>,
+<a href="http://www.runeaudio.com/">RuneAudio</a> 같은걸로 세팅해도 좋았을거
+같다. 처음에 Raspbian 이미지에서 시작하지않고, 아예 RuneAudio
+이미지로 다시 OS부터 설치해야해서 이건 생략.</li>
+</ol>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>HiFiBerry DAC 설정하면 안써도되는듯.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="http://www.mplayerhq.hu/design7/news.html">Mplayer</a>, <a href="https://cmus.github.io/">Cmus</a>, <a href="https://midnight-commander.org/">Midnight Commander</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/linux/">linux</a>
+                        <sup>27</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/raspberrypi/">raspberrypi</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/audio/">audio</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hifiberry/">hifiberry</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "⚫";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-10oct/05fri-ping/">⬅️ Ping 05/10/2018</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-10oct/03wed-ping/">➡️ Ping 03/10/2018</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480571</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

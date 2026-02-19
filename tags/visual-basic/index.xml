@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visual-Basic on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/visual-basic/</link>
+    <description>Recent content in Visual-Basic on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Wed, 21 Jan 2026 04:00:09 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/visual-basic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>잃어버린 결제모듈 소스코드와 VB6 P-Code</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/vb6-pcode-for-activex/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/vb6-pcode-for-activex/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;어느 계약직 X&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;어느 회사에 계약직으로 일하던 때였다. 이 이야기도 거의 2010여년&#xA;  전후일 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  바보인척하며 그냥 명랑하게, 그리고 받은 일을 충실히 최선을 다하며&#xA;  그냥 지내던 때였다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  정직원들은, 그렇게 친절하지는 못했다. 나이도 나보다 많았고, 이미&#xA;  법정관리에 들어간(2번째) 회사였었는데, 어쨌든 그렇게 아름다운 관계는&#xA;  되기 어려웠다. ㅎㅎ&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-3&#34;&gt;&#xA;&lt;h3 id=&#34;headline-2&#34;&gt;&#xA;친구들, 구내식당, 그리고 미성숙한 자신에 대한 후회&#xA;&lt;/h3&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-3&#34;&gt;&#xA;&lt;p&gt;출퇴근하기 좋고, 어쨌든 남들이 뭐라고 하건 좋은 성과를 내고 충실하고&#xA;  정직하게 일했던거 같다. 그리고 그게 나쁘진 않았다. 그냥 나를&#xA;  이해해주고 제대로 평가해주는 팀장님이나 그냥 비슷한 또래의 다른&#xA;  정직원이나 또다른 계약직과 친하게 지내며 21층 구내식당에서 행복하게&#xA;  밥을 먹으며 서로 더러운 농담을 만들며 킬킬거리며 잘 지냈던거 같다.&#xA;  PC하지는 못한 농담들이었다. ♂️❤️&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>코드 편집기에 대한 생각</title>
+      <link>https://ageldama.github.io/posts/2020-05may/editors/</link>
+      <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-05may/editors/</guid>
+      <description>&lt;p&gt;&#xA;코드 편집기를 어떻게 써왔었는지 잠깐 생각해봤다:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;DOS시절: MS-DOS Editor.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GW-BASIC 시절에는 정말&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/MS-DOS_Editor&#34;&gt;https://en.wikipedia.org/wiki/MS-DOS_Editor&lt;/a&gt; 을 열심히 썼었던 것&#xA;같다.&lt;/li&gt;&#xA;&lt;li&gt;그리고 그 다음엔 &lt;a href=&#34;https://en.wikipedia.org/wiki/PowerBASIC#PowerBASIC_for_DOS_(PBDos)&#34;&gt;PowerBASIC for DOS&lt;/a&gt; 열심히 썼었다. QuickBASIC&#xA;같은 바이트코드으로 컴파일해서 .exe 파일에 인터프리터와&#xA;바이트코드를 embedding 하는 VB의 P-code 같은 가짜 컴파일 방식&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;이&#xA;아니라 정말 네이티브 코드로 컴파일해주고, 인라인 어셈블리와&#xA;메모리 조작이 가능한 베이직 컴파일러, IDE여서 좋은 환경이었던&#xA;것 같다.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;터보C 2.0 편집기. PowerBASIC이랑 유사해서 익숙하게 쓸 수 있었던&#xA;것 같다. 파워베이직도 그렇지만, 의외로 도스시절의 이런 IDE들이&#xA;F1 - Help 메뉴에서 항목별로 문서 정리가 잘 되어 있어서 읽으면서&#xA;즐거웠었던 것 같다. (초등학생~중학생이어서 영어를 잘 이해하지는&#xA;못했지만)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

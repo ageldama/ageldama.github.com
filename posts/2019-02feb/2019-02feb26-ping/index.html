@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping  26/02/2019 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480571">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="게임: 발더스게이트EE, &lsquo;원숭이섬의 비밀&rsquo; SE &#43; SteamPlay, 등등
+아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced Edition들
+올라와있었다.  발더스게이트1, 2 모두. 시간이 될때마다 조금씩 플레이
+중.
+새로 UI이나 그래픽 요소들 등등 리마스터 한건지 훨씬 좋아진거 같다.
+원숭이섬의 비밀: Special
+Edition
+이것도 시간날때
+플레이. ScummVM 으로 옛날 그래픽으로 다시
+해도 좋겠지만, 오히려 애니메이션이나 그래픽 다시 그린게 나는 더 마음에
+들어서 이쪽이 좋은거 같다.
+Unavowed. 이런류의
+어드벤쳐 꾸준히 만드는 &ldquo;WadjetEyeGames&quot;이 내 취향에 잘 맞는걸 계속
+만들고 있는거 같아서 기뻤다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/counsel-ivy&#43;cpp-ide/">⬅️ Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">➡️ NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#게임-발더스게이트ee-원숭이섬의-비밀-se--steamplay-등등">게임: 발더스게이트EE, &lsquo;원숭이섬의 비밀&rsquo; SE + SteamPlay, 등등</a>
+      <ul>
+        <li><a href="#스팀플레이-steamos-flatpak">스팀플레이, SteamOS, Flatpak</a></li>
+      </ul>
+    </li>
+    <li><a href="#친구를-만나기">친구를 만나기</a></li>
+    <li><a href="#freebsd을-데스크탑으로-사용하기">FreeBSD을 데스크탑으로 사용하기</a>
+      <ul>
+        <li><a href="#사실-별로-다를것도-없는것들-좋던점들">사실 별로 다를것도 없는것들, 좋던점들</a></li>
+        <li><a href="#당분간은-기대하기-어려울만한점들">당분간은 기대하기 어려울만한점들</a></li>
+        <li><a href="#결론">결론</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">💘 Ping  26/02/2019</h1>
+	    <div class="meta">
+                <time datetime="2019-02-26" pubdate>
+                    2019년02월26일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <h1 id="게임-발더스게이트ee-원숭이섬의-비밀-se--steamplay-등등">게임: 발더스게이트EE, &lsquo;원숭이섬의 비밀&rsquo; SE + SteamPlay, 등등</h1>
+<p>아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced Edition들
+올라와있었다.  발더스게이트1, 2 모두. 시간이 될때마다 조금씩 플레이
+중.</p>
+<p>새로 UI이나 그래픽 요소들 등등 리마스터 한건지 훨씬 좋아진거 같다.</p>
+<p><a href="https://store.steampowered.com/app/32360/The_Secret_of_Monkey_Island_Special_Edition/">원숭이섬의 비밀: Special
+Edition</a>
+이것도 시간날때
+플레이. <a href="https://www.scummvm.org/">ScummVM</a> 으로 옛날 그래픽으로 다시
+해도 좋겠지만, 오히려 애니메이션이나 그래픽 다시 그린게 나는 더 마음에
+들어서 이쪽이 좋은거 같다.</p>
+<p><a href="https://store.steampowered.com/app/336140/Unavowed/">Unavowed</a>. 이런류의
+어드벤쳐 꾸준히 만드는 &ldquo;WadjetEyeGames&quot;이 내 취향에 잘 맞는걸 계속
+만들고 있는거 같아서 기뻤다.</p>
+<h2 id="스팀플레이-steamos-flatpak">스팀플레이, SteamOS, Flatpak</h2>
+<p><a href="/posts/2018-10oct/10wed-steamplay-on-linux/">예전 포스팅</a> 에서는 그냥
+Pacman으로 직접 패키지로 설치했다가, 이번에는 Flatpak으로 다시 Steam을
+설치했다.</p>
+<p>그냥 적당히 잘 굴러가고, 스팀플레이도 잘 동작해서 깔끔한거 같다.</p>
+<p>스팀OS 만든다고 리눅스에서 게임들 동작하게 만들고, 스팀플레이 같은
+게임이 직접 리눅스를 지원하지 않아도 실행 가능하게 되서 진짜 너무
+편안한거 같다.</p>
+<h1 id="친구를-만나기">친구를 만나기</h1>
+<p>오랬만에 친구와 약속을 잡고 만나고 이야기를 하고 걷고 햇볕을 쬐고
+시간을 보냈다. 얼마만인지 잘 모르겠다. 예전에는 항상 이렇게 살았던거
+같은데, 나이가 들어가고 내 삶이 중요하다고 생각하게 되면서, 더
+달라지는거 같다. 즐거웠었다.</p>
+<h1 id="freebsd을-데스크탑으로-사용하기">FreeBSD을 데스크탑으로 사용하기</h1>
+<p>FreeBSD을 예전에 설치해보고 시도해보다가, 그냥 묵혀놓고<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 그냥 딱히
+쓸일이 없겠구나 싶다가 재미로, 혹은 약간의 기대를 갖고 다시
+시도해봤다.</p>
+<p>그냥 정겨운(-거의 외양은 변한게 없는-) installer TUI.</p>
+<p>적당히 잘 동작하고, 걱정하던 무선랜 드라이버도 국가코드만 잘
+선택하니까 잘 돌아갔다.</p>
+<p>제일 고생한건 NVidia 그래픽카드 드라이버 같은데, 그것도 사실 그냥
+패키지 설치하고 인스트럭션 따라서 주욱 해나갔으면 바로 동작했었을거
+같다. 이것도 빠르고 깔끔하게 잘 동작하고.</p>
+<p>어차피 데스크탑 환경은 i3-gaps 같은걸로 직접 설정해서 사용하니까 조금
+시작 스크립트 같은것들만 고쳐서 마음에 드는 수준으로 설정 완료.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<h2 id="사실-별로-다를것도-없는것들-좋던점들">사실 별로 다를것도 없는것들, 좋던점들</h2>
+<p>바꾸긴 했는데, 어차피 대부분은 원래 약간은 알고 있던것들이고&hellip;</p>
+<p><a href="https://www.freebsd.org/doc/handbook/index.html">FreeBSD handbook</a>,
+ports collection,
+<a href="https://www.freebsd.org/doc/handbook/pkgng-intro.html"><code>pkg</code></a>,
+리눅스의 systemd이나 약간씩 다 다른것에 비해 간단한 설정방법 등등.</p>
+<p>딱히 놀랄거 없이 알고 있는대로, 혹은 핸드북이나 구글링해서
+설정해나가면 리눅스보다 더 깔끔하고 몇가지 지루한 패턴으로 해결이
+가능한 문제들<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</p>
+<p>거기에 사용하는 환경도 리눅스인지, BSD인지 알기 어렵게 zsh,
+Emacs등등을 사용하고, 더 나아가서 자잘한 도구들도 왠만한건 다 동일하게
+있어서. 하루 정도 설정하니 더 설정할게 없었었다.</p>
+<p>사운드 설정, USB 장치들 드라이버, 엄청나게 깔끔하고 걱정할게 별로 없던
+Ports collection, Pkg 같은점들 너무 마음 편안하고 쓰기도 편하고,
+portmaster, portsnap같은 추가적인 도구들이 있어서 좋았었다.</p>
+<h2 id="당분간은-기대하기-어려울만한점들">당분간은 기대하기 어려울만한점들</h2>
+<p>그래도 몇가지는 서운했음.</p>
+<ol>
+<li>스팀 동작하게 만들어볼까했는데, 너무 무의미한짓일거 같아서 포기.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></li>
+<li>블루투스 스택이 별로&hellip; <a href="https://forums.freebsd.org/threads/how-to-bluetooth.64797/">https://forums.freebsd.org/threads/how-to-bluetooth.64797/</a></li>
+<li>리눅스에서는 그냥 적당히 잘 동작하는 Suspend to RAM/Disk이 후자는
+BIOS지원이 필요하다면서 안됨.<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></li>
+<li>전반적으로 엄청 든든하고 빠른데, 오히려 리눅스에서는 경험 못한
+시스템 정지를 한번 경험함.<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></li>
+<li>리눅스에서도 그렇긴하지만, 조금 더 크고 많은 파일들을 복사하거나
+하면, 시스템의 다른 프로세스들은 블록되는 현상은 더 심하고
+시스템이 멈춘걸로 보이게 만드는거 같았다.</li>
+</ol>
+<p>몇몇은 특별한 일들이 없는 이상 개선이 어려울거 같고, 역시 리눅스보다는
+contributor들의 수가 다르긴한가보다 생각.</p>
+<h2 id="결론">결론</h2>
+<p>굳이 BSD을 계속 써야할것도 모르겠어서 일단 다시 아치리눅스
+데스크탑으로 돌아오기로 결정했다.</p>
+<p>그냥 재밌는 경험이었었고, 오히려 재미로, 가상머신이 필요할때
+VirtualBox에 설치해서 계속 사용할거 같긴하다.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>중고등학생 때, 그땐 대부분 넥스트스텝, BeOS, OS/2 같은것들도
+허얽허억 했고, 레드햇 계열보다는 데비안 계열에 대한 선망이 있어서
+데비안 woody 설치하고 사용하고 그랬었을때인거 같다.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>FreeBSD 환경을 위해 내가 작성한 설정, 스크립트 파일들 &ndash;
+<a href="https://github.com/ageldama/configs/tree/master/i3wm/desktop-freebsd">https://github.com/ageldama/configs/tree/master/i3wm/desktop-freebsd</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>거의 항상 <code>/etc/rc.conf</code> 이나 <code>/boot/loader.conf</code> 수정 정도니까.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>Steam 리눅스용을, FreeBSD에서 가능한 Linux binary compatibility
+이용해서 돌리면 가능하겠지만&hellip; 어차피 SteamPlay 같은걸로 돌리면
+또 거기에 <a href="https://www.winehq.org/">Wine</a>으로 윈도 게임을
+리눅스에서 돌릴건데&hellip; 끔찍할거 같았다.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>&ldquo;11.13.2.2. Suspend/Resume&rdquo;
+<a href="https://www.freebsd.org/doc/handbook/acpi-overview.html">https://www.freebsd.org/doc/handbook/acpi-overview.html</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>NVidia proprietary driver에서 Oracle VirtualBox으로 Windows XP
+돌리면서 다운됨. 모든 조합이 조금 불안해보이기는해서 &lsquo;그럴수도
+있지 뭐&rsquo; 이지만, 리눅스에서는 그냥 별 문제가 없었던거니까. 이런
+케이스 이외엔 안정적이었다.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">🦔<a href="/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/">추억두더쥐</a>
+                        <sup>14</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>112</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emacs/">emacs</a>
+                        <sup>24</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/freebsd/">freebsd</a>
+                        <sup>11</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/i3wm/">i3wm</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/steam/">steam</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/nextstep/">nextstep</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/bluetooth/">bluetooth</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/steamplay/">steamplay</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/os2/">os2</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/beos/">beos</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/i3gaps/">i3gaps</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/unavowed/">unavowed</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/steamos/">steamos</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/flatpak/">flatpak</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/%EB%B0%9C%EB%8D%94%EC%8A%A4%EA%B2%8C%EC%9D%B4%ED%8A%B8/">발더스게이트</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/%EC%9B%90%EC%88%AD%EC%9D%B4%EC%84%AC%EC%9D%98%EB%B9%84%EB%B0%80/">원숭이섬의비밀</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "💘";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/counsel-ivy&#43;cpp-ide/">⬅️ Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">➡️ NetworkManager &#43; dnsmasq으로 인터넷공유 만들기</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480571</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

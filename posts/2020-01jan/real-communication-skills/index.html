@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>&lt;소프트스킬&gt;, &lt;커뮤니케이션 스킬&gt;은 어떻게 한국 사회에서 괴물을 만드는지 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480572">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+우선 이야기를 시작하기 전에 일러두고 싶다. 내게 &lt;소프트스킬&gt;1은
+매우 재밌게, 유용하게 읽은 책이었다. (2016년에)
+
+이 이야기는 사실 커뮤니케이션스킬, 소프트스킬을 권장하고, 어떻게
+해야 할까 하는 고민에서 나오는, 또한 그런 정말 중요한 것이 어떻게
+(적어도 내가 느끼기엔) 이상한 괴물을 옹호하기 위해 변질되어 쓰이는지에
+대한 것이다.
+
+
+&lt;사회생활&gt;, &lt;원만함&gt;에 대해
+
+
+나는 자라오며 계속해서 잔소리를 들어왔다. 말해주는 사람들은 내
+  아버지와 몇몇 친척 형, 주변 친구들이었다. 그리고 하나도 그런 말들을
+  새겨 듣지 않았고, 잘했다고 생각한다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-01jan/esup-emacs-init-speed/">⬅️ Emacs 시작 시간 빠르게 만들기</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">➡️ Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">&lt;사회생활&gt;, &lt;원만함&gt;에 대해</a>
+</li>
+<li><a href="#headline-2">어른의 사정, 그리고 그것은 사실 전혀 어른스럽지 못한 어른들</a>
+</li>
+<li><a href="#headline-3">&lt;세련됨&gt;과 &lt;능숙함&gt;에 대해</a>
+</li>
+<li><a href="#headline-4">정말로 유독한 부류에 대해</a>
+</li>
+<li><a href="#headline-5">개발자 농담과 길들이기, 이를 돕는 사람들과 개발자 자신에 대해</a>
+</li>
+<li><a href="#headline-6">설치시 필요사양 / Minimum Requirements</a>
+</li>
+<li><a href="#headline-7">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🚨 &lt;소프트스킬&gt;, &lt;커뮤니케이션 스킬&gt;은 어떻게 한국 사회에서 괴물을 만드는지</h1>
+	    <div class="meta">
+                <time datetime="2020-01-03" pubdate>
+                    2020년01월03일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+우선 이야기를 시작하기 전에 일러두고 싶다. 내게 &lt;소프트스킬&gt;<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>은
+매우 재밌게, 유용하게 읽은 책이었다. (2016년에)</p>
+<p>
+이 이야기는 사실 커뮤니케이션스킬, 소프트스킬을 권장하고, 어떻게
+해야 할까 하는 고민에서 나오는, 또한 그런 정말 중요한 것이 어떻게
+(적어도 내가 느끼기엔) 이상한 괴물을 옹호하기 위해 변질되어 쓰이는지에
+대한 것이다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+&lt;사회생활&gt;, &lt;원만함&gt;에 대해
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>나는 자라오며 계속해서 잔소리를 들어왔다. 말해주는 사람들은 내
+  아버지와 몇몇 친척 형, 주변 친구들이었다. 그리고 하나도 그런 말들을
+  새겨 듣지 않았고, 잘했다고 생각한다.</p>
+<p>
+  다른 조언들에 대해서는 한번 더 생각했겠지만, 내가 거부한 조언의
+  종류는 &lt;원만함&gt;에 대한 이야기들이었다. 맞는 이야기이다. 하지만
+  내가 거부하는 종류의 &lt;원만함&gt;의 요구는, 다른 한가지 요구조건이 따라
+  붙는다. 그걸 말하는 사람이 사실은 내가 걱정되어서가 아니라, 자기가
+  살아온 방식과 익혀온 사회적 관습과 달라서 당혹스러워서 내게 요구할
+  때 뿐이었다.</p>
+<p>
+  나는 의외로 예의가 바르게 행동하려 노력한다. 스팸전화를 걸어온
+  상담사에게 예의 바르게 거절하기, 미친새끼처럼 별 이익도 없이 쓰레기
+  같이 운전하지 않기, 조용하고 예의 바르게 사회의 익명으로 걷고 가게에
+  가서 물건을 사고 살아가기. 그리고 가능하면 원만하려 노력한다.</p>
+<p>
+  하지만 어떤 사람들은, 어떤 역할을 맡은 사람들이, 특정한 상황에서는
+  원만해서는 안된다고 생각한다.</p>
+<p>
+  예를 들면, 공무원이나 군인, 항공기 파일럿, 은행원 같은 사람들이
+  원만해서는 안된다고 생각한다. 재밌게도 이런 사람들은 기대되는
+  상황에는 원칙주의자가 된다. 주로 자기에게 책임소지가 생길 상황일
+  때이다.</p>
+<p>
+  하지만 자기 상관에게 싫은 소리, &lt;사회생활&gt; 못한다는 소리를 들을만한
+  이야기를 해야만 할 때, 그리고 다시 역으로 책임소지가 생길만할 때는
+  원칙을 비틀어 이용한다.</p>
+<p>
+  상관의 잘못을 지적해야 하는 시점을 놓치도록 선후배 관계, 위계질서,
+  사회생활에 대해 고도로 훈련된 항공기 파일럿이 말도 안되는 그런
+  이유로 추락시켰다.<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
+<p>
+  책임을 지기 어려워 책임소지를 놓고 탁구 게임을 하면서, 수백명이
+  탑승한 여객선을 침몰시키고 제대로 구조하지 못했고, 그 이후에도
+  제대로된 구조는 물론 책임을 물기 싫어함, 원만함만을 추구했다.</p>
+<p>
+  치매 노인에게, 원금 손실의 위험성을 제대로 인지하는지도 알기 어려운
+  상황에 놓인 이에게, 또한 투자경험이 없는 노인에게 투자상품을
+  가입하도록 권유한다.<sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup></p>
+<p>
+  당신도 오늘 이런 풍경을 겪었을지도 모른다. 스팸 전화로 대출권유,
+  신용카드 발급권유, 보험가입 권유 등등. 사실 권유가 아니라 강요에
+  가깝지만. 전화상담사는 자신의 실적, 이익에만 관심이 있고, 그걸
+  가입해서 내 신용평가점수나 내 현금지출에 대해서는 전혀 부각시켜
+  대답하지 않는다. 내가 아무리 물어도 시원한 답변을 하지
+  않는다. 고도로 이런 사회분위기에 맞춰진 사람들이다. 그리고 그
+  사람들을 그렇게 몰아가는 이 분위기와 경제구조를 떠올리기 이전에
+  그들이 짜증나고 싫어진다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+어른의 사정, 그리고 그것은 사실 전혀 어른스럽지 못한 어른들
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>원만함, 사회생활에 능숙함이 어떤 문제인지 말하고 싶다. 그 원만함이란
+  말은 굳이 &#39;안해도 될말을 해서&#39; 문제를 만들거나 손해를 보지 말라는
+  이야기인데, 종종 그 안해도 될말이 사실은 공정하기 위해서, 정직하기
+  위해서 해야만 하는 말인 경우가 더 많다고 생각한다.</p>
+<p>
+  세계 어디서나 동일한 문제일거라고 생각한다. 그리고 한국에서는 참
+  멋지게도 이런 특성이 무엇이 공정함, 정직함인지 알고 깨닫지 못하고,
+  그 가치를 사회에서 냉대하고 비웃는다. 반면 이런 원만함, 사회생활,
+  책임을 전가하기가 &lt;어른의 방식&gt;이라는 우스운 생각이 뿌리가
+  깊다. 어른의 정의란, 자신의 행동에 책임을 당당하게 짊..이
+  아닐까.</p>
+<p>
+  하지만 한국사회에서 책임을 진다는 것은, 한 개인이, 한 노동자가
+  짊어지기 어려운 것을 과한 것을 책임지우고, 더욱이 책임이 없는 이를,
+  누군가 높은 자리에 계신 책임을 정말 져야할 분이, 그 책임을 떠넘기고
+  뒤집어 씌워 보여주기식으로 희생양 삼기 때문에 모두가 이렇게 행동하는
+  것이리라 생각한다. 빨갱이로 몰아가 죽이기, 지역감정, 진보도 다
+  썩었다, 등등 시대를 바꿔가며 그 모습이 얼마나 추했었는지 우리는
+  지켜보지 않았던가?</p>
+<p>
+  한국 사회에서 정직하고 공정하게 살기란 큰 용기가 필요하다. 그럼에도
+  조금씩은 내가 희생할 수 있을만큼은 그런 가치를 깨달아 지켰으면
+  좋겠다. 그리고 그럴수록 나는 더 좋은 사람들이 주변에 늘어날 것이라고
+  생각한다. 지금 어쩌면 당신 주변에 있을지도 모르는 무능한데 선동하고
+  추하게 행동하고 실은 당신이 일하지 않으면 자기도 이득볼 수 없는
+  주제에 당신을 괴롭히고 당신에 대해 못된 소문을 퍼뜨리는 어떤 사람
+  대신에.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+&lt;세련됨&gt;과 &lt;능숙함&gt;에 대해
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>어른으로서, 한국 사회에서 살아남기 위해서 &lt;세련됨&gt;, &lt;능숙함&gt;을
+  익혀야만 했을 것이다. 하지만 그만큼 당당하지는 못한 어른이
+  되었으리라 생각한다.</p>
+<p>
+  그리고 다시 자신이 그렇게 된 것을 다른 이에게 강요한다. 그것도
+  별로 당당하지 못한 이유들 때문이다.</p>
+<p>
+  주로, 자신이 어리숙하고 사회경험이 부족하여 쉽게 이용하고 등쳐먹고
+  싶은 대상, 그러기 쉬워보이는 청년에게 흔히 이런 말을 한다면, 사실은
+  그 의도가 길들이기일 것이다. 그렇지 않다면 굳이 열을 올리며 그런
+  이야기를 강요하며 세뇌하려 노력할 필요가 없다. 그것도 아니라면 자기
+  자존감을 위해서 그러는 것이고.</p>
+<p>
+  정말 착취하려거나, 자기 알량한 자존감을 충족하기 위해서 이렇게들
+  행동하는 30대 이상의 한국 아저씨들을 많이 봤다. 나도 그럴지도
+  모르고. 내가 20대 사회초년생일 때나 지금이나. 그리고 그때는 잘
+  몰랐었지만 지금은 그냥 그런 이야기들을 들으면 너무 투명해서
+  피곤함을 느낀다.</p>
+<p>
+  이미 이야기했듯이, 그들이 말하는 원만함, 사회생활의 기준은 강요하는
+  이의 자기 기분의 만족, 혹은 길들이기 쉽게 만들기에 정말로 충실하다.</p>
+<p>
+  그리고 보통 이런 논법을 통해서 저임금 노동, 말도 안되는 노동조건을
+  만들어낸다. 그리고 그런게 문제로 제기 되어도 오히려 역성을 낼 수
+  있는 방법이기도 하다. 어디가서 그렇게 사회생활하면 누가 받아주겠느냐
+  등등.</p>
+<p>
+  이러한 &lt;세련된&gt; 어른들은, 자신들이 믿는 가치에 정말 충실하다. 그래서
+  남을 공격하고 비난할 때도, 절대 자신이 공격했다는 책임을 지기 싫어서
+  빙빙 돌리고 베베 꼬아서 말한다. 그래서 도대체 무슨 이야기를
+  하는건지도, 대체 왜 지금 시점에 저런 이야기를 하는건지도 알 수 없는
+  이야기를 중얼거린다. 내가 미성숙한 아이였을 때, 때와 상황을 잘
+  모르는 주제에 그냥 무슨 말이라도 하고 싶어서 중얼거릴 때와 같이
+  말하는 것을, 성인이 되어서, 그것도 30대~70대 사이의 성인 남성이
+  그렇게들 말하는 모습을 자주 봤다. 그래서 덕분에 상대는 어떤 대답도
+  하고 싶지도, 대답할 문맥도 아니어서 대화, 논의는 아무런 결론도 없고,
+  성과도 없이 끝난다. 아! 물론 성과는 있겠지. 그걸 중얼거린 바보는
+  자신의 감정이 어느 정도는 만족했을거고, 자기가 뭔가 대단히
+  세련되었고 지적이라는 착각을 충족했을테니까.</p>
+<p>
+  이런 탓에, 사회에 그렇게도 &#39;당신이 내 말을 오해했네, 그런 의도로
+  말한게 아니네&#39;, &#39;네가 너무 예민하게 반응하는 것이다, 그런 의도가
+  아니었다&#39; 같은 이야기가 너무 많다. 그렇게 고등교육을 받은 인구가
+  많고 문맹률도 최저인 나라에서 너무할 정도로 대화가 안 통하는
+  사람들이 그렇게도 많은 이유와 그런 오해를 조장하는 사람이 너무도
+  많다. 신기할 정도다.</p>
+<p>
+  보통 이런 &lt;어르신&gt;들은 상대가 세상물정 모르는 어린애이고, 그렇기
+  때문에 적당히 별 이득도 안될 당연한 것들을 생색내거나 말도 협상의
+  대상으로 생각하지 않기 때문에 어이 없는 조건을 내걸거나, 그래서
+  협상을 끝까지 이뤄내지 못한다. 그리고 결국 자기 자신도 그 협상이
+  어째서 이뤄지지 않는지를 이해하지 못하고, 상황을 제대로 인지하지도
+  못한다. 또 그냥 상대가 어리숙해서 그런다며 탓한다. 정말 어리석고
+  세상물정을 모르는건 그런 사람인지도 모르겠다.</p>
+<p>
+  이런 사람들을 너무 여럿 봤다. 당연히 내가 수락할 이유도 없는 일이나
+  조건을 내걸고서 생색을 내거나, 내가 당연히 감정도 없어서 그런 말을
+  해도 당신의 말을 따를거라고 착각하는 멍청함까지 갖춘 사람들. 도대체
+  어떻게 그런데도 &lt;사회생활&gt;을 하려고 하는지 나는 이해가
+  안된다. 그리고 이런 사람들이 자신들이 떠드는 성공은 커녕 시간의
+  뒷켠으로 사라져갈 때마다 나는 세상이 그래도 제대로 돌아가고 있다는
+  생각을 다시 되새길 수 있다.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+정말로 유독한 부류에 대해
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>어떤 사람들은, 이런 세련된 화법, 외교적 방법, 정치적인 감각,
+  커뮤니케이션 스킬, 소프트스킬을 자신의 강점으로 강조한다. 그리고
+  그에 곁들여서, 나나 타인의 그런 부분이 얼마나 형편 없는지도 함께
+  강조해서, 자신의 강점을 더욱 부각시키려 노력한다.</p>
+<p>
+  하지만 내가 봐온 이런 부류의 사람들은 커뮤니케이션, 소프트스킬은
+  커녕 정치적, 외교적 감각은 커녕, 기본적인 도덕, 양심, 심지어 자기가
+  오래 일해온 분야에 대한 상식도 없는 사람들이었었다.</p>
+<p>
+  오직 자기가 모른다는 것을 인정하지 못하고 그냥 세련된 화법이라고
+  생각하는 잔재주로 그걸 치장하기만 열심이고, 남을 잘못도 없는데
+  뒤집어 씌워서 자신을 강조하고 싶어하며 어떻게든 남을 착취하고 또
+  그걸 착취하는걸 자기 상급자에게 갖다 바쳐서 이익을 보려고 노력하던
+  사람들뿐이었었다.</p>
+<p>
+  그들이 말하는 다른 사람들과 원만하게 지내고, 맞고 틀림보다 조금
+  논쟁에서 져주더라도 사람의 마음을 얻기가 더 중요하다고 말하는
+  사람인데, 다른 한편에서는 가장 남을 조종하려 노력하고 있고, 나에
+  대한 나쁜 소문을 만들어서 퍼뜨리거나 하는 식으로 열심이었던
+  이들이다. 글쎄, 정말 지혜롭고 다른 사람의 마음을 얻고 싶다면
+  그래서는 절대 안될 일들일거 같다. 차라리 논쟁에서 확실하게
+  이야기하고 남을 음해하거나 하지 않는게 더 마음을 사는 쪽에 세련되고
+  확실한 방법일지도 모르겠다. 적어도 나는 자기를 논쟁에서 기분 나쁘게
+  했음으로 앙금을 품는 사람들이, 자기를 음해를 하는걸 사회생활이니
+  어쩔 수 없지라며 이해해주는 분위기가 더 정신병자들 같다.<sup class="footnote-reference"><a id="footnote-reference-4" href="#footnote-4">4</a></sup></p>
+<p>
+  후자가 훨씬 유독하고, 조직, 회사, 사회를 병들게 만들고, 절대
+  용납되어서는 안된다고 생각한다. 하지만 어떤 사람들은 자신들이 그런걸
+  결정할 수 있다고 믿는다. 아니 착각한다. 그렇기 때문에 사람들의
+  마음을 잃고 많은 사람들이 떠나게 만든다. 그리고 그래놓고서
+  제정신이어서, 자신의 정신건강, 육체적 건강, 그리고 경제적 이익 등
+  모든 정상적인 판단력으로 떠나는게 맞는 상황에서 올바른 결정을 내린
+  이들을 탓하고 욕한다. 재밌다.<sup class="footnote-reference"><a id="footnote-reference-5" href="#footnote-5">5</a></sup></p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+개발자 농담과 길들이기, 이를 돕는 사람들과 개발자 자신에 대해
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>가끔 나는 개발자 농담이 사회현상이라기 보다는 경영하는 분들의 편의를
+  위해 동작하지 않나 생각도 든다.</p>
+<p>
+  왜냐하면, 개발자들의 이익이나 그런걸 보통 다른 부류는 시기를 하는데
+  그걸 경영하는 측은 편을 들어주지 않아야 다른 쪽에 균형도 맞출 수
+  있고, 또 편가르기를 해놓고 서로 융화하지 않아야 모두 조작하기 쉬울거
+  같다는 생각이기 때문이다.</p>
+<p>
+  개발자 개개인에 대해서도 흔히 말하는 길들이기의 일환으로 그런
+  비아냥, 농담을 던져서 자존감을 낮추고 조종하는 것도 방안이리라
+  생각한다.</p>
+<p>
+  또 거기에 한술 더 떠서, 그런걸 알아서 진상하고 갖다바치려 노력하는
+  위에 말한 유독한 사람들의 부류도 있을 것이다. 재밌게도 정말 평범하고
+  흔하디 흔한 전형적인 모습일거라 나는 상상한다. 의도적이건 어느새
+  그렇게 흘러갔건간에 말이다.</p>
+<p>
+  사실 정말로 개발자 자신들이 그런 커뮤니케이션이 불가능하고 멍청한
+  사람들이 정말로 있기는 하다. &lt;개발자 놀이&gt;에 충실해서, 자신이
+  개발자라는데에 너무나 감격해서 그 역할에 몰입이 심한 사람들. 이런
+  사람들은 그렇게 능력이 있지도 논리적으로 말하고 생각하지도
+  못한다. 왜냐하면, 개발자가 아닌데, 개발자 역할극을 즐기는
+  사람일뿐이기 때문이다. 이런 사람은 재밌게도 정말 커뮤니케이션이
+  불가능하다. 그리고 이런 사람들이 위에 말한 그런 낚시에 걸려들어
+  비슷한 부류끼리 일을 하게 된다. 흥미롭다.</p>
+<p>
+  그렇지 않은 개발자들도, 사실 흥미롭다. 자기가 알아서 자기 계발이라고
+  시간을 더 투자해서 공부를 하고, 나아가서 그 공부의 주제영역, 그
+  외연을 계속해서 확장해나간다. 그리고 마침내 커뮤니케이션,
+  소프트스킬에까지 다다른다.</p>
+<p>
+  소프트스킬, 커뮤니케이션 스킬이 나는 중요하다고 생각한다. 하지만
+  경제주체로서 어디까지 학습하고 어느 역할까지 해야 한다고 다시
+  생각하고 물어봐야 한다고 생각하기에 반대한다.</p>
+<p>
+  왜냐하면, 개발자의 역할을 계속해서 늘려나가야만 프로페셔널이라고
+  말하는 분위기가 나는 잘못 됐다고 생각한다. 오히려 개발자는 더
+  집중적이고 전문적이어야 하고, 거기에 커뮤니케이션스킬, 소프트스킬을
+  갖춘이가 있다면 그에 상응하는 또 다른 분야의 전문가로서 생각해야
+  한다고 말하는 것이다. 하지만 어느샌가 개발자가 진정 &lt;프로페셔널&gt;
+  해야 한다며, 말도 안되는 논리로, 무조건적으로 남들에게 소통을 하고
+  남들이 말도 안되는 요구나 대화를 걸어와도 친절하게 응대해야 한다고
+  개념을 확장해나간다. 당신들이 말하는 그런 &lt;프로페셔널&gt;은 어쩌면 아예
+  다른 직업일 것이다. 도메인 전문가나 도메인 전문가, 현업과 대화하며
+  이를 요구사항으로 정제하는 인터뷰어, 혹은 당신들이 그렇게도 도대체
+  하는 일이 없다고 말하는 프로젝트 매니져들.</p>
+<p>
+  그 프로젝트 매니져, 혹은 프로젝트 어시스트들이 해야 하는 일이, 다른
+  사람과의 중간 대화를 해주는 역할이라면, 이것만으로도 충분히 전문적인
+  일이다. 하지만 정작 우스꽝스러운 구조, 그러니까 프로젝트 매니져가
+  개발자의 보스가 되어서 그냥 압박만 주는 사람으로 통념적으로 잘못
+  이해되고, 또 그게 뭐여야 하는지 고민도 없이 그 통념에 따르는 회사의
+  어눌함, 혹은 그런걸 맘껏 이용해 뭐가 됐든 알아서 굴러가길 바라는
+  마음가짐이건, 등등으로 프로젝트 매니져가 사실 개발자들에게 자신의
+  직분과 책임을 떠넘긴다. 사실 자신이 현업 인터뷰를 잘하고 그걸
+  정제해서 요구사항으로 만들고 관리하는게 당연함에도 그걸 개발자의
+  탓을 하며 떠넘긴다.</p>
+<p>
+  정말 신기하게도, 위에도 언급했지만, 개발자들은 자신이 노조를
+  결성하거나 해서 다른 전문직업군처럼 활동하지 않는다. 그렇기
+  때문인지, 아니면 그래서인지, 자신을 더욱 능동적으로 착취 당하기 위해
+  더욱 자기계발을 하고 자신의 기능을 늘려만 나간다. 그것도 같은 값에
+  자신의 노동을 팔기 위해서 처절하게 자기 학습을 늘려나간다. 다른
+  직업이었다면, 너무나 많은 것을 요구 받는 것을 반대하고, 또 그런 것을
+  요구 받지 않아도 자기 직업을 안정적으로 유지하기를 요구할
+  것이다. 부당한가? 그렇지 않다. 오히려 너무나 당연하고 공정한
+  일이다. 그럼에도 개발자들은 자진해서 자신들의 몸값과 기능의 균형을
+  깨가며 싸게 더욱 더 많은 기능을 탑재해서 노동 시장에
+  내놓는다. 그리고 그런 압력과 분위기는 개발자들이 모인 SNS,
+  커뮤니티에 팽배하다. 소프트스킬이 중요하고, 커뮤니케이션이 어떻고,
+  또 새로운 기술이 뭐가 어떻고.<sup class="footnote-reference"><a id="footnote-reference-6" href="#footnote-6">6</a></sup></p>
+<p>
+  위에서 말했지만, 어떤 사람들이 개발자와 같은 직군을 어리숙하다고
+  보고, 말도 안되는 제안, 어린애로 무시하는 내용의 제안 등을 내걸고
+  그걸 수락할거라 착각하는 주된 이유이지 않을까 생각한다. 그리고 사실
+  어떤 사람들은 정말로 그런 개발자 역할극에 심취해 그걸 수락할지도
+  모르겠다. 아마 그렇게 이런 분위기로 달려왔으리라.</p>
+<p>
+  어쩌면 개발자들은 노조가 필요할지도 모르겠다. 하지만 자신들은 가장
+  노조가 필요 없다고 착각하는 부류인지도 모르겠다. 그리고 그렇기
+  때문에 사람들이 개발자 농담을 하고, 개발자를 그렇게 여기고, 또
+  정말로 자기 자신의 몸값이 계속해서 떨어질텐데도 말이다.</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+설치시 필요사양 / Minimum Requirements
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>소프트스킬, 커뮤니케이션 스킬, 소통 등등을 제대로 하기 위해서 먼저
+  필요했던 것이 없었기 때문에 이런 괴상한 모습으로 변질되었다고
+  생각한다.</p>
+<p>
+  먼저 책임을 남에게 전가하지 않기, 높은 사람이 되어서 책임을 전가하고
+  희생양을 찾지 않는 책임감과 도덕성, 그리고 그런 사람을 따르고 정말
+  유해한 사람이 누군지 알고 밀어내는 안목이 필요하다고 생각한다.</p>
+<p>
+  하지만 그것들은 어디까지나 수동적인 모습일 것이다. 오히려 노동조합을
+  만들어 권익을 지키고, 부당함이 없어도록 하고, 잘못된 일이 바로
+  잡히도록 하는 것, 그리고 그렇기 위해서 개발자 자신들이 단순히
+  취미로서 일이 좋아서 하는 마음가짐에서 벗어나서 사회의 일원으로,
+  경제주체로서 어떻게 행동해야 하는지, 그리고 그렇게 해야 자신이
+  좋아하는 일을 건강하게 계속해서 해나갈 수 있을지를 고민했으면
+  좋겠다.</p>
+<p>
+  여기에서 &#39;건강하게&#39;, &#39;지속가능하게&#39;라는 말을 그마저도 타성적으로,
+  그걸 자기계발의 연장으로 인식한다. 물론 건강을 위해, 지속적으로 하기
+  위해 체력을 기르고 개개인이 해야한다. 하지만 그럼에도 현실이 그런
+  운동을 하는 시간이나 체력을 허락하지 못한다면 뭔가 잘못된 것이고,
+  그렇게까지 또 다른 형태의 자기 계발의 투자를 강요 받는다면 더
+  사회적인 관점에서 접근해봤으면 좋겠다고 말해주고 싶다.</p>
+<p>
+  그렇게 해서, 정직함, 공정함의 가치가 제대로 평가 받아야 제대로된
+  대화를 시작할 수 있으리라 생각한다. 능숙함, 세련됨은 그 위에
+  세워져야 바른 모양이겠지.</p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p><a href="http://www.yes24.com/Product/goods/23161141">http://www.yes24.com/Product/goods/23161141</a></p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p><a href="http://blog.naver.com/rhfvm1111/220094902684">항공사고 블로그: 권위주의가 부른 참사, …화물기 추락사고</a></p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-3"><a href="#footnote-reference-3">3</a></sup>
+<div class="footnote-body">
+<p><a href="https://www.yna.co.kr/view/AKR20191205141300002">연합뉴스: 은행들의 탐욕…79세 치매노인도 졸지에 &#39;공격투자형&#39;</a> 그
+이후에 어느 정도 많이 복구와 보상이 있었던걸로 나는 알고 있다. 사회적
+이슈가 되어서 그나마 다행이었다고 생각한다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-4"><a href="#footnote-reference-4">4</a></sup>
+<div class="footnote-body">
+<p>나는 &lt;카네기 인간관계론&gt;이 꽤 맞는 이야기라고 생각하고 좋아했던
+책이기도 하다. 심지어 이런 부류의 사람들이 틀린 기술적인 자기 주관을
+자랑스럽게 설파할 때, 아 그렇습니까. 그렇지요 하면서 기분을 맞춰주려
+노력도 해봤다. 알아서 눈치채고 그만두기를 간절히 바라면서. 이런
+사람들은 다른 모든 사람들이 그걸 영원히 속아줄거라 착각하는거 같다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-5"><a href="#footnote-reference-5">5</a></sup>
+<div class="footnote-body">
+<p>&lt;삼국지&gt;, &lt;마키아벨리&gt;를 정말들 좋아한다. 자기가 조조나 제갈량,
+영웅, 군주나 지략가 등등이라고들 착각하지만, 그정도는 커녕 당장 당신
+앞에 있는 사람에게 당연히 제안할 것과 어떻게 예의를 갖추는게
+중요한지도 이해하지 못하며, 현실인지능력도 떨어진다. 대체 어떤
+생각으로 읽었는지, 머릿 속에 남은 생각이나 교훈이 뭔지 너무도 유치할거
+같아서 묻고 싶지도, 이에 대해서 대화하기 두렵다. 하지만 그걸
+자랑스럽게 떠들어대고는 해서 곤란하다면, 삼국지 등을 읽은 적이 없다고
+이야기 하는게 차라리 속이 편할 것이다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-6"><a href="#footnote-reference-6">6</a></sup>
+<div class="footnote-body">
+<p>아마 개개인이 속한 부득이한 경제적 사정, 상황에 의해 직업을
+구해야만 하니, 또 다르게는 더 그런 삶의 방식을 지속하고 싶은 욕심에
+그런 비용을 제공하는 직장을 구하려고 하니 어쩔 수 없겠지 생각한다.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/bullshit/">bullshit</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/communication/">communication</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/soft-skill/">soft-skill</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🚨";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-01jan/esup-emacs-init-speed/">⬅️ Emacs 시작 시간 빠르게 만들기</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-12dec/lisp-dynamic-and-lexical-bindings-and-js/">➡️ Lisp에서 Dynamic/Lexical Binding와 JavaScript의 var/let</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480572</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

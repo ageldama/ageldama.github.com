@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webfont on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/webfont/</link>
+    <description>Recent content in Webfont on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Mon, 21 Oct 2019 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/webfont/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>블로그 폰트 적용</title>
+      <link>https://ageldama.github.io/posts/2019-10oct/blog-font/</link>
+      <pubDate>Mon, 21 Oct 2019 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-10oct/blog-font/</guid>
+      <description>&lt;p&gt;그냥 CDN에서 내려받는 공개된 Noto 폰트를 적용했다. 깔끔하다.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;어제는 &lt;a href=&#34;https://dalgona.github.io/neodgm/&#34;&gt;네오둥근모&lt;/a&gt; 적용해서 완전 귀엽고 내 취향이기는했는데,&#xA;그렇게 두면 안될것 같아서 좀 평범한 폰트로 바꿨다.&lt;/p&gt;&#xA;&lt;p&gt;깔끔하게 글이 눈에 잘 들어오고 CDN에서 내려받으니 빨라서 좋다.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;&#xA;&lt;hr&gt;&#xA;&lt;ol&gt;&#xA;&lt;li id=&#34;fn:1&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.chungah.kr/use-notoserif-on-wordpress/&#34;&gt;워드프레스에서 본명조(Noto Serif CJK KR) 폰트 사용하기&lt;/a&gt; 이 포스팅을 참고. 고맙습니다. 글 쓰신분 아이디가 &lt;em&gt;이스크라&lt;/em&gt;(러시아어 &amp;lsquo;불꽃&amp;rsquo;)이라니&amp;hellip; 심장이 뜨거워진다.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

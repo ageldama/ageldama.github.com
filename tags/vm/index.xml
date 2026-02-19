@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vm on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/vm/</link>
+    <description>Recent content in Vm on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Wed, 21 Jan 2026 04:00:09 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/vm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>잃어버린 결제모듈 소스코드와 VB6 P-Code</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/vb6-pcode-for-activex/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/vb6-pcode-for-activex/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;어느 계약직 X&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;어느 회사에 계약직으로 일하던 때였다. 이 이야기도 거의 2010여년&#xA;  전후일 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  바보인척하며 그냥 명랑하게, 그리고 받은 일을 충실히 최선을 다하며&#xA;  그냥 지내던 때였다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  정직원들은, 그렇게 친절하지는 못했다. 나이도 나보다 많았고, 이미&#xA;  법정관리에 들어간(2번째) 회사였었는데, 어쨌든 그렇게 아름다운 관계는&#xA;  되기 어려웠다. ㅎㅎ&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-3&#34;&gt;&#xA;&lt;h3 id=&#34;headline-2&#34;&gt;&#xA;친구들, 구내식당, 그리고 미성숙한 자신에 대한 후회&#xA;&lt;/h3&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-3&#34;&gt;&#xA;&lt;p&gt;출퇴근하기 좋고, 어쨌든 남들이 뭐라고 하건 좋은 성과를 내고 충실하고&#xA;  정직하게 일했던거 같다. 그리고 그게 나쁘진 않았다. 그냥 나를&#xA;  이해해주고 제대로 평가해주는 팀장님이나 그냥 비슷한 또래의 다른&#xA;  정직원이나 또다른 계약직과 친하게 지내며 21층 구내식당에서 행복하게&#xA;  밥을 먹으며 서로 더러운 농담을 만들며 킬킬거리며 잘 지냈던거 같다.&#xA;  PC하지는 못한 농담들이었다. ♂️❤️&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>jq manpage와 code</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/06jun12sun--02-jq-as-vm/</link>
+      <pubDate>Sun, 12 Jun 2022 13:45:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2022-06jun/06jun12sun--02-jq-as-vm/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://stedolan.github.io/jq/&#34;&gt;https://stedolan.github.io/jq/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;jq이 뭐하는 도구인지 소개는 한국어로 많은데, 그걸 갖고 조금 복잡한 패턴을 처리하는 자료는,&#xA;머리 나쁜 내가 이해하기에 적합한 자료는 찾지 못해서, 그냥 manpage을 읽고 시도.&lt;/p&gt;&#xA;&lt;p&gt;이미 알고 있는 도구, 혹은 이미 대부분의 unix-like, linux 시스템에 깔려있는 도구들이 있는데,&#xA;막상 그 도구의 manpage을 차분히 읽어 보면, 내가 너무 게을렀었고 알려고 하지 않았기에&#xA;내 삶을 더 도움을 받을 수 있었을텐데, 그렇지 못했었던 도구들이 많은것 같아.&lt;/p&gt;&#xA;&lt;p&gt;gnu coreutils, m4, awk, perl 만 해도 그랬었고, 조금이라도 알아가고 응용을 할수록 매일매일이&#xA;더 재밌고 강력해졌었던거 같아.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

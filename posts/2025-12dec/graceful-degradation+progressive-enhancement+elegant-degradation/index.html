@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>‘graceful degradation’, ‘progressive enhancement’ - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480573">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+  하나씩 정리해보자.
+
+  이하의 정리는 “웹개발”, “웹페이지” 유지보수 관점/도메인의 시점에서,
+  다른 도메인(예=전자제품)에서의 정의와 완전히 일치하지는 않을거 같다.
+
+  위키백과나 다른 블로그에서 소개한 글들은 전자제품, 전자통신 등의
+  관점, 개념, 용어 중심으로 풀어 설명했기 때문에 웹개발의 관점에선 잘
+  모르겠었어서. (원저자분들 죄송합니다. 🙇)
+
+  즉, 이하에 소개할 링크에서 W3C의 정의에 따라 이해해보려고 함.
+
+
+“progressive enhancement” -or- “graceful degradation”?
+
+
+
+W3C Wiki Graceful degradation versus progressive enhancement
+기계인간 John Grib 우아한 성능 저하 (graceful degradation)
+
+
+  조금 뭔지 모를 영어가 많이 나와서 혼란스럽다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/">⬅️ 새로운 묶음법: “📚시리즈(Series)”</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost&#43;dark-mode/">➡️ htmx 마법으로 링크성능 빠르게 &#43; dark-mode 깜빡임 제거</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">“progressive enhancement” -or- “graceful degradation”?</a>
+<ul>
+<li><a href="#headline-2">“Graceful Degradation”</a>
+</li>
+<li><a href="#headline-3">“Progressive Enhancement”</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-4">“우로 가나 모로 가나 그게 그거 아냐?”</a>
+<ul>
+<li><a href="#headline-5">graceful degradation을 고려할 때:</a>
+</li>
+<li><a href="#headline-6">progressive enhancement은:</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🌬️ ‘graceful degradation’, ‘progressive enhancement’</h1>
+	    <div class="meta">
+                <time datetime="2025-12-23" pubdate>
+                    2025년12월23일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+  하나씩 정리해보자.</p>
+<p>
+  이하의 정리는 “웹개발”, “웹페이지” 유지보수 관점/도메인의 시점에서,
+  다른 도메인(예=전자제품)에서의 정의와 완전히 일치하지는 않을거 같다.</p>
+<p>
+  위키백과나 다른 블로그에서 소개한 글들은 전자제품, 전자통신 등의
+  관점, 개념, 용어 중심으로 풀어 설명했기 때문에 웹개발의 관점에선 잘
+  모르겠었어서. (원저자분들 죄송합니다. 🙇)</p>
+<p>
+  즉, 이하에 소개할 링크에서 W3C의 정의에 따라 이해해보려고 함.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+“progressive enhancement” -or- “graceful degradation”?
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li>W3C Wiki <a href="https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement">Graceful degradation versus progressive enhancement</a></li>
+<li>기계인간 John Grib <a href="https://johngrib.github.io/wiki/jargon/graceful-degradation/">우아한 성능 저하 (graceful degradation)</a></li>
+</ol>
+<p>
+  조금 뭔지 모를 영어가 많이 나와서 혼란스럽다.</p>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+“Graceful Degradation”
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<ol>
+<li>‘기능’ 구현의 대상이 현대적인 웹브라우저를 대상으로 구현.</li>
+<li>그리고 그 구현대상인 현대 웹브라우저를 기준으로 ‘사용자경험’이
+최적이 되도록 설계/구현.</li>
+<li>반면, 구형 웹브라우저에서는 약간의 사용자경험이 떨어질 수는
+있는.</li>
+<li>하지만, 그럼에도 구형 웹브라우저에서도 기능적인 측면에서는
+여전히 기본적인 기능이 잘 동작해야 함.</li>
+<li>즉, 최적의/최대한의 사용자경험을 제공하는 것을 우선목표로 하고,
+그 다음에 그걸 수행하지 못하는 환경을 배려하는 설계-구현을
+더하는 방식.</li>
+</ol>
+<p>
+   즉, 가능하면 최신의 기능이나 지원을 잘 활용하여 설계-구현하되, 그게
+   지원되지 않는 환경에서도 적당히 쓸 수 있도록 하는 방식.</p>
+<p>
+   (예: 👉 <a href="/posts/2025-12dec/htmx-hx-boost+dark-mode/">/posts/2025-12dec/htmx-hx-boost+dark-mode/</a> )</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+“Progressive Enhancement”
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<ol>
+<li>(반대로) 기초적인 사용자경험을 우선목표로 시작하는 방식.</li>
+<li>그리고 거기에 추가적인 지원이 가능한 환경을 위해, 더 나은
+사용자경험을 지원하는 설계-구현이 자동적으로 덧붙여질 수 있도록
+하는 방식.</li>
+<li>즉, ‘최대공약수’, ‘하한선’, ‘lower limit’에 맞춰서 설계-구현의
+주요목표를 설정하는 방식.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+“우로 가나 모로 가나 그게 그거 아냐?”
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>최종결과물이 비슷하게 나온다면 그래 보일 수 있음. 😅</p>
+<p>
+  하지만, 접근방식의 차이이기 때문에 그 과정과 선택하는 시점의 이유는
+  명확히 다른거 같다.</p>
+<p>
+  이건 그냥  W3C 페이지에서 복붙하겠음:</p>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+graceful degradation을 고려할 때:
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<ol>
+<li>
+<p>리거시에 대한 낮은 가시성/접근성 또는 개선을 위한 시간/자원의
+부족:</p>
+<ul>
+<li>You retrofit an old product and you don’t have the time,
+access or insight to change or replace it.</li>
+</ul>
+</li>
+<li>
+<p>You just don’t have time to finish a product with full
+progressive enhancement</p>
+<ul>
+<li>(often a sign of bad planning or running out of budget). 😥</li>
+</ul>
+</li>
+<li>
+<p>혹은 변경에 따른 위험도가 너무 큼</p>
+<ul>
+<li>The product you have is an edge case, for example very high
+traffic sites where every millisecond of performance means a
+difference of millions of dollars.</li>
+</ul>
+</li>
+<li>Your product by definition is so dependent on scripting that it
+makes more sense to maintain a “basic” version rather than
+enhancing one (Maps, email clients, feed readers).</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-3">
+<h3 id="headline-6">
+progressive enhancement은:
+</h3>
+<div id="outline-text-headline-6" class="outline-text-3">
+<p>적용가능하다면, 사용자와 개발자 양자를 모두 행복하게 할 가능성이
+   높다고.. 잘 isolated + high-cohesive + low-coupled 모듈의 정의와
+   유사함을 알 수 있음.</p>
+<ol>
+<li>Regardless of environment and ability you deliver a product that
+works.</li>
+<li>When a new browser comes out or a browser extension becomes
+widely adopted you can enhance to yet another level without
+having to touch the original solution — graceful degradation
+would require you to alter the original solution.</li>
+<li>When a new browser comes out or a browser extension becomes
+widely adopted you can enhance to yet another level without
+having to touch the original solution — graceful degradation
+would require you to alter the original solution.</li>
+<li>If you need to add new features, you can do so after checking if
+they are supported at a certain stage, or you can add it to the
+most basic level of functionality and make it better in more
+sophisticated environments. In any case, the maintenance happens
+at the same spot and not in two different places. Keeping a
+progressively enhanced product up-to-date is much less work than
+maintaining two versions.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/til/">TIL</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/graceful-degradation/">graceful-degradation</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/progressive-enhancement/">progressive-enhancement</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🌬️";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/new-taxonomy--series/">⬅️ 새로운 묶음법: “📚시리즈(Series)”</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost&#43;dark-mode/">➡️ htmx 마법으로 링크성능 빠르게 &#43; dark-mode 깜빡임 제거</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480573</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

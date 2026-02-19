@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[TIL] common-lisp defmacro와 forward-declaration - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480573">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+의외로 단순한건데, 컴파일한 sbcl image에서 runtime에 unbound variable
+컨디션을 발생시킬 수 있음.
+
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+
+
+  (defmacro with-foo-bar (base-str (foo-var bar-var) &amp;rest body)
+    &#34;BASE-STR에 foo, bar 문자열을 붙인 FOO-VAR, BAR-VAR 바인딩을 만들어,
+  BODY을 해당 바인딩을 적용하여 실행&#34;
+    ;; NOTE let-대신 symbol-macrolet 사용해도 ok:
+    `(let ((,foo-var (format nil &#34;FOO:~a&#34; ,base-str))
+           (,bar-var (format nil &#34;BAR:~a&#34; ,base-str)))
+       ,@body))
+
+  ;;; 매크로 with-foo-bar 사용:
+  (with-foo-bar &#34;hello&#34; (a b)
+    (format t &#34;~a // ~a~%&#34; a b))
+  ;; [OUTPUT] FOO:hello // BAR:hello
+
+
+
+
+단순하게 코드가 커지면1, defmacro-선언보다 해당매크로 호출이
+컴파일러가 볼 때에 먼저 위치할 수 있는데, 그런 경우엔 좀 어이없지만,
+unbound variable 런타임 컨디션이 발생." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/">⬅️ 내 emacs elisp &#34;requires&#34;</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">➡️ [throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">일단 추론은:</a>
+</li>
+<li><a href="#headline-2">그래서 실험:</a>
+<ul>
+<li><a href="#headline-3">disassembly -bug</a>
+</li>
+<li><a href="#headline-4">disassembly +bug</a>
+</li>
+<li><a href="#headline-5">결론</a>
+</li>
+<li><a href="#headline-6">[EDIT] [2025-11-10 Mon]</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-7">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🧬 [TIL] common-lisp defmacro와 forward-declaration</h1>
+	    <div class="meta">
+                <time datetime="2025-11-10" pubdate>
+                    2025년11월10일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+의외로 단순한건데, 컴파일한 sbcl image에서 runtime에 unbound variable
+컨디션을 발생시킬 수 있음.</p>
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defmacro</span> <span class="nv">with-foo-bar</span> <span class="p">(</span><span class="nv">base-str</span> <span class="p">(</span><span class="nv">foo-var</span> <span class="nv">bar-var</span><span class="p">)</span> <span class="k">&amp;rest</span> <span class="nv">body</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;BASE-STR에 foo, bar 문자열을 붙인 FOO-VAR, BAR-VAR 바인딩을 만들어,
+</span></span></span><span class="line"><span class="cl"><span class="s">  BODY을 해당 바인딩을 적용하여 실행&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">;; NOTE let-대신 symbol-macrolet 사용해도 ok:</span>
+</span></span><span class="line"><span class="cl">    <span class="o">`</span><span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="o">,</span><span class="nv">foo-var</span> <span class="p">(</span><span class="nf">format</span> <span class="no">nil</span> <span class="s">&#34;FOO:~a&#34;</span> <span class="o">,</span><span class="nv">base-str</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="o">,</span><span class="nv">bar-var</span> <span class="p">(</span><span class="nf">format</span> <span class="no">nil</span> <span class="s">&#34;BAR:~a&#34;</span> <span class="o">,</span><span class="nv">base-str</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">       <span class="o">,@</span><span class="nv">body</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; 매크로 with-foo-bar 사용:</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">with-foo-bar</span> <span class="s">&#34;hello&#34;</span> <span class="p">(</span><span class="nv">a</span> <span class="nv">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">format</span> <span class="no">t</span> <span class="s">&#34;~a // ~a~%&#34;</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;; [OUTPUT] FOO:hello // BAR:hello</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+단순하게 코드가 커지면<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, <code>defmacro</code>-선언보다 해당매크로 호출이
+컴파일러가 볼 때에 먼저 위치할 수 있는데, 그런 경우엔 좀 어이없지만,
+<code>unbound variable</code> 런타임 컨디션이 발생.</p>
+<p>
+이유를 생각해보면,</p>
+<ol>
+<li>단순히 <code>with-foo-bar</code>-자체를 참조하지 못해서가 아니라,</li>
+<li>
+<p><code>(with-foo-bar &#34;hello&#34; (a b) ...)</code>-에서 <code>(a b)</code>-부분 때문.</p>
+<ol>
+<li>macro expansion rule이 아니라,</li>
+<li>form expression의 평가규칙을 적용하느라,
+즉, <code>a</code>-함수를 <code>(b)</code>-을 인자로 호출하려고 시도.</li>
+<li>…컨디션의 에러메시지는 매크로이름이랑 상관 없이, <code>Unbound
+variable: a / b</code>-와 같이만 표시하므로 더 혼란스러워짐.</li>
+</ol>
+</li>
+</ol>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+일단 추론은:
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li>
+<p>sbcl 컴파일해도, 결국 실행시간에 defmacro한 것도 macro-expansion을
+수행하려고 하는구나.</p>
+<ul>
+<li>…그말인 즉, 컴파일시간에 확장해놓고 실행해도 될 부분도 그렇게
+하는게 기본 컴파일된 코드구나 싶어서 당혹.</li>
+</ul>
+</li>
+<li>…라고 납득하려고 했으나, 말이 않되는거란 생각: 그럴거면 뭐하러
+<a href="https://www.lispworks.com/documentation/HyperSpec/Body/s_eval_w.htm#eval-when">eval-when</a> 등으로 컴파일시점을 분리해놓았겠는가;;</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+그래서 실험:
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p><a href="https://github.com/ageldama/defmacro-forward-declaration--example">https://github.com/ageldama/defmacro-forward-declaration--example</a></p>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+disassembly -bug
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<ul>
+<li>
+<p>다음과 같이, 그리고 알고 있는 것과 같이, macro-expanded한 코드를
+생성한다.</p>
+<ul>
+<li>다른 함수를 호출할 것도 없이, 그 함수 내용으로 코드가 복사된
+것을 확인.</li>
+</ul>
+</li>
+</ul>
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
+</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
+</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
+</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
+</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
+</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
+</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
+</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
+</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
+</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
+</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
+</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
+</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
+</span><span class="lnt" id="29"><a class="lnlinks" href="#29">29</a>
+</span><span class="lnt" id="30"><a class="lnlinks" href="#30">30</a>
+</span><span class="lnt" id="31"><a class="lnlinks" href="#31">31</a>
+</span><span class="lnt" id="32"><a class="lnlinks" href="#32">32</a>
+</span><span class="lnt" id="33"><a class="lnlinks" href="#33">33</a>
+</span><span class="lnt" id="34"><a class="lnlinks" href="#34">34</a>
+</span><span class="lnt" id="35"><a class="lnlinks" href="#35">35</a>
+</span><span class="lnt" id="36"><a class="lnlinks" href="#36">36</a>
+</span><span class="lnt" id="37"><a class="lnlinks" href="#37">37</a>
+</span><span class="lnt" id="38"><a class="lnlinks" href="#38">38</a>
+</span><span class="lnt" id="39"><a class="lnlinks" href="#39">39</a>
+</span><span class="lnt" id="40"><a class="lnlinks" href="#40">40</a>
+</span><span class="lnt" id="41"><a class="lnlinks" href="#41">41</a>
+</span><span class="lnt" id="42"><a class="lnlinks" href="#42">42</a>
+</span><span class="lnt" id="43"><a class="lnlinks" href="#43">43</a>
+</span><span class="lnt" id="44"><a class="lnlinks" href="#44">44</a>
+</span><span class="lnt" id="45"><a class="lnlinks" href="#45">45</a>
+</span><span class="lnt" id="46"><a class="lnlinks" href="#46">46</a>
+</span><span class="lnt" id="47"><a class="lnlinks" href="#47">47</a>
+</span><span class="lnt" id="48"><a class="lnlinks" href="#48">48</a>
+</span><span class="lnt" id="49"><a class="lnlinks" href="#49">49</a>
+</span><span class="lnt" id="50"><a class="lnlinks" href="#50">50</a>
+</span><span class="lnt" id="51"><a class="lnlinks" href="#51">51</a>
+</span><span class="lnt" id="52"><a class="lnlinks" href="#52">52</a>
+</span><span class="lnt" id="53"><a class="lnlinks" href="#53">53</a>
+</span><span class="lnt" id="54"><a class="lnlinks" href="#54">54</a>
+</span><span class="lnt" id="55"><a class="lnlinks" href="#55">55</a>
+</span><span class="lnt" id="56"><a class="lnlinks" href="#56">56</a>
+</span><span class="lnt" id="57"><a class="lnlinks" href="#57">57</a>
+</span><span class="lnt" id="58"><a class="lnlinks" href="#58">58</a>
+</span><span class="lnt" id="59"><a class="lnlinks" href="#59">59</a>
+</span><span class="lnt" id="60"><a class="lnlinks" href="#60">60</a>
+</span><span class="lnt" id="61"><a class="lnlinks" href="#61">61</a>
+</span><span class="lnt" id="62"><a class="lnlinks" href="#62">62</a>
+</span><span class="lnt" id="63"><a class="lnlinks" href="#63">63</a>
+</span><span class="lnt" id="64"><a class="lnlinks" href="#64">64</a>
+</span><span class="lnt" id="65"><a class="lnlinks" href="#65">65</a>
+</span><span class="lnt" id="66"><a class="lnlinks" href="#66">66</a>
+</span><span class="lnt" id="67"><a class="lnlinks" href="#67">67</a>
+</span><span class="lnt" id="68"><a class="lnlinks" href="#68">68</a>
+</span><span class="lnt" id="69"><a class="lnlinks" href="#69">69</a>
+</span><span class="lnt" id="70"><a class="lnlinks" href="#70">70</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="c1">; disassembly for DEFMACRO-FORWARD-DECLARATION:MAIN</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; Size: 294 bytes. Origin: #xB8000952BF                       ; DEFMACRO-FORWARD-DECLARATION:MAIN</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2BF:       498B4510         MOV RAX, [R13+16]               ; thread.binding-stack-pointer</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2C3:       488945F8         MOV [RBP-8], RAX</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2C7:       488B0592FFFFFF   MOV RAX, [RIP-110]              ; &#39;DEFMACRO-FORWARD-DECLARATION:MAIN</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2CE:       488B5009         MOV RDX, [RAX+9]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2D2:       85D2             TEST EDX, EDX</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2D4:       0F8408010000     JE L0</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2DA:       4883EC10         SUB RSP, 16</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2DE:       B902000000       MOV ECX, 2</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2E3:       48892C24         MOV [RSP], RBP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2E7:       488BEC           MOV RBP, RSP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2EA:       FF15D0E3A6FF     CALL [RIP-5839920]              ; DISASSEMBLE</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2F0:       4883EC10         SUB RSP, 16</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2F4:       488B156DFFFFFF   MOV RDX, [RIP-147]              ; &#34;FOO:&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 2FB:       488B3D6EFFFFFF   MOV RDI, [RIP-146]              ; &#34;hello&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 302:       B904000000       MOV ECX, 4</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 307:       48892C24         MOV [RSP], RBP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 30B:       488BEC           MOV RBP, RSP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 30E:       FF15AC80A7FF     CALL [RIP-5799764]              ; SB-KERNEL:%CONCATENATE-TO-STRING</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 314:       4C8BCA           MOV R9, RDX</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 317:       4C894DE0         MOV [RBP-32], R9</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 31B:       4883EC10         SUB RSP, 16</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 31F:       488B1552FFFFFF   MOV RDX, [RIP-174]              ; &#34;BAR:&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 326:       488B3D43FFFFFF   MOV RDI, [RIP-189]              ; &#34;hello&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 32D:       B904000000       MOV ECX, 4</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 332:       48892C24         MOV [RSP], RBP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 336:       488BEC           MOV RBP, RSP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 339:       FF158180A7FF     CALL [RIP-5799807]              ; SB-KERNEL:%CONCATENATE-TO-STRING</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 33F:       4C8B4DE0         MOV R9, [RBP-32]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 343:       488955F0         MOV [RBP-16], RDX</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 347:       4D8B8578030000   MOV R8, [R13+888]               ; tls: *STANDARD-OUTPUT*</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 34E:       4983F8FF         CMP R8, -1</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 352:       4C0F440425307D0450 CMOVE R8, [#x50047D30]        ; *STANDARD-OUTPUT*</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 35B:       4C8945E8         MOV [RBP-24], R8</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 35F:       4883EC10         SUB RSP, 16</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 363:       498BD1           MOV RDX, R9</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 366:       488B7DE8         MOV RDI, [RBP-24]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 36A:       B904000000       MOV ECX, 4</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 36F:       48892C24         MOV [RSP], RBP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 373:       488BEC           MOV RBP, RSP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 376:       FF158CB5A6FF     CALL [RIP-5851764]              ; WRITE-STRING</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 37C:       4883EC10         SUB RSP, 16</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 380:       488B1501FFFFFF   MOV RDX, [RIP-255]              ; &#34; // &#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 387:       488B7DE8         MOV RDI, [RBP-24]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 38B:       B904000000       MOV ECX, 4</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 390:       48892C24         MOV [RSP], RBP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 394:       488BEC           MOV RBP, RSP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 397:       FF156BB5A6FF     CALL [RIP-5851797]              ; WRITE-STRING</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 39D:       4883EC10         SUB RSP, 16</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3A1:       488B55F0         MOV RDX, [RBP-16]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3A5:       488B7DE8         MOV RDI, [RBP-24]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3A9:       B904000000       MOV ECX, 4</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3AE:       48892C24         MOV [RSP], RBP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3B2:       488BEC           MOV RBP, RSP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3B5:       FF154DB5A6FF     CALL [RIP-5851827]              ; WRITE-STRING</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3BB:       4883EC10         SUB RSP, 16</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3BF:       BA510A0000       MOV EDX, 2641</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3C4:       488B7DE8         MOV RDI, [RBP-24]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3C8:       B904000000       MOV ECX, 4</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3CD:       48892C24         MOV [RSP], RBP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3D1:       488BEC           MOV RBP, RSP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3D4:       FF1546B1A6FF     CALL [RIP-5852858]              ; WRITE-CHAR</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3DA:       498BD4           MOV RDX, R12                    ; NIL</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3DD:       C9               LEAVE</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3DE:       F8               CLC</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3DF:       C3               RET</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3E0:       CC0F             INT3 15                         ; Invalid argument count trap</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3E2: L0:   CC13             INT3 19                         ; UNDEFINED-FUN-ERROR</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 3E4:       00               BYTE #X00                       ; RAX(d)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+disassembly +bug
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<ul>
+<li>
+<p>(추론대로) A, B 심볼을 함수로서 호출하려고 애쓰다 디버거로 빠져든
+상황이다.</p>
+<ul>
+<li>디버거에서 disassemble:</li>
+</ul>
+</li>
+</ul>
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
+</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
+</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
+</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
+</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
+</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
+</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
+</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
+</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
+</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
+</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
+</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
+</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
+</span><span class="lnt" id="29"><a class="lnlinks" href="#29">29</a>
+</span><span class="lnt" id="30"><a class="lnlinks" href="#30">30</a>
+</span><span class="lnt" id="31"><a class="lnlinks" href="#31">31</a>
+</span><span class="lnt" id="32"><a class="lnlinks" href="#32">32</a>
+</span><span class="lnt" id="33"><a class="lnlinks" href="#33">33</a>
+</span><span class="lnt" id="34"><a class="lnlinks" href="#34">34</a>
+</span><span class="lnt" id="35"><a class="lnlinks" href="#35">35</a>
+</span><span class="lnt" id="36"><a class="lnlinks" href="#36">36</a>
+</span><span class="lnt" id="37"><a class="lnlinks" href="#37">37</a>
+</span><span class="lnt" id="38"><a class="lnlinks" href="#38">38</a>
+</span><span class="lnt" id="39"><a class="lnlinks" href="#39">39</a>
+</span><span class="lnt" id="40"><a class="lnlinks" href="#40">40</a>
+</span><span class="lnt" id="41"><a class="lnlinks" href="#41">41</a>
+</span><span class="lnt" id="42"><a class="lnlinks" href="#42">42</a>
+</span><span class="lnt" id="43"><a class="lnlinks" href="#43">43</a>
+</span><span class="lnt" id="44"><a class="lnlinks" href="#44">44</a>
+</span><span class="lnt" id="45"><a class="lnlinks" href="#45">45</a>
+</span><span class="lnt" id="46"><a class="lnlinks" href="#46">46</a>
+</span><span class="lnt" id="47"><a class="lnlinks" href="#47">47</a>
+</span><span class="lnt" id="48"><a class="lnlinks" href="#48">48</a>
+</span><span class="lnt" id="49"><a class="lnlinks" href="#49">49</a>
+</span><span class="lnt" id="50"><a class="lnlinks" href="#50">50</a>
+</span><span class="lnt" id="51"><a class="lnlinks" href="#51">51</a>
+</span><span class="lnt" id="52"><a class="lnlinks" href="#52">52</a>
+</span><span class="lnt" id="53"><a class="lnlinks" href="#53">53</a>
+</span><span class="lnt" id="54"><a class="lnlinks" href="#54">54</a>
+</span><span class="lnt" id="55"><a class="lnlinks" href="#55">55</a>
+</span><span class="lnt" id="56"><a class="lnlinks" href="#56">56</a>
+</span><span class="lnt" id="57"><a class="lnlinks" href="#57">57</a>
+</span><span class="lnt" id="58"><a class="lnlinks" href="#58">58</a>
+</span><span class="lnt" id="59"><a class="lnlinks" href="#59">59</a>
+</span><span class="lnt" id="60"><a class="lnlinks" href="#60">60</a>
+</span><span class="lnt" id="61"><a class="lnlinks" href="#61">61</a>
+</span><span class="lnt" id="62"><a class="lnlinks" href="#62">62</a>
+</span><span class="lnt" id="63"><a class="lnlinks" href="#63">63</a>
+</span><span class="lnt" id="64"><a class="lnlinks" href="#64">64</a>
+</span><span class="lnt" id="65"><a class="lnlinks" href="#65">65</a>
+</span><span class="lnt" id="66"><a class="lnlinks" href="#66">66</a>
+</span><span class="lnt" id="67"><a class="lnlinks" href="#67">67</a>
+</span><span class="lnt" id="68"><a class="lnlinks" href="#68">68</a>
+</span><span class="lnt" id="69"><a class="lnlinks" href="#69">69</a>
+</span><span class="lnt" id="70"><a class="lnlinks" href="#70">70</a>
+</span><span class="lnt" id="71"><a class="lnlinks" href="#71">71</a>
+</span><span class="lnt" id="72"><a class="lnlinks" href="#72">72</a>
+</span><span class="lnt" id="73"><a class="lnlinks" href="#73">73</a>
+</span><span class="lnt" id="74"><a class="lnlinks" href="#74">74</a>
+</span><span class="lnt" id="75"><a class="lnlinks" href="#75">75</a>
+</span><span class="lnt" id="76"><a class="lnlinks" href="#76">76</a>
+</span><span class="lnt" id="77"><a class="lnlinks" href="#77">77</a>
+</span><span class="lnt" id="78"><a class="lnlinks" href="#78">78</a>
+</span><span class="lnt" id="79"><a class="lnlinks" href="#79">79</a>
+</span><span class="lnt" id="80"><a class="lnlinks" href="#80">80</a>
+</span><span class="lnt" id="81"><a class="lnlinks" href="#81">81</a>
+</span><span class="lnt" id="82"><a class="lnlinks" href="#82">82</a>
+</span><span class="lnt" id="83"><a class="lnlinks" href="#83">83</a>
+</span><span class="lnt" id="84"><a class="lnlinks" href="#84">84</a>
+</span><span class="lnt" id="85"><a class="lnlinks" href="#85">85</a>
+</span><span class="lnt" id="86"><a class="lnlinks" href="#86">86</a>
+</span><span class="lnt" id="87"><a class="lnlinks" href="#87">87</a>
+</span><span class="lnt" id="88"><a class="lnlinks" href="#88">88</a>
+</span><span class="lnt" id="89"><a class="lnlinks" href="#89">89</a>
+</span><span class="lnt" id="90"><a class="lnlinks" href="#90">90</a>
+</span><span class="lnt" id="91"><a class="lnlinks" href="#91">91</a>
+</span><span class="lnt" id="92"><a class="lnlinks" href="#92">92</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="nv">debugger</span> <span class="nv">invoked</span> <span class="nv">on</span> <span class="nv">a</span> <span class="nv">UNBOUND-VARIABLE</span> <span class="nv">@B80009505A</span> <span class="nv">in</span> <span class="nv">thread</span>
+</span></span><span class="line"><span class="cl">  <span class="err">#</span><span class="nv">&lt;THREAD</span> <span class="nv">tid=37091</span> <span class="s">&#34;main thread&#34;</span> <span class="nv">RUNNING</span> <span class="nv">{1200030003}&gt;:</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">The</span> <span class="nv">variable</span> <span class="nv">DEFMACRO-FORWARD-DECLARATION::B</span> <span class="nv">is</span> <span class="nv">unbound.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nv">Type</span> <span class="nv">HELP</span> <span class="nv">for</span> <span class="nv">debugger</span> <span class="nv">help,</span> <span class="nb">or</span> <span class="p">(</span><span class="nv">SB-EXT:EXIT</span><span class="p">)</span> <span class="nv">to</span> <span class="nv">exit</span> <span class="nv">from</span> <span class="nv">SBCL.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nv">restarts</span> <span class="p">(</span><span class="nv">invokable</span> <span class="nv">by</span> <span class="nc">number</span> <span class="nb">or</span> <span class="nv">by</span> <span class="nv">possibly-abbreviated</span> <span class="nv">name</span><span class="p">)</span><span class="err">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">0:</span> <span class="nv">[CONTINUE</span>   <span class="nv">]</span> <span class="nv">Retry</span> <span class="nv">using</span> <span class="nv">DEFMACRO-FORWARD-DECLARATION::B.</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">1:</span> <span class="nv">[USE-VALUE</span>  <span class="nv">]</span> <span class="nv">Use</span> <span class="nv">specified</span> <span class="nv">value.</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">2:</span> <span class="nv">[STORE-VALUE]</span> <span class="nv">Set</span> <span class="nv">specified</span> <span class="nv">value</span> <span class="nb">and</span> <span class="nv">use</span> <span class="nv">it.</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">3:</span> <span class="nv">[ABORT</span>      <span class="nv">]</span> <span class="nv">Exit</span> <span class="nv">from</span> <span class="k">the</span> <span class="nv">current</span> <span class="nv">thread.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">DEFMACRO-FORWARD-DECLARATION:MAIN</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">     <span class="nv">source:</span> <span class="p">(</span><span class="nv">A</span> <span class="nv">B</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">0]</span> <span class="p">(</span><span class="nf">disassemble</span> <span class="nf">#&#39;</span><span class="nv">dmfd:main</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; disassembly for DEFMACRO-FORWARD-DECLARATION:MAIN</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; Size: 323 bytes. Origin: #xB800094F1F                       ; DEFMACRO-FORWARD-DECLARATION:MAIN</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F1F:       498B4510         MOV RAX, [R13+16]              ; thread.binding-stack-pointer</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F23:       488945F8         MOV [RBP-8], RAX</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F27:       4C8B05A2FFFFFF   MOV R8, [RIP-94]               ; &#39;DEFMACRO-FORWARD-DECLARATION::B</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F2E:       418B50F5         MOV EDX, [R8-11]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F32:       4A8B142A         MOV RDX, [RDX+R13]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F36:       4883FAFF         CMP RDX, -1</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F3A:       490F445001       CMOVE RDX, [R8+1]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F3F:       80FA09           CMP DL, 9</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F42:       0F8411010000     JE L0</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F48:       4883EC10         SUB RSP, 16</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F4C:       B902000000       MOV ECX, 2</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F51:       48892C24         MOV [RSP], RBP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F55:       488BEC           MOV RBP, RSP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F58:       FF153A97A7FF     CALL [RIP-5793990]             ; DEFMACRO-FORWARD-DECLARATION::A</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F5E:       480F42E3         CMOVB RSP, RBX</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F62:       488955E8         MOV [RBP-24], RDX</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F66:       4C8B056BFFFFFF   MOV R8, [RIP-149]              ; &#39;DEFMACRO-FORWARD-DECLARATION::A</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F6D:       418B50F5         MOV EDX, [R8-11]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F71:       4A8B142A         MOV RDX, [RDX+R13]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F75:       4883FAFF         CMP RDX, -1</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F79:       490F445001       CMOVE RDX, [R8+1]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F7E:       80FA09           CMP DL, 9</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F81:       0F84D5000000     JE L1</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F87:       4C8B0542FFFFFF   MOV R8, [RIP-190]              ; &#39;DEFMACRO-FORWARD-DECLARATION::B</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F8E:       418B40F5         MOV EAX, [R8-11]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F92:       4A8B0428         MOV RAX, [RAX+R13]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F96:       4883F8FF         CMP RAX, -1</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F9A:       490F444001       CMOVE RAX, [R8+1]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4F9F:       3C09             CMP AL, 9</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FA1:       0F84B8000000     JE L2</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FA7:       488945F0         MOV [RBP-16], RAX</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FAB:       4D8B8D78030000   MOV R9, [R13+888]              ; tls: *STANDARD-OUTPUT*</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FB2:       4983F9FF         CMP R9, -1</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FB6:       4C0F440C25307D0450 CMOVE R9, [#x50047D30]       ; *STANDARD-OUTPUT*</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FBF:       4C894DE0         MOV [RBP-32], R9</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FC3:       4883EC10         SUB RSP, 16</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FC7:       488B7DE0         MOV RDI, [RBP-32]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FCB:       B904000000       MOV ECX, 4</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FD0:       48892C24         MOV [RSP], RBP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FD4:       488BEC           MOV RBP, RSP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FD7:       FF153BC3A6FF     CALL [RIP-5848261]             ; PRINC</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FDD:       4883EC10         SUB RSP, 16</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FE1:       488B1500FFFFFF   MOV RDX, [RIP-256]             ; &#34; // &#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FE8:       488B7DE0         MOV RDI, [RBP-32]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FEC:       B904000000       MOV ECX, 4</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FF1:       48892C24         MOV [RSP], RBP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FF5:       488BEC           MOV RBP, RSP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FF8:       FF150AB9A6FF     CALL [RIP-5850870]             ; WRITE-STRING</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 4FFE:       4883EC10         SUB RSP, 16</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5002:       488B55F0         MOV RDX, [RBP-16]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5006:       488B7DE0         MOV RDI, [RBP-32]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 500A:       B904000000       MOV ECX, 4</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 500F:       48892C24         MOV [RSP], RBP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5013:       488BEC           MOV RBP, RSP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5016:       FF15FCC2A6FF     CALL [RIP-5848324]             ; PRINC</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 501C:       4883EC10         SUB RSP, 16</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5020:       BA510A0000       MOV EDX, 2641</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5025:       488B7DE0         MOV RDI, [RBP-32]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5029:       B904000000       MOV ECX, 4</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 502E:       48892C24         MOV [RSP], RBP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5032:       488BEC           MOV RBP, RSP</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5035:       FF15E5B4A6FF     CALL [RIP-5851931]             ; WRITE-CHAR</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 503B:       488B15AEFEFFFF   MOV RDX, [RIP-338]             ; &#34;hello&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5042:       488B7DE8         MOV RDI, [RBP-24]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5046:       498BF4           MOV RSI, R12                   ; NIL</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5049:       B906000000       MOV ECX, 6</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 504E:       FF7508           PUSH QWORD PTR [RBP+8]</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5051:       FF253996A7FF     JMP [RIP-5794247]              ; DEFMACRO-FORWARD-DECLARATION::WITH-FOO-BAR</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5057:       CC0F             INT3 15                        ; Invalid argument count trap</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5059: L0:   CC19             INT3 25                        ; UNBOUND-SYMBOL-ERROR</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 505B:       20               BYTE #X20                      ; R8(d)</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 505C: L1:   CC19             INT3 25                        ; UNBOUND-SYMBOL-ERROR</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 505E:       20               BYTE #X20                      ; R8(d)</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 505F: L2:   CC19             INT3 25                        ; UNBOUND-SYMBOL-ERROR</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">; 5061:       20               BYTE #X20                      ; R8(d)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+결론
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<ol>
+<li>sbcl이 컴파일할 때에, 해당 참조를 찾지 못하면 그냥 함수려니하고
+코드를 생성해버림.</li>
+<li>
+<p>asdf:make, sbcl 둘 다 나빠 ㅠ.ㅠ 경고라도 뛰워주던가…</p>
+<ul>
+<li><code>(lisp-implementation-version) ; =&gt; &#34;2.5.10&#34;</code></li>
+<li><code>(asdf:asdf-version) ; =&gt; &#34;3.3.1&#34;</code></li>
+<li>
+<p>…그래서 시도했지만 별 차이 없음:</p>
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9">9</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">setf</span> <span class="nv">asdf:*asdf-verbose*</span> <span class="no">t</span>
+</span></span><span class="line"><span class="cl">        <span class="vg">*load-verbose*</span> <span class="no">t</span>
+</span></span><span class="line"><span class="cl">        <span class="vg">*load-print*</span> <span class="no">t</span>
+</span></span><span class="line"><span class="cl">        <span class="vg">*compile-verbose*</span> <span class="no">t</span>
+</span></span><span class="line"><span class="cl">        <span class="vg">*compile-print*</span> <span class="no">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">declaim</span> <span class="o">#+</span><span class="nv">sbcl</span><span class="p">(</span><span class="nv">sb-ext:unmuffle-conditions</span> <span class="kt">style-warning</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">declaim</span> <span class="o">#+</span><span class="nv">sbcl</span><span class="p">(</span><span class="nv">sb-ext:unmuffle-conditions</span> <span class="nv">compiler-note</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-3">
+<h3 id="headline-6">
+[EDIT] [2025-11-10 Mon]
+</h3>
+<div id="outline-text-headline-6" class="outline-text-3">
+<ol>
+<li>위 disassemble 같이 만든 상황을 다시 재현하기 어려움.</li>
+<li>흠좀무. 다행이라면 다행.</li>
+<li>그리고 사실 <code>(declaim (ftype ...))</code>-으로 함수라면
+전방선언(forward declaration)이 가능하겠지만, 매크로는
+컴파일러가 동작하는 시점에 필요하므로 불가하다고.</li>
+<li>…결국 asdf system definition에 serial으로 의존성순서에 맞게
+넣어줘야함. ㅎㅎ</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>최근에 작업한 코드에서 겪은 문제라.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lisp/">lisp</a>
+                        <sup>26</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/commonlisp/">commonlisp</a>
+                        <sup>20</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/common-lisp/">common-lisp</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/reversing/">reversing</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/disassembly/">disassembly</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/macro/">macro</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/assembly/">assembly</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/disassemble/">disassemble</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/defmacro/">defmacro</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sbcl/">sbcl</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/til/">TIL</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/bug/">bug</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/runtime/">runtime</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/compiler/">compiler</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/declaration/">declaration</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🧬";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/">⬅️ 내 emacs elisp &#34;requires&#34;</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-09sep/throttled-restart--perl-oneliner--and--tcl/">➡️ [throttled-restart.tcl] throttling 적용하여 파일변경시 자동으로 프로세스 재시작하기와 Tcl 취향고백</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480573</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

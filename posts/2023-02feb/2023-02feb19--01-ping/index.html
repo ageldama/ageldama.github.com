@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 19/02/2023 .01 : 어른이 되기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480572">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+(최근 며칠 우울하고 내가 어른이기는 한가 싶은 자괴감에
+빠졌었다. 그래서인지 자기합리화를 위해 이런 글을 쓰고 있는거 같기도
+하다.)
+
+
+나의 옛날 이야기
+
+
+80년대의 기억에는, 참 자주도 불량식품 단속에 대한 이야기가 나오던 것
+  같아. 그리고 실제로도 만화, 애니메이션, 게임, 장난감 등등의 라이센스나
+  품질관리에 대한 관념이 희박했던거 같아.
+
+  지금은 이것저것 검정이나 인증마크를 더 붙이기 바쁘게 되어서 너무
+  과도하지 않은가 싶을 정도니까, …그래도 없는 것 보다는 낫지 않을까.
+
+  물론 80, 90년대는 일본문화개방도 되지 않았었고 엄밀하게 말하자면
+  불법은 아니었을테고, 더 나아가서 어린 국민들을 염려한 윗분들의 지시로
+  수많은, 한국산 고전애니메이션이 본의 아니게 붐을 일으켰었다는거 같다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-02feb/2023-02feb19--02-ping/">⬅️ Ping 19/02/2023 .02 : 이름에 대한 추측 (2) HAL, IBM, JCL</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-02feb/2023-02feb07--01-ping/">➡️ Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">나의 옛날 이야기</a>
+</li>
+<li><a href="#headline-2">어른의 사정</a>
+</li>
+<li><a href="#headline-3">그런데 어떤 어린이는 어른을 이해한다. 때로는</a>
+</li>
+<li><a href="#headline-4">The Overfitting</a>
+</li>
+<li><a href="#headline-5">아직은 어린 마음인, 그래야만 한다는 강박</a>
+</li>
+<li><a href="#headline-6">짝사랑, 혹은 도착증과 그 반대로써인 쩌리의 자존심</a>
+</li>
+<li><a href="#headline-7">신화적인 닌텐도와 그 빠</a>
+</li>
+<li><a href="#headline-8">&#34;괜찮아&#34;</a>
+</li>
+<li><a href="#headline-9">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🈲 Ping 19/02/2023 .01 : 어른이 되기</h1>
+	    <div class="meta">
+                <time datetime="2023-02-19" pubdate>
+                    2023년02월19일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+(최근 며칠 우울하고 내가 어른이기는 한가 싶은 자괴감에
+빠졌었다. 그래서인지 자기합리화를 위해 이런 글을 쓰고 있는거 같기도
+하다.)</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+나의 옛날 이야기
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>80년대의 기억에는, 참 자주도 불량식품 단속에 대한 이야기가 나오던 것
+  같아. 그리고 실제로도 만화, 애니메이션, 게임, 장난감 등등의 라이센스나
+  품질관리에 대한 관념이 희박했던거 같아.</p>
+<p>
+  지금은 이것저것 검정이나 인증마크를 더 붙이기 바쁘게 되어서 너무
+  과도하지 않은가 싶을 정도니까, …그래도 없는 것 보다는 낫지 않을까.</p>
+<p>
+  물론 80, 90년대는 일본문화개방도 되지 않았었고 엄밀하게 말하자면
+  불법은 아니었을테고, 더 나아가서 어린 국민들을 염려한 윗분들의 지시로
+  수많은, 한국산 고전애니메이션이 본의 아니게 붐을 일으켰었다는거 같다.</p>
+<p>
+  그때에 윗분들은 사단장이나 그 이상의 분들이셨을테고, 군대에서 지시를
+  내리듯이, 병사들을 관리하듯이 그렇게 국민들 생각하시던 것은 아닐까
+  싶기도 하고, 문득 문득 관련자들이 어떤 이익을 얻었을까 상상도
+  해본다. 물론 그분들이 좋은 사람이었다 나쁜 사람이었다 내가 판단하고
+  말하고 싶은 생각은 없다. 이 글에서는.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+어른의 사정
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>문득 사회생활을 한지가 오래 된거 같은데, 나름대로 많은 &#39;어른&#39;들을 보아
+  온거 같은 생각이 들었다. 그리고 그런 어른들 틈에서 그다지 다르지도
+  않은 공통점이 조금 지겹다.</p>
+<p>
+  그 공통점은, 당연한 이익을 위해서, 또는 당연한 손해를 방지하기 위해서
+  이런 저런 논리에 묶여서 판단하고 행동할 수 밖엔 없다는 점이다.</p>
+<p>
+  흔하게 말하는 &#39;어른의 사정&#39;<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+그런데 어떤 어린이는 어른을 이해한다. 때로는
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>그때에 내가 사고 갖고 놀고, 실망케 하던 장난감들이 떠올랐다.
+  설명서를 따라서 조립을 하려고 해도 부품이 불량이거나 품질이 너무
+  떨어져서 마음대로 갖고 놀지도 못해서 어린 마음에 화가 나기도 하고
+  뭐가 문제인지 잘 이해하지 못했었던거 같다. 지금에 돌아서 보면,
+  어째서 그랬었고 뭐가 어떻게 문제였었던가 어느 정도 알것도 같은 그런
+  기분이 들지만.</p>
+<p>
+  아마도, 당시의 한국의 경제상황, 사회구조상 생존을 위해서는, 아마 그게
+  경제적인 최선이었겠지 추측한다. 공산품의 품질을 올리기도 급급했을테고,
+  그런 장난감만이 아니라, 아마도 세상에 계속 있어 왔을 식빵 같은 상품의
+  브랜드도 (내가 기억하는 것만해도) 시대를 거듭하며 취향이 변해왔던 것이
+  기억이 난다.</p>
+<p>
+  그런 사정을 이해하고 공감한다. 나 또한 생존하기 위해서, 그리고 또
+  성장해서 다음에 더 나은 기회를 얻으려면 당장에는 초라해질 수 밖엔
+  없었을 것을 너무나 진심으로 공감하고 그 마음이 정말로 오늘을 살고 있는
+  나는 정말로 고맙다. 그리고 어떤 이들은 정말로 그렇게 생존을 했기
+  때문에 꽃을 피워 냈을지도 모르니까.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+The Overfitting
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>과거에 대한 생각에서, 현재로 다시 돌아와보자.  나는 아담스미스가
+  말했다고 전설 같이 전해지는 &#39;이기적인 역할자들만 있다 해도
+  경제적으로 발전하고 결국 사회전체는 이익을 얻는다&#39;고 누군가
+  자기합리화를 위해 말하거나 하면 뭔가 기분이 묘하다.<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup> 그래서
+  스스로도 냉혹하고 자기 이익만을 위해야 한다고 믿고 또 그렇게만
+  행동하기 때문에 오히려 이 치열한 사회의 어른으로서 행동하지도
+  못한다는 생각이 들었다.</p>
+<p>
+  무슨 말인가 하면, 나는 그런 생각을 자주하고 살았었다. 그 생각이란,
+  어떤 제품이나 서비스가 엉망이 되거나 품질이 떨어지거나, 그냥
+  어떻게든 더 사용자의 주머니에서 돈을 더 가져가는 것에만 고민하고
+  있는게 느껴질 때에 드는 바로 그 생각 말이다.</p>
+<p>
+  사용자나 소비자로서만이 아니라, 그런 제품이나 서비스를 만드는
+  기업에서 일을 해본 경험이 있다면 다음과 같은 생각을 공감하기 쉬울거
+  같다:</p>
+<ol>
+<li>무한경쟁이나 이윤의 추구의 과정에서 사용자나 세상을 좋게 만드는
+결과물을 만들어 낸다는 말은 허구적이다.</li>
+<li>오히려, (당연하게도) 이윤추구이나 경쟁 그자체에 더 적합하게 적응할
+뿐이다.</li>
+<li>그 과정에서 말하는 사용자를 위해서라느니, 세상을 위해서라는 말들은
+실제로는 목적점이 아닌, 그저 그런 과정의 일부로서, 경쟁도구의
+일부로서, 대칭적으로 갖춰야만 하는 전력이라고 생각해서 갖다 붙여진
+말일 뿐이란 것.</li>
+</ol>
+<p>
+  물론 다들 그렇게 말할거 같아. 그래야 누군가는 상대가 순박하게
+  어리석은 사람들이길 바라면서 더 생산적이길 기대하며 저런 것들으로
+  환상을 심어주고 올바른 궤도에 있다고 믿게 만들고 싶을 때에도
+  허울삼기 좋을거 같다. <sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup></p>
+<p>
+  아마도 애시당초 기업이란 이윤추구와 경쟁이 없이 어떻게
+  생존하겠느냐고 반문하겠지만, 그걸 부정하고 싶은 것이 아니라, 그
+  캐치프레이즈나 슬로건의 공허함을 지적하고 싶을 뿐이다. 그런
+  캐치프레이즈나 광고문구, 슬로건을 내걸려면, 적어도 일말은 그런 것을
+  구현하는 것을 더 비중을 두기를 바란다는 말을 하고 싶은 것이다.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+아직은 어린 마음인, 그래야만 한다는 강박
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>소시오패스나 싸이코패스를 두려워 하는건지, 아니면 숭배하는 것인지 잘
+  가늠하게 어려운 뉴스, TV프로그램을 종종 접한다. 내 생각에는,
+  불편하고 경계는 해야겠지만 두려워 하거나 숭배해서는 안되는거 같은데
+  말이다.</p>
+<p>
+  잔혹하고 끔찍한 뉴스를 접하면서, 싸이코패스이니 소시오패스이니
+  말하면서 무리를 지으며 여론을 만들고, 스스로는 정상인, 혹은 선하다고
+  인증을 받아서 무리에서 거절 당하지 않는 위치에 속하기를 바라는 것
+  같다. …그렇게 무리를 짓고, 돌팔매질을 하고 손가락질을 함으로써
+  무리 안에서의 소속을 확인하는게 본능일테니까.</p>
+<p>
+  하지만 그런 한편으로는 또 픽션에서는 소시오패스나 싸이코패스들을
+  그리며, 냉혹하게 이익만을 추구하며 인간성이 없는 이들을 그리며 또
+  그들의 냉정하고 침착함, 그리고 성공적인 모습을 보여준다.</p>
+<p>
+  내가 생각할 때엔, 그렇게 사회적으로도 성공적이지 못할거 같다. 그리고
+  스스로도 그렇게 행복하지 못할것 같다. 그래서 숭배할 이유도 없지 않나
+  싶다.</p>
+<p>
+  그리고 혹여 남들이 내게 그런 프레임을 씌우려고 한다고 해도
+  유치하다고 느껴진다. 위에 말한대로 그 무리짓기 본능에 호소하고 싶을
+  뿐인, 그렇게 프레이밍하는 사람 스스로가 아마도 훨씬 더 인간보다는
+  짐승에 가깝다고 스스로 공표하고 있는 것을 모르고 있을 뿐이니까.</p>
+<p>
+  어째서인지, 아담스미스에 대한 오해/곡해와 마찬가지로, 공공연하게
+  &#39;경제적 인간&#39;이란 그런 소시오패스/싸이코패스일거라 생각하며 모두
+  행동하는거 같다는 생각이 들었다.</p>
+<p>
+  하지만 인간적인 공감이나 연민 없이, 그렇게 행동하는 것이 정말
+  경제적인 이익을 가져오지 못할거 같은데 말이다.</p>
+<p>
+  이 세상은 아귀지옥과 같은 것이 사실인거 같다. 하지만 그렇다고 내가
+  꼭 짐승이나 아귀로서 생각하고 행동할 이유가 되지는 못한다. 어리고
+  약한 마음이라면, 세상 모두가 그렇기 때문에 나 또한 그렇게 할 수 밖엔
+  없지 않느냐고 하겠지만, 그러나 그보다는 더 성숙한 마음이라면,
+  &#34;그럼에도 나는.&#34;이라고, 그런 것들에 휘둘리지 않고 스스로의
+  주인으로서 말할거 같다.</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+짝사랑, 혹은 도착증과 그 반대로써인 쩌리의 자존심
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>난 돈이 많았으면 좋겠고, 사회적으로 성공했으면 좋겠다고
+  생각한다. 정말로.</p>
+<p>
+  나 홀로 세상에 대해 짝사랑을 하고 있다는 생각이 든다. 세상은 내게
+  마음을 줄 생각이 별로 없는거 같다.</p>
+<p>
+  종종 그런 슬픈 짝사랑에 빠진 것 이상으로 도착증 수준으로 성공에 대해
+  집착하는 사람이 많지 않을까 싶다.</p>
+<p>
+  현실은 초라할지도 모르겠다. 아니면 그 초라한 현실을 인정하고 싶지
+  않아서 이것저것 사고 활동하면서, 그런 껍질이라도 뒤집어 쓰려
+  노력하는 것일지도 모른다.</p>
+<p>
+  하지만, 내가 비록 세상의 눈부신 성공이나 결과를 이루지는
+  못했을지라도, 그래도 그런 &#39;쩌리&#39;이지만, 그 나름의 자존심이 있다고
+  생각하고 그걸 가끔 갖고 있었는지 까먹고는 하기도 하는거 같다. 그리고
+  종종은 당신도 그럴거라면 그런 쩌리의 자존심을 갖거나 찾아내 들춰
+  보는 것은 어떨지 권하고 싶기도 할 때가 있다.</p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+신화적인 닌텐도와 그 빠
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
+<p>요즘엔 예전보다 더 닌텐도 게임을 하면서 시간을 보낸다.  그리고
+  예전의 NES, SFC, GameBoy 시대의 슈퍼마리오, 별의 커비, 젤다 등을
+  하면서 시간을 보낸다.</p>
+<p>
+  내가 가장 놀라는 점은, 게임 타이틀에 표시되는 연도와 그 게임의
+  정교함, 섬세함의 강렬한 대비.</p>
+<p>
+  대부분은 80년대 말, 90년대 중후반에 발매된 게임들을 플레이하고는
+  하는데, 그때 당시에 저런 정도의 용량으로 이렇게 섬세하게 플레이
+  가능하고, 이런저런 게임내 세계에 저런 장치를 구현했다는 점에서
+  아직도 종종 놀란다.</p>
+<p>
+  누군가는 당연하게 받아 들일 수도 있겠지만, 그냥 조금이나마
+  프로그래밍에 대해 이해하고 있는 나 스스로는 어떻게 했을지 상상과
+  추측을 해본다. 그리고 거의 대부분 도달하는 결론은, 이걸 만든
+  사람들이 얼마나 자기 자신의 일을 즐겁게 여겼을지 느껴진다. 그들에
+  대한 다큐멘터리나 서적도 많이 있겠지만 그걸 찾아보지 않아도, 단지
+  그들이 내놓은 결과물과 함께 시간을 보내는 것만으로도 그걸 느끼게
+  된다. 그리고 스스로 엄청나게 부끄러워지고는 한다.</p>
+<p>
+  그때와 비교하면, 엄청나게 많은 메모리와 컴퓨팅파워가 갖추어진 현재에
+  내가 저렇게 애착을 갖고 즐겁게 그 세계를 경험할 수 있는 작품을 만들
+  수 있을까 생각해본다. 그래서 부끄러워진다. 그때에는 프로그래밍을
+  위한 지식을 접할 채널도 지금과는 비교도 할 수 없이 제한적이었을텐데
+  말이다. <sup class="footnote-reference"><a id="footnote-reference-4" href="#footnote-4">4</a></sup></p>
+<p>
+  …그리고 글쎄다, 단순하게 돈을 벌기만을 위해서였다고, 그래서 싸구려
+  저질의 제품을 만들고 그걸 적당히 팔아서 이익을 내는데에만
+  치중했다면, 오히려 저렇게 닌텐도가 성공하고 오래토록 그 성공을
+  영위하고 있을지 잘 모르겠다.</p>
+<p>
+  다른 말로 한다면, 흔히 말해지는, 그 어른의 사정에 따라서, 적당히
+  해서, 회사는 이윤추구가 목적이므로, 그렇게 한다고 실제로는 아무도
+  즐길 수 없고, 아무도 사용할 수 없을 제품이나 서비스를 허울만
+  만들어서 해나갔다면, 닌텐도는 닌텐도가 되지 못했을 것 같다.</p>
+<p>
+  닌텐도는 어쩌면 그런 어른이랍시고 빠져야만 할 것 같은 진지함, 그래서
+  너무나도 진지해서 단기수익이니 수익위주경영이니 같은 &#39;글자만 어른&#39;이
+  되려는 놀이는 포기했기 때문에, 그리고 아마도 그러면서도 자존심을
+  버리지 않았기 때문에, 오히려 진짜 어른이 되었을지도 모른다.</p>
+<p>
+  그 &#39;진짜 어른&#39;은 그걸 갖고 논 사용자들의 동심을 실망시키거나 아프게
+  하지 않았을테고, 또 어른으로서 당당하게 이익을 추구하는 회사가
+  되었을거다. 너무나 아이러니하게도 &#39;글자만 어른&#39;이라고 어른놀이를
+  하는 이들과는 달랐기 때문에 진짜로 어른이었던거겠지 싶다. <sup class="footnote-reference"><a id="footnote-reference-5" href="#footnote-5">5</a></sup></p>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+&#34;괜찮아&#34;
+</h2>
+<div id="outline-text-headline-8" class="outline-text-2">
+<p>글쎄다. 당장에 현실이라고 말하면서 실은 합리화나 자기입지,
+  주도권만을 위한 도구로써 갖다 붙이면서 어른놀이를 하면서, 실제로는
+  어른스럽지 못한 것보다는, 그런 놀이는 내려놓고, 스스로 어른이랍시고
+  하는 이들의 손가락질을 그렇게 신경쓰지도 않으면서 정말 어른이 되는
+  편이 더 낫겠구나 싶다.</p>
+<p>
+  아마 이렇게 신화나 환상적인 이야기이나 하니까, 나는 이렇게
+  쩌리이겠지만. ㅎㅎ</p>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-2">
+<h2 id="headline-9">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p><a href="https://namu.wiki/w/%EC%96%B4%EB%A5%B8%EC%9D%98%20%EC%82%AC%EC%A0%95">나무위키 &#39;어른의 사정&#39;</a> 에서: &#34;사회생활을 어느 정도 하다 보면
+알게 되는 사회의 더러운 면이나 치사하지만 어쩔 수 없는, 어린이와
+청소년들에게 말하기 힘든 사정을 의미한다.&#34;</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p>실은 아담스미스를 오해했거나 곡해한 것이리라 생각한다. 저
+단편만을 가져다가 인용하며, 스스로가 얼마나 냉철하고 지적으로 느끼고
+싶은 기분도 충족시키고, 하지만 확실하게는 문제가 있는 생각들을
+합리화해내고 싶은 사람이라면 그럴거 같다. <a href="https://dbr.donga.com/article/view/1206/article_no/8545/ac/a_view">동아비즈니스리뷰: 애덤
+스미스의 &#39;도덕감정론&#39;</a></p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-3"><a href="#footnote-reference-3">3</a></sup>
+<div class="footnote-body">
+<p>대부분의 &#39;테크기업&#39;들이 왜 매 계절마다, &#39;트렌디&#39;하다는
+테크스텍으로, 실은 별로 이득도 없거나, 생산성도, 유지보수성도 나쁠
+일을 할까 싶을 때가 많다. 물론 경영진이 테크리터러시가 낮아서 그런
+일이 벌어지는게 대부분이겠지만, 투자자나 고객을 위한 전시용이기도 할거
+같고, 또 스스로의 &#39;개발커리어&#39;를 위해서 그런 테크스텍을 쓰고 싶어하는
+개발자들을 위해서일지도 모르겠다. …하지만 그런 테크스텍이 커리어에
+유의미할지는 잘 모르겠다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-4"><a href="#footnote-reference-4">4</a></sup>
+<div class="footnote-body">
+<p>물론, 그들 스스로가 하드웨어부터 만들었고, 또 오히려 지금처럼
+distraction이 많지 않았을테니 더 생산적이었을지도 모르겠다. 하지만
+그래도 그 결과물이 시대를 뛰어 넘는다는 점과 그걸 만든 이들의 깊은
+애정이 느껴지는 것은 여전하다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-5"><a href="#footnote-reference-5">5</a></sup>
+<div class="footnote-body">
+<p>난 별로 진짜 어른도 못되고, 글자만 어른이었던거 같아서 후회를
+종종한다.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>112</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/forever-boy/">forever-boy</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/responsibility/">responsibility</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/adult/">adult</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🈲";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-02feb/2023-02feb19--02-ping/">⬅️ Ping 19/02/2023 .02 : 이름에 대한 추측 (2) HAL, IBM, JCL</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-02feb/2023-02feb07--01-ping/">➡️ Ping 07/02/2023 .01 : C&#43;&#43;, D, Zig의 이름에 대한 추측</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480572</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

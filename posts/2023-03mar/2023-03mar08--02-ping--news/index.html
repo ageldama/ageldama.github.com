@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480572">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+
+&#34;리액트가 날 인질으로 잡고 있어요&#34;
+
+
+https://emnudge.dev/blog/react-hostage
+
+  …말해 뭘할까 싶은데. :see_no_evil:
+
+  포스팅 자체는 react, hooks 같은 것들의 complexity에 대한
+  이야기이지만.
+
+  오히려 흥미롭게 생각하는 것은, 과거 한국에서 &#39;퍼블리셔&#39;라고 하던
+  사람들이 어떻게 되었는가 생각해보며, 함께 지금의 &#39;프론트엔드
+  개발자&#39;, 혹은 &#39;앱 개발자&#39;, &#39;리액트 개발자&#39;, &#39;자바스크립트
+  개발자&#39;들이 앞으로 어떻게 될지 상상해본다.
+
+  대부분의 현재의 저런 테크/키워드들은 완전히 사라질거 같고, 그렇다면
+  다른 직종으로 우회하거나, 변화된 상황에 맞춰가겠지 싶다.
+
+
+
+
+&#34;헛소리/bullshit 없이 엔지니어링 재능이 있는 사람을 고용하기&#34;
+
+
+https://jes.al/2023/03/how-to-hire-engineering-talent-without-the-bs/" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-03mar/2023-03mar15--wired-desktop/">⬅️ 내 책상에서 유선랜 환경</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-03mar/2023-03mar08--01-ping/">➡️ Ping 08/03/2023 .01 : 전자책읽기</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">&#34;리액트가 날 인질으로 잡고 있어요&#34;</a>
+</li>
+<li><a href="#headline-2">&#34;헛소리/bullshit 없이 엔지니어링 재능이 있는 사람을 고용하기&#34;</a>
+</li>
+<li><a href="#headline-3">&#34;NESFab is a new programming language for creating NES games&#34;</a>
+</li>
+<li><a href="#headline-4">&#34;zig이 rust보다 빠르고 안전할 수 있는 경우&#34;</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">😣 News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes</h1>
+	    <div class="meta">
+                <time datetime="2023-03-08" pubdate>
+                    2023년03월08일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+&#34;리액트가 날 인질으로 잡고 있어요&#34;
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><a href="https://emnudge.dev/blog/react-hostage">https://emnudge.dev/blog/react-hostage</a></p>
+<p>
+  …말해 뭘할까 싶은데. :see_no_evil:</p>
+<p>
+  포스팅 자체는 react, hooks 같은 것들의 complexity에 대한
+  이야기이지만.</p>
+<p>
+  오히려 흥미롭게 생각하는 것은, 과거 한국에서 &#39;퍼블리셔&#39;라고 하던
+  사람들이 어떻게 되었는가 생각해보며, 함께 지금의 &#39;프론트엔드
+  개발자&#39;, 혹은 &#39;앱 개발자&#39;, &#39;리액트 개발자&#39;, &#39;자바스크립트
+  개발자&#39;들이 앞으로 어떻게 될지 상상해본다.</p>
+<p>
+  대부분의 현재의 저런 테크/키워드들은 완전히 사라질거 같고, 그렇다면
+  다른 직종으로 우회하거나, 변화된 상황에 맞춰가겠지 싶다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+&#34;헛소리/bullshit 없이 엔지니어링 재능이 있는 사람을 고용하기&#34;
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p><a href="https://jes.al/2023/03/how-to-hire-engineering-talent-without-the-bs/">https://jes.al/2023/03/how-to-hire-engineering-talent-without-the-bs/</a></p>
+<p>
+  …뭐 homebrew 만들었지만, binary tree inverse을 화이트보드
+  코딩하라고 던져 놓고 마음에 안든다고 거절한 인터뷰는 전설이지. ㅎㅎ</p>
+<p>
+  사실 안티패턴스럽게, 어떻게 하면 더 나쁜 상황과 못된 사람들인지
+  자랑하려고 들기만 하는게 문제인거 같아. 그렇게 굴어야만 잘될거라고
+  전제하는게 보통이지만. (그리고 그 보통이 유익한지는 의심스럽다만)</p>
+<p>
+  이 글에서 인터뷰 대상자의 어떤 특성들을 눈여겨 보고, 필요한 것이
+  무엇인지, true positive을 찾아내는게 중요하다고 잘 설명하는거 같아.</p>
+<p>
+  최근 읽은 책은 1998년도에 쓴 책이었었는데, 글쓴이의 깊은 안목에 대해
+  많이 놀랐었다. 그저 별거 아닌 컴퓨터시스템 체험기 같은 것들을 소재로
+  삼았지만, 현재 전세계적인 테크, 스타트업, 글로벌화 같은 이슈들을
+  이미 그때에 그 원인이 무엇이었는지까지 분석해 설명해주고
+  있었다. …어쩌면 그런 안목을 보여줄 수 있었던 이유는, 이미 나보다
+  연륜이 당시에 많으셨을거고, 그리고 그보다는 테크기업/시장이 훨씬
+  오래 되었고, 주주자본주의에 기반하여 동작하는 미국사회였기 때문일거
+  같아. …물론 지금 시대의 한국도 그 연장이겠지만.</p>
+<p>
+  …여하튼, 다시 돌아와서, 저 링크의 이야기처럼 시도라도 하려고
+  할만큼 성숙해질 수 있을까 싶기도 하다.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+&#34;NESFab is a new programming language for creating NES games&#34;
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p><a href="https://pubby.games/nesfab.html">https://pubby.games/nesfab.html</a></p>
+<p>
+  gameboy이나 nes용 toolchain을 만들어서 공개하거나 하는 사람들이 종종
+  인터넷에 보인다.</p>
+<p>
+  어차피 이제는 target system에 대해 빌드가 gcc/clang만으로도 쉽게 할
+  수 있기는 한 시대이지만.</p>
+<p>
+  이게 이상한 괴벽이라고만 하기 어려운게, 게임을 만들기 위해서 필요한
+  도구들이 컴파일러나 어셈블러 이외에도 스프라이트 그리기 도구나
+  맵편집기 같은거 등등 많이 필요할테고, 효용면에서도 여전히 작고
+  창의적인 게임을 만들기에, 그래서 갖고 놀고 즐기기에 나쁘진 않은거
+  같아.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+&#34;zig이 rust보다 빠르고 안전할 수 있는 경우&#34;
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p><a href="https://zackoverflow.dev/writing/unsafe-rust-vs-zig/">https://zackoverflow.dev/writing/unsafe-rust-vs-zig/</a></p>
+<p>
+  사실 이미 c++은 최근의 표준에서 더 그만의 영역을 확고하게 해나가고
+  있다고 생각한다.</p>
+<p>
+  개인적으론, <a href="https://herbsutter.com/2022/12/31/cpp2-and-cppfront-year-end-mini-update/">cpp2, cppfront</a> 같은 시도들이 의미있지만, c++ 표준에서
+  반영되듯이, c++은 자기가 정말로 어떤 특징이 있고, 다른 어떤
+  언어들과도 차별되는 비대칭적인 장점이 있는지 잘 이해하고 있는거
+  같아. (물론 그런걸 잘 이해하는 분들이 표준위원회에서 작업들을 하고
+  계시겠지)</p>
+<p>
+  &#39;modern c++&#39; 표준부터, 최근의 c++ 표준스펙들의 추세들은, 사실
+  함수형프로그래밍 같은 유행(…그것도 한 20~30년 정도 늦어서야 유행을
+  타는) 트렌드를 어느 정도 반영해주는 척을 하지만, 그보다는 오히려
+  modern cpu architecture이나 simd 같은 영역, 혹은
+  caching/predictive-execution 같은 것들을 잘 지원하기 위해서 발전해
+  온 것 같아. …어차피 90년대부터 stl이 있었었고,
+  함수형프로그래밍이나 그런게 이제서야 그러는게 &#39;아.. 그래요?&#39; 같은
+  느낌이었으니.</p>
+<p>
+  그리고 그런 기계에 더 적절한 방식으로 내 코드에 반영될 수 있는
+  기능들은 c언어 표준에서부터 세세하게 많고, 컴파일러가 더 똑똑하게
+  최적화를 해줄 수 있도록 발전해온거 같다.</p>
+<p>
+  …여튼, rust은 그런 &#39;함수형프로그래밍&#39;의 트렌드와 그 의도와 기대를
+  잘 반영해준거 같아. 컴파일러가 알아서 잘, 안전하고 빠른 코드를
+  뽑아주도록 하자. 그러면서 사용자는 우아한 수준의 abstraction으로
+  코드를 작성하도록 해주자. rust특유의 메모리모델 때문에 우아하지
+  못하고 생각할수도 있겠지만, 충분히 깔끔하고 멋진 코드를 짤 수 있고,
+  또 그게 컴파일되면 확실히 zero-cost abstraction스러워 보인다.</p>
+<p>
+  반면, zig은 명확하게 이해될 수 있는 코드, 그래서 조금은 작성할 때에
+  우아함에 신경쓰지 말라고 이야기 해준다. 컴파일러와 자기 코드를 읽는
+  사람(자기자신과 동료 모두)를 고려해서 언어를 만든거 같아:
+  <a href="https://ziglang.org/documentation/0.1.1/#zen">https://ziglang.org/documentation/0.1.1/#zen</a></p>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">👅<a href="/series/programming-languages/">programming-languages</a>
+                        <sup>27</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>112</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webdev/">webdev</a>
+                        <sup>30</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/javascript/">javascript</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/js/">js</a>
+                        <sup>16</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/reactjs/">reactjs</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/zig/">zig</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/rust/">rust</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/retro/">retro</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cpp/">cpp</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/stl/">stl</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/nintendo/">nintendo</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/nes/">nes</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/react-hooks/">react-hooks</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/homebrew/">homebrew</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/interview/">interview</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/frontend/">frontend</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/react/">react</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/news/">news</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "😣";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-03mar/2023-03mar15--wired-desktop/">⬅️ 내 책상에서 유선랜 환경</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-03mar/2023-03mar08--01-ping/">➡️ Ping 08/03/2023 .01 : 전자책읽기</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480572</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

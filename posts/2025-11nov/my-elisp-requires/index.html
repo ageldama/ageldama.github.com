@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>내 emacs elisp &#34;requires&#34; - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480573">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.
+
+다음처럼 init.el-파일에서 로딩함: 사용예시
+
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+
+
+  (ag-requires
+   :tag-:*feats
+
+   :compile  ;; ... 바이트컴파일
+   &#39;ag-feat-recentf                  ; dpkg=&#43;
+   &#39;ag-feat-savehist                 ; dpkg=&#43;
+   &#39;ag-feat-avy                      ; dpkg=elpa-avy
+
+   :nocompile ;; ... 여기부터는 바이트컴파일X
+   &#39;ag-feat-rg                       ; dpkg=elpa-rg
+   &#39;ag-feat-c                        ; dpkg=&#43;
+   &#39;ag-feat-perl5                    ; dpkg=&#43;
+   )
+
+
+
+
+
+자동으로 byte-compile해서 로딩속도 빨라지도록 매크로 짜놓았음:
+
+https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95
+
+
+예전에 짜놓은거, 버그 고치고 다시 빠르게 로딩되도록 잘 써먹어서
+기분 좋음.
+" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/">⬅️ Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/cl-defmacro-fwd-declaration/">➡️ [TIL] common-lisp defmacro와 forward-declaration</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    
+
+    <article>
+	<div class="title"><h1 class="title">🕯️ 내 emacs elisp &#34;requires&#34;</h1>
+	    <div class="meta">
+                <time datetime="2025-11-16" pubdate>
+                    2025년11월16일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p>
+Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.</p>
+<p>
+다음처럼 <code>init.el</code>-파일에서 로딩함: <a href="https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/samples/EXAMPLE-init.el">사용예시</a></p>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">ag-requires</span>
+</span></span><span class="line"><span class="cl">   <span class="nb">:tag-:*feats</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="nb">:compile</span>  <span class="c1">;; ... 바이트컴파일</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-recentf</span>                  <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-savehist</span>                 <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-avy</span>                      <span class="c1">; dpkg=elpa-avy</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="nb">:nocompile</span> <span class="c1">;; ... 여기부터는 바이트컴파일X</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-rg</span>                       <span class="c1">; dpkg=elpa-rg</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-c</span>                        <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="ss">&#39;ag-feat-perl5</span>                    <span class="c1">; dpkg=+</span>
+</span></span><span class="line"><span class="cl">   <span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<ol>
+<li>
+<p>자동으로 byte-compile해서 로딩속도 빨라지도록 매크로 짜놓았음:</p>
+<ul>
+<li><a href="https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95">https://github.com/ageldama/configs/blob/d7595e9f07599cbe56ee45a108d3898c5990a7bc/emacs/boot/ag-00-boot.el#L61-L95</a></li>
+</ul>
+</li>
+<li>예전에 짜놓은거, 버그 고치고 다시 빠르게 로딩되도록 잘 써먹어서
+기분 좋음.</li>
+</ol>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emacs/">emacs</a>
+                        <sup>24</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/elisp/">elisp</a>
+                        <sup>8</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/macro/">macro</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emacs-lisp/">emacs-lisp</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/defmacro/">defmacro</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/bytecode/">bytecode</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/compile/">compile</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/startup-speed/">startup-speed</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/loading/">loading</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/parsing/">parsing</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/performance/">performance</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/byte-compile/">byte-compile</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/provide/">provide</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/require/">require</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/configuration/">configuration</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🕯️";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/python-3.14-concurrent-interpreters-and-tcl/">⬅️ Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/cl-defmacro-fwd-declaration/">➡️ [TIL] common-lisp defmacro와 forward-declaration</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480573</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Emacs &#43; CMake-IDE Screencast - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480571">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+      
+    
+
+이건 무엇인가
+Emacs Configurations: https://github.com/ageldama/configs/tree/master/emacs/cmake-ide
+이맥스에서 C&#43;&#43; 개발 편하게 하려고 이것저것 알아보다가 결국엔 CMake-IDE &#43; RTags 조합이 제일 괜찮다는 결론에 도달해서 만들어본 설정이다.
+원래 사용하는 환경이 Evil은 아니었는데,
+Spacemacs 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.
+지금은 그냥 Spacemacs은 다운도 잘되고 너무 무겁고 설정을 레이어 방식 으로 할게 아니면 짜증나게 하는 부분도 많고, 그렇다고 레이어가 완전히 내가 그냥 커스텀으로 만들어서 바로바로 머지하는 구조도 아니고 중앙에서 관리하는 방식으로만 되는거 같아서, 옆으로 치우고, 바닐라 이맥스에 Spacemacs스럽게 직접 설정해서 가볍게 사용하고 있다. :-)" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/">⬅️ NeoVim, Evil-mode and Emacs의 모험</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-04apr/2018-04apr-golang-windows-vscode/">➡️ Golang Windows에서 Vscode이랑 행복하게 쓰기</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#이건-무엇인가">이건 무엇인가</a></li>
+    <li><a href="#c-환경을-만들기-위한-여정">C++ 환경을 만들기 위한 여정</a>
+      <ul>
+        <li><a href="#일단-내가-필요한하다고-생각하는-ide-기능들">일단 내가 필요한(하다고 생각하는) IDE 기능들</a></li>
+        <li><a href="#llvm-clang-rtags-compile_commandsjson">LLVM, Clang, RTags, <code>compile_commands.json</code></a></li>
+        <li><a href="#cmake-ide-rtags">CMake-IDE, RTags</a></li>
+        <li><a href="#조금-더-clang-tidy-clang-format">조금 더 Clang-Tidy, Clang-Format</a></li>
+        <li><a href="#projectile">Projectile</a></li>
+        <li><a href="#자동완성-타입정보-툴팁-실시간-코드체크">자동완성, 타입정보 툴팁, 실시간 코드체크</a></li>
+        <li><a href="#프로그램-실행-디버깅">프로그램 실행, 디버깅</a></li>
+        <li><a href="#키바인딩">키바인딩</a></li>
+        <li><a href="#디스어셈블리">디스어셈블리</a></li>
+      </ul>
+    </li>
+    <li><a href="#프로젝트별-설정-파일이-필요하다">프로젝트별 설정 파일이 필요하다</a></li>
+    <li><a href="#tip-처음-c-프로젝트-열었을때">Tip: 처음 C++ 프로젝트 열었을때?</a></li>
+    <li><a href="#마무리">마무리</a></li>
+  </ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🫰 Emacs &#43; CMake-IDE Screencast</h1>
+	    <div class="meta">
+                <time datetime="2018-05-08" pubdate>
+                    2018년05월08일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/R5tV-mp8WnE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<h1 id="이건-무엇인가">이건 무엇인가</h1>
+<p>Emacs Configurations: <a href="https://github.com/ageldama/configs/tree/master/emacs/cmake-ide">https://github.com/ageldama/configs/tree/master/emacs/cmake-ide</a></p>
+<p>이맥스에서 C++ 개발 편하게 하려고 이것저것 알아보다가 결국엔 <a href="https://github.com/atilaneves/cmake-ide">CMake-IDE</a> + <a href="https://github.com/Andersbakken/rtags">RTags</a> 조합이 제일 괜찮다는 결론에 도달해서 만들어본 설정이다.</p>
+<p>원래 사용하는 환경이 <a href="https://github.com/emacs-evil/evil">Evil</a>은 아니었는데,
+<a href="http://spacemacs.org/">Spacemacs</a> 을 조금 쓰다가 편한거 같아서 Evil으로 옮겨탔다.</p>
+<p>지금은 그냥 Spacemacs은 다운도 잘되고 너무 무겁고 설정을 <a href="http://spacemacs.org/layers/LAYERS.html">레이어 방식</a> 으로 할게 아니면 짜증나게 하는 부분도 많고, 그렇다고 레이어가 완전히 내가 그냥 커스텀으로 만들어서 바로바로 머지하는 구조도 아니고 중앙에서 관리하는 방식으로만 되는거 같아서, 옆으로 치우고, 바닐라 이맥스에 Spacemacs스럽게 직접 설정해서 가볍게 사용하고 있다. :-)</p>
+<p>참고로 내가 사용하는 CMake-IDE 제외한 기본 이맥스 설정은 <a href="https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018">https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018</a></p>
+<p>이맥스 기본 설정에 대한 이야기는 다른 포스트에서 하는게 더 나을거 같다.</p>
+<h1 id="c-환경을-만들기-위한-여정">C++ 환경을 만들기 위한 여정</h1>
+<p>우선, C++ 자체 소스코드 파일을 파싱하고 하는 방식으로는 여러가지 이유로 자동완성이나 코드 네비게이션이 잘 동작하기 어렵다. 이 접근방식은 기존 <code>ctags</code> 등과 같은 소스코드를 정적으로 읽어서 파싱하고, 그에 맞는 <em>태그</em> 들을 나열해서 찾아가는건데, 소스코드를 읽어나가는데는 어느정도 도움은 되도, 실제로 그게 정확하게 <em>어디에서 참조하는지</em>, <em>어떤 인자 타입들을 갖는지</em> 등등 <strong>진짜</strong> IDE의 기능들을 구현하기는 어렵다.</p>
+<p>또, 이맥스의 경우 CEDET, Semantic, EDE 등등 <em>오래된</em> 다양한 접근방법들이 있었지만, 현대 C++을 잘 지원하는거 같지도 않고, 현대의 이맥스 생태계의 Company, Flycheck등등등이랑 친하게 잘 지낼거 같지도 않고, 설정도 오히려 더 끔찍스러워서 생략.</p>
+<h2 id="일단-내가-필요한하다고-생각하는-ide-기능들">일단 내가 필요한(하다고 생각하는) IDE 기능들</h2>
+<ol>
+<li><strong>자동완성</strong> : C++은 타입이 있으니, 모든 변수에 대해서, 심지어 <code>auto</code>으로 선언한 변수에 대해서도 type infer해서 자동완성을 제공해줄수있음.</li>
+<li><strong>타입 정보</strong> : <a href="https://www.emacswiki.org/emacs/ElDoc">Eldoc</a> 써서 현재 커서의 타입 정보나 파라미터 정보 같은거 깨알같이 알려주면 너무 좋을거 같다.</li>
+<li><strong>체크, linting</strong>  : 코드 작성하면서, 실제 컴파일 에러나 linter을 이용해서 찾아낼수있는 수준의 에러를 찾아주면 좋겠다.</li>
+<li><strong>자동 소스코드 포매팅</strong> : 코드는 대충 안예쁘게 작성해도 나중에 저장할때나 내가 원할때 지정한 가이드라인에 따라서 자동으로 포매팅해주면 좋겠다.</li>
+<li><strong>네비게이션</strong> : 이것도 당연히 가능. 선언이랑 구현 사이를 오가는 나는 전선위의.</li>
+<li><strong>프로젝트 파일간 전환</strong> : 이건 딱히 설정 안해도 이미 <a href="https://github.com/bbatsov/projectile">Projectile</a>만으로 충분한거 같다.</li>
+<li><strong>디버깅</strong> : 이것도 사실 실행파일 고르는것만 자동으로 해주면 이맥스 내장 <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Debuggers.html">GUD</a> 정도 쓰면 충분히 좋다.</li>
+<li><strong>디스어셈블리</strong> : 요건 가끔 컴파일러가 생성해준 코드가 어떤지 궁금할때만 보는데, 그래도 붙여보면 재밌을거 같아서.</li>
+</ol>
+<h2 id="llvm-clang-rtags-compile_commandsjson">LLVM, Clang, RTags, <code>compile_commands.json</code></h2>
+<p>&hellip;그런 문제들로, 아예 C++ 소스코드를 정말 컴파일러가 분석하듯이 읽어서 IDE 기능들을 제공해준다. (좀 더 솔직하게 말하면, <em>언제나 오픈소스가 그렇듯</em>, 그렇게 IDE을 구현할 수 있는 기반되는 기능들을 구현해놓았다.)</p>
+<p>우선, LLVM 기반으로 Clang-Tools에서 쓸만한 외부 도구들은 <a href="http://clang.llvm.org/extra/clang-tidy/">Clang-Tidy</a>, <a href="https://clang.llvm.org/docs/ClangFormat.html">Clang-Format</a>이 있는데, 각각 소스코드 정적분석해서 linting해주고, 소스코드를 자동으로 포매팅해주는 도구인데, 이걸로는 자동완성이나 그런 기능들을 기대할수는 없음.</p>
+<p>그래서 LLVM/Clang을 이용해서 <a href="https://github.com/Andersbakken/rtags">RTags</a>이란게 있음. 소스코드 파싱, 분석 등등 다 LLVM/Clang이 잘해주고(완전한 컴파일러니까 ㅋㅋ), 그걸 갖고서 자동완성, 네비게이션을 위한 데이터베이스를 자체적으로 만들어서 소켓을 통해 제공하는 서버(<code>rdm</code>)와 이걸 이용하는 커맨드라인 클라이언트(<code>rc</code>)으로 크게 구성되어있음.</p>
+<p>이런 유사한 접근 방식으로, Clang을 이용한, <a href="https://github.com/Sarcasm/irony-mode">Irony-mode</a>이 있는데, 조금 자동완성도 그때그때 가끔 잘안되고, 어차피 Irony에서 제공하는 기능들은 RTags이랑 다른 이맥스 패키지들을 통해서 다 구현이 가능해서, 나는 RTags만 쓰고있다.</p>
+<p>여튼 신비롭게 알아서 기반되는 데이터를 다 모아주는건 좋은데, RTags 이게 제대로 동작하려면, <code>compile_commands.json</code> 이란 파일이 필요해지는데,</p>
+<ol>
+<li><code>CFLAGS</code>, <code>LIBS</code>, <code>LDFLAGS</code> 등등 흔히 C/C++ 컴파일러에 우리가 전달하는 인자들을 알아야, 실제로 컴파일러가 소스코드를 분석하듯이 할수있다.</li>
+<li><code>cpp</code> C Preprocessor에 대해서도 그렇고,</li>
+<li>libc++, STL 같은 기본적인 라이브러리는 물론, 외부 의존성 라이브러리의 헤더 파일을 찾아야 타입 등을 알수있으니까.</li>
+<li><code>compile_commands.json</code> 파일은 다른 <code>configure</code>, <code>automake</code> 등등에서 복잡한거 다 제하고, 최종적으로 C/C++ 컴파일러에 전달할 인자들만 정리해놓은 파일이다.</li>
+<li>이걸 갖고 주어진 소스코드를 LLVM/Clang을 거쳐서 소스코드 분석이 가능해진다.</li>
+<li>대충 요런 형식이다: <a href="https://clang.llvm.org/docs/JSONCompilationDatabase.html">https://clang.llvm.org/docs/JSONCompilationDatabase.html</a></li>
+<li>그런데, Autoconf, CMake등을 거치면 이미 이런걸 매번 내손으로 적어주기도 힘들고, 빌드하는 환경에 따라서 그때그때 다르다.</li>
+<li>쨔잔! <a href="https://cmake.org/cmake/help/v3.5/variable/CMAKE_EXPORT_COMPILE_COMMANDS.html">https://cmake.org/cmake/help/v3.5/variable/CMAKE_EXPORT_COMPILE_COMMANDS.html</a></li>
+<li>CMake은 자동으로 지원해준다.
+1. 가끔 이걸 gcc/g++등의 커맨드를 가로채는 proxy 스크립트를 작성해서, 이게 실행될때마다 기록해서 생성하는 경우도 있는데, 이건 너무 슬프니 그러지않기로하자&hellip;</li>
+<li>결론은,</li>
+<li>RTags을 쓰려면, <code>compile_commands.json</code>을 생성해줘야함.</li>
+<li>그런데 CMake을 빌드 생성기로 쓰면, 자동으로 생성해준다.</li>
+<li>뱀!🐍</li>
+</ol>
+<h2 id="cmake-ide-rtags">CMake-IDE, RTags</h2>
+<p><a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L57">https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L57</a></p>
+<p>57라인의 <code>use-package</code> 하나랑 시스템에 <a href="https://github.com/Andersbakken/rtags#installing-rtags">RTags만 설치</a>되어 있다면, 바로 이맥스에서 C++ 자동완성, 네비게이션을 위한 환경설정이 끝난다. (사실 CMake-IDE이 해주는건 <code>compile_commands.json</code>을 찾아서 <code>rdm</code>에 전달해 실행하거나 등등의 잡다한 일들이 있는데, 이걸 자동으로 해준다.)</p>
+<p>RTags은 ArchLinux/Homebrew 등에서는 아예 패키징되어있으니 그걸 사용해도 편하다.</p>
+<p><a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L123">https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L123</a></p>
+<p>RTags을 설정했고, CMake-IDE만 설정하면 끝. 이제 정말로 <code>CMakeLists.txt</code> 파일이 있는 프로젝트 디렉토리에 속한 소스코드 파일을 열고, <code>M-x rtags-...</code> 등의 명령을 통해서 바로 rtags의 강렼한 기능을 맛볼수있다. (아직 자동완성 프론트엔드는 설정 안됐으니 잘안될지도)</p>
+<p>여튼 <a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L273">https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L273</a> 여기에 나오는 <code>cmake-ide-...</code> 이나 <code>rtags-...</code> 같은 커맨드들은 이제 대부분 바로 실행이 가능해졌다. (나머지는 취향에 맞게 키바인딩을 만들거나, 조금 더 내 워크플로우에 맞춰 elisp을 작성해주거나 정도.)</p>
+<h2 id="조금-더-clang-tidy-clang-format">조금 더 Clang-Tidy, Clang-Format</h2>
+<p>위의 <em>원하는 기능들</em> 에서 <a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L216">소스코드 자동 포매팅</a>이나 체크가 가능한데, 나는 clang-tidy 연동은 그냥 이맥스랑 하지 않았다. 원하는 경우엔 <a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L29">Flycheck + Clang-Tidy</a>을 통해서 구현이 가능하다만, 그냥 Clang 기본 Flycheck Checker만 사용하고, 필요하면 쉘스크립트 작성해 쓰는게 더 나은거 같다. (반응속도나 너무 많은 결과 등등)</p>
+<h2 id="projectile">Projectile</h2>
+<p>설명생략. 자동으로 잘 굴러감.
+<a href="https://github.com/bbatsov/projectile">https://github.com/bbatsov/projectile</a></p>
+<h2 id="자동완성-타입정보-툴팁-실시간-코드체크">자동완성, 타입정보 툴팁, 실시간 코드체크</h2>
+<p>내 취향에 따라, 자동완성은 Company, 타입정보 툴팁은 Eldoc, 실시간 체크는 Flycheck을 사용했다.
+(세가지 모두 이맥스에서는 다른 대안들이 있고, 대부분 RTags이랑 연동이 가능하다.)</p>
+<ol>
+<li><strong>자동완성</strong> Company</li>
+<li>일단 Company 로딩 <a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L34">https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L34</a>
+<ol>
+<li>그리고 <code>C-c \</code>으로 자동완성 팝업 강제로 부르는걸 추가했다. 쩜 찍었을때만이 아니라 필요할때 바로 띄울수있도록.</li>
+<li><code>c++-mode-hook</code>등에 당연히 자동완성 되도록 <code>add-hook</code>해주고.</li>
+</ol>
+</li>
+<li>rtags 로딩할때도,
+<ol>
+<li>company이랑 연동되도록 <code>company-backends</code>에 연결해주고,</li>
+<li><code>rtags-completions-enabled</code> 켜서 자동완성 기능을 위한 데이터베이스 만들고,</li>
+<li><code>add-hook</code>해서 rtags이랑 연동되도록.</li>
+</ol>
+</li>
+<li><strong>타입정보 툴팁</strong> Eldoc
+<ol>
+<li><a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L76">https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L76</a></li>
+<li>뭔가 좀 코드 많긴한데, 결론적으로는, 현재 커서의 심볼에 대해서<code>rtags-get-summary-text</code> 한 결과를  알록달록 예쁘게 칠해주고(<code>rtags-eldoc-function</code>, <code>fontify-string</code>)</li>
+<li>그걸 eldoc이랑 연결해주었다. <a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L108">https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L108</a></li>
+</ol>
+</li>
+<li><strong>실시간 코드체크</strong> Flycheck
+<ol>
+<li><a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L15">https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L15</a></li>
+<li>CMake-IDE이 <em>아마도</em> Flycheck 내장인 <code>c/c++-clang</code> checker이 제대로 동작하도록 해주는거 같다. : <a href="http://www.flycheck.org/en/latest/languages.html#c-c">http://www.flycheck.org/en/latest/languages.html#c-c</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="프로그램-실행-디버깅">프로그램 실행, 디버깅</h2>
+<p>그 다음에 조금 귀차니즘 해결을 위해 다음과 같이 <a href="https://emacs-helm.github.io/helm/">Helm</a>을 이용해봤다.</p>
+<ol>
+<li><strong>문제</strong>
+<ol>
+<li>이맥스에서 내가 빌드한 실행파일을 실행하거나 gdb으로 디버깅하는건 이미 제공됨.
+<ol>
+<li><code>M-x gdb</code></li>
+<li><code>M-x shell-command</code></li>
+<li>..등등등</li>
+</ol>
+</li>
+<li>그런데, 그 빌드한 실행파일의 경로를 쳐주기 너무 괴롭다.</li>
+<li>또, CMake을 이용해서 빌드했기 때문에 <code>make install</code>/<code>ninja install</code> 하기 이전엔 빌드 디렉토리 어딘가에 있을건데&hellip;</li>
+</ol>
+</li>
+<li><strong>방안</strong>
+<ol>
+<li>우선, CMake-IDE은 빌드 디렉토리가 어디인지 알고있다
+<ol>
+<li>그 빌드 디렉토리에서 실행파일을 검색해보면 실행파일 목록 찾을수있다.</li>
+</ol>
+</li>
+<li>그렇게 찾은 실행화일들의 목록에서 현재 내가 열어놓은 소스코드 파일의 이름과 가장 <em>유사한</em> 실행파일 이름을 가장 우선순위가 높은 후보로 올려줘서, Helm을 통해 고르면 됨.
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Levenshtein_distance">https://en.wikipedia.org/wiki/Levenshtein_distance</a></li>
+<li><a href="https://www.emacswiki.org/emacs/LevenshteinDistance">https://www.emacswiki.org/emacs/LevenshteinDistance</a></li>
+</ol>
+</li>
+<li>끝: <a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L143">https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L143</a>
+<ol>
+<li>조금 뭔가 엄청 많이 작성해놓기는 했는데, 위의 내용들을 구현해서, 그냥 실행하길 원하는 파일이름이랑 가장 가까운 소스코드 파일 열어놓고 <code>, d</code>이나 <code>, x</code> 누르면 알아서 파일 찾아서 골라줌.</li>
+<li>그게 마음에 안들면 파일을 다른걸로 고를수도 있고, (소스코드랑 실행화일 이름이랑 아예 다를수도 있으니)</li>
+<li>실행 인자를 내손으로 직접 줄수도있고.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="키바인딩">키바인딩</h2>
+<p>원래는 Spacemacs 환경에서 이 C++환경을 만들다가, 나중에 <a href="https://github.com/noctuid/general.el">General.el</a>이라는 Spacemacs처럼 Evil모드에서 <a href="https://vi.stackexchange.com/questions/836/what-is-leader">Leader/Prefix-key</a>을 이용한 키바인딩을 설정하기 좋은 프레임웍으로 갈아탔다. 지금은 완전히 바닐라 이맥스에 설정해서 가볍게 쓴다.</p>
+<ol>
+<li>Spacemacs용 설정: <a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L266">https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L266</a></li>
+<li>General.e용 설정: <a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L303">https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L303</a></li>
+</ol>
+<h2 id="디스어셈블리">디스어셈블리</h2>
+<p>사실 이거 안만들어도 그냥 gdb에서 <code>disassemble</code>이 더 나은거 같다. (소스코드랑 연계를 잘 보여주고, 디스어셈블리 안에서 원하는 심볼따라 찾아가기도 좋게 정리해줘서&hellip;)</p>
+<p>그래도 이미 <a href="https://sourceware.org/binutils/docs/binutils/objdump.html">objdump</a>을 이용한 <a href="https://github.com/jart/disaster">disaster.el</a>이 있고, 적당히 예쁘게 색깔 칠해줘서 보기 멋져보여서 작성해봤다.</p>
+<p>이것도 위의 <em>실행파일 찾아내기</em> 와 같이 object file을 현재 소스코드의 이름을 기반으로, 빌드 디렉토리에서 찾아주고, 그걸 디스어셈블하는 방식으로 구현했다.</p>
+<ol>
+<li>관련 elisp 및 설정 <a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L228">https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/cmake-ide.el#L228</a></li>
+<li>disaster.el의 관련 이슈: <a href="https://github.com/jart/disaster/issues/19">https://github.com/jart/disaster/issues/19</a></li>
+</ol>
+<h1 id="프로젝트별-설정-파일이-필요하다">프로젝트별 설정 파일이 필요하다</h1>
+<p><a href="https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/dot-dir-locals.el">https://github.com/ageldama/configs/blob/master/emacs/cmake-ide/dot-dir-locals.el</a></p>
+<p>위 파일을 그냥 복사해서, C++ 프로젝트 최상위 디렉토리에 <code>.dir-locals.el</code> 파일으로 놓아줘야함.</p>
+<ol>
+<li>CMake-IDE이 <code>cmake</code>을 실행할때, 디버그 모드로 설정하도록,
+<ol>
+<li><a href="https://cmake.org/cmake/help/v3.0/variable/CMAKE_BUILD_TYPE.html">https://cmake.org/cmake/help/v3.0/variable/CMAKE_BUILD_TYPE.html</a></li>
+</ol>
+</li>
+<li>(이건 취향) <code>cmake</code>이 <a href="https://ninja-build.org/">Ninja</a>을 위한 빌드파일을 생성하도록 <code>-GNinja</code>
+<ol>
+<li>다른 빌드시스템을 써야한다면 참고: <a href="https://cmake.org/cmake/help/v3.0/manual/cmake-generators.7.html">https://cmake.org/cmake/help/v3.0/manual/cmake-generators.7.html</a></li>
+</ol>
+</li>
+<li>그리고 <code>cmake-ide-build-dir</code> 설정이랑 <code>flycheck-clang-tidy-build-path</code>을 모두 동일한 빌드 디렉토리로 설정.
+<ol>
+<li>사실 <code>flycheck-clang-tidy-build-path</code>은 flycheck에서 clang-tidy backend을 안쓴다면 생략가능.</li>
+<li>하지만, <code>cmake-ide-build-dir</code>은 어쨌든 지정해주는게 잘돌아감. <code>_build</code>말고 아마 다른걸로 바꿔도 잘돌아갈거임. (예: <code>build</code>)</li>
+</ol>
+</li>
+</ol>
+<h1 id="tip-처음-c-프로젝트-열었을때">Tip: 처음 C++ 프로젝트 열었을때?</h1>
+<ol>
+<li>위의 <code>.dir-locals.el</code> 파일을 프로젝트 최상위 디렉토리로 복사.</li>
+<li>기존 CMake build 디렉토리가 있다면 제거.</li>
+<li>아무 C++ 소스파일이나 우선 이맥스에서 열고,</li>
+<li>빌드 파일 생성: <code>M-x cmake-ide-run-cmake</code></li>
+<li>빌드: <code>M-x cmake-ide-compile</code></li>
+<li>이제 RTags등 잘 동작해야함.
+<ol>
+<li>잘안되면, C++ 소스파일 닫았다가 다시 열어보면 잘됨.</li>
+</ol>
+</li>
+</ol>
+<h1 id="마무리">마무리</h1>
+<ol>
+<li>어째서 남들이 <em>신기하고 신나는 신바람 이맥스로 IDE만들기!</em> 같은 포스팅 쓰면 길어지는지 이제야 알겠다.
+<ol>
+<li>나는 이미 이맥스랑 이맥스 생태계에 친하니까 당연한거지만&hellip;</li>
+</ol>
+</li>
+<li>다른 C++ 개발환경들에서 내가 싫어하는점들은 없고, 그냥 빠르게 코딩, 빌드하고 해나갈 내게 맞는 환경을 만들기 위해서 고민하고 만들었었는데, 매우 만족스럽다.
+<ol>
+<li>싫었던점: 너무 무거운 GUI, 마우스로 뭔가 움직여줘야함, 너무 못생긴 GUI, 상용, 그나마 기능들도 거지같거나 아예 C++ 자동완성부터가 거지같음 등등</li>
+</ol>
+</li>
+<li>C++ 언어만 놓고 생각해보면, 파싱하고 의미 이해하고 등등 이상해서 그렇지, 타입시스템이나 역사만 놓고보면 툴링이 이상하지도 않고, 자동완성이나 분석 등이 당연히 잘되어있어야 하는거 같은데, 현대적인 그런 IDE을 만들기 위한 툴링은 RTags을 제외하고 너무 적지 않았었나 싶어서 신기할 지경이었었다.
+<ol>
+<li>이렇게 조립해놓고 보니까 완전 튼튼하고 기능도 좋아서 신바람.</li>
+</ol>
+</li>
+</ol>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emacs/">emacs</a>
+                        <sup>24</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/reversing/">reversing</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/disassembly/">disassembly</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/disassemble/">disassemble</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cmake/">cmake</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/editor/">editor</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gdb/">gdb</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ide/">ide</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/screencast/">screencast</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/rdm/">rdm</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/rtags/">rtags</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ninja/">ninja</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cmake-ide/">cmake-ide</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/workflow/">workflow</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🫰";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/">⬅️ NeoVim, Evil-mode and Emacs의 모험</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-04apr/2018-04apr-golang-windows-vscode/">➡️ Golang Windows에서 Vscode이랑 행복하게 쓰기</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480571</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

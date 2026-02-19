@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Memstick on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/memstick/</link>
+    <description>Recent content in Memstick on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 23 Feb 2020 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/memstick/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grub2, Archlinux ISO으로 만능 USB 메모리스틱 만들기</title>
+      <link>https://ageldama.github.io/posts/2020-02feb/make-grub2-usb/</link>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-02feb/make-grub2-usb/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;경고&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&amp;#34;만능USB&amp;#34;이란 말은 사실 &lt;strong&gt;과대광고입니다&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  하지만, 몇 가지 장점이 있는 USB 메모리스틱을 만드는 방법임:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;아치리눅스 설치ISO 이미지으로 부팅 가능한 USB 스틱이면서도,&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;ISO파일의 용량만큼만 USB메모리를 활용하는 것이 아니라,&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;용량이 되는만큼 그냥 일반적인 메모리스틱처럼 파일 복사용으로도&#xA;쓸 수 있음.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;사실 리눅스든 다른 OS의 설치 이미지를 USB메모리에 올리면, 딱 그 설치&#xA;  이미지만큼만 사용할 수 있게 만들어 버리고, 그나마도 Read-only 상태인&#xA;  ISO이 되어버리고, 더더욱 나쁘게 다른 추가 파티션을 만들어서 남는&#xA;  공간을 활용할 수도 없게 만든다. (파티션 이미지가 아니라&#xA;  디스크이미지인가보다.)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

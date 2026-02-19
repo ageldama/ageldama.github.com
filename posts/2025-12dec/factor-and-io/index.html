@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>(주절주절) Factor와 Io - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480573">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+Factor와 Io 모두 예전에 덕질하던 프로그래밍언어.
+
+이번엔 추억놀음이나 포스팅해보려고.
+
+
+Factor
+
+
+
+https://factorcode.org/
+https://en.wikipedia.org/wiki/Factor_(programming_language)
+
+
+팩터는 Functional, Concatenative programming언어인데, Forth와 같은
+방식의 평가규칙을 가졌지만, Semantics은 Smalltalk이나 Lisp 같이
+고수준의 추상화를 작성하기 적절했었다. 그리고 Native compilation &#43;
+Image-based 시스템이어서 커먼리습이랑 비슷하게 사용도 가능해서
+좋았었다.
+
+오랬만에 &#34;ego searching&#34; 해봤다 😶‍🌫️ :
+
+
+https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html
+같은 문서를 어떻게 요악해서 AI이 보여주는지 잘 모르겠다, 신기할 정도다.
+
+&#34;Hallucination 🫥&#34;도 좀 있긴하다. 다른 부분은 다 맞는거 같은데(ㅋㅋ),
+윈도 빌드를 제공하거나 했다는 언급은, 내가 그랬었나 싶다. ㅎㅎ" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy/">⬅️ Hands of Necromancy와 영포티의 추억벤또 🍱</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/pgrp-rhapsody/">➡️ process-tree 정리의 rhapsody</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">Factor</a>
+</li>
+<li><a href="#headline-2">Io</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🚥 (주절주절) Factor와 Io</h1>
+	    <div class="meta">
+                <time datetime="2025-12-10" pubdate>
+                    2025년12월10일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+Factor와 Io 모두 예전에 덕질하던 프로그래밍언어.</p>
+<p>
+이번엔 추억놀음이나 포스팅해보려고.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Factor
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li><a href="https://factorcode.org/">https://factorcode.org/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Factor_(programming_language)">https://en.wikipedia.org/wiki/Factor_(programming_language)</a></li>
+</ol>
+<p>
+팩터는 Functional, Concatenative programming언어인데, Forth와 같은
+방식의 평가규칙을 가졌지만, Semantics은 Smalltalk이나 Lisp 같이
+고수준의 추상화를 작성하기 적절했었다. 그리고 Native compilation +
+Image-based 시스템이어서 커먼리습이랑 비슷하게 사용도 가능해서
+좋았었다.</p>
+<p>
+오랬만에 &#34;ego searching&#34; 해봤다 😶‍🌫️ :</p>
+<a href="/posts/2025-12dec/factor-ageldama-googling.png" width="600px"><img src="/posts/2025-12dec/factor-ageldama-googling.png" alt="/posts/2025-12dec/factor-ageldama-googling.png"/></a>
+<p>
+<a href="https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html">https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html</a>
+같은 문서를 어떻게 요악해서 AI이 보여주는지 잘 모르겠다, 신기할 정도다.</p>
+<p>
+&#34;Hallucination 🫥&#34;도 좀 있긴하다. 다른 부분은 다 맞는거 같은데(ㅋㅋ),
+윈도 빌드를 제공하거나 했다는 언급은, 내가 그랬었나 싶다. ㅎㅎ</p>
+<p>
+다시 원래 이야기로 돌아와서, Factor + Emacs은 FUEL이란 이맥스확장이
+지원되어서, 마치 커먼리습의 SLIME 혹은 Sly-처럼 편안하게 사용하기
+좋았었다.</p>
+<p>
+그리고 Forth, Smalltalk, Lisp처럼 DSL을 만들기도 유연하고 명확한
+문법이어서 딱 그렇게 쓰려고 했던거 같다.</p>
+<div class="src src-factor">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-factor" data-lang="factor"><span class="line"><span class="cl"><span class="kn">USING:</span> <span class="nn">dice</span> <span class="nn">formatting</span> <span class="k">;
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ROLL: 2d8+4
+</span></span><span class="line"><span class="cl"><span class="s">&#34;You do %s points of damage!&#34;</span> printf</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+…위에 보이듯이 <code>2d8+4</code> 같은 부분들이 <code>dice</code> 모듈에서 제공하는 DSL.</p>
+<p>
+그리고 커먼리습처럼 compile-time meta-programming이 자연스러운
+언어여서, 실제로 데이터파일을 읽거나 하는걸 컴파일시점에 처리하고,
+그거에 따라 코드를 미리 생성해서 런타임엔 최적화된 코드로 실행할 수
+있도록 메타프로그래밍이 가능했다. (커먼리습처럼.)</p>
+<p>
+재밌었고, 많은 부분이 커먼리습의 그것과 유사해서 더 좋아했던거 같다.</p>
+<p>
+지금은 글쎄, package manager도 없고, 코드 컴파일속도도 오히려
+커먼리습이 더 빠른거 같아서 굳이 끌리지는 않는다. ㅎㅎ 이걸 더
+발전시켜서 사람들과 같이 재밌게 쓰고 싶다는 마음도 별로 들지 않는다.
+나는 그렇게 하라면 할수도 있겠다,싶게 아직도 좋아는 하지만.</p>
+<p>
+이후에 다른 Concatenative programming languages이 연구와 시도되는거
+같지만, 대부분은 이렇게라도 성장시켜내지 못한거 같다.</p>
+<p>
+사족인데, 아마 원 Slava Pestov 원래 프로젝트의 시작목적은 Java/JVM
+상에서 실행될 게임을 위한 스크립팅언어로 시작했다고 한다. Forth /
+Stack-based 언어가 그렇게 시작하기 좋지 싶다. ㅎㅎ그런데 어느새
+네이티브컴파일이 가능하고 ㅎㄷㄷ…</p>
+<p>
+하옇튼 Slava Pestov의 <a href="https://en.wikipedia.org/wiki/JEdit">jEdit</a>도 한 때 정말 좋아하던 코드편집기였었었다.</p>
+<p>
+만약 게임을 만들던 그 시도에 더 집중했었더라면 Minecraft처럼 Java으로
+짠 성공적인 게임이 되었을까 대체역사를 상상도 해본다. ⛏️</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Io
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<ol>
+<li><a href="https://iolanguage.org/">https://iolanguage.org/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Io_(programming_language)">https://en.wikipedia.org/wiki/Io_(programming_language)</a></li>
+<li><a href="https://wiki.kldp.org/wiki.php/IoLanguage/Tutorial">https://wiki.kldp.org/wiki.php/IoLanguage/Tutorial</a></li>
+</ol>
+<p>
+  또다른 추억놀음 언어는 Io. 이건 개인적으로는 코딩퍼즐을 푸는
+  장난감으로 쓰거나 한국어으로 튜토리얼을 번역해 공개하거나 하는
+  정도로 익혔던거 같다.</p>
+<p>
+  객체지향이지만, Lua, JavaScript와 유사한, 하지만 많이 다른
+  Prototype-based OO였고, Message-passing OO + Lazy evaluation이어서
+  정말 유연했다.</p>
+<p>
+  예를 들어서, 클래스-메서드 선언, Control-structure 등이 따로
+  Keyword이 없고 그냥 메서드로 구현되어 있거나(스몰톡처럼), 리습처럼
+  유연한 매크로를 만들 수 있었었다.</p>
+<p>
+  그 이후에 Ioke 같은 언어을 기대하긴 했지만 이것도 조용해서 ㅎㅎ</p>
+<p>
+  역시 마찬가지로 커뮤니티나 패키지매니저가 따로 없고, 웹프레임웍 등이
+  공개된게 있지만 15~17년 이상 그대로여서 다시 손에 잡을 생각이 들지는
+  않는다.</p>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">👅<a href="/series/programming-languages/">programming-languages</a>
+                        <sup>27</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">🦔<a href="/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/">추억두더쥐</a>
+                        <sup>14</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/opensource/">opensource</a>
+                        <sup>10</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lua/">lua</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ruby/">ruby</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/korean/">korean</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/smalltalk/">smalltalk</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/io/">io</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/metaprogramming/">metaprogramming</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/stack/">stack</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/forth/">forth</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ioke/">ioke</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/iso-2022-kr/">iso-2022-kr</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/johab/">johab</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/euc-kr/">euc-kr</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/euckr/">euckr</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/minecraft/">minecraft</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/jedit/">jedit</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/self-language/">self-language</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/object-oriented/">object-oriented</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/functional/">functional</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/concatenative/">concatenative</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/prototype-based-inheritance/">prototype-based-inheritance</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/prototype/">prototype</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/language/">language</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/iolanguage/">iolanguage</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/factorcode/">factorcode</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/factor/">factor</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🚥";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy/">⬅️ Hands of Necromancy와 영포티의 추억벤또 🍱</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/pgrp-rhapsody/">➡️ process-tree 정리의 rhapsody</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480573</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

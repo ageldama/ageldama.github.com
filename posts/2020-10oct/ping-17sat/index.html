@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 16/Oct/2020 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480572">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+ADT1만큼 만들어 쓰는 것은 아니지만, 그냥 Kotlin, Python의
+dataclass 정도는 쓰고 싶어서 CommonLisp 매크로를 만들어봤다.2
+
+equals 라이브러리를 써서 동치 비교와 CLOS의 print-object generic
+function을 구현해서 to-string 정도만 되도록 만들어 봤다.
+
+
+macro body
+
+
+
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+
+
+(defmacro define-data-class
+    (class-name parent-classes slot-names
+     &amp;key (no-print-slot-names nil) (no-equals-slot-names nil))
+  (flet ((accessor-symbol (slot-name)
+           (alexandria:format-symbol *package*
+                                     &#34;~a-~a&#34; class-name slot-name)))  
+    (list &#39;progn          
+          ;; defclass
+          (let ((slot-defs (loop for slot-name in slot-names
+                                 collecting `(,slot-name
+                                              :initarg ,(alexandria:make-keyword slot-name)
+                                              :accessor ,(accessor-symbol slot-name)))))
+            `(defclass ,class-name ,parent-classes ,slot-defs))
+
+          ;; defmethod print-object
+          (let* ((print-slot-names (set-difference slot-names
+                                                   no-print-slot-names))
+                 (fmt-ctrl (format nil &#34;~{~a=~~a~^, ~}&#34; print-slot-names)))
+            `(defmethod print-object ((obj ,class-name) stream)
+               (print-unreadable-object (obj stream :type t)
+                 (with-slots ,print-slot-names obj
+                   (format stream ,fmt-ctrl ,@print-slot-names)))))
+
+          ;; defmethod equals:equals
+          (let* ((equals-slot-names (set-difference slot-names
+                                                    no-equals-slot-names))
+                 (equals-exprs (loop for equals-slot-name in equals-slot-names
+                                     collecting `(equals:equals (slot-value lhs (quote ,equals-slot-name))
+                                                                (slot-value rhs (quote ,equals-slot-name))))))
+            `(defmethod equals:equals ((lhs ,class-name) (rhs ,class-name) &amp;rest args)
+               (declare (ignore args))
+               (and t ,@equals-exprs)))
+          )))
+
+
+
+
+
+
+
+synopsis / usage
+
+
+
+
+
+1
+2
+3
+4
+5
+6
+
+
+(define-data-class animal () (name age))
+
+(define-data-class bird (animal) ())
+
+(equals:equals (make-instance &#39;animal :name &#34;foo&#34; :age 18)
+               (make-instance &#39;animal :name &#34;foo&#34; :age 18))
+
+
+
+
+  오랬만에 재밌었다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-16fri/">⬅️ Ping 17/Oct/2020</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-15thu-2nd/">➡️ Ping (2nd) 15/Oct/2020</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">macro body</a>
+</li>
+<li><a href="#headline-2">synopsis / usage</a>
+</li>
+<li><a href="#headline-3">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🚏 Ping 16/Oct/2020</h1>
+	    <div class="meta">
+                <time datetime="2020-10-16" pubdate>
+                    2020년10월16일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+ADT<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>만큼 만들어 쓰는 것은 아니지만, 그냥 Kotlin, Python의
+dataclass 정도는 쓰고 싶어서 CommonLisp 매크로를 만들어봤다.<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
+<p>
+<a href="https://common-lisp.net/project/cdr/document/8/cleqcmp.html">equals</a> 라이브러리를 써서 동치 비교와 CLOS의 <code>print-object</code> generic
+function을 구현해서 to-string 정도만 되도록 만들어 봤다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+macro body
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
+</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
+</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
+</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
+</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
+</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
+</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
+</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
+</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
+</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
+</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
+</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
+</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
+</span><span class="lnt" id="29"><a class="lnlinks" href="#29">29</a>
+</span><span class="lnt" id="30"><a class="lnlinks" href="#30">30</a>
+</span><span class="lnt" id="31"><a class="lnlinks" href="#31">31</a>
+</span><span class="lnt" id="32"><a class="lnlinks" href="#32">32</a>
+</span><span class="lnt" id="33"><a class="lnlinks" href="#33">33</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defmacro</span> <span class="nv">define-data-class</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">class-name</span> <span class="nv">parent-classes</span> <span class="nv">slot-names</span>
+</span></span><span class="line"><span class="cl">     <span class="k">&amp;key</span> <span class="p">(</span><span class="nv">no-print-slot-names</span> <span class="no">nil</span><span class="p">)</span> <span class="p">(</span><span class="nv">no-equals-slot-names</span> <span class="no">nil</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">flet</span> <span class="p">((</span><span class="nv">accessor-symbol</span> <span class="p">(</span><span class="nv">slot-name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="nv">alexandria:format-symbol</span> <span class="vg">*package*</span>
+</span></span><span class="line"><span class="cl">                                     <span class="s">&#34;~a-~a&#34;</span> <span class="nf">class-name</span> <span class="nv">slot-name</span><span class="p">)))</span>  
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nc">list</span> <span class="ss">&#39;progn</span>          
+</span></span><span class="line"><span class="cl">          <span class="c1">;; defclass</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">slot-defs</span> <span class="p">(</span><span class="nb">loop</span> <span class="nv">for</span> <span class="nv">slot-name</span> <span class="nv">in</span> <span class="nv">slot-names</span>
+</span></span><span class="line"><span class="cl">                                 <span class="nv">collecting</span> <span class="o">`</span><span class="p">(</span><span class="o">,</span><span class="nv">slot-name</span>
+</span></span><span class="line"><span class="cl">                                              <span class="ss">:initarg</span> <span class="o">,</span><span class="p">(</span><span class="nv">alexandria:make-keyword</span> <span class="nv">slot-name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                              <span class="ss">:accessor</span> <span class="o">,</span><span class="p">(</span><span class="nv">accessor-symbol</span> <span class="nv">slot-name</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">            <span class="o">`</span><span class="p">(</span><span class="nb">defclass</span> <span class="o">,</span><span class="nf">class-name</span> <span class="o">,</span><span class="nv">parent-classes</span> <span class="o">,</span><span class="nv">slot-defs</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          <span class="c1">;; defmethod print-object</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="k">let*</span> <span class="p">((</span><span class="nv">print-slot-names</span> <span class="p">(</span><span class="nf">set-difference</span> <span class="nv">slot-names</span>
+</span></span><span class="line"><span class="cl">                                                   <span class="nv">no-print-slot-names</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nv">fmt-ctrl</span> <span class="p">(</span><span class="nf">format</span> <span class="no">nil</span> <span class="s">&#34;~{~a=~~a~^, ~}&#34;</span> <span class="nv">print-slot-names</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">            <span class="o">`</span><span class="p">(</span><span class="nb">defmethod</span> <span class="nf">print-object</span> <span class="p">((</span><span class="nv">obj</span> <span class="o">,</span><span class="nf">class-name</span><span class="p">)</span> <span class="nc">stream</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nb">print-unreadable-object</span> <span class="p">(</span><span class="nv">obj</span> <span class="nc">stream</span> <span class="ss">:type</span> <span class="no">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nb">with-slots</span> <span class="o">,</span><span class="nv">print-slot-names</span> <span class="nv">obj</span>
+</span></span><span class="line"><span class="cl">                   <span class="p">(</span><span class="nf">format</span> <span class="nc">stream</span> <span class="o">,</span><span class="nv">fmt-ctrl</span> <span class="o">,@</span><span class="nv">print-slot-names</span><span class="p">)))))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          <span class="c1">;; defmethod equals:equals</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="k">let*</span> <span class="p">((</span><span class="nv">equals-slot-names</span> <span class="p">(</span><span class="nf">set-difference</span> <span class="nv">slot-names</span>
+</span></span><span class="line"><span class="cl">                                                    <span class="nv">no-equals-slot-names</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nv">equals-exprs</span> <span class="p">(</span><span class="nb">loop</span> <span class="nv">for</span> <span class="nv">equals-slot-name</span> <span class="nv">in</span> <span class="nv">equals-slot-names</span>
+</span></span><span class="line"><span class="cl">                                     <span class="nv">collecting</span> <span class="o">`</span><span class="p">(</span><span class="nv">equals:equals</span> <span class="p">(</span><span class="nf">slot-value</span> <span class="nv">lhs</span> <span class="p">(</span><span class="k">quote</span> <span class="o">,</span><span class="nv">equals-slot-name</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                                                                <span class="p">(</span><span class="nf">slot-value</span> <span class="nv">rhs</span> <span class="p">(</span><span class="k">quote</span> <span class="o">,</span><span class="nv">equals-slot-name</span><span class="p">))))))</span>
+</span></span><span class="line"><span class="cl">            <span class="o">`</span><span class="p">(</span><span class="nb">defmethod</span> <span class="nv">equals:equals</span> <span class="p">((</span><span class="nv">lhs</span> <span class="o">,</span><span class="nf">class-name</span><span class="p">)</span> <span class="p">(</span><span class="nv">rhs</span> <span class="o">,</span><span class="nf">class-name</span><span class="p">)</span> <span class="k">&amp;rest</span> <span class="nv">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">ignore</span> <span class="nv">args</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nb">and</span> <span class="no">t</span> <span class="o">,@</span><span class="nv">equals-exprs</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">          <span class="p">)))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+synopsis / usage
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">define-data-class</span> <span class="nv">animal</span> <span class="p">()</span> <span class="p">(</span><span class="nv">name</span> <span class="nv">age</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">define-data-class</span> <span class="nv">bird</span> <span class="p">(</span><span class="nv">animal</span><span class="p">)</span> <span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">equals:equals</span> <span class="p">(</span><span class="nf">make-instance</span> <span class="ss">&#39;animal</span> <span class="ss">:name</span> <span class="s">&#34;foo&#34;</span> <span class="ss">:age</span> <span class="mi">18</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">               <span class="p">(</span><span class="nf">make-instance</span> <span class="ss">&#39;animal</span> <span class="ss">:name</span> <span class="s">&#34;foo&#34;</span> <span class="ss">:age</span> <span class="mi">18</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  오랬만에 재밌었다.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p><a href="https://en.wikipedia.org/wiki/Algebraic_data_type">https://en.wikipedia.org/wiki/Algebraic_data_type</a> </p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p>사실 ADT을 정의하는 매크로 라이브러리와 이를 위한 패턴매칭
+라이브러리가 커먼리습에 이미 있지만. 더 간단하게만 쓰고 싶어서.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>112</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>53</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lisp/">lisp</a>
+                        <sup>26</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/commonlisp/">commonlisp</a>
+                        <sup>20</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/common-lisp/">common-lisp</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/defmacro/">defmacro</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/clos/">clos</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/dataclass/">dataclass</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/record/">record</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/defclass/">defclass</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🚏";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-16fri/">⬅️ Ping 17/Oct/2020</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-15thu-2nd/">➡️ Ping (2nd) 15/Oct/2020</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480572</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Erlang에 더 관심을 기울여야 할 시점인거 같다 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480571">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="그냥 최근의 자바나 node.js, 특히
+자바의 RxJava 같은걸
+보다보면, 1 뭔가 언어적으로
+지원하지 않는걸 뜯어내서 동작하게 만들고 너무 골치가 아프게
+만들어지는건 아닌가 생각도 든다. (사실상 콜백. ㅎㅎ)
+그리고 지금 한창 JDBC이라던지 이런 입출력과 관련된 부분에서 비동기
+방식을 지원하려고 많은 변화가 있을만한 시점인거 같다.
+예상은 아마 몇년간은 이런 혼란이 자바쪽에는 계속 있을거 같다는
+생각이다. (async/await 같은 키워드가 추가되고 하려면 자바에 몇년이 더
+걸릴지는 아무도 모를거 같다. lambda이 추가되는데 얼마나 오래걸렸었는지
+추억해보자..)
+그런데, &ldquo;아몰랑 닥치고 얼랭씁십다&rdquo; 이런 얘기를 하고 싶은건 아닌데,
+그래도 사실 자바로 이런걸 하고 있다보면, 얼랭에서 이미 잘 해결한
+문제를 왜 이렇게 고민하고 있어야하고, 왜 이렇게 저수준의 작업을 매번
+프로젝트를 만들때마다 해야할까 싶다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/">⬅️ 2017년 1월, 요즘 나는.</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-22-java-immutables-classic-problem/">➡️ Java Immutables와 친숙한 오래된 문제들</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents"></nav>
+
+    <article>
+	<div class="title"><h1 class="title">👨‍🦱 Erlang에 더 관심을 기울여야 할 시점인거 같다</h1>
+	    <div class="meta">
+                <time datetime="2017-01-22" pubdate>
+                    2017년01월22일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p>그냥 최근의 자바나 node.js, 특히
+자바의 <a href="https://github.com/ReactiveX/RxJava">RxJava</a> 같은걸
+보다보면, <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 뭔가 언어적으로
+지원하지 않는걸 뜯어내서 동작하게 만들고 너무 골치가 아프게
+만들어지는건 아닌가 생각도 든다. (사실상 콜백. ㅎㅎ)</p>
+<p>그리고 지금 한창 JDBC이라던지 이런 입출력과 관련된 부분에서 비동기
+방식을 지원하려고 많은 변화가 있을만한 시점인거 같다.</p>
+<p>예상은 아마 몇년간은 이런 혼란이 자바쪽에는 계속 있을거 같다는
+생각이다. (async/await 같은 키워드가 추가되고 하려면 자바에 몇년이 더
+걸릴지는 아무도 모를거 같다. lambda이 추가되는데 얼마나 오래걸렸었는지
+추억해보자..)</p>
+<p>그런데, &ldquo;<em>아몰랑 닥치고 얼랭씁십다</em>&rdquo; 이런 얘기를 하고 싶은건 아닌데,
+그래도 사실 자바로 이런걸 하고 있다보면, 얼랭에서 이미 잘 해결한
+문제를 왜 이렇게 고민하고 있어야하고, 왜 이렇게 저수준의 작업을 매번
+프로젝트를 만들때마다 해야할까 싶다.</p>
+<ol>
+<li>이미 erlang-vm이 입출력에 관련된건 비동기로 잘 처리해줌.</li>
+<li>거기에 이미 메시지 주고 받고, 다른 프로세스들이랑 별로 어떻게
+동기식일지 비동기일지에 따라 완전 달라질것도 적다..</li>
+<li>더욱이 프로세스별로 gc이라서 JVM처럼
+가비지컬렉션때마다
+<a href="http://stackoverflow.com/questions/40182392/does-java-garbage-collect-always-has-to-stop-the-world">stop-the-world</a>도
+걱정 적음.</li>
+</ol>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>회사에서 자바로 하는 프로젝트들은 이미 많이 쓰고있어서.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">👅<a href="/series/programming-languages/">programming-languages</a>
+                        <sup>27</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>53</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/nodejs/">nodejs</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/java/">java</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/io/">io</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/async/">async</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/concurrency/">concurrency</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/rxjava/">rxjava</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/jvm/">jvm</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/erlang/">erlang</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "👨‍🦱";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-29-myself-nowadays/">⬅️ 2017년 1월, 요즘 나는.</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-22-java-immutables-classic-problem/">➡️ Java Immutables와 친숙한 오래된 문제들</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480571</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

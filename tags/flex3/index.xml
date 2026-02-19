@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flex3 on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/flex3/</link>
+    <description>Recent content in Flex3 on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 10 Nov 2020 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/flex3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 10/Nov/2020</title>
+      <link>https://ageldama.github.io/posts/2020-11nov/ping-10tue/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-11nov/ping-10tue/</guid>
+      <description>&lt;p&gt;&#xA;올해 초에는 Vue.js을 많이 쓸일이 있었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;아주 오래 전에, Adobe Flex에서 MXML, ActionScript3 같은 것을 써서 화면&#xA;컴포넌트를 만들던 이후로 거의 10여년 만에 화면에 필요한 컴포넌트를&#xA;만들고 개발을 해봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그 중간 중간 jQuery을 이용해서 웹화면을 만들거나 하는 경험도 있기는&#xA;했었는데, 재밌게도 그 이전에 사용하던 MXML, AS3의 컴포넌트 중심&#xA;개발방식이 훨씬 앞선 것이었다는 생각을 했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;실제로 2008년 정도에도, 현재의 ES6 같은 느낌의 AS3으로, Class based&#xA;OO을 하고 코딩을 하고, 화면 컴포넌트들을 JSX와 유사한 모양의 MXML으로&#xA;조직하고, 또 바인딩을 이용해서 지금의 Vue, React에서 State을 이용하여&#xA;데이터를 이용하여 컴포넌트를 어떻게 그릴지 결정해서 개발을 했었었다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>코드 편집기에 대한 생각</title>
+      <link>https://ageldama.github.io/posts/2020-05may/editors/</link>
+      <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-05may/editors/</guid>
+      <description>&lt;p&gt;&#xA;코드 편집기를 어떻게 써왔었는지 잠깐 생각해봤다:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;DOS시절: MS-DOS Editor.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GW-BASIC 시절에는 정말&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/MS-DOS_Editor&#34;&gt;https://en.wikipedia.org/wiki/MS-DOS_Editor&lt;/a&gt; 을 열심히 썼었던 것&#xA;같다.&lt;/li&gt;&#xA;&lt;li&gt;그리고 그 다음엔 &lt;a href=&#34;https://en.wikipedia.org/wiki/PowerBASIC#PowerBASIC_for_DOS_(PBDos)&#34;&gt;PowerBASIC for DOS&lt;/a&gt; 열심히 썼었다. QuickBASIC&#xA;같은 바이트코드으로 컴파일해서 .exe 파일에 인터프리터와&#xA;바이트코드를 embedding 하는 VB의 P-code 같은 가짜 컴파일 방식&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;이&#xA;아니라 정말 네이티브 코드로 컴파일해주고, 인라인 어셈블리와&#xA;메모리 조작이 가능한 베이직 컴파일러, IDE여서 좋은 환경이었던&#xA;것 같다.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;터보C 2.0 편집기. PowerBASIC이랑 유사해서 익숙하게 쓸 수 있었던&#xA;것 같다. 파워베이직도 그렇지만, 의외로 도스시절의 이런 IDE들이&#xA;F1 - Help 메뉴에서 항목별로 문서 정리가 잘 되어 있어서 읽으면서&#xA;즐거웠었던 것 같다. (초등학생~중학생이어서 영어를 잘 이해하지는&#xA;못했지만)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

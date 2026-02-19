@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>내 책상에서 유선랜 환경 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480572">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+개인환경을 조금 특이하게 사용하는데, 그 이유와 방식.
+
+
+why: 유선랜? (무선랜 대신)
+
+
+키보드/마우스 입력이 가장 부드럽게 전달되어서 유선으로 연결해서
+  사용한다.
+
+  x2x으로 연결하거나, ssh-x11-forwarding으로 다른 컴퓨터에서 실행하는
+  프로그램을 디스플레이와 입력장치만 현재 자리에서 그대로 사용할 때에
+  네트웍 연결속도가 딜레이가 적어야 쾌적해서. 1
+
+
+
+
+why: x11? (wayland 대신)
+
+
+요즘 리눅스/bsd 데스크탑 기본설치하면 wayland으로 세팅하는 경우도
+  많은데, 네트웍을 통해서 ssh-x11-forwarding 1
+  사용하거나 x2x 사용하기는 아직 부족한거 같아서, 나는 그냥 x11
+  사용함.
+
+  거기에 xdotool 같은 gui-automation/scripting이나 warpd 같은 키보드를
+  마우스으로 편안하게 쓰도록 해주는 xtest이나, qjoypad 처럼 2
+  게임패드/조이스틱을 편안하게 마우스/키보드으로 매핑해서 쓰는게 나는
+  많은데 모두 x11만 지원하거나, 아직은 x11에서만 쓸만한 수준으로
+  동작해서." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">⬅️ Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/">➡️ News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">why: 유선랜? (무선랜 대신)</a>
+</li>
+<li><a href="#headline-2">why: x11? (wayland 대신)</a>
+</li>
+<li><a href="#headline-3">why: raspberry pi 3? (rpi4이나 더 사양이 높은 본체 대신에)</a>
+</li>
+<li><a href="#headline-4">x2x, conspy</a>
+</li>
+<li><a href="#headline-5">ip addresses, mdns/avahi</a>
+</li>
+<li><a href="#headline-6">ssh-keys, ssh-agent</a>
+</li>
+<li><a href="#headline-7">emacs/tramp + sshx</a>
+</li>
+<li><a href="#headline-8">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🐀 내 책상에서 유선랜 환경</h1>
+	    <div class="meta">
+                <time datetime="2023-03-15" pubdate>
+                    2023년03월15일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+개인환경을 조금 특이하게 사용하는데, 그 이유와 방식.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+why: 유선랜? (무선랜 대신)
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>키보드/마우스 입력이 가장 부드럽게 전달되어서 유선으로 연결해서
+  사용한다.</p>
+<p>
+  x2x으로 연결하거나, ssh-x11-forwarding으로 다른 컴퓨터에서 실행하는
+  프로그램을 디스플레이와 입력장치만 현재 자리에서 그대로 사용할 때에
+  네트웍 연결속도가 딜레이가 적어야 쾌적해서. <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+why: x11? (wayland 대신)
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>요즘 리눅스/bsd 데스크탑 기본설치하면 wayland으로 세팅하는 경우도
+  많은데, 네트웍을 통해서 ssh-x11-forwarding <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>
+  사용하거나 x2x 사용하기는 아직 부족한거 같아서, 나는 그냥 x11
+  사용함.</p>
+<p>
+  거기에 <a href="https://github.com/jordansissel/xdotool">xdotool</a> 같은 gui-automation/scripting이나 <a href="https://github.com/rvaiya/warpd">warpd</a> 같은 키보드를
+  마우스으로 편안하게 쓰도록 해주는 xtest이나, <a href="https://qjoypad.sourceforge.net/">qjoypad</a> 처럼 <sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>
+  게임패드/조이스틱을 편안하게 마우스/키보드으로 매핑해서 쓰는게 나는
+  많은데 모두 x11만 지원하거나, 아직은 x11에서만 쓸만한 수준으로
+  동작해서.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+why: raspberry pi 3? (rpi4이나 더 사양이 높은 본체 대신에)
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>책상의 메인데스크탑, 메인모니터는 raspberry pi 3을 연결해 놓고
+  사용한다.</p>
+<p>
+  훨씬 더 빠른 raspberry pi 4도 갖고 있고, 랩탑이나 사양 좋은 데스크탑
+  본체도 있는데, 다들 모니터를 연결해서 사용하지 않거나 옆자리에
+  추가모니터에 붙여 놓고 사용함.</p>
+<p>
+  게임을 하거나 할 때엔 추가모니터에서 별도로 하면 되고, rpi4이나
+  pc본체의 쿨링팬 소리를 별로 좋아하지 않아서.</p>
+<p>
+  raspberry pi 3 b+을 메인데스크탑처럼 사용하면 fanless으로 세팅이
+  가능하고, 전자책을 읽거나 글을 적거나 하는데에 오히려 더 쾌적하다.</p>
+<p>
+  다양한, 그리고 잡다한 기능들이 모두 너무 rpi3이 느려서 제한되기
+  때문에, 오히려 더 편안하다.</p>
+<p>
+  그리고 정말로 다른 기능들이 필요하다면, 네트웍을 통해서 다른
+  컴퓨터를 연결하고 제어해서 필요할 때에 편안하게 사용할 수 있으니까,
+  그때그때에.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+x2x, conspy
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>=&gt; <a href="/posts/2022-06jun/2022-06jun29--01-ping/">다른 포스팅</a> 참고.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+ip addresses, mdns/avahi
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>유선랜 환경 내에서, 각 host마다 mac address 정도에 따라서 고정된
+  ip주소를 할당해주도록 세팅했다. dhcpd이나 dnsmasq 같은걸 이용하면
+  가능함.</p>
+<p>
+  =&gt; 이것도 <a href="/posts/2019-02feb/internet-sharing-networkmanager-dnsmasq/">과거 포스팅</a> 참고.</p>
+<p>
+  또, avahi/mdns 세팅을 호스트마다 해놓아서 <code class="verbatim">avahi-browse</code> 이용해서
+  어떤 호스트가 어떤 ip주소인지 확인도 쉽게 해놓았음.</p>
+<p>
+  mdns/nss 세팅하면, <code class="verbatim">ping FOOBAR.local</code> 같이 호스트이름 + <code class="verbatim">.local</code>
+  으로 바로 접근도 가능해서 편함. <sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup></p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+ssh-keys, ssh-agent
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>네트웍으로 여러대의 컴퓨터들을 서로 연결하게 되는데, 당연히 서로
+  ssh-key을 <code class="verbatim">ssh-copy-id</code> 같은걸로 등록해주고, 또 키를 사용하는
+  호스트에서 <code class="verbatim">ssh-add</code>, <code class="verbatim">ssh-agent</code>, <code class="verbatim">gnome-keyring</code> 같은걸 사용해서
+  편리하게 비밀번호 입력 없이 활용하면 편안.</p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+emacs/tramp + sshx
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
+<p>이맥스에서 tramp을 이용해서 다른 컴퓨터의 파일을 편집하거나 하기
+  편안.</p>
+<p>
+  dired이 파일관리를 하거나 하기에 편하기도 한데, tramp을 이용해서
+  <code class="verbatim">/sshx:USER@HOST:/</code> 와 같이 접속해서 바로 사용을 지원해서 좋음.</p>
+<p>
+  그리고 더 나아가서, dired이든 파일편집이든 tramp으로 접속한 상태에서
+  <code class="verbatim">eshell</code> 실행하면, 접속한 호스트의 쉘을 연결해서 별도로 ssh접속할
+  필요도 없음.</p>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>참고 <a href="https://unix.stackexchange.com/questions/12755/how-to-forward-x-over-ssh-to-run-graphics-applications-remotely">https://unix.stackexchange.com/questions/12755/how-to-forward-x-over-ssh-to-run-graphics-applications-remotely</a></p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p>참고 <a href="/posts/2023-03mar/2023-03mar08--01-ping/">qjoypad 관련</a></p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-3"><a href="#footnote-reference-3">3</a></sup>
+<div class="footnote-body">
+<p>참고 <a href="https://wiki.archlinux.org/title/Avahi">https://wiki.archlinux.org/title/Avahi</a> </p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emacs/">emacs</a>
+                        <sup>24</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/raspberrypi/">raspberrypi</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/raspberry-pi/">raspberry-pi</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/rpi/">rpi</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/xorg/">xorg</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/dnsmasq/">dnsmasq</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/conspy/">conspy</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ssh/">ssh</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/qjoypad/">qjoypad</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/xdotool/">xdotool</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/wayland/">wayland</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/x2x/">x2x</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/tramp/">tramp</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ssh-agent/">ssh-agent</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ssh-add/">ssh-add</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/mac/">mac</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/dhcpd/">dhcpd</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/x11/">x11</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ssh-x11-forwarding/">ssh-x11-forwarding</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gamepad/">gamepad</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/warpd/">warpd</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/fanless/">fanless</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/power-consumption/">power-consumption</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/wireless/">wireless</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ethernet/">ethernet</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/wired/">wired</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sftp/">sftp</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/tip/">tip</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🐀";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-11nov/2023-11nov05--chromium-gtk4-wayland-ibus/">⬅️ Debian Bookworm(12.2), Chromium &#43; Wayland에서 ibus 한글 입력 고치기</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-03mar/2023-03mar08--02-ping--news/">➡️ News 08/03/2023 .02 : reactjs, rust, zig, hiring, nes</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480572</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

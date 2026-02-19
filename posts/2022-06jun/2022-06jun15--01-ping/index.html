@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 15/06/2022 .01 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480572">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="비 내리는 화요일. &#x2614;
+
+jinja2 template include &#43; cache? &#43; file-time
+재밌는걸 찾았다.
+jinja2을 사용하면서, 하위 include으로 내려갈수록,
+file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야
+template cache을 무시하는거 같아.
+그래서,
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+
+
+// gulpfile.js:
+
+const buildTask = series(cleanTask, esbuildTask, injectTask, touchInjectedTask);
+
+function watchTask() {
+  watch(&#34;./js/**/*.js&#34;, buildTask);
+}
+
+exports.watch = watchTask;
+exports.build = buildTask;
+exports.clean = cleanTask;
+
+
+&hellip;대략 잘 동작하고, webpack보다 엄청나게 빠르다 ㅎㅎ.
+
+postgresql, as an api server?
+요런것들 올라오는거 보는 재미:" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/">⬅️ Ping 17/06/2022 .01</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/">➡️ &#34;모두를 위한 algebraic effects!&#34; ...정말루?</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</a></li>
+    <li><a href="#postgresql-as-an-api-server">postgresql, as an api server?</a></li>
+  </ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🔮 Ping 15/06/2022 .01</h1>
+	    <div class="meta">
+                <time datetime="2022-06-15" pubdate>
+                    2022년06월15일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p>비 내리는 화요일. &#x2614;</p>
+<hr>
+<h1 id="jinja2-template-include--cache--file-time">jinja2 template include + cache? + file-time</h1>
+<p>재밌는걸 찾았다.</p>
+<p><a href="https://jinja.palletsprojects.com/en/3.1.x/">jinja2</a>을 사용하면서, 하위 include으로 내려갈수록,
+file을 생성해줘도, 그냥 touch을 해줘서 파일시간을 갱신해줘야
+template cache을 무시하는거 같아.</p>
+<p>그래서,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// gulpfile.js:
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">buildTask</span> <span class="o">=</span> <span class="nx">series</span><span class="p">(</span><span class="nx">cleanTask</span><span class="p">,</span> <span class="nx">esbuildTask</span><span class="p">,</span> <span class="nx">injectTask</span><span class="p">,</span> <span class="nx">touchInjectedTask</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">watchTask</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">watch</span><span class="p">(</span><span class="s2">&#34;./js/**/*.js&#34;</span><span class="p">,</span> <span class="nx">buildTask</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">watch</span> <span class="o">=</span> <span class="nx">watchTask</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">build</span> <span class="o">=</span> <span class="nx">buildTask</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">clean</span> <span class="o">=</span> <span class="nx">cleanTask</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>&hellip;대략 잘 동작하고, <a href="https://esbuild.github.io/">webpack보다 엄청나게 빠르다</a> ㅎㅎ.</p>
+<hr>
+<h1 id="postgresql-as-an-api-server">postgresql, as an api server?</h1>
+<p>요런것들 올라오는거 보는 재미:</p>
+<p><a href="https://github.com/graphile/postgraphile">https://github.com/graphile/postgraphile</a></p>
+<p><a href="https://github.com/supabase/pg_graphql">https://github.com/supabase/pg_graphql</a></p>
+<p><a href="https://postgrest.org/en/stable/">https://postgrest.org/en/stable/</a></p>
+<p><a href="https://github.com/prest/prest">https://github.com/prest/prest</a></p>
+<p>검증/형상관리만 잘 한다면, 실은 가장 중심을 잘 잡은 구조일지도. ㅎㅎㅎ</p>
+<hr>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>112</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webdev/">webdev</a>
+                        <sup>30</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/template/">template</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/templating/">templating</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webpack/">webpack</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/postgresql/">postgresql</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/jinja2/">jinja2</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cache/">cache</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/rest/">rest</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/jinja/">jinja</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gql/">gql</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/api/">api</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gulp/">gulp</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🔮";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun17--01-ping/">⬅️ Ping 17/06/2022 .01</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/algebraic-effects-for-everyone/">➡️ &#34;모두를 위한 algebraic effects!&#34; ...정말루?</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480572</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

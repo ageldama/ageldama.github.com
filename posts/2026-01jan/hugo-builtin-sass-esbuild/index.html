@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>hugo builtin sass/esbuild 으로 전환 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480573">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="블로그에서 써오던 방식과 조금 다르게 구성해서 사용해봤다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-01jan/2026-01jan27--01-ping/">⬅️ “Protection” Massive Attack</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-01jan/shooting-star--lzzy-hale/">➡️ Halestorm “Shooting Star” / feat. Paul Rodgers</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    
+
+    <article>
+	<div class="title"><h1 class="title">🛥️ hugo builtin sass/esbuild 으로 전환</h1>
+	    <div class="meta">
+                <time datetime="2026-01-27" pubdate>
+                    2026년01월27일
+                </time>
+                </div>
+        </div>
+
+        
+        <div class="description">
+	    <span class="short-description">
+                블로그에서 써오던 방식과 조금 다르게 구성해서 사용해봤다.
+            </span>
+        </div>
+        
+
+	
+
+	<section class="body">
+	    <p>
+(배경: 이 블로그는 sass=hugo내장, esbuild=npm을 통해서 빌드하고
+있었음. 참고 👉 <a href="http://localhost:1313/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/">아겔로그변천사</a> )</p>
+<p>
+어쩌다 만들게 된 hugo 사이트에서는 javascript build도 hugo builtin으로
+바꿔봤다. 잘 동작했다.</p>
+<p>
+…그래서 이 블로그도 그냥 모두 hugo 내장으로 변경. 적당히 잘 굴러가서
+마음에 든다.</p>
+<p>
+구성이 더 단순해졌다. hugo 최고💌</p>
+<ul>
+<li><a href="https://gohugo.io/functions/js/build/">Hugo: js.Build</a></li>
+<li><a href="https://gohugo.io/functions/css/sass/">Hugo: css.Sass</a></li>
+</ul>
+<p>
+PostCSS, Tailwind.css도 지원하는데 딱히 끌리진 않음. (아직은)
+sass자체가 좀 이상하게 동작하고 하기는 하지만.</p>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">🐻<a href="/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/">아겔로그변천사</a>
+                        <sup>29</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>112</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>53</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webdev/">webdev</a>
+                        <sup>30</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/css/">css</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/js/">js</a>
+                        <sup>16</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hugo/">hugo</a>
+                        <sup>15</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sass/">sass</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/esbuild/">esbuild</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/scss/">scss</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🛥️";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-01jan/2026-01jan27--01-ping/">⬅️ “Protection” Massive Attack</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-01jan/shooting-star--lzzy-hale/">➡️ Halestorm “Shooting Star” / feat. Paul Rodgers</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480573</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

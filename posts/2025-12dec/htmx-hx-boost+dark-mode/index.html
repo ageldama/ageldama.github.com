@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>htmx 마법으로 링크성능 빠르게 &#43; dark-mode 깜빡임 제거 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480573">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+지난번 dark-mode 방식을 새로 만든 이후로,  눈에 띄는 단점이었던
+페이지이동시 flash현상을 없애고, 또한 매 페이지 이동을 엄청나게 가볍게
+만들었다.
+
+지난 포스팅: 🦹 darkmode.js… prefers-color-scheme
+
+
+…위 포스팅에서 “Wrap Up”-표를 확인해 보면:
+
+
+
+    
+        
+            darkmode.js (기존)
+            새로운 방식
+        
+    
+
+    
+        
+            ...생략...
+        
+
+        
+            
+                😥-1
+                페이지 로딩시 flash 현상이 생긴다
+            
+            
+                😥-1
+                
+                브라우저캐시에 없는 페이지를 로딩할 때에 발생할 수 있음.
+                
+                (OS/브라우저 prefs와 local-storage에 저장된 color-mode이 서로 다른 경우)
+                
+                ...darkmode.js보단 가볍게 사라짐.
+            
+        
+
+        
+            ...생략...
+        
+    
+
+
+  …와 같이 된 부분을 다음과 같이 바꾼 것:" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/graceful-degradation&#43;progressive-enhancement&#43;elegant-degradation/">⬅️ ‘graceful degradation’, ‘progressive enhancement’</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/the-html-hell-page/">➡️ The HTML Hell Page</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">방식 🛠️</a>
+<ul>
+<li><a href="#headline-2">[참고] <code>hx-boost</code></a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-3">어떻게 더 빠른가?🧩</a>
+</li>
+<li><a href="#headline-4">“graceful degradation”: js을 지원하지 않는 웹브라우저도 괜찮을까?</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">‼️ htmx 마법으로 링크성능 빠르게 &#43; dark-mode 깜빡임 제거</h1>
+	    <div class="meta">
+                <time datetime="2025-12-23" pubdate>
+                    2025년12월23일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+지난번 dark-mode 방식을 새로 만든 이후로,  눈에 띄는 단점이었던
+페이지이동시 flash현상을 없애고, 또한 매 페이지 이동을 엄청나게 가볍게
+만들었다.</p>
+<ol>
+<li>지난 포스팅: <a href="/posts/2025-12dec/prefers-color-scheme/">🦹 darkmode.js… prefers-color-scheme</a></li>
+</ol>
+<p>
+…위 포스팅에서 “Wrap Up”-표를 확인해 보면:</p>
+<style>
+
+table.table {
+    border-collapse: collapse;
+}
+
+.table th {
+    border: 1px solid #ccc;
+    text-weight: bold;
+    text-align: center;
+}
+
+.table td {
+    border: 1px solid #ccc;
+}
+</style>
+
+<table class="table" width="">
+    <thead>
+        <tr>
+            <th>darkmode.js (기존)</th>
+            <th>새로운 방식</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td colspan="2">...생략...</td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>😥-1</b>
+                페이지 로딩시 flash 현상이 생긴다
+            </td>
+            <td>
+                <b>😥-1</b>
+                <br>
+                브라우저캐시에 없는 페이지를 로딩할 때에 발생할 수 있음.
+                <br>
+                (OS/브라우저 prefs와 local-storage에 저장된 color-mode이 서로 다른 경우)
+                <br>
+                ...darkmode.js보단 가볍게 사라짐.
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">...생략...</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+  …와 같이 된 부분을 다음과 같이 바꾼 것:</p>
+<ol>
+<li>여전히 처음 브라우저에서 방문할 때엔 OS/웹브라우저에 의한
+color-scheme preferences에 따라 깜빡임이 발생할 가능성은 있음.</li>
+<li><span style="text-decoration: underline;"><strong>하지만</strong></span> 블로그 안에서 링크를 이동할 경우엔 발생하지 않게
+방식을 변경했다. 🐻</li>
+<li><strong>그리고</strong> 블로그에서 페이지링크를 여는 성능도 훨씬 쾌적해졌다. 🎐</li>
+</ol>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+방식 🛠️
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li>htmx의 <code>hx-boost=&#34;true&#34;</code>-만 적용했다.</li>
+<li>
+<p>끝 🚩</p>
+<ul>
+<li>모든 <code>&lt;a href&gt;</code>-링크 이동은 이제 자동으로, 이동한 페이지전체를
+다시 로딩하지 않고, ajax으로 로딩하여 필요부분만 다시
+렌더링한다.</li>
+</ul>
+</li>
+</ol>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+[참고] <code>hx-boost</code>
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<ol>
+<li><a href="https://htmx.org/attributes/hx-boost/">[htmx.org] <code>hx-boost</code></a></li>
+<li>“<a href="https://dev.to/yawaramin/why-hx-boost-is-actually-the-most-important-feature-of-htmx-3nc0">Why hx-boost is actually the most important feature of htmx</a>”</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+어떻게 더 빠른가?🧩
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<ol>
+<li><code>hx-boost</code> 이하에 적용된 링크들은 자동적으로, (htmx에 의해)
+가로채진다.</li>
+<li>가로챈 링크는 ajax request을 보내서 페이지의 내용을 얻음.</li>
+<li>얻은 페이지의 내용은 페이지의 부분부분을 갱신한다. (“partial
+swap”)</li>
+<li>
+<p>웹브라우저의 URL을 History API을 이용하여 변경해준다.</p>
+<ul>
+<li>마치 링크를 이동했을 때처럼.</li>
+<li>Back버튼도 제대로 동작할 수 있도록.</li>
+</ul>
+</li>
+</ol>
+<p>
+  …이런 설명만 읽어서는… 오히려 htmx.js/ajax이 동작하는건데도
+  웹브라우저가 URL이동하는 것보다 어떻게 빠를까 싶은데:</p>
+<ol>
+<li>동일하게 이미 로딩되어 있는 CSS, JS등을 다시 로딩하거나
+초기화하지 않음.</li>
+<li>그리고 그와 관련된 Assets (fonts, 등등등)도 그대로 두니까.</li>
+</ol>
+<p>
+  …결과적으로 훨씬 빠르고, 체감도 가볍게 렌더링된다.</p>
+<p>
+  (마치 SPA 자바스크립트 애플리케이션의 화면 전환과 같이)</p>
+<p>
+  실제로 Developer Inspector을 열어놓고 링크를 눌러보면, 네트웍
+  트래픽이 오가는 것을 볼 수 있거나(현재 페이지에서 추가적으로), 처음
+  열때의 페이지context을 그대로 유지한다는걸 관찰할 수 있다. (링크를
+  누를 때마다 새로운 page context으로 refresh되는 것이 아닌)</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+“graceful degradation”: js을 지원하지 않는 웹브라우저도 괜찮을까?
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>😸 그렇다.</p>
+<p>
+  어차피 ‘hx-boost’-이 영향을 주지 못한다면, 기존 링크들은 원래의
+  링크가 그랬듯이, 그냥 페이지이동을 하듯이 동작을 그대로 할테니까.
+  ㅎㅎ</p>
+<p>
+  물론, flashing현상이나, 약간 더 무거운 페이지로딩이 뒤따르겠지만.
+  ㅎㅎ</p>
+<ul>
+<li>
+<p>용어 ‘graceful degradation’</p>
+<ul>
+<li>👉
+<a href="/posts/2025-12dec/graceful-degradation+progressive-enhancement+elegant-degradation/">/posts/2025-12dec/graceful-degradation+progressive-enhancement+elegant-degradation/</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">🐻<a href="/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/">아겔로그변천사</a>
+                        <sup>29</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">🌚<a href="/series/dark-mode%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%97%AC%ED%96%89/">dark-mode으로의-여행</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webdev/">webdev</a>
+                        <sup>30</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blogging/">blogging</a>
+                        <sup>22</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blog/">blog</a>
+                        <sup>21</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/css/">css</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/darkmode.js/">darkmode.js</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/htmx/">htmx</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hx-boost/">hx-boost</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/graceful-degradation/">graceful-degradation</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/progressive-enhancement/">progressive-enhancement</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/morphjs/">morphjs</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/dark-mode/">dark-mode</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/spa/">spa</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "‼️";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/graceful-degradation&#43;progressive-enhancement&#43;elegant-degradation/">⬅️ ‘graceful degradation’, ‘progressive enhancement’</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/the-html-hell-page/">➡️ The HTML Hell Page</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480573</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

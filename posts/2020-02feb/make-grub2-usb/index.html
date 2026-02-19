@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Grub2, Archlinux ISO으로 만능 USB 메모리스틱 만들기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480572">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+
+경고
+
+
+&#34;만능USB&#34;이란 말은 사실 과대광고입니다.
+
+  하지만, 몇 가지 장점이 있는 USB 메모리스틱을 만드는 방법임:
+
+아치리눅스 설치ISO 이미지으로 부팅 가능한 USB 스틱이면서도,
+
+ISO파일의 용량만큼만 USB메모리를 활용하는 것이 아니라,
+
+용량이 되는만큼 그냥 일반적인 메모리스틱처럼 파일 복사용으로도
+쓸 수 있음.
+
+
+
+사실 리눅스든 다른 OS의 설치 이미지를 USB메모리에 올리면, 딱 그 설치
+  이미지만큼만 사용할 수 있게 만들어 버리고, 그나마도 Read-only 상태인
+  ISO이 되어버리고, 더더욱 나쁘게 다른 추가 파티션을 만들어서 남는
+  공간을 활용할 수도 없게 만든다. (파티션 이미지가 아니라
+  디스크이미지인가보다.)" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-04apr/ping-25sat/">⬅️ Ping 25/Apr/2020</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-02feb/ping-22sat/">➡️ Ping 22/Feb/2020</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">경고</a>
+</li>
+<li><a href="#headline-2">USB 준비</a>
+</li>
+<li><a href="#headline-3">Grub 설정 + 아치리눅스 설치이미지으로 부팅하기</a>
+<ul>
+<li><a href="#headline-4">(1) <code>set isofile=&#39;/iso/archlinux-x86_64.iso&#39;</code></a>
+</li>
+<li><a href="#headline-5">(2) <code>search --no-floppy --set=isopart --fs-uuid 123-456</code></a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-6">끝</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🕍 Grub2, Archlinux ISO으로 만능 USB 메모리스틱 만들기</h1>
+	    <div class="meta">
+                <time datetime="2020-02-23" pubdate>
+                    2020년02월23일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+경고
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>&#34;만능USB&#34;이란 말은 사실 <strong>과대광고입니다</strong>.</p>
+<p>
+  하지만, 몇 가지 장점이 있는 USB 메모리스틱을 만드는 방법임:</p>
+<ol>
+<li>아치리눅스 설치ISO 이미지으로 부팅 가능한 USB 스틱이면서도,</li>
+<li>
+<p>ISO파일의 용량만큼만 USB메모리를 활용하는 것이 아니라,</p>
+<ul>
+<li>용량이 되는만큼 그냥 일반적인 메모리스틱처럼 파일 복사용으로도
+쓸 수 있음.</li>
+</ul>
+</li>
+</ol>
+<p>사실 리눅스든 다른 OS의 설치 이미지를 USB메모리에 올리면, 딱 그 설치
+  이미지만큼만 사용할 수 있게 만들어 버리고, 그나마도 Read-only 상태인
+  ISO이 되어버리고, 더더욱 나쁘게 다른 추가 파티션을 만들어서 남는
+  공간을 활용할 수도 없게 만든다. (파티션 이미지가 아니라
+  디스크이미지인가보다.)</p>
+<p>
+  아치리눅스 설치ISO을 사용하는 이유는 적당히 기본적으로 쓸만한
+  도구들이 다 들어있고, 무선랜 등 네트웍 설정 등도 쉽게 가능한 설치
+  이미지이기 때문에. 꼭 아치리눅스를 설치하는 것이 아니래도, 그냥
+  비상시 하드디스크 파일시스템 복구용으로 쓰기에도 유리하기 때문.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+USB 준비
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<ol>
+<li>당연히 파티셔닝, 포맷을 해서 날려도 괜찮을만한 USB 메모리스틱이
+필요함.</li>
+<li>과감히 파티션을 설정하고 포맷한다.</li>
+<li>
+<p><strong>파일시스템은 <code>vfat</code> 으로 포맷</strong> 한다.</p>
+<ul>
+<li>(리눅스를 쓰고 있다고 전제하고)</li>
+<li>(내 경우 USB 메모리의 파티션은 <code>sdg1</code> 이었다)</li>
+<li><code>mkfs -t vfat /dev/sdg1</code></li>
+</ul>
+</li>
+<li>
+<p>다른 파일시스템, NTFS이나 exFAT은 설치이미지의 리눅스 커널이
+올라올 때 제대로 마운트를 못한다.</p>
+<ul>
+<li>아마 둘 다 커널에 들어가 있는 FS이 아니라 FUSE등으로 구현되어
+있기 때문일 것 같다.</li>
+</ul>
+</li>
+<li>
+<p>마운트한다.</p>
+<ul>
+<li>여기서는 편의상 <code>/mnt</code> 에.</li>
+<li><code>mount -t vfat /dev/sdg1 /mnt</code></li>
+</ul>
+</li>
+<li>
+<p>아치리눅스 ISO 이미지를 복사한다.</p>
+<ol>
+<li><code>mkdir -p /mnt/iso</code></li>
+<li>
+<p><code>cp archlinux-2014.12.01-dual.iso /mnt/iso</code></p>
+<ul>
+<li><a href="https://www.archlinux.org/download/">https://www.archlinux.org/download/</a></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>Grub을 USB에 설치한다</p>
+<ol>
+<li>참고:
+<a href="https://wiki.archlinux.org/index.php/Multiboot_USB_drive#Installing_GRUB">https://wiki.archlinux.org/index.php/Multiboot_USB_drive#Installing_GRUB</a></li>
+<li><code>grub-install --target=i386-pc --recheck
+--boot-directory=/mnt/boot /dev/sdg</code></li>
+</ol>
+</li>
+<li>이제 이 정도까지만 해도 Grub으로 부팅되는 USB을 만들었다.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+Grub 설정 + 아치리눅스 설치이미지으로 부팅하기
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>다음처럼 <code>/mnt/boot/grub/grub.cfg</code> 을 만들어줬다:</p>
+<div class="src src-text">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
+</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">  # path to the partition holding ISO images (using UUID)
+</span></span><span class="line"><span class="cl">  probe -u $root --set=rootuuid
+</span></span><span class="line"><span class="cl">  set imgdevpath=&#34;/dev/disk/by-uuid/$rootuuid&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  # define globally (i.e outside any menuentry)
+</span></span><span class="line"><span class="cl">  insmod search_fs_uuid
+</span></span><span class="line"><span class="cl">  search --no-floppy --set=isopart --fs-uuid 123-456
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  # later use inside each menuentry instead
+</span></span><span class="line"><span class="cl">  loopback loop ($isopart)$isofile
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  menuentry &#39;[loopback]archlinux-x86_64.iso&#39; {
+</span></span><span class="line"><span class="cl">          set isofile=&#39;/iso/archlinux-x86_64.iso&#39;
+</span></span><span class="line"><span class="cl">          loopback loop $isofile
+</span></span><span class="line"><span class="cl">          linux (loop)/arch/boot/x86_64/vmlinuz img_dev=$imgdevpath img_loop=$isofile earlymodules=loop
+</span></span><span class="line"><span class="cl">          initrd (loop)/arch/boot/intel_ucode.img (loop)/arch/boot/amd_ucode.img (loop)/arch/boot/x86_64/archiso.img
+</span></span><span class="line"><span class="cl">  }</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  위 내용에서 몇 군데 자기 상황에 따라 바꿔줘야한다.</p>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+(1) <code>set isofile=&#39;/iso/archlinux-x86_64.iso&#39;</code>
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p>적당히 다운로드해서 복사한 파일이름으로 바꿔야함.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+(2) <code>search --no-floppy --set=isopart --fs-uuid 123-456</code>
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<p><code>123-456</code> 부분을, 꼭 바꿔줘야함.</p>
+<p>
+   <code>blkid /dev/sdg1</code> 처럼해서 FS UUID을 얻자.</p>
+<div class="src src-text">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># blkid /dev/sdg1
+</span></span><span class="line"><span class="cl">/dev/sdg1: UUID=&#34;7AFD-FE7A&#34; BLOCK_SIZE=&#34;512&#34; TYPE=&#34;vfat&#34; PARTUUID=&#34;1805ce54-01&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 여기에서 `UUID` 부분을 사용한다.
+</span></span><span class="line"><span class="cl"># `PARTUUID` 말고.</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+   그래서, 
+   <code>search --no-floppy --set=isopart --fs-uuid 7AFD-FE7A</code> 처럼 바꾸자.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+끝
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>부팅이 아마 잘 될 것임. 그리고 그냥 들고 다니면서 USB메모리로 편하게
+  쓰기도 좋고, 비상시 복구 디스크로 사용하기도 괜찮은 USB을 하나로
+  합쳤다.</p>
+<p>
+  아치리눅스 설치 이미지에서 기본적으로 <code>wifi-menu</code> 등 커맨드으로
+  무선랜을 잡거나, <code>chroot</code> / <code>arch-chroot</code> 등으로 마운트한
+  하드디스크의 파일시스템으로 chroot해서 사용할 수도 있어서 꽤
+  유연하고 활용도가 높다.</p>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/linux/">linux</a>
+                        <sup>27</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/archlinux/">archlinux</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/rescue/">rescue</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/boot/">boot</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/grub/">grub</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/grub2/">grub2</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/memstick/">memstick</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/usbstick/">usbstick</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🕍";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-04apr/ping-25sat/">⬅️ Ping 25/Apr/2020</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-02feb/ping-22sat/">➡️ Ping 22/Feb/2020</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480572</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Engineering on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/engineering/</link>
+    <description>Recent content in Engineering on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 12 Jun 2022 04:37:12 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&#34;Some Engineering Tough Sells&#34;</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/06jun12sun--01-some-engr-tough-sells/</link>
+      <pubDate>Sun, 12 Jun 2022 04:37:12 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2022-06jun/06jun12sun--01-some-engr-tough-sells/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://posco.dev/blog/2022-04-23_draft_some-engineering-tough-sells/&#34;&gt;https://posco.dev/blog/2022-04-23_draft_some-engineering-tough-sells/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&amp;hellip;공감이 가는 부분들은:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;dynamic serialization isn’t worth it, use statically defined serialization&lt;/li&gt;&#xA;&lt;li&gt;untested code is virtually always somewhat wrong&lt;/li&gt;&#xA;&lt;li&gt;doing things right pays off sooner than we usually imagine&lt;/li&gt;&#xA;&lt;li&gt;an ounce of design is worth a pound of implementation&lt;/li&gt;&#xA;&lt;li&gt;in data engineering, the data very often violates your beliefs about the shape&lt;/li&gt;&#xA;&lt;li&gt;thinking about, and minimizing edges in your code’s dependency graph is a win&lt;/li&gt;&#xA;&lt;li&gt;a good (i.e. programmable, fast, reliable, reproducible) build system solves a lot of practical software engineering problems&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&amp;hellip;많은것들을 경험하되, 숙고와 자기객관화는 중요. 아니라면, 경험과 시간은 그저 흘러가게 되니.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

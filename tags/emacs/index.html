@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Emacs - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480575">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="" />
+    <meta property="og:image" content=""/>
+    <link rel="alternate" type="application/rss+xml" href="https://ageldama.github.io/tags/emacs/index.xml" title="아겔로그" />
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+
+<section class="section is-fullheight sec-toc">
+    <span class="toc-link"><a href="/series">Series📚(8개)</a></span>
+    
+    <span class="toc-link"><a href="/tags">Tags🏷️(1110개)</a></span>
+
+    
+
+</section>
+
+
+<hr class="archive-ruler">
+<h1>Tag🏷️
+    “<em>emacs</em>„ (24건)
+</h1>
+
+
+<ol class="posts"><li class="post">
+        <span class="meta">
+    <time datetime="2026-02-14" pubdate>
+        2026-02-14
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2026-02feb/emacs-web-mode-dir-locals.el/">
+    💱 emacs / web-mode engine 선택
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         hugo은 golang text/template, html/template 사용하는데, 또는 아예 다른 프레임웍(예: Rails)의 템플릿엔진을 매번 선택해주기 귀찮음....
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2025-12-16" pubdate>
+        2025-12-16
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2025-12dec/2025-12dec16--02-ping/">
+    😱 Emacs 일기: vi-mode은 그만 쓰고, windmove은 쓰기 시작
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         vi emulation-layer: evil-mode을 그만 쓰게됐다 이맥스는 거의 20년 넘게 써온거 같다. 물론 예전엔 지금보다 훨씬 더 제대로 이해하고 쓰진 못했었다.🥟 그...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2025-11-16" pubdate>
+        2025-11-16
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2025-11nov/my-elisp-requires/">
+    🕯️ 내 emacs elisp &#34;requires&#34;
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         Emacs 설정을 모듈별로 분리해서 정리해서 사용한다.
+다음처럼 init.el-파일에서 로딩함: 사용예시
+1 2 3 4 5 6 7 8 9 10 11 12 13...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2025-09-15" pubdate>
+        2025-09-15
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2025-09sep/freebsd-why/">
+    🍆 freebsd &#43; 고물랩탑 쓸만하다(재밌다!)
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         시도하기 이전에는 좀 오래되고, 이것저것 맛이 가기 시작한 싸구려 랩탑 asus e502ma-을 서브랩탑으로 집책상에서 써왔었다.
+메모리도 4GB, 확장이 불가능하고. 배터리도...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2024-05-06" pubdate>
+        2024-05-06
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/">
+    🍴 xmake, compile_commands.json, flycheck
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         cmake/warp등을 써보면서 c/c++ 개발할 때에 빌드도구 갖고 놀다가, 이번에 마음을 열고 xmake을 익혀봄.
+마음에 든다. 가볍고 빠르고 좋다.
+ccache등도 바로...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2023-03-15" pubdate>
+        2023-03-15
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2023-03mar/2023-03mar15--wired-desktop/">
+    🐀 내 책상에서 유선랜 환경
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         개인환경을 조금 특이하게 사용하는데, 그 이유와 방식.
+why: 유선랜? (무선랜 대신) 키보드/마우스 입력이 가장 부드럽게 전달되어서 유선으로 연결해서 사용한다.
+x2x으로 연...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2023-02-02" pubdate>
+        2023-02-02
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2023-02feb/2023-02feb02--01-ping/">
+    🖖 Ping 02/02/2023 .01: xemacs, gemini, gemtext
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         추억이 그리워지는 시대여서 그런거 같기도 하다. 그럼에도 어차피 그렇게 다시 사용하기엔 끔찍할텐데.
+1. &ldquo;제미니 계획&rdquo; gemini protocol 을 기...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2021-06-19" pubdate>
+        2021-06-19
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2021-06jun/ping-19sat/">
+    🐱 Ping 19/Jun/2021
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         그간은 여러 수고를 줄이고 싶어서 블로그도 문을 닫아 놓고, github repositories도 대부분은 private으로 변경해놓고 지냈었다.
+하지만 그래도 coding과 글...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2020-11-04" pubdate>
+        2020-11-04
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2020-11nov/org-more-1st-rel/">
+    📣 &#34;org-more.el&#34; released!
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         org-more.el: search .org files have certain tags (#+tags[]: or #+tags[]:)
+개인 위키, KB처럼 org 파일 모음을 사용...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2020-08-13" pubdate>
+        2020-08-13
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2020-08aug/ping-13thu/">
+    ➰ Ping 13/Aug/2020
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         프비 워크스테이션을 만들어놓고 그렇게 좋은 사양은 절대 아닌 조용한 슬림PC에서, 또 가능한 마우스를 안 써도 좋게 세팅해놓고 편안하게 이맥스에서 작업을 해나간다.
+FM라디오의...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2020-08-01" pubdate>
+        2020-08-01
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2020-08aug/ping-01sat/">
+    🎬 Ping 01/Aug/2020
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         오랬만에 내 환경을 더 다듬었다.
+Emacs, Evil, General.el. 매일 이맥스에서 코딩을 하면서 조금은 Vim보다 키바인딩이 편집에 불리한 것 같았었다. 그렇다고...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2020-01-03" pubdate>
+        2020-01-03
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2020-01jan/esup-emacs-init-speed/">
+    🚞 Emacs 시작 시간 빠르게 만들기
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         이맥스 설정이 조금씩 자라날 때마다 이맥스를 새로 시작하는 시간도 길어져서 짜증이 슬슬나기 시작했다. 그래서 조금 개선해봤다.
+Quelpa + MELPA 거절하기 Quelpa 을...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2019-12-29" pubdate>
+        2019-12-29
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2019-12dec/direnv/">
+    1️⃣ direnv &#43; direnv-mode 이맥스 지원 &#43; C/C&#43;&#43;/Python등 프로젝트 설정 적용하기
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         프로젝트의 빌드 디렉토리, virtualenv와 같은 경로의 설정, 경로 설정에 따른 빌드/실행/테스팅/스크립트을 편하게 하려고 만든 moonshot.el 와 유사한걸 검색해봤다...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2019-12-29" pubdate>
+        2019-12-29
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2019-12dec/moonshot-1st-rel/">
+    👢 moonshot.el 최초 릴리즈
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         moonshot.el 을 만들어서 공개했다.
+이맥스를 써오면서 불편하다고 생각한걸 간단히 하고 싶었었다:
+불편함들 빌드 디렉토리 Projectile을 사용하니까 프로젝트 디렉토리...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2019-12-13" pubdate>
+        2019-12-13
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2019-12dec/org-spreadsheet-and-babel/">
+    ✳️ Org모드에서 스프레드시트 기능과 Babel 섞어쓰기
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         쩌는 Org-mode Spreadsheet 소개 를 읽고 감명 받아서 따라해봅니다.
+다른 부분은 만족스러웠는데, 조금 복잡한 elisp식을 쓰기 귀찮으니, 미리 defun /...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2019-12-11" pubdate>
+        2019-12-11
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2019-12dec/foo/">
+    🧁 Org 파일으로 Hugo 포스팅 테스트
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         적당히 잘 동작하는거 같으니 앞으로는 그냥 혼란스러운 Markdown 대신에 그냥 Org 파일으로 블로깅 하며 될거 같다. 행벜.
+예전 버젼 Hugo에서는 지원을 제대로 못하던거...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2019-03-17" pubdate>
+        2019-03-17
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2019-03mar/2019-03mar17-ping/">
+    🧆 Ping 17/03/2019
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+        Emacs/C++ 개발환경 스크린캐스트 이전 포스팅 에서 만들었던 설정을 스크린캐스트로 찍어서 공유해봤다.
+&ldquo;Let Over Lambda&rdquo; 읽기 Let...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2019-02-26" pubdate>
+        2019-02-26
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2019-02feb/counsel-ivy&#43;cpp-ide/">
+    🤱 Ivy/Counsel으로 바꾸기, 기능들 만들기 (w/ C&#43;&#43;지원, &#43;&#43;rmsbolt)
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+        최근에 이맥스 설정을 Helm기반에서 Ivy/Counsel으로 전부 바꿨다.
+더 가볍고, 적당히 잘 동작하고, Ripgrep이랑 기본적으로 설정이 가능해서 편함.
+거기에 C-c...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2019-02-26" pubdate>
+        2019-02-26
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2019-02feb/2019-02feb26-ping/">
+    💘 Ping  26/02/2019
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+        게임: 발더스게이트EE, &lsquo;원숭이섬의 비밀&rsquo; SE + SteamPlay, 등등 아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2018-09-23" pubdate>
+        2018-09-23
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2018-09sep/cquery-vs-cmake-ide/">
+    ⏺️ CQuery &#43; LSP vs CMake-IDE &#43; RTags
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+        LSP + CQuery을 써보려고 했는데, 결국 CMake-IDE + RTags 조합으로 원래대로 쓰게될거 같아. :
+_build/ 와 같이 CMake, Ninja,...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2018-07-28" pubdate>
+        2018-07-28
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/">
+    👇 NeoVim, Evil-mode and Emacs의 모험
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+        &ldquo;내적모순&rdquo; 이맥스에서 Evil을 쓰면서 몇가지 짜증나는게 있어왔다.
+Evil 자체의 문서화가 조금 거시기하다. 거기에 Which-Key같은 키바인딩을 실시간...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2018-05-08" pubdate>
+        2018-05-08
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/">
+    🫰 Emacs &#43; CMake-IDE Screencast
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         이건 무엇인가 Emacs Configurations: https://github.com/ageldama/configs/tree/master/emacs/cmake-ide
+이맥스에서...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2017-01-22" pubdate>
+        2017-01-22
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2017/2017-01-22-emacs-ace-window/">
+    🚶‍♂️‍➡️ Emacs에서 window 전환을 편하게, ace-window
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+        이맥스에서 코딩하거나 마크다운이나 Org으로 글을 쓰고 정리하는데, 그간 그냥 그럭저럭 나는 이맥스를 나한테 맞춰서 사용하고 있다고 생각하고 있었던거 같다. 1
+그런데, 항상 뭔가...
+    </span>
+    
+</div>
+
+    </li><li class="post">
+        <span class="meta">
+    <time datetime="2017-01-01" pubdate>
+        2017-01-01
+    </time>
+</span>
+
+        <a class="article-link" href="/posts/2017/2017-01-01-getting-started-with-emacs/">
+    🙍‍♂️ Emacs이랑 친해지기
+</a>
+
+        <div class="preview">
+    
+    <span class="preview-content">
+         &ldquo;이맥스를 어떻게 배우면 좋은지 모르겠다. 여러번 도전해봤지만 항상 별로였다.&rdquo;
+..어느날 한 동료가 물어봤다. (그렇다 나는 일터에서도 이맥스를 켜놓고 계...
+    </span>
+    
+</div>
+
+    </li></ol>
+
+<hr class="archive-ruler">
+
+<style>
+ :root {--bg-big-emoji: "🏷️";}
+</style>
+
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480575</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

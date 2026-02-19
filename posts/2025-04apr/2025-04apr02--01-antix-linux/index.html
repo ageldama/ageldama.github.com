@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>가볍고 빠른 antiX Linux &#43; runit, koreader 그리고 bloatware - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480573">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+
+antiX linux
+
+
+오래된 랩탑으로 fedora 그냥 아무 생각없이 대충 쓰는데 좀 버벅. 어차피
+메인드라이버도 아니고 그냥 그러려니 하고 살다가, 좀 답답해서
+lightweight linux distro을 골라봤다.
+
+https://antixlinux.com/
+
+거기에 이전에 시도했던 void linux에서 마음에 들었었던 runit을 init으로
+쓰는 spin으로 선택해서 설치했다.
+
+결과는… 놀라울 정도로 가벼웠다.
+
+luks disk encryption &#43; btrfs을 기존에는 적용했다가(btrfs이
+기본옵션이어서 귀찮아서), 이번에는 그냥 ext4만으로 설치해서 더
+가벼운걸까 싶기도 하고.
+
+systemd은 익숙해질수로 편안해지기는 했었는데, 그럼에도 확실히 전통적인
+linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-04apr/2025-04apr09--01-i3-bindsyms-rofi-dmenu/">⬅️ i3 키바인딩을 rofi으로 확인하고 실행하기</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar20--01--darkmode-js/">➡️ darkmode.js으로 변경</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">antiX linux</a>
+</li>
+<li><a href="#headline-2">koreader</a>
+</li>
+<li><a href="#headline-3">bloatware, feature creep</a>
+</li>
+<li><a href="#headline-4">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">7️⃣ 가볍고 빠른 antiX Linux &#43; runit, koreader 그리고 bloatware</h1>
+	    <div class="meta">
+                <time datetime="2025-04-02" pubdate>
+                    2025년04월02일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+antiX linux
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>오래된 랩탑으로 fedora 그냥 아무 생각없이 대충 쓰는데 좀 버벅. 어차피
+메인드라이버도 아니고 그냥 그러려니 하고 살다가, 좀 답답해서
+lightweight linux distro을 골라봤다.</p>
+<p>
+<a href="https://antixlinux.com/">https://antixlinux.com/</a></p>
+<p>
+거기에 이전에 시도했던 void linux에서 마음에 들었었던 runit을 init으로
+쓰는 spin으로 선택해서 설치했다.</p>
+<p>
+결과는… 놀라울 정도로 가벼웠다.</p>
+<p>
+luks disk encryption + btrfs을 기존에는 적용했다가(btrfs이
+기본옵션이어서 귀찮아서), 이번에는 그냥 ext4만으로 설치해서 더
+가벼운걸까 싶기도 하고.</p>
+<p>
+systemd은 익숙해질수로 편안해지기는 했었는데, 그럼에도 확실히 전통적인
+linux/unix의 그것과는 조금 달라서 처음에 당혹스럽긴 했었었다.</p>
+<p>
+기본적으로 im-config, ibus-hangul 정도만 설치하고 쓰면
+한글입력기도 세팅되고, 이것저것 gui control-center을 제공해서,
+거기에서 시스템의 각종부분들을 쉽게 세팅할수도 있게 잘 만들어져
+있었다.</p>
+<p>
+antix 자체가 icewm/jwm/fluxbox으로 기본 &#34;데스크탑환경&#34;-을
+제공하지만<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, 내겐 복잡해 보이고 해서 다 지우고, 그냥 내가 쓰는
+<a href="https://github.com/ageldama/configs/tree/master/dotfiles">dotfiles + i3wm</a> 써서 사용한다. 이게 더 가벼울지는 잘 모르겠다만.</p>
+<p>
+만족스럽다. 가볍고 정말 빠르다. 어차피 debian stable 기반이라서
+패키지도 다양하다. 조금 오래된 랩탑을 쓸만하 쓰기 좋다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+koreader
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p><a href="https://koreader.rocks/">https://koreader.rocks/</a></p>
+<p>
+  전자책 리더, 이것도 산뜻하고 가벼웠다. 그렇다고 지원하는
+  플랫폼이 적다거나, 기능적으로 별로인 것도 아니었다.</p>
+<p>
+  오히려 자기들이 뭘 만드는지 알고, 필요한 것들을 적절히 선택해서 잘
+  만든 경우인거 같다.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+bloatware, feature creep
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>…요즘엔 <a href="https://en.wikipedia.org/wiki/Software_bloat">software bloat</a>도 심하고, 실제로 사용도 못할 정도로 무겁게
+  만드는데, 그렇다고 그 목적을 잘 달성하는 소프트웨어도 흔치 않은거
+  같다.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>파일관리자 rox, zzzfm 같은것도 붙어 있고, 정말 될건 깔끔하게 다 잘된다. </p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>112</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/linux/">linux</a>
+                        <sup>27</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/epub/">epub</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/debian/">debian</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/retro/">retro</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/laptop/">laptop</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/pdf/">pdf</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/koreader/">koreader</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ebook/">ebook</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/init/">init</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/runit/">runit</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/feature_creep/">feature_creep</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/electron/">electron</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/bloatware/">bloatware</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/software_bloat/">software_bloat</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/distrohopping/">distrohopping</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/distro/">distro</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/systemd/">systemd</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sysvinit/">sysvinit</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hardware/">hardware</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/vintage/">vintage</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "7️⃣";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-04apr/2025-04apr09--01-i3-bindsyms-rofi-dmenu/">⬅️ i3 키바인딩을 rofi으로 확인하고 실행하기</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar20--01--darkmode-js/">➡️ darkmode.js으로 변경</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480573</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

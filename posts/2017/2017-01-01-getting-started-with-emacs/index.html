@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Emacs이랑 친해지기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480571">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+&ldquo;이맥스를 어떻게 배우면 좋은지 모르겠다. 여러번 도전해봤지만 항상 별로였다.&rdquo;
+
+..어느날 한 동료가 물어봤다. (그렇다 나는 일터에서도 이맥스를 켜놓고
+계속 쓴다.)
+솔직히 기본적으로 매일 Org-mode으로 계획, 일정
+등등 정리하고 계속 개인적으로 정리하면서 쓰고, 파이썬, Go, Clojure
+같은거 할때도 편집하고 테스트하기도 편하니까 선호하는 편인거
+같다. (자바랑 스칼라은 물론 그냥 IntelliJ 쓴다.)
+여튼 그날 간단히 짝프로그래밍하듯이 같이 앉아서 몇가지 이야기를 하고,
+내 설정 파일 1 이나 어떻게 접근하는게 좋은지에 대해서
+잠깐 이야기를 했었다. 그걸 블로깅으로 써보고 싶다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-01-github-jekyll/">⬅️ Github.io의 Jekyll 버젼이랑 차이?</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-01-welcome-to-jekyll/">➡️ Welcome to Jekyll!</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#이맥스가-결국-emacslisp-실행기라는걸-인정하는게-훨씬-낫다">이맥스가 결국 emacslisp 실행기라는걸 인정하는게 훨씬 낫다.</a></li>
+        <li><a href="#리습시스템이어서-좋은점-자기-설명적인-시스템-discoverability">리습시스템이어서 좋은점: 자기 설명적인 시스템, discoverability.</a></li>
+        <li><a href="#처음부터-단축키는-외우지말자">처음부터 단축키는 외우지말자.</a></li>
+        <li><a href="#elpa-수많은-확장들">ELPA, 수많은 확장들&hellip;</a></li>
+        <li><a href="#뜬금없이-gnu프로젝트">(뜬금없이) GNU프로젝트.</a></li>
+        <li><a href="#부록-튜토리얼에서-알려주진-않는-생존법">부록: 튜토리얼에서 알려주진 않는 생존법</a></li>
+        <li><a href="#부록-내가-쓰는-이맥스-패키지들-소개">부록: 내가 쓰는 이맥스 패키지들 소개</a></li>
+        <li><a href="#모드">&ldquo;모드&rdquo;</a></li>
+        <li><a href="#걱정하지않기">걱정하지않기.</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🙍‍♂️ Emacs이랑 친해지기</h1>
+	    <div class="meta">
+                <time datetime="2017-01-01" pubdate>
+                    2017년01월01일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <blockquote>
+<p>&ldquo;이맥스를 어떻게 배우면 좋은지 모르겠다. 여러번 도전해봤지만 항상 별로였다.&rdquo;</p>
+</blockquote>
+<p>..어느날 한 동료가 물어봤다. (<em>그렇다 나는 일터에서도 이맥스를 켜놓고
+계속 쓴다.</em>)</p>
+<p>솔직히 기본적으로 매일 <a href="http://orgmode.org/">Org-mode</a>으로 계획, 일정
+등등 정리하고 계속 개인적으로 정리하면서 쓰고, 파이썬, Go, Clojure
+같은거 할때도 편집하고 테스트하기도 편하니까 선호하는 편인거
+같다. (자바랑 스칼라은 물론 그냥 IntelliJ 쓴다.)</p>
+<p>여튼 그날 간단히 짝프로그래밍하듯이 같이 앉아서 몇가지 이야기를 하고,
+내 설정 파일 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 이나 어떻게 접근하는게 좋은지에 대해서
+잠깐 이야기를 했었다. 그걸 블로깅으로 써보고 싶다.</p>
+<p>어떤 편집기를 쓰건, 어떤 언어를 쓰건 개인의 자유고 각각의 장단점이
+있다고
+생각한다. 그리고 <a href="https://atom.io/">Atom</a>, <a href="http://www.vim.org/">Vim</a>
+같은 에디터 모두 확장하며, 충분히 자신의 필요에 알맞게 강력하고
+편리하게 쓸 수 있고, 오히려 이맥스보다 어떤 부분들은 더 현대적인 점도
+많은거 같다. <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>![평범한 이맥스 유져]({{ site.url }}/assets/2017-Jan/emacs_user.jpg)</p>
+<ul>
+<li>TOC
+{:toc}</li>
+</ul>
+<h2 id="이맥스가-결국-emacslisp-실행기라는걸-인정하는게-훨씬-낫다">이맥스가 결국 emacslisp 실행기라는걸 인정하는게 훨씬 낫다.</h2>
+<p>실망스럽겠지만, 이맥스를 쓰려면, 그냥 리습을 어느 정도 어떤 문법과
+semantic으로 동작하고, 그게 어떻게 이맥스를 구성하는지를 이해하고
+약간은 사용할줄 알아야한다.</p>
+<p>솔직히 나는 elisp의 많은 동작이나 세세한 몇몇의 차잇점들은 잘
+모르겠다. 그런데 딱히 사용하는데 아직까진 큰 지장은 느끼지 못했던거
+같다. (내가 직접 이맥스 확장 패키지를 만들거나 하지는 않았으니까.)</p>
+<p>그리고 결국 emacslisp을 어느 정도는 익히는게 도움이 된다. 물론 어느
+정도 이맥스에 익숙해진 다음에 공부해볼것을 권한다.</p>
+<ul>
+<li><a href="https://emacs-doctor.com/learn-emacs-lisp-in-15-minutes.html">https://emacs-doctor.com/learn-emacs-lisp-in-15-minutes.html</a>:
+이맥스에 붙여넣어서 한줄씩 따라하면서 실행하면되는 형식이다.</li>
+<li><a href="https://www.gnu.org/software/emacs/manual/html_node/eintr/">https://www.gnu.org/software/emacs/manual/html_node/eintr/</a>:
+이맥스리습의 공식 문서인데, 처음의 몇몇 챕터를 대충 읽으면서 리습
+언어에 대해 처음이라면 괜찮을수도 있다. 다만, 모든걸 한번에
+이해할거라고 생각하진말고, 한번에 이해가 안되더라도 그냥 넘어가고,
+나중에 다시 이해가 쌓이고 다시 읽어가면서 이해해도
+괜찮다. (..한마디로, 이해하기 개떡 같다고 때려치진말자.)</li>
+</ul>
+<p>..어차피 이맥스에서 모든 단축키나 메뉴의 기능들은 대응하는 elisp
+함수들일뿐이고, 설정값들은 모두 elisp 변수들이다.</p>
+<p>현재 실행중인 리습시스템 자체가 이맥스 프로세스라고 생각하는게
+속편하다. 근데 왜 굳이 이따구로 만들어놓은걸 쓰냐고?</p>
+<h2 id="리습시스템이어서-좋은점-자기-설명적인-시스템-discoverability">리습시스템이어서 좋은점: 자기 설명적인 시스템, discoverability.</h2>
+<p>현재 동작하고 있는 시스템이어서, Smalltalk, Python, 커먼리습, Clojure
+REPL처럼 이맥스 편집기 자체에 대해서 찾아보고, 어떻게 동작하는지
+테스트해보고, 어떤 값을 갖는지 살펴보고 바꾸고 해보기 편하다.</p>
+<p>어떤 마법의 설정값을 지정하고 편집기를 다시 시작하고, 도무지
+매뉴얼이나 소스코드를 찾아보지 않는 이상 어떤 설정이나 기능이 있는지
+알 수 없는 다른 소프트웨어들과 다르게, 이맥스는 어떤 기능을 갖고 있고,
+어떤 기능이 어떤 설명이나 어떤 단축키, 혹은 어떤 설정변수와 연결을
+갖는지 바로바로 편집기 안에서 찾아볼 수 있다. <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h2 id="처음부터-단축키는-외우지말자">처음부터 단축키는 외우지말자.</h2>
+<p>처음에 시작할때, 몇가지 정말 중요한 것들, 그러니까 이맥스를 <em>종료하기</em>
+이나 <em>파일열기</em>, <em>저장하기</em>, 혹은 <em>창분할</em>, <em>다른 분할창으로 포커스
+이동</em> 같은 키들은 꼭 익혀두고 시작하는게 속편하다. 그리고 무엇보다,
+<code>M-x ...&lt;RET&gt;</code> 이 뭔지는 알고 시작해야한다.</p>
+<p>하지만 나머지 다른 키들, 그러니까 Yank, Paste, Kill ring, Macro
+같은것들은 처음부터 익히지 않아도 좋은거 같다. 다음의 것들만 조금
+익혀놓고, 이맥스를 탐험할 준비가 어느 정도 갖추면 좋겠다. <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<h2 id="elpa-수많은-확장들">ELPA, 수많은 확장들&hellip;</h2>
+<p>이맥스에서
+릴리즈24부터였었나(불확실;) <a href="http://tromey.com/elpa/">ELPA</a>이 공식
+이맥스에 포함되고, 리눅스 배포판들의
+패키징시스템이나 <a href="http://brew.sh/">Homebrew</a>처럼 원격 공식저장소 바로
+패키지를 선택하고 설치할 수 있는 기능이 생겼다.</p>
+<p><a href="https://www.emacswiki.org/emacs/InstallingPackages">https://www.emacswiki.org/emacs/InstallingPackages</a> 여기를 읽어보면
+사용법을 알 수 있다.</p>
+<p>그런데 문제는, 너무 많은 패키지가 있어서 뭐부터 설치해야할지 모르겠다는점이다. ㅎㅎ</p>
+<p>솔직히 처음부터 패키지 설치와 설정을 권하고 싶지 않다. 예를 들어 같은
+기능을 하는 패키지들이 여러가지 별개의 방식으로 존재하기도 하고,
+설정이나 그런것들도 그렇고. <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
+<p>처음에는 그냥 기본적인 편집기로서 설정을 충실하게 해놓고, 그 다음에
+자신의 필요에 따라서 패키지를 골라보기를 권한다.</p>
+<p>그리고 구글에서 &ldquo;dot-emacs&rdquo; 정도로 검색해보면 수많은 다른 사람들의
+설정을 찾아 볼 수 있다.  <a href="https://dotfiles.github.io/">https://dotfiles.github.io/</a> 여기도
+마찬가지고.</p>
+<p>다만 역시나 처음부터 너무 많은 설정을 맞추려고 하지는 않았으면
+좋겠다. 금방 지치기 쉬우니까.</p>
+<h2 id="뜬금없이-gnu프로젝트">(뜬금없이) GNU프로젝트.</h2>
+<p>어쨌든 GNU 프로젝트니까, 대부분의 경우 문서화가 엄청 잘되있다.</p>
+<ul>
+<li>
+<p><code>C-h i</code>
+눌러서 <a href="https://en.wikipedia.org/wiki/Info_(Unix)">Info pages</a> 을
+이맥스 안에서 바로 살펴볼 수 있다.</p>
+<ul>
+<li>리눅스 배포판이라면 패키지 선택에 따라 다르겠지만, 보통 이맥스
+매뉴얼과 튜토리얼 관련 문서들도 함께 설치하면, GNU Info pages으로
+이맥스 매뉴얼들을 바로 읽어볼 수 있다.</li>
+<li>Info pages 읽는것에 익숙해져도 꽤 편안하다. <code>&lt;TAB&gt;</code>이랑 엔터키만
+잘 눌러서 읽어나가면 되니까.</li>
+</ul>
+</li>
+<li>
+<p>웹에서 검색해서 문서들 찾아봐도 좋고,</p>
+</li>
+<li>
+<p><a href="https://emacswiki.org/">EmacsWiki</a>도 좋은 문서들이 많다.</p>
+<ul>
+<li>한국어 문서랑 영문 문서랑 항목들 차이가 많으니까, 영문에 익숙하고
+그쪽에서 찾아보는게 낫다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="부록-튜토리얼에서-알려주진-않는-생존법">부록: 튜토리얼에서 알려주진 않는 생존법</h2>
+<ul>
+<li>
+<p>단축키 표기법을 익숙하게 읽자.</p>
+<ul>
+<li><a href="https://www.emacswiki.org/emacs/EmacsKeyNotation">https://www.emacswiki.org/emacs/EmacsKeyNotation</a></li>
+<li><a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/User-Input.html#User-Input">https://www.gnu.org/software/emacs/manual/html_node/emacs/User-Input.html#User-Input</a></li>
+<li><strong>정말 중요하다</strong> 뭔가 설명이 많고 그걸 읽어도 이상한 기호들로만
+보이면;;</li>
+</ul>
+</li>
+<li>
+<p>(이미 말했듯이) 단축키를 익혀도 좋지만, 몰라도 좋다.</p>
+<ul>
+<li>다만 그 <em>기능</em> 을 구현하는 elisp 함수의 이름이라도 제대로
+기억하거나, 그 <em>키워드</em> 는 확실하게 기억해두면 언제든지 원할때
+찾을 수 있다.</li>
+<li>예를 들어, <code>C-h k C-x 1</code>을 쳐보자, 해당 chords(<code>C-x 1</code>)의 설명과
+실제로 그 코드가 실행하는 elisp 함수를 알 수
+있다. (<code>delete-other-windows</code>)
+<ul>
+<li>심지어, <code>F10</code>키를 눌러서, 메뉴 어디에서 찾을 수 있는지도. :-)</li>
+<li>반대로 <code>C-h f delete-other-windows &lt;RET&gt;</code>으로 함수를 기준으로
+찾아들어가도, 어떤 키에 이 함수가 바인딩 되어있는지 알수있다.</li>
+</ul>
+</li>
+<li>..결국 이맥스에서 사용하는 용어(예: <em>버퍼buffer</em>, <em>region</em>
+등등에만 익숙하고, 함수나 변수, 단축키를 찾아가는 방법을
+익혀놓으면 일일이 외우지 않아도 언제든지 찾아볼 수 있다.)</li>
+</ul>
+</li>
+<li>
+<p><code>C-h t</code>: 커서 움직이기, 편집하기, 저장-불러오기.  지루하고, 꼭
+진행하지 않아도 좋지만, 그래도 한번 익혀놓으면 대강 어떤 방식으로
+편집하고, 컨벤션 같은걸 감을 잡을 수 있으니까 읽고 따라해보는걸
+추천.</p>
+</li>
+<li>
+<p><code>C-h ?</code>: 어디서부터 시작할지도 모르겠을때. 사실 도움말이랑 이맥스
+설정변수, 함수, 어떤 키가 어떻게 동작하는지 궁금할때 이걸 열어보면
+좋다. (사실 나중되면 <code>C-h a</code> 같은걸로 특정한 키워드의 변수나 함수를
+바로 찾아보게 되지만, 처음에 어떤 그런 기능들이 있는지 살펴보기
+좋다.)</p>
+</li>
+<li>
+<p><code>C-x o</code>, <code>C-x 1</code>, <code>C-x 0</code>: <em>Window</em> 이라고 이맥스에서 표현하는
+분할한 pane으로 포커스를 이동하거나 현재 pane만 남기고 감추거나,
+현재 pane을 감추는 키들을 익숙하게 쓰는게 좋다. (도움말을 찾아서
+읽으려고 해도, 이 방식이 익숙해지지 않으면 읽기 불편하다.)</p>
+</li>
+</ul>
+<h2 id="부록-내가-쓰는-이맥스-패키지들-소개">부록: 내가 쓰는 이맥스 패키지들 소개</h2>
+<p>내가 사용하는 패키지들을 소개하고, 어떻게 이맥스를 실제 작업흐름에
+적용해 쓰는지 소개하고 싶었다. 개인적으로 훨씬 더 나은 패키지도
+있을거고 설정이나 사용법은 취향에 따라 더 달라질 수 있을거 같다. 다만
+처음 이맥스를 접하는 사람에게 이런것들이 이맥스에서 가능하다는걸
+소개하는 의도로 해보겠다.</p>
+<ul>
+<li><a href="https://github.com/bbatsov/projectile">Projectile</a>
+<ul>
+<li>Atom 에디터에서 제공하는 <em>프로젝트 폴더</em> 기능을 구현해준다.</li>
+<li>프로젝트 폴더는 Git등의 저장소로 감지되거나, 프로젝트 최상위
+디렉토리에 <code>.projectile</code> 빈 파일을 만들어놓으면 그 디렉토리부터
+이하를 하나의 프로젝트로 인식하고 동작한다.</li>
+<li>파일 빨리 열기나 프로젝트내 파일 이동, Git 연동 같은 부분들이 너무
+편하다.</li>
+</ul>
+</li>
+<li><a href="https://github.com/magit/magit">Magit</a>
+<ul>
+<li>Git 커맨드를 직접 치지 않아도 된다.</li>
+<li>..솔직히 Git 커맨드들 잘모르지만, 대부분의 git 작업을 정말
+단순하게 할 수 있게 도와준다.</li>
+</ul>
+</li>
+<li><a href="https://github.com/emacs-helm/helm">Helm</a>
+<ul>
+<li>소스코드에서 키워드나 참조에 따라 자동완성이 아니라, 이맥스
+안에서 윈도 이름이나 파일 이름 자동완성등을 개선해주는 &ldquo;프레임웍&rdquo;.
+<ul>
+<li>..이런 성격의 패키지들이 몇개 있다. 그런데 나는 helm이 제일
+편했다.</li>
+</ul>
+</li>
+<li>helm-ag: <a href="https://github.com/ggreer/the_silver_searcher">https://github.com/ggreer/the_silver_searcher</a>
+<ul>
+<li>소스코드를 빨리 내용 검색하는 <em>the-silver-searcher</em> 이랑
+helm이랑 연동해준다.</li>
+<li>Projectile이랑도 연동이 되어 있어서 편함.</li>
+</ul>
+</li>
+<li><a href="https://github.com/bbatsov/helm-projectile">helm-projectile</a>:
+projectile 쓰니까 깔아봤음.</li>
+</ul>
+</li>
+<li><a href="https://github.com/jorgenschaefer/elpy">Elpy</a>
+<ul>
+<li>단순히 <code>M-x python-mode</code>이나 <code>M-x run-python</code>은 이맥스에 기본 내장.</li>
+<li>그런거 말고 <a href="https://github.com/python-rope/rope">rope</a>을 이용한
+리팩토링, <a href="https://github.com/davidhalter/jedi">jedi</a> 백엔드를
+통한 자동완성(autocomplete, company등이랑 연동되서), flycheck
+연동으로 <a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>이나
+실시간 문법검사, virtualenv 연동 등등등 진짜 파이썬 개발하면서
+파이썬 생태계의 쉘도구들을 잘 엮어서 정말 괜찮은 개발환경으로
+만들어준다.</li>
+</ul>
+</li>
+</ul>
+<p>여기서 소개하지는 않았지만, Go-language이나 Ruby, 혹은 Clojure,
+CommonLisp을 작업할때 나는 꽤 즐겁게 이맥스에서 편집하고 편안하고
+생산적으로 작업할 수 있었다.</p>
+<p>자신의 언어나 이맥스 작업흐름을 찾아보고
+싶다면, <a href="https://www.youtube.com/">https://www.youtube.com/</a>에서 <em>&ldquo;emacs screencast&rdquo;</em> 혹은
+이맥스와 자신의 주요 사용 언어나 환경을 키워드로 검색해 살펴보기를 추천한다.</p>
+<h2 id="모드">&ldquo;모드&rdquo;</h2>
+<p>이맥스는 여러가지 형식의 파일들을, 혹은 파일이 아닌 _버퍼_들을 각각의
+_모드(modes)_을 통해서 구현함. <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></p>
+<p>그리고, 설정에 따라서 한 버퍼에 대해서 한 _Major mode_와 _Minor
+modes_으로 구분해볼 수 있을거 같다.</p>
+<p>예를 들어, 현재 내가 편집하는 파일이 파이썬 소스라면, 주요모드는
+파이썬 모드일것이다. 하지만, 괄호나 여러가지 주요 기능들을 거기에 더
+추가하고 싶어서 설정한 나머지 기능들은 minor-modes으로 그 버퍼에
+적용되어있다.</p>
+<p>자세한 내용은 역시 공식 매뉴얼을 ㄱㄱ</p>
+<p>다만, 현재 버퍼에 적용된 모드들과 기능들을 보고 싶다면, <code>C-h m</code>으로. 각각의 적용된 모드들에 대해서 정리되어 있어서 보기 더 편하다.</p>
+<h2 id="걱정하지않기">걱정하지않기.</h2>
+<pre><code>&quot;Don't Panic! It's mostly harmless.&quot;
+</code></pre>
+<p>솔직히 익히는데 상대적으로 시간도 많이 걸리고, 예쁘지도, 뭔가
+투박해보이고 거추장스러워 보이는 에디터다.</p>
+<p>하지만, Vim을 익히고 사용해본 사람은 쉽게 이해할만한 부분이라고
+생각하는점은, 익히고 익숙해지고 또 그 이후에 내게 맞춰서 편집기를
+설정하고 하는만큼 편안하고 강력해진다는걸 말하고 싶다.</p>
+<p>그리고 그래도 딱히 추천하고 싶은 생각은 없다. 괴상한 취미가
+없다면. 아톰이나 좋은 에디터는 충분히 많으니까. :-)</p>
+<p>그래도 해보고 싶다면, 겁내지 말고 차근차근 하나씩 설정해보고, 필요한
+패키지들을 검색해보고 설치하고 설정해보면서 내게 잘 맞는 방법을
+찾아보라고 말하고 싶다. 괜찮다. &hellip;<em>대부분은</em> 크게 해가 되지
+않는다. <sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://github.com/ageldama/configs/blob/master/emacs/init2.el">https://github.com/ageldama/configs/blob/master/emacs/init2.el</a>
+딱히 깔끔하게 정리해놓고, 주석도 착실하게 달아놓지 않아서
+지저분하다. 처음 설정할
+때, <a href="https://github.com/jwiegley/use-package">use-package.el</a>
+같은걸 특정한 위치에 <code>git clone</code> 을 직접해줘야 하는거 등
+세팅할때도 설명이 더 필요하다.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>사실 나는 Vim, Emacs 둘 다 쓰고, 그냥
+터미널에서 뭔가 고치거나 그때 그때에 따라서 이맥스에 설정된거
+거치지 않고, 그냥 Vim에서 빨리 고칠 수 있을만한건 거기에서
+편집하고 쓰는거 같다.
+그리고 Atom도 설치해놓고, 다른 소스 같은거 읽을때 주로 사용하는거
+같다.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>사실 이맥스를 익히는건, 내 생각엔 단축키나
+편집키를 외우는것보다 동작하는 방식과 그걸 실시간으로 내가 찾아볼
+수 있는 방법을 익히는쪽에 더 가깝고, 그편이 훨씬 재미있고
+유용하다고 생각한다.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>(알고 있겠지만) Emacs을 위한 Vi 혹은 Vim 편집기의
+편집키들을 그대로 사용할 수 있는 패키지들이 <em>많이</em> 있다. 이맥스
+편집기능들이나 편집키들을 굳이 많이 외우지 않아도, 짧고 익숙한
+Vi/Vim 방식을 써도 좋다.</p>
+<ul>
+<li><a href="https://www.emacswiki.org/emacs/ViperMode">viper-mode</a>은
+아예 이맥스 기본 배포판에 포함되어있지만 개인적으로는
+별로다.</li>
+<li>나는 <a href="https://www.emacswiki.org/emacs/Evil">evil-mode</a>을
+사용한다. 어차피 이맥스랑 Vim 모두 익숙하고, 평소에는 이맥스
+키바인딩으로 괜찮은데, 반복적인 편집이나 Vim으로 편집하는게 더
+빠를거 같을때는 Evil-mode을 켜고 작업한다.</li>
+</ul>
+&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></li>
+<li id="fn:5">
+<p>예를 들어,</p>
+<ul>
+<li><a href="https://github.com/emacs-helm/helm">helm</a>
+vs <a href="https://github.com/abo-abo/swiper">ivy</a>
+vs <a href="https://www.gnu.org/software/emacs/manual/ido.html">ido</a>:
+<a href="https://www.reddit.com/r/emacs/comments/3o36sc/what_do_you_prefer_ido_or_helm/">https://www.reddit.com/r/emacs/comments/3o36sc/what_do_you_prefer_ido_or_helm/</a>
+<ul>
+<li>나는 helm 사용함. ㅎㅎ</li>
+</ul>
+</li>
+<li><a href="http://www.flycheck.org/en/latest/">flycheck</a>
+vs <a href="https://www.emacswiki.org/emacs/FlyMake">flymake</a>
+<ul>
+<li>flycheck이 더 예뻐서 좋아함.</li>
+</ul>
+</li>
+<li><a href="https://github.com/auto-complete/auto-complete">autocomplete</a>
+vs <a href="http://company-mode.github.io/">company</a>
+<ul>
+<li>이건 <em>비밀</em>.</li>
+</ul>
+</li>
+<li>..그런데 flycheck/flymake이나 autocomplete/company 같은건 어떤
+프로그래밍언어 integration에서 잘지원하는걸 그냥 쓰게 되는
+경향이 있는거 같다. (대부분은 둘 다 지원하긴하지만. ㅎㅎ)</li>
+</ul>
+&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></li>
+<li id="fn:6">
+<p><code>M-x tetris&lt;RET&gt;</code> 테트리스 게임이나 magit,
+eshell 같은 기능들도 모두 버퍼이고, 이 버퍼의 해당 모드들으로
+elisp을 통해 구현해놓은 기능들이다. 꼭 어떤 문법의 프로그램
+소스코드만이 모드라고 하기는 어려운거 같다.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>실제로 MS윈도 환경에서 이맥스가 잘 동작하게
+하려면 리눅스나 맥OS에서보다 더 설정에 신경을 써야하고
+짜증난다. 그리고 내가 주로 사용하는 언어가 자바라면 그냥
+이클립스나 IntelliJ을 쓰는게 더 편할때도 많은거 같다. 그리고
+비주얼스튜디오이거나.  그럼에도 마우스를 쓰기 귀찮아 죽겠거나,
+이미 익숙해질대로 익숙해져서 이맥스와 Vim, 쉘프롬프트가 좋다면
+어쩔수없다. 그리고 파이썬, 대부분의 리습계열 언어들, 루비, go,
+rust, erlang, elixir 등등의 오픈소스이거나 한 언어들은 오히려 편한
+IDE으로서 동작하는 편집기가 흔치는 않은거 같다. (개인적으로)
+&hellip;하지만 가장 중요한건 개인적인 생각이라는점이고, 자기가 편하다고
+느끼고 쓸만하다고 생각하는걸 써야하는거 같다. ..다만 현재 자기가
+쓰는것에서 뭔가 더 찾아보고 싶거나, 심심하거나 하다면 익혀보길
+추천한다.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emacs/">emacs</a>
+                        <sup>24</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🙍‍♂️";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-01-github-jekyll/">⬅️ Github.io의 Jekyll 버젼이랑 차이?</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-01-01-welcome-to-jekyll/">➡️ Welcome to Jekyll!</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480571</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>2017년 7월 11일, 요즘 나는 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480571">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="한국에 와서 다시 일을 다니고 있음. 백엔드 소프트웨어 엔지니어로 과거에
+이미 다른 사람들이 만들어놓은걸 마음에 들지 않는 모양을 조금씩
+고쳐가고 그럭저럭 출퇴근.
+장마도 오고 엄청나게 덥다. 묘하게 독일에서 똑같은 8시간 근무인데
+한국에서는 출퇴근이 엄청나게 힘들다는 생각이 들었다. 그리고 실제로
+집밖에서 생활하는 시간을 생각하면 하루 8시간 수면을 하기도 빠듯해서
+정말 이상하구나 생각이든다. 거기에 독일에서 생활할때는 나혼자 생활해서
+밥이며 청소 같은것들도 내가 혼자해야 했었던걸 생각해도 이상할 정도로
+한국에서의 생활은 시간이 쪼들린다.
+여하튼 재미있는건 요즘엔 Python, Flask, SQLAlchemy으로 나름대로
+재미있게 작업하고 나름대로 능률적으로 작업을 하고 TDD 잘 적용해서 문제
+없게 편안하게 작업하는 방법들을 익힌거 같다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-07-11-private-docker-registry-howto/">⬅️ HOWTO: Private Docker Registry?</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/">➡️ 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents"></nav>
+
+    <article>
+	<div class="title"><h1 class="title">👨‍👧 2017년 7월 11일, 요즘 나는</h1>
+	    <div class="meta">
+                <time datetime="2017-07-11" pubdate>
+                    2017년07월11일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p>한국에 와서 다시 일을 다니고 있음. 백엔드 소프트웨어 엔지니어로 과거에
+이미 다른 사람들이 만들어놓은걸 마음에 들지 않는 모양을 조금씩
+고쳐가고 그럭저럭 출퇴근.</p>
+<p>장마도 오고 엄청나게 덥다. 묘하게 독일에서 똑같은 8시간 근무인데
+한국에서는 출퇴근이 엄청나게 힘들다는 생각이 들었다. 그리고 실제로
+집밖에서 생활하는 시간을 생각하면 하루 8시간 수면을 하기도 빠듯해서
+정말 이상하구나 생각이든다. 거기에 독일에서 생활할때는 나혼자 생활해서
+밥이며 청소 같은것들도 내가 혼자해야 했었던걸 생각해도 이상할 정도로
+한국에서의 생활은 시간이 쪼들린다.</p>
+<p>여하튼 재미있는건 요즘엔 Python, Flask, SQLAlchemy으로 나름대로
+재미있게 작업하고 나름대로 능률적으로 작업을 하고 TDD 잘 적용해서 문제
+없게 편안하게 작업하는 방법들을 익힌거 같다.</p>
+<p>그리고 이전 Zalando SE에서도 많이 써왔던 Vagrant, Docker등을 그냥
+혼자서라도 개발환경에서 사용하고 편안하다.</p>
+<p>파이썬으로 웹개발, 백엔드 개발이나 그런 워크플로우나 프레임웍을 이용해
+프로젝트 구조를 잡는거나, Pytest이용해서 TDD하고 하는것들, 이맥스에서
+더 재미있게 작업하는 요즘이나 Virtualenv등이랑 더 친하게 지내는 방법
+같은것들부터 docker, vagrant, oh-my-zsh 편하게 쓰는 팁들 조금씩
+정리하면서 블로깅을 해나가야겠다.</p>
+<p>..그리고 오늘은 정말 덥다.</p>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/2017/">2017</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/myself/">myself</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "👨‍👧";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-07-11-private-docker-registry-howto/">⬅️ HOWTO: Private Docker Registry?</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/">➡️ 예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480571</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

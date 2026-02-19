@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Golang Goroutine, Channel, I/O 그리고 Scheduler 이해해보기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480571">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="Go언어를 요즘에 진지하게 생각하고 계속해서 자료를 찾아보며 익히고
+있다.
+가장 흥미있는 부분은 Goroutine scheduler 구현과 I/O시스템을 어떻게
+만들었을까인데, 아직은 소스코드를 뜯어 읽고 하지는 못하지만, 그냥 내가
+만들었다면 아마 이렇지 않을까 하는 정도의 추측을 갖고 반대로 예제들을
+만들어보며 확인해보고 있다.1
+우선 현재의 추측은 다음과 같다.
+
+GOMAXPROCS 같은걸 이용해서 실행시간에는 필요한만큼만
+최소한으로만 OS Thread을 시작하는듯. 2
+
+너무 많은 스레드가 있어도 어차피 Context switching 비용만
+늘어나고 별 의미는 커녕 더 나쁠 수 있으니까.
+
+
+Goroutine들은 Go runtime의 Scheduler이 서로 실행기회를 나눠준다.
+
+실행기회를 다른 goroutine에 yield하는 방법은,
+I/O operation을 실행하거나
+Channel에 Receive/Send할때
+
+
+위 (2.2)에서 I/O operation이 Async I/O으로 구현되었을거라고 생각.
+
+왜냐하면, 그래야 blocking 안되고, Go scheduler으로 실행이 넘어가고,
+Go scheduler은 I/O event loop을 통해서 적절하게 다음에 실행할
+Goroutine을 결정할 수 있을테니까.
+
+
+
+예제 프로그램 코드
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+
+
+package main
+
+import (
+	&#34;fmt&#34;
+	&#34;runtime&#34;
+	&#34;sync&#34;
+	&#34;time&#34;
+)
+
+func timer(wg *sync.WaitGroup) {
+	fmt.Println(&#34;timer started&#34;)
+	select {
+	case &lt;-time.After(3 * time.Second):
+		// NOTE: this never happens while it can&#39;t get any chance to run by scheduler
+		wg.Done()
+	}
+}
+
+func printer() {
+	for {
+		// DO NOTHING
+		// NOTE: doing any I/O here can yield to gorountine scheduler
+	}
+}
+
+func main() {
+	var (
+		wg = sync.WaitGroup{}
+	)
+
+	runtime.GOMAXPROCS(1)
+
+	wg.Add(1)
+
+	go printer()
+	go timer(&amp;wg)
+
+	wg.Wait()
+
+	fmt.Println(&#34;bye&#34;)
+}
+
+
+실행결과, 결론, 생각
+예상한대로," />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/2019-02feb07thu-ping/">⬅️ Ping 07/02/2019</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-11nov/cl-asdf-custom-load-script/">➡️ ASDF으로 간단한 의존성 연결과 로딩하기</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#예제-프로그램-코드">예제 프로그램 코드</a></li>
+    <li><a href="#실행결과-결론-생각">실행결과, 결론, 생각</a></li>
+  </ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🟡 Golang Goroutine, Channel, I/O 그리고 Scheduler 이해해보기</h1>
+	    <div class="meta">
+                <time datetime="2019-02-07" pubdate>
+                    2019년02월07일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p>Go언어를 요즘에 진지하게 생각하고 계속해서 자료를 찾아보며 익히고
+있다.</p>
+<p>가장 흥미있는 부분은 Goroutine scheduler 구현과 I/O시스템을 어떻게
+만들었을까인데, 아직은 소스코드를 뜯어 읽고 하지는 못하지만, 그냥 내가
+만들었다면 아마 이렇지 않을까 하는 정도의 추측을 갖고 반대로 예제들을
+만들어보며 확인해보고 있다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>우선 현재의 추측은 다음과 같다.</p>
+<ol>
+<li><code>GOMAXPROCS</code> 같은걸 이용해서 실행시간에는 필요한만큼만
+최소한으로만 OS Thread을 시작하는듯. <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
+<ol>
+<li>너무 많은 스레드가 있어도 어차피 Context switching 비용만
+늘어나고 별 의미는 커녕 더 나쁠 수 있으니까.</li>
+</ol>
+</li>
+<li>Goroutine들은 Go runtime의 Scheduler이 서로 실행기회를 나눠준다.
+<ol>
+<li>실행기회를 다른 goroutine에 yield하는 방법은,</li>
+<li>I/O operation을 실행하거나</li>
+<li>Channel에 Receive/Send할때</li>
+</ol>
+</li>
+<li>위 (2.2)에서 I/O operation이 Async I/O으로 구현되었을거라고 생각.
+<ol>
+<li>왜냐하면, 그래야 blocking 안되고, Go scheduler으로 실행이 넘어가고,</li>
+<li>Go scheduler은 I/O event loop을 통해서 적절하게 다음에 실행할
+Goroutine을 결정할 수 있을테니까.</li>
+</ol>
+</li>
+</ol>
+<h1 id="예제-프로그램-코드">예제 프로그램 코드</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12">12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13">13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14">14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15">15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16">16</a>
+</span><span class="lnt" id="hl-0-17"><a class="lnlinks" href="#hl-0-17">17</a>
+</span><span class="lnt" id="hl-0-18"><a class="lnlinks" href="#hl-0-18">18</a>
+</span><span class="lnt" id="hl-0-19"><a class="lnlinks" href="#hl-0-19">19</a>
+</span><span class="lnt" id="hl-0-20"><a class="lnlinks" href="#hl-0-20">20</a>
+</span><span class="lnt" id="hl-0-21"><a class="lnlinks" href="#hl-0-21">21</a>
+</span><span class="lnt" id="hl-0-22"><a class="lnlinks" href="#hl-0-22">22</a>
+</span><span class="lnt" id="hl-0-23"><a class="lnlinks" href="#hl-0-23">23</a>
+</span><span class="lnt" id="hl-0-24"><a class="lnlinks" href="#hl-0-24">24</a>
+</span><span class="lnt" id="hl-0-25"><a class="lnlinks" href="#hl-0-25">25</a>
+</span><span class="lnt" id="hl-0-26"><a class="lnlinks" href="#hl-0-26">26</a>
+</span><span class="lnt" id="hl-0-27"><a class="lnlinks" href="#hl-0-27">27</a>
+</span><span class="lnt" id="hl-0-28"><a class="lnlinks" href="#hl-0-28">28</a>
+</span><span class="lnt" id="hl-0-29"><a class="lnlinks" href="#hl-0-29">29</a>
+</span><span class="lnt" id="hl-0-30"><a class="lnlinks" href="#hl-0-30">30</a>
+</span><span class="lnt" id="hl-0-31"><a class="lnlinks" href="#hl-0-31">31</a>
+</span><span class="lnt" id="hl-0-32"><a class="lnlinks" href="#hl-0-32">32</a>
+</span><span class="lnt" id="hl-0-33"><a class="lnlinks" href="#hl-0-33">33</a>
+</span><span class="lnt" id="hl-0-34"><a class="lnlinks" href="#hl-0-34">34</a>
+</span><span class="lnt" id="hl-0-35"><a class="lnlinks" href="#hl-0-35">35</a>
+</span><span class="lnt" id="hl-0-36"><a class="lnlinks" href="#hl-0-36">36</a>
+</span><span class="lnt" id="hl-0-37"><a class="lnlinks" href="#hl-0-37">37</a>
+</span><span class="lnt" id="hl-0-38"><a class="lnlinks" href="#hl-0-38">38</a>
+</span><span class="lnt" id="hl-0-39"><a class="lnlinks" href="#hl-0-39">39</a>
+</span><span class="lnt" id="hl-0-40"><a class="lnlinks" href="#hl-0-40">40</a>
+</span><span class="lnt" id="hl-0-41"><a class="lnlinks" href="#hl-0-41">41</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="s">&#34;fmt&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="s">&#34;runtime&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="s">&#34;sync&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="s">&#34;time&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">timer</span><span class="p">(</span><span class="nx">wg</span><span class="w"> </span><span class="o">*</span><span class="nx">sync</span><span class="p">.</span><span class="nx">WaitGroup</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;timer started&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">select</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">case</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">time</span><span class="p">.</span><span class="nf">After</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">):</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// NOTE: this never happens while it can&#39;t get any chance to run by scheduler</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="nx">wg</span><span class="p">.</span><span class="nf">Done</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">printer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// DO NOTHING</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">// NOTE: doing any I/O here can yield to gorountine scheduler</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">var</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="nx">wg</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">sync</span><span class="p">.</span><span class="nx">WaitGroup</span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">runtime</span><span class="p">.</span><span class="nf">GOMAXPROCS</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">wg</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">go</span><span class="w"> </span><span class="nf">printer</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">go</span><span class="w"> </span><span class="nf">timer</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">wg</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">wg</span><span class="p">.</span><span class="nf">Wait</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;bye&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="실행결과-결론-생각">실행결과, 결론, 생각</h1>
+<p>예상한대로,</p>
+<ol>
+<li>강제로 <code>GOMAXPROCS=1</code>으로 설정하고 실행했고,</li>
+<li><code>go printer()</code>에서 I/O실행이나 <code>time.Sleep</code> 같은거 안하고, 그냥 무한루프<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>
+<ol>
+<li>반대로 말해서, 위 <code>func printer()</code>의 루프 안에서 <code>time.Sleep</code>,
+<code>fmt.Println</code> 중 하나라도 실행을 하도록 하면, Go scheduler이
+기회를 얻는다.</li>
+</ol>
+</li>
+<li><code>go timer(..)</code>이 실행기회를 받지 못함.
+<ol>
+<li>시작은 되지만,</li>
+<li><code>time.After(..)</code>을 통해서 타임아웃하여 종료처리를
+못하게됨. Race condition.</li>
+</ol>
+</li>
+</ol>
+<p>현실적으로는 무한루프에서 어떤 I/O을 수행하거나 time.Sleep이라도
+한다면 싱글코어만을 활용하는 경우에도 goroutine이 적절하게
+스케쥴링될테니 문제가 없겠지만, goroutine들이 어떤 방식으로
+스케쥴링되는지 이해하기 좋은 기회였던거 같아.</p>
+<p>결국, Go와 같은 Goroutine, Channel만이 중요한게 아니라, Go runtime이
+제공하는 I/O들도 Node.js와 같이 비동기적으로 내부적으로 처리될거고, 이
+이벤트루프와 스케쥴러가 잘 연동되어 있을거라 상상할 수 있다.</p>
+<p>이런 Goroutine, Scheduler의 특성을 잘 이해하고 있지 못하다면, 단순히
+어떤 고루틴에서 I/O등이 없이, CPU연산만 열심히 하는 무한루프를 만들고
+한다면 정상적으로 동작하지 않는 애플리케이션을 만들고 의아할 수
+있으리라 생각.</p>
+<p>그리고 더 무섭게도 이 애플리케이션은 다음과 같은 특성을 갖게 될거임:</p>
+<ol>
+<li>Println이라도 하나 찍어보면 잘찍히고, 그게 들어가면 또
+잘동작하게됨. (I/O연산이니까.)</li>
+<li>다른 머신(코어가 더 있거나, GOMAXPROCS이 더 크게 설정될)에서
+실행한다면 똑같은 바이너리가 또 제대로 동작함.</li>
+</ol>
+<p>&hellip;ㅎㅎㅎ</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>이미 이런 방식의 <a href="https://en.wikipedia.org/wiki/Communicating_sequential_processes">CSP
+동시성</a>은
+과거 Clojure의
+<a href="https://github.com/clojure/core.async">core.async</a>을 통해 익혀서
+익숙. 그리고 이걸 뜯어서 이해 하는것도 나쁘지 않을거
+같긴하다.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://golang.org/pkg/runtime/">https://golang.org/pkg/runtime/</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>그냥 <code>x += 1</code> 같은 순수하게 CPU만 사용하는 연산들도 마찬가지로
+Scheduler에 yield하지 못한다.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">👅<a href="/series/programming-languages/">programming-languages</a>
+                        <sup>27</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>53</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/golang/">golang</a>
+                        <sup>9</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/asyncio/">asyncio</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/concurrency/">concurrency</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/scheduler/">scheduler</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🟡";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-02feb/2019-02feb07thu-ping/">⬅️ Ping 07/02/2019</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-11nov/cl-asdf-custom-load-script/">➡️ ASDF으로 간단한 의존성 연결과 로딩하기</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480571</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

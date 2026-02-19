@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/windows/</link>
+    <description>Recent content in Windows on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Wed, 21 Jan 2026 04:00:09 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>잃어버린 결제모듈 소스코드와 VB6 P-Code</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/vb6-pcode-for-activex/</link>
+      <pubDate>Wed, 21 Jan 2026 04:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/vb6-pcode-for-activex/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;어느 계약직 X&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;어느 회사에 계약직으로 일하던 때였다. 이 이야기도 거의 2010여년&#xA;  전후일 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  바보인척하며 그냥 명랑하게, 그리고 받은 일을 충실히 최선을 다하며&#xA;  그냥 지내던 때였다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  정직원들은, 그렇게 친절하지는 못했다. 나이도 나보다 많았고, 이미&#xA;  법정관리에 들어간(2번째) 회사였었는데, 어쨌든 그렇게 아름다운 관계는&#xA;  되기 어려웠다. ㅎㅎ&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-3&#34;&gt;&#xA;&lt;h3 id=&#34;headline-2&#34;&gt;&#xA;친구들, 구내식당, 그리고 미성숙한 자신에 대한 후회&#xA;&lt;/h3&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-3&#34;&gt;&#xA;&lt;p&gt;출퇴근하기 좋고, 어쨌든 남들이 뭐라고 하건 좋은 성과를 내고 충실하고&#xA;  정직하게 일했던거 같다. 그리고 그게 나쁘진 않았다. 그냥 나를&#xA;  이해해주고 제대로 평가해주는 팀장님이나 그냥 비슷한 또래의 다른&#xA;  정직원이나 또다른 계약직과 친하게 지내며 21층 구내식당에서 행복하게&#xA;  밥을 먹으며 서로 더러운 농담을 만들며 킬킬거리며 잘 지냈던거 같다.&#xA;  PC하지는 못한 농담들이었다. ♂️❤️&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>메모리패딩과 Heisenbug 추억담</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/mem-padding-for-aka-security-solutions/</link>
+      <pubDate>Wed, 21 Jan 2026 03:00:09 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/mem-padding-for-aka-security-solutions/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;추억을 돌아보며&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;아마 이 기억은 2010년 전후였던거 같다. 당시 나는 작은 회사에&#xA;  소속이었는데, 회사가 작을 때에 다같이 SI에 파견되었을 때에, 내가 S/W&#xA;  솔루션 제품을 설계/개발한 것을 납품하며, 그 솔루션과 함께 SI구축을&#xA;  하는 프로젝트들을 수주 받는 회사였었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  원래는 그 SI프로젝트에서 ActiveX 정도를 몇 개 개발하고 덮었어도 될&#xA;  것을, 솔루션화하고 납품처에 따라 쉽게 적용할 수 있도록 설계/개발을&#xA;  사실상 나 혼자 했었었다. 자세한 기술적 사항을 모두 설명하지는&#xA;  않겠지만, Windows API, C++, Lua, HTTP/1.0, JSON을 잘 조합해서 필요한&#xA;  것을 만들어냈다. 지금 돌아봐도 훌륭한 창조력이었던거 같다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>타입스크립트는 새로운 델파이이지 않을까</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/typescript-is-the-new-delphi/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/typescript-is-the-new-delphi/</guid>
+      <description>&lt;p&gt;&#xA;타입스크립트, C#, &lt;a href=&#34;https://en.wikipedia.org/wiki/Visual_J%2B%2B&#34;&gt;J++&lt;/a&gt;, 델파이, 터보파스칼… 이 프로그래밍언어들의&#xA;공통점, 모두 같은 사람이 설계했다는 점이다:&lt;/p&gt;&#xA;&lt;p&gt;&#xA;👉 &lt;a href=&#34;https://en.wikipedia.org/wiki/Anders_Hejlsberg&#34;&gt;https://en.wikipedia.org/wiki/Anders_Hejlsberg&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이 포스팅에서는 이분과 관련된 추억놀음을 정리해 보려고 함. 결론이 있을&#xA;수 있겠고, 나 개인의 의견을 늘어놓지는 않아도 될 것 같다. 어차피 내&#xA;관점이 녹아 있을 수 밖에 없는 주관적으로 해석하고 나열하는&#xA;역사일테니까.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;DOS, 터보파스칼, 볼랜드의 시대 💾&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  &lt;figure&gt;&lt;a href=&#34;https://www.dosdays.co.uk/topics/Software/borland_turbo_pascal.php&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-01jan/typescript-is-the-new-delphi/turbo-pascal.png&#34;&#xA;      alt=&#34;터보파스칼 스크린샷들&#34; width=&#34;700&#34;&gt;&lt;/a&gt;&lt;figcaption&gt;&#xA;        &lt;p&gt;터보파스칼 스크린샷들&lt;/p&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  1990년대, 당시에 프로그래밍을 한다고 하면, 대부분은 GW-BASIC,&#xA;  QBASIC, QuickBasic이거나, 아니면 당시의 ‘볼랜드’社의 Turbo-C,&#xA;  Turbo-Pascal이 보통이지 않았을까 한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xrandr 🖥️모니터 연결 자동전환 스크립트🐫</title>
+      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/</link>
+      <pubDate>Tue, 18 Mar 2025 13:30:16 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar18--01-xrandr/</guid>
+      <description>&lt;p&gt;&#xA;요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.&#xA;다 편한데, 🪟윈도나 icewm처럼 &lt;code&gt;Windows+P&lt;/code&gt; 누르면, 다음 모니터연결&#xA;조합으로 전환되는게 부러웠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;매번 터미널 열고 &lt;code&gt;xrandr&lt;/code&gt; 치거나, &lt;a href=&#34;https://christian.amsuess.com/tools/arandr/&#34;&gt;arandr&lt;/a&gt; 열어서 세팅하기 귀찮으니까.&#xA;(물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그래서 그냥 윈도의 &lt;code&gt;Win+P&lt;/code&gt; 키처럼 동작하도록 스크립트를 짜봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;🐫 &lt;a href=&#34;https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl&#34;&gt;https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,&#xA;예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별&#xA;생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Golang Windows에서 Vscode이랑 행복하게 쓰기</title>
+      <link>https://ageldama.github.io/posts/2018-04apr/2018-04apr-golang-windows-vscode/</link>
+      <pubDate>Sat, 14 Apr 2018 14:59:31 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2018-04apr/2018-04apr-golang-windows-vscode/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://golang.org/&#34;&gt;Golang&lt;/a&gt; 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아.&#xA;그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;VsCode&lt;/a&gt; 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만&amp;hellip;)&lt;/p&gt;&#xA;&lt;p&gt;여튼 그런데 윈도에서 기본적으로 C컴파일러 설치되어 있어야 제대로 굴러가서,&#xA;&lt;a href=&#34;https://sourceforge.net/projects/mingw-w64/&#34;&gt;Mingw64&lt;/a&gt; 설치하고, &lt;code&gt;$MINGW64/bin&lt;/code&gt; 디렉토리 &lt;code&gt;$PATH&lt;/code&gt;에 걸어주니 잘됨.&lt;/p&gt;&#xA;&lt;p&gt;VsCode에서 디버거도 잘 붙고 만족스럽다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

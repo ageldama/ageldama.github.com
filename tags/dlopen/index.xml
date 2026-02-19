@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dlopen on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/dlopen/</link>
+    <description>Recent content in Dlopen on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Fri, 02 May 2025 10:06:00 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/dlopen/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ddakong 한글입력기 릴리즈</title>
+      <link>https://ageldama.github.io/posts/2025-05may/term-ddakong-initial-release/</link>
+      <pubDate>Fri, 02 May 2025 10:06:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-05may/term-ddakong-initial-release/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;&lt;a href=&#34;https://github.com/ageldama/term-ddakong&#34;&gt;https://github.com/ageldama/term-ddakong&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;일단 내가 fbterm에서 가볍게 한글쓰고 싶어서 만듦.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;ansi c99만으로 가볍게 작성했다. 다른 라이브러리 의존않고.&#xA;만족스럽다. 빌드하니까 25 KB 정도 나오네. 만족.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;더 했으면 하는 일들은:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;lua -or- dlopen 등으로 다른 입력기 지원하기 (예: 3벌식)&lt;/li&gt;&#xA;&lt;li&gt;utf-8 이외의 인코딩 지원하기&lt;/li&gt;&#xA;&lt;li&gt;raspberry pi 32/64 바이너리 릴리즈 (armhf, arm64)&lt;/li&gt;&#xA;&lt;li&gt;소스코드 조금 포매팅, 주석작성, 문서화&lt;/li&gt;&#xA;&lt;li&gt;빌드개선 : 사용하는 함수 등 체크하기 강화 (예: &lt;code&gt;epoll&lt;/code&gt; …어차피&#xA;거의 다 있지만.)&lt;/li&gt;&#xA;&lt;li&gt;스크린샷? ㅎㅎ&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

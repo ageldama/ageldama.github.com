@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Hugo 블로그 디자인 고쳐나가면서 생각 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480573">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+2024년엔 “CSS/JS에 의존하지 않는 블로그를 만들자”-였다가,
+조금씩 뜯어고쳐 나갔다. 사용편의나 읽기 적당하도록 색상과 정렬정도를
+고쳐나갔다.
+
+그러다가 2025년 올해엔 아예 Hugo theme을 새로 정리해서 다시 만들었다.
+이전에 해오던 것들을 더 정제하고 구조를 만들어 나갔다.
+
+처음엔 다른 CSS프레임웍1 을 더 가져와 쓰려고 고민하다가, 그냥
+이대로 적당한거 같아서, 가장 가벼운 상태에서 진행해왔다.
+
+생각보다 Responsive / Mobile 지원은 재밌었다.
+
+다만, 외양요소가 조금씩 변경될 때마다, 결국 회귀적인 검토과정이
+필요한데, 이걸 Layout 체크, BrowserStack와 같은, 혹은 그런
+빌드스크립트를 만들어서 스크린샷 비교 기능 같은걸 자동화 테스트하면
+유리하겠단 생각. 물론 개인 정적사이트 블로깅에 그런건 오버킬이지.
+ㅎㅎ하지만 어차피 취미영역이기 때문에 뭘 어떻게 내가 즐겁고 편하게
+한다면 가치가 있을것 같다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/2025-12dec16--02-ping/">⬅️ Emacs 일기: vi-mode은 그만 쓰고, windmove은 쓰기 시작</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/hugo&#43;esbuild/">➡️ esbuild js build for blog</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">👒 Hugo 블로그 디자인 고쳐나가면서 생각</h1>
+	    <div class="meta">
+                <time datetime="2025-12-16" pubdate>
+                    2025년12월16일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+2024년엔 <em>“CSS/JS에 의존하지 않는 블로그를 만들자”</em>-였다가,
+조금씩 뜯어고쳐 나갔다. 사용편의나 읽기 적당하도록 색상과 정렬정도를
+고쳐나갔다.</p>
+<p>
+그러다가 2025년 올해엔 아예 Hugo theme을 새로 정리해서 다시 만들었다.
+이전에 해오던 것들을 더 정제하고 구조를 만들어 나갔다.</p>
+<p>
+처음엔 다른 CSS프레임웍<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup> 을 더 가져와 쓰려고 고민하다가, 그냥
+이대로 적당한거 같아서, 가장 가벼운 상태에서 진행해왔다.</p>
+<p>
+생각보다 Responsive / Mobile 지원은 재밌었다.</p>
+<p>
+다만, 외양요소가 조금씩 변경될 때마다, 결국 회귀적인 검토과정이
+필요한데, 이걸 Layout 체크, BrowserStack와 같은, 혹은 그런
+빌드스크립트를 만들어서 스크린샷 비교 기능 같은걸 자동화 테스트하면
+유리하겠단 생각. 물론 개인 정적사이트 블로깅에 그런건 오버킬이지.
+ㅎㅎ하지만 어차피 취미영역이기 때문에 뭘 어떻게 내가 즐겁고 편하게
+한다면 가치가 있을것 같다.</p>
+<p>
+그리고 다른 일들도 마찬가지지만, 대부분은 자기가 뭘 쓰고 있고, 뭘
+하려고 하는지를 잘 이해하고 알아차리는게 정말 중요한것 같다.
+실망스러운 경우엔, 그걸 스스로 그러고 싶어서, 그래야 자기 기분이
+충족되니까 오해하거나, 아니면 정말 이해의 범위와 깊이가 그래서
+제한되는 경우도 종종 있을 것 같다. 하지만 실상을 잘 살펴보면, 더
+적합하고 단순하고 효과적인 것들을 찾아내거나 재발견해야 했던거 같다.
+그리고 그게 즐겁다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>Bootstrap 5, Tailwind CSS, Bulma을 고려했었다.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">🐻<a href="/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/">아겔로그변천사</a>
+                        <sup>29</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blogging/">blogging</a>
+                        <sup>22</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/blog/">blog</a>
+                        <sup>21</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/javascript/">javascript</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/css/">css</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/js/">js</a>
+                        <sup>16</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/perl/">perl</a>
+                        <sup>15</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hugo/">hugo</a>
+                        <sup>15</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sass/">sass</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/html/">html</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/esbuild/">esbuild</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/makefile/">makefile</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sh/">sh</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/scss/">scss</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gmake/">gmake</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/bash/">bash</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "👒";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/2025-12dec16--02-ping/">⬅️ Emacs 일기: vi-mode은 그만 쓰고, windmove은 쓰기 시작</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-12dec/hugo&#43;esbuild/">➡️ esbuild js build for blog</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480573</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

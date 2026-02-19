@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>어째서 아치리눅스를 쓰며 데스크탑환경을 안쓰는지 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480571">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="나는 데스크탑 환경을 사용 안한지 꽤 오래된것 같아.
+예전엔 이런식이었던거 같아:
+
+왠만하면, 그냥 세팅하는데 시간낭비하지말고 그냥 제공되는 Gnome, KDE
+같이 예쁜거 쓰자.
+
+&hellip;였었는데, 어느날 ASUS 넷북에 낮은 CPU파워으로 리눅스를 설정하고,
+이런 &ldquo;가벼운 데스크탑 환경&quot;을 직접 꾸며서 사용하면서, 오히려 맥북보다
+더 편하고 계속 쓰고 싶게 만들고, 내가 더 빠져서 사랑하며 사용하는걸 본
+이후로 집과 직장의 데스크탑도 모두 바꾸게됐다.
+그리고 가장 마우스 사용으로부터 오는 잡다한 스트레스나 그런것들도 없고
+가장 내게 익숙하고 편안한 환경을 만들어서 행복하게 쓸수있는거 같아." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-09sep/lamy2000-monami-ink/">⬅️ Lamy 2000 &#43; 모나미 병잉크</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-09sep/2018-09sep15sat-ping/">➡️ Ping 15/09/2018</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#정말-우분투에-만족스러운가">정말 &ldquo;우분투&quot;에 만족스러운가?</a></li>
+    <li><a href="#그렇다면-어떤-대안들이-가능한가">그렇다면 어떤 대안들이 가능한가</a></li>
+    <li><a href="#desktop-evironment">Desktop evironment</a>
+      <ul>
+        <li><a href="#내-xinitrc을-봐줘">&ldquo;내 xinitrc을 봐줘&rdquo;</a></li>
+        <li><a href="#file-manager">File manager</a></li>
+      </ul>
+    </li>
+    <li><a href="#매일매일-기다려">&ldquo;매일매일 기다려&rdquo;</a>
+      <ul>
+        <li><a href="#모니터를-여러개-연결하기">모니터를 여러개 연결하기</a></li>
+        <li><a href="#무선랜-네트웍-연결">무선랜, 네트웍 연결</a></li>
+        <li><a href="#키보드-배열">키보드 배열</a></li>
+        <li><a href="#상태표시줄--시스템트레이">&ldquo;상태표시줄&rdquo; / &ldquo;시스템트레이&rdquo;</a></li>
+        <li><a href="#시작-메뉴">&ldquo;시작 메뉴&rdquo;</a></li>
+        <li><a href="#화면보호기">화면보호기</a></li>
+        <li><a href="#오디오-볼륨-조절">오디오 볼륨 조절</a></li>
+        <li><a href="#블루투스">블루투스</a></li>
+        <li><a href="#프린터">프린터</a></li>
+        <li><a href="#기타-애플리케이션">기타 애플리케이션</a></li>
+        <li><a href="#외부-저장매체-안드로이드-등등">외부 저장매체, 안드로이드 등등</a></li>
+        <li><a href="#suspend-hibernate">Suspend, Hibernate</a></li>
+      </ul>
+    </li>
+    <li><a href="#tip-내-눈에-더-좋도록-폰트-추가하기-바꾸기">TIP: 내 눈에 더 좋도록 폰트 추가하기, 바꾸기</a></li>
+    <li><a href="#linux-distro">Linux distro</a></li>
+    <li><a href="#커뮤니티-계속해서-내-스타일으로-살아가기">커뮤니티, 계속해서 &ldquo;내 스타일으로&rdquo; 살아가기</a></li>
+    <li><a href="#정리하며">정리하며</a></li>
+  </ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🥃 어째서 아치리눅스를 쓰며 데스크탑환경을 안쓰는지</h1>
+	    <div class="meta">
+                <time datetime="2018-09-15" pubdate>
+                    2018년09월15일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p>나는 데스크탑 환경을 사용 안한지 꽤 오래된것 같아.</p>
+<p>예전엔 이런식이었던거 같아:</p>
+<blockquote>
+<p>왠만하면, 그냥 세팅하는데 시간낭비하지말고 그냥 제공되는 Gnome, KDE
+같이 예쁜거 쓰자.</p>
+</blockquote>
+<p>&hellip;였었는데, 어느날 ASUS 넷북에 낮은 CPU파워으로 리눅스를 설정하고,
+이런 &ldquo;가벼운 데스크탑 환경&quot;을 직접 꾸며서 사용하면서, 오히려 맥북보다
+더 편하고 계속 쓰고 싶게 만들고, 내가 더 빠져서 사랑하며 사용하는걸 본
+이후로 집과 직장의 데스크탑도 모두 바꾸게됐다.</p>
+<p>그리고 가장 마우스 사용으로부터 오는 잡다한 스트레스나 그런것들도 없고
+가장 내게 익숙하고 편안한 환경을 만들어서 행복하게 쓸수있는거 같아.</p>
+<h1 id="정말-우분투에-만족스러운가">정말 &ldquo;우분투&quot;에 만족스러운가?</h1>
+<ol>
+<li>매번 새로운 패키지를 설치하기 위해서 PPA을 기다리고,
+<ol>
+<li>그나마도 버젼이 한참 내가 필요한 버젼의 패키지와 다르거나,</li>
+</ol>
+</li>
+<li>아니면 내가 사용하는지도 알수없는 패키지들이 엄청나게 메모리를 소모하고,
+<ol>
+<li>심지어 내 마음에 들거나, 편안하지도 않은 데스크탑환경</li>
+</ol>
+</li>
+<li>정말 우분투가 내게 가장 <em>User friendly</em> 한 환경인걸까?</li>
+</ol>
+<p>..내 생각엔 이 질문은 사용자층에 따라서 답이 다르고,
+달라야한다. 분명히 우분투나 페도라 같은 &ldquo;사용자편의성&quot;에 집중한
+배포판들은 가치가 있다. 그리고 리눅스 데스크탑의 저변을 넓히고
+진지하게 폭넓은 사람들이 사용할 환경으로 만들어가는 노력들이
+위대하다고 생각한다.</p>
+<p>하지만, 리눅스나 유닉스 시스템을 도구에서 해방되어 더 자유롭게 쓰고
+싶거나 깊이 사용해야만하는 사용자라면, 특히나 소프트웨어 엔지니어라면,
+진지하게 한번 고민해보기를 권한다.</p>
+<h1 id="그렇다면-어떤-대안들이-가능한가">그렇다면 어떤 대안들이 가능한가</h1>
+<ol>
+<li>도구를 배워야한다는게 어쨌든 bottom line이라는걸 인식하기.
+<ol>
+<li>거짓말을 안하려면, 사실 GUI환경이나 도구들은 그런 익히는
+단계가 상대적으로 매우 단순하고 쉽다.</li>
+<li>하지만, 그럼에도 계속해서 배울것도, 어떤 <em>&ldquo;이건 정말 이렇게만
+해야하나&rdquo;</em> 하는 의문이 들때 답해주기 어렵다.</li>
+<li>GUI에서 Automation, Scripting이 가능한 환경들도 있지만, 아무리
+그래도 그냥 쉘을 통해 자동화하거나 하는것보다 쉽거나
+확실하지도 않다.</li>
+</ol>
+</li>
+<li>Desktop environment, Code editor, Shell, Linux distro&hellip; 이런
+취향의 선택은 충분히 많이 가능한거 같다.</li>
+</ol>
+<h1 id="desktop-evironment">Desktop evironment</h1>
+<p>Gnome, KDE 등등의 데스크탑 환경을 안쓰거나 직접 구성해 내게 적합한
+Window manager와 다른 작은 도구들을 조합해 만들수있다.</p>
+<p>Window manager은 Tiling window manager이나 윈도우 레이아웃을
+자동적으로 내 필요에 맞춰서 배열해주거나, 재배열해주는것들을 취향에
+맞춰서 선택해 사용하기를 권한다. 마우스로 창을 옮기거나 재배치하거나
+하는것들이 귀찮고 지겹다면 매우 추천한다.</p>
+<p>처음에 키보드 숏컷을 잘 익히고, 원하는 키들을 배치하면서 내게 맞는
+환경을 만들어가야한다.</p>
+<p>생각해보면, lightdm이니 gdm이니 로그인 한번할때 그냥 조금 그래픽스러운
+화면에서 패스워드 좀 입력해보자고 메모리를 로그인해있는 내내 얼마나
+낭비하는지 생각해봤는지?</p>
+<h2 id="내-xinitrc을-봐줘">&ldquo;내 xinitrc을 봐줘&rdquo;</h2>
+<p>그냥 내 <a href="https://wiki.archlinux.org/index.php/Xinit">xinitrc</a>와
+<a href="https://i3wm.org/">i3wm</a> 설정을 공유하며 내가 어떻게 사용하는지
+이야기 하는게 가장 빠를거 같아.</p>
+<ol>
+<li>데스크탑환경은 쓰지않고, 그냥 X윈도를 기본으로 사용함.</li>
+<li>거기에 &ldquo;display manager&quot;이라는 부팅한 다음 로그인 프롬프트를
+보여주는 lightdm, gdm같은걸 사용하지 않는다.
+<ol>
+<li>그냥 systemd에 의해서 리눅스 텍스트 콘솔에서 로그인한다.</li>
+<li>로그인하면, X윈도가 떠있지 않으면 띄우겠냐고 5초간 기둘리고
+띄우는 시작 스크립트를 만들어 사용한다. (zsh용)
+<ul>
+<li><a href="https://github.com/ageldama/configs/blob/master/i3wm/zlogin">https://github.com/ageldama/configs/blob/master/i3wm/zlogin</a></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>xinitrc에는 맨 마지막에 <code>exec i3wm</code>으로 윈도 매니저를
+시작하기전에 필요한 X윈도 설정, 시작할 프로그램들을 실행.
+<ol>
+<li><a href="https://github.com/ageldama/configs/blob/master/i3wm/arch-office-desktop/xinitrc#L26">ibus을 이용해 한국어 IME 시작</a>
+<ol>
+<li>fcitx, nabi등등 다른 한국어 입력기가 취향이라면 바꿀수도.</li>
+</ol>
+</li>
+<li><a href="https://github.com/ageldama/configs/blob/master/i3wm/arch-office-desktop/xinitrc#L62">gnome-keyring을 이용해 ssh keyring관리</a>
+<ol>
+<li>매번 ssh passphrase 입력 안하고 gnome-keyring이 기억줌.</li>
+<li>처음 ssh passphrase 입력할때 팝업 떠서 입력하면 됨.</li>
+</ol>
+</li>
+<li><a href="https://github.com/ageldama/configs/blob/master/i3wm/caps-to-ctrl.sh">xmodmap: CapsLock -&gt; Control으로 키바꾸기</a></li>
+<li><a href="https://github.com/ageldama/configs/blob/master/i3wm/arch-office-desktop/xinitrc#L98">compton: display compositing manager</a>
+<ol>
+<li>Eye candy! <a href="https://wiki.archlinux.org/index.php/compton">https://wiki.archlinux.org/index.php/compton</a></li>
+<li>3D 가속이 가능할때, 조금 화면전환 등등에 그럴싸하게 예쁘게 보이고,</li>
+<li>Chrome등 웹브라우져에서 화면 가속이됨.</li>
+</ol>
+</li>
+<li><a href="https://github.com/ageldama/configs/blob/master/i3wm/arch-office-desktop/xinitrc#L69">redshift: blue light filter</a>
+<ol>
+<li>경위도 설정에 따라서 해지는 시각에 화면의 파란색을 적절하게 조정해준다.</li>
+<li>이후에 이야기할 <code>systemd --user</code> 서비스로 등록해서 대체 가능.</li>
+</ol>
+</li>
+<li><a href="https://github.com/ageldama/configs/blob/master/i3wm/arch-office-desktop/xinitrc#L100">dunst: notification daemon</a>
+<ol>
+<li>흔히 말하는 <a href="https://stackoverflow.com/questions/1348788/what-does-toast-mean">Toast</a> 형식으로, 리눅스 데스크탑 환경의 표준 데스크탑 노티를 표시해준다.</li>
+<li>참고: <a href="https://wiki.archlinux.org/index.php/Desktop_notifications">https://wiki.archlinux.org/index.php/Desktop_notifications</a></li>
+<li><code>systemd --user</code> 서비스로 대체 가능.</li>
+</ol>
+</li>
+<li><a href="https://github.com/ageldama/configs/blob/master/i3wm/arch-office-desktop/xinitrc#L85">pulseaudio: audio daemon</a>
+<ol>
+<li>PulseAudio 방식으로 오디오 입출력을 가능하도록 데몬 시작.</li>
+<li><code>systemd --user</code> 서비스로 대체 가능.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>..조금 _많아보인다_만 막상 짜보면 별로 많은것도 아님. (정말)</p>
+<p>이미 꽤 현대적인 데스크탑 환경의 기능들이 다 구현이 되어있고, 거기에
+그런것들이 리눅스/유닉스 환경에서는 굳이 엄청나게 무거운 방식으로만
+구현되는게 아니라 작고 가볍게 구현된것들을 조합해 내게 맞도록 가볍고도
+깔끔하고, 가장 강력하게 사용할수있어서 나는 이 방식을 선호한다.</p>
+<h2 id="file-manager">File manager</h2>
+<p>파일매니저에서 하는 일들 어차피 <a href="https://en.wikipedia.org/wiki/Midnight_Commander">midnight
+commander</a> 같은걸로
+충분히 편안한거 같다.</p>
+<p>그리고 이런 가볍고 안정적이고 목적에 부합하는 파일관리자는 리눅스에
+충분히 많은거 같고, 또 가장 안정적이고 확실한 쉘에서 처리하는것도
+방법인거 같다.</p>
+<p>파일 관리를 위해 다른 가벼운 데스크탑 GUI환경이 필요한 경우는 별로
+없지 않나.</p>
+<p>취향에 따라서 파일관리자를 선택하는것도 좋은거 같아: <a href="https://wiki.archlinux.org/index.php/Category:File_managers">https://wiki.archlinux.org/index.php/Category:File_managers</a></p>
+<h1 id="매일매일-기다려">&ldquo;매일매일 기다려&rdquo;</h1>
+<p>매일매일 하는 일상적인 작업들이나 필요한것들에 대해서 몇개씩 정리해보자.</p>
+<h2 id="모니터를-여러개-연결하기">모니터를 여러개 연결하기</h2>
+<p>다른 예쁜 &ldquo;디스플레이서 설정&rdquo; 애플리케이션을 써도 좋지만, 나는 <a href="https://wiki.archlinux.org/index.php/xrandr">xrandr</a> 커맨드 사용법을 익히기를 권장한다.</p>
+<p>내가 원하는 레이아웃, 위치에 지정이 가능해지고, 특별히 복잡하지도
+않아서 처음 모니터 연결했을때 해메일 필요가 줄어든다.</p>
+<p><a href="https://github.com/ageldama/configs/blob/bc1d7c0482a3eac517eabfced2d1e01ea00014eb/xrandr/on-vga-0-xrandr.sh">https://github.com/ageldama/configs/blob/bc1d7c0482a3eac517eabfced2d1e01ea00014eb/xrandr/on-vga-0-xrandr.sh</a></p>
+<h2 id="무선랜-네트웍-연결">무선랜, 네트웍 연결</h2>
+<p>이건 취향에 따라 다른데, 여러가지 대안이 가능한거 같다.</p>
+<ol>
+<li>Network Manager
+<ol>
+<li>사실 CLI툴이나 Standalone GUI 도구 등도 많고,</li>
+<li>가장 무선랜 설정하기 편리해서 나는 이걸 사용.</li>
+<li>대부분의 DE들이 이걸 기본으로 사용함.</li>
+<li><a href="https://wiki.archlinux.org/index.php/NetworkManager#Front-ends">https://wiki.archlinux.org/index.php/NetworkManager#Front-ends</a></li>
+</ol>
+</li>
+<li>Netctl
+<ol>
+<li>아치리눅스 기본인데,</li>
+<li>설정도 조금 거시기하고, WIFI 전환도 조금 마음에 안들게 동작함.</li>
+</ol>
+</li>
+<li>Wicd
+<ol>
+<li>무선랜만 지원하는거 같음.</li>
+<li>별로 내 취향은 아니고 경량으로 구현한점은 마음에 듦.</li>
+</ol>
+</li>
+</ol>
+<h2 id="키보드-배열">키보드 배열</h2>
+<p>다른말이 별로 필요없을거 같다.</p>
+<ol>
+<li>원하는 키 이벤트를 <code>xev</code>등으로 찾아내고.</li>
+<li><code>xmodmap</code>으로 적절히 키맵을 수정하고, 이걸 <code>~/.xinitrc</code>에 등록해서 설정하도록 하면됨.
+<ol>
+<li>예: <a href="https://wiki.archlinux.org/index.php/xmodmap">https://wiki.archlinux.org/index.php/xmodmap</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="상태표시줄--시스템트레이">&ldquo;상태표시줄&rdquo; / &ldquo;시스템트레이&rdquo;</h2>
+<p>이건 나는 i3blocks 사용함. 취향에 따라, 기본적인 i3status이나 기타
+등등 정말 많은 이런 프로젝트들이 있으니 적당히 선택해 쓰면됨.</p>
+<p>ibus 한국어 IME이나 DropBox 같은 애플리케이션들은 &ldquo;시스템트레이&quot;에
+아이콘을 등록하는데, 보통 이런 i3blocks 같은것들의 기본설정은 오른쪽
+끝에 이런 아이콘들을 등록해줌.</p>
+<p>시계부터 네트웍 상태, 볼륨, 디스크, 메모리, CPU 사용량 등
+커스터마이징해서 필요한 정보들을 표시할 수 있음.</p>
+<h2 id="시작-메뉴">&ldquo;시작 메뉴&rdquo;</h2>
+<p>나는 i3wm을 통해 <code>Super+D</code> 키를 <a href="https://github.com/DaveDavenport/rofi">rofi</a>에 바인딩해놓고 사용한다.</p>
+<p><a href="https://github.com/ageldama/configs/blob/master/i3wm/macbook-air-2012mid/i3-config#L39">https://github.com/ageldama/configs/blob/master/i3wm/macbook-air-2012mid/i3-config#L39</a></p>
+<p>적당히 원하는 커맨드를 찾아서 실행도 fuzzy matching으로 해줘서 편리하다.</p>
+<p>뭐 어차피 i3wm에선 <code>Super+Return</code> 눌러서 터미널 열고 뭔가 거기서 다하게되지만.</p>
+<h2 id="화면보호기">화면보호기</h2>
+<p>i3lock, xscreensaver을 추천한다.</p>
+<p>i3lock은 정말 fork버젼에 따라 다르고, 직접 xautolock등이랑 연계해서 타임아웃이 있을때 화면보호기가 켜지도록 해야한다.</p>
+<p>xscreensaver은 설정도 가능하고, 다양한 스크린세이버를 구현해놓았다.
+그냥 <code>systemd --user</code>으로 등록해서 자동적으로 실행되도록 하거나,
+특정한 키에 <code>xscreensaver-command -lock</code> 커맨드로 즉시 화면을
+잠글수있습니다.</p>
+<h2 id="오디오-볼륨-조절">오디오 볼륨 조절</h2>
+<p><code>pavucontrol</code>이나 그런 믹서 조절이 가능한 GUI 애플리케이션이나
+스크립팅 가능한 <code>pamixer</code>등을 설치해 쓰기를 권한다.</p>
+<p>또 필요에 따라서 i3wm등에 단축키를 등록해서 볼륨 조절도 가능하니, 참고.</p>
+<p><a href="https://github.com/ageldama/configs/blob/master/i3wm/macbook-air-2012mid/i3-config#L154">https://github.com/ageldama/configs/blob/master/i3wm/macbook-air-2012mid/i3-config#L154</a></p>
+<h2 id="블루투스">블루투스</h2>
+<p>이건 조금 내 취향이 제일 이상한거 같은데, 나는 bluez을 설치하고,
+블루투스 데몬을 systemd으로 띄워놓고, 그 다음에 <code>bluetoothctl</code> 을
+이용해서 CLI에서 스크립팅하거나해서 연결한다.</p>
+<p>그런데 다른 GUI툴들이 standalone으로 DE이랑 관계없이 나와있으니 선택해
+설치해 쓰기를 바란다.</p>
+<h2 id="프린터">프린터</h2>
+<p>난 그냥 CUPS을 설치하고 네트웍 프린터로 잡거나 하는게 전부인거 같아.</p>
+<p>CUPS 설치한 다음에 보통 <a href="http://localhost:631">http://localhost:631</a> 으로 웹브라우져로
+접근하면 바로 프린터 찾고 설정이 가능해서 딱히 불편한게 없음.</p>
+<h2 id="기타-애플리케이션">기타 애플리케이션</h2>
+<p>mplayer, vlc 으로 동영상을 보기 편안한거 같다. 다른 소프트웨어들만큼
+친절하고, 추가적인 자막용 문자셋, 폰트 설정을 해야하지만 그래도 가장
+확실하고 편안하게 동영상을 보는 방법인거 같다.</p>
+<p>이밖에 이미지뷰어나 evince PDF 뷰어, Calibre 같은 전자책 처리
+소프트웨어 같은것들도 내겐 모두 리눅스에서 사용하는게 가장 편안하고
+가장 강력하고 제한도 없는거 같아서 선호한다.</p>
+<h2 id="외부-저장매체-안드로이드-등등">외부 저장매체, 안드로이드 등등</h2>
+<p><a href="https://wiki.archlinux.org/index.php/autofs">autofs</a> 같은걸 사용해서 자동화해도 좋은거 같아.</p>
+<p>대부분의 데스크탑환경들이 그런 방식으로 자동화를 하니까. 그리고
+MTP장치(안드로이드 등)도 mtpfs, simple-mtp 같은 애플리케이션들이
+fuse을 통해서 마운팅 가능하도록 해주니까 참고해서 활용해도 좋은거
+같다.</p>
+<h2 id="suspend-hibernate">Suspend, Hibernate</h2>
+<p>랩탑에 적용하려면, suspend, hibernate이 있을때 특정한 이벤트를
+hook해서 스크린세이버를 켜거나 하면 될거 같다.</p>
+<p>systemd을 사용한다면, 이런 hook을 이용해서 스크린세이버를 시작하거나
+해서 화면을 잠그는게 가능하다.  (다시 lid을 열었을때 화면이
+잠겨있지않다면, 랩탑을 잃어버리거나 뺏겼을때 난감할테니까.)</p>
+<p><a href="https://github.com/ageldama/configs/blob/master/i3wm/i3lock%40.service">https://github.com/ageldama/configs/blob/master/i3wm/i3lock%40.service</a></p>
+<p>i3lock을 사용하는 예이지만, <code>xscreensaver-command -lock</code> 등의 커맨드로
+바꿔서 다른 스크린세이버로 바꾸기도 좋고, 아래에 주석으로 어떻게
+설치하고 적용하는지도 잘 설명되어있다.</p>
+<h1 id="tip-내-눈에-더-좋도록-폰트-추가하기-바꾸기">TIP: 내 눈에 더 좋도록 폰트 추가하기, 바꾸기</h1>
+<p><a href="https://github.com/ProgrammingFonts/ProgrammingFonts">https://github.com/ProgrammingFonts/ProgrammingFonts</a></p>
+<p>코딩할때 폰트나 기타 한국어를 위한 보기 편하고 예쁜 폰트들이
+오픈소스로 많이 공개되어있다.</p>
+<p>이런것들 PPA으로 공개되기만 기다리지말고,</p>
+<ol>
+<li><code>~/.local/share/fonts</code> 디렉토리로 복사</li>
+<li><code>fc-cache</code> 실행</li>
+</ol>
+<p>이렇게하면 대부분의 애플리케이션에서 바로 적용 가능해지거나,
+애플리케이션을 재시작하면 적용할수있으니까 가능한한 내 취향의 폰트를
+자유롭게쓰자.</p>
+<h1 id="linux-distro">Linux distro</h1>
+<p>ArchLinux, Gentoo 같은 내게 모든 제어권을 주면서 너무 극단적이지 않은
+실용적인 배포판을 사용하면 좋은거 같다.</p>
+<p>Ubuntu, Debian, Fedora, CentOS 같은 배포판들 모두 각각의 특징이 있고
+좋아하지만, 특히 아치리눅스를 권하는 이유는 다음과 같다.</p>
+<ol>
+<li>적당히 편리한 Prebuilt binary을 설치하기 좋은 <a href="https://wiki.archlinux.org/index.php/Pacman">Pacman</a> 패키지 매니져.
+<ol>
+<li>딱히 특별히 dpkg + APT, 혹은 RPM + Yum 조합보다 불편한적 없음.</li>
+<li>오히려 <em>어떤 파일이 어떤 패키지에 속하나</em> 등등 dpkg으로
+순식간에 복잡해지는것들이 잘 정리되어있어서 편하다.</li>
+<li>대부분은 패키지의 최신버젼이 준비되는대로 올라오고, Debian,
+Ubuntu처럼 2년 정도 기다리거나 PPA을 찾아헤메이지 않아도 된다.</li>
+</ol>
+</li>
+<li>Gentoo처럼 모든걸 EBUILD으로 설치할 필요 없이, 대부분은
+Pacman으로 바이너리 패키지로 설치하고,
+<ol>
+<li>정말 소스코드로 최신으로 설치하거나, 컴파일 옵션을 지정하고 싶은건, <a href="https://wiki.archlinux.org/index.php/Arch_User_Repository">AUR</a> 에서 찾아서 설치가 가능하고,</li>
+<li>AUR 찾아서 설치하는것도 Yaourt, Packer 같은 툴들을 이용해서
+그냥 Pacman 설치하듯이 하면 된다.</li>
+</ol>
+</li>
+</ol>
+<p>자기 자신에게 물어보자, 자신이 작성한 소프트웨어의 가장 괜찮고, 가장 안정적인 버젼은 무엇인가?</p>
+<p>대부분은 <em>가장 마지막 버젼</em> 일거다.</p>
+<p>그런데 어째서 오픈소스 소프트웨어 패키징은 1~2년간 복잡한 검증 과정을
+거친 다음에야 겨우 기능적으로나 보안상 안전해지기를 기대하는게
+이상하지않나? 아치리눅스나 젠투의 패키지 철학은 그냥 최신을
+설치해준다. 그리고 가끔 깨지기도 하지만, 대부분은 가장 확실하고 잘
+동작하는 소프트웨어를 설치해준다.</p>
+<h1 id="커뮤니티-계속해서-내-스타일으로-살아가기">커뮤니티, 계속해서 &ldquo;내 스타일으로&rdquo; 살아가기</h1>
+<p><a href="https://www.reddit.com/r/unixporn/">r/unixporn</a> 에 가서 다른 이상한
+사람들은 어떻게 자기 환경을 꾸미고 설정해 사용하는지, 그 사람들의
+스크린샷과 코멘트, 그리고 무엇보다 설정 파일을 찾아 읽고 자기 환경에
+적용해보자.</p>
+<h1 id="정리하며">정리하며</h1>
+<blockquote>
+<p>오늘도 좋은 꼰대질이었다.</p>
+</blockquote>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/linux/">linux</a>
+                        <sup>27</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/archlinux/">archlinux</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/i3wm/">i3wm</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/it%EA%BC%B0%EB%8C%80/">IT꼰대</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🥃";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-09sep/lamy2000-monami-ink/">⬅️ Lamy 2000 &#43; 모나미 병잉크</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-09sep/2018-09sep15sat-ping/">➡️ Ping 15/09/2018</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480571</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

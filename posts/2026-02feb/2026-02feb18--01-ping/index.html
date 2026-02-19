@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>생성형AI, 진짜로 문제인 AI Hallucination은 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771480573">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="본격 AI붐에 편승하려는 AI빙자 딴소리/헛소리 글" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn disabled" role="button" aria-disabled="true" href=""></a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-02feb/selecting-title-emoji/">➡️ 원하는 emoji으로 선택되는 제목을 고르기 [0.798129]</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">요즘 나와 우리는</a>
+</li>
+<li><a href="#headline-2">“구독형 소프트웨어 서비스”와 데이터=석유🛢️?</a>
+</li>
+<li><a href="#headline-3">기술과 기술구조의 관점에서의 신기루🌴🐪</a>
+</li>
+<li><a href="#headline-4">회사와 팀의 관점에서 신기루🌴🐫</a>
+<ul>
+<li><a href="#headline-5">스스로에겐 불안한 자리, Insecureness🫨</a>
+</li>
+<li><a href="#headline-6">‘착한’ 직원들🙈🙉🙊과 우스운 비밀모임🤐</a>
+</li>
+<li><a href="#headline-7">“저기, 저희 회산 큰 회사는 아니에요”</a>
+</li>
+<li><a href="#headline-8">우리식 ‘보편화’</a>
+</li>
+<li><a href="#headline-9">초인(超人)🦸 or 양아치🦹</a>
+</li>
+<li><a href="#headline-10">단어 ‘Competitive’ ⚔️와 ‘착한’ 직원🐔과 ‘싸움닭’</a>
+</li>
+<li><a href="#headline-11">역할놀이에 모든걸 걸지 말자, 유니콘🦄 vs. 키메라🧌</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-12">어제와는 또 다르지만, 닮은 꼴인 오늘의 신기루</a>
+</li>
+<li><a href="#headline-13">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🚢 생성형AI, 진짜로 문제인 AI Hallucination은</h1>
+	    <div class="meta">
+                <time datetime="2026-02-18" pubdate>
+                    2026년02월18일
+                </time>
+                </div>
+        </div>
+
+        
+        <div class="description">
+	    <span class="short-description">
+                본격 AI붐에 편승하려는 AI빙자 딴소리/헛소리 글
+            </span>
+        </div>
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+요즘 나와 우리는
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>요즘엔 SW/IT업계에 일자리가 많이 없어지는 것, 구독형, SaaS 기업의
+주가가 떨어지고 투자가 사라지는 것에 대한 우려가 많다. 그리고 나도
+영향을 받는 사람으로서 걱정이 없진 못하다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+“구독형 소프트웨어 서비스”와 데이터=석유🛢️?
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>그런데 사실 절대다수의 구독형서비스(…실은 그냥 모바일앱이나 데스크탑
+앱이 좀 있는 웹서비스)/SaaS이 그렇게 존재할 사업이었던게 모순이
+맞았던거 같다. 오히려 자동화 된 데이터모델과 그의 CRUD + 약간의 로직이
+들어간 것을 각자가 해결해도 될 일이었던게 맞다. 도메인에 특화되어
+있다고 하는 기업이든 특정 기술을 쓴다고 하는 기업이든… 그 도메인의
+전문가라고 해야 할까 싶기도 하거니와, 말그대로 특정 기술을 “갖다 쓰는
+것” 사용자인 곳일 뿐이기도 하고. …결국 적당한 뻥튀기를 다들 하니까
+그게 이상한지 모르고 다같이 하며 장사를, 혹은 투자금을 쓰는 일을
+했던거지 싶다.</p>
+<p>
+생각보다 자신들의 ‘도메인’을 신성시하는 팀들도 있다. 실제로는 단순히
+엔티티 갯수가 많거나 한 것인데… 그걸 다이어그램을 아예 만들지
+않거나, 일부러 허접하게 만들거나, 대충 해서 알려주지 않으려 든다.
+(이렇게 하는 이유는 이후에 계속해서 이 포스팅에서 설명하겠다.)</p>
+<p>
+그리고 생각보다 이런 수법(혹은 수작질)을 하는 팀은 몇 있었었다.
+흥미롭게도 한군데만이 아니란거지… 그런 방식자체가 어쩌면 모종의
+문제를 만들 수 있음에도 말이다. 물론 자기애적인 그런분들은 실정법따윈
+무시하고 자기마음대로 법적인 판단을 아니다기다를 말씀하실 정도로
+사리분별능력이 마비되어 있거나 해서, 해당기업에 법적비용을 엄청나게
+가중시키기도 하지는 하지 않을까 우려스럽다.</p>
+<p>
+…개인적으로는 이런걸 대처할 때에 그냥 ‘아 그렇군요’ 하고 다른 일을
+하거나 계속해서 그걸 파고 드는 방법, 둘 다 유효했다. 어차피 그들이
+그러는 이유 자체가 insecurity 때문이었으니까.</p>
+<p>
+그리고 너무 당연하게도, 사실상 누구나 사용하는 기술스택,
+기술선택도 …너무나 금새 따라잡힌다. 더욱이 경쟁자가 자본력 등의
+덩치에 더 앞서는 경우라면 더욱 더 쉽다.</p>
+<p>
+글쎄다… 내 생각엔 저런 태도들이 생성형AI시대에 가장 쉽게 흔들릴
+것들이 아닐까 싶다.</p>
+<p>
+누적된 데이터니 뭐니하지만, 지금에 와서 생각해보면, 사실 그걸
+가공하거나 어떤 의미 있는 무언가를 도출해낼 능력이 부재하거나,
+그럴만한 데이터가 아닌 경우도 많은거 같다. 오히려 그걸 보지 않거나
+누적한 것에 상대적으로 아주 소량의 적당한 샘플링된 데이터만 있어도 더
+나은 결과를 찾아내거나 하는데 도움이 될 것도 많아서… 한때의
+‘데이터=석유’–썰 같은것도 듣기에 거시기하다. 실은 석유🛢️라기 보다는
+…쌓인 쓰레기🚽에 가까워지는 경우가 더 많을 것 같다.</p>
+<p>
+이미 많은 기업, 서비스들이 많은 데이터를 축적해왔지만, 그걸 의미 있는
+결과로 전환시킨 경우는 너무나 적었음을 이 시대에 체감하게 되지
+않았는가.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+기술과 기술구조의 관점에서의 신기루🌴🐪
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>그런데 어떤 부분에선, 어쩐지 뭔가 그렇게 변한거 같지 않다는 느낌도
+받는다.</p>
+<p>
+이전에는 최초구축 시점에 전문가를 필요로 했다면, 이제는 AI을 이용해
+구축한 …사실상 기술부채 덩어리를 어떻게 해소할지의 문제를 겪는 것이
+더 많아진것 같다.</p>
+<p>
+구조적으로 보안적일 수 없고, 아주 단순한 보안의 관점만을 갖고도 쉽게
+문제가 생길 수 있는 구조를 생성해 놓고, 그걸 아예 이해하지 못하거나
+하는 경우를 많이 접한다.</p>
+<p>
+실은 그 이전에도 소프트웨어에 대한 몰이해가 크거나, 아니면 이해하고
+싶어하지 않고 그냥 극단적으로 단순화하여 매도하고 싶은 이들이 쉽게
+갖는 관점과 전혀 다르지 않다. 차이점은 그 관점으로 이젠 뭔가
+굴러가는걸 만들어 내기는 가능한데, 여전히 그게 어떤 구조여야 서비스가
+가능하고 어떤게 문제가 있는지 이해하지 못한다는 점인거 같다. 그리고 내
+생각엔 과거에도 “아니 그냥 카톡처럼 깔면 되고 해야 하는거 아니요!”하는
+당찬 포부를 밝히는 이들, 어떤 업무들을 거쳐서 어떻게 되어야 한다는걸
+이해하지도, 이해하고 싶어하지도 않는 이들은 앞으로도 변하지 않을거
+같다. ㅎㅎ<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+그리고, 의외로, 기술적인 관점의 문제는 단순히 이러한 기술적 선택에
+보다 회사와 팀의 조직의 건강함과 성장가능성, 지속가능성 등에 훨씬
+지대한 영향을 미친다.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+회사와 팀의 관점에서 신기루🌴🐫
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>어떤 종류의 (정말 너무 흔한 부류이지만) 사람들은, 처음 팀과 회사가
+생겨날 때에 합류했거나 한 경우가 많다. 물론 과도기나 성장이후에도 그런
+사람들은 얼마든지 팀에 합류할 가능성이 있다. 그런데 경제적인 이유,
+일자리 진입의 난이도 등등의 이유로 초기에 합류한 경우가 이런 합류의
+원인이 되기가 쉽다. 오히려 적당한 출신학교 타이틀이나 인맥 등이 이런
+사람들에게 도움이 된다. 실제로는 별로 연관성도 없고, 어떤 것도
+증명해주지 못하는… 슬픈 우리사회의 졸업장 판매, 혹은 그 과정을
+들었으니 나는 qualified되었다는 막연함의 뭉텅이이지만 말이다.</p>
+<blockquote>
+<p>Le mal imaginaire est romantique, varié, Le mal réel morne, monotone, désertique, ennuyeux. Le bien imaginaire est ennuyeux; Le bien réel est toujours nouveau, merveilleux, enivrant.</p>
+<p>
+상상 속의 악은 낭만적이고도 다양하나, 실제의 악은 우울하고 단조로우며
+척박하고도 지루하다.</p>
+<p>
+상상 속의 선은 지루하지만, 실제의 선은 언제나 새롭고 놀라우며 매혹적이다.</p>
+<p>
+『중력과 은총(La Pesanteur et La Grâce)』<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
+</blockquote>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+스스로에겐 불안한 자리, Insecureness🫨
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<p>이런 이들은 전혀 이슈나 기술적 선택을 적절히 이해하지 못했지만,
+그것보다는 적당한 기술적인 키워드를 갖고<sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup> 거기에 스스로의 자리를 지키기
+위해, 결정권자나 대중을 적당히 그런것처럼 구슬려야 하고, 밖으로는
+자신이 있는 성장한 곳에 유입되려는, 혹은 그런 필요로 접촉하는 진짜
+안목자나 전문가를 배척하도록 애써야 하는게 절대다수의 기업에서 빚는
+매일매일의 촌극의 풍경이다.</p>
+<p>
+–그런 사람들은 외부의 전문가가 혹여 실력을 증명해 보이더라도 인성이나
+성격 등등의 것들을 프레이밍하여서라도 끓어 내리기에 바쁘다. 자기자리에
+대해 스스로가 insecurity을 강하게 느끼고 위협이 될거라 느끼기
+때문이고, 또 스스로가 그렇게 성장해본적이 없으니 진짜가 되려면 그런
+프레이밍하는 내용과는 다르게 살아와야 했으리란걸 짐작도 할 수 없기
+때문이다.</p>
+<p>
+한마디로 쉽게 말해서, 사람들은 흔히 ‘실력있는 성격파탄자’를 미디어를
+통해서 학습해오지만, 실제로는 그렇기 어렵다. 어차피 자기 실력을
+키워가는 사람이라면 정치질이나 수작질에는 관심이 적어질 수 밖엔 없다.
+자기가 실력 그대로 인정 받고 보상 받길 원하게 되니까. 오히려 그런
+프레이밍을 하는 사람들… 그 스스로가 증명하는 부적격자나 능력이
+떨어지는 사람들이 오히려 항상 조직내에서 성격, 인성의 문제, 흔히
+말하는 정치질에 빠질 수 밖에 없다. 우선 당장부터 정치질을 의식적이건
+무의식적으로 해서 자기자리를 방어하려 드는 정도인데 뭐가 더 필요한가.
+ㅎㅎ</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-3">
+<h3 id="headline-6">
+‘착한’ 직원들🙈🙉🙊과 우스운 비밀모임🤐
+</h3>
+<div id="outline-text-headline-6" class="outline-text-3">
+<p>프레이밍으로, 그런 방식으로만 자기자리를 방어하는 사람들은 자기말을 잘
+듣고, 고분고분할, 혹은 물지 않는 착한 사람을 뽑을 것이다. 그 사람이
+그냥 적당한 거짓말을 잘하는 사람이면 더 뽑힐 가능성이 올라갈 것이다.
+그리고 그런 정직하지 못함은 실은 그 사람이 정말로는 자기직무에 대한
+능력은 별로일거란 생각은 시도도 않은채.</p>
+<p>
+그리고 그런 착한 직원들로 채워나간 회사는, 또 그런 “착한 직원”들을
+뽑아 나가는 인재들일 수 밖엔 없다. 어차피 능력보다는 그런 ‘착함’이
+우선시 되니까. 그렇게 계속해서 회사가 성장함에 따라 더더욱 무능해져만
+간다.</p>
+<p>
+더욱이 나아가서 그런 상사가 나르시시스트이기까지 하다면, 이런 ‘착한’
+직원들은 금새 “날으는 원숭이”<sup class="footnote-reference"><a id="footnote-reference-4" href="#footnote-4">4</a></sup>들이 되어 함께 합심하여 피해자를 더
+괴롭히게 된다. 그래야만 그런 이들이 가장 중요하시는 직장에서의 조용히
+‘잘 지내는 일’에 도움도 되고, 또 자기들과 대비되어 실제로 일을 하고
+‘시끄럽게’ 만들면서 소란을 떠는 진짜 직원을 배제할 수 있게 되니까.</p>
+<p>
+그리고 다수의 경우에, 이런 ‘착한 직원’들과 그들을 선호하는 상사는
+자신들의 자리를 지키기 위해 ‘비밀’을 만들어 내기 마련이다. 이런
+‘비밀’은 어떤 비밀결사나 그런것은 아니다. 그저 그들이 무능해서
+쉬쉬하거나 덮어야 하거나 하는 형태의 문제들이다. 예를 들면, 특정한
+형태의 기술부채이거나 고객의 불편 같은 내용들이다. 초기 팀이라면
+엉뚱하거나 의도와 효과가 어리둥절한 기술적 선택 같은 내용들도
+포함된다.</p>
+<p>
+그들은 어쨌든 자기 자리를 보전하고 방어해 내는 것이 지상과제인데, 왠
+이상한 외부에서 온 것이 소란을 떨며 그 문제를 파고 들거나, 그걸 그저
+고치거나 개선하려고 드는게 불편할 수 밖엔 없다. 지금까지 거기에서
+결정권자나 자신들의 상사가 눈을 돌리도록 애를 쓰고 숨기거나 왜곡해 온
+것을, 그런 소란쟁이들은 덤덤하게 파고 들고 그저 있는 그대로 말하고
+고쳐나가면 그간의 거짓말이 다 드러날 뿐이니까 말이다. 슬픈 일이다.</p>
+<p>
+물론 결정권자나 그 상사들은 기술에 대해서는 모르거나 알려고도 들지
+않는 태도를 갖는다. 골치아프거나, 자기가 하는 경영이나 전략에 머리를
+치중하기에도 바쁜데 그런 자잘한 것들을 머리에 담기 싫어하거나, 아니면
+자기전공이 아니니 그 관련 내용을 위임한다. …그것도 대부분은 그래서는
+안될 저런 대상에게 위임한다.<sup class="footnote-reference"><a id="footnote-reference-5" href="#footnote-5">5</a></sup></p>
+<p>
+혹은 더 일반적으로는 우선 이런 결정권자나 상사들부터가 그저
+고분고분하고 마찰이 없을 사람들을 선호하기 때문에 이렇게 시작되리라
+생각한다. 거기에 흔히 듣는 프로그래머와의 갈등 스토리나 그런것들을
+더하고, 자기가 원하는대로 군소리 않고 따르는 것 같은 사람들을
+뽑을테니까.</p>
+<p>
+–그런데, 그런 군소리 없음, 고분고분함이 실은 결정권자 스스로에게
+결과적으로 가장 큰 해가 될 것이다. 그리고 이게 “사람은 좋은데 능력은
+없다” 착각을 만들어 내는 이유 중 하나다. 그렇게 뽑은 사람이 제대로
+일할 수 있거나 유능한 사람이기는 어렵다. 오히려 일하는 척을 하겠지만
+그 유능은 자기 자리를 지켜내는 유능이지, 직무에서의 유능과는 거리가 멀
+수 밖엔 없다.<sup class="footnote-reference"><a id="footnote-reference-6" href="#footnote-6">6</a></sup></p>
+<p>
+그리고 바로 이렇기 때문이라도 최선을 다해 인성검증이니 프레이밍 같은
+방식으로, 진짜 전문가를 배척할 수 밖엔 없다.</p>
+<p>
+…그리고 재밌게도, 이 그림에서 그 사실을 모르던 결정권자나 상사는…
+결과적으로 그 누구보다 🙈🙉🙊 …한 이가 되고, 회사와 팀은…
+ㅎㅎ말하지 않아도 되겠지 싶다. 딱 저런 정도의 사람들이 갖고 놀기 좋은
+정도로만 유지되거나 한다. 그나마도 그런 상태로는 오래 지속하기도
+어려울 것 같다.</p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-3">
+<h3 id="headline-7">
+“저기, 저희 회산 큰 회사는 아니에요”
+</h3>
+<div id="outline-text-headline-7" class="outline-text-3">
+<p>글쎄다… 세계최고의 기업이나 그런게 아니라는 자각이 있더라도, 그걸
+어디에 어떻게 갖다 적용하는가가 중요할 것 같다. 오히려 세계최고가
+아니고 당장의 성장과 생존이 절실한 작은 기업일수록 더 냉철해야 하는
+부분인 것 같다. 그리고 이것도 내 작고 제한적인 경험으로서, 내가 이해한
+범위에서는 거의 전체의 문제가 있었거나 문제를 겪은 기업들이 이 문제일
+뿐이었었다.</p>
+<p>
+이런 문제를 제대로 이해하고 노력해온곳과 그렇지 못한 곳은 그 차이가
+심해져만 간다. 제정신으로 성과를 내는 사람은 견제와 괴롭힘에 떠나고 그
+자리를 다시 ‘착한’ 직원들으로 채워가는 악순환이 일어나고 거기서
+빠져나오지 못한다. 그렇게 학습한 자기자리의 방어자들은 계속해서 같은
+방식을 이어나가며, 채용 인터뷰는 청문회나 그 자리에 적정한 정도를
+망각하는 인성검증의 재판장이 된다. (그리고 그런걸 이용하는 정보를
+제공하거나 하는 비즈니스도 생겨난다) …순식간에 조직은 흔히 말하는
+사해효과를 벗어날 수 없는 상태가 된다.</p>
+<p>
+그런 기업, 팀이 결국엔 어떻게 될지는 말하지 않아도 될 것이다. 외부에서
+바라볼 때엔 왜 저걸 못하지? 왜 저렇게 밖엔 못해내지? 싶은 이유를
+내부인들은 깊이 이해하게 될 것이다.</p>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-3">
+<h3 id="headline-8">
+우리식 ‘보편화’
+</h3>
+<div id="outline-text-headline-8" class="outline-text-3">
+<p>반대로 팀과 회사가 성장했으니, 다른 큰 곳들처럼 그렇게 정치나
+   ‘구조’가 잡혀야 한다고 말하고 착각하는 경우도 정말 흔하다.</p>
+<p>
+   내가 볼때엔 그냥 그런 분이 위에 들어오시거나 해서 그렇게 생각을
+   주입당한것일거 같다. 그리고 그렇게 받아쓰기를 해나가야 자기들
+   연줄도 좀 잘 탈거 같으니 그런 소리들을 퍼뜨리는것이다.</p>
+<p>
+   글쎄다. 규모에 관계 없이 그런 형태의 ‘보편화’는 그 팀/기업이 이제는
+   더 성장하지 못하고 하락하는 일밖엔 없다는 얘기일텐데 말이다. 그건
+   보편화가 아니고, 그저 병폐화일뿐인거 같다.</p>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-3">
+<h3 id="headline-9">
+초인(超人)🦸 or 양아치🦹
+</h3>
+<div id="outline-text-headline-9" class="outline-text-3">
+<p>흔히 Machiavellianism이나 Sociopathic Management을 찬양하는 이들은
+   어느 부분에서 비인간적이어야 하는지를 혼동하기 쉽다. 그리고 그
+   선택에 따라서 그저그런, 그리고 금새 사라지거나 성장도 불확실한
+   좀비기업으로 남는가 아닌가가 결정되는 것 같다.🧟</p>
+<p>
+   다들, 그리고 그 ‘다들’이 그렇게 오래 생존하지도 성장하지도 못하는
+   좀비들임을 떠올리고 생각해봐야 할 일이다. 그 ‘다들’은 거의 항상
+   성과를 내거나 제대로 일한 사람들에게 보상이나 승진, 혹은 일자리의
+   보장에 있어서 비인간적이기를 택했던 것 같다. 그들이 볼때엔 그렇게
+   비인간적이어야 그들의 ‘경영놀이’에 적절하다고 판단한 것 같다.</p>
+<p>
+   그리고 이런 선택은 한편으로는 매우 ‘인간적’인 면이 있다. 그건 바로
+   결정을 내리는 이의 개인적인 애착이나 사적인 친분이나 관계에 따른
+   결정이라는 점이다. 참으로 양면적인 비인간적인 면과 인간적인
+   면이라고 할 수 있다.</p>
+<p>
+   –그러한 선택은 이미 말했듯이, 그리고 이 글에서 길게 설명하듯이
+   좋은 결과를 이끌 수 없는 결정이다. 실은 그들의 자기애적인 성향을
+   충족시켜주는 면이 있으니 그렇게 선택한것이다. 그리고 다시금
+   재귀적으로 그들의 자기애적 성향에 의해서 그들의 선택이 맞았고,
+   맞아야만 한다고 맹목적일 뿐인 것이다.</p>
+<p>
+   실은 정말 비인간적인 선택은, 자기자신의 자기애적인 성향을 이겨내고
+   공동의 이익을 위해 결정하는 것. 혹은 자기자신의 애착이나 사적인
+   관계를 뛰어 넘는 결단을 내리는 것으로 팀/기업을 배신하지 않는 것일
+   것이다.</p>
+<p>
+   결국 어떤 부분, 누군가에게 인간적이고, 비인간적인가가 극명하게
+   갈릴것이다. 그리고 그 선택의 가름선이 흔하디 흔한 양아치<sup class="footnote-reference"><a id="footnote-reference-7" href="#footnote-7">7</a></sup>의
+   경영놀음인가 아니면 정말로 스스로를 뛰어 넘는 누군가가 되어 제대로
+   기업과 팀을 위한, 공동의 이익을 위한 결정을 것인가가 나뉜다.</p>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-3">
+<h3 id="headline-10">
+단어 ‘Competitive’ ⚔️와 ‘착한’ 직원🐔과 ‘싸움닭’
+</h3>
+<div id="outline-text-headline-10" class="outline-text-3">
+<p>내 경험으로는 ‘싸움닭’ 같은 팀원이 팀불화의 문제였던적은 별로 없다.</p>
+<p>
+   오히려 이상하게도 ‘착한’ 직원들만 가득한 곳이 더 문제였다. 제대로
+   염증이 포착되거나 아예 곪아 터져나와서 건강해지지 못하고 계속해서
+   더 썩어만 들어간다. 그리고 당연히 그걸 치료해야 할 사람들이 원하는
+   바는 조용히 자기자리를 위해 잡음이 없는 것이므로 문제가 없는 것으로
+   치부된다.</p>
+<p>
+   그 착하다는 직원🐔들은 논쟁이나 분쟁이 생기는 것을 극도로 피한다.
+   단순히 데일카네기 인간관계론에 충실해서가 아니라(실은 그런거
+   알지도, 거기에 부합하지도 않는 사람들이 대부분이다), 그저
+   자기평판이나 잡음을 내서 손해를 보지 않으려고, 그러면서도
+   신기하게도 ‘날으는 원숭이짓’🙈🙉🙊은 보통 꺼리질 않는다. 그건 그런
+   의도가 아니었다느니 네가 예민한거라느니 하면 남에게 뒤집어 씌우기
+   쉬우니까 말이다.</p>
+<p>
+   싸움보다는, 적당히 깎아내리기 혹은 반대로 자기들은 자화자찬하기를
+   한다. 실제로는 성과도둑질이거나 없는 성과 만들어 포장하기 정도지만.
+   그리고 계속해서 제대로 된 팀원은 괴롭혀 나간다.</p>
+<p>
+   싸움이라기 보다는 그들 나름엔 생존을 위한 치졸한 경쟁을 하는
+   것이다. 그리고 그런 경쟁적인, 건강하지 못한 팀의 분위기를
+   Competitive하다고 말하고 싶다.<sup class="footnote-reference"><a id="footnote-reference-8" href="#footnote-8">8</a></sup> 이런 Competitive한 분위기는
+   ‘경쟁’하면 있어야 할 선의의 경쟁이나, 양자에게 더 좋은 결과를
+   도출하기 위한 것과는 거리가 멀다. –실은 공격하는 사람에게 유익할
+   수 있는, 그것도 아주 극단적으로 단기적인 이득을 위한 것이고, 더
+   나쁘게는 아주 잠깐의 쾌감을 느끼기 위해서 시도하는 경우도 많던거
+   같다.</p>
+<p>
+   당연히 이런 팀은 어느샌가 서로 공격을 주고 받는 방식으로만 존재하게
+   된다. 당연히 공동의 선이나 생산성은 커녕 없는 성과만 만들거나,
+   실패를 성과로 포장하기만 잘하게 된다.</p>
+<p>
+   원인은 여전히, 그 스스로 무능함을 의식적/무의식적으로 아는 ‘불안한
+   상사’와 그와 비슷한 ‘착한’ 직원들이다. 무능하기 때문에, 그리고 그걸
+   들키거나 명확히 하면 자기 자리를 위협 받을 것을 의식적/무의식적으로
+   알기 때문이다.</p>
+<p>
+   오히려 ‘싸움닭’인 것 같다면, 그냥 그런 문제로 썩은 부분을 만들기
+   보다는 그 썩은 부분을 시원하게 털어내고 생산적인 일을 해내는 경향이
+   있다. 단지 그래서 저런 날개 달린 원숭이들에게 싸움닭으로
+   딱지붙이기를 당하는것뿐이다.</p>
+<p>
+   특별한 범죄이력이 없다면, …오히려 저런 ‘착한 직원’이나 인성논쟁을
+   시작하는 이를 훨씬 더 경계해야 하는 이유들이다. 말했듯이 어쨌든
+   떨어뜨려야 할 이유를 어떻게든 찾아야 하는 사람이라면… 그거야 말로
+   이 글에서 말하는 위험의 시작을 만드는 이일테니까.</p>
+<p>
+   그리고 조금 더 고민해봐도 의심을 갖고 추궁할 의미도 목적성도 없다.
+   어차피 의심을 품고 있는걸 얼마나 상대가 충족해줄 수 있겠는가.
+   그리고 반대로도 이미 거짓말을 하거나 사기를 치려면 더 그럴싸한
+   이력서를 디밀었겠지 않을까?ㅎㅎ</p>
+</div>
+</div>
+<div id="outline-container-headline-11" class="outline-3">
+<h3 id="headline-11">
+역할놀이에 모든걸 걸지 말자, 유니콘🦄 vs. 키메라🧌
+</h3>
+<div id="outline-text-headline-11" class="outline-text-3">
+<p>구직자로든, 반대로 구인자로든 항상 중요하다고 생각하는건 역할놀이에
+   얼마나 빠지는걸 조심하는가,인 것 같다. 살아가며 다양한 역할을 맡게
+   되는데, 그 역할에 충실해야 하겠지만, 반대로 그 역할이 나를
+   잡아먹어서 이상한 웃기는 자기애에 빠진 인간이 되는건 아닌지
+   조심해야 한다고 생각한다.</p>
+<p>
+   흔한 일이겠지만 언젠가 다음과 같은 대화를 겪었었다:</p>
+<ul>
+<li>나: “보상이 기여에 비해 적절치 못해서(사실 아예 없어서) 문제였습니다.”</li>
+<li>인사팀장: (대뜸 자기 이야기가 아닌 다른 기업과의 일을 말하고 있었음에도)
+“도대체 어떤 보상이 적었다는거에욧! 저는 인사팀장으로서의 직무에
+최선을 다하며 가능한 최대한 보상을 드리려고 합니닷! 너무 바라는게
+과하신거 같습니닷!”</li>
+<li>나: “아 그렇군요. (짝짝짝)”</li>
+<li>대표: “…그런것(기여)이 얼마나 정량적인지를 묻고 싶습니다. 그건
+그저 정성적인 것을 말하는것뿐이겠군요…ㅎㅎㅎ”</li>
+</ul>
+<p>
+   …의도는 나를 이상한 사람으로 만들고 싶어서 안달이 났던거 같다.</p>
+<p>
+   그러다가 어쩌다가 마무리에 내가 물었다.</p>
+<ul>
+<li>나: “…10여년간 운영해오시면서 어떠셨는지 궁금합니다.
+급여내역이나 입사/퇴사수치는 공개된 자료를 보고 왔습니다.”</li>
+<li>대표: “…(뭐라고 말하다가) 답변이 됐는지요?”</li>
+</ul>
+<p>
+   …이렇게 말하고 바로 대화장소의 문을 대표가 스스로 열어주며
+   인터뷰를 마치더라. 흥미로웠다. 물론 그 이후에 그 인터넷 사이트의 그
+   정보는 비공개로 바뀌었더라.</p>
+<p>
+   실은 그 회사는 그 세월 동안 계속해서 인력이 계속해서 교체되기만
+   해오던 곳이었다. 글쎄다, 얼마나 기여가 가능했는지 모르겠다. 그리고
+   아마도 기여가 어려웠기 때문에 보상이 어려우셨을테고, 그래서
+   사람들이 계속해서 이탈하던 곳이지 않았을까,하고 선의로만 생각할 수
+   밖엔 없다.</p>
+<p>
+   그리고 내가 주목하고 싶은 부분은, 저 사람들은 얼마나 자기들은 그
+   자리의 역할에 따라서 상대를 무안을 줘도 된다고, 무례해도 된다고
+   오해했는지 싶었다.<sup class="footnote-reference"><a id="footnote-reference-9" href="#footnote-9">9</a></sup> 역으로, 좋아하시는 정량적인 객관적 수치만
+   말씀드려도 그 무안을 참아내지 못하는거 같은데 상대는 받아들여야만
+   한다고 믿는게 재밌다.</p>
+<p>
+   여기에서 말한 경험은 내가 겪은 역할놀이에 너무 빠져서, 혹은
+   원래부터 그 사람이 자기애적인 성격문제를 갖고 있어서 일으키는
+   재밌었던 경험의 아주 점잖은 예인 것 같다. 대부분은 훨씬 더 불쾌하고
+   저러는 스스로가 얼마나 비참해 보이는가 짐작이나 할까 싶은 불쌍한
+   사람들과의 경험들이 더 많았었다.</p>
+<p>
+   그런 이들이 어째서 그렇게 말하고 행동하는지 그 이유를 알게 되면,
+   결국 스스로의 불안이나 무능함 같은 것들을 그저 남에게 투사하고
+   있음을 투명하게 보게 되면, 그런 이들이 정말로 불쌍하다는걸 알 수
+   있다. 그리고 더 나아가서 도와줄 방법도 나로서는 알 수 없고,
+   더군다나 나뿐만이 아니라 이해관계를 떠나서는 누구도 그들과는
+   건강하게 지속적으로 함께하기도 어려운 문제를 가진 이들이기 때문에
+   가장 불행한 이들이란걸 직시하게 되기 때문이다.</p>
+<p>
+   맑스베버나 성리학의 영향으로 부와 사회적 성공은 선하고 바른 이를
+   위한 신과 우주섭리의 축복이자 증거이라고 믿는 경향이 강한거 같다.
+   그리고 그런 사고방식 모두가 개개인에게 ‘사회적 역할’에 충실할 것을
+   말하는 공통점이 있는거 같은데, 재밌게도 그 사회적 역할의 충실성을
+   자기 편한대로 생각하는거 아닌가 싶다. 정작 사회적으로 책임을
+   다하기는 자기희생이 엄청나야 할것을 염두에 두고 말한 것들일텐데
+   말이다. 그런 힘들고 괴로운 것을 제쳐두고 그저 자기 역할자리는
+   우주적 섭리의 증거이니 역학적으로 우위에 있으면 함부러 경거망동해도
+   된다는 의미이거나, 그걸 이용해 가스라이팅을 시도해서 착취적인
+   관계를 형성하려 해도 된다는게 아닐텐데 말이다.</p>
+<p>
+   그들이 염원하는 것은, 어쩌면 유니콘🦄일 것이다. 하지만 재밌게도
+   그들이 얻는 것은 아마도 기괴하고 제 맡은 역할을 수행하기도 어려울
+   망가진 키메라🧌일 것이다. 왜냐하면 유니콘은 저런 혼탁한 기대에
+   부응하기엔 너무나 순결함(Purity)을 바랄것이고 또한 그걸
+   감내하기를 거절하기에 충분히 강직한 심성을 가졌을테니까. 반대로
+   적당한 이것저것 꿰어맞춘 적당한 설명이나 말들과 모양을 만들어서 그
+   모든 그들의 괴상한 기대를 충족시키는건 말그대로 기괴한 괴물 키메라
+   뿐일테니까 말이다.</p>
+<p>
+   인터뷰 자리가 어떠해야 한다, 우리는 어떤 사람을 구해야 하고, 하는
+   식의 생각은 좋지만, 그 생각자체가 어떤 근거를 갖고, 실효를 얻는지를
+   깊이 숙고해보는게 좋을것이다. 그게 아니라 그저 막연한 이미지에 따라
+   그렇게 하는 것이라면…</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-12" class="outline-2">
+<h2 id="headline-12">
+어제와는 또 다르지만, 닮은 꼴인 오늘의 신기루
+</h2>
+<div id="outline-text-headline-12" class="outline-text-2">
+<p>기술적으로는, 내 생각엔 AGI<sup class="footnote-reference"><a id="footnote-reference-10" href="#footnote-10">10</a></sup> 이전에 현재의 생성형AI은, 오답도 줄
+수 있고, Reasoning이나 그런 부분에 더 강화될 부분도 많다고 생각이
+든다. 하지만 그럼에도 이미 엄청나게 성장했고 고도화 된 것 같다. 그리고
+거부하거나 무시할 수 없을 것 같다. 패러다임 자체를 변화시킬 것이
+아니라, 이미 변화시켰다고 생각한다.</p>
+<p>
+흔히 말하는 패러다임변화에서 초기의 전환에는 새로운 패러다임이 사실
+맞는것도, 실제로는 더 엉성하거나 할것 같다. 하지만 그럼에도 생존해
+그런 부분들을 보완해냈으니 패러다임전환의 초기단계는 이미 지났다고
+생각한다.</p>
+<p>
+하지만, 결국엔 원하는 곳으로 가기 위한 방향을 결정하거나 그걸
+분석-이해하고 제대로 다듬어 나가기 위해선 안목과 배경이해가 필요하다.
+그러나 예전에는 그냥 ‘개발자’가 다 알아서 해주길 바랬었고, 이제는
+‘AI’이 알아서 다 해주길 바라는건 똑같다. 글쎄다. 생각하는 기계가 아닌,
+사실은 거대한 사전이 그걸 제대로 해주긴 당장은 어려울 것 같다.</p>
+<p>
+그리고 그걸 사용하는 사람들이 어떻게 함께 하고 있는가에도 AI은 영향을
+크게 미친다. 하지만 역시나, 그리고 여전히 핵심적인 문제는 위에
+말했듯이 크게 변화하지 못했다. 오히려 저런 사람들의 좋은 구실이 될
+도구가 될 가능성도 커졌다.</p>
+<p>
+물론, 장사질을 잘 하려면 예나 지금이나 그런 고객들을 잘 구워 삶아야
+하겠지만 싶기도 하다. 하지만 그런 고객들이 절대다수는 좋은 고객도
+제대로 된 고객도 아니기도 쉽거니와, 오래도록 모실 수 있도록 오래
+버티시는 고객도 아니시더라는게 일쑤라는게 내 미천한 경험이다. …그
+이유는 이미 이 글에서 너무나 명확하게 이야기 한 것 같다. 🖋️</p>
+<p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/GpBFOJ3R0M4?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+</p>
+</div>
+</div>
+<div id="outline-container-headline-13" class="outline-2">
+<h2 id="headline-13">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>카톡은 그게 제대로 굴러가기 위해서 수 많은 서버와 시행착오의
+시간, 많은 사람들의 고민이 녹아들어서 그렇게 되는 것일 것이다. 물론
+최근의 카톡의 유명했던 ‘CXO이슈’라던가, AI이 그런 시행착오와 노력을
+녹여들인 것이라는 생각은 좀 접어두고 말하고 싶다. (이 글에서 말하는
+것도 그런 방향이니까)</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p><a href="https://namu.wiki/w/%EC%8B%9C%EB%AA%AC%20%EB%B2%A0%EC%9C%A0">https://namu.wiki/w/%EC%8B%9C%EB%AA%AC%20%EB%B2%A0%EC%9C%A0</a>
+복붙햇습니다. 🙇</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-3"><a href="#footnote-reference-3">3</a></sup>
+<div class="footnote-body">
+<p><a href="https://en.wikipedia.org/wiki/Snake_oil">https://en.wikipedia.org/wiki/Snake_oil</a></p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-4"><a href="#footnote-reference-4">4</a></sup>
+<div class="footnote-body">
+<p><a href="https://en.wikipedia.org/wiki/Winged_monkeys#In_psychology">https://en.wikipedia.org/wiki/Winged_monkeys#In_psychology</a> </p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-5"><a href="#footnote-reference-5">5</a></sup>
+<div class="footnote-body">
+<p>혹은 이 글을 쓰면서 상상한건데, 일부러 이러는 의도도 있지
+않을까 싶다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-6"><a href="#footnote-reference-6">6</a></sup>
+<div class="footnote-body">
+<p>물론 세상엔 정말 선하지만 무능한 사람도 있고, 유능하면서 악한
+이들도 있으리라 생각한다. 하지만, 이 글에서 말하려고 하는 내용은,
+단순히 그런 내용이 아님을 알아주길 바란다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-7"><a href="#footnote-reference-7">7</a></sup>
+<div class="footnote-body">
+<p>양아치인 이유 중 하나는, 기만적일수록 스스로를 자랑스러워 하고
+뿌듯해 한다는 점에서 동일하다. 팀원이건 다른 기업이건 기만을 잘 할수록
+그게 맞다고 여기는건 양아치겠지… 그리고 이런 뻔한 기만은 처음엔
+번지르르 하지만, 명쾌한 회사간 계약관계에서도 계속해서 삐그덕거리는
+관계를 만들 수 밖에 없는 경영자도 많을테니까.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-8"><a href="#footnote-reference-8">8</a></sup>
+<div class="footnote-body">
+<p>예전에 영어를 잘 하는 누군가에게 이런 뉘앙스구나 하고 줏어들은
+단어다. 고맙다 Mark.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-9"><a href="#footnote-reference-9">9</a></sup>
+<div class="footnote-body">
+<p>전혀 그럴 분들은 아닐 것이다. 내가 예민한 탓이리라. ㅎㅎ</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-10"><a href="#footnote-reference-10">10</a></sup>
+<div class="footnote-body">
+<p><a href="https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5_%EC%9D%BC%EB%B0%98_%EC%A7%80%EB%8A%A5">https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5_%EC%9D%BC%EB%B0%98_%EC%A7%80%EB%8A%A5</a> </p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">📻<a href="/series/midnight-radio/">midnight-radio</a>
+                        <sup>16</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">🧸<a href="/series/script-kiddie-life/">script-kiddie-life</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>112</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>53</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/software/">software</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gpt/">gpt</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/llm/">llm</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ai/">ai</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/it/">it</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/saas/">saas</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programmer/">programmer</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/code/">code</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/architecture/">architecture</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/only-happy-when-it-rains/">only-happy-when-it-rains</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/garbage/">garbage</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/interviewing/">interviewing</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/people/">people</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hiring/">hiring</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/techical-debt/">techical-debt</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hallucination/">hallucination</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/coding/">coding</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🚢";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn disabled" role="button" aria-disabled="true" href=""></a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-02feb/selecting-title-emoji/">➡️ 원하는 emoji으로 선택되는 제목을 고르기 [0.798129]</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771480573</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Haskell on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/haskell/</link>
+    <description>Recent content in Haskell on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 26 Feb 2017 13:50:00 +0100</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>예전 모나드를 이용한 비동기코드의 정리에 대한 아이디어를 다시 생각해보기</title>
+      <link>https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/</link>
+      <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
+      <guid>https://ageldama.github.io/posts/2017/2017-02-26-aync-rxjava-and-monad/</guid>
+      <description>&lt;p&gt;예전 내가 썼던 블로그가 갑자기 떠올랐다. &lt;a href=&#34;http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html&#34;&gt;http://ageldama.blogspot.de/2012/03/nodejs-haskell-io-monad.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;내용은,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;콜백헬 싫다.&lt;/li&gt;&#xA;&lt;li&gt;그런데, 하스켈의 IO Monad처럼 imperative code을 작성할 수 있으면,&#xA;3. 이것들끼리의 제어권을 주고 받는걸 event loop측에서 제어하면서도,&#xA;4. 각각의 statements끼리 그냥 주욱 흐름대로 작성한것과 다르지 않게 짜기 쉽다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;굳이 이 얘기 왜 하냐하면, 사실 요즘에 RxJava2 보고, Python3에서&#xA;asyncio 같은거 보면서 이런거, 그러니까 결국엔 모나드스러운 체이닝을&#xA;구현하고, 그걸로 콜백들을 풀어서 잘 해결하고 있는거 같은 인상이&#xA;들어서.&lt;/p&gt;&#xA;&lt;p&gt;결론? 내 아이디어 부심. 그리고 조금 더 잘 생각하고 실제로 어떻게&#xA;구현할지 고민해봤다면 좋았을거라는, 나 자신의 능력 한탄하기.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
