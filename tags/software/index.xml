@@ -7,22 +7,8 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 18 Feb 2026 06:43:46 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jun 2022 04:37:12 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/software/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>생성형AI, 진짜로 문제인 AI Hallucination은</title>
-      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</link>
-      <pubDate>Wed, 18 Feb 2026 06:43:46 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</guid>
-      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;요즘 나와 우리는&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;요즘엔 SW/IT업계에 일자리가 많이 없어지는 것, 구독형, SaaS 기업의&#xA;주가가 떨어지고 투자가 사라지는 것에 대한 우려가 많다. 그리고 나도&#xA;영향을 받는 사람으로서 걱정이 없진 못하다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;“구독형 소프트웨어 서비스”와 데이터=석유🛢️?&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;그런데 사실 절대다수의 구독형서비스(…실은 그냥 모바일앱이나 데스크탑&#xA;앱이 좀 있는 웹서비스)/SaaS이 그렇게 존재할 사업이었던게 모순이&#xA;맞았던거 같다. 오히려 자동화 된 데이터모델과 그의 CRUD + 약간의 로직이&#xA;들어간 것을 각자가 해결해도 될 일이었던게 맞다. 도메인에 특화되어&#xA;있다고 하는 기업이든 특정 기술을 쓴다고 하는 기업이든… 그 도메인의&#xA;전문가라고 해야 할까 싶기도 하거니와, 말그대로 특정 기술을 “갖다 쓰는&#xA;것” 사용자인 곳일 뿐이기도 하고. …결국 적당한 뻥튀기를 다들 하니까&#xA;그게 이상한지 모르고 다같이 하며 장사를, 혹은 투자금을 쓰는 일을&#xA;했던거지 싶다.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>2026년, 다시 생각해보는 “해커와 화가”</title>
-      <link>https://ageldama.github.io/posts/2026-02feb/hackers-and-painters-in-2026/</link>
-      <pubDate>Tue, 10 Feb 2026 09:29:06 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2026-02feb/hackers-and-painters-in-2026/</guid>
-      <description>&lt;p&gt;&#xA;스타트업, IT기업들의 구인란과 Gig-job 사이트들을 보면, 예전이나&#xA;지금이나 다들 뭔가 ‘키워드 끼워맞추기’놀이를 열중하고 있다는 생각이&#xA;든다. 실은 별로 그렇게 중요할 것도 없고, 그렇게 찾아서 오히려&#xA;양자모두에게 도움이 되지 않는 방식일 뿐인거 같은데 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그때나 지금이나 ‘리액트, 자바, 스프링, TypeScript, LLM, GPT’… 그냥&#xA;시대에 따라 사용자들이 많이 올려간 프레임웍이나 언어, 라이브러리를&#xA;그것도 뻔하디 뻔한 반복으로 나타난다. 그나마 조금 특이하다 싶은 것들은&#xA;그것들도 실은 그냥 리거시가 그걸로 되어 있으니 그렇게 써서&#xA;올리는것일뿐이다.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>&#34;Some Engineering Tough Sells&#34;</title>
       <link>https://ageldama.github.io/posts/2022-06jun/06jun12sun--01-some-engr-tough-sells/</link>

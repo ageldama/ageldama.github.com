@@ -7,36 +7,8 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Thu, 19 Feb 2026 07:41:28 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Jan 2026 09:34:44 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/ping/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>요즘 게임은 PC주의에 빠졌을까?</title>
-      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb19--01-ping/</link>
-      <pubDate>Thu, 19 Feb 2026 07:41:28 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb19--01-ping/</guid>
-      <description>&lt;p&gt;&#xA;글쎄다. 이런 주장들을 열올리며 하는 사람들이 하는 얘기들은:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;PC주의에 편승해서 재미도 없는 게임을 만들고 팔려고 든다.&lt;/li&gt;&#xA;&lt;li&gt;PC주의 경찰🚓이 끼어들면 노잼 게임이 된다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;…글쎄다. 내 생각엔:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;어차피 돈독만 오른 게임 스튜디오가 뭘 갖다 붙여서 브랜딩하든 똑같지&#xA;않나.&lt;/li&gt;&#xA;&lt;li&gt;어차피 그런 정도의 게임이면, PC주의 경찰🚔 아니었어도, 어차피&#xA;원래도 재미 없을 게임이다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;브랜딩이나 얄팍한 판매기법 같은건 나열하자면 끝도 없는거 같다.&#xA;상상하기 어려운 액수의 자본이 투입되는 대형스튜디오의 게임이나&#xA;블록버스터들만 봐도, 조금 잠잠히 보고 있으면 어느 시대에는 유난히&#xA;비슷비슷한 게임이나 영화들이 나올 때가 있었었다. 예를 들면,&#xA;소행성충돌에 대한 영화들이 거의 같은 시기에 나오거나 지진이나&#xA;화산폭발을 주제로한 재난영화들이 엇비슷한 시기에 나오거나. 그리고&#xA;클리쉐냐 특정 캐릭터를 계속 다른 작품에서 재탕해 먹으려고 드는건 너무&#xA;많다.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>생성형AI, 진짜로 문제인 AI Hallucination은</title>
-      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</link>
-      <pubDate>Wed, 18 Feb 2026 06:43:46 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</guid>
-      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;요즘 나와 우리는&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;요즘엔 SW/IT업계에 일자리가 많이 없어지는 것, 구독형, SaaS 기업의&#xA;주가가 떨어지고 투자가 사라지는 것에 대한 우려가 많다. 그리고 나도&#xA;영향을 받는 사람으로서 걱정이 없진 못하다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;“구독형 소프트웨어 서비스”와 데이터=석유🛢️?&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;그런데 사실 절대다수의 구독형서비스(…실은 그냥 모바일앱이나 데스크탑&#xA;앱이 좀 있는 웹서비스)/SaaS이 그렇게 존재할 사업이었던게 모순이&#xA;맞았던거 같다. 오히려 자동화 된 데이터모델과 그의 CRUD + 약간의 로직이&#xA;들어간 것을 각자가 해결해도 될 일이었던게 맞다. 도메인에 특화되어&#xA;있다고 하는 기업이든 특정 기술을 쓴다고 하는 기업이든… 그 도메인의&#xA;전문가라고 해야 할까 싶기도 하거니와, 말그대로 특정 기술을 “갖다 쓰는&#xA;것” 사용자인 곳일 뿐이기도 하고. …결국 적당한 뻥튀기를 다들 하니까&#xA;그게 이상한지 모르고 다같이 하며 장사를, 혹은 투자금을 쓰는 일을&#xA;했던거지 싶다.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>2026년, 다시 생각해보는 “해커와 화가”</title>
-      <link>https://ageldama.github.io/posts/2026-02feb/hackers-and-painters-in-2026/</link>
-      <pubDate>Tue, 10 Feb 2026 09:29:06 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2026-02feb/hackers-and-painters-in-2026/</guid>
-      <description>&lt;p&gt;&#xA;스타트업, IT기업들의 구인란과 Gig-job 사이트들을 보면, 예전이나&#xA;지금이나 다들 뭔가 ‘키워드 끼워맞추기’놀이를 열중하고 있다는 생각이&#xA;든다. 실은 별로 그렇게 중요할 것도 없고, 그렇게 찾아서 오히려&#xA;양자모두에게 도움이 되지 않는 방식일 뿐인거 같은데 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그때나 지금이나 ‘리액트, 자바, 스프링, TypeScript, LLM, GPT’… 그냥&#xA;시대에 따라 사용자들이 많이 올려간 프레임웍이나 언어, 라이브러리를&#xA;그것도 뻔하디 뻔한 반복으로 나타난다. 그나마 조금 특이하다 싶은 것들은&#xA;그것들도 실은 그냥 리거시가 그걸로 되어 있으니 그렇게 써서&#xA;올리는것일뿐이다.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ping 07/02/2026 .01 👁️</title>
-      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/</link>
-      <pubDate>Sat, 07 Feb 2026 06:47:23 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/</guid>
-      <description>&lt;p&gt;&#xA;어느샌가 뉴스의 대부분의 큰 화제가 컴퓨터와 인터넷 없이는 할 이야기가&#xA;적어질 정도였던거 같다. 이렇게 모든 일들이 연결될 일일까 싶을 정도로.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;불과 20여년전만 해도 그저 신기한, 현실과는 동떨어진 이야기로, 그저 먼&#xA;미래의 이야기로 이야기되던 발전이, 어느새 지금 당장의 일들이 되어&#xA;버렸고 그게 일어나고, 잠시뒤의 과거로 뉴스가 되어 버린다. (물론&#xA;20여년은 엄청 긴 시간이다. ㅎㅎ)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;해킹이나 보안과 관련된 이슈, 그리고 그에 따른 정부와 거대기업간의&#xA;논의가 일어났고, 또 진행중이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;단순히 숫자, 데이터, 혹은 바이트 덩어리일 뿐인 것이 잘못 기입되어&#xA;순식간에 부자가 되었다가 또 환불은 어떻게 됐는지, 그리고 실은 조작이&#xA;아닌지 하는 흥미로운 가쉽들도 많이 떠돈다.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Ping 31/01/2026 .01</title>
       <link>https://ageldama.github.io/posts/2026-01jan/2026-01jan31--01-ping/</link>
@@ -134,13 +106,6 @@
       <pubDate>Fri, 26 Dec 2025 07:36:17 +0000</pubDate>
       <guid>https://ageldama.github.io/posts/2025-12dec/haruki-manga-stories--super-frog/</guid>
       <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://www.goodreads.com/book/show/124825303-haruki-murakami-manga-stories-1&#34;&gt;goodreads 리뷰&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2025-12dec/haruki-manga-1-book-cover.jpg&#34;&#xA;    alt=&#34;책표지&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;책표지&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;재밌게 읽었다. 이미 출판된 하루키의 단편들을 다시 그래픽노블 형식으로&#xA;출판한 책. 아마 2권도 마저 읽고, 3권도 구해서 읽을거 같다. 그리고&#xA;여기서 소개 받은 단편들을 다시 찾아서 읽게 될 것 같다.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ping 19/12/2025 .01.</title>
-      <link>https://ageldama.github.io/posts/2025-12dec/2025-12dec19--01-ping/</link>
-      <pubDate>Fri, 19 Dec 2025 21:49:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2025-12dec/2025-12dec19--01-ping/</guid>
-      <description>&lt;p&gt;&#xA;2025년도 거의 다 지나가고 있다. 을씨년스럽다는 을사년(乙巳年).&lt;/p&gt;&#xA;&lt;p&gt;&#xA;올해도, 그리고 한층 더 가소롭게 화려해보였지만, 쓸쓸한 그 알맹이의&#xA;거리였다. 참 이상하지. K문화니 뭐니 하지만 그안에서 살아가는 사람들은.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;언제나 그래왔지만, 유난히 다들 더 커보이려, 또는 자신이 아닌 위대해&#xA;보이는 무언갈 끌어다가 그 껍질이라도 뒤집어 쓰려고 드는, 불안과&#xA;두려움에 그러는 것을 더 숨기지 못하게 만드는 모습들.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;두렵게도, 천천히, 혹은 예상보다 훨씬 더 빠르게 말해진 미래가 훌쩍&#xA;뉴스가 되어 있었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/NGb-yaRDpeE?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>블로그 디자인 수정 &#43; 제목 자동 emoji 붙여주기</title>
