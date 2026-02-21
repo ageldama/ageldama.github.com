@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Thu, 22 Jan 2026 12:30:21 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Feb 2026 11:50:52 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/series/script-kiddie-life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI시대의 소프트웨어 이슈 패턴</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb21--01-ping/</link>
+      <pubDate>Sat, 21 Feb 2026 11:50:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb21--01-ping/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;AI시대 이전의 패턴&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;실제 원하는걸 제대로 표현하거나, 그걸 구현해내기까지의 대화나&#xA;고민이 부족.&lt;/li&gt;&#xA;&lt;li&gt;iteration-cycle을 제대로 해내지 못함.&lt;/li&gt;&#xA;&lt;li&gt;단계별로 궤도를 원하는 방향으로 고치거나,&lt;/li&gt;&#xA;&lt;li&gt;아예 궤도를 잘못 설정함.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;요즘의 패턴&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;AI으로 생성해 낸 작업물은 많은데,&lt;/li&gt;&#xA;&lt;li&gt;막상 아키텍처적으로 보안적일 수 없는 구조를 만들어냄.&lt;/li&gt;&#xA;&lt;li&gt;그리고 다른 기능을 추가하거나 수정하기엔 직접 생성한 사람이&#xA;해내기 어려운 경우가 많이 생김.&lt;/li&gt;&#xA;&lt;li&gt;AI의 문제라기 보다는, 뭘 만들어 달라고 요청하는 사람의 문제.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-3&#34;&gt;&#xA;결국 신기할 정도로 비슷한 상황&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;결국, 요청하는 사람이 자기가 뭘 원하는지, 뭘 어떻게 만들어 달라고&#xA;  해야 하는데, 소프트웨어나 아키텍처, 보안에 대해서 접근/이해하기&#xA;  어려우니 여전히 문제는 그대로 남아서 그걸 손봐주는 소프트웨어&#xA;  전문가는 여전히 필요해짐.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Ping 22/01/2026 .01</title>
       <link>https://ageldama.github.io/posts/2026-01jan/2026-01jan22--01-ping/</link>

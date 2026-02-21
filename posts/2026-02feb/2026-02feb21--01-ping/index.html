@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>AI시대의 소프트웨어 이슈 패턴 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1771675144">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+
+AI시대 이전의 패턴
+
+
+
+실제 원하는걸 제대로 표현하거나, 그걸 구현해내기까지의 대화나
+고민이 부족.
+iteration-cycle을 제대로 해내지 못함.
+단계별로 궤도를 원하는 방향으로 고치거나,
+아예 궤도를 잘못 설정함.
+
+
+
+
+
+요즘의 패턴
+
+
+
+AI으로 생성해 낸 작업물은 많은데,
+막상 아키텍처적으로 보안적일 수 없는 구조를 만들어냄.
+그리고 다른 기능을 추가하거나 수정하기엔 직접 생성한 사람이
+해내기 어려운 경우가 많이 생김.
+AI의 문제라기 보다는, 뭘 만들어 달라고 요청하는 사람의 문제.
+
+
+
+
+
+결국 신기할 정도로 비슷한 상황
+
+
+결국, 요청하는 사람이 자기가 뭘 원하는지, 뭘 어떻게 만들어 달라고
+  해야 하는데, 소프트웨어나 아키텍처, 보안에 대해서 접근/이해하기
+  어려우니 여전히 문제는 그대로 남아서 그걸 손봐주는 소프트웨어
+  전문가는 여전히 필요해짐." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.cf6e224503e8604b8cfea063150685f5d1e1e66e9d4705693ef0163e1c529e7d.css"
+          integrity="sha256-z24iRQPoYEuM/qBjFQaF9dHh5m6dRwVpPvAWPhxSnn0=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn disabled" role="button" aria-disabled="true" href=""></a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-02feb/selecting-title-emoji/">➡️ 원하는 emoji으로 선택되는 제목을 고르기 [0.798129]</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">AI시대 이전의 패턴</a>
+</li>
+<li><a href="#headline-2">요즘의 패턴</a>
+</li>
+<li><a href="#headline-3">결국 신기할 정도로 비슷한 상황</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🧲 AI시대의 소프트웨어 이슈 패턴</h1>
+	    <div class="meta">
+                <time datetime="2026-02-21" pubdate>
+                    2026년02월21일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+AI시대 이전의 패턴
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li>실제 원하는걸 제대로 표현하거나, 그걸 구현해내기까지의 대화나
+고민이 부족.</li>
+<li>iteration-cycle을 제대로 해내지 못함.</li>
+<li>단계별로 궤도를 원하는 방향으로 고치거나,</li>
+<li>아예 궤도를 잘못 설정함.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+요즘의 패턴
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<ol>
+<li>AI으로 생성해 낸 작업물은 많은데,</li>
+<li>막상 아키텍처적으로 보안적일 수 없는 구조를 만들어냄.</li>
+<li>그리고 다른 기능을 추가하거나 수정하기엔 직접 생성한 사람이
+해내기 어려운 경우가 많이 생김.</li>
+<li>AI의 문제라기 보다는, 뭘 만들어 달라고 요청하는 사람의 문제.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+결국 신기할 정도로 비슷한 상황
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>결국, 요청하는 사람이 자기가 뭘 원하는지, 뭘 어떻게 만들어 달라고
+  해야 하는데, 소프트웨어나 아키텍처, 보안에 대해서 접근/이해하기
+  어려우니 여전히 문제는 그대로 남아서 그걸 손봐주는 소프트웨어
+  전문가는 여전히 필요해짐.</p>
+<p>
+  과거에는 단순히 어떤 기술키워드에, 그것도 시장에서 많은 수요가 있는
+  키워드의 개발만 파던 사람들이 만들어내던걸 이젠 기계도 수월하게
+  만들어내는데, 여전히 그걸 아키텍처적으로나 보안적으로 보완할 안목을
+  가진 사람은 동일하게 필요함.</p>
+<p>
+  견적제안을 받거나 하면 거의 다수가 이렇게 변화해서 흥미로움.</p>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">🧸<a href="/series/script-kiddie-life/">script-kiddie-life</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>109</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>53</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/security/">security</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/software/">software</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/llm/">llm</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/vulnerability/">vulnerability</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/architecture/">architecture</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ai/">ai</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/issue/">issue</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/coding/">coding</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/claude/">claude</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🧲";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn disabled" role="button" aria-disabled="true" href=""></a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-02feb/selecting-title-emoji/">➡️ 원하는 emoji으로 선택되는 제목을 고르기 [0.798129]</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1771675144</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>
