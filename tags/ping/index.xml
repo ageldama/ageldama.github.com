@@ -17,6 +17,27 @@
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;AI시대 이전의 패턴&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;실제 원하는걸 표현해내기 어려워서 생기는 문제, 그걸 도출하기&#xA;어려웠던 문제.&lt;/li&gt;&#xA;&lt;li&gt;iteration-cycle을 제대로 해내지 못함.&lt;/li&gt;&#xA;&lt;li&gt;단계별로 궤도를 원하는 방향으로 고치거나,&lt;/li&gt;&#xA;&lt;li&gt;아예 궤도를 잘못 설정함.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;요즘의 패턴&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;AI으로 생성해 낸 작업물은 많은데,&lt;/li&gt;&#xA;&lt;li&gt;막상 아키텍처적으로 보안적일 수 없는 구조를 만들어냄.&lt;/li&gt;&#xA;&lt;li&gt;그리고 다른 기능을 추가하거나 수정하기엔 직접 생성한 사람이&#xA;해내기 어려운 경우가 많이 생김.&lt;/li&gt;&#xA;&lt;li&gt;AI의 문제라기 보다는, 뭘 만들어 달라고 요청하는 사람의 문제.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-3&#34;&gt;&#xA;결국 신기할 정도로 비슷한 상황&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;결국, 요청하는 사람이 자기가 뭘 원하는지, 뭘 어떻게 만들어 달라고&#xA;  해야 하는데, 소프트웨어나 아키텍처, 보안에 대해서 접근/이해하기&#xA;  어려우니 여전히 문제는 그대로 남아서 그걸 손봐주는 소프트웨어&#xA;  전문가는 여전히 필요해짐.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>팀의 ‘에이스’가 떠나는 팀의 전조, 그리고 그 과정과 이후</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb20--01-ping/</link>
+      <pubDate>Fri, 20 Feb 2026 20:04:26 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb20--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;어떤 팀/조직이든, 특히 초창기의 팀에는 흔히 ‘에이스’가 존재하는 경우가&#xA;있다. 그런 존재는 초창기에 존재하기 쉬운 이유들이 있다고 생각한다.&#xA;그리고 흔히 세간에서 말해지는 이유들과 내 분석과 이해를 정리하여&#xA;어째서 그런 사람들이 팀을 떠나게 되고, 그런 팀들은 어떻게 그런 상황을&#xA;만들고, 또 그 다음엔 어떻게 더 나빠지는지를 정리해보려 글을 쓴다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 “유능함” vs. “인성”의 반비례 관계라는 속설의 형성과 강화, 그리고&#xA;‘재활용’에 대한 가설도 조금 늘어놓아볼 생각이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;일견 단순해 보이는 유능한 인재의 유입과 이탈의 이유와 과정, 그리고 그&#xA;사후에 발전양상을 정리해 보는 것만으로 의외로 정말 많은 팀/기업의&#xA;현재상태와 과거의 경로를 가늠해 볼 수 있다. 더욱이 나아가서 그 팀이&#xA;이런 것들을 어떤 관점에서 이해하고 있는지에 따라서 그 향후 방향을 알&#xA;수 있다고 생각한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>요즘 게임은 PC주의에 빠졌을까?</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb19--01-ping/</link>
+      <pubDate>Thu, 19 Feb 2026 07:41:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb19--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;글쎄다. 이런 주장들을 열올리며 하는 사람들이 하는 얘기들은:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;PC주의에 편승해서 재미도 없는 게임을 만들고 팔려고 든다.&lt;/li&gt;&#xA;&lt;li&gt;PC주의 경찰🚓이 끼어들면 노잼 게임이 된다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;…글쎄다. 내 생각엔:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;어차피 돈독만 오른 게임 스튜디오가 뭘 갖다 붙여서 브랜딩하든 똑같지&#xA;않나.&lt;/li&gt;&#xA;&lt;li&gt;어차피 그런 정도의 게임이면, PC주의 경찰🚔 아니었어도, 어차피&#xA;원래도 재미 없을 게임이다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;브랜딩이나 얄팍한 판매기법 같은건 나열하자면 끝도 없는거 같다.&#xA;상상하기 어려운 액수의 자본이 투입되는 대형스튜디오의 게임이나&#xA;블록버스터들만 봐도, 조금 잠잠히 보고 있으면 어느 시대에는 유난히&#xA;비슷비슷한 게임이나 영화들이 나올 때가 있었었다. 예를 들면,&#xA;소행성충돌에 대한 영화들이 거의 같은 시기에 나오거나 지진이나&#xA;화산폭발을 주제로한 재난영화들이 엇비슷한 시기에 나오거나. 그리고&#xA;클리쉐냐 특정 캐릭터를 계속 다른 작품에서 재탕해 먹으려고 드는건 너무&#xA;많다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>생성형AI, 진짜로 문제인 AI Hallucination은</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</link>
+      <pubDate>Wed, 18 Feb 2026 06:43:46 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;요즘 나와 우리는&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;요즘엔 SW/IT업계에 일자리가 많이 없어지는 것, 구독형, SaaS 기업의&#xA;주가가 떨어지고 투자가 사라지는 것에 대한 우려가 많다. 그리고 나도&#xA;영향을 받는 사람으로서 걱정이 없진 못하다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;“구독형 소프트웨어 서비스”와 데이터=석유🛢️?&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;그런데 사실 절대다수의 구독형서비스(…실은 그냥 모바일앱이나 데스크탑&#xA;앱이 좀 있는 웹서비스)/SaaS이 그렇게 존재할 사업이었던게 모순이&#xA;맞았던거 같다. 오히려 자동화 된 데이터모델과 그의 CRUD + 약간의 로직이&#xA;들어간 것을 각자가 해결해도 될 일이었던게 맞다. 도메인에 특화되어&#xA;있다고 하는 기업이든 특정 기술을 쓴다고 하는 기업이든… 그 도메인의&#xA;전문가라고 해야 할까 싶기도 하거니와, 말그대로 특정 기술을 “갖다 쓰는&#xA;것” 사용자인 곳일 뿐이기도 하고. …결국 적당한 뻥튀기를 다들 하니까&#xA;그게 이상한지 모르고 다같이 하며 장사를, 혹은 투자금을 쓰는 일을&#xA;했던거지 싶다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Ping 31/01/2026 .01</title>
       <link>https://ageldama.github.io/posts/2026-01jan/2026-01jan31--01-ping/</link>
       <pubDate>Sat, 31 Jan 2026 09:34:44 +0000</pubDate>
@@ -120,6 +141,13 @@
       <pubDate>Sun, 30 Nov 2025 10:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/posts/2025-11nov/blog-post-title-emojis/</guid>
       <description>&lt;p&gt;&#xA;블로그 CSS을 또 수정하고, 레이아웃도 좀 더 고쳤다. 간단하게 가볍게&#xA;보였으면 해서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데 그간 고민해오던 것들이 있음:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;(예전에) 귀찮아서 &lt;code&gt;new-ping.pl&lt;/code&gt;-스크립트 같은거 짜놓고 자동&#xA;생성한 포스팅 제목으로 그대로 포스팅한 &amp;#34;&lt;em&gt;Ping …..&lt;/em&gt;&amp;#34;-같은 제목의&#xA;포스팅들은 archives에서 봐도 뭐가 뭔지 구분이 안됨.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;h1&lt;/code&gt;-같은 markdown/org-mode에서 export한 제목과&#xA;각 포스팅의 제목(이것도 &lt;code&gt;h1&lt;/code&gt;-같은 태그인)이 눈에 딱 들게 구분이&#xA;되지 않았음.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;archives에서 각 포스팅의 preview을 표시했다&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;조금 내용도 나오니까 찾아보기 더 수월해진거 같다. ㅎㅎ&#xA;  그리고 막상 이렇게 전체 목록 / 시간에 따라, 내용을 조금이나마&#xA;  보여주니까 일대기 형식이라 재밌네.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 17/08/2025 .01</title>
+      <link>https://ageldama.github.io/posts/2025-08aug/2025-08aug17--01-ping/</link>
+      <pubDate>Sun, 17 Aug 2025 13:21:50 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-08aug/2025-08aug17--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;일년간 몸담던 일을 정리했었다. 고맙기도 하고 재밌는 일들도 많이 할 수&#xA;있었었다. 하지만 기대를 갖기엔 너무 미안했다. 그곳과 그 사람들에게&#xA;그렇게 해서 마음이 가벼울 것 같지 않았다. ㅎㅎ&lt;/p&gt;&#xA;&lt;p&gt;&#xA;좋게 말하자면, “많은 교훈을 얻은 곳”이었었다. 더 많은 추억을 만들 수&#xA;있었다면 더 좋았겠지만 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Reversing이나 OS, System레벨, 그리고 서비스아키텍처, PostgreSQL&#xA;Change Data Capture, htmx/SSR 등등 재밌는 주제들도 많았고, 범위도 엄청나게&#xA;넓었었다.  그래도 그냥 혼자 좀 외로웠었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;내겐 이정도까지가 건강하겠구나 하는 판단이 들었다. 그리고 이해할 수&#xA;있을지 모르겠다만, 실은 그게 더 각자들의 마음을 더 편안케 해주리란걸&#xA;나는 알고 있다. 막상 내 결정 때문에 내가 미웠겠지만. ㅎㅎ&lt;/p&gt;</description>
     </item>
     <item>
       <title>가볍고 빠른 antiX Linux &#43; runit, koreader 그리고 bloatware</title>
