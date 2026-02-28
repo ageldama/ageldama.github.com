@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hackers-and-Painters on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/hackers-and-painters/</link>
+    <description>Recent content in Hackers-and-Painters on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 10 Feb 2026 09:29:06 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/hackers-and-painters/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2026년, 다시 생각해보는 “해커와 화가”</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/hackers-and-painters-in-2026/</link>
+      <pubDate>Tue, 10 Feb 2026 09:29:06 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/hackers-and-painters-in-2026/</guid>
+      <description>&lt;p&gt;&#xA;스타트업, IT기업들의 구인란과 Gig-job 사이트들을 보면, 예전이나&#xA;지금이나 다들 뭔가 ‘키워드 끼워맞추기’놀이를 열중하고 있다는 생각이&#xA;든다. 실은 별로 그렇게 중요할 것도 없고, 그렇게 찾아서 오히려&#xA;양자모두에게 도움이 되지 않는 방식일 뿐인거 같은데 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그때나 지금이나 ‘리액트, 자바, 스프링, TypeScript, LLM, GPT’… 그냥&#xA;시대에 따라 사용자들이 많이 올려간 프레임웍이나 언어, 라이브러리를&#xA;그것도 뻔하디 뻔한 반복으로 나타난다. 그나마 조금 특이하다 싶은 것들은&#xA;그것들도 실은 그냥 리거시가 그걸로 되어 있으니 그렇게 써서&#xA;올리는것일뿐이다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
