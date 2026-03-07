@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Unicode 17.0 Emoji 목록 자동화 &#43; Claude AI - 아겔로그</title><meta name="hugo-gen-timestamp" content="1772871357">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="Claude을 이용하여 이모지 목록을 Unicode 17.0 Emoji 목록에서 자동으로 만들도록 해봤다" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.794570c7da4b150e48d98ee25d823f6fcb1a9de459cf56171e7e61ef25464082.css"
+          integrity="sha256-eUVwx9pLFQ5I2Y7iXYI/b8saneRZz1YXHn5h7yVGQII=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/2026-03mar01--02-ping/">⬅️ Ping 01/03/2026 .02 [0.947906]</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-02feb/caves-of-qud/">➡️ 뉴비의 Caves of Qud 플레이 🏜️👾</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">문제, 의도 💣</a>
+</li>
+<li><a href="#headline-2">Claude 🤖: 자동으로 다운로드 =&gt; 모든 이모지를 출력</a>
+</li>
+<li><a href="#headline-3">나머지 🥧: shell-pipes, scripting, Template::Toolkit</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🧑🏽‍💻 Unicode 17.0 Emoji 목록 자동화 &#43; Claude AI</h1>
+	    <div class="meta">
+                <time datetime="2026-03-01" pubdate>
+                    2026년03월01일
+                </time>
+                </div>
+        </div>
+
+        
+        <div class="description">
+	    <span class="short-description">
+                Claude을 이용하여 이모지 목록을 Unicode 17.0 Emoji 목록에서 자동으로 만들도록 해봤다
+            </span>
+        </div>
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+문제, 의도 💣
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><a href="/posts/2026-02feb/selecting-title-emoji/">제목에 자동으로 emoji 넣기</a>-을 계속 해왔는데, 이 emoji목록은 손으로
+  수집해서 만든거였고, 가끔 <a href="https://unicode.org/emoji/charts/index.html">Unicode</a>-에는 있지만, 이 수동으로 만든
+  목록에는 없는 경우가 있어서 아쉬웠다.</p>
+<p>
+  그래서 이번엔 이걸 고쳐보기로 했다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Claude 🤖: 자동으로 다운로드 =&gt; 모든 이모지를 출력
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>그래서 유니코드 DB에 공개된 데이터파일들을 다운로드 받고, 거기에서
+  도출 가능한 모든 이모지를 출력하도록 했다.</p>
+<p>
+  생각보다 텍스트파일을 파싱하고 하는 스크립트가 귀찮았다. 예전에
+  유니코드&lt;=&gt;CP949 변환이나 조합형 한글코드 변환에도 이런 파싱+출력,
+  혹은 코드매핑 테이블 생성하는 스크립트를 짜왔었지만 이번엔 조금
+  다르게 해볼까 했다.</p>
+<p>
+  그래서 <a href="https://claude.ai/">Claude</a> 사용하여 코드를 생성해봤다. 프롬프트에 적당히 원하는걸
+  입력해서 스크립트를 만들어봤다. 만족스러웠다. 그 다음에 다운로드
+  받아서 조금 더 내 목적에 알맞게 수정할 수 있었다. 1~2분 정도
+  생성해주기를 기다리는거 이외엔 별로 오래 걸리지도 않았다.
+  만족스러웠다.</p>
+<p>
+  이전에도 몇 가지 스크립트나 함수, 혹은 작은 프로그램이나 도구들을
+  이렇게 생성하여 만들어 써왔는데 점점 더 마음에 들어간다.</p>
+<p>
+  실제로는 Claude은 Sandbox안에서 실행하니 완벽히 동작하지는 않을
+  가능성이 있지만, 그래도 최선을 다해서 실행해줬다. 물론 다운로드하여
+  다시 실행하면서 고쳐나갔다.</p>
+<div class="src src-makefile">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl">  ./static/emojis.txt:
+</span></span><span class="line"><span class="cl">  	perl scripts/generate_emojis.pl &gt; ./static/emojis.txt
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+나머지 🥧: shell-pipes, scripting, Template::Toolkit
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>나머진 내 빌드스크립트에 추가하고, 출력한 모든 이모지를 Hugo
+  Partials 코드으로 생성하도록 하는 작은 스크립트를 작성했다.</p>
+<div class="src src-makefile">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl">  gen-emojibyhash.html: ./static/emojis.txt
+</span></span><span class="line"><span class="cl">  	cat ./static/emojis.txt <span class="p">|</span> perl scripts/mk-emojibyhash.pl <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  	&gt; ./themes/blankslate/layouts/partials/emojibyhash.html
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  Template::Toolkit을 쓰고 그냥 스크립트 내부에 Data::Section으로
+  템플릿도 내장해줬다.</p>
+<div class="src src-perl">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
+</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
+</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
+</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
+</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
+</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
+</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
+</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
+</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
+</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
+</span><span class="lnt" id="26"><a class="lnlinks" href="#26">26</a>
+</span><span class="lnt" id="27"><a class="lnlinks" href="#27">27</a>
+</span><span class="lnt" id="28"><a class="lnlinks" href="#28">28</a>
+</span><span class="lnt" id="29"><a class="lnlinks" href="#29">29</a>
+</span><span class="lnt" id="30"><a class="lnlinks" href="#30">30</a>
+</span><span class="lnt" id="31"><a class="lnlinks" href="#31">31</a>
+</span><span class="lnt" id="32"><a class="lnlinks" href="#32">32</a>
+</span><span class="lnt" id="33"><a class="lnlinks" href="#33">33</a>
+</span><span class="lnt" id="34"><a class="lnlinks" href="#34">34</a>
+</span><span class="lnt" id="35"><a class="lnlinks" href="#35">35</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl">  <span class="k">use</span> <span class="nn">Data::Section::Simple</span> <span class="sx">qw(get_data_section)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">use</span> <span class="nn">Template</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="nv">@emojis</span> <span class="o">=</span> <span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="sr">&lt;STDIN&gt;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">my</span> <span class="nv">$ch</span> <span class="o">=</span> <span class="nv">$_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">chomp</span> <span class="nv">$ch</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">push</span> <span class="nv">@emojis</span><span class="p">,</span> <span class="nv">$ch</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="nv">$tt</span> <span class="o">=</span> <span class="nn">Template</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="n">INTERPOLATE</span>  <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span> <span class="o">||</span> <span class="nb">die</span> <span class="s">&#34;$Template::ERROR\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="nv">$vars</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">emojis</span> <span class="o">=&gt;</span> <span class="o">\</span><span class="nv">@emojis</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="nv">$tmpl</span> <span class="o">=</span> <span class="n">get_data_section</span><span class="p">(</span><span class="s">&#39;output.html&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="nv">$s</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$tt</span><span class="o">-&gt;</span><span class="n">process</span><span class="p">(</span><span class="o">\</span><span class="nv">$tmpl</span><span class="p">,</span> <span class="nv">$vars</span><span class="p">,</span> <span class="o">\</span><span class="nv">$s</span><span class="p">)</span> <span class="o">||</span> <span class="nb">die</span> <span class="nv">$tt</span><span class="o">-&gt;</span><span class="n">error</span><span class="p">(),</span> <span class="s">&#34;\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="nv">$s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="bp">__DATA__</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nv">@@</span> <span class="nv">output</span><span class="o">.</span><span class="n">html</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{{</span><span class="o">-</span> <span class="nv">$emojis</span> <span class="p">:</span><span class="o">=</span> <span class="n">slice</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="nv">%</span> <span class="nv">FOREACH</span> <span class="n">emoji</span> <span class="n">IN</span> <span class="n">emojis</span> <span class="o">-</span><span class="nv">%</span><span class="err">]</span>
+</span></span><span class="line"><span class="cl">      <span class="err">&#34;[%</span> <span class="nv">emoji</span> <span class="nv">%</span><span class="err">]&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="err">[%</span> <span class="nv">END</span> <span class="o">-</span><span class="nv">%</span><span class="err">]</span>
+</span></span><span class="line"><span class="cl">  <span class="err">-}}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">🐻<a href="/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/">아겔로그변천사</a>
+                        <sup>31</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>56</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/perl/">perl</a>
+                        <sup>16</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/llm/">llm</a>
+                        <sup>8</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gpt/">gpt</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ai/">ai</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/scripting/">scripting</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/coding/">coding</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emoji/">emoji</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sonnet/">sonnet</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cluade/">cluade</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/unicode/">unicode</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🧑🏽‍💻";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/2026-03mar01--02-ping/">⬅️ Ping 01/03/2026 .02 [0.947906]</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-02feb/caves-of-qud/">➡️ 뉴비의 Caves of Qud 플레이 🏜️👾</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1772871357</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>
