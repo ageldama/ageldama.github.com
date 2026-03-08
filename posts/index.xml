@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sun, 01 Mar 2026 07:45:49 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2026 14:28:59 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quake I</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/quake-i/</link>
+      <pubDate>Sun, 08 Mar 2026 14:28:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/quake-i/</guid>
+      <description>&lt;p&gt;&#xA;정말 그말이 맞다고 생각이 드는게, 어릴적엔 시간이 느리게 간거 같은데&#xA;나이를 먹을수록 너무 시간이 빨리 흐른다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;WOLF3D, Doom이 나온지 몇 년 지나지도 않아서 갑자기 퀘이크1이 나오는데&#xA;까지 몇년 걸리지 않았었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;울펜슈타인은 1992년, 둠(클래식)은 1993년, 그리고 퀘이크1은 1996년이었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/quake-i/2026-03-08_23-36.png&#34;&#xA;    alt=&#34;(&amp;hellip;Shambler!)&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;(&amp;hellip;Shambler!)&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;id software의 작품들이 거의 다 그렇지만, Doom도 그렇고, 퀘이크시리즈도&#xA;적몬스터들이 이상하게 팬들에게 애착을 일으킨다. ㅎㅎ&lt;/p&gt;&#xA;&lt;p&gt;&#xA;지금와서 보면 당연한 3d 그래픽이지만, 당시에 gpu은 일반적이지&#xA;않았었다. 그래픽카드가 현재의 gpgpu 같은 역할을 하게 될거라고&#xA;예상하기도 어려웠었다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Ping 01/03/2026 .02 [0.947906]</title>
       <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar01--02-ping/</link>
