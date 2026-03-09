@@ -7,8 +7,99 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sun, 08 Mar 2026 14:28:59 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2026 06:51:52 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>https://ageldama.github.io/tags/ai/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cargo-Cult</title>
+      <link>https://ageldama.github.io/tags/cargo-cult/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/cargo-cult/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fanboy</title>
+      <link>https://ageldama.github.io/tags/fanboy/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/fanboy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fp</title>
+      <link>https://ageldama.github.io/tags/fp/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/fp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functional-Programming</title>
+      <link>https://ageldama.github.io/tags/functional-programming/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/functional-programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Haskell</title>
+      <link>https://ageldama.github.io/tags/haskell/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/haskell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hype</title>
+      <link>https://ageldama.github.io/tags/hype/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/hype/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Llm</title>
+      <link>https://ageldama.github.io/tags/llm/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ocaml</title>
+      <link>https://ageldama.github.io/tags/ocaml/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ocaml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ping</title>
+      <link>https://ageldama.github.io/tags/ping/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ping/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Plt</title>
+      <link>https://ageldama.github.io/tags/plt/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/plt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Smalltalk</title>
+      <link>https://ageldama.github.io/tags/smalltalk/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/smalltalk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tdd</title>
+      <link>https://ageldama.github.io/tags/tdd/</link>
+      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/tdd/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Boomer</title>
       <link>https://ageldama.github.io/tags/boomer/</link>
@@ -115,24 +206,10 @@
       <description></description>
     </item>
     <item>
-      <title>Ping</title>
-      <link>https://ageldama.github.io/tags/ping/</link>
-      <pubDate>Sun, 01 Mar 2026 07:45:49 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ping/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>South-Korea</title>
       <link>https://ageldama.github.io/tags/south-korea/</link>
       <pubDate>Sun, 01 Mar 2026 07:45:49 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/south-korea/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ai</title>
-      <link>https://ageldama.github.io/tags/ai/</link>
-      <pubDate>Sun, 01 Mar 2026 07:28:54 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ai/</guid>
       <description></description>
     </item>
     <item>
@@ -161,13 +238,6 @@
       <link>https://ageldama.github.io/tags/gpt/</link>
       <pubDate>Sun, 01 Mar 2026 07:28:54 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/gpt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Llm</title>
-      <link>https://ageldama.github.io/tags/llm/</link>
-      <pubDate>Sun, 01 Mar 2026 07:28:54 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/llm/</guid>
       <description></description>
     </item>
     <item>
@@ -1421,13 +1491,6 @@
       <link>https://ageldama.github.io/tags/raylib/</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/raylib/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Smalltalk</title>
-      <link>https://ageldama.github.io/tags/smalltalk/</link>
-      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/smalltalk/</guid>
       <description></description>
     </item>
     <item>
@@ -5708,13 +5771,6 @@
       <description></description>
     </item>
     <item>
-      <title>Ocaml</title>
-      <link>https://ageldama.github.io/tags/ocaml/</link>
-      <pubDate>Mon, 13 Jun 2022 14:11:14 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/ocaml/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Restart</title>
       <link>https://ageldama.github.io/tags/restart/</link>
       <pubDate>Mon, 13 Jun 2022 14:11:14 +0900</pubDate>
@@ -6349,13 +6405,6 @@
       <link>https://ageldama.github.io/tags/jevetta-steele/</link>
       <pubDate>Thu, 17 Sep 2020 00:00:00 +0900</pubDate>
       <guid>https://ageldama.github.io/tags/jevetta-steele/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fp</title>
-      <link>https://ageldama.github.io/tags/fp/</link>
-      <pubDate>Fri, 04 Sep 2020 00:00:00 +0900</pubDate>
-      <guid>https://ageldama.github.io/tags/fp/</guid>
       <description></description>
     </item>
     <item>
@@ -7693,13 +7742,6 @@
       <link>https://ageldama.github.io/tags/es6/</link>
       <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
       <guid>https://ageldama.github.io/tags/es6/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Haskell</title>
-      <link>https://ageldama.github.io/tags/haskell/</link>
-      <pubDate>Sun, 26 Feb 2017 13:50:00 +0100</pubDate>
-      <guid>https://ageldama.github.io/tags/haskell/</guid>
       <description></description>
     </item>
     <item>

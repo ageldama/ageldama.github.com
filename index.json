@@ -1,7 +1,21 @@
 
 [
  {
+     "permalink": "https://ageldama.github.io/posts/2026-03mar/dysfunctional-programming/","title": "🦑 (dys)functional programming와 고대의 컬트 [0.161397]",
+     
+     "tags": ["ping", "functional-programming", "ocaml", "haskell", "plt", "fp", "hype", "fanboy", "llm", "ai", "cargo-cult", "tdd", "smalltalk"],
+     
+ "description": "",
+ "contents": " 요즘 뉴스피드엔 ai, llm 등은 많이 올라온다. 처음엔 그냥 hype으로 생각했지만, 실제로 조금 경험해보고 그게 어떤 파급을 끼칠지를 생각해보면 긍정적인 부분이 많을거 같다는 생각이 들었다. 특히 내겐 더 좋은 일이 아닐까 싶다. –그리고 그런 변화는 프로그래밍이란 분야를 완전히 진화시키리라 생각한다.\n그리고 함수형프로그래밍에 대한 이야기는 확연히 줄어든 것 같다. 단순히 ai에 대한 언급이 늘어나서 지분이 줄어들었다고 하기 보다는 함수형프로그래밍에 대한 필요가 사라졌으니 그렇게 된게 자연스러운 일 아닐까 싶다.\n어차피 코딩속도 자체가 느려지고 작성한 것에 대해 자신이 없을때에, 조금 더 솔직히 말하자면 코딩에 소질이 없고, 또 그걸 검증할줄 모르기 때문에 마법처럼 그런 문제들을 없애주거나, 줄여줄 무언가를 필요로 하던 시대에는 각광 받았던것 같다.\n흔히 말해지는 Software Crisis 시대가 지속되고, AI은 아직 LLM와 같은 돌파구가 아직 없던 때였기 때문인거 같다.\n그리고 나또한 Haskell이나 OCaml 같은 언어들을 익히고 책들을 탐닉하며, 따라해보고는 했었었다.\n이제는 당분간은 LLM의 시대가 지속되며 코드를 짜는것보다, 짠 코드를 어떻게 확증할 방법이 더 각광 받으리라 싶다. 과거에도 행해졌지만 가치를 잘 인정 받지 못하던 TDD등이나 더 엄밀한 접근법이 가치가 커지리라 생각한다. 🧪\n"},
+ {
      "permalink": "https://ageldama.github.io/posts/","title": "🆚 Posts",
+     
+     "tags": [],
+     
+ "description": "",
+ "contents": ""},
+ {
+     "permalink": "https://ageldama.github.io/","title": "🈷️ 아겔로그",
      
      "tags": [],
      
@@ -14,13 +28,6 @@
      
  "description": "💅🔫 nailgun의 추억...",
  "contents": " 정말 그말이 맞다고 생각이 드는게, 어릴적엔 시간이 느리게 간거 같은데 나이를 먹을수록 너무 시간이 빨리 흐른다.\nWOLF3D, Doom이 나온지 몇 년 지나지도 않아서 갑자기 퀘이크1이 나오는데 까지 몇년 걸리지 않았었다.\n울펜슈타인은 1992년, 둠(클래식)은 1993년, 그리고 퀘이크1은 1996년이었었다.\n(\u0026hellip;Shambler!)\nid software의 작품들이 거의 다 그렇지만, Doom도 그렇고, 퀘이크시리즈도 적몬스터들이 이상하게 팬들에게 애착을 일으킨다. ㅎㅎ\n지금와서 보면 당연한 3d 그래픽이지만, 당시에 gpu은 일반적이지 않았었다. 그래픽카드가 현재의 gpgpu 같은 역할을 하게 될거라고 예상하기도 어려웠었다.\n퀘이크는 opengl을 이용해 만들고, 이 게임의 대중화로 인해 opengl도 함께 유명해지고 보편화되었었다. 물론 그 이후에 수많은 3d 가속기능을 사용하는 게임들이 출시되고, gpu이 보편화되고, 이 gpu이 현대의 딥러닝, llm 같은것들을 이룰 수 있게 해주었다.\n소프트웨어적으로도, fast inverse square root 같은 말도 않되는 성과는 물론, 이후의 퀘이크2, 퀘이크3을 거치면서 게임엔진이 다른 하프라이프 같은 게임은 물론 현대의 게임들에도 거의 그대로 발전하여 사용되는 엔진으로 진화했다.\n…그리고 나는 Steam에서 베데스다가 라이센싱한 버전의 퀘이크1을 요즘에도 즐겁게 다시 플레이한다. 😈\n"},
- {
-     "permalink": "https://ageldama.github.io/","title": "🈷️ 아겔로그",
-     
-     "tags": [],
-     
- "description": "",
- "contents": ""},
  {
      "permalink": "https://ageldama.github.io/posts/2026-03mar/2026-03mar01--02-ping/","title": "🇰🇷 Ping 01/03/2026 .02 [0.947906]",
      
