@@ -7,14 +7,56 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 09 Mar 2026 06:51:52 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 04:59:38 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/ping/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>(dys)functional programming와 고대의 컬트 [0.161397]</title>
-      <link>https://ageldama.github.io/posts/2026-03mar/dysfunctional-programming/</link>
-      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2026-03mar/dysfunctional-programming/</guid>
-      <description>&lt;p&gt;&#xA;  요즘 뉴스피드엔 ai, llm 등은 많이 올라온다. 처음엔 그냥 hype으로&#xA;  생각했지만, 실제로 조금 경험해보고 그게 어떤 파급을 끼칠지를&#xA;  생각해보면 긍정적인 부분이 많을거 같다는 생각이 들었다. 특히 내겐 더&#xA;  좋은 일이 아닐까 싶다. –그리고 그런 변화는 프로그래밍이란 분야를&#xA;  완전히 진화시키리라 생각한다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 함수형프로그래밍에 대한 이야기는 확연히 줄어든 것 같다.&#xA;  단순히 ai에 대한 언급이 늘어나서 지분이 줄어들었다고 하기 보다는&#xA;  함수형프로그래밍에 대한 필요가 사라졌으니 그렇게 된게 자연스러운 일&#xA;  아닐까 싶다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  어차피 코딩속도 자체가 느려지고 작성한 것에 대해 자신이 없을때에,&#xA;  조금 더 솔직히 말하자면 코딩에 소질이 없고, 또 그걸 검증할줄 모르기&#xA;  때문에 마법처럼 그런 문제들을 없애주거나, 줄여줄 무언가를 필요로&#xA;  하던 시대에는 각광 받았던것 같다.&lt;/p&gt;</description>
+      <title>sbcl fibers 기대된다</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/sbcl-fiber/</link>
+      <pubDate>Sun, 15 Mar 2026 04:59:38 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/sbcl-fiber/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://atgreen.github.io/repl-yell/posts/sbcl-fibers/&#34;&gt;https://atgreen.github.io/repl-yell/posts/sbcl-fibers/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;…이미 cl-cont등을 이용한 cooperative-threading이 있기는 하고, os&#xA;thread을 그대로 이용하는건 기본적으로 예전부터 지원하고 있었지만.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;거기에 cl-async, blackbird 같은 비동기io, promises 지원도 있었지만.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;ㅎㅎ그래도 뭔가 비동기입출력이랑 멀티스레딩이랑, 스케쥴러랑 묶어서&#xA;깔끔하게 해결할게 없었던거 같은데(마치 go언어의 그것과 유사하게), 이게&#xA;그럴 수 있지 않을까 하고 기대가 됨. (…써있는거 읽어봐도 뭔지 잘&#xA;모르겠다만 ㅎㅎ)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;hunchentoot &lt;code&gt;taskmaster&lt;/code&gt; 구현해서 시험한거 보면, req/sec이&#xA;늘어난거보다 메모리사용량이 팍 주는게 신기할 정도다(스레딩 컨텍스트랑&#xA;스택크기일테니까), 그리고 메모리사용량이 클수록 gc stop-the-world 같은&#xA;현상이 두드러질테니 엄청 성능에 영향이 클거 같다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>소꿉놀이에 대해 [0.447201]</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar14--02-ping/</link>
+      <pubDate>Sat, 14 Mar 2026 04:37:58 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar14--02-ping/</guid>
+      <description>&lt;p&gt;&#xA;…성인이 되어서도, 생각해봐야 하는게, 내가, 혹은 내가 속한 팀이나&#xA;모임이 그냥 소꿉놀이를 하는건 아닌가 하는 의문인거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;사람이 사회생활, 사회관계를 만드는 일은, 순수하게 놀이에 속하는게&#xA;맞는거 같다. 그러기로 약속했고, 그럴거라고 기대되는 정도가 있다.&#xA;그리고 점잖을 정도로 그 놀이에 참가하고, 딱 적당한 정도로 해내면&#xA;교양인인거다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;종종 얄팍한 이들은 그런 관계나 역할을 자기가 다 알고 있다고 착각해서,&#xA;혹은 상대도 자기처럼 교양이 없거나 멍청할거라고 말하고 행동한다.&#xA;그런데, 교양은 뭔가를 남들이 모르는걸 더많이 알거나 그걸 악용하거나&#xA;하는데 있는게 아니라, 그걸 알아도 모른척 해줄 수 있거나 넘어가줄 수&#xA;있는, 남을 이용하려거나 우습게 여기려는 그 한가지만 아는 것이 아니라,&#xA;그것도 알되, 그 다음의 것도 아는, 성숙함의 문제란것도 모르는것이다.&#xA;그리고 사람놀이를 흉내낼 뿐인, 실은 사람구실을 내팽겨친 동물일 뿐이지&#xA;않나 싶다. –그리고 이 차이를 이해하지 못하는 이들도 생각보다 많은거&#xA;같다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 14/03/2026 .01</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar14--01-ping/</link>
+      <pubDate>Sat, 14 Mar 2026 04:09:32 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar14--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://x.com/id_aa_carmack/status/2032460578669691171&#34;&gt;https://x.com/id_aa_carmack/status/2032460578669691171&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;…대부분은 AI이 일자리를 없애거나, 오픈소스를 망가뜨리거나&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;,&#xA;아니면 일자리를 없애거나, 혹은 그렇기 때문에 사람끼리의 ‘유대’가 더&#xA;중요해진다거나 하는 생각들을 털어놓는다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데, 나부터도 내가 코딩을 한다는 행위 그자체에 경도되어 우쭐하고,&#xA;행복해하고, 자아/동일시를 하며 살아온거 같은데… 오히려 가장 그래도&#xA;부족할 엄청난 업적들&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-3&#34; href=&#34;#footnote-3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;이 가진 이가, 오히려 그 자신의 행위나, 그&#xA;행위를 하는 자기자신의 모습에 애착을 갖기 보다, –그 기여물이 세상에&#xA;어떤 영향을 만들어낼지를 순수하게 기대하는 발언이 충격이다. 존경스러운&#xA;발언.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;–어쩌면 정말 순수하게 오픈소스 그자체를, 그 자체만을 집중해 이야기&#xA;하는 것도 재밌었다. …마치 그의 게임들이 서사나 스토리 따위는 없고,&#xA;다만 액션만이 있던 것과 같은 느낌. 그게 젊을 때엔 마치 야동에 비유를&#xA;하여 말하던것이었지만, 이제는 연륜이 뭍어나시는구나 싶기도 했다.🥴&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sweet Child O’ Mine</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar13--01-ping/</link>
+      <pubDate>Fri, 13 Mar 2026 07:16:26 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar13--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/oMfMUfgjiLg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;…“섬광의 하사웨이”인가 건담극장판에 사용했다고 뜨더라.&#xA;ㅎㅎㅎ그은담아재들이랑 건샌로지스랑 세대가 겹치긴 할거 같다. 🪪&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MacBook Neo와 iBook/iMac G3</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/macbook-neo/</link>
+      <pubDate>Wed, 11 Mar 2026 07:14:55 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/macbook-neo/</guid>
+      <description>&lt;p&gt;&#xA;맥북네오 새로 출시된거 보면서… 예전에 iPod Nano 디자인이 떠오르기도&#xA;한다. 또 다른 시대로는 iBook, iMac이 정체되어 있을때, 그러니까 MacOS&#xA;8, 9이 나오고 뭐 해도… 매킨토시 자체가 불안정하고, 한국에선 쓰기에&#xA;너무 비싸기만 했었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;무엇보다 사용자층이 계속해서 떠나갈데로 떠나가서, 모두 윈도/인텔PC을&#xA;쓰고 있던 시대가 떠오르는건 왜일까.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/IBook&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/macbook-neo/ibook.jpg&#34;&#xA;    alt=&#34;iBook: 당시의 ‘프루티거 에어로’(Frutiger Aero) 감성&#34;&gt;&lt;/a&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;iBook: 당시의 ‘프루티거 에어로’(Frutiger Aero) 감성&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;더욱이 한국은 ActiveX + MS Internet Explorer이 아니면 인터넷을&#xA;사용하기도 사실상 거의 불가능하고, Mac OS X 이전의 맥북은 사실상&#xA;한국에선 특정 애플리케이션: 포토샵이나 일러스트레이터, 프레임메이커&#xA;등만을 위해서만 의미가 있던 시절.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>neomutt [0.459598]</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/neomutt/</link>
+      <pubDate>Wed, 11 Mar 2026 04:45:48 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/neomutt/</guid>
+      <description>&lt;p&gt;&#xA;neomutt 설정을 다른 사람들이 만들어 놓은걸 인터넷 검색을 하고,&#xA;매뉴얼을 읽으며 세팅해 사용한지 꽤 되어간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;스마트폰에서는 당연히 기본 클라이언트가 있으니 괜찮고, 대부분은 web&#xA;ui을 쓰기도 하지만, 스팸을 정리하거나 답신을 쓰거나 할때엔 훨씬&#xA;편하다. 내가 그렇게 편하게 만들어서 그런지도 모르겠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;처음엔 mu4e, offlineimap, mbsync 같은걸 더 스크립팅해서 검색인덱싱도&#xA;하고 하면서 쓰다가, 결국엔 그냥 imap client으로 사용해도 괜찮아서&#xA;이대로 쓴다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;비밀번호 같은건 gnupg으로 암호화 해놓고, pinentry이 자동으로 unlock&#xA;비번 물어보도록 세팅해서 편안하다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 10/03/2026 .01</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar10--01-ping/</link>
+      <pubDate>Tue, 10 Mar 2026 08:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar10--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;봄이왔다. 언제나처럼 약간은 뿌옇고 나른한 봄날 서울공기.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;조금 가볍게 입고 돌아다니기 좋아졌다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;퀘이크1 + 👉&lt;a href=&#34;https://github.com/sezero/quakespasm&#34;&gt;Quakespasm&lt;/a&gt; 나름 괜찮게 굴러간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;게이밍PC 데스크탑에서는 Steam / 베데스다판으로 돌리는데 잘 돌아간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;➕ 구형랩탑에서 플레이는 Quake Enhanced판 + Quakespasm.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 01/03/2026 .02 [0.947906]</title>
@@ -29,6 +71,13 @@
       <pubDate>Sat, 21 Feb 2026 11:50:52 +0000</pubDate>
       <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb21--01-ping/</guid>
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;AI시대 이전의 패턴&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;실제 원하는걸 표현해내기 어려워서 생기는 문제, 그걸 도출하기&#xA;어려웠던 문제.&lt;/li&gt;&#xA;&lt;li&gt;iteration-cycle을 제대로 해내지 못함.&lt;/li&gt;&#xA;&lt;li&gt;단계별로 궤도를 원하는 방향으로 고치거나,&lt;/li&gt;&#xA;&lt;li&gt;아예 궤도를 잘못 설정함.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;요즘의 패턴&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;AI으로 생성해 낸 작업물은 많은데,&lt;/li&gt;&#xA;&lt;li&gt;막상 아키텍처적으로 보안적일 수 없는 구조를 만들어냄.&lt;/li&gt;&#xA;&lt;li&gt;그리고 다른 기능을 추가하거나 수정하기엔 직접 생성한 사람이&#xA;해내기 어려운 경우가 많이 생김.&lt;/li&gt;&#xA;&lt;li&gt;AI의 문제라기 보다는, 뭘 만들어 달라고 요청하는 사람의 문제.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-3&#34;&gt;&#xA;결국 신기할 정도로 비슷한 상황&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;결국, 요청하는 사람이 자기가 뭘 원하는지, 뭘 어떻게 만들어 달라고&#xA;  해야 하는데, 소프트웨어나 아키텍처, 보안에 대해서 접근/이해하기&#xA;  어려우니 여전히 문제는 그대로 남아서 그걸 손봐주는 소프트웨어&#xA;  전문가는 여전히 필요해짐.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 07/02/2026 .01 👁️</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/</link>
+      <pubDate>Sat, 07 Feb 2026 06:47:23 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;어느샌가 뉴스의 대부분의 큰 화제가 컴퓨터와 인터넷 없이는 할 이야기가&#xA;적어질 정도였던거 같다. 이렇게 모든 일들이 연결될 일일까 싶을 정도로.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;불과 20여년전만 해도 그저 신기한, 현실과는 동떨어진 이야기로, 그저 먼&#xA;미래의 이야기로 이야기되던 발전이, 어느새 지금 당장의 일들이 되어&#xA;버렸고 그게 일어나고, 잠시뒤의 과거로 뉴스가 되어 버린다. (물론&#xA;20여년은 엄청 긴 시간이다. ㅎㅎ)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;해킹이나 보안과 관련된 이슈, 그리고 그에 따른 정부와 거대기업간의&#xA;논의가 일어났고, 또 진행중이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;단순히 숫자, 데이터, 혹은 바이트 덩어리일 뿐인 것이 잘못 기입되어&#xA;순식간에 부자가 되었다가 또 환불은 어떻게 됐는지, 그리고 실은 조작이&#xA;아닌지 하는 흥미로운 가쉽들도 많이 떠돈다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ping 31/01/2026 .01</title>
@@ -127,6 +176,13 @@
       <pubDate>Fri, 26 Dec 2025 07:36:17 +0000</pubDate>
       <guid>https://ageldama.github.io/posts/2025-12dec/haruki-manga-stories--super-frog/</guid>
       <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://www.goodreads.com/book/show/124825303-haruki-murakami-manga-stories-1&#34;&gt;goodreads 리뷰&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2025-12dec/haruki-manga-1-book-cover.jpg&#34;&#xA;    alt=&#34;책표지&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;책표지&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;재밌게 읽었다. 이미 출판된 하루키의 단편들을 다시 그래픽노블 형식으로&#xA;출판한 책. 아마 2권도 마저 읽고, 3권도 구해서 읽을거 같다. 그리고&#xA;여기서 소개 받은 단편들을 다시 찾아서 읽게 될 것 같다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 19/12/2025 .01.</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/2025-12dec19--01-ping/</link>
+      <pubDate>Fri, 19 Dec 2025 21:49:36 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/2025-12dec19--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;2025년도 거의 다 지나가고 있다. 을씨년스럽다는 을사년(乙巳年).&lt;/p&gt;&#xA;&lt;p&gt;&#xA;올해도, 그리고 한층 더 가소롭게 화려해보였지만, 쓸쓸한 그 알맹이의&#xA;거리였다. 참 이상하지. K문화니 뭐니 하지만 그안에서 살아가는 사람들은.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;언제나 그래왔지만, 유난히 다들 더 커보이려, 또는 자신이 아닌 위대해&#xA;보이는 무언갈 끌어다가 그 껍질이라도 뒤집어 쓰려고 드는, 불안과&#xA;두려움에 그러는 것을 더 숨기지 못하게 만드는 모습들.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;두렵게도, 천천히, 혹은 예상보다 훨씬 더 빠르게 말해진 미래가 훌쩍&#xA;뉴스가 되어 있었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/NGb-yaRDpeE?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>블로그 디자인 수정 &#43; 제목 자동 emoji 붙여주기</title>

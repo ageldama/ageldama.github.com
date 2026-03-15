@@ -7,14 +7,21 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 09 Mar 2026 06:51:52 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2026 04:37:58 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/hype/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>(dys)functional programming와 고대의 컬트 [0.161397]</title>
-      <link>https://ageldama.github.io/posts/2026-03mar/dysfunctional-programming/</link>
-      <pubDate>Mon, 09 Mar 2026 06:51:52 +0000</pubDate>
-      <guid>https://ageldama.github.io/posts/2026-03mar/dysfunctional-programming/</guid>
-      <description>&lt;p&gt;&#xA;  요즘 뉴스피드엔 ai, llm 등은 많이 올라온다. 처음엔 그냥 hype으로&#xA;  생각했지만, 실제로 조금 경험해보고 그게 어떤 파급을 끼칠지를&#xA;  생각해보면 긍정적인 부분이 많을거 같다는 생각이 들었다. 특히 내겐 더&#xA;  좋은 일이 아닐까 싶다. –그리고 그런 변화는 프로그래밍이란 분야를&#xA;  완전히 진화시키리라 생각한다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 함수형프로그래밍에 대한 이야기는 확연히 줄어든 것 같다.&#xA;  단순히 ai에 대한 언급이 늘어나서 지분이 줄어들었다고 하기 보다는&#xA;  함수형프로그래밍에 대한 필요가 사라졌으니 그렇게 된게 자연스러운 일&#xA;  아닐까 싶다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  어차피 코딩속도 자체가 느려지고 작성한 것에 대해 자신이 없을때에,&#xA;  조금 더 솔직히 말하자면 코딩에 소질이 없고, 또 그걸 검증할줄 모르기&#xA;  때문에 마법처럼 그런 문제들을 없애주거나, 줄여줄 무언가를 필요로&#xA;  하던 시대에는 각광 받았던것 같다.&lt;/p&gt;</description>
+      <title>소꿉놀이에 대해 [0.447201]</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar14--02-ping/</link>
+      <pubDate>Sat, 14 Mar 2026 04:37:58 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar14--02-ping/</guid>
+      <description>&lt;p&gt;&#xA;…성인이 되어서도, 생각해봐야 하는게, 내가, 혹은 내가 속한 팀이나&#xA;모임이 그냥 소꿉놀이를 하는건 아닌가 하는 의문인거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;사람이 사회생활, 사회관계를 만드는 일은, 순수하게 놀이에 속하는게&#xA;맞는거 같다. 그러기로 약속했고, 그럴거라고 기대되는 정도가 있다.&#xA;그리고 점잖을 정도로 그 놀이에 참가하고, 딱 적당한 정도로 해내면&#xA;교양인인거다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;종종 얄팍한 이들은 그런 관계나 역할을 자기가 다 알고 있다고 착각해서,&#xA;혹은 상대도 자기처럼 교양이 없거나 멍청할거라고 말하고 행동한다.&#xA;그런데, 교양은 뭔가를 남들이 모르는걸 더많이 알거나 그걸 악용하거나&#xA;하는데 있는게 아니라, 그걸 알아도 모른척 해줄 수 있거나 넘어가줄 수&#xA;있는, 남을 이용하려거나 우습게 여기려는 그 한가지만 아는 것이 아니라,&#xA;그것도 알되, 그 다음의 것도 아는, 성숙함의 문제란것도 모르는것이다.&#xA;그리고 사람놀이를 흉내낼 뿐인, 실은 사람구실을 내팽겨친 동물일 뿐이지&#xA;않나 싶다. –그리고 이 차이를 이해하지 못하는 이들도 생각보다 많은거&#xA;같다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 07/02/2026 .01 👁️</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/</link>
+      <pubDate>Sat, 07 Feb 2026 06:47:23 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;어느샌가 뉴스의 대부분의 큰 화제가 컴퓨터와 인터넷 없이는 할 이야기가&#xA;적어질 정도였던거 같다. 이렇게 모든 일들이 연결될 일일까 싶을 정도로.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;불과 20여년전만 해도 그저 신기한, 현실과는 동떨어진 이야기로, 그저 먼&#xA;미래의 이야기로 이야기되던 발전이, 어느새 지금 당장의 일들이 되어&#xA;버렸고 그게 일어나고, 잠시뒤의 과거로 뉴스가 되어 버린다. (물론&#xA;20여년은 엄청 긴 시간이다. ㅎㅎ)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;해킹이나 보안과 관련된 이슈, 그리고 그에 따른 정부와 거대기업간의&#xA;논의가 일어났고, 또 진행중이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;단순히 숫자, 데이터, 혹은 바이트 덩어리일 뿐인 것이 잘못 기입되어&#xA;순식간에 부자가 되었다가 또 환불은 어떻게 됐는지, 그리고 실은 조작이&#xA;아닌지 하는 흥미로운 가쉽들도 많이 떠돈다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Client on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/client/</link>
+    <description>Recent content in Client on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Wed, 11 Mar 2026 04:45:48 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/client/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>neomutt [0.459598]</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/neomutt/</link>
+      <pubDate>Wed, 11 Mar 2026 04:45:48 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/neomutt/</guid>
+      <description>&lt;p&gt;&#xA;neomutt 설정을 다른 사람들이 만들어 놓은걸 인터넷 검색을 하고,&#xA;매뉴얼을 읽으며 세팅해 사용한지 꽤 되어간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;스마트폰에서는 당연히 기본 클라이언트가 있으니 괜찮고, 대부분은 web&#xA;ui을 쓰기도 하지만, 스팸을 정리하거나 답신을 쓰거나 할때엔 훨씬&#xA;편하다. 내가 그렇게 편하게 만들어서 그런지도 모르겠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;처음엔 mu4e, offlineimap, mbsync 같은걸 더 스크립팅해서 검색인덱싱도&#xA;하고 하면서 쓰다가, 결국엔 그냥 imap client으로 사용해도 괜찮아서&#xA;이대로 쓴다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;비밀번호 같은건 gnupg으로 암호화 해놓고, pinentry이 자동으로 unlock&#xA;비번 물어보도록 세팅해서 편안하다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

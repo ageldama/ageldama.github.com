@@ -17,6 +17,13 @@
       <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;문제, 의도 💣&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://ageldama.github.io/posts/2026-02feb/selecting-title-emoji/&#34;&gt;제목에 자동으로 emoji 넣기&lt;/a&gt;-을 계속 해왔는데, 이 emoji목록은 손으로&#xA;  수집해서 만든거였고, 가끔 &lt;a href=&#34;https://unicode.org/emoji/charts/index.html&#34;&gt;Unicode&lt;/a&gt;-에는 있지만, 이 수동으로 만든&#xA;  목록에는 없는 경우가 있어서 아쉬웠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그래서 이번엔 이걸 고쳐보기로 했다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;Claude 🤖: 자동으로 다운로드 =&amp;gt; 모든 이모지를 출력&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;그래서 유니코드 DB에 공개된 데이터파일들을 다운로드 받고, 거기에서&#xA;  도출 가능한 모든 이모지를 출력하도록 했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  생각보다 텍스트파일을 파싱하고 하는 스크립트가 귀찮았다. 예전에&#xA;  유니코드&amp;lt;=&amp;gt;CP949 변환이나 조합형 한글코드 변환에도 이런 파싱+출력,&#xA;  혹은 코드매핑 테이블 생성하는 스크립트를 짜왔었지만 이번엔 조금&#xA;  다르게 해볼까 했다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Ping 07/02/2026 .01 👁️</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/</link>
+      <pubDate>Sat, 07 Feb 2026 06:47:23 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;어느샌가 뉴스의 대부분의 큰 화제가 컴퓨터와 인터넷 없이는 할 이야기가&#xA;적어질 정도였던거 같다. 이렇게 모든 일들이 연결될 일일까 싶을 정도로.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;불과 20여년전만 해도 그저 신기한, 현실과는 동떨어진 이야기로, 그저 먼&#xA;미래의 이야기로 이야기되던 발전이, 어느새 지금 당장의 일들이 되어&#xA;버렸고 그게 일어나고, 잠시뒤의 과거로 뉴스가 되어 버린다. (물론&#xA;20여년은 엄청 긴 시간이다. ㅎㅎ)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;해킹이나 보안과 관련된 이슈, 그리고 그에 따른 정부와 거대기업간의&#xA;논의가 일어났고, 또 진행중이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;단순히 숫자, 데이터, 혹은 바이트 덩어리일 뿐인 것이 잘못 기입되어&#xA;순식간에 부자가 되었다가 또 환불은 어떻게 됐는지, 그리고 실은 조작이&#xA;아닌지 하는 흥미로운 가쉽들도 많이 떠돈다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Rob “Commander” Pike의 AI극딜</title>
       <link>https://ageldama.github.io/posts/2025-12dec/2025-12dec27--01-ping/</link>
       <pubDate>Sat, 27 Dec 2025 06:36:26 +0000</pubDate>
