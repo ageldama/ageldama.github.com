@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>GNUstep와 Wine🍷 이야기 [0.023671] - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774513114">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="흘러간 옛OS와 오픈소스 재작성과 그 성패의 흰소리" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn disabled" role="button" aria-disabled="true" href=""></a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/2026-03mar26--01-ping/">➡️ Ping 26/03/2026 .01</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">NeXTSTEP, OPENSTEP, GNUstep, 그리고 macOS</a>
+<ul>
+<li><a href="#headline-2">껍데기의 복제: Afterstep, WindowMaker</a>
+</li>
+<li><a href="#headline-3">GNUstep의 시작</a>
+</li>
+<li><a href="#headline-4">OSX, macOS, 그리고 잊혀진 GNUstep</a>
+</li>
+<li><a href="#headline-5">“여전히 우리는 네 얘기만 해”</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-6">조금은 다른 베끼기: 윈도 애플리케이션을 리눅스에서 실행하기🍷</a>
+<ul>
+<li><a href="#headline-7">“누가뭐라하건”: Steam, ntsync의 2026년</a>
+</li>
+<li><a href="#headline-8">흑역사와 뻔한 클리셔의 탄생: 티맥*윈도우즈</a>
+</li>
+<li><a href="#headline-9">이 와중에 “AI slopping”</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-10">서로 다른 오픈소스의 베끼기와 그 결과</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🏹 GNUstep와 Wine🍷 이야기 [0.023671]</h1>
+	    <div class="meta">
+                <time datetime="2026-03-26" pubdate>
+                    2026년03월26일
+                </time>
+                </div>
+        </div>
+
+        
+        <div class="description">
+	    <span class="short-description">
+                흘러간 옛OS와 오픈소스 재작성과 그 성패의 흰소리
+            </span>
+        </div>
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+NeXTSTEP, OPENSTEP, GNUstep, 그리고 macOS
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<figure><img src="/posts/2026-03mar/gnustep-wine/NeXTSTEP_desktop.png"
+      alt="nextstep의 스크린샷(위키백과)"><figcaption>
+        <p>nextstep의 스크린샷(위키백과)</p>
+      </figcaption>
+  </figure>
+
+<p>
+  90년대 중반에 이미 위와 같은 OS, 그리고 미감이나 디자인만이 아니라,
+  애플리케이션 개발방식 등도 현대의 그것처럼 직관적인데다,
+  안정적이기까지 했다면 얼마나 충격적이었을까 상상해보라.</p>
+<p>
+  당시의 주류인 DOS, 윈도, 혹은 MacOS Classic을 위한 애플리케이션
+  개발은 훨씬 복잡하고 효율적이지 못했다. DOS의 경우엔 극악한데, <code>INT
+  21h</code> 같은 신비로운 로우레벨 지식이 필요하거나, 직접 메모리 안정성
+  자체를 관리해야 했다. 그런 안정성을 확보하지 못한 코드는 그
+  애플리케이션만을 중단시키는것이 아니라, 그런 작은 사소한 문제로인해
+  아예 OS자체가 다운될 수 있었다.</p>
+<p>
+  윈도 API, MacOS Classic의 경우에는 DOS보다는 조금 더 안전하고
+  수월했겠지만, 그것도 그다지 직관적이지는 못하고, 해당 OS/GUI
+  애플리케이션을 구성하기 위해 기본적으로 필요로 하는 수많은
+  ceremonial 코드를 작성하고 난 다음에야 겨우 본론에 해당되는 내용들을
+  짜나갈 수 있었다.</p>
+<p>
+  그에 비해, NeXTSTEP, OPENSTEP의 개발은 Interface Builder와
+  Smalltalk와 C언어의 유연하고 강력함을 모두 갖춘 프로그래밍언어,
+  객체지향(당시의 더 골치가 아파지던 C++ 방식의 객체지향이 아닌, 더
+  현대적인 특성을 갖춘), MVC 등등으로 2026년 지금에 와서도 다른
+  프로그래밍언어, 환경보다도 편안하고 생산적이었었다.</p>
+<p>
+  이에 관한 더 자세한 언급은: 👉 <a href="/posts/2026-01jan/typescript-is-the-new-delphi/">타입스크립트는 새로운 델파이이지 않을까</a></p>
+<p>
+  …그런데 문제는, 물론, 비쌌다. 💰 ㅎㅎ</p>
+<p>
+  <figure><img src="/posts/2026-03mar/gnustep-wine/next-computer-steve-jobs-884x420.jpg"
+      alt="(원본: https://www.justnerd.it/next-computer-30-anni-fa-nasceva-il-pc-che-divento-la-base-dei-moderni-apple/)"><figcaption>
+        <p>(원본: <a href="https://www.justnerd.it/next-computer-30-anni-fa-nasceva-il-pc-che-divento-la-base-dei-moderni-apple/">https://www.justnerd.it/next-computer-30-anni-fa-nasceva-il-pc-che-divento-la-base-dei-moderni-apple/</a>)</p>
+      </figcaption>
+  </figure>
+</p>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+껍데기의 복제: Afterstep, WindowMaker
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<p>넥스트스텝이 세상에서 사실상 사라진 이후에, 우리의 오픈소스, 리눅스
+   “enjoyer”들은 아쉬워했다.</p>
+<p>
+   <figure><img src="/posts/2026-03mar/gnustep-wine/linux-chad-crying.png"
+       alt="리눅스 GUI환경 때문에 슬피우는 “Enjoyer” (G*mini AI생성. 팔이 3개💪💪💪)"><figcaption>
+         <p>리눅스 GUI환경 때문에 슬피우는 “Enjoyer” (G*mini AI생성. 팔이 3개💪💪💪)</p>
+       </figcaption>
+   </figure>
+</p>
+<p>
+   지금은 KDE, Gnome, Xfce 등의 덕으로 GUI데스크탑 환경이 흔해졌지만,
+   당시엔 말그대로 척박했다. 물론 그 나름의 생긴건 투박하지만 얼마든지
+   “자유롭게” 커스터마이징하고, 사용성을 내게 맞추거나 하는
+   hacky하기는 했던거 같다. …당시에 가장 “유행하던” <a href="https://www.fvwm.org/">fvwm</a>-은 지금에도
+   가장 마음대로 변경할 수 있는 X윈도용 윈도매니저다. (…그게
+   쉽다고는 하지 않겠다🫠)</p>
+<p>
+   <figure><img src="/posts/2026-03mar/gnustep-wine/fvwm.png"
+       alt="fvwm (출처: https://unix.stackexchange.com/questions/547310/standalone-x-program-to-list-open-minimized-windows)"><figcaption>
+         <p>fvwm (출처: <a href="https://unix.stackexchange.com/questions/547310/standalone-x-program-to-list-open-minimized-windows">https://unix.stackexchange.com/questions/547310/standalone-x-program-to-list-open-minimized-windows</a>)</p>
+       </figcaption>
+   </figure>
+</p>
+<p>
+   …이런 상황에서, 한때는 GUI으로 해볼만한 실험적인짓들은 다 해보는
+   X윈도매니저들이 많이 나왔었다. 그중 가장 전위적이던, 90년대
+   세기말적 분위기의 <a href="https://www.enlightenment.org/">enlightenment</a>은 아예 이게 뭘까 하는 생각까지 불러일으킨다.</p>
+<p>
+   <figure><img src="/posts/2026-03mar/gnustep-wine/enlightenment-screenshot.jpg"
+       alt="enlightenment (출처: http://www.linuxfocus.org/English/July1998/article52.html )"><figcaption>
+         <p>enlightenment (출처: <a href="http://www.linuxfocus.org/English/July1998/article52.html">http://www.linuxfocus.org/English/July1998/article52.html</a> )</p>
+       </figcaption>
+   </figure>
+</p>
+<p>
+   그리고 afterstep, windowmaker은 이런 리눅스의 GUI의 방황의 한
+   축이었었다. 그리고 그 방황의 방향성은 넥스트스텝의 모양새를, 미감을
+   가장 비슷하게, 혹은 조금 더 현대적으로 그려내는쪽이었었다.</p>
+<p>
+   <figure><img src="/posts/2026-03mar/gnustep-wine/Window_maker_0_92_0.png"
+       alt="WindowMaker (출처: https://commons.wikimedia.org/wiki/File:Window_maker_0_92_0.png )"><figcaption>
+         <p>WindowMaker (출처: <a href="https://commons.wikimedia.org/wiki/File:Window_maker_0_92_0.png">https://commons.wikimedia.org/wiki/File:Window_maker_0_92_0.png</a> )</p>
+       </figcaption>
+   </figure>
+</p>
+<p>
+   <figure><img src="/posts/2026-03mar/gnustep-wine/afterstep-Stormy_Skies.jpg"
+       alt="AfterStep (출처: http://www.afterstep.org/look.php )"><figcaption>
+         <p>AfterStep (출처: <a href="http://www.afterstep.org/look.php">http://www.afterstep.org/look.php</a> )</p>
+       </figcaption>
+   </figure>
+</p>
+<p>
+   …하지만 어디까지나 창틀의 모양 같은것들이 그럴싸하게
+   넥스트스텝처럼 바꿔주는것 뿐이지, 어쨌든 돌아가는 애플리케이션들은
+   그대로의 모습인데다가, 넥스트스텝에서의 아름다운 애플리케이션들은
+   여전히 없었다. 여전히 리눅스 세계의 유연하고 강력하지만 약간은
+   투박한 애플리케이션들이 있었을뿐이다.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+GNUstep의 시작
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<p>그런 와중에 야심차보이는 오픈소스 프로젝트가 시작된다. 이름은
+   GNUstep. 완전히 오픈소스으로 기존의 NeXTSTEP/OPENSTEP API은 물론
+   개발환경 같은 필수적인 GUI 애플리케이션까지 작성하겠다는 시도였다.</p>
+<p>
+   <a href="https://www.gnustep.org/">https://www.gnustep.org/</a></p>
+<p>
+   …마치 넥스트스텝처럼 PostScript 기반의 Display Server등도
+   나름대로 만들어가고, 이미 백포팅된 gcc-objc을 활용하여 기본적인
+   Objective-C도 가능한 상황이었으니까.</p>
+<p>
+   잘 공개된 넥스트스텝의 API문서를 이용해 이들을 재구현해나갔다.</p>
+<p>
+   …하지만 프로젝트 진행상황은 그렇게 빠르지 않았었고, 다른 요인들이
+   주목 받지 못하게 만들었던거 같다.</p>
+<p>
+   하나는 비슷한 시기에 리눅스 데스크탑들의 개발이 시작된다. 하나는
+   Gnome이고, 다른 하나는 KDE이다. 그놈은 C언어 위주의 Gtk+
+   기반이었었고, KDE은 C++/Qt 기반이었었다.</p>
+<p>
+   <figure><img src="/posts/2026-03mar/gnustep-wine/KDE_1.0.png"
+       alt="KDE 1.0: 지금 봐도 투박하지만 나름의 매력이 있다"><figcaption>
+         <p>KDE 1.0: 지금 봐도 투박하지만 나름의 매력이 있다</p>
+       </figcaption>
+   </figure>
+</p>
+<p>
+   GNUstep은 몇년째 거의 그대로인거 같은 프로젝트 홈페이지였는데,
+   그놈과 KDE은 순식간에 기여자들과 사용자들이 불어났다.</p>
+<p>
+   여담으로, 당시에 시작된 KDE프로젝트를 위한 웹브라우저, Konquerer을
+   위한 렌더링엔진, KHTML은 이후에 Apple의 WebKit이 되었고, 이 웹킷은
+   우리가 현재에 수 많은 웹브라우저, 구글 크롬, 마이크로소프트 Edge,
+   애플의 Safari 등등의 시작점이 된다. 물론 Electron이니 VSCode 같은
+   현재의 “WebKit 기반 데스크톱 GUI”의 흐름의 시작점이기도 하다. 🎇</p>
+<p>
+   그리고 무엇보다, 넥스트스텝 애호가들마저 굳이 GNUstep을 기대할 필요가
+   없어지는 일이 벌어진다.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+OSX, macOS, 그리고 잊혀진 GNUstep
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p>스티브잡스의 애플 복귀와 OSX이라고 불리는 macOS의 출시이다. (처음
+   출시때엔 “Mac OS X” 정도의 네이밍이었었다)</p>
+<p>
+   <figure><img src="/posts/2026-03mar/gnustep-wine/MacOSX10-0screenshot.png"
+       alt="Mac OS X 출시 (출처: https://en.wikipedia.org/wiki/Mac_OS_X_10.0 )"><figcaption>
+         <p>Mac OS X 출시 (출처: <a href="https://en.wikipedia.org/wiki/Mac_OS_X_10.0">https://en.wikipedia.org/wiki/Mac_OS_X_10.0</a> )</p>
+       </figcaption>
+   </figure>
+</p>
+<p>
+   OSX은 사실상 유명한 “Aqua Look and Feel”을 탑재한 넥스트스텝의
+   리브랜딩이었던거 같다. 예를 들어, Terminal.app을 보면 여전히
+   넥스트스텝의 흔적이 많이 남아 있었고, Xcode등은 사실상 예전
+   넥스트스텝의 Project Builder, Interface Builder의 새로운
+   버전이었다.</p>
+<p>
+   그리고 이런 사실들을 누구보다 명확하게 볼 수 있었을
+   넥스트스텝/오픈스텝 애호가들은, 그냥 돈을 더 들여서 애플의 신제품을
+   구매하지, 굳이 사용성도 미래도 모호한 GNUstep을 기대하지 않게
+   되었다.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+“여전히 우리는 네 얘기만 해”
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<p>현재의 GNUstep 프로젝트는 그래도 많은 성과를 냈다. 거의 호환되는
+   API와 WindowMaker등을 사용하고, 새로 GNUstep으로 작성한
+   애플리케이션 등, 짜맞춘 넥스트스텝/오픈스텝 짝퉁을 만들어 낼 수
+   있는 수준이 되기는 했다.</p>
+<p>
+   그리고 그런 GNUstep을 활용한 데스크톱 프로젝트만 3~4개는 되는 것
+   같다. 혼란스럽다.</p>
+<p>
+   그런데, 저런 GNUstep기반의 환경이 과연 얼마나 쓸만할지는 모르겠다.
+   2026년 현재에 이미 Gnome/KDE 기반의 데스크탑환경과 애플리케이션들은
+   훨씬 더 발전되고 쓸만하고, 무엇보다 훨씬 그 개발자층, 사용자층이
+   비교도 할 수 없게 넓고 깊어졌기 때문이다.</p>
+<p>
+   오히려, 현재에 와서는, GNUstep을 원하기 보다는, 당시의
+   미감(aesthetic)을 사람들이 더 원하는것 같다. 그래서 아이러니하게도
+   거의 30여년이 흘러서, 여전히 사람들은 WindowMaker을 사용하고, 이를
+   커스터마이징하고 스크린샷을 공유하고는 한다. 흥미롭다.</p>
+<p>
+      <figure><img src="/posts/2026-03mar/gnustep-wine/r-unixporn-q-windowmaker.png"
+          alt="출처: https://www.reddit.com/r/unixporn/search/?q=windowmaker"><figcaption>
+            <p>출처: <a href="https://www.reddit.com/r/unixporn/search/?q=windowmaker">https://www.reddit.com/r/unixporn/search/?q=windowmaker</a></p>
+          </figcaption>
+      </figure>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+조금은 다른 베끼기: 윈도 애플리케이션을 리눅스에서 실행하기🍷
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p><a href="https://www.winehq.org/about">https://www.winehq.org/about</a></p>
+<p>
+  1993년에 이상한 오픈소스 프로젝트가 시작된다. 이미 시장에서 널리
+  쓰이던 마이크로소프트 윈도우 OS을 위한 애플리케이션을 리눅스에서
+  그대로 실행시키려는 프로젝트였다.</p>
+<p>
+  사람들은 반신반의했다. 그리고 그 이후에 점점 더 프로젝트의 복잡도는
+  높아져만 갔다. 이유는 Windows 95이 출시되고, XP, Vista… 윈도의
+  시장점유율은 높아져만 갔고, 윈도 애플리케이션이 동작하는 방식, API도
+  엄청나게 성장했고, 심지어 COM/COM+ 같은 아예 다른 형태의 API방식도
+  윈도에 추가되었고, 이들을 제대로 지원해야만 하는 부담이 계속해서
+  늘어만 갔다.</p>
+<div id="outline-container-headline-7" class="outline-3">
+<h3 id="headline-7">
+“누가뭐라하건”: Steam, ntsync의 2026년
+</h3>
+<div id="outline-text-headline-7" class="outline-text-3">
+<p>그런데 이상하게도, Wine 프로젝트는 엄청나게 잘 동작한다.</p>
+<p>
+   기여자들은 제대로 윈도애플리케이션이 동작하도록 계속해서 거의
+   30여년간 작업을 해왔고, 이제는 심지어 최신 버전의 윈도에서보다,
+   오히려 리눅스/Wine 환경에서 과거에 작성된 윈도 애플리케이션이 더
+   호환성을 유지한채 동작하는 모습도 흔하게 볼 수 있다. 🥹</p>
+<p>
+   Value Steam 같은 경우, 이런 Wine을 적극적으로 잘 활용한다. 리눅스
+   환경에서 “anti-cheat”을 요구하는 온라인 게임을 제외하고는 거의
+   대부분 아무 문제 없이 윈도용 게임을 실행시킬 수 있다. anti-cheat
+   같은 경우엔 윈도커널드라이버 등의 연계가 있어야 제대로 동작하기
+   때문에 그럴것이다.</p>
+<p>
+   심지어 이런 특성을 적극 활용하여 Value의 SteamDeck 게임콘솔은
+   아예 리눅스머신이다.</p>
+<p>
+   나아가서 요즘엔 리눅스 커널 단계에서 윈도애플리케이션을 Wine을 통해
+   더 효율적으로 실행시키기 위한 지원인 ntsync등도 추가되는걸 보면
+   흥미롭다.</p>
+<p>
+   물론 나는 여전히 특정 윈도 애플리케이션의 어떤 부분에서 한글폰트가
+   깨지는 문제를 해결하는 방법을 잘 모르겠지만 말이다. 🤤</p>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-3">
+<h3 id="headline-8">
+흑역사와 뻔한 클리셔의 탄생: 티맥*윈도우즈
+</h3>
+<div id="outline-text-headline-8" class="outline-text-3">
+<p>그런데 한국에서는 뭔가 안다고 믿고 싶은 이들은, 그런걸 제대로
+   동작하지 않는다고 우기고 싶어한다. 그리고 그 근거로 드는게 과거에
+   있었던 ‘티맥*윈도우즈’ 사건인거 같다.</p>
+<p>
+   이 제품은 기술적으로는 (아마도) FreeBSD 기반에 Wine을 활용해
+   윈도호환의 배포판을 만들려는 시도였던거 같다.</p>
+<p>
+   마케팅적으로는, 이미 한국의 관공서 환경은 윈도기반이었고, 이를
+   국산제품이라는 관공서가 구매하는데 우선권을 얻을 수 있는 이점과
+   적당히 업무용 애플리케이션을 실행시킬 수 있고, 콧대 높은 글로벌
+   거대기업보다는 국내기업이기 때문에 원하는걸 다 들어줄거 같다는
+   기대로 대규모 계약을 따낼 수 있을거란 기대 때문이었을거 같다.</p>
+<p>
+   예를 들어, 대부분의 관공서나 대기업에서는, 윈도운영체제에
+   보안솔루션이나 여러가지 원하는걸 첨삭하고 싶어 하는것 같다. 흔히
+   말하는 SSO, DRM, 매체제어 등의 기능을 사실상 해킹에 가까운 방식으로
+   윈도에 추가하는, 국내산 “보안솔루션”들을 보면 그렇다. 그리고 그런
+   보안솔루션들의 구매처는 대기업이거나 관공서다.</p>
+<p>
+   하지만, 시연데모에서조차 신기할 정도로 제대로 동작하지 않았고
+   사업은 흑역사와 “Wine은 안돼”라는 인식을 남기고 사라졌다.</p>
+<p>
+   그럼에도, 현실에선, 2026년에 스팀덱과 Wine을 보면, 과연 그때
+   그랬던것이 지금에도 과연 그럴까 하는 생각을 할 수 있다. 그리고
+   어쩌면 Wine 등의 문제가 아니라, 그걸 누가 어떻게 시도했는지가 더
+   관건이었지 않았을까 하는 생각을 해보는게 더 나은 관점이리라.</p>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-3">
+<h3 id="headline-9">
+이 와중에 “AI slopping”
+</h3>
+<div id="outline-text-headline-9" class="outline-text-3">
+<p>이런 상황에, MS은 어느새 그 위상을 조금씩 잃어갈 것 같다. 이미
+   HTML5와 스마트폰 혁명으로 입지를 조금 잃었던것처럼.</p>
+<p>
+   이번에는 오히려 AI 때문이지 않을까 하고 조심스럽게 상상해본다. AI을
+   여기저기 도입할 능력이 되기 때문에, 역설적으로 오히려 그렇기에
+   마소는 새로운 윈도11에 너무 많은 AI연결점을 넣으려 하고 있는거
+   같다. 하지만 결국 사용자에겐 조잡하게 느껴질 뿐일거 같다.</p>
+<p>
+      <figure><img src="/posts/2026-03mar/gnustep-wine/office-dog.png"
+          alt="(출처: https://namu.wiki/w/Office%20%EA%B8%B8%EC%9E%A1%EC%9D%B4 )"><figcaption>
+            <p>(출처: <a href="https://namu.wiki/w/Office%20%EA%B8%B8%EC%9E%A1%EC%9D%B4">https://namu.wiki/w/Office%20%EA%B8%B8%EC%9E%A1%EC%9D%B4</a> )</p>
+          </figcaption>
+      </figure>
+</p>
+<p>
+   …거기에 조직이 커질수록, 최종구매자의 이익과는 큰 관계 없을,
+   성과만들기나 “Feature Creep” 같은 일에 빠지게 되기 쉬운거 같다.</p>
+<p>
+   글쎄다. 사람들이 윈도를 구매/사용하는 이유가, 윈도용 애플리케이션을
+   사용하기 위함일까, 아니면 대기업이 장착해준 뭔가 걸리적거리는
+   무언가를 군말없이 받아들이기 위해서일까.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-2">
+<h2 id="headline-10">
+서로 다른 오픈소스의 베끼기와 그 결과
+</h2>
+<div id="outline-text-headline-10" class="outline-text-2">
+<p>GNUstep와 Wine, 두 개의 다른 오픈소스 프로젝트가 원하는걸 얻기 위해
+  어떻게 접근했고, 어떤 결과물을 만들었는지, 내가 아는 것들을
+  적어보았다.</p>
+<p>
+  각각의 접근법이 어떻게 적중했는지, 그렇지 못했는지는 말할 필요가
+  없을거 같다. 그게 관건이 아닌거 같기 때문이다. 일례로 Wine처럼 macOS
+  애플리케이션 바이너리를 그대로 리눅스에서 실행하는 오픈소스
+  프로젝트도 있지만 크게 주목 받지는 못한거 같다. (
+  <a href="https://github.com/darlinghq/darling">https://github.com/darlinghq/darling</a> ) …물론, 더 시간이 흐른 후에
+  사람들이 OSX용 애플리케이션을 꼭 리눅스에서 실행하기를 원하게 될
+  시대라면 각광 받게 될지도 모르지만.</p>
+<p>
+  기술적 접근법보다는, 프로젝트의 시작점, 성장기 등에 다른 프로젝트나
+  제품 등의 영향과 사람들의 기대를 어떻게 충족시켰는지가 훨씬 더 큰 것
+  같다는 생각이 든다.</p>
+<p>
+  하지만, 언급한 티맥*윈도 같은 경우는 예외일거 같다. 그리고 어쩌면
+  그렇기 때문에 조금은 다른 방식, 접근으로 시도가 가능할지도
+  모르겠다고 본다.</p>
+<p>
+  …여튼 이렇게 이번 긴 포스팅을 마친다. ✒️</p>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">🦔<a href="/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/">추억두더쥐</a>
+                        <sup>21</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">🧸<a href="/series/script-kiddie-life/">script-kiddie-life</a>
+                        <sup>16</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/linux/">linux</a>
+                        <sup>29</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/windows/">windows</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/steam/">steam</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/nextstep/">nextstep</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/apple/">apple</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/macos/">macos</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/openstep/">openstep</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/next/">next</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/osx/">osx</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/microsoft/">microsoft</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/swift/">swift</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ntsync/">ntsync</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/aesthetic/">aesthetic</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/windowmaker/">windowmaker</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/afterstep/">afterstep</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/objective-c/">objective-c</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gnustep/">gnustep</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/postscript/">postscript</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emulator/">emulator</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/wine/">wine</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/objc/">objc</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🏹";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn disabled" role="button" aria-disabled="true" href=""></a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/2026-03mar26--01-ping/">➡️ Ping 26/03/2026 .01</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774513114</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

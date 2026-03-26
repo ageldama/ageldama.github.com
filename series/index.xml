@@ -7,8 +7,22 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Thu, 26 Mar 2026 06:01:55 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2026 06:09:16 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Script-Kiddie-Life</title>
+      <link>https://ageldama.github.io/series/script-kiddie-life/</link>
+      <pubDate>Thu, 26 Mar 2026 06:09:16 +0000</pubDate>
+      <guid>https://ageldama.github.io/series/script-kiddie-life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>추억두더쥐</title>
+      <link>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</link>
+      <pubDate>Thu, 26 Mar 2026 06:09:16 +0000</pubDate>
+      <guid>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</guid>
+      <description></description>
+    </item>
     <item>
       <title>아겔로그변천사</title>
       <link>https://ageldama.github.io/series/%EC%95%84%EA%B2%94%EB%A1%9C%EA%B7%B8%EB%B3%80%EC%B2%9C%EC%82%AC/</link>
@@ -17,24 +31,10 @@
       <description></description>
     </item>
     <item>
-      <title>추억두더쥐</title>
-      <link>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</link>
-      <pubDate>Wed, 25 Mar 2026 06:29:36 +0000</pubDate>
-      <guid>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Programming-Languages</title>
       <link>https://ageldama.github.io/series/programming-languages/</link>
       <pubDate>Sun, 15 Mar 2026 04:59:38 +0000</pubDate>
       <guid>https://ageldama.github.io/series/programming-languages/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Script-Kiddie-Life</title>
-      <link>https://ageldama.github.io/series/script-kiddie-life/</link>
-      <pubDate>Sun, 15 Mar 2026 04:59:38 +0000</pubDate>
-      <guid>https://ageldama.github.io/series/script-kiddie-life/</guid>
       <description></description>
     </item>
     <item>

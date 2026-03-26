@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 25 Mar 2026 06:29:36 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2026 06:09:16 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GNUstep와 Wine🍷 이야기 [0.023671]</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/gnustep-wine/</link>
+      <pubDate>Thu, 26 Mar 2026 06:09:16 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/gnustep-wine/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;NeXTSTEP, OPENSTEP, GNUstep, 그리고 macOS&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/gnustep-wine/NeXTSTEP_desktop.png&#34;&#xA;      alt=&#34;nextstep의 스크린샷(위키백과)&#34;&gt;&lt;figcaption&gt;&#xA;        &lt;p&gt;nextstep의 스크린샷(위키백과)&lt;/p&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;&#xA;  90년대 중반에 이미 위와 같은 OS, 그리고 미감이나 디자인만이 아니라,&#xA;  애플리케이션 개발방식 등도 현대의 그것처럼 직관적인데다,&#xA;  안정적이기까지 했다면 얼마나 충격적이었을까 상상해보라.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  당시의 주류인 DOS, 윈도, 혹은 MacOS Classic을 위한 애플리케이션&#xA;  개발은 훨씬 복잡하고 효율적이지 못했다. DOS의 경우엔 극악한데, &lt;code&gt;INT&#xA;  21h&lt;/code&gt; 같은 신비로운 로우레벨 지식이 필요하거나, 직접 메모리 안정성&#xA;  자체를 관리해야 했다. 그런 안정성을 확보하지 못한 코드는 그&#xA;  애플리케이션만을 중단시키는것이 아니라, 그런 작은 사소한 문제로인해&#xA;  아예 OS자체가 다운될 수 있었다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>BeOS, HaikuOS, Vitruvian [0.574695]</title>
       <link>https://ageldama.github.io/posts/2026-03mar/beos-haikuos-vitruvian/</link>
