@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774504766">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+최근의 파이썬은 아주 오랬동안 multicore/parallelism을 지원하기 위해
+걸림돌이었던 GIL에서 자유로워진 &#34;no-GIL&#34; 옵션이 베타 단계.
+(&#34;free GIL&#34; 혹은 &#34;free threading&#34;이라고도 부르는듯) https://blog.jetbrains.com/ko/pycharm/2025/08/faster-python-unlocking-the-python-global-interpreter-lock/
+
+&#34;no-GIL&#34;이 분명히 중요한 변화이겠지만, 내겐 Python 3.14에
+concurrent.interpreters 추가된 것이 더 흥미롭다.
+
+이게 과연 Parallelism을 지원하기 위한 방식일까 하고 바로 알아차라기는
+어렵지만 조금 생각해보면:
+
+새로운 프로세스를 만들지는 않는다 (multiprocessing 모듈)
+직접 같은 GIL을 공유하는 스레드를 만들지도 않는다 (threading 모듈)
+하지만, 같은 프로세스 안에서 다른 GIL을 사용하는, 파이썬
+인터프리터를 만들고,
+다른 인터프리터와 적당한 정도로 IPC이 가능하고 (Queue 정도)
+다른 인터프리터가 실행했으면 하는 파이썬 코드를 전달 가능.
+
+
+별거 아닌거 같지만 얻을 수 있는 이점은:" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/scripts-rofi-perl5-release/">⬅️ scripts-rofi-perl5 릴리즈</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/">➡️ 내 emacs elisp &#34;requires&#34;</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">Python스러움, Pythonic한 방식?</a>
+</li>
+<li><a href="#headline-2">(EDIT: 2025-11-20 Thu) concurrent.futures + interpreters</a>
+</li>
+<li><a href="#headline-3">(부록) Tcl 데자뷰</a>
+</li>
+<li><a href="#headline-4">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">👯🏿‍♀️ Python 3.14 &#34;no-GIL&#34;보다 concurrent.interpreters, 그리고 Tcl 데자뷰</h1>
+	    <div class="meta">
+                <time datetime="2025-11-19" pubdate>
+                    2025년11월19일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+최근의 파이썬은 아주 오랬동안 multicore/parallelism을 지원하기 위해
+걸림돌이었던 GIL에서 자유로워진 &#34;no-GIL&#34; 옵션이 베타 단계.
+(&#34;free GIL&#34; 혹은 &#34;free threading&#34;이라고도 부르는듯) <a href="https://blog.jetbrains.com/ko/pycharm/2025/08/faster-python-unlocking-the-python-global-interpreter-lock/">https://blog.jetbrains.com/ko/pycharm/2025/08/faster-python-unlocking-the-python-global-interpreter-lock/</a></p>
+<p>
+&#34;no-GIL&#34;이 분명히 중요한 변화이겠지만, 내겐 Python 3.14에
+<a href="https://docs.python.org/3/library/concurrent.interpreters.html">concurrent.interpreters</a> 추가된 것이 더 흥미롭다.</p>
+<p>
+이게 과연 Parallelism을 지원하기 위한 방식일까 하고 바로 알아차라기는
+어렵지만 조금 생각해보면:</p>
+<ol>
+<li>새로운 프로세스를 만들지는 않는다 (<code>multiprocessing</code> 모듈)</li>
+<li>직접 같은 GIL을 공유하는 스레드를 만들지도 않는다 (<code>threading</code> 모듈)</li>
+<li>하지만, 같은 프로세스 안에서 다른 GIL을 사용하는, 파이썬
+인터프리터를 만들고,</li>
+<li>다른 인터프리터와 적당한 정도로 IPC이 가능하고 (Queue 정도)</li>
+<li>다른 인터프리터가 실행했으면 하는 파이썬 코드를 전달 가능.</li>
+</ol>
+<p>
+별거 아닌거 같지만 얻을 수 있는 이점은:</p>
+<ol>
+<li>파이썬에 별다른 변경을 가하지 않아도, 또 기존의 CPython C-API에
+의존하는 라이브러리들이 제대로 동작하지 않을까 하는 호환성 걱정 없이,</li>
+<li>multiprocessing보다 오버헤드가 적게, 멀티코어를 사용할 수 있다.</li>
+</ol>
+<blockquote>
+<p>As a significant bonus, interpreters are sufficiently isolated that they do not share the GIL, which means combining threads with multiple interpreters enables full multi-core parallelism. (This has been the case since Python 3.12.)</p>
+</blockquote>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Python스러움, Pythonic한 방식?
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>파이썬은 다른 동시대의 언어들의 유행과는 조금 다른 길을 가는
+  파이썬스러운 특유의 방식이 언어, 표준라이브러리(흔히 &#34;batteries&#34;으로
+  부르는)에 있다고 생각한다.</p>
+<p>
+  문법을 확장하기 보다는, 잘 정제된 문법을 갖고, 그 문법에 적용할 수
+  있는 패턴들을 확장해 쓸 수 있게 해왔다고 생각한다.</p>
+<p>
+  Ruby이나 Lisp 계열 언어들이 closure-block을 전달하거나, <code>with-</code> /
+  <code>each-</code>-등의 방식으로, 반복자(iterator), 자원관리을 접근할 때에,</p>
+<p>
+  Python은 Generator, <code>with</code>-statement, <code>__enter__</code>-magic method
+  정도로 잘 소화해온 것 같다.</p>
+<div class="src src-ruby">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl">  <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&#34;/etc/passwd&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">    <span class="n">file</span><span class="o">.</span><span class="n">each_line</span> <span class="k">do</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  …같은 코드라면:</p>
+<div class="src src-python">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;/etc/passwd&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">          <span class="c1"># ...</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  이렇게 언어 자체를 확장하거나 하지 않으면서 라이브러리 모듈을 통해
+  dynamic scoping처럼 동작하는 <a href="https://docs.python.org/3/library/contextvars.html">contextvars</a> 모듈도 좋은 예라고
+  생각한다. 다음 커먼리습 코드<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>:</p>
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defparameter</span> <span class="vg">*xxx*</span> <span class="no">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">print-xxx</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">format</span> <span class="no">t</span> <span class="s">&#34;XXX = ~a~%&#34;</span> <span class="vg">*xxx*</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">dyn-scoping</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="vg">*xxx*</span> <span class="mi">42</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nv">print-xxx</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">dyn-scoping</span><span class="p">)</span> <span class="c1">;; ==&gt; &#34;XXX = 42&#34;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  이걸 파이썬이었다면<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>:</p>
+<div class="src src-python">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="kn">import</span> <span class="nn">contextvars</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">xxx</span> <span class="o">=</span> <span class="n">contextvars</span><span class="o">.</span><span class="n">ContextVar</span><span class="p">(</span><span class="s1">&#39;xxx&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;???&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_xxx</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;XXX = </span><span class="si">{</span><span class="n">xxx</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">with</span> <span class="n">xxx</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;42&#39;</span><span class="p">):</span>  <span class="c1"># Python 3.14+ 전용</span>
+</span></span><span class="line"><span class="cl">      <span class="n">print_xxx</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">print_xxx</span><span class="p">()</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  이런예 이외에도, 파이썬은 그 시대의 유행하는 언어들, 혹은 그 언어들의
+  idiom와는 조금 다르면서도, 파이썬 자기자신스러움을 잃지 않고
+  발전해왔다고 생각한다.</p>
+<p>
+  그리고 이런 측면 때문에 no-GIL 방식의 CPython 자체의 변화보다는,
+  concurrent.interpreters 방식이 더 파이썬스럽고 내겐 흥미롭다고
+  여겨지는 것 같다. (물론 파이썬 자체 PEP에서 열심히 논의한 결과로
+  no-GIL을 진행하고 있겠지만 말이다)</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+(EDIT: 2025-11-20 Thu) concurrent.futures + interpreters
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p><a href="https://docs.python.org/3/library/concurrent.futures.html#interpreterpoolexecutor">https://docs.python.org/3/library/concurrent.futures.html#interpreterpoolexecutor</a></p>
+<blockquote>
+<p>The InterpreterPoolExecutor class uses a pool of interpreters to execute calls asynchronously. It is a ThreadPoolExecutor subclass, which means each worker is running in its own thread. The difference here is that each worker has its own interpreter, and runs each task using that interpreter.</p>
+<p>
+  The biggest benefit to using interpreters instead of only threads is true multi-core parallelism. Each interpreter has its own Global Interpreter Lock, so code running in one interpreter can run on one CPU core, while code in another interpreter runs unblocked on a different core.</p>
+</blockquote>
+<p>
+  interpreters + threading 이미 바로 쓸 수 있도록 해놓은 모듈이 3.14+
+  부터 추가됨. ㅎㅎ 직접 interpreters와 스레드를 묶어서 쓰려고 애쓰지
+  않아도 바로 쓸 수 있도록.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+(부록) Tcl 데자뷰
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>Tcl도 (파이썬만큼이나 역사가 30년이 넘은 언어이니만큼) GIL 이슈가
+  동일했다.</p>
+<p>
+  그리고 CPython처럼 Tcl도 Reference-Counting 방식의 C-API여서, GIL이
+  중요하다.
+  (예: <a href="https://docs.python.org/3/c-api/refcounting.html">CPython의 Py_INCREF</a> / <a href="https://www.tcl-lang.org/man/tcl8.6/TclLib/Object.htm">Tcl의 Tcl_IncrRefCount</a>)</p>
+<p>
+  하지만, 파이썬과 달리 Tcl은 별로 GIL문제가 크게 부각되지
+  않아왔었는데(파이썬에 비한다면 사용자층도 거의 남지 않았지만 ㅎㅎ),
+  이미 예전부터 interpreter 생성과 실행위임 기능을 갖고 있었었고,
+  스레딩 방식도 아예 이런 분리된 인터프리터를 이용하는 방식이었었다.</p>
+<ol>
+<li><a href="https://www.tcl-lang.org/man/tcl8.6/TclCmd/interp.htm">https://www.tcl-lang.org/man/tcl8.6/TclCmd/interp.htm</a></li>
+<li><a href="https://www.tcl-lang.org/man/tcl8.6/ThreadCmd/thread.htm">https://www.tcl-lang.org/man/tcl8.6/ThreadCmd/thread.htm</a></li>
+</ol>
+<p>
+  이번 &#34;최신의&#34; 파이썬 모듈 변화를 보면서, 이상하게 오래 된 Tcl의
+  interp 커맨드, thread 패키지가 기억에서 떠올랐다. (할아버지 감성
+  👴🏽)</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>Perl 5도 <a href="https://perldoc.perl.org/functions/local"><code>local</code></a>-을 통해 이를 지원한다.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p>thread-local 같이 동작하게 만들거나, 분리된 call-stack에서는
+원래의 값을 유지한다던가 하는 dynamic-scoping의 구현의 수준은 언어별로
+많이 다를 것 같다. 하지만 contextvars 정도의 구현수준으로 대부분의
+케이스는 커버가 되는 것 같다.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">👅<a href="/series/programming-languages/">programming-languages</a>
+                        <sup>28</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>57</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/commonlisp/">commonlisp</a>
+                        <sup>21</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/perl/">perl</a>
+                        <sup>16</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/python/">python</a>
+                        <sup>9</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/threading/">threading</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/asyncio/">asyncio</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ruby/">ruby</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/concurrency/">concurrency</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/tcl/">tcl</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/multiprocessing/">multiprocessing</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/pythonic/">pythonic</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gil/">gil</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/thread/">thread</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/dynamic-scoping/">dynamic-scoping</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/contextvars/">contextvars</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cpython/">cpython</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ipc/">ipc</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/queue/">queue</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/concurrent/">concurrent</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/interp/">interp</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/parallelism/">parallelism</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/multicore/">multicore</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "👯🏿‍♀️";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/scripts-rofi-perl5-release/">⬅️ scripts-rofi-perl5 릴리즈</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-11nov/my-elisp-requires/">➡️ 내 emacs elisp &#34;requires&#34;</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774504766</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

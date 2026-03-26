@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/spring/</link>
+    <description>Recent content in Spring on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 10 Mar 2026 08:37:59 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 10/03/2026 .01</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar10--01-ping/</link>
+      <pubDate>Tue, 10 Mar 2026 08:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar10--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;봄이왔다. 언제나처럼 약간은 뿌옇고 나른한 봄날 서울공기.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;조금 가볍게 입고 돌아다니기 좋아졌다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;퀘이크1 + 👉&lt;a href=&#34;https://github.com/sezero/quakespasm&#34;&gt;Quakespasm&lt;/a&gt; 나름 괜찮게 굴러간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;게이밍PC 데스크탑에서는 Steam / 베데스다판으로 돌리는데 잘 돌아간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;➕ 구형랩탑에서 플레이는 Quake Enhanced판 + Quakespasm.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>AI vs. 주니어 혹은 Expert Beginner - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774504766">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="AI시대에 주니어, 혹은 (실은) Expert Beginner인 사람들에 대한 추억" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/2026-03mar02--01-ping/">⬅️ 중요한 비율은 어느시대나 전혀 변하지 않는다</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/2026-03mar01--02-ping/">➡️ Ping 01/03/2026 .02 [0.947906]</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">AI경험과 호칭은 하나지만 실은 달랐던 ‘개발자’</a>
+</li>
+<li><a href="#headline-2">그들만의 웃기지도 않는 코드리뷰, Testing/TDD</a>
+</li>
+<li><a href="#headline-3">비디오게임의 폐해: 현실의 성장모델을 이해하지 못하는 이들</a>
+</li>
+<li><a href="#headline-4">AI와 SW개발</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🫍 AI vs. 주니어 혹은 Expert Beginner</h1>
+	    <div class="meta">
+                <time datetime="2026-03-01" pubdate>
+                    2026년03월01일
+                </time>
+                </div>
+        </div>
+
+        
+        <div class="description">
+	    <span class="short-description">
+                AI시대에 주니어, 혹은 (실은) Expert Beginner인 사람들에 대한 추억
+            </span>
+        </div>
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WMsUv_EgsWY?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+      </div>
+</p>
+<ul>
+<li>[EDIT] 👉 <a href="https://tomwojcik.com/posts/2026-02-15/finding-the-right-amount-of-ai/">포스팅 &#34;What AI coding costs you&#34;</a> 이랑 많은 관점이
+동일하다.</li>
+</ul>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+AI경험과 호칭은 하나지만 실은 달랐던 ‘개발자’
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>요즘 AI을 경험해나갈수록 드는 생각은: 정말 이런 제품들이 거품이어서
+  계속해서 지속될지 아닐지는 잘 모르겠지만, 어쨌든 정말 중요한 사실은
+  사람들은 이런 능력을 경험했고, 그 경험 덕분에 과거로 완전히
+  복귀하지는 않을거라는 생각을 한다.</p>
+<p>
+  ‘개발자’라고 말해지는 사람들은 실은 아예 다른 부류가, 한 단어로
+  묶여서, 정말 같은 부류인걸로 보였었던거 같다. 이런 생각은 비밀스럽게
+  그런 상대방에게 말하기도 어려웠고, 또 반대로 산업에서 사람들의
+  인식도 크게 다르지 않았다.</p>
+<p>
+  오히려 그런 사람들이 주니어나, N년차의 딱지를 붙이고, 혹은 출신딱지
+  붙이기, 그거에 테크스택 딱지놀이를 하면서 뭉기적거리던 모습이,
+  그정도 능력은 이젠 굳이 그런 ‘개발자’들에게 부탁하지 않아도 좋게
+  되었다.</p>
+<p>
+  솔직히 자기발전의 의지도 없고, 특별히 소프트웨어나 엔지니어링에 대한
+  이해는 커녕, 오히려 자기가 조금 아는걸로 모든걸 단정지어서 실은 가장
+  이상한 결정을 내리고는 하는 부류였다.</p>
+<p>
+  이런 사람들이 사실 아직도 산업계엔 정말 많은거 같고, 앞으로도 크게
+  달라지긴 어려울거 같다. 하지만 그 층이 얇아지고 더 값싸질건
+  명확하다. 어차피 누구든 조금 AI도구으로 비슷한 정도는 아주 쉽게
+  코드를 생성해낼 수 있게 되었으니까.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+그들만의 웃기지도 않는 코드리뷰, Testing/TDD
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>오히려 그런 태도로 코드리뷰가 어쩌고 하면서 실은 자기만의 핑계나
+  방어도구로 적당히 둘러대는데 사용하던 그 헛소리들을 AI도구는 하지
+  않는다. 그래서 문서나 주석도 훨씬 잘 꼼꼼히 잘 작성해주고,
+  작성해내는 코드의 내용도 비교할 수 없이 좋다.</p>
+<p>
+  그런 태도의 주니어나 expert beginner에게 그런 리뷰를 말해준들,
+  자기가 빙빙 둘러대서 헛소리를 하려고 작정한 그저그런 수준의
+  사람이라면 골치만 아파질뿐이었었다.</p>
+<p>
+  최근에 그냥 다른 일을 하며 ‘코드리뷰’를 회피한 팀들이 있었었다. 그런
+  경우에는 대부분 리뷰를 받을 사람들이, 이런 말장난에만 열중하고
+  성장하기 위한 최소한의 태도도 갖추지 못한 경우였다. 그리고 정말
+  필요한 리뷰를 말해줘도 대부분은 그 개개인의 태도가 제대로 되어 있지
+  않았기 때문에 불쾌한 시간만 늘어날 뿐이었다.</p>
+<p>
+  어차피 이런 이들에겐 필요한 내용을 이해하려는 노력은 커녕, 그러려는
+  의지도 없기 때문에 적당히 둘러댈 말을 찾아내고 방어나 공격을 할
+  뿐이다. 그리고 이런 이들에게 코드리뷰란 실은 그냥 허영을 채워주는
+  취향놀음이 될 뿐이다. 거기서 넘어서서 정말 공통의 가치를
+  구현하는데엔 관심이 없다.</p>
+<p>
+  나아가서 테스팅에 대한 관점도 그냥 manual-testing 이외엔 제대로
+  상상해내지 못하는 개발자라고 불리고 싶은 사람들이 의사결정을 하고
+  앉아 있는 경우가 많았다. 그들이 그렇게 착각하는 이유는, 실제로는
+  TDD이니 테스팅이니 줏어 들은 것은 있지만, 단 한번도 제대로 깊이 있게
+  공부를 해보거나 시도를 해본적도 없는 이들이기 때문이다. 그리고
+  그렇기 때문에 테스팅이나 TDD은 생산성을 낮추니 어쩌고 하는 소리를
+  (줏어들은, 혹은 얕게 아는) 늘어놓기만 좋았으리라 싶다.</p>
+<p>
+  물론 더 원인을 분석하자면, 사실은 그런 조직의 문제였다. 그리고 그런
+  조직의 문제는 책임질 사람들이, 혹은 그 원인을 만들거나 방치하는
+  사람들이 명확하리라 본다. 하지만 내가 그런곳에서 기대를 하거나
+  나같은 ‘외부인’ 혹은 ‘일개직원’, 개국공신이 아닌 이에게 그럴 권한을
+  주거나 똑바로 위임을 할리도 없는 곳인걸 너무 많이 경험해서, 나도
+  그냥 회피하는게 현명할 일이었다. (부디 내 위치를 직접 경험한 것도
+  아니면서, 싸구려스러운, 그리고 뭔가 냉철한척을 하며 말하곤 하는
+  ‘당신이 정말 최선을 다 한건가’하는 헛소리는 하지 않아줬으면 좋겠다.
+  🤣)</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+비디오게임의 폐해: 현실의 성장모델을 이해하지 못하는 이들
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>내 생각엔 대부분의 사람들이, 개인의 성장모델을 제대로 이해하고 있지
+  못하거나 오해하고 있다고 본다.</p>
+<p>
+  이유는 (투입시간 ~~ 성과)–라는 비례공식에만 익숙하기 때문인거 같다.
+  물론 사실 그렇긴 한데, 거기에 “A과목을 공부하면, B과목을 공부할
+  시간을 잃는 것이므로…”–같은 생각도 더해진다. 단순히 학과 공부나
+  그런 것이라면 맞는 과정이지만, 개인의 성장, 프로그래머로서의
+  성장에는 맞지 않은 모델이다.</p>
+<p>
+  거기에 레벨업이 있을 때에, 레벨업에 따라 얻은 숫자 몇개를 원하는
+  ‘스탯’에 분배하는 방식의 RPG게임에 흔한 성장모델과도 이런 오해는 잘
+  들어 맞는다.</p>
+<p>
+  하지만, 프로그래머의 성장과 소프트웨어팀의 성장, 혹은 역성장은
+  이런 모델과는 조금 다르게 이루어지는거 같다.</p>
+<p>
+  성장속도에 대한 이야기는,
+  👉 포스팅: <a href="https://nl-stevenen.medium.com/the-compound-effect-in-software-9619bb1753d3">“The Compound effect in software”</a> .</p>
+<p>
+  그리고 더 나아가서, 성장속도만이 아니라, 다른 분야에 대한
+  성장속도/가속도에 대해서도, A을 잘 이해하고 잘 하는 사람이, B에
+  대해서도 더 제대로 이해하고 잘 해낼 가능성이 높다. A, B이 모두 C/S에
+  기반한 이야기라면.</p>
+<p>
+  물론, 완전히 다른 업무나 개념이라면 그렇지 않겠지만, 적어도
+  소프트웨어 내에선 대부분 맞는 개념인거 같다.</p>
+<p>
+  기반이해와 경험이 조금 다른 분야에 훨씬 더 이익이 된다. 그리고
+  반대로 기반지식이 빈약하면 그 결과적으로 성장을 제대로 이루기
+  어렵다.</p>
+<p>
+  현실의 예로는, 실제로 제대로 된 C/S이해가 없는 프론트엔드/백엔드
+  개발자가, 어떤 대학의 어떤 유관학과를 졸업했든, 아무리 연차가
+  쌓여도, 심지어 리액트나 node.js/typescript을 계속 해왔어도, 문제나
+  버그를 만들 가능성도 높고, 자기가 뭘 하는지 근본적으로 이해하지
+  못하는 경우를 너무 많이 봐온 것 같다.</p>
+<p>
+  그리고 그 반대로 다른 언어나 업무를 정말 자기가 이해해서 해온
+  경우라면, 큰 문제 없이 잘 성장한다.</p>
+<p>
+  물론 이런걸 이해하고 팀에 적용해야 할 사람들부터 이런 사항을 제대로
+  이해하고 있지 못하다는게… 😅</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+AI와 SW개발
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>오히려 시간이 지남에 따라 그 위치, 자리가 무의미하다는 것을 사람들이
+  더욱 확실히 이해하며 그 자리는 계속해서 가격이 떨어지거나 아예 더
+  도메인이나 업무에 적합한 사람으로 대체될 수 밖엔 없지 않을까.</p>
+<p>
+  그리고, 아이러니하게도 결국 AI시대에도 과거에 제대로 된 경험과
+   이해를 쌓아온 쪽이 더 나을 수 밖엔 없을거 같다.</p>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">📻<a href="/series/midnight-radio/">midnight-radio</a>
+                        <sup>23</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">🧸<a href="/series/script-kiddie-life/">script-kiddie-life</a>
+                        <sup>15</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>127</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>57</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/llm/">llm</a>
+                        <sup>9</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ai/">ai</a>
+                        <sup>8</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gpt/">gpt</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/software/">software</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/coding/">coding</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programmer/">programmer</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/claude/">claude</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/coder/">coder</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/video-games/">video-games</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lana-del-rey/">lana-del-rey</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/colleague/">colleague</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/toxic/">toxic</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/peer/">peer</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/review/">review</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/attitude/">attitude</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/expert-beginner/">expert-beginner</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/junior/">junior</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/engineer/">engineer</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🫍";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/2026-03mar02--01-ping/">⬅️ 중요한 비율은 어느시대나 전혀 변하지 않는다</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/2026-03mar01--02-ping/">➡️ Ping 01/03/2026 .02 [0.947906]</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774504766</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Evil-Mode on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/evil-mode/</link>
+    <description>Recent content in Evil-Mode on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 16 Dec 2025 03:53:43 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/evil-mode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs 일기: vi-mode은 그만 쓰고, windmove은 쓰기 시작</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/2025-12dec16--02-ping/</link>
+      <pubDate>Tue, 16 Dec 2025 03:53:43 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/2025-12dec16--02-ping/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;vi emulation-layer: evil-mode을 그만 쓰게됐다&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;이맥스는 거의 20년 넘게 써온거 같다. 물론 예전엔 지금보다 훨씬 더&#xA;  제대로 이해하고 쓰진 못했었다.🥟 그리고 &lt;a href=&#34;https://github.com/emacs-evil/evil&#34;&gt;evil-mode&lt;/a&gt;-도 10년 넘게&#xA;  써온거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  이맥스를 다시 메인으로 계속 써오면서, 처음엔 &lt;a href=&#34;https://www.spacemacs.org/&#34;&gt;Spacemacs&lt;/a&gt; /&#xA;  &lt;a href=&#34;https://github.com/doomemacs/doomemacs&#34;&gt;doomemacs&lt;/a&gt; 같은 preconfigured된 것들을 적용해 쓰면서 익숙해져 갔던거&#xA;  같다. (이미 Vi/Vim은 계속 써오고 있었으니까)&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그런데 계속해서 뭔가 키바인딩이 이상하다는 느낌을 받아온거 같긴하다.&#xA;  그도 그럴것이, 좀 다른 major-mode마다 다른 키바인딩을 vi/vim스럽게 맞춰주는&#xA;  &lt;a href=&#34;https://github.com/emacs-evil/evil-collection&#34;&gt;evil-collection&lt;/a&gt;-으로 맞춰주며 동작하는데, 이게 항상 좀 일관성이&#xA;  있기는 어려운 것 같았다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NeoVim, Evil-mode and Emacs의 모험</title>
+      <link>https://ageldama.github.io/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/</link>
+      <pubDate>Sat, 28 Jul 2018 12:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2018-07jul/2018-07jul-nvim-evil-and-emacs/</guid>
+      <description>&lt;h2 id=&#34;내적모순&#34;&gt;&amp;ldquo;내적모순&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;이맥스에서 &lt;a href=&#34;https://www.emacswiki.org/emacs/Evil&#34;&gt;Evil&lt;/a&gt;을 쓰면서 몇가지 짜증나는게 있어왔다.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Evil 자체의 문서화가 조금 거시기하다.&#xA;&lt;ol&gt;&#xA;&lt;li&gt;거기에&#xA;&lt;a href=&#34;https://github.com/justbur/emacs-which-key&#34;&gt;Which-Key&lt;/a&gt;같은&#xA;키바인딩을 실시간으로 확인할 수 있는 방법도 제대로 안먹히게&#xA;된거라, 이맥스에서 쩔어주는 기능인 &lt;em&gt;자기 자신을 확인하며 단축키&#xA;안외우기&lt;/em&gt; 같은게 다 무의미해짐.&lt;/li&gt;&#xA;&lt;li&gt;공식 사이트 들어가도 문서는 없다. 그냥 Vim 온라인 help을 보거나&#xA;하라는 친절인거 같다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Magit, Edb, 등등 대부분의 이맥스의 다른 Major mode들이랑은 정말&#xA;충돌하는 경우가 너무 많음.&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421&#34;&gt;https://github.com/ageldama/configs/blob/master/emacs/dot-emacs-2018#L421&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;위의 링크만 봐도, 내가 얼마나 충돌이 나는 모드들을 경험했는지&#xA;알수있다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;그럼에도-포기할수없는-나의-영도자&#34;&gt;그럼에도 포기할수없는 나의 영도자&lt;/h2&gt;&#xA;&lt;p&gt;좋은점, 그래도 고집을 갖고 계속 써야겠다고 생각하던 부분은:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

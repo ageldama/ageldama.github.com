@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>pytest fixtures와 의존성관리, 그리고 복잡도관리 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774504766">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+
+
+# ...tests/conftest.py
+
+import pytest
+
+@pytest.fixture
+def name(): return &#39;Pokemon&#39;
+
+@pytest.fixture(scope=&#39;function&#39;)
+def monster(name): ...
+
+
+
+# ...tests/foo_test.py :
+
+def test_beast(monster): ...
+    # &lt;--- `def monster(..)`의 결과를 주입 받음.
+
+
+https://docs.pytest.org/en/6.2.x/fixture.html
+&hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨.
+내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/myself/">⬅️ Contact: ageldama?</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-jekyll/2022-06-08--01-asshole-test/">➡️ (HN) &#34;asshole test&#34;</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents"></nav>
+
+    <article>
+	<div class="title"><h1 class="title">♓ pytest fixtures와 의존성관리, 그리고 복잡도관리</h1>
+	    <div class="meta">
+                <time datetime="2022-06-08" pubdate>
+                    2022년06월08일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12">12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13">13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14">14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15">15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16">16</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ...tests/conftest.py</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pytest</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@pytest.fixture</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">name</span><span class="p">():</span> <span class="k">return</span> <span class="s1">&#39;Pokemon&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@pytest.fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="s1">&#39;function&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">monster</span><span class="p">(</span><span class="n">name</span><span class="p">):</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ...tests/foo_test.py :</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_beast</span><span class="p">(</span><span class="n">monster</span><span class="p">):</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># &lt;--- `def monster(..)`의 결과를 주입 받음.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><a href="https://docs.pytest.org/en/6.2.x/fixture.html">https://docs.pytest.org/en/6.2.x/fixture.html</a></p>
+<p>&hellip;파이썬에 다른 의존성주입 컨테이너들도 있지만, 흥미롭고 실용적이어서 자주 쓰게됨.
+내가 소프트웨어 프로젝트에서 가장 중요하다고 생각하는 부분을 잘 캐치해주고, 편안하게 해주는 방식 같아.</p>
+<p>&lsquo;거창함&rsquo;이나 뭔가 남들이 좋다고 쓴다니까, 별 생각 없이 시도하는것들을 보면&hellip; 글쎄. ㅎㅎ&hellip;</p>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/software/">software</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/pytest/">pytest</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/complexity/">complexity</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/dependency-injection/">dependency-injection</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/fixtures/">fixtures</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "♓";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/myself/">⬅️ Contact: ageldama?</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-jekyll/2022-06-08--01-asshole-test/">➡️ (HN) &#34;asshole test&#34;</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774504766</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

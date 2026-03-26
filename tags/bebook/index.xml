@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bebook on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/bebook/</link>
+    <description>Recent content in Bebook on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Wed, 25 Mar 2026 06:29:36 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/bebook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BeOS, HaikuOS, Vitruvian [0.574695]</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/beos-haikuos-vitruvian/</link>
+      <pubDate>Wed, 25 Mar 2026 06:29:36 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/beos-haikuos-vitruvian/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;애플의 90년대말, 지금과는 사뭇다른&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;90년대말, 애플은 고전하고 있었다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/beos-haikuos-vitruvian/Sad_mac_%28white%29.jpg&#34;&#xA;    alt=&#34;“Sad Mac”&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;“Sad Mac”&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;MacOS Classic은 안정적일리가 없는 구조의 멀티태스킹 방식이었다고 한다.&#xA;처음 MacOS이 나올 당시, 1984년 당시엔 멀티태스킹이나 가상메모리 같은걸&#xA;고려할 여유는 없었을거 같다. 그리고 그 이후에 계속해서 특정한 트릭들을&#xA;사용하여 멀티태스킹이 정말 되는것처럼 만들기 위해 고군분투를 계속&#xA;이어만 갔던거 같다. &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/beos-haikuos-vitruvian/classic-macos-1984.gif&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;IBM와 손을 잡기도 하고&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-3&#34; href=&#34;#footnote-3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;, 자체개발도 하며 어떻게든 하위호환을 유지하며&#xA;OS의 안정성을 고치고 싶었었지만 모두 실패했다&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-4&#34; href=&#34;#footnote-4&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;물론, time-to-market의 관점에서는 맞았었지만 그 이후에 어떻게&#xA;대응했는가가 관건이었던것 같다. Microsoft의 Windows에서도 거의 유사한&#xA;패턴이 반복된다. 불안정한 DOS기반의 Windows 3.1, Windows 95을 계속해서&#xA;그대로 유지하며 안정적인 상태로 조금씩 뜯어고쳐 가지만 한계가&#xA;있었었고, 더 제대로 설계된, 그리고 하위호환성을 가상화 등을 활용해&#xA;유지한 Windows NT, Windows XP 이후의 흐름이 유사하다. 그러니 MacOS&#xA;Classic만이 유난히 더 나빴다고 하기는 어려울거 같기도 하다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

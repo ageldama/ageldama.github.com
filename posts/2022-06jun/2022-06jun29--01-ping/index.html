@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>linux/unix 팁 29/06/2022 .01 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774504766">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.
+그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.
+zoxide 으로 chdir 간단하게
+최근/디렉토리 이동한 히스토리에 따라서 (&ldquo;frecent&rdquo;) 이동하기:
+fzf&#43;zsh의 Control-R도 좋고1,
+oh-my-zsh 내장인 plugins=(z)도 좋지만2
+&hellip;나는 가능하면 zoxide이 가장 가볍고 좋은거 같다.
+설치하고 나서,
+eval &quot;$(zoxide init zsh)&quot;
+그리고, z SOME-DIR, zi 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ
+ssh으로 키보드/마우스 안 붙이고
+책상위에 여러대의 컴퓨터를 놓고 사용하는데, 용도에 따라서, 모두 마우스/키보드를 붙여 놓기 싫다.
+뭐 kvm switch 같은거 사서 써도 되겠지만, 그보다는 어떤 컴퓨터는 모니터만 붙여 놓고 쓰고 등등 같이 사용해서
+그런 방식은 잘 내 책상에서는 잘 맞지 않아서." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--02-ping/">⬅️ react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/">➡️ The Grug Brained Developer</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</a></li>
+    <li><a href="#ssh으로-키보드마우스-안-붙이고">ssh으로 키보드/마우스 안 붙이고</a>
+      <ul>
+        <li><a href="#vconsole-conspy">vconsole: <code>conspy</code></a></li>
+        <li><a href="#x11-x2x으로-여러-머신스크린에-걸쳐서-마우스키보드-공유">x11: <code>x2x</code>으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">👩🏽‍🐰‍👩🏿 linux/unix 팁 29/06/2022 .01</h1>
+	    <div class="meta">
+                <time datetime="2022-06-29" pubdate>
+                    2022년06월29일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <hr>
+<p>리눅스/유닉스/터미널/쉘은 아는만큼 편하게 쓰기 좋은거 같다.</p>
+<p>그리고 어떻게 연결해서 활용해 쓰는가에 따라서, 정말 편리해지기도 해서.</p>
+<h1 id="zoxide-으로-chdir-간단하게">zoxide 으로 chdir 간단하게</h1>
+<p>최근/디렉토리 이동한 히스토리에 따라서 (&ldquo;frecent&rdquo;) 이동하기:</p>
+<p>fzf+zsh의 <code>Control-R</code>도 좋고<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,</p>
+<p>oh-my-zsh 내장인 <code>plugins=(z)</code>도 좋지만<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>&hellip;나는 가능하면 <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a>이 가장 가볍고 좋은거 같다.</p>
+<p>설치하고 나서,
+<code>eval &quot;$(zoxide init zsh)&quot;</code></p>
+<p>그리고, <code>z SOME-DIR</code>, <code>zi</code> 같이 으로 사용하면 되고, fzf연동도 잘되고 해서. ㅎㅎ</p>
+<h1 id="ssh으로-키보드마우스-안-붙이고">ssh으로 키보드/마우스 안 붙이고</h1>
+<p>책상위에 여러대의 컴퓨터를 놓고 사용하는데, 용도에 따라서, 모두 마우스/키보드를 붙여 놓기 싫다.
+뭐 kvm switch 같은거 사서 써도 되겠지만, 그보다는 어떤 컴퓨터는 모니터만 붙여 놓고 쓰고 등등 같이 사용해서
+그런 방식은 잘 내 책상에서는 잘 맞지 않아서.</p>
+<p>vnc이나 rdp을 통해서 &ldquo;원격데스크톱&quot;으로 사용하는 방식도 아니고 (정말로 물리스크린 여러개를 컴퓨터별로 분리해 쓰는거니까),
+그리고 그건 너무 반응성도 느려서 안 좋아함.</p>
+<p>또, 데스크탑의 키보드 마우스를 공유해주는 솔루션들이 있는거 같기는 한데, 다 내 취향은 아니었었음.
+그리고, 어차피 x11이 네트웍을 통해서 얼마든지 그런걸 공유할 수 있는데 뭐하러 그런걸 더 깔아서 골치가 아파져야겠나.</p>
+<h2 id="vconsole-conspy">vconsole: <code>conspy</code></h2>
+<p>아예, <a href="https://wiki.archlinux.org/title/LightDM#Enabling_autologin">lightdm autlogin</a> 해도 되겠지만, 그마저도 메모리가 아까워서,
+그냥 linux vconsole에 연결해서 바로 로그인하고 싶을 때에 사용한다.</p>
+<p>ssh으로 접속해서, <code>sudo conspy 1</code> 하면 tty1의 키보드/터미널을 그대로 ssh을 통해서 제어가 가능.</p>
+<p><a href="http://conspy.sourceforge.net/">http://conspy.sourceforge.net/</a></p>
+<h2 id="x11-x2x으로-여러-머신스크린에-걸쳐서-마우스키보드-공유">x11: <code>x2x</code>으로 여러 머신/스크린에 걸쳐서 마우스/키보드 공유</h2>
+<p><a href="https://github.com/dottedmag/x2x">https://github.com/dottedmag/x2x</a></p>
+<p><code>ssh -CY ageldama@10.0.0.1 x2x -south -to :0</code> 정도로 현재 데탑에서 남쪽에 저 머신의 스크린이 있다고 설정.</p>
+<p>마우스 이동하면, 한 머신인것처럼 포커스가 이동되어서, 조작 가능해짐. ㅎㅎ</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh">https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/z/z.sh">https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/z/z.sh</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>127</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/linux/">linux</a>
+                        <sup>28</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/unix/">unix</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ssh/">ssh</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/conspy/">conspy</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/x2x/">x2x</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/chdir/">chdir</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/zoxide/">zoxide</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "👩🏽‍🐰‍👩🏿";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun29--02-ping/">⬅️ react.js, next.js, ssr, progressive hydration, 그리고 &#34;Islands Architecture&#34;와 fresh/deno</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2022-06jun/2022-06jun24--01-grug/">➡️ The Grug Brained Developer</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774504766</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

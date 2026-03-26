@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog Blogging Jekyll on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/blog-blogging-jekyll/</link>
+    <description>Recent content in Blog Blogging Jekyll on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 09:54:02 +0100</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/blog-blogging-jekyll/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to Jekyll!</title>
+      <link>https://ageldama.github.io/posts/2017/2017-01-01-welcome-to-jekyll/</link>
+      <pubDate>Sun, 01 Jan 2017 09:54:02 +0100</pubDate>
+      <guid>https://ageldama.github.io/posts/2017/2017-01-01-welcome-to-jekyll/</guid>
+      <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;&#xA;&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

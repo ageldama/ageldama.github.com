@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cffi on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/cffi/</link>
+    <description>Recent content in Cffi on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 17 Mar 2019 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/cffi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CFFI으로 CommonLisp 2d array을 Foreign function으로 전달하기</title>
+      <link>https://ageldama.github.io/posts/2019-03mar/cffi-2d-array/</link>
+      <pubDate>Sun, 17 Mar 2019 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-03mar/cffi-2d-array/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ageldama/cffi-2d-array-hello&#34;&gt;https://github.com/ageldama/cffi-2d-array-hello&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;cffi:with-foreign-array&lt;/code&gt;이 &lt;a href=&#34;https://common-lisp.net/project/cffi/manual/cffi-manual.html&#34;&gt;CFFI&#xA;manual&lt;/a&gt;에&#xA;없어서 처음에 좀 골치아팠음.&lt;/p&gt;&#xA;&lt;p&gt;리습 어레이를 복사해서 매핑해줌.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

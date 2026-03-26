@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Architecture on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/architecture/</link>
+    <description>Recent content in Architecture on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sat, 21 Feb 2026 11:50:52 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI시대의 소프트웨어 이슈 패턴</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb21--01-ping/</link>
+      <pubDate>Sat, 21 Feb 2026 11:50:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb21--01-ping/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;AI시대 이전의 패턴&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;실제 원하는걸 표현해내기 어려워서 생기는 문제, 그걸 도출하기&#xA;어려웠던 문제.&lt;/li&gt;&#xA;&lt;li&gt;iteration-cycle을 제대로 해내지 못함.&lt;/li&gt;&#xA;&lt;li&gt;단계별로 궤도를 원하는 방향으로 고치거나,&lt;/li&gt;&#xA;&lt;li&gt;아예 궤도를 잘못 설정함.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;요즘의 패턴&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;AI으로 생성해 낸 작업물은 많은데,&lt;/li&gt;&#xA;&lt;li&gt;막상 아키텍처적으로 보안적일 수 없는 구조를 만들어냄.&lt;/li&gt;&#xA;&lt;li&gt;그리고 다른 기능을 추가하거나 수정하기엔 직접 생성한 사람이&#xA;해내기 어려운 경우가 많이 생김.&lt;/li&gt;&#xA;&lt;li&gt;AI의 문제라기 보다는, 뭘 만들어 달라고 요청하는 사람의 문제.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-3&#34;&gt;&#xA;결국 신기할 정도로 비슷한 상황&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;결국, 요청하는 사람이 자기가 뭘 원하는지, 뭘 어떻게 만들어 달라고&#xA;  해야 하는데, 소프트웨어나 아키텍처, 보안에 대해서 접근/이해하기&#xA;  어려우니 여전히 문제는 그대로 남아서 그걸 손봐주는 소프트웨어&#xA;  전문가는 여전히 필요해짐.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>생성형AI, 진짜로 문제인 AI Hallucination은</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</link>
+      <pubDate>Wed, 18 Feb 2026 06:43:46 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;요즘 나와 우리는&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;요즘엔 SW/IT업계에 일자리가 많이 없어지는 것, 구독형, SaaS 기업의&#xA;주가가 떨어지고 투자가 사라지는 것에 대한 우려가 많다. 그리고 나도&#xA;영향을 받는 사람으로서 걱정이 없진 못하다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;“구독형 소프트웨어 서비스”와 데이터=석유🛢️?&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;그런데 사실 절대다수의 구독형서비스(…실은 그냥 모바일앱이나 데스크탑&#xA;앱이 좀 있는 웹서비스)/SaaS이 그렇게 존재할 사업이었던게 모순이&#xA;맞았던거 같다. 오히려 자동화 된 데이터모델과 그의 CRUD + 약간의 로직이&#xA;들어간 것을 각자가 해결해도 될 일이었던게 맞다. 도메인에 특화되어&#xA;있다고 하는 기업이든 특정 기술을 쓴다고 하는 기업이든… 그 도메인의&#xA;전문가라고 해야 할까 싶기도 하거니와, 말그대로 특정 기술을 “갖다 쓰는&#xA;것” 사용자인 곳일 뿐이기도 하고. …결국 적당한 뻥튀기를 다들 하니까&#xA;그게 이상한지 모르고 다같이 하며 장사를, 혹은 투자금을 쓰는 일을&#xA;했던거지 싶다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>data-driven programming &amp; data-driven design &amp; data-oriented programming ???</title>
+      <link>https://ageldama.github.io/posts/2025-03mar/2025-03mar12--01-data-prog/</link>
+      <pubDate>Wed, 12 Mar 2025 10:40:27 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-03mar/2025-03mar12--01-data-prog/</guid>
+      <description>&lt;p&gt;&#xA;비슷한 용어들. 내가 이해한 정리들은 &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;data-driven programming&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;데이터처리를 중심으로 하는 프로그래밍언어나 도구, 스타일.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  예를 들어, awk, perl은 입력의 패턴에 따라 코드를 나누고 출력을&#xA;  만들기 수월한 방식을 제공.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Data-driven_programming&#34;&gt;https://en.wikipedia.org/wiki/Data-driven_programming&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/Perl/perl5/commit/8d063cd8450e59ea1c611a2f4f5a21059a2804f1&#34;&gt;a &amp;#34;replacement&amp;#34; for awk and sed&lt;/a&gt; (by Larry Wall)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;data-oriented design&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;현대 cpu의 아키텍처에 적절하도록, cpu cache, simd등을 잘 적용될 수&#xA;  있도록 애플리케이션 데이터구조를 설계하는 방식.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그리고 단순히 게임개발에서 ecs만이 아니라 lmax disruptor등도 포함될&#xA;  것 같다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Data-oriented_design&#34;&gt;https://en.wikipedia.org/wiki/Data-oriented_design&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;dod의 예시: &lt;a href=&#34;https://en.wikipedia.org/wiki/Entity_component_system&#34;&gt;Entity component system&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://martinfowler.com/articles/lmax.html&#34;&gt;lmax disruptor&lt;/a&gt; (by Martin Fowler)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-3&#34;&gt;&#xA;data-oriented programming&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;그리고 또 갑자기 위 2개의 정의처럼 완전 갑자기, dop은 다음과 같은&#xA;  원칙들을 이용한 애플리케이션 개발방식:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

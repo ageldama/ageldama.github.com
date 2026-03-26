@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 15/Oct/2019 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774504765">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="커먼리습으로 간단한
+스택기반
+장난감 프로그래밍언어를 만들고있다.
+
+https://github.com/ageldama/cl-toy-stack-lang
+
+튜링컴플릿이나 그런거 관심도 없고 사실 Parser도 적절하게 만들지 않았다.
+다만 유니코드 잘되고 쓸만한 lexer generator이 커먼리습에 있는지가 궁금했다.
+적당히 내일 정도면 어느 정도 완전히 굴러가는 프로그램으로 다 만들고 마무리 할 듯.
+처음에는 QuickLisp 에서 어떤 Lexer을
+써야할까 고민하다가, cl-lex 쓰다가 실망스러웠다.1
+그러다가 만난게 Alexa 인데, 가장
+마음에 드는 lexer generator.
+https://www.rigetti.com/ 이 회사를 발견. 커먼리습으로 Quil
+Compiler2 만들고 퀀텀컴퓨팅
+관련된 기업인가 보다.
+그리고 깃헙 저장소 살펴보는데 흥미롭고 써보면 어떨까 싶은게 많이 보였다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/cl-toy-stack-lang/">⬅️ cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/ping-14mon/">➡️ Ping 14/Oct/2019</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents"></nav>
+
+    <article>
+	<div class="title"><h1 class="title">🙇 Ping 15/Oct/2019</h1>
+	    <div class="meta">
+                <time datetime="2019-10-15" pubdate>
+                    2019년10월15일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p>커먼리습으로 간단한
+<a href="https://en.wikipedia.org/wiki/Stack-oriented_programming">스택기반</a>
+장난감 프로그래밍언어를 만들고있다.</p>
+<blockquote>
+<p><a href="https://github.com/ageldama/cl-toy-stack-lang">https://github.com/ageldama/cl-toy-stack-lang</a></p>
+</blockquote>
+<p>튜링컴플릿이나 그런거 관심도 없고 사실 Parser도 적절하게 만들지 않았다.</p>
+<p>다만 유니코드 잘되고 쓸만한 lexer generator이 커먼리습에 있는지가 궁금했다.</p>
+<p>적당히 내일 정도면 어느 정도 완전히 굴러가는 프로그램으로 다 만들고 마무리 할 듯.</p>
+<p>처음에는 <a href="https://www.quicklisp.org/">QuickLisp</a> 에서 어떤 Lexer을
+써야할까 고민하다가, cl-lex 쓰다가 실망스러웠다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>그러다가 만난게 <a href="https://github.com/rigetti/alexa">Alexa</a> 인데, 가장
+마음에 드는 lexer generator.</p>
+<p><a href="https://www.rigetti.com/">https://www.rigetti.com/</a> 이 회사를 발견. 커먼리습으로 <a href="https://github.com/rigetti/quilc">Quil
+Compiler</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> 만들고 퀀텀컴퓨팅
+관련된 기업인가 보다.</p>
+<p>그리고 깃헙 저장소 살펴보는데 흥미롭고 써보면 어떨까 싶은게 많이 보였다.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>정규표현식으로 패턴을 지정하는것도 그렇고, 뭔가 제대로된 구현이
+딱 하나가 dominant한게 없어서 여기저기 비슷한 lexer 프로젝트들이
+있는데 다 장단점이 달라서 혼파망 느낌.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><em>Quil (instruction set architecture)</em> <a href="https://en.wikipedia.org/wiki/Quil_(instruction_set_architecture)">https://en.wikipedia.org/wiki/Quil_(instruction_set_architecture)</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">👅<a href="/series/programming-languages/">programming-languages</a>
+                        <sup>28</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>127</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>57</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lisp/">lisp</a>
+                        <sup>26</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/commonlisp/">commonlisp</a>
+                        <sup>21</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/common-lisp/">common-lisp</a>
+                        <sup>20</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/toy/">toy</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/forth/">forth</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/stack/">stack</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🙇";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/cl-toy-stack-lang/">⬅️ cl-toy-stack-lang 첫번째 버젼과 작업하면서 깨달은것</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2019-10oct/ping-14mon/">➡️ Ping 14/Oct/2019</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774504765</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

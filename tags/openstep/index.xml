@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openstep on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/openstep/</link>
+    <description>Recent content in Openstep on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Wed, 11 Mar 2026 07:14:55 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/openstep/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MacBook Neo와 iBook/iMac G3</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/macbook-neo/</link>
+      <pubDate>Wed, 11 Mar 2026 07:14:55 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/macbook-neo/</guid>
+      <description>&lt;p&gt;&#xA;맥북네오 새로 출시된거 보면서… 예전에 iPod Nano 디자인이 떠오르기도&#xA;한다. 또 다른 시대로는 iBook, iMac이 정체되어 있을때, 그러니까 MacOS&#xA;8, 9이 나오고 뭐 해도… 매킨토시 자체가 불안정하고, 한국에선 쓰기에&#xA;너무 비싸기만 했었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;무엇보다 사용자층이 계속해서 떠나갈데로 떠나가서, 모두 윈도/인텔PC을&#xA;쓰고 있던 시대가 떠오르는건 왜일까.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/IBook&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/macbook-neo/ibook.jpg&#34;&#xA;    alt=&#34;iBook: 당시의 ‘프루티거 에어로’(Frutiger Aero) 감성&#34;&gt;&lt;/a&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;iBook: 당시의 ‘프루티거 에어로’(Frutiger Aero) 감성&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;더욱이 한국은 ActiveX + MS Internet Explorer이 아니면 인터넷을&#xA;사용하기도 사실상 거의 불가능하고, Mac OS X 이전의 맥북은 사실상&#xA;한국에선 특정 애플리케이션: 포토샵이나 일러스트레이터, 프레임메이커&#xA;등만을 위해서만 의미가 있던 시절.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>타입스크립트는 새로운 델파이이지 않을까</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/typescript-is-the-new-delphi/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/typescript-is-the-new-delphi/</guid>
+      <description>&lt;p&gt;&#xA;타입스크립트, C#, &lt;a href=&#34;https://en.wikipedia.org/wiki/Visual_J%2B%2B&#34;&gt;J++&lt;/a&gt;, 델파이, 터보파스칼… 이 프로그래밍언어들의&#xA;공통점, 모두 같은 사람이 설계했다는 점이다:&lt;/p&gt;&#xA;&lt;p&gt;&#xA;👉 &lt;a href=&#34;https://en.wikipedia.org/wiki/Anders_Hejlsberg&#34;&gt;https://en.wikipedia.org/wiki/Anders_Hejlsberg&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이 포스팅에서는 이분과 관련된 추억놀음을 정리해 보려고 함. 결론이 있을&#xA;수 있겠고, 나 개인의 의견을 늘어놓지는 않아도 될 것 같다. 어차피 내&#xA;관점이 녹아 있을 수 밖에 없는 주관적으로 해석하고 나열하는&#xA;역사일테니까.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;DOS, 터보파스칼, 볼랜드의 시대 💾&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  &lt;figure&gt;&lt;a href=&#34;https://www.dosdays.co.uk/topics/Software/borland_turbo_pascal.php&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-01jan/typescript-is-the-new-delphi/turbo-pascal.png&#34;&#xA;      alt=&#34;터보파스칼 스크린샷들&#34; width=&#34;700&#34;&gt;&lt;/a&gt;&lt;figcaption&gt;&#xA;        &lt;p&gt;터보파스칼 스크린샷들&lt;/p&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  1990년대, 당시에 프로그래밍을 한다고 하면, 대부분은 GW-BASIC,&#xA;  QBASIC, QuickBasic이거나, 아니면 당시의 ‘볼랜드’社의 Turbo-C,&#xA;  Turbo-Pascal이 보통이지 않았을까 한다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

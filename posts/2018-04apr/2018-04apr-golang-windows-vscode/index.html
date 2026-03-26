@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Golang Windows에서 Vscode이랑 행복하게 쓰기 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774504764">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="Golang 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아.
+그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 VsCode 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만&hellip;)
+여튼 그런데 윈도에서 기본적으로 C컴파일러 설치되어 있어야 제대로 굴러가서,
+Mingw64 설치하고, $MINGW64/bin 디렉토리 $PATH에 걸어주니 잘됨.
+VsCode에서 디버거도 잘 붙고 만족스럽다." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/">⬅️ Emacs &#43; CMake-IDE Screencast</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-10-22-blogging/">➡️ 2017년 10월 22일, 블로깅 귀찮아</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents"></nav>
+
+    <article>
+	<div class="title"><h1 class="title">🔥 Golang Windows에서 Vscode이랑 행복하게 쓰기</h1>
+	    <div class="meta">
+                <time datetime="2018-04-14" pubdate>
+                    2018년04월14일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p><a href="https://golang.org/">Golang</a> 윈도 데탑에서 그냥 끄적거리기 괜찮은거 같아.
+그냥 편집기도 윈도에선 이맥스나 Vim 다 골치아파서 <a href="https://code.visualstudio.com/">VsCode</a> 쓰니까 설정도 따로 없고. (물론 리눅스에선 이맥스 그냥 쓰지만&hellip;)</p>
+<p>여튼 그런데 윈도에서 기본적으로 C컴파일러 설치되어 있어야 제대로 굴러가서,
+<a href="https://sourceforge.net/projects/mingw-w64/">Mingw64</a> 설치하고, <code>$MINGW64/bin</code> 디렉토리 <code>$PATH</code>에 걸어주니 잘됨.</p>
+<p>VsCode에서 디버거도 잘 붙고 만족스럽다.</p>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/golang/">golang</a>
+                        <sup>9</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/windows/">windows</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/mingw/">mingw</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/vscode/">vscode</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🔥";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2018-05may/2018-05may-emacs-cmake-ide-screencast/">⬅️ Emacs &#43; CMake-IDE Screencast</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2017/2017-10-22-blogging/">➡️ 2017년 10월 22일, 블로깅 귀찮아</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774504764</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jekyll on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/jekyll/</link>
+    <description>Recent content in Jekyll on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sat, 11 Jun 2022 03:10:36 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 11/06/2022</title>
+      <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun11-ping/</link>
+      <pubDate>Sat, 11 Jun 2022 03:10:36 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2022-06jun/2022-06jun11-ping/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h1 id=&#34;jekyll--hugo&#34;&gt;Jekyll &amp;ndash;&amp;gt; Hugo&lt;/h1&gt;&#xA;&lt;p&gt;&amp;hellip;Jekyll에서, 결국 다시 가볍고 그냥 잘 동작하는 Hugo으로 블로그 변경.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;생각&#34;&gt;생각&lt;/h1&gt;&#xA;&lt;p&gt;남들이 뭐래도 별 관심 없이.&#xA;실은 그냥 포장지와 리본장식만 변해가는거고,&lt;/p&gt;&#xA;&lt;p&gt;반면.&#xA;그 포장지, 리본장식과 그 의미와 가치를 제대로 분간해내지 못하니까.&lt;/p&gt;&#xA;&lt;p&gt;도구를 도구로 보면 안되고, 도구가 나를 쓴다는것을 이해해야 하는데.&#xA;그래서 도구를 이용해 자유로워질거라 착각하면, 도구에 얽메여 끌려만 가면&amp;hellip;,&#xA;그런데 도구에 이용당해 복종할수록 자유로워진다면 &amp;hellip;이겠지.&lt;/p&gt;&#xA;&lt;p&gt;끌려가며, 내가 생각치 않은곳에 끌려와 진짜 성장을 얻기도 하는 이도 있고,&#xA;끌려가며 원치 않는 방향으로 가며 그게 성장이라고 허울로 하기도 하는 이도 있고.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jekyll &#43; Rouge 소스코드 하일라이팅 테스트</title>
+      <link>https://ageldama.github.io/posts/2017/2017-01-02-source-hilite-testing/</link>
+      <pubDate>Mon, 02 Jan 2017 05:15:00 +0100</pubDate>
+      <guid>https://ageldama.github.io/posts/2017/2017-01-02-source-hilite-testing/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://rouge.jneen.net/&#34;&gt;Rouge&lt;/a&gt; 이거 적용해보기.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/ageldama/hello-adder-cl-asdf/blob/master/src/adders.lisp&#34;&gt;https://github.com/ageldama/hello-adder-cl-asdf/blob/master/src/adders.lisp&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-common_lisp&#34; data-lang=&#34;common_lisp&#34;&gt;;;; Actual Implementations here.&#xA;(in-package :hello-adder)&#xA;&#xA;(defun make-adder (n)&#xA;  (lambda (x) (+ n x)))&#xA;&#xA;(defun 1+er ()&#xA;  (make-adder 1))&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/ageldama/ageldama-gh-jekyll/commit/334ead4b31b305b82e85ae2c6a6e0a219ecc9e66&#34;&gt;https://github.com/ageldama/ageldama-gh-jekyll/commit/334ead4b31b305b82e85ae2c6a6e0a219ecc9e66&lt;/a&gt; 이렇게&#xA;작업해봤음.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Github.io 블로그 TraviCI으로 빌드해서 배포하기</title>
+      <link>https://ageldama.github.io/posts/2017/2017-01-02-travis-ci-jekyll-gh/</link>
+      <pubDate>Mon, 02 Jan 2017 04:35:00 +0100</pubDate>
+      <guid>https://ageldama.github.io/posts/2017/2017-01-02-travis-ci-jekyll-gh/</guid>
+      <description>&lt;p&gt;.. &lt;em&gt;&lt;a href=&#34;https://ageldama.github.io/github/jekyll/2017/01/01/github-jekyll.html&#34;&gt;여기&lt;/a&gt;&lt;/em&gt; 에 불만을 적었듯이,&#xA;여러가지로 그냥은 만족하기 어려운 부분이 있었다.&lt;/p&gt;&#xA;&lt;p&gt;그런데, Travis-CI을 통해서 빌드해서 배포한다는 분이&#xA;계셨다. &lt;a href=&#34;https://twitter.com/Realignist/status/815554589889994752&#34;&gt;https://twitter.com/Realignist/status/815554589889994752&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;..난 생각 못해본 방법. ㅎㅎ &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;그래서 도전.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;우선 Jekyll 소스용 저장소로 분리하고,&lt;/li&gt;&#xA;&lt;li&gt;배포하는 페이지들은 원래의 저장소에 git-push 하도록 했다.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/felixrieseberg/travis-jekyll-git&#34;&gt;https://github.com/felixrieseberg/travis-jekyll-git&lt;/a&gt; 여기 참고해서 삽질.&lt;/li&gt;&#xA;&lt;li&gt;결과물은 &lt;a href=&#34;https://github.com/ageldama/ageldama-gh-jekyll&#34;&gt;https://github.com/ageldama/ageldama-gh-jekyll&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;..진행하면서 처음에 좀 짜증났던거,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;Gemfile&lt;/code&gt; 에 설치할 의존성들 지정하고, &lt;code&gt;bundle update&lt;/code&gt;.&#xA;&lt;ol&gt;&#xA;&lt;li&gt;그리고 그것만으로는 안되고, &lt;code&gt;.travis.yml&lt;/code&gt; 파일에 gem설치를&#xA;지정해야했다. &lt;a href=&#34;https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5&#34;&gt;https://github.com/ageldama/ageldama-gh-jekyll/blob/master/.travis.yml#L5&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Travis-CI 작업의 세팅에서 &lt;code&gt;git_target&lt;/code&gt; 환경변수에 URL지정할때&amp;hellip;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;github.com/ageldama/ageldama-gh-jekyll.git&lt;/code&gt; 처럼 &lt;code&gt;https://&lt;/code&gt; 스킴 부분 빼고,&lt;/li&gt;&#xA;&lt;li&gt;또 뒤에 &lt;code&gt;.git&lt;/code&gt; 깜빡하면 당연히 git-push 안됨. ㅋ&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;&#xA;&lt;hr&gt;&#xA;&lt;ol&gt;&#xA;&lt;li id=&#34;fn:1&#34;&gt;&#xA;&lt;p&gt;솔직히 내가 뭘 제대로 하겠습니까.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Github.io의 Jekyll 버젼이랑 차이?</title>
+      <link>https://ageldama.github.io/posts/2017/2017-01-01-github-jekyll/</link>
+      <pubDate>Sun, 01 Jan 2017 14:35:00 +0100</pubDate>
+      <guid>https://ageldama.github.io/posts/2017/2017-01-01-github-jekyll/</guid>
+      <description>&lt;p&gt;다 만족스럽고 좋은데, 로컬에서 Jekyll 실행해서 미리보기한 결과랑&#xA;Github에 올려서 렌더링한거랑 마크다운 결과가 조금 달라서 짜증난다.&lt;/p&gt;&#xA;&lt;p&gt;아마 마크다운 렌더러 버젼 차이 때문일거 같은데 ㅜ.ㅜ&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;% jekyll -v&#xA;jekyll 3.3.1&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

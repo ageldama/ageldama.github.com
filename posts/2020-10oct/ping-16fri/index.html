@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ping 17/Oct/2020 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774504766">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+웹프론트엔드 개발을 조금씩 해보고 있다. 처음에는 예전 방식으로만
+하려고 하다가 조금씩 겨우 써보던 webpack을 다시 가이드를 차근차근
+공부하고 동작하는 방식을 이해하도록 뜯어보고 돌려봤다.
+
+생각보다 단순하게, 그리고 확장성 있게 쓸만한 빌드도구였다.
+
+다만 문제는 설정이 복잡하고 이해하기 힘든 점보다는 빌드 시간이 너무
+느린 점이었다. (내게는)
+
+그래서 parcel bundler을 시도 했는데, 설정도 거의 필요 없이 바로
+동작하고 하는 점은 좋고, 성능도 정말 빨랐다.
+
+다만 Vim/Emacs으로 파일을 편집하고 저장할 때, parcel watch 대상인
+파일들을 종종 아예 dev-server을 재시작해야만 제대로 동작하는 상태로
+빠지는게 조금 짜증났다. 기본으로 webpack보다는 이런 자잘한 부분이 좀
+덜 다듬어진걸까 싶다.1" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-17sat-2nd/">⬅️ Ping (2nd) 17/Oct/2020</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-17sat/">➡️ Ping 16/Oct/2020</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🔣 Ping 17/Oct/2020</h1>
+	    <div class="meta">
+                <time datetime="2020-10-17" pubdate>
+                    2020년10월17일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+웹프론트엔드 개발을 조금씩 해보고 있다. 처음에는 예전 방식으로만
+하려고 하다가 조금씩 겨우 써보던 webpack을 다시 가이드를 차근차근
+공부하고 동작하는 방식을 이해하도록 뜯어보고 돌려봤다.</p>
+<p>
+생각보다 단순하게, 그리고 확장성 있게 쓸만한 빌드도구였다.</p>
+<p>
+다만 문제는 설정이 복잡하고 이해하기 힘든 점보다는 빌드 시간이 너무
+느린 점이었다. (내게는)</p>
+<p>
+그래서 parcel bundler을 시도 했는데, 설정도 거의 필요 없이 바로
+동작하고 하는 점은 좋고, 성능도 정말 빨랐다.</p>
+<p>
+다만 Vim/Emacs으로 파일을 편집하고 저장할 때, <code>parcel watch</code> 대상인
+파일들을 종종 아예 dev-server을 재시작해야만 제대로 동작하는 상태로
+빠지는게 조금 짜증났다. 기본으로 webpack보다는 이런 자잘한 부분이 좀
+덜 다듬어진걸까 싶다.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+<p>
+Elm, BuckleScript, WASM, GLSL등 이미 웹개발을 하면서 필요한 부분들을
+통합하고 있어서 꾸준히 계속 써가는 것도 재밌을 것 같다.</p>
+<p>
+그리고 사람들이 JS, ECMAScript, TypeScript을 너무 진지하게 공부하고
+하는 것들을 보면 조금은 무섭다. 내 생각엔 새로 나온 문법을 너무 열심히
+외우고 뭐가 맞는지 language lawyer이 될 의미가 엄청난 언어는 아닌 것
+같다. 차라리 그걸 생성해내고 sanely 작성할 수 있는 도구를 이해하고
+익히는 수준이 더 좋을 것 같은데.</p>
+<blockquote>
+<p>JavaScript is an assembly language. The JavaScript + HTML generate is
+like a .NET assembly. The browser can execute it, but no human should
+really care what’s there. - Erik Meijer<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
+</blockquote>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>GH이슈
+<a href="https://github.com/parcel-bundler/parcel/issues/2749#issuecomment-472299242">https://github.com/parcel-bundler/parcel/issues/2749#issuecomment-472299242</a></p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p>
+https://www.hanselman.com/blog/javascript-is-assembly-language-for-the-web-sematic-markup-is-dead-clean-vs-machinecoded-html
+재밌는 것은 Brendan Eich 같은 분들도 그렇게 JS을 직접 쓰는 현재가
+괴상하다는 생각을 해서… 인 것 같다. 이 말을 한 당사자도
+<a href="https://en.wikipedia.org/wiki/Erik_Meijer_(computer_scientist)">https://en.wikipedia.org/wiki/Erik_Meijer_(computer_scientist)</a>
+…이고. 흥미로운 것은 &#39;현실&#39;이라고 말하는 이유들으로 그렇게 하는 것이
+최선인 것처럼 하고 등을 떠미는 것 같다. 이 주제만으로 글을 더 쓸 수
+있을 것 같다.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>127</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>57</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webdev/">webdev</a>
+                        <sup>30</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/javascript/">javascript</a>
+                        <sup>19</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/js/">js</a>
+                        <sup>16</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/.net/">.net</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/elm/">elm</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/webpack/">webpack</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/wasm/">wasm</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/bucklescript/">bucklescript</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/parcel/">parcel</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🔣";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-17sat-2nd/">⬅️ Ping (2nd) 17/Oct/2020</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-17sat/">➡️ Ping 16/Oct/2020</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774504766</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

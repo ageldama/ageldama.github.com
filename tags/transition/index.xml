@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transition on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/transition/</link>
+    <description>Recent content in Transition on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 23 Dec 2025 18:41:21 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/transition/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>블로그 &#43; [htmx transition animation, loading indicator]</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/blog-htmx-transition-anims/</link>
+      <pubDate>Tue, 23 Dec 2025 18:41:21 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/blog-htmx-transition-anims/</guid>
+      <description>&lt;p&gt;&#xA;htmx &lt;code&gt;hx-boost&lt;/code&gt;-을 적용하기 시작하면서(이 시리즈 전 포스팅 참고 👉&#xA;&lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/htmx-hx-boost+dark-mode/&#34;&gt;htmx 마법으로 링크성능 빠르게 + dark-mode 깜빡임 제거&lt;/a&gt; ) 효과를 넣는게 가능해졌음.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;htmx loading indicator 적용.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://dev.to/amal/global-progress-bar-for-htmx-50fa&#34;&gt;https://dev.to/amal/global-progress-bar-for-htmx-50fa&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;htmx view transitions animation 적용.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://htmx.org/examples/animations/#settling&#34;&gt;https://htmx.org/examples/animations/#settling&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;…좀 무던하게 적용해보려 뚝딱 🛠️&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

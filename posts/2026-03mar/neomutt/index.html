@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>neomutt [0.459598] - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774504766">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="21세기에 tui/터미널 이메일 클라이언트를 사용하는 즐거움" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/macbook-neo/">⬅️ MacBook Neo와 iBook/iMac G3</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/2026-03mar10--01-ping/">➡️ Ping 10/03/2026 .01</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    
+
+    <article>
+	<div class="title"><h1 class="title">🐶 neomutt [0.459598]</h1>
+	    <div class="meta">
+                <time datetime="2026-03-11" pubdate>
+                    2026년03월11일
+                </time>
+                </div>
+        </div>
+
+        
+        <div class="description">
+	    <span class="short-description">
+                21세기에 tui/터미널 이메일 클라이언트를 사용하는 즐거움
+            </span>
+        </div>
+        
+
+	
+
+	<section class="body">
+	    <p>
+neomutt 설정을 다른 사람들이 만들어 놓은걸 인터넷 검색을 하고,
+매뉴얼을 읽으며 세팅해 사용한지 꽤 되어간다.</p>
+<p>
+스마트폰에서는 당연히 기본 클라이언트가 있으니 괜찮고, 대부분은 web
+ui을 쓰기도 하지만, 스팸을 정리하거나 답신을 쓰거나 할때엔 훨씬
+편하다. 내가 그렇게 편하게 만들어서 그런지도 모르겠다.</p>
+<p>
+처음엔 mu4e, offlineimap, mbsync 같은걸 더 스크립팅해서 검색인덱싱도
+하고 하면서 쓰다가, 결국엔 그냥 imap client으로 사용해도 괜찮아서
+이대로 쓴다.</p>
+<p>
+비밀번호 같은건 gnupg으로 암호화 해놓고, pinentry이 자동으로 unlock
+비번 물어보도록 세팅해서 편안하다.</p>
+<p>
+가장 좋은건 그냥 키보드에서 검색, 정리가 가능한 점, 그리고 여러개의
+이메일 계정을 전환하기 쉽게 설정파일에 단축키를 만들어 놓고 쓰니까
+편리한 점 같다.</p>
+<p>
+이맥스에 mu4e 연결해서 써도 괜찮지만, 그냥 완전히 분리해서 이대로도
+괜찮다. 어차피 <code>$EDITOR=emacsclient</code> 연결되어서 이맥스으로 메일
+작성하도록 하면 되니까.</p>
+<p>
+괴상한 방식이지만, 그래도 나름 평온하게 쓰기 좋아진거 같다.</p>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>127</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/terminal/">terminal</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/tui/">tui</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/client/">client</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/smtps/">smtps</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/imaps/">imaps</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/imap/">imap</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/smtp/">smtp</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/mua/">mua</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/mail/">mail</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/email/">email</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🐶";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/macbook-neo/">⬅️ MacBook Neo와 iBook/iMac G3</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/2026-03mar10--01-ping/">➡️ Ping 10/03/2026 .01</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774504766</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

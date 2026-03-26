@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ps4 on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/ps4/</link>
+    <description>Recent content in Ps4 on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Wed, 08 Mar 2023 06:15:08 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/ps4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 08/03/2023 .01 : 전자책읽기</title>
+      <link>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--01-ping/</link>
+      <pubDate>Wed, 08 Mar 2023 06:15:08 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2023-03mar/2023-03mar08--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;linux에서 전자책 편안하게 읽는 방법들 간단하게 몇가지 팁들만 나열,&#xA;별로 내용은 길게 늘여 쓰지 않으려고:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;linux, 그중에서도 가벼운 하드웨어와 단순하게 잘 동작하는 배포판.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;여러가지 불필요한 군더더기 없고, 패키지들이 조금 오래된&#xA;버젼이어도, 안정적으로만 동작하면 상관 없음.&lt;/li&gt;&#xA;&lt;li&gt;그래서, debian stable -or- testing 쓰면 속이 편함.&lt;/li&gt;&#xA;&lt;li&gt;하드웨어는 raspberry pi 3/4 둘 다 좋았다. &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&#xA;…특히 전력소모도 거의 없고, 딱 모니터 연결해 놓고 팬소음 거의&#xA;없이 쾌적하게 책을 읽기 좋다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;calibre 책파일 관리, 읽기 모두 만족스러움&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 19/Jul/2020</title>
+      <link>https://ageldama.github.io/posts/2020-07jul/ping-19sun/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-07jul/ping-19sun/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;쉬는 날.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;그간 4개월 정도 집중해온 작업이 어느 정도 궤도에 올라갔다. 앞으로도&#xA;  더 많은 작업을 해야겠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  하지만 일요일이고, 오늘 하루는 조금 마무리 작업을 해놓고 휴식을 할까&#xA;  마음 먹었다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;1Q84, 하루키 소설 영문판 읽기&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;군생활을 할 때 시간을 쪼개서 영문판 책들을 많이 읽었었다. 진중문고와&#xA;  그밖에 휴가를 다녀온 사람들이 놓고간, 세월이 흘러가며 쌓여있는&#xA;  아무도 읽지 않는 좋은 책들을 많이 읽었었던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그중에는 아직도 다시 읽고 싶은 책들과 좋아하는 작가와 철학자들이&#xA;  많이 생겼었던 것 같다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

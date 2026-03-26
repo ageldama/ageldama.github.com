@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34; - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774504765">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+
+문제
+
+
+https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
+
+
+
+
+작성한 코드     
+
+
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+  (defun max-nested-parentheses (s)
+    (declare (optimize (speed 3) (safety 0))
+             (type simple-string s))
+    (loop with n fixnum = 0
+          for ch across s
+          when (member ch &#39;(#\( #\)))
+          do (incf n (if (eql #\( ch) 1 -1))
+             maximizing n))
+
+
+
+
+
+
+
+코드 의도
+
+
+
+우아한 코드보다는 공간복잡도가 O(1) 이고 싶었다.
+
+
+
+
+
+Edit
+
+
+
+
+SBCL에 맞춰 코드에 타입을 지정해줘봤다.
+
+결과 어셈블리 코드가 조금 짧아졌다.
+
+
+
+
+" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/leet-code-1614-2nd/">⬅️ CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-19mon/">➡️ Ping 19/Oct/2020</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">문제</a>
+</li>
+<li><a href="#headline-2">작성한 코드     </a>
+</li>
+<li><a href="#headline-3">코드 의도</a>
+</li>
+<li><a href="#headline-4"><em>Edit</em></a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🫱 CommonLisp / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</h1>
+	    <div class="meta">
+                <time datetime="2020-10-20" pubdate>
+                    2020년10월20일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+문제
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><a href="https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/">https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/</a></p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+작성한 코드     
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div class="src src-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5">5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6">6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7">7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">max-nested-parentheses</span> <span class="p">(</span><span class="nv">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">declare</span> <span class="p">(</span><span class="k">optimize</span> <span class="p">(</span><span class="nv">speed</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nv">safety</span> <span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="k">type</span> <span class="kt">simple-string</span> <span class="nv">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">loop</span> <span class="nv">with</span> <span class="nv">n</span> <span class="kt">fixnum</span> <span class="nf">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">          <span class="nv">for</span> <span class="nv">ch</span> <span class="nv">across</span> <span class="nv">s</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">when</span> <span class="p">(</span><span class="nf">member</span> <span class="nv">ch</span> <span class="o">&#39;</span><span class="p">(</span><span class="sc">#\(</span> <span class="sc">#\)</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">do</span> <span class="p">(</span><span class="nb">incf</span> <span class="nv">n</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">eql</span> <span class="sc">#\(</span> <span class="nv">ch</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">-1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">             <span class="nv">maximizing</span> <span class="nv">n</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+코드 의도
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<ol>
+<li>우아한 코드보다는 공간복잡도가 <code>O(1)</code> 이고 싶었다.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+<em>Edit</em>
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<ol>
+<li>
+<p>SBCL에 맞춰 코드에 타입을 지정해줘봤다.</p>
+<ol>
+<li>결과 어셈블리 코드가 조금 짧아졌다.</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>57</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lisp/">lisp</a>
+                        <sup>26</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/commonlisp/">commonlisp</a>
+                        <sup>21</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/common-lisp/">common-lisp</a>
+                        <sup>20</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/reversing/">reversing</a>
+                        <sup>8</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/disassembly/">disassembly</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/disassemble/">disassemble</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/assembly/">assembly</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/leet-code/">leet-code</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🫱";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/leet-code-1614-2nd/">⬅️ CommonLisp (w/o LOOP-macro) / LeetCode &#34;1614. max nesting depth of the parentheses&#34;</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2020-10oct/ping-19mon/">➡️ Ping 19/Oct/2020</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774504765</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

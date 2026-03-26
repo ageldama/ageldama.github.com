@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>data-driven programming &amp; data-driven design &amp; data-oriented programming ??? - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774504766">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+비슷한 용어들. 내가 이해한 정리들은 1:
+
+
+data-driven programming
+
+
+데이터처리를 중심으로 하는 프로그래밍언어나 도구, 스타일.
+
+  예를 들어, awk, perl은 입력의 패턴에 따라 코드를 나누고 출력을
+  만들기 수월한 방식을 제공.
+
+https://en.wikipedia.org/wiki/Data-driven_programming
+a &#34;replacement&#34; for awk and sed (by Larry Wall)
+
+
+
+
+
+data-oriented design
+
+
+현대 cpu의 아키텍처에 적절하도록, cpu cache, simd등을 잘 적용될 수
+  있도록 애플리케이션 데이터구조를 설계하는 방식.2
+
+  그리고 단순히 게임개발에서 ecs만이 아니라 lmax disruptor등도 포함될
+  것 같다.
+
+https://en.wikipedia.org/wiki/Data-oriented_design
+dod의 예시: Entity component system
+lmax disruptor (by Martin Fowler)
+
+
+
+
+
+data-oriented programming
+
+
+그리고 또 갑자기 위 2개의 정의처럼 완전 갑자기, dop은 다음과 같은
+  원칙들을 이용한 애플리케이션 개발방식:" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/">⬅️ css, design 새단장 &#43; dark-mode</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/">➡️ xmake, compile_commands.json, flycheck</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">data-driven programming</a>
+</li>
+<li><a href="#headline-2">data-oriented design</a>
+</li>
+<li><a href="#headline-3">data-oriented programming</a>
+</li>
+<li><a href="#headline-4">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🇳🇴 data-driven programming &amp; data-driven design &amp; data-oriented programming ???</h1>
+	    <div class="meta">
+                <time datetime="2025-03-12" pubdate>
+                    2025년03월12일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+비슷한 용어들. 내가 이해한 정리들은 <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>:</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+data-driven programming
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>데이터처리를 중심으로 하는 프로그래밍언어나 도구, 스타일.</p>
+<p>
+  예를 들어, awk, perl은 입력의 패턴에 따라 코드를 나누고 출력을
+  만들기 수월한 방식을 제공.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Data-driven_programming">https://en.wikipedia.org/wiki/Data-driven_programming</a></li>
+<li><a href="https://github.com/Perl/perl5/commit/8d063cd8450e59ea1c611a2f4f5a21059a2804f1">a &#34;replacement&#34; for awk and sed</a> (by Larry Wall)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+data-oriented design
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>현대 cpu의 아키텍처에 적절하도록, cpu cache, simd등을 잘 적용될 수
+  있도록 애플리케이션 데이터구조를 설계하는 방식.<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
+<p>
+  그리고 단순히 게임개발에서 ecs만이 아니라 lmax disruptor등도 포함될
+  것 같다.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Data-oriented_design">https://en.wikipedia.org/wiki/Data-oriented_design</a></li>
+<li>dod의 예시: <a href="https://en.wikipedia.org/wiki/Entity_component_system">Entity component system</a></li>
+<li><a href="https://martinfowler.com/articles/lmax.html">lmax disruptor</a> (by Martin Fowler)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+data-oriented programming
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>그리고 또 갑자기 위 2개의 정의처럼 완전 갑자기, dop은 다음과 같은
+  원칙들을 이용한 애플리케이션 개발방식:</p>
+<ul>
+<li>( <a href="https://blog.klipse.tech/dop/2022/06/22/principles-of-dop.html">https://blog.klipse.tech/dop/2022/06/22/principles-of-dop.html</a> )</li>
+<li>Principle #1: Separating code (behavior) from data.</li>
+<li>Principle #2: Representing data with generic data structures.</li>
+<li>Principle #3: Treating data as immutable.</li>
+<li>Principle #4: Separating data schema from data representation.</li>
+</ul>
+<p>
+  다음 책을 재밌게 읽음:</p>
+<ul>
+<li><a href="https://www.amazon.com/Data-Oriented-Programming-Unlearning-Yehonathan-Sharvit/dp/1617298573">data-oriented programming</a> (by Yehonathan Sharvit)</li>
+</ul>
+<p>
+  실은 이미 몇년전부터 clojure 커뮤니티, 코드에서는 일반화된
+  방식이었음.</p>
+<p>
+  분명히 유연하고 복잡도를 확 낮출 수 있는 방식이지만, 제약이
+  있음. (책에서는 제대로 언급하거나 다루지 않아서 아쉬웠음)</p>
+<ol>
+<li>
+<p>애플리케이션의 전체 데이터셋 크기가 메모리보다 크다면 적용이
+어렵다.</p>
+<ul>
+<li>==&gt; db을 쓰는 전통적인 방식의 애플리케이션을 기반으로
+설명하지는 않음.</li>
+<li>db 연결하는 챕터가 있지만, 실은 일부를 저장/로딩하는 내용일 뿐.</li>
+</ul>
+</li>
+<li><a href="https://clojure.org/reference/multimethods">multiple-dispatch</a>을 제대로 지원하는 언어라면 더 적절함. (clojure)</li>
+<li>당연히 실행시간 분기가 더 많아지므로, 성능이 정말 중요한 경우엔
+손해.</li>
+</ol>
+<p>
+  그리고 이런 특징들 때문인지, clojure community은 다음과 같은 것들을
+  만들어 갔으리라:</p>
+<ol>
+<li>
+<p><a href="https://docs.datomic.com/client-tutorial/read.html">datomic</a></p>
+<ul>
+<li>링크의 예시에서 보듯이, clojure에서 in-memory자료에 접근하듯이
+쿼리 및 데이터 표현.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://clojure.org/guides/spec">clojure.spec</a></p>
+<ul>
+<li>실행시간의 값의 내용에 따른 contracts, validations.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>별도의 정리는 하지 않음.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p>이와 대조되는 방식으로는 전통적인 객체지향 등에서처럼 한 객체
+인스턴스가 한 엔티티를 표현하고, 불연속적인 공간에 변수레퍼런스로서
+참조/정리되어 있는 구조.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">📖<a href="/series/%EC%B1%85/">책</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>57</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/perl/">perl</a>
+                        <sup>16</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/c&#43;&#43;/">c&#43;&#43;</a>
+                        <sup>12</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/book/">book</a>
+                        <sup>10</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/books/">books</a>
+                        <sup>9</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/clojure/">clojure</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/awk/">awk</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/architecture/">architecture</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/design/">design</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cache/">cache</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/data-oriented-programming/">data-oriented-programming</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/data-driven-design/">data-driven-design</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/data-driven-programming/">data-driven-programming</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/clojure.spec/">clojure.spec</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/datomic/">datomic</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gamdev/">gamdev</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/sed/">sed</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cpu/">cpu</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ecs/">ecs</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/data/">data</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🇳🇴";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar15--01-new-css/">⬅️ css, design 새단장 &#43; dark-mode</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2024-05may/2024-05may06--xmake-compile_commands_json-flycheck/">➡️ xmake, compile_commands.json, flycheck</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774504766</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

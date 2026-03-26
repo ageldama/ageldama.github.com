@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>추억두더쥐 on 아겔로그</title>
+    <link>https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/</link>
+    <description>Recent content in 추억두더쥐 on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Wed, 25 Mar 2026 06:29:36 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/series/%EC%B6%94%EC%96%B5%EB%91%90%EB%8D%94%EC%A5%90/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BeOS, HaikuOS, Vitruvian [0.574695]</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/beos-haikuos-vitruvian/</link>
+      <pubDate>Wed, 25 Mar 2026 06:29:36 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/beos-haikuos-vitruvian/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;애플의 90년대말, 지금과는 사뭇다른&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;90년대말, 애플은 고전하고 있었다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/beos-haikuos-vitruvian/Sad_mac_%28white%29.jpg&#34;&#xA;    alt=&#34;“Sad Mac”&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;“Sad Mac”&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;MacOS Classic은 안정적일리가 없는 구조의 멀티태스킹 방식이었다고 한다.&#xA;처음 MacOS이 나올 당시, 1984년 당시엔 멀티태스킹이나 가상메모리 같은걸&#xA;고려할 여유는 없었을거 같다. 그리고 그 이후에 계속해서 특정한 트릭들을&#xA;사용하여 멀티태스킹이 정말 되는것처럼 만들기 위해 고군분투를 계속&#xA;이어만 갔던거 같다. &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/beos-haikuos-vitruvian/classic-macos-1984.gif&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;IBM와 손을 잡기도 하고&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-3&#34; href=&#34;#footnote-3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;, 자체개발도 하며 어떻게든 하위호환을 유지하며&#xA;OS의 안정성을 고치고 싶었었지만 모두 실패했다&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-4&#34; href=&#34;#footnote-4&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;물론, time-to-market의 관점에서는 맞았었지만 그 이후에 어떻게&#xA;대응했는가가 관건이었던것 같다. Microsoft의 Windows에서도 거의 유사한&#xA;패턴이 반복된다. 불안정한 DOS기반의 Windows 3.1, Windows 95을 계속해서&#xA;그대로 유지하며 안정적인 상태로 조금씩 뜯어고쳐 가지만 한계가&#xA;있었었고, 더 제대로 설계된, 그리고 하위호환성을 가상화 등을 활용해&#xA;유지한 Windows NT, Windows XP 이후의 흐름이 유사하다. 그러니 MacOS&#xA;Classic만이 유난히 더 나빴다고 하기는 어려울거 같기도 하다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MS Windows 3.1 배경화면 .bmp 모음</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar24--01-ping/</link>
+      <pubDate>Tue, 24 Mar 2026 06:51:41 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar24--01-ping/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/andreasjansson/win-3.1-backgrounds&#34;&gt;Github 저장소&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=47496221&#34;&gt;HN 댓글 모음&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/2026-03mar24--01-ping/2026-03-24_16-04.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;&#xA;이상하게 마음에 든다. 그때에도 그랬던거 같지만. ㅎㅎ&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;code&gt;feh --bg-tile FILENAME&lt;/code&gt; 으로 세팅해서 사용한다: &lt;a href=&#34;https://github.com/ageldama/configs/blob/master/i3wm/wg.pl#L30-L36&#34;&gt;https://github.com/ageldama/configs/blob/master/i3wm/wg.pl#L30-L36&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sweet Child O’ Mine</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar13--01-ping/</link>
+      <pubDate>Fri, 13 Mar 2026 07:16:26 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar13--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/oMfMUfgjiLg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;…“섬광의 하사웨이”인가 건담극장판에 사용했다고 뜨더라.&#xA;ㅎㅎㅎ그은담아재들이랑 건샌로지스랑 세대가 겹치긴 할거 같다. 🪪&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MacBook Neo와 iBook/iMac G3</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/macbook-neo/</link>
+      <pubDate>Wed, 11 Mar 2026 07:14:55 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/macbook-neo/</guid>
+      <description>&lt;p&gt;&#xA;맥북네오 새로 출시된거 보면서… 예전에 iPod Nano 디자인이 떠오르기도&#xA;한다. 또 다른 시대로는 iBook, iMac이 정체되어 있을때, 그러니까 MacOS&#xA;8, 9이 나오고 뭐 해도… 매킨토시 자체가 불안정하고, 한국에선 쓰기에&#xA;너무 비싸기만 했었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;무엇보다 사용자층이 계속해서 떠나갈데로 떠나가서, 모두 윈도/인텔PC을&#xA;쓰고 있던 시대가 떠오르는건 왜일까.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/IBook&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/macbook-neo/ibook.jpg&#34;&#xA;    alt=&#34;iBook: 당시의 ‘프루티거 에어로’(Frutiger Aero) 감성&#34;&gt;&lt;/a&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;iBook: 당시의 ‘프루티거 에어로’(Frutiger Aero) 감성&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;더욱이 한국은 ActiveX + MS Internet Explorer이 아니면 인터넷을&#xA;사용하기도 사실상 거의 불가능하고, Mac OS X 이전의 맥북은 사실상&#xA;한국에선 특정 애플리케이션: 포토샵이나 일러스트레이터, 프레임메이커&#xA;등만을 위해서만 의미가 있던 시절.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 10/03/2026 .01</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar10--01-ping/</link>
+      <pubDate>Tue, 10 Mar 2026 08:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar10--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;봄이왔다. 언제나처럼 약간은 뿌옇고 나른한 봄날 서울공기.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;조금 가볍게 입고 돌아다니기 좋아졌다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;퀘이크1 + 👉&lt;a href=&#34;https://github.com/sezero/quakespasm&#34;&gt;Quakespasm&lt;/a&gt; 나름 괜찮게 굴러간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;게이밍PC 데스크탑에서는 Steam / 베데스다판으로 돌리는데 잘 돌아간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;➕ 구형랩탑에서 플레이는 Quake Enhanced판 + Quakespasm.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Quake I</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/quake-i/</link>
+      <pubDate>Sun, 08 Mar 2026 14:28:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/quake-i/</guid>
+      <description>&lt;p&gt;&#xA;정말 그말이 맞다고 생각이 드는게, 어릴적엔 시간이 느리게 간거 같은데&#xA;나이를 먹을수록 너무 시간이 빨리 흐른다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;WOLF3D, Doom이 나온지 몇 년 지나지도 않아서 갑자기 퀘이크1이 나오는데&#xA;까지 몇년 걸리지 않았었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;울펜슈타인은 1992년, 둠(클래식)은 1993년, 그리고 퀘이크1은 1996년이었었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/quake-i/2026-03-08_23-36.png&#34;&#xA;    alt=&#34;(&amp;hellip;Shambler!)&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;(&amp;hellip;Shambler!)&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;id software의 작품들이 거의 다 그렇지만, Doom도 그렇고, 퀘이크시리즈도&#xA;적몬스터들이 이상하게 팬들에게 애착을 일으킨다. ㅎㅎ&lt;/p&gt;&#xA;&lt;p&gt;&#xA;지금와서 보면 당연한 3d 그래픽이지만, 당시에 gpu은 일반적이지&#xA;않았었다. 그래픽카드가 현재의 gpgpu 같은 역할을 하게 될거라고&#xA;예상하기도 어려웠었다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>“Protection” Massive Attack</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/2026-01jan27--01-ping/</link>
+      <pubDate>Tue, 27 Jan 2026 04:38:12 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/2026-01jan27--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/0Rw-UsRPNqc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그리고 &lt;a href=&#34;https://www.imdb.com/title/tt0113243/&#34;&gt;추억의 명화&lt;/a&gt; ㅎㅎ&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>“Hands of Necromancy II”</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/2026-01jan26--03-ping/</link>
+      <pubDate>Mon, 26 Jan 2026 17:26:28 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/2026-01jan26--03-ping/</guid>
+      <description>&lt;p&gt;&#xA;지난번 &lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy/&#34;&gt;‘Hands of Necromancy’&lt;/a&gt; 포스팅 이후, II도 플레이.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;맵을 돌아다니기에도 아름답고, 재밌는 방식으로 날아다녀야 하거나&#xA;물리엔진을 이용한 재밌는 방식이 더 늘었다.&lt;/li&gt;&#xA;&lt;li&gt;playable character이 하나 더 늘어나서 약간씩 차이가 있음.&lt;/li&gt;&#xA;&lt;li&gt;전투가 조금 더 재밌어졌다. (…적이 한 번에 많이 덤빈다)&lt;/li&gt;&#xA;&lt;li&gt;보스전은… 좀 너무 빡쎄다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;그렇게 엄청 인기가 많은 게임은 아니니 막힐 때 공략이 마땅히 없어서&#xA;오히려 더 &amp;lt;tab&amp;gt;으로 맵을 뒤적거리면서 하나씩 backtracking해서 풀어야&#xA;했다. 오랬만에 이게 더 재밌었음.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 26/01/2026 .02</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/2026-01jan26--02-ping/</link>
+      <pubDate>Mon, 26 Jan 2026 05:20:15 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/2026-01jan26--02-ping/</guid>
+      <description>&lt;p&gt;&#xA;트윈픽스는 오프닝 이외에도 OST 음악들 전반적으로 좋으다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;한국 TV에서 방영한적이 있다고 하는데, 그때 난 시청하진 못하고 나중에야&#xA;인터넷을 통해 구해서 봤다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;외적으로 재밌을거 같은 이야기는(엑스파일 팬이라면), 엑스파일에 영향을&#xA;강하게 준 드라마였으리라 추측한다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 물론 엑스파일 자체가&#xA;시즌1에서는 ‘양들의 침묵’의 분위기를 대놓고 복제하려 시도한다. 이후&#xA;시즌/에피소드에서 점점 그런 색깔을 내려놓고 엑스파일 자체만의 캐릭터,&#xA;분위기, 구조를 완성하지만 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;예를 들어, &lt;a href=&#34;https://x-files.fandom.com/wiki/William_Scully_(father)&#34;&gt;스컬리의 아버지&lt;/a&gt;-은 아예 같은 배우이고, 트윈픽스에서 음모를&#xA;숨기고 있는 &lt;a href=&#34;https://twinpeaks.fandom.com/wiki/Garland_Briggs&#34;&gt;공군장교&lt;/a&gt;-으로 나오는데, 엑스파일에선 퇴역한 해군장교으로&#xA;나온다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>“small web” || “dead internet”</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/2026-01jan25--02-ping/</link>
+      <pubDate>Sun, 25 Jan 2026 16:21:25 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/2026-01jan25--02-ping/</guid>
+      <description>&lt;p&gt;&#xA;sns을 하거나 남들이 더 접근하기 손쉬운 매체, 혹은 내게 더 이익이 될&#xA;수도 있을 유튜브나 그런걸 하는게 더 좋을거 같다는 생각을 해본다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;남에게 관심을 더 끌고 싶은 마음도 없고 그래서 따라올 의도하지 않은&#xA;피곤함도 이제는 사양하고 싶어서 같다. 유튜브 같은건 잘 해낼 능력이&#xA;있을까 싶기도 해서.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Dead_Internet_theory&#34;&gt;죽은 인터넷 이론&lt;/a&gt; 같은걸 단순히 음모론으로 평가절하하기엔 지금 시대의&#xA;휩쓸림, 편향, 소비주의, 자본주의, ‘bot’-같은걸 너무 잘 포착한 생각이지&#xA;않나 싶다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;과거, 그러니까 &lt;a href=&#34;https://en.wikipedia.org/wiki/AltaVista&#34;&gt;altavista&lt;/a&gt; 시대나 구글 검색의 초창기까지만 해도 뭔가&#xA;웹검색을 하면 내가 모르는 어딘가가, 더 탐험할 어딘가가 더 있을거&#xA;같았다. 요즘엔 스마트폰이나 웹브라우저를 켜도… 마땅히 가고 싶은 곳이&#xA;떠오르지 않는다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>“When It Begins To Get Dark...” Sheena Ringo</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/2026-01jan25--01-ping/</link>
+      <pubDate>Sun, 25 Jan 2026 16:06:24 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/2026-01jan25--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/oJUdYeItB_Q?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;나의 20대초의 기억. 요즘엔 “Marunouchi Saditic”-이 유튜브에서 유행인거&#xA;같더라. 그곡도 좋아하지만.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;뭔가 내일을 조금 더 나아진 관점에서, 편안한 마음으로 바라보고 싶은&#xA;요즘 시대, 그리고 내 시점 때문에 이 곡이 더 끌리는지도 모르겠다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>타입스크립트는 새로운 델파이이지 않을까</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/typescript-is-the-new-delphi/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/typescript-is-the-new-delphi/</guid>
+      <description>&lt;p&gt;&#xA;타입스크립트, C#, &lt;a href=&#34;https://en.wikipedia.org/wiki/Visual_J%2B%2B&#34;&gt;J++&lt;/a&gt;, 델파이, 터보파스칼… 이 프로그래밍언어들의&#xA;공통점, 모두 같은 사람이 설계했다는 점이다:&lt;/p&gt;&#xA;&lt;p&gt;&#xA;👉 &lt;a href=&#34;https://en.wikipedia.org/wiki/Anders_Hejlsberg&#34;&gt;https://en.wikipedia.org/wiki/Anders_Hejlsberg&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이 포스팅에서는 이분과 관련된 추억놀음을 정리해 보려고 함. 결론이 있을&#xA;수 있겠고, 나 개인의 의견을 늘어놓지는 않아도 될 것 같다. 어차피 내&#xA;관점이 녹아 있을 수 밖에 없는 주관적으로 해석하고 나열하는&#xA;역사일테니까.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;DOS, 터보파스칼, 볼랜드의 시대 💾&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;  &lt;figure&gt;&lt;a href=&#34;https://www.dosdays.co.uk/topics/Software/borland_turbo_pascal.php&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-01jan/typescript-is-the-new-delphi/turbo-pascal.png&#34;&#xA;      alt=&#34;터보파스칼 스크린샷들&#34; width=&#34;700&#34;&gt;&lt;/a&gt;&lt;figcaption&gt;&#xA;        &lt;p&gt;터보파스칼 스크린샷들&lt;/p&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  1990년대, 당시에 프로그래밍을 한다고 하면, 대부분은 GW-BASIC,&#xA;  QBASIC, QuickBasic이거나, 아니면 당시의 ‘볼랜드’社의 Turbo-C,&#xA;  Turbo-Pascal이 보통이지 않았을까 한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PAGI (Perl port of Python&#39;s ASGI) 그리고 Perl에 대한 생각</title>
+      <link>https://ageldama.github.io/posts/2026-01jan/perl-pagi/</link>
+      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-01jan/perl-pagi/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;CGI의 시대, 그리고 이내 “Classic” ASP, PHP 4의 시대&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;Perl&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;은 이제 많이 사용하는 사람들도 없고, 유입되는 사람들도 거의&#xA;  없는 것 같다. 나도 2000년대 전에 펄을 접했었지만, 그때에 나에겐 너무&#xA;  복잡하고 이해하기 어려운 프로그래밍언어였었다. 차라리 당시의 파이썬&#xA;  1.5이나 Ruby 1.x, PHP 4 정도가 더 상식적으로 이해할 수 있는&#xA;  언어였었다. 이미 Smalltalk, LISP을 이해하고 있었어서, 파이썬, 루비의&#xA;  객체시스템이나 실행시간 Reflection, Meta-Programming 같은 주제들이 더&#xA;  납득하기 좋았다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  2000년대 전후의 웹개발은 ANSI C을 이용한 CGI프로그래밍을 하거나,&#xA;  아니면 펄을 사용해야 했었던거 같다. 대부분의 ‘웹호스팅’계정들은 보통&#xA;  MySQL을 제공하지 않거나 비싸서, cgi-bin의 스크립트가 직접 로컬파일에&#xA;  데이터를 저장하거나, dbm파일을 db처럼 사용해야만 했었었다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; 그리고&#xA;  CGI스크립팅 자체가 결국 문자열 파싱과 조립이니 펄의 CGI.pm 같은 모듈&#xA;  지원은 인기가 좋을 수 밖엔 없었다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hands of Necromancy와 영포티의 추억벤또 🍱</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy/</guid>
+      <description>&lt;p&gt;&#xA;👉 &lt;a href=&#34;https://store.steampowered.com/app/1898610/Hands_of_Necromancy/&#34;&gt;Steam 페이지: Hands of Necromancy&lt;/a&gt;&lt;/p&gt;&#xA;&lt;img src=&#34;https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy.jpg&#34; width=&#34;460&#34;&gt;&#xA;&lt;p&gt;&#xA;예전에 사놓았다가 최근에 다시 플레이.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;사양, 지원&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;GTX 1050+ 이상은 되어야 잘 동작할거 같다.&lt;/li&gt;&#xA;&lt;li&gt;SteamDeck / Linux 기본 지원&lt;/li&gt;&#xA;&lt;li&gt;Gamepad 지원: 그런데 그냥 마우스+키보드로 해도 편함.&#xA;&lt;a href=&#34;https://ageldama.github.io/tags/boomer-shooting/&#34;&gt;boomer-shooting&lt;/a&gt;의 고전적인 키맵이랑 완벽히 동일.&lt;/li&gt;&#xA;&lt;li&gt;아쉽지만 한국어는 지원않음.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;Heretic와 Hexen, 그리고 Doom&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;고전적인 boomer-shooting / heretic, hexen을 연상시킨다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  어린 Doom, Doom II 빠돌이였던 나는&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 어떻게(???) 헤러틱을&#xA;  구했던거 같다. 아마도 Shareware였거나, 어쩌면 운이 좋아서 Full&#xA;  version이었던거 같다. 당시 사양이 그렇게 좋지 않은 컴퓨터를 쓰고&#xA;  있었는데(CPU: 486DX2 50Hz, RAM: 4MB), 펜티엄을 가진 친구에게도&#xA;  돌려보라고 💾 3.5&amp;#34; 디스켓으로 복사해주곤 했던 것 같다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>(주절주절) Factor와 Io</title>
+      <link>https://ageldama.github.io/posts/2025-12dec/factor-and-io/</link>
+      <pubDate>Wed, 10 Dec 2025 06:46:13 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-12dec/factor-and-io/</guid>
+      <description>&lt;p&gt;&#xA;Factor와 Io 모두 예전에 덕질하던 프로그래밍언어.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;이번엔 추억놀음이나 포스팅해보려고.&lt;/p&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Factor&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://factorcode.org/&#34;&gt;https://factorcode.org/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Factor_(programming_language)&#34;&gt;https://en.wikipedia.org/wiki/Factor_(programming_language)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&#xA;팩터는 Functional, Concatenative programming언어인데, Forth와 같은&#xA;방식의 평가규칙을 가졌지만, Semantics은 Smalltalk이나 Lisp 같이&#xA;고수준의 추상화를 작성하기 적절했었다. 그리고 Native compilation +&#xA;Image-based 시스템이어서 커먼리습이랑 비슷하게 사용도 가능해서&#xA;좋았었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;오랬만에 &amp;#34;ego searching&amp;#34; 해봤다 😶‍🌫️ :&lt;/p&gt;&#xA;&lt;a href=&#34;https://ageldama.github.io/posts/2025-12dec/factor-ageldama-googling.png&#34; width=&#34;600px&#34;&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2025-12dec/factor-ageldama-googling.png&#34; alt=&#34;/posts/2025-12dec/factor-ageldama-googling.png&#34;/&gt;&lt;/a&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html&#34;&gt;https://docs.factorcode.org/content/vocab-io.encodings.euc-kr.html&lt;/a&gt;&#xA;같은 문서를 어떻게 요악해서 AI이 보여주는지 잘 모르겠다, 신기할 정도다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&amp;#34;Hallucination 🫥&amp;#34;도 좀 있긴하다. 다른 부분은 다 맞는거 같은데(ㅋㅋ),&#xA;윈도 빌드를 제공하거나 했다는 언급은, 내가 그랬었나 싶다. ㅎㅎ&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>&#34;the x files&#34; / 90년대의 분위기</title>
+      <link>https://ageldama.github.io/posts/2025-09sep/the-x-files-90s-vibe/</link>
+      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-09sep/the-x-files-90s-vibe/</guid>
+      <description>&lt;p&gt;&#xA;90년대 중반, 학생일 때, KBS2였나에서 그 유명한 시그널 음악과 성우들의&#xA;더빙으로 엑스파일을 처음 접했었다. 나는 당시에 이미 &amp;#34;에일리언&amp;#34;,&#xA;&amp;#34;터미네이터&amp;#34; 같은 헐리웃 영화들을 접해오며 SF취향의 싹을 키워오던&#xA;때였던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런 &amp;#34;공상과학&amp;#34; 영화나 해외TV 드라마는 SF에 대한 취향, 더 나아가서는&#xA;여러가지 가능성의 상상과 특정한 분야에 대한 흥미를 갖는데 도움이 된 것&#xA;같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;실제로 &amp;#34;스컬리효과&amp;#34;&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;를 받거나, 철학&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;에 대한 흥미를 갖기&#xA;시작한 것 같다. 물론 &amp;#34;멀더스러움&amp;#34;도 많이 익히게 되었지 않았을까.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;요즘에도 그냥 방에서 뭔가를 할 때에, 항상 틀어 놓고 할일을 하게 된다.&#xA;책을 읽건 코딩이나 글을 쓰고 있건.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>(주절주절) jwz의 netscape navigator 2.0 출시 30주년, 내 기억들, 그리고 오늘</title>
+      <link>https://ageldama.github.io/posts/2025-09sep/netscape-30yrs-jwz/</link>
+      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-09sep/netscape-30yrs-jwz/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://www.jwz.org/blog/2025/09/netscape-navigator-2-0-was-released-30-years-ago-today/&#34;&gt;https://www.jwz.org/blog/2025/09/netscape-navigator-2-0-was-released-30-years-ago-today/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;jwz&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;이 넷스케이프 웹브라우저 2.0 출시 30주년 포스팅을 올렸다.&#xA;jwz은 커먼리습, Lucid Emacs, Xscreensaver 등으로 유명하지만, 가장 역사적으로 큰 족적은 아마도 넷스케이프 웹브라우저의 초기 개발자라는 점일거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;넷스케이프는 90년대의 닷컴시대를 열고, 우리가 현대에 알고 있는 웹브라우저를 대중이 쓸 수 있도록 만들어준 제품이었다고 생각한다. 그 이전의 Mosaic 브라우저는 내 생각엔 더 딱딱하고 techie이 아닌 사람이 접근하기는 좀 껄끄러웠을 것 같다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;넷스케이프 2.0 시점에, 우리가 알고 있는 &amp;#34;JavaScript&amp;#34;이 웹브라우저에 도입되었고, 그이후에 마이크로소프트의 유명한 &amp;#34;Internet Explorer&amp;#34; 시대가 시작된다. (이하 &amp;#34;IE&amp;#34;)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 17/Sep/2020</title>
+      <link>https://ageldama.github.io/posts/2020-09sep/ping-17thu/</link>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-09sep/ping-17thu/</guid>
+      <description>&lt;p&gt;&#xA;영화 &amp;#39;바그다드 카페&amp;#39;를 어릴 때에는 &amp;#39;주말의 명화&amp;#39; 정도에서 다&#xA;번역/더빙된, 그리고 아마 편집에 엄청나게 많이 짤려나갔을 버젼으로&#xA;봤었던거 같은데 아무것도 기억에 남아있지 않았었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;심지어 이번에 다시 디렉터스컷으로 구해서 보면서 내가 기억에 남아 있던&#xA;것들은 완전 다른 영화인 것 같았다. 그렇게 기억만큼 어둡지도 않았고&#xA;오히려 너무 밝아서 오글거렸다. 아마도 좋은 오글거림이지만.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;기억에는 그렇게 남은 이미지는 브라운관 화면과 더빙 품질 등도 한 몫&#xA;했을 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;실은 영어를 어떻게 쓰는지, 처음 단어별로 끊어서 이야기 하는 시점(時&#xA;─)과 그 이후에 사람 이름을 어떻게 발음 하는 것(야스민/재스민 등)&#xA;억양과 발음, 단어 등등 듣고 있으면서 시간이 흘러감에 따라서 변화하는&#xA;것을 봐야 하는 영화인데 더빙이었다면 어떻게 표현했을지 난감할 것&#xA;같다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>코드 편집기에 대한 생각</title>
+      <link>https://ageldama.github.io/posts/2020-05may/editors/</link>
+      <pubDate>Thu, 28 May 2020 00:00:01 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2020-05may/editors/</guid>
+      <description>&lt;p&gt;&#xA;코드 편집기를 어떻게 써왔었는지 잠깐 생각해봤다:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;DOS시절: MS-DOS Editor.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GW-BASIC 시절에는 정말&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/MS-DOS_Editor&#34;&gt;https://en.wikipedia.org/wiki/MS-DOS_Editor&lt;/a&gt; 을 열심히 썼었던 것&#xA;같다.&lt;/li&gt;&#xA;&lt;li&gt;그리고 그 다음엔 &lt;a href=&#34;https://en.wikipedia.org/wiki/PowerBASIC#PowerBASIC_for_DOS_(PBDos)&#34;&gt;PowerBASIC for DOS&lt;/a&gt; 열심히 썼었다. QuickBASIC&#xA;같은 바이트코드으로 컴파일해서 .exe 파일에 인터프리터와&#xA;바이트코드를 embedding 하는 VB의 P-code 같은 가짜 컴파일 방식&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;이&#xA;아니라 정말 네이티브 코드로 컴파일해주고, 인라인 어셈블리와&#xA;메모리 조작이 가능한 베이직 컴파일러, IDE여서 좋은 환경이었던&#xA;것 같다.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;터보C 2.0 편집기. PowerBASIC이랑 유사해서 익숙하게 쓸 수 있었던&#xA;것 같다. 파워베이직도 그렇지만, 의외로 도스시절의 이런 IDE들이&#xA;F1 - Help 메뉴에서 항목별로 문서 정리가 잘 되어 있어서 읽으면서&#xA;즐거웠었던 것 같다. (초등학생~중학생이어서 영어를 잘 이해하지는&#xA;못했지만)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping  26/02/2019</title>
+      <link>https://ageldama.github.io/posts/2019-02feb/2019-02feb26-ping/</link>
+      <pubDate>Tue, 26 Feb 2019 00:10:00 +0900</pubDate>
+      <guid>https://ageldama.github.io/posts/2019-02feb/2019-02feb26-ping/</guid>
+      <description>&lt;h1 id=&#34;게임-발더스게이트ee-원숭이섬의-비밀-se--steamplay-등등&#34;&gt;게임: 발더스게이트EE, &amp;lsquo;원숭이섬의 비밀&amp;rsquo; SE + SteamPlay, 등등&lt;/h1&gt;&#xA;&lt;p&gt;아주 예전에 발더스게이트2을 열심히 했었는데, 스팀에 Enhanced Edition들&#xA;올라와있었다.  발더스게이트1, 2 모두. 시간이 될때마다 조금씩 플레이&#xA;중.&lt;/p&gt;&#xA;&lt;p&gt;새로 UI이나 그래픽 요소들 등등 리마스터 한건지 훨씬 좋아진거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://store.steampowered.com/app/32360/The_Secret_of_Monkey_Island_Special_Edition/&#34;&gt;원숭이섬의 비밀: Special&#xA;Edition&lt;/a&gt;&#xA;이것도 시간날때&#xA;플레이. &lt;a href=&#34;https://www.scummvm.org/&#34;&gt;ScummVM&lt;/a&gt; 으로 옛날 그래픽으로 다시&#xA;해도 좋겠지만, 오히려 애니메이션이나 그래픽 다시 그린게 나는 더 마음에&#xA;들어서 이쪽이 좋은거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://store.steampowered.com/app/336140/Unavowed/&#34;&gt;Unavowed&lt;/a&gt;. 이런류의&#xA;어드벤쳐 꾸준히 만드는 &amp;ldquo;WadjetEyeGames&amp;quot;이 내 취향에 잘 맞는걸 계속&#xA;만들고 있는거 같아서 기뻤다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>C&#43;&#43;: Golang-ish `defer`-macro - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774504766">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+별거 없는데, 문득 심심해서 툭닥거려봤다.
+
+
+원하는 것과 접근법
+
+
+
+https://go.dev/blog/defer-panic-and-recover
+https://docs.rs/defer/latest/defer/fn.defer.html
+https://ziglang.org/documentation/master/#defer
+
+
+  golang/zig에서처럼 defer 등록한 LIFO순서대로 호출되도록.
+
+  검색해보면, 대부분 RAII을 사용하거나 하는 것들이 보인다:
+
+DDG: c&#43;&#43; golang defer
+https://stackoverflow.com/questions/33050620/golang-style-defer-in-c
+https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop
+https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/
+
+
+  …그냥 std::shared_ptr&lt;void&gt; 을 이용하는 방식이 마음에
+  들었다. 그리고 조금 더 간단하게 사용하려고 매크로로 만들어 봤다.
+
+
+
+
+defer.inl :
+
+
+
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+
+
+  /* -*- mode: c&#43;&#43;; -*- */
+
+  #ifndef defer_INL
+  #define defer_INL 1
+
+  #include &lt;memory&gt;
+
+  #define _Defer_CONCAT_IMPL( x, y ) x##y
+  #define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y )
+
+  #define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk)
+
+  #endif /*defer_INL*/
+
+
+
+
+  __COUNTER__ 이용해서 매크로가 생성한 std::shared_ptr&lt;..&gt; 변수의
+  이름이 겹치지 않도록 해봤다. (…위에 검색한 링크들에도 사용하듯이)" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-03mar/perl-cal3/">⬅️ `ncal -3` 직접 Perl으로 짜봤다</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-02feb/2023-02feb26--01-css/">➡️ Ping 26/02/2023 .01 : 디자인 css 가볍게 수정</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">원하는 것과 접근법</a>
+</li>
+<li><a href="#headline-2"><code class="verbatim">defer.inl</code> :</a>
+</li>
+<li><a href="#headline-3">사용예</a>
+</li>
+<li><a href="#headline-4">제약사항과 생각해볼꺼리</a>
+</li>
+<li><a href="#headline-5">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🤑 C&#43;&#43;: Golang-ish `defer`-macro</h1>
+	    <div class="meta">
+                <time datetime="2023-03-02" pubdate>
+                    2023년03월02일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+별거 없는데, 문득 심심해서 툭닥거려봤다.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+원하는 것과 접근법
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ol>
+<li><a href="https://go.dev/blog/defer-panic-and-recover">https://go.dev/blog/defer-panic-and-recover</a></li>
+<li><a href="https://docs.rs/defer/latest/defer/fn.defer.html">https://docs.rs/defer/latest/defer/fn.defer.html</a></li>
+<li><a href="https://ziglang.org/documentation/master/#defer">https://ziglang.org/documentation/master/#defer</a></li>
+</ol>
+<p>
+  golang/zig에서처럼 <code class="verbatim">defer</code> 등록한 LIFO순서대로 호출되도록.</p>
+<p>
+  검색해보면, 대부분 RAII을 사용하거나 하는 것들이 보인다:</p>
+<ul>
+<li><a href="https://duckduckgo.com/?q=c%2B%2B+golang+defer">DDG: c++ golang defer</a></li>
+<li><a href="https://stackoverflow.com/questions/33050620/golang-style-defer-in-c">https://stackoverflow.com/questions/33050620/golang-style-defer-in-c</a></li>
+<li><a href="https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop">https://stackoverflow.com/questions/45617758/proper-way-to-release-resources-with-defer-in-a-loop</a></li>
+<li><a href="https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/">https://codesire-deng.github.io/2022/02/06/One-Minute-to-C-defer/</a></li>
+</ul>
+<p>
+  …그냥 <code class="verbatim">std::shared_ptr&lt;void&gt;</code> 을 이용하는 방식이 마음에
+  들었다. 그리고 조금 더 간단하게 사용하려고 매크로로 만들어 봤다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+<code class="verbatim">defer.inl</code> :
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div class="src src-c++">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">  <span class="cm">/* -*- mode: c++; -*- */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cp">#ifndef defer_INL
+</span></span></span><span class="line"><span class="cl">  <span class="cp">#define defer_INL 1
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cp">#define _Defer_CONCAT_IMPL( x, y ) x##y
+</span></span></span><span class="line"><span class="cl">  <span class="cp">#define _Defer_CONCAT( x, y ) _Defer_CONCAT_IMPL( x, y )
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cp">#define Defer(blk) std::shared_ptr&lt;void&gt; _Defer_CONCAT(Defer_, __COUNTER__ )(nullptr, blk)
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cp">#endif </span><span class="cm">/*defer_INL*/</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  <a href="https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html"><code class="verbatim">__COUNTER__</code></a> 이용해서 매크로가 생성한 <code class="verbatim">std::shared_ptr&lt;..&gt;</code> 변수의
+  이름이 겹치지 않도록 해봤다. (…위에 검색한 링크들에도 사용하듯이)</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+사용예
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p><code class="verbatim">defer.cpp</code> 정도로 저장하고, <code class="verbatim">chmod +x defer.cpp &amp;&amp; ./defer.cpp</code> :</p>
+<div class="src src-c++">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1"> 1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2"> 2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3"> 3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4"> 4</a>
+</span><span class="lnt" id="5"><a class="lnlinks" href="#5"> 5</a>
+</span><span class="lnt" id="6"><a class="lnlinks" href="#6"> 6</a>
+</span><span class="lnt" id="7"><a class="lnlinks" href="#7"> 7</a>
+</span><span class="lnt" id="8"><a class="lnlinks" href="#8"> 8</a>
+</span><span class="lnt" id="9"><a class="lnlinks" href="#9"> 9</a>
+</span><span class="lnt" id="10"><a class="lnlinks" href="#10">10</a>
+</span><span class="lnt" id="11"><a class="lnlinks" href="#11">11</a>
+</span><span class="lnt" id="12"><a class="lnlinks" href="#12">12</a>
+</span><span class="lnt" id="13"><a class="lnlinks" href="#13">13</a>
+</span><span class="lnt" id="14"><a class="lnlinks" href="#14">14</a>
+</span><span class="lnt" id="15"><a class="lnlinks" href="#15">15</a>
+</span><span class="lnt" id="16"><a class="lnlinks" href="#16">16</a>
+</span><span class="lnt" id="17"><a class="lnlinks" href="#17">17</a>
+</span><span class="lnt" id="18"><a class="lnlinks" href="#18">18</a>
+</span><span class="lnt" id="19"><a class="lnlinks" href="#19">19</a>
+</span><span class="lnt" id="20"><a class="lnlinks" href="#20">20</a>
+</span><span class="lnt" id="21"><a class="lnlinks" href="#21">21</a>
+</span><span class="lnt" id="22"><a class="lnlinks" href="#22">22</a>
+</span><span class="lnt" id="23"><a class="lnlinks" href="#23">23</a>
+</span><span class="lnt" id="24"><a class="lnlinks" href="#24">24</a>
+</span><span class="lnt" id="25"><a class="lnlinks" href="#25">25</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">  <span class="cp">#if 0</span><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">  g++ -v -pedantic -Wall -Wextra -Wpedantic -Wconversion -std=c++11 -O0 -g -fsanitize=address &#34;$0&#34; -o &#34;$0&#34;.exe &amp;&amp; ./&#34;$0&#34;.exe ; exit
+</span></span></span><span class="line"><span class="cl"><span class="cp">  #endif
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;cstdlib&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&#34;defer.inl&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span><span class="o">*</span> <span class="n">x</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">{</span><span class="mi">42</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Defer</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](...){</span>
+</span></span><span class="line"><span class="cl">      <span class="n">printf</span><span class="p">(</span><span class="s">&#34;defer: main #1: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">delete</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Defer</span><span class="p">([](...){</span>
+</span></span><span class="line"><span class="cl">      <span class="n">printf</span><span class="p">(</span><span class="s">&#34;defer: main #2</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">EXIT_SUCCESS</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<ol>
+<li><a href="https://github.com/google/sanitizers/wiki/AddressSanitizer">asan</a> 사용해서 간단하게 잘 동작하는지 확인해봤다.</li>
+<li><strong>TIP</strong>: shell script처럼 그냥 cpp 소스파일 실행하면, 스스로
+컴파일하고, 스스로 실행하도록 해봤다. 컴파일옵션 변경해서 써도
+좋고, 아니면 직접 커맨드라인에서 옵션들 변경해서 컴파일해도
+되겠지.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+제약사항과 생각해볼꺼리
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<ol>
+<li>try/catch/finally 대신, 이렇게 처리하는 것도 간결하기는 한거 같아.</li>
+<li>C++은 원래 RAII이니까, 다른 try/catch/finally 같은 접근보다는 이게
+더 &#39;C++ idiomatic&#39;하겠지 싶어,,라고 자기만족.<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></li>
+<li>그리고 당연히, <a href="https://en.cppreference.com/w/c/program/setjmp">setjmp/longjmp</a>등과 섞어 쓰면 동작하지 못한다. ㅋㅋ <sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>C++을 Java처럼 쓸 이유도 없고, C++은 그자체로 다른 특성과
+장단점이 있으니까.. 그걸 꼭 자바처럼 되어야 한다고 할 필요는 없겠지.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p>신비로운 SEH/libunwind등으로 어떻게 해킹해서 되게 해도
+되겠지만… 생각해보면 어차피 C++ exception handling이 자연스럽게
+destructor호출해주고 하니까.</p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">👅<a href="/series/programming-languages/">programming-languages</a>
+                        <sup>28</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/programming/">programming</a>
+                        <sup>57</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/c&#43;&#43;/">c&#43;&#43;</a>
+                        <sup>12</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/golang/">golang</a>
+                        <sup>9</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/java/">java</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/macro/">macro</a>
+                        <sup>5</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/cxx/">cxx</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/defer/">defer</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/try-catch-finally/">try-catch-finally</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/longjmp/">longjmp</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/setjmp/">setjmp</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/raii/">raii</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🤑";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-03mar/perl-cal3/">⬅️ `ncal -3` 직접 Perl으로 짜봤다</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2023-02feb/2023-02feb26--01-css/">➡️ Ping 26/02/2023 .01 : 디자인 css 가볍게 수정</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774504766</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

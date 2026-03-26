@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>xrandr 🖥️모니터 연결 자동전환 스크립트🐫 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774504766">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.
+다 편한데, 🪟윈도나 icewm처럼 Windows&#43;P 누르면, 다음 모니터연결
+조합으로 전환되는게 부러웠다.
+
+매번 터미널 열고 xrandr 치거나, arandr 열어서 세팅하기 귀찮으니까.
+(물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)
+
+그래서 그냥 윈도의 Win&#43;P 키처럼 동작하도록 스크립트를 짜봤다.
+
+🐫 https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl
+
+Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.
+
+그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,
+예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별
+생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤" />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar20--01--darkmode-js/">⬅️ darkmode.js으로 변경</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/">➡️ Hugo &#43; pagefind 붙여서 검색기능 추가했다</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    
+
+    <article>
+	<div class="title"><h1 class="title">🧑🏻‍🦱 xrandr 🖥️모니터 연결 자동전환 스크립트🐫</h1>
+	    <div class="meta">
+                <time datetime="2025-03-18" pubdate>
+                    2025년03월18일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    <p>
+요즘 메인으로 사용하는 💻랩탑을 i3wm으로 세팅해서 쓰고 있다.
+다 편한데, 🪟윈도나 icewm처럼 <code>Windows+P</code> 누르면, 다음 모니터연결
+조합으로 전환되는게 부러웠다.</p>
+<p>
+매번 터미널 열고 <code>xrandr</code> 치거나, <a href="https://christian.amsuess.com/tools/arandr/">arandr</a> 열어서 세팅하기 귀찮으니까.
+(물론 시스템 시작하면, 내가 좋아하는 설정이 적용되도록 해놓았지만)</p>
+<p>
+그래서 그냥 윈도의 <code>Win+P</code> 키처럼 동작하도록 스크립트를 짜봤다.</p>
+<p>
+🐫 <a href="https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl">https://github.com/ageldama/configs/blob/master/dotfiles/local_scripts/xrandr/combs.pl</a></p>
+<p>
+Perl으로 왠만하면 외부라이브러리 의존 않고 짜려고 노력.</p>
+<p>
+그리고 예전이랑 코딩스타일이 점점 변해가고 있다고 생각이 들었는데,
+예전에는 기계공감에 더 비중을 뒀었다면, 이제는 내가 쓸때 더 편하고 별
+생각없이 되는쪽에 더 비중을 두게 되는거 같다. 좋게 말하자면… 🤤</p>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/linux/">linux</a>
+                        <sup>28</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/perl/">perl</a>
+                        <sup>16</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/scripting/">scripting</a>
+                        <sup>7</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/windows/">windows</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/script/">script</a>
+                        <sup>6</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/i3wm/">i3wm</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/icewm/">icewm</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/xorg/">xorg</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/monitor/">monitor</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/display/">display</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/config/">config</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/xrandr/">xrandr</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🧑🏻‍🦱";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar20--01--darkmode-js/">⬅️ darkmode.js으로 변경</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2025-03mar/2025-03mar16--01-pagefind&#43;hugo/">➡️ Hugo &#43; pagefind 붙여서 검색기능 추가했다</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774504766</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>
