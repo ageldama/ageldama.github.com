@@ -7,8 +7,29 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 15 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2026 06:09:16 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/steam/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GNUstep와 Wine🍷 이야기 [0.023671]</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/gnustep-wine/</link>
+      <pubDate>Thu, 26 Mar 2026 06:09:16 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/gnustep-wine/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;NeXTSTEP, OPENSTEP, GNUstep, 그리고 macOS&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/gnustep-wine/NeXTSTEP_desktop.png&#34;&#xA;      alt=&#34;nextstep의 스크린샷(위키백과)&#34;&gt;&lt;figcaption&gt;&#xA;        &lt;p&gt;nextstep의 스크린샷(위키백과)&lt;/p&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;&#xA;  90년대 중반에 이미 위와 같은 OS, 그리고 미감이나 디자인만이 아니라,&#xA;  애플리케이션 개발방식 등도 현대의 그것처럼 직관적인데다,&#xA;  안정적이기까지 했다면 얼마나 충격적이었을까 상상해보라.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  당시의 주류인 DOS, 윈도, 혹은 MacOS Classic을 위한 애플리케이션&#xA;  개발은 훨씬 복잡하고 효율적이지 못했다. DOS의 경우엔 극악한데, &lt;code&gt;INT&#xA;  21h&lt;/code&gt; 같은 신비로운 로우레벨 지식이 필요하거나, 직접 메모리 안정성&#xA;  자체를 관리해야 했다. 그런 안정성을 확보하지 못한 코드는 그&#xA;  애플리케이션만을 중단시키는것이 아니라, 그런 작은 사소한 문제로인해&#xA;  아예 OS자체가 다운될 수 있었다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ping 10/03/2026 .01</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar10--01-ping/</link>
+      <pubDate>Tue, 10 Mar 2026 08:37:59 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar10--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;봄이왔다. 언제나처럼 약간은 뿌옇고 나른한 봄날 서울공기.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;조금 가볍게 입고 돌아다니기 좋아졌다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;퀘이크1 + 👉&lt;a href=&#34;https://github.com/sezero/quakespasm&#34;&gt;Quakespasm&lt;/a&gt; 나름 괜찮게 굴러간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;게이밍PC 데스크탑에서는 Steam / 베데스다판으로 돌리는데 잘 돌아간다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;➕ 구형랩탑에서 플레이는 Quake Enhanced판 + Quakespasm.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>뉴비의 Caves of Qud 플레이 🏜️👾</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/caves-of-qud/</link>
+      <pubDate>Sun, 22 Feb 2026 07:57:33 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/caves-of-qud/</guid>
+      <description>&lt;p&gt;&#xA;…사실은 플레이를 하면 할수록, 레벨을 올릴수록 할수 있는건&#xA;기하급수적으로 늘어나는데, 더 어려운 “stratum”-으로 이동할수록 어렵다,&#xA;그리고 순식간에 절망적인 상황이 펼쳐진다. 🫣&lt;/p&gt;&#xA;&lt;p&gt;&#xA;작년말인가부터 스팀에서 구매해서 플레이.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;nethack이나 dungeon crawl 같은류의 로그라이크, 던전크롤러 게임을&#xA;좋아한다면 정말 재밌을 게임이다. 거기에 보는 관점에 따라 다르겠지만,&#xA;화려하고 엄청난 그래픽을 자랑하는 게임도 아니다. 오히려 처음 게임을&#xA;접하면 이게 정말 그래픽으로 렌더링된 게임인가 싶다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;거기에 플레이를 시작하자마자, 캐릭터를 만들면서부터 뭔가 골치가&#xA;아파온다. 새로 배우고 이해할 개념들이 좀 많이 던져진다. 그리고 몇 번&#xA;캐릭터를 망치고 죽이다 보면 어떻게 해야 할지 스스로의 전략이 생긴다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hands of Necromancy와 영포티의 추억벤또 🍱</title>
       <link>https://ageldama.github.io/posts/2025-12dec/hands-of-necromancy/</link>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wallpaper on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/wallpaper/</link>
+    <description>Recent content in Wallpaper on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Tue, 24 Mar 2026 06:51:41 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/wallpaper/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MS Windows 3.1 배경화면 .bmp 모음</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar24--01-ping/</link>
+      <pubDate>Tue, 24 Mar 2026 06:51:41 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar24--01-ping/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/andreasjansson/win-3.1-backgrounds&#34;&gt;Github 저장소&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=47496221&#34;&gt;HN 댓글 모음&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://ageldama.github.io/posts/2026-03mar/2026-03mar24--01-ping/2026-03-24_16-04.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;&#xA;이상하게 마음에 든다. 그때에도 그랬던거 같지만. ㅎㅎ&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;code&gt;feh --bg-tile FILENAME&lt;/code&gt; 으로 세팅해서 사용한다: &lt;a href=&#34;https://github.com/ageldama/configs/blob/master/i3wm/wg.pl#L30-L36&#34;&gt;https://github.com/ageldama/configs/blob/master/i3wm/wg.pl#L30-L36&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

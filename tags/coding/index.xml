@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coding on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/coding/</link>
+    <description>Recent content in Coding on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sat, 14 Mar 2026 04:09:32 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 14/03/2026 .01</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar14--01-ping/</link>
+      <pubDate>Sat, 14 Mar 2026 04:09:32 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar14--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://x.com/id_aa_carmack/status/2032460578669691171&#34;&gt;https://x.com/id_aa_carmack/status/2032460578669691171&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;…대부분은 AI이 일자리를 없애거나, 오픈소스를 망가뜨리거나&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;,&#xA;아니면 일자리를 없애거나, 혹은 그렇기 때문에 사람끼리의 ‘유대’가 더&#xA;중요해진다거나 하는 생각들을 털어놓는다.&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-2&#34; href=&#34;#footnote-2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;그런데, 나부터도 내가 코딩을 한다는 행위 그자체에 경도되어 우쭐하고,&#xA;행복해하고, 자아/동일시를 하며 살아온거 같은데… 오히려 가장 그래도&#xA;부족할 엄청난 업적들&lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-3&#34; href=&#34;#footnote-3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;이 가진 이가, 오히려 그 자신의 행위나, 그&#xA;행위를 하는 자기자신의 모습에 애착을 갖기 보다, –그 기여물이 세상에&#xA;어떤 영향을 만들어낼지를 순수하게 기대하는 발언이 충격이다. 존경스러운&#xA;발언.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;–어쩌면 정말 순수하게 오픈소스 그자체를, 그 자체만을 집중해 이야기&#xA;하는 것도 재밌었다. …마치 그의 게임들이 서사나 스토리 따위는 없고,&#xA;다만 액션만이 있던 것과 같은 느낌. 그게 젊을 때엔 마치 야동에 비유를&#xA;하여 말하던것이었지만, 이제는 연륜이 뭍어나시는구나 싶기도 했다.🥴&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI vs. 주니어 혹은 Expert Beginner</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar01--03-ping/</link>
+      <pubDate>Sun, 01 Mar 2026 08:04:11 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar01--03-ping/</guid>
+      <description>&lt;p&gt;&#xA;  &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;        &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/WMsUv_EgsWY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;      &lt;/div&gt;&#xA;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;[EDIT] 👉 &lt;a href=&#34;https://tomwojcik.com/posts/2026-02-15/finding-the-right-amount-of-ai/&#34;&gt;포스팅 &amp;#34;What AI coding costs you&amp;#34;&lt;/a&gt; 이랑 많은 관점이&#xA;동일하다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;AI경험과 호칭은 하나지만 실은 달랐던 ‘개발자’&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;요즘 AI을 경험해나갈수록 드는 생각은: 정말 이런 제품들이 거품이어서&#xA;  계속해서 지속될지 아닐지는 잘 모르겠지만, 어쨌든 정말 중요한 사실은&#xA;  사람들은 이런 능력을 경험했고, 그 경험 덕분에 과거로 완전히&#xA;  복귀하지는 않을거라는 생각을 한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Unicode 17.0 Emoji 목록 자동화 &#43; Claude AI</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar01--01-ping/</link>
+      <pubDate>Sun, 01 Mar 2026 07:28:54 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar01--01-ping/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;문제, 의도 💣&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://ageldama.github.io/posts/2026-02feb/selecting-title-emoji/&#34;&gt;제목에 자동으로 emoji 넣기&lt;/a&gt;-을 계속 해왔는데, 이 emoji목록은 손으로&#xA;  수집해서 만든거였고, 가끔 &lt;a href=&#34;https://unicode.org/emoji/charts/index.html&#34;&gt;Unicode&lt;/a&gt;-에는 있지만, 이 수동으로 만든&#xA;  목록에는 없는 경우가 있어서 아쉬웠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그래서 이번엔 이걸 고쳐보기로 했다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;Claude 🤖: 자동으로 다운로드 =&amp;gt; 모든 이모지를 출력&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;그래서 유니코드 DB에 공개된 데이터파일들을 다운로드 받고, 거기에서&#xA;  도출 가능한 모든 이모지를 출력하도록 했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  생각보다 텍스트파일을 파싱하고 하는 스크립트가 귀찮았다. 예전에&#xA;  유니코드&amp;lt;=&amp;gt;CP949 변환이나 조합형 한글코드 변환에도 이런 파싱+출력,&#xA;  혹은 코드매핑 테이블 생성하는 스크립트를 짜왔었지만 이번엔 조금&#xA;  다르게 해볼까 했다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI시대의 소프트웨어 이슈 패턴</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb21--01-ping/</link>
+      <pubDate>Sat, 21 Feb 2026 11:50:52 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb21--01-ping/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;AI시대 이전의 패턴&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;실제 원하는걸 표현해내기 어려워서 생기는 문제, 그걸 도출하기&#xA;어려웠던 문제.&lt;/li&gt;&#xA;&lt;li&gt;iteration-cycle을 제대로 해내지 못함.&lt;/li&gt;&#xA;&lt;li&gt;단계별로 궤도를 원하는 방향으로 고치거나,&lt;/li&gt;&#xA;&lt;li&gt;아예 궤도를 잘못 설정함.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;요즘의 패턴&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;AI으로 생성해 낸 작업물은 많은데,&lt;/li&gt;&#xA;&lt;li&gt;막상 아키텍처적으로 보안적일 수 없는 구조를 만들어냄.&lt;/li&gt;&#xA;&lt;li&gt;그리고 다른 기능을 추가하거나 수정하기엔 직접 생성한 사람이&#xA;해내기 어려운 경우가 많이 생김.&lt;/li&gt;&#xA;&lt;li&gt;AI의 문제라기 보다는, 뭘 만들어 달라고 요청하는 사람의 문제.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-3&#34;&gt;&#xA;결국 신기할 정도로 비슷한 상황&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;결국, 요청하는 사람이 자기가 뭘 원하는지, 뭘 어떻게 만들어 달라고&#xA;  해야 하는데, 소프트웨어나 아키텍처, 보안에 대해서 접근/이해하기&#xA;  어려우니 여전히 문제는 그대로 남아서 그걸 손봐주는 소프트웨어&#xA;  전문가는 여전히 필요해짐.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>생성형AI, 진짜로 문제인 AI Hallucination은</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</link>
+      <pubDate>Wed, 18 Feb 2026 06:43:46 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/2026-02feb18--01-ping/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;요즘 나와 우리는&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;요즘엔 SW/IT업계에 일자리가 많이 없어지는 것, 구독형, SaaS 기업의&#xA;주가가 떨어지고 투자가 사라지는 것에 대한 우려가 많다. 그리고 나도&#xA;영향을 받는 사람으로서 걱정이 없진 못하다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;“구독형 소프트웨어 서비스”와 데이터=석유🛢️?&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;그런데 사실 절대다수의 구독형서비스(…실은 그냥 모바일앱이나 데스크탑&#xA;앱이 좀 있는 웹서비스)/SaaS이 그렇게 존재할 사업이었던게 모순이&#xA;맞았던거 같다. 오히려 자동화 된 데이터모델과 그의 CRUD + 약간의 로직이&#xA;들어간 것을 각자가 해결해도 될 일이었던게 맞다. 도메인에 특화되어&#xA;있다고 하는 기업이든 특정 기술을 쓴다고 하는 기업이든… 그 도메인의&#xA;전문가라고 해야 할까 싶기도 하거니와, 말그대로 특정 기술을 “갖다 쓰는&#xA;것” 사용자인 곳일 뿐이기도 하고. …결국 적당한 뻥튀기를 다들 하니까&#xA;그게 이상한지 모르고 다같이 하며 장사를, 혹은 투자금을 쓰는 일을&#xA;했던거지 싶다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

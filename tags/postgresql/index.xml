@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Wed, 15 Jun 2022 11:22:48 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Aug 2025 13:21:50 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ping 17/08/2025 .01</title>
+      <link>https://ageldama.github.io/posts/2025-08aug/2025-08aug17--01-ping/</link>
+      <pubDate>Sun, 17 Aug 2025 13:21:50 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2025-08aug/2025-08aug17--01-ping/</guid>
+      <description>&lt;p&gt;&#xA;일년간 몸담던 일을 정리했었다. 고맙기도 하고 재밌는 일들도 많이 할 수&#xA;있었었다. 하지만 기대를 갖기엔 너무 미안했다. 그곳과 그 사람들에게&#xA;그렇게 해서 마음이 가벼울 것 같지 않았다. ㅎㅎ&lt;/p&gt;&#xA;&lt;p&gt;&#xA;좋게 말하자면, “많은 교훈을 얻은 곳”이었었다. 더 많은 추억을 만들 수&#xA;있었다면 더 좋았겠지만 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Reversing이나 OS, System레벨, 그리고 서비스아키텍처, PostgreSQL&#xA;Change Data Capture, htmx/SSR 등등 재밌는 주제들도 많았고, 범위도 엄청나게&#xA;넓었었다.  그래도 그냥 혼자 좀 외로웠었다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;내겐 이정도까지가 건강하겠구나 하는 판단이 들었다. 그리고 이해할 수&#xA;있을지 모르겠다만, 실은 그게 더 각자들의 마음을 더 편안케 해주리란걸&#xA;나는 알고 있다. 막상 내 결정 때문에 내가 미웠겠지만. ㅎㅎ&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Ping 15/06/2022 .01</title>
       <link>https://ageldama.github.io/posts/2022-06jun/2022-06jun15--01-ping/</link>

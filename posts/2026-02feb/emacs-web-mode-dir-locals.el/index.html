@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>emacs / web-mode engine 선택 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774856485">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="
+hugo은 golang text/template, html/template 사용하는데, 또는 아예
+다른 프레임웍(예: Rails)의 템플릿엔진을 매번 선택해주기 귀찮음.
+
+emacs web-mode-은 다양한 템플릿엔진을 지원. 그리고 무시하기 어렵도록
+정말 편리함. ㅎㅎ
+
+이맥스답게 바로 discover / inspect하는 방법으로 설명을 해보려고 함.
+
+
+어떤 엔진을 지원하는지 알아보기
+
+
+C-h v / web-mode-engines 변수 확인.
+
+
+
+1
+2
+3
+
+
+  ((&#34;angular&#34; &#34;angularjs&#34;) (&#34;anki&#34;) (&#34;antlers&#34;) (&#34;archibus&#34;) (&#34;artanis&#34;)
+   (&#34;asp&#34;) (&#34;aspx&#34;) (&#34;astro&#34;) (&#34;blade&#34; &#34;laravel&#34;) (&#34;cl-emb&#34;) (&#34;clip&#34;)
+   ...  (&#34;erb&#34; &#34;eruby&#34; &#34;erubis&#34; &#34;crystal&#34;) ...)
+
+
+
+
+  …위와 같은 list-of-lists을 얻는데, 저기 나온 문자열은 모두
+  web-mode-engine-에 지정하여 사용할 수 있음.
+
+  유사한/같은 문법은 같은 리스트에 묶여 있음." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-02feb/selecting-title-emoji/">⬅️ 원하는 emoji으로 선택되는 제목을 고르기 [0.798129]</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/">➡️ Ping 07/02/2026 .01 👁️</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">어떤 엔진을 지원하는지 알아보기</a>
+</li>
+<li><a href="#headline-2">파일확장자별 자동 설정 확인하기</a>
+</li>
+<li><a href="#headline-3">파일별 수동설정 + 시험해보기</a>
+</li>
+<li><a href="#headline-4">파일별 설정 💔</a>
+</li>
+<li><a href="#headline-5">project 전체 설정 : <code>.dir-locals.el</code></a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🫅 emacs / web-mode engine 선택</h1>
+	    <div class="meta">
+                <time datetime="2026-02-14" pubdate>
+                    2026년02월14일
+                </time>
+                </div>
+        </div>
+
+        
+
+	
+
+	<section class="body">
+	    
+<p>
+hugo은 golang <code>text/template</code>, <code>html/template</code> 사용하는데, 또는 아예
+다른 프레임웍(예: Rails)의 템플릿엔진을 매번 선택해주기 귀찮음.</p>
+<p>
+<a href="https://web-mode.org/">emacs web-mode</a>-은 다양한 템플릿엔진을 지원. 그리고 무시하기 어렵도록
+정말 편리함. ㅎㅎ</p>
+<p>
+이맥스답게 바로 discover / inspect하는 방법으로 설명을 해보려고 함.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+어떤 엔진을 지원하는지 알아보기
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><code>C-h v</code> / <code>web-mode-engines</code> 변수 확인.</p>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">((</span><span class="s">&#34;angular&#34;</span> <span class="s">&#34;angularjs&#34;</span><span class="p">)</span> <span class="p">(</span><span class="s">&#34;anki&#34;</span><span class="p">)</span> <span class="p">(</span><span class="s">&#34;antlers&#34;</span><span class="p">)</span> <span class="p">(</span><span class="s">&#34;archibus&#34;</span><span class="p">)</span> <span class="p">(</span><span class="s">&#34;artanis&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="p">(</span><span class="s">&#34;asp&#34;</span><span class="p">)</span> <span class="p">(</span><span class="s">&#34;aspx&#34;</span><span class="p">)</span> <span class="p">(</span><span class="s">&#34;astro&#34;</span><span class="p">)</span> <span class="p">(</span><span class="s">&#34;blade&#34;</span> <span class="s">&#34;laravel&#34;</span><span class="p">)</span> <span class="p">(</span><span class="s">&#34;cl-emb&#34;</span><span class="p">)</span> <span class="p">(</span><span class="s">&#34;clip&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="o">...</span>  <span class="p">(</span><span class="s">&#34;erb&#34;</span> <span class="s">&#34;eruby&#34;</span> <span class="s">&#34;erubis&#34;</span> <span class="s">&#34;crystal&#34;</span><span class="p">)</span> <span class="o">...</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  …위와 같은 list-of-lists을 얻는데, 저기 나온 문자열은 모두
+  <code>web-mode-engine</code>-에 지정하여 사용할 수 있음.</p>
+<p>
+  유사한/같은 문법은 같은 리스트에 묶여 있음.</p>
+<p>
+  예를 들어, <code>&#34;erb&#34;</code>-이라고 쓰거나 <code>&#34;eruby&#34;</code>-이라고 쓰거나 같은
+  문법엔진.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+파일확장자별 자동 설정 확인하기
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p><code>web-mode-engines-alist</code> 변수를 <code>C-h v</code>-으로 확인.</p>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">setq</span> <span class="nv">web-mode-engines-alist</span>
+</span></span><span class="line"><span class="cl">         <span class="o">&#39;</span><span class="p">((</span><span class="s">&#34;php&#34;</span>    <span class="o">.</span> <span class="s">&#34;\\.phtml\\&#39;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">           <span class="p">(</span><span class="s">&#34;blade&#34;</span>  <span class="o">.</span> <span class="s">&#34;\\.blade\\.&#34;</span><span class="p">)))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+파일별 수동설정 + 시험해보기
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p><code>M-x web-mode-set-engine RET</code> 실행하고 파일별로 적당한 문법엔진을
+  선택하여 시험.</p>
+<p>
+  선택하면, <code>web-mode-engine</code> buffer-local-variable을 설정해줌.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+파일별 설정 💔
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p><code>(setq web-mode-enable-engine-detection t)</code> 설정한 다음,</p>
+<div class="src src-php">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl">  <span class="o">&lt;?</span><span class="nx">php</span> <span class="o">/*</span> <span class="o">-*-</span> <span class="nx">engine</span><span class="o">:</span> <span class="nx">php</span><span class="p">;</span> <span class="o">-*-</span> <span class="o">/*</span>
+</span></span><span class="line"><span class="cl">  <span class="o">...</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  …와 같이 modeline을 설정하면 된다는데 잘 동작하지 않음. ㅎㅎ</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+project 전체 설정 : <code>.dir-locals.el</code>
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>다음처럼 project root에 <code>.dir-locals.el</code>-을 설정하면 됨:</p>
+<div class="src src-emacs-lisp">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="1"><a class="lnlinks" href="#1">1</a>
+</span><span class="lnt" id="2"><a class="lnlinks" href="#2">2</a>
+</span><span class="lnt" id="3"><a class="lnlinks" href="#3">3</a>
+</span><span class="lnt" id="4"><a class="lnlinks" href="#4">4</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl">  <span class="c1">;;; Directory Local Variables            -*- no-byte-compile: t -*-</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;;; For more information see (info &#34;(emacs) Directory Variables&#34;)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">((</span><span class="nv">web-mode</span> <span class="o">.</span> <span class="p">((</span><span class="nv">web-mode-engine</span> <span class="o">.</span> <span class="s">&#34;go&#34;</span><span class="p">))))</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<p>
+  <code>M-x add-dir-local-variable</code> 사용하여, MODE= <code>web-mode</code>, VARIABLE=
+  <code>web-mode-engine</code> 변수를 선택하고 값으로 <code>go</code> 입력해도 됨.</p>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lisp/">lisp</a>
+                        <sup>26</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emacs/">emacs</a>
+                        <sup>24</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/hugo/">hugo</a>
+                        <sup>15</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/golang/">golang</a>
+                        <sup>9</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/elisp/">elisp</a>
+                        <sup>8</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/emacs-lisp/">emacs-lisp</a>
+                        <sup>4</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/go/">go</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/jinja2/">jinja2</a>
+                        <sup>2</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/template-text/">template-text</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/go-template/">go-template</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/erb/">erb</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/django/">django</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/web-mode-engine/">web-mode-engine</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/web-mode/">web-mode</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/.dir-locals.el/">.dir-locals.el</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/dir-locals/">dir-locals</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🫅";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-02feb/selecting-title-emoji/">⬅️ 원하는 emoji으로 선택되는 제목을 고르기 [0.798129]</a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-02feb/2026-02feb07--01-ping/">➡️ Ping 07/02/2026 .01 👁️</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774856485</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>

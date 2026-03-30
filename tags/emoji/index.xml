@@ -7,8 +7,22 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Sun, 30 Nov 2025 10:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2026 07:28:54 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unicode 17.0 Emoji 목록 자동화 &#43; Claude AI</title>
+      <link>https://ageldama.github.io/posts/2026-03mar/2026-03mar01--01-ping/</link>
+      <pubDate>Sun, 01 Mar 2026 07:28:54 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-03mar/2026-03mar01--01-ping/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;문제, 의도 💣&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://ageldama.github.io/posts/2026-02feb/selecting-title-emoji/&#34;&gt;제목에 자동으로 emoji 넣기&lt;/a&gt;-을 계속 해왔는데, 이 emoji목록은 손으로&#xA;  수집해서 만든거였고, 가끔 &lt;a href=&#34;https://unicode.org/emoji/charts/index.html&#34;&gt;Unicode&lt;/a&gt;-에는 있지만, 이 수동으로 만든&#xA;  목록에는 없는 경우가 있어서 아쉬웠다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  그래서 이번엔 이걸 고쳐보기로 했다.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;Claude 🤖: 자동으로 다운로드 =&amp;gt; 모든 이모지를 출력&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;그래서 유니코드 DB에 공개된 데이터파일들을 다운로드 받고, 거기에서&#xA;  도출 가능한 모든 이모지를 출력하도록 했다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  생각보다 텍스트파일을 파싱하고 하는 스크립트가 귀찮았다. 예전에&#xA;  유니코드&amp;lt;=&amp;gt;CP949 변환이나 조합형 한글코드 변환에도 이런 파싱+출력,&#xA;  혹은 코드매핑 테이블 생성하는 스크립트를 짜왔었지만 이번엔 조금&#xA;  다르게 해볼까 했다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>원하는 emoji으로 선택되는 제목을 고르기 [0.798129]</title>
+      <link>https://ageldama.github.io/posts/2026-02feb/selecting-title-emoji/</link>
+      <pubDate>Sat, 14 Feb 2026 07:12:10 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-02feb/selecting-title-emoji/</guid>
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;지금까지의 스토리&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ageldama.github.io/posts/2025-11nov/blog-post-title-emojis/&#34;&gt;🐌 블로그 디자인 수정 + 제목 자동 emoji 붙여주기&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;그런데, 위 포스팅에서 밝혔듯이, 단순히 hashing 함수에 의해서&#xA;자동으로 이모지를 선택하는 것이니까, 의도를 담은 emoji을 선택하기는&#xA;어려움.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-2&#34;&gt;&#xA;원하는 것&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;포스팅 제목은 (거의) 그대로 두고, 원하는 emoji을 선택하도록 하고 싶다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-3&#34;&gt;&#xA;시도, 아쉬운 점, 그래도&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;포스팅 제목에 추가적인 문자열 추가하며 원하는 emoji이 나올 때까지&#xA;  루핑하는 &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/&#34;&gt;shortcode&lt;/a&gt;-을 짰다. (…이전에 이미 문자열에 따라 이모지&#xA;  출력하는 partial은 짜놓은걸 호출)&lt;/p&gt;</description>
+    </item>
     <item>
       <title>블로그 디자인 수정 &#43; 제목 자동 emoji 붙여주기</title>
       <link>https://ageldama.github.io/posts/2025-11nov/blog-post-title-emojis/</link>
