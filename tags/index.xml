@@ -7,12 +7,54 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
-    <lastBuildDate>Mon, 30 Mar 2026 07:38:43 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2026 07:45:24 +0000</lastBuildDate>
     <atom:link href="https://ageldama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>https://ageldama.github.io/tags/ai/</link>
+      <pubDate>Mon, 30 Mar 2026 07:45:24 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gui</title>
+      <link>https://ageldama.github.io/tags/gui/</link>
+      <pubDate>Mon, 30 Mar 2026 07:45:24 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/gui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lisp</title>
+      <link>https://ageldama.github.io/tags/lisp/</link>
+      <pubDate>Mon, 30 Mar 2026 07:45:24 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/lisp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Llm</title>
+      <link>https://ageldama.github.io/tags/llm/</link>
+      <pubDate>Mon, 30 Mar 2026 07:45:24 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oop</title>
+      <link>https://ageldama.github.io/tags/oop/</link>
+      <pubDate>Mon, 30 Mar 2026 07:45:24 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/oop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Paradigm-Shift</title>
+      <link>https://ageldama.github.io/tags/paradigm-shift/</link>
+      <pubDate>Mon, 30 Mar 2026 07:45:24 +0000</pubDate>
+      <guid>https://ageldama.github.io/tags/paradigm-shift/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Ping</title>
       <link>https://ageldama.github.io/tags/ping/</link>
-      <pubDate>Mon, 30 Mar 2026 07:38:43 +0000</pubDate>
+      <pubDate>Mon, 30 Mar 2026 07:45:24 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/ping/</guid>
       <description></description>
     </item>
@@ -458,13 +500,6 @@
       <description></description>
     </item>
     <item>
-      <title>Lisp</title>
-      <link>https://ageldama.github.io/tags/lisp/</link>
-      <pubDate>Sun, 15 Mar 2026 04:59:38 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/lisp/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Sbcl</title>
       <link>https://ageldama.github.io/tags/sbcl/</link>
       <pubDate>Sun, 15 Mar 2026 04:59:38 +0000</pubDate>
@@ -563,13 +598,6 @@
       <description></description>
     </item>
     <item>
-      <title>Ai</title>
-      <link>https://ageldama.github.io/tags/ai/</link>
-      <pubDate>Sat, 14 Mar 2026 04:09:32 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/ai/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Coder</title>
       <link>https://ageldama.github.io/tags/coder/</link>
       <pubDate>Sat, 14 Mar 2026 04:09:32 +0000</pubDate>
@@ -623,13 +651,6 @@
       <link>https://ageldama.github.io/tags/john-carmack/</link>
       <pubDate>Sat, 14 Mar 2026 04:09:32 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/john-carmack/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Llm</title>
-      <link>https://ageldama.github.io/tags/llm/</link>
-      <pubDate>Sat, 14 Mar 2026 04:09:32 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/llm/</guid>
       <description></description>
     </item>
     <item>
@@ -2425,13 +2446,6 @@
       <description></description>
     </item>
     <item>
-      <title>Gui</title>
-      <link>https://ageldama.github.io/tags/gui/</link>
-      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/gui/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Hotspot</title>
       <link>https://ageldama.github.io/tags/hotspot/</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
@@ -2772,13 +2786,6 @@
       <link>https://ageldama.github.io/tags/mysql/</link>
       <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
       <guid>https://ageldama.github.io/tags/mysql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Oop</title>
-      <link>https://ageldama.github.io/tags/oop/</link>
-      <pubDate>Tue, 06 Jan 2026 05:37:59 +0000</pubDate>
-      <guid>https://ageldama.github.io/tags/oop/</guid>
       <description></description>
     </item>
     <item>

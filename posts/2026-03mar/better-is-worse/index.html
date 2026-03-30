@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>더 “자잘한 것”을 신경쓰지 않게 돕는 도구에 대해 - 아겔로그</title><meta name="hugo-gen-timestamp" content="1774858467">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="description" content="oop, gui ide, fp, llm..." />
+    <meta property="og:image" content=""/>
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.08e3005f13b5b56b402f89d2e1485f7199ec964ec84e3e3e4814de03143a733c.css"
+          integrity="sha256-COMAXxO1tWtAL4nS4UhfcZnslk7ITj4&#43;SBTeAxQ6czw=" crossorigin="anonymous">
+    
+    
+    
+    
+    
+
+        
+        
+        
+            
+                
+                    <script src="/js/bundle.c11f553788e500f0664c8f4de6cd61b730fc0e27c6d1809bc240d1cd7abfdcde.js" integrity="sha256-wR9VN4jlAPBmTI9N5s1htzD8DifG0YCbwkDRzXq/3N4=" crossorigin="anonymous"></script>
+                
+            
+        
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body hx-boost="true" hx-indicator=".htmx-indicator">
+        <div class="htmx-indicator"><div class="spinner"></div></div>
+
+        <div class="container"><header>
+    <div class="main ">
+        <h1 class="site-title ">
+            <a href="https://ageldama.github.io/">아겔로그</a>
+        </h1>
+    </div>
+
+    <nav>
+        
+          <div class="search-form">
+      <span class="search-loading-indicator" style="display: none;"></span>
+      <input id="search-query" name="search-query"
+          type="text"
+          class="search-query"
+          tabindex="1"
+          placeholder="🔎 검색 (search)"
+          onkeyup="searcher.onSearchKeyup(event)"/>
+  </div>
+
+        
+
+        
+        <a href="/series/">📚 Series</a>
+        
+        <a href="/archive/">🗂️ Archive</a>
+        
+        <a href="/myself/">📨 Contact</a>
+        
+
+        
+        <button class="dark-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="colorscheme.toggle()">color: </button>
+<!--button class="snow-mode-btn"
+        aria-label="toggle dark-mode"
+        onclick="letitsnow(event)">☃️ snow?</button-->
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<script>
+ 
+ if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+     let urls = [];
+     let head = document.getElementsByTagName("head")[0];
+     urls.forEach(function(url) {
+         let script = document.createElement("script");
+         script.src = url;
+         head.appendChild(script);
+     });
+ }
+ 
+</script>
+
+<div class="search">
+    <div class="search-results"></div>
+</div>
+
+
+<main>
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn disabled" role="button" aria-disabled="true" href=""></a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/2026-03mar30--01-ping/">➡️ Ping 30/03/2026 .01</a>
+        
+    </span>
+</nav>
+
+    
+    <hr class="archive-ruler">
+    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">llm 시대엔 정말 소프트웨어 개발의 복잡도가 낮아졌을까?</a>
+</li>
+<li><a href="#headline-2">어째서 더 직관적이고, 목적을 이루기 쉬워진 언어/프레임웍을 쓰는 제품이 더 완성도가 떨어질까?</a>
+</li>
+<li><a href="#headline-3">그린스펀의 10번째 규칙, 그리고 리습의 저주</a>
+</li>
+<li><a href="#headline-4">경계해야 할 생각과 말들</a>
+</li>
+<li><a href="#headline-5">Footnotes</a>
+</li>
+</ul>
+</nav>
+
+    <article>
+	<div class="title"><h1 class="title">🧑🏼‍🔬 더 “자잘한 것”을 신경쓰지 않게 돕는 도구에 대해</h1>
+	    <div class="meta">
+                <time datetime="2026-03-30" pubdate>
+                    2026년03월30일
+                </time>
+                </div>
+        </div>
+
+        
+        <div class="description">
+	    <span class="short-description">
+                oop, gui ide, fp, llm...
+            </span>
+        </div>
+        
+
+	
+
+	<section class="body">
+	    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+llm 시대엔 정말 소프트웨어 개발의 복잡도가 낮아졌을까?
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>oop시대엔 개발의 복잡도가 많이 낮아졌던가? gui시대엔? ide의 발전엔?</p>
+<p>
+  …모두 별로 그렇지 않았었다. 물론 개선된 부분들이 있었지만, 어떤
+  부분에서는 오히려 새롭게 변화한 패러다임으로 인해서 더 늘어났던
+  부분이 분명히 존재했다.</p>
+<p>
+  llm의 시대에도 마찬가지 같다. 처음 시도를 하기 가능해 보이는건 실은
+  과거 vb6 정도의 gui/ide 시대에도 마찬가지였다.</p>
+<p>
+  제대로 인공지능을 활용하기 위한 <code>SKILLS.md</code> 등은 결국 과거에도 자기가
+  뭘 하는지, 뭘 어떻게 해야 하는지, 그리고 그걸 어떻게 문서화하고
+  정리할 수 있는 능력이 여전히 필요하다는걸 시사한다.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+어째서 더 직관적이고, 목적을 이루기 쉬워진 언어/프레임웍을 쓰는 제품이 더 완성도가 떨어질까?
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>어째서, 더 현대적인 프로그래밍언어, 프레임웍으로 만든 앱이 더 흔하게
+  완성도가 떨어지고, 그에 비해 구닥다리, 혹은 더 “자잘한 세부사항”을
+  신경써야 하는 언어나 프레임웍으로 만든 애플리케이션이 항상 더 빠르고
+  안정적이고 심지어 더 강력한가.</p>
+<p>
+  분명히, 전자의 언어/프레임웍은 훨씬 더 “높은 수준의 추상화”를
+  제공하고, 수많은 편의기능을 제공하고, 그런 특징으로 “몰라도 될
+  자잘한 사항들을 감춰주는 것” 같은데 말이다.</p>
+<p>
+  하지만 두 가지 잘못 판단하는 것이 있다. 바로 어떤 능력수준의 사람이
+  그걸 사용하는가에 대한 생각과, 또 하나는 정말 추상화가 모든걸
+  신경쓰지 않게 돕는가에 대한 생각이다.</p>
+<p>
+  전자를 사용하는 사람은, 알아서 자신이 “정말 중요한 것”이라고
+  생각하는 일에만 집중할 수 있어야 한다고 믿는다. 맞는 생각이다.
+  하지만 어느 정도는 경계해야 하는 생각이다.</p>
+<p>
+  자신이 하려는 일, 목적을 완수하는 것 자체에 집중할 수 있는 도구는
+  중요하다. 하지만 함정이 있다. 그렇게 해주리라고 기대하고 믿는 도구가
+  실은 그렇게 해주는 것에 정말로 충실하기 보다는, 오히려 사람들이
+  그렇게 믿도록 만드는데에 더 열중한 도구라는 점이다.</p>
+<p>
+  그리고 인정하고 싶어하지 않는 진실도 있다. 그런 믿음에 기대고
+  싶어하는, 그게 검증되었건 아니건, 이들은 더 깊은 내용, 더 소프트웨어
+  개발에 대한 진지한 내용을 이해하려 하거나 시도도 하지 않았던
+  이들이란 점이다.</p>
+<p>
+  결국 아무리 손쉬운 도구라고 하더라도 그걸 사용하는 사람의 역량의
+  차이를 고려해 본다면, 결국 자기가 뭘 하고 있고, 그 일이 어떻게
+  구현되고 하는지를 잘 이해하는 사람이 항상 더 나을 수 밖엔 없다.</p>
+<p>
+  반면, 후자의 언어/프레임웍 같이 “자잘한 세부사항”에 대해서
+  이해하는것은 실제로 도움이 되기도 하고, 그런 이해하기 위한 노력을
+  들였던 사람의 그런 성향, 이해력, 학습능력이 더 나은 것이다. 야속한
+  이야기지만 사실이다.</p>
+<p>
+  그리고 조금 깊이 전자의 편리하고 현대적인 언어들/프레임웍들을
+  쓰다보면, 완벽히 그들이 제공하는 ‘샌드박스(sandbox)’ 안에서 영원히
+  편안하기는 어렵다. 그 외부, 즉 시스템이 어떻게 동작하는지 제대로
+  이해하는것이 훨씬 더 도움이 된다.</p>
+<p>
+  예전에 인터넷에서 본 어떤 댓글이 이런 생각을 절묘하게 표현한것 같다:</p>
+<p>
+  “…좋은 웹개발자를 구하고 있다면, 타입스크립트, 리액트, 일렉트론을
+  잘 안다는 사람보다는, 차라리 HTML/CSS/JS의 fundamentals을 잘
+  이해하고 있고 XYZ에 대해서도 잘 이해하고 있는 사람을 구해라. 어차피
+  그걸 이해하고 있는 사람이라면, 일반적인 &lt;웹개발자&gt;들보다 나은
+  웹개발자가 된다”<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup></p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+그린스펀의 10번째 규칙, 그리고 리습의 저주
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>이제 대부분의 언어들이 사실상 어느 정도의 리습이 되었다고 생각한다.
+  그리고 그런 이유로 다른 언어들도 <a href="https://www.winestockwebdesign.com/Essays/Lisp_Curse.html">리습의 저주</a>-를 받게 되었다고
+  생각하는게 맞을거 같다.</p>
+<p>
+  모든 “자잘한 기술적인 문제”들을 위대한 리습이 해결해줬으므로, 우리는
+  “중요한 일들”에만 집중하면 된다고 착각하기 시작하는것 말이다.</p>
+<p>
+  그런데 때로는 그냥 멍청해 보이는 일들을 해버리는게 더 나은거 같다.
+  예를 들어, 그린스펀의 열번째 규칙대로, 어느 정도 성공적인, 오랬동안
+  관리되어온 오픈소스 프로젝트들의 코드베이스는 각자의 방식으로
+  문자열, 리스트, 해시맵, 혹은 메모리관리 등을 해결해 나간다. 언어와
+  그 언어의 내장라이브러리, 혹은 커뮤니티 표준적인 라이브러리가 어떻게
+  제공되는가에 따라 편차는 있지만.</p>
+<p>
+  그린스펀의 이 규칙이 제안하는 바를 예전에는 ‘그러니 커먼리습을
+  써라’라고 생각했었다. 그러나 이제는 반대로 생각한다. 그러니 그냥
+  ‘○○○으로 너 쓰고 싶은대로 잘 써라’–라고. 그리고 그게 멍청해 보이고,
+  비효율적으로 보이더라도, 그게 더 낫다. 그리고 preprocessor이나
+  텍스트매크로 등으로 충분히 리습의 장점을 상회하고도 너 나을 수
+  있는거 같다.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+경계해야 할 생각과 말들
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>이렇게 생각해보면, 도구나 표현방식이 더 수월해진거 같다고, 완전히
+  태도가 변해야 한다거나, 이제는 어떠어떠한 식으로만 해야 한다는게
+  오히려 독이 되는 생각이지 않을까 싶다.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator"/>
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>그 “XYZ”이 뭔지는 언급하지 않겠다. 🙃 </p>
+</div>
+</div>
+</div>
+</div>
+
+	</section><div class="post-tags">
+	    
+	    
+	    <nav class="nav tags">
+		<ul class="tags">
+		    
+		    <li class="tagbutton-inline">👅<a href="/series/programming-languages/">programming-languages</a>
+                        <sup>29</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">🧸<a href="/series/script-kiddie-life/">script-kiddie-life</a>
+                        <sup>17</sup>
+                    </li>
+		    
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ping/">ping</a>
+                        <sup>131</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/lisp/">lisp</a>
+                        <sup>27</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/llm/">llm</a>
+                        <sup>10</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/ai/">ai</a>
+                        <sup>9</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/gui/">gui</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/oop/">oop</a>
+                        <sup>3</sup>
+                    </li>
+		    
+		    <li class="tagbutton-inline">
+                        🏷️ <a href="/tags/paradigm-shift/">paradigm-shift</a>
+                        <sup>1</sup>
+                    </li>
+		    
+		</ul>
+	    </nav>
+	    
+	    
+	</div>
+    </article>
+
+    <hr class="archive-ruler">
+
+    <style>
+     :root {--bg-big-emoji: "🧑🏼‍🔬";}
+    </style>
+
+    <nav class="post-prevnext" aria-label="posts">
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn disabled" role="button" aria-disabled="true" href=""></a>
+        
+    </span>
+
+    <span class="post-prevnext-side">
+        
+        <a class="post-prevnext-btn" href="https://ageldama.github.io/posts/2026-03mar/2026-03mar30--01-ping/">➡️ Ping 30/03/2026 .01</a>
+        
+    </span>
+</nav>
+
+</main>
+<footer class="global-footer">
+    2026  © <a href='/myself'>ageldama</a> 👾  | Built with <a href="https://gohugo.io">Hugo</a> + <a href="https://github.com/ageldama/young40er-hugo-theme/">young40er theme</a> <code>1774858467</code> | Subscribe <a href="/index.xml" >📡 RSS</a>
+</footer>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB7MGHZ4V"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-YSB7MGHZ4V', { cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+
+
+</div>
+    </body>
+</html>
