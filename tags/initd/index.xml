@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Initd on 아겔로그</title>
+    <link>https://ageldama.github.io/tags/initd/</link>
+    <description>Recent content in Initd on 아겔로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>© &lt;a href=&#39;https://ageldama.github.io/myself&#39;&gt;ageldama&lt;/a&gt; 👾</copyright>
+    <lastBuildDate>Sun, 05 Apr 2026 07:17:11 +0000</lastBuildDate>
+    <atom:link href="https://ageldama.github.io/tags/initd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(AI번역글) Gabe Newell이 요트 돈을 Flatpak에 쏟아붓고 있는데 당신은 아직도 Init 시스템 논쟁중</title>
+      <link>https://ageldama.github.io/posts/2026-04apr/ko--flatpak-won/</link>
+      <pubDate>Sun, 05 Apr 2026 07:17:11 +0000</pubDate>
+      <guid>https://ageldama.github.io/posts/2026-04apr/ko--flatpak-won/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;원문: &lt;a href=&#34;https://s3kshun8.games/blog/flatpak-won/&#34;&gt;https://s3kshun8.games/blog/flatpak-won/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;2026년 현재 많이 변화한 리눅스, 오픈소스 생태계에 대한 생각에&#xA;공감해서 AI번역문을 올린다.&lt;/li&gt;&#xA;&lt;li&gt;예전에 단순히 “M$ 나빠!”만이 아니라, 이제는 그 오픈소스 기여자들의&#xA;사회에서의 역할, 입지가 변화했고, 오픈소스의 소비자들도 변화했음을&#xA;잘 포착했다고 생각된다.&lt;/li&gt;&#xA;&lt;li&gt;“요트 돈”(Yacht Money)은, 요트를 살 수 있을 정도로, 그런 호화생활을&#xA;할만큼 여유로운 돈을 의미하는거 같다. ㅎㅎ&lt;/li&gt;&#xA;&lt;li&gt;AI번역인지라, 함 읽어보고 좀 고치거나, 아니면 내가 아는 정도에서&#xA;성의껏 주석을 좀 달아봤다.&lt;/li&gt;&#xA;&lt;li&gt;맘껏즐기시길.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;(글의 시작)&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;소프트웨어 엔지니어로서 우주에서 가장 중요한 것은 사람들이 실제로&#xA;당신의 작업을 경험할 수 있게 하는 능력입니다. 그게 전부입니다. 지금 이&#xA;시대에 효과적이고 신뢰할 수 있는 빌드 파이프라인이 없다면, 당신은&#xA;애플리케이션이 없는 겁니다 — 아무도 어떻게 할 수 없는 거대한 소스&#xA;트리만 있을 뿐입니다. 결과물을 갖는다는 것은 누군가가 행복하게 당신의&#xA;게임을 다운로드하는 것과, 모르는 사람에게 어떻게 컴파일하는지&#xA;알아내라고 강요하며 울게 만드는 것 사이의 차이입니다. 솔직히 말해서,&#xA;이는 우리가 엔지니어로서 여기 있는 이유인 사람을 섬기는 일 — 을&#xA;거부하는 순전히 이기적인 행동입니다. 배시 달인 빌리부터, 이미 너무&#xA;많은 문제가 있는 나쁜 직장을 다니는 싱글맘이 그냥 앉아서 심즈를 하고&#xA;싶은 경우까지 모두 해당됩니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
